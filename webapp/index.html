@@ -22,8 +22,6 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Deutschleben">
 
-<script type="module" src="firebase-app.js"></script>
-
 <style>
 
 * {
@@ -1744,13 +1742,6 @@ function restaurarCompreensao(numero) {
     if (bruto) {
         try { const d = JSON.parse(bruto); if (area && d.texto) area.value = d.texto; } catch (e) { /* ignora */ }
     }
-    // Nuvem (se disponível): sobrepõe com o valor salvo na conta.
-    if (window.DL_FB && window.DL_FB.pronto()) {
-        window.DL_FB.lerCompreensao(numero).then((remoto) => {
-            const atual = window.__caminhadaAtual ? window.__caminhadaAtual() : numero;
-            if (remoto != null && area && atual === numero) { area.value = remoto; }
-        });
-    }
 }
 
 function salvarCompreensaoLocal(evento) {
@@ -1768,16 +1759,7 @@ function salvarCompreensaoLocal(evento) {
         aviso.style.cssText = "margin-top:10px;color:#2f6b46;font-weight:600;";
         form.appendChild(aviso);
     }
-    if (window.DL_FB && window.DL_FB.pronto()) {
-        aviso.textContent = "Salvando na sua conta…";
-        window.DL_FB.salvarCompreensao(numero, t).then((ok) => {
-            aviso.textContent = ok
-                ? "Sua compreensão foi salva na sua conta (sincroniza entre aparelhos)."
-                : "Salva neste navegador (a nuvem não respondeu).";
-        });
-    } else {
-        aviso.textContent = "Sua compreensão foi registrada neste navegador.";
-    }
+    aviso.textContent = "Sua compreensão foi registrada neste navegador.";
     return false;
 }
 
@@ -1831,12 +1813,6 @@ if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("./sw.js").catch(function () {});
     });
 }
-// Quando o Firebase terminar de conectar, recarrega a compreensão salva na conta.
-window.addEventListener("dl-fb-status", function () {
-    if (window.__caminhadaAtual && typeof restaurarCompreensao === "function") {
-        restaurarCompreensao(window.__caminhadaAtual());
-    }
-});
 </script>
 
 </body>
