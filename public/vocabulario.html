@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deutschleben — Vocabulário</title>
+  <meta name="description" content="Visualizador do vocabulário alemão do Deutschleben." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topo">
+    <h1>Deutschleben <span>Vocabulário</span></h1>
+    <p class="sub" id="resumo">Carregando…</p>
+  </header>
+
+  <nav class="abas" id="abas" aria-label="Categorias">
+    <button class="aba ativa" data-alvo="substantivos">Substantivos</button>
+    <button class="aba" data-alvo="verbos">Verbos</button>
+    <button class="aba" data-alvo="adjetivos_adverbios">Adjetivos / Advérbios</button>
+    <button class="aba" data-alvo="blocos">Blocos</button>
+  </nav>
+
+  <div class="barra-busca">
+    <input type="search" id="busca" placeholder="Buscar palavra ou significado…" autocomplete="off" />
+    <span class="contador" id="contador"></span>
+  </div>
+
+  <main id="conteudo" class="conteudo" aria-live="polite">
+    <p class="carregando">Carregando dados…</p>
+  </main>
+
+  <footer class="rodape">
+    <span id="gerado"></span>
+    <span>Deutschleben · Firebase Hosting</span>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
