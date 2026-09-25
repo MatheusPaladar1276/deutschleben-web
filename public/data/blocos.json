@@ -1,0 +1,308 @@
+[
+  {
+    "bloco": "ab sofort",
+    "sentido": "a partir de agora",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "ab und zu",
+    "sentido": "de vez em quando",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Alles bestens",
+    "sentido": "Tudo ótimo",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Alles gut?",
+    "sentido": "Tudo bem?",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Alles in Ordnung",
+    "sentido": "Tudo em ordem",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "alles wie immer",
+    "sentido": "tudo como sempre",
+    "tipo": "EXPRESSAO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Am Abend",
+    "sentido": "à noite / no fim do dia",
+    "tipo": "expressão temporal",
+    "origem": "Caminhada 02"
+  },
+  {
+    "bloco": "Am frühen Morgen",
+    "sentido": "no início da manhã",
+    "tipo": "expressão temporal",
+    "origem": "Caminhada 01"
+  },
+  {
+    "bloco": "an den neuen Tag",
+    "sentido": "no novo dia",
+    "tipo": "bloco verbal",
+    "origem": "Caminhada 01"
+  },
+  {
+    "bloco": "an den nächsten Tag",
+    "sentido": "no dia seguinte / no próximo dia",
+    "tipo": "bloco verbal",
+    "origem": "Caminhada 02"
+  },
+  {
+    "bloco": "aus diesem Grund",
+    "sentido": "por esse motivo",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "das Licht auf dem Wasser",
+    "sentido": "a luz sobre a água",
+    "tipo": "bloco",
+    "origem": "Caminhada 01"
+  },
+  {
+    "bloco": "eine Weile",
+    "sentido": "por algum tempo / por um tempo",
+    "tipo": "bloco",
+    "origem": "Caminhada 02"
+  },
+  {
+    "bloco": "einen Moment",
+    "sentido": "por um momento",
+    "tipo": "bloco",
+    "origem": "Caminhada 01"
+  },
+  {
+    "bloco": "es gibt",
+    "sentido": "há; existe/existem",
+    "tipo": "BLOCO_SEMANTICO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Gibt es noch ...?",
+    "sentido": "Ainda há/tem ...?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Hast du noch Zeit?",
+    "sentido": "Você ainda tem tempo?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "in den Bäumen",
+    "sentido": "nas árvores",
+    "tipo": "bloco",
+    "origem": "Caminhada 02"
+  },
+  {
+    "bloco": "in den Garten",
+    "sentido": "para o jardim",
+    "tipo": "bloco",
+    "origem": "Caminhada 02"
+  },
+  {
+    "bloco": "Kannst du das machen?",
+    "sentido": "Você pode fazer isso?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "leichter Nebel",
+    "sentido": "leve neblina",
+    "tipo": "bloco",
+    "origem": "Caminhada 01"
+  },
+  {
+    "bloco": "Na, alles klar?",
+    "sentido": "E aí, tudo certo? (bem informal)",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "noch einmal",
+    "sentido": "mais uma vez / novamente",
+    "tipo": "bloco",
+    "origem": "Caminhada 02"
+  },
+  {
+    "bloco": "noch etwas Zeit",
+    "sentido": "ainda um pouco de tempo",
+    "tipo": "BLOCO_SEMANTICO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "von dort",
+    "sentido": "de lá",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "von draußen",
+    "sentido": "de fora",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "von drinnen",
+    "sentido": "de dentro",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "von hier",
+    "sentido": "daqui",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "von oben",
+    "sentido": "de cima",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "von unten",
+    "sentido": "de baixo",
+    "tipo": "LOCUCAO_ADVERBIAL",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Was bedeutet ...?",
+    "sentido": "O que ... significa?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Was denkst du darüber?",
+    "sentido": "O que você pensa/acha sobre isso?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Was gibt's Neues?",
+    "sentido": "Alguma novidade?",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Was isst du gerne?",
+    "sentido": "O que você gosta de comer?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Was ist das?",
+    "sentido": "O que é isso?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Was machst du?",
+    "sentido": "O que você está fazendo?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Was magst du?",
+    "sentido": "Do que você gosta?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Was trinkst du gerne?",
+    "sentido": "O que você gosta de beber?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wie findest du ...?",
+    "sentido": "O que você acha de ...?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wie geht es dir?",
+    "sentido": "Como você está? (informal)",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wie geht es Ihnen?",
+    "sentido": "Como o senhor/a senhora está? (formal)",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wie geht's?",
+    "sentido": "Como vai?",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wie läuft's?",
+    "sentido": "Como estão as coisas?",
+    "tipo": "ROTINA_COMUNICATIVA",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wie spät ist es?",
+    "sentido": "Que horas são?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wie viel kostet ...?",
+    "sentido": "Quanto custa ...?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wie viele ...?",
+    "sentido": "Quantos/quantas ...?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "Wo ist ...?",
+    "sentido": "Onde está ...?",
+    "tipo": "PERGUNTA_MODELO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "zufrieden damit",
+    "sentido": "satisfeito com isso",
+    "tipo": "BLOCO_SEMANTICO",
+    "origem": "Acervo de Origem — blocos/locuções"
+  },
+  {
+    "bloco": "zum See",
+    "sentido": "até o lago / para o lago",
+    "tipo": "bloco",
+    "origem": "Caminhada 01"
+  },
+  {
+    "bloco": "zurück ins Haus",
+    "sentido": "de volta para casa",
+    "tipo": "bloco",
+    "origem": "Caminhada 02"
+  },
+  {
+    "bloco": "Über dem Wasser",
+    "sentido": "sobre a água",
+    "tipo": "bloco",
+    "origem": "Caminhada 01"
+  }
+]

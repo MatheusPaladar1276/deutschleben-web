@@ -1,0 +1,1397 @@
+[
+  {
+    "verbo": "ankommen",
+    "significado": "chegar (foco: o momento da chegada ou local da chegada (an)",
+    "regencia": "*",
+    "partizip_ii": "angekommen",
+    "perfekt": "ist angekommen",
+    "praeteritum": "kam an",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "antworten",
+    "significado": "responder",
+    "regencia": "D",
+    "partizip_ii": "geantwortet",
+    "perfekt": "hat geantwortet",
+    "praeteritum": "antwortete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "arbeiten",
+    "significado": "trabalhar",
+    "regencia": "an + D",
+    "partizip_ii": "gearbeitet",
+    "perfekt": "hat gearbeitet",
+    "praeteritum": "arbeitete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "aufstehen",
+    "significado": "levantar-se",
+    "regencia": "*",
+    "partizip_ii": "aufgestanden",
+    "perfekt": "ist aufgestanden",
+    "praeteritum": "stand auf",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "aufwachen",
+    "significado": "despertar/acordar",
+    "regencia": "*",
+    "partizip_ii": "aufgewacht",
+    "perfekt": "ist aufgewacht",
+    "praeteritum": "wachte auf",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "aussteigen",
+    "significado": "sair (de um meio de transporte)",
+    "regencia": "*",
+    "partizip_ii": "ausgestiegen",
+    "perfekt": "ist ausgestiegen",
+    "praeteritum": "stieg aus",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "backen",
+    "significado": "assar",
+    "regencia": "*",
+    "partizip_ii": "gebacken",
+    "perfekt": "hat gebacken",
+    "praeteritum": "backte/buk",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "bauen",
+    "significado": "construir",
+    "regencia": "*",
+    "partizip_ii": "gebaut",
+    "perfekt": "hat gebaut",
+    "praeteritum": "baute",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "bedürfen",
+    "significado": "necessitar",
+    "regencia": "G",
+    "partizip_ii": "bedurft",
+    "perfekt": "hat bedurft",
+    "praeteritum": "bedurfte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "beenden",
+    "significado": "terminar/concluir",
+    "regencia": "*",
+    "partizip_ii": "beendet",
+    "perfekt": "hat beendet",
+    "praeteritum": "beendete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "begegnen",
+    "significado": "encontrar (de forma casual)",
+    "regencia": "D",
+    "partizip_ii": "begegnet",
+    "perfekt": "ist begegnet",
+    "praeteritum": "begegnete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "beobachten",
+    "significado": "observar",
+    "regencia": null,
+    "partizip_ii": "beobachtet",
+    "perfekt": "hat beobachtet",
+    "praeteritum": "beobachtete",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "berichten",
+    "significado": "relatar/informar",
+    "regencia": "über + A / von + D",
+    "partizip_ii": "berichtet",
+    "perfekt": "hat berichtet",
+    "praeteritum": "berichtete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "beschreiben",
+    "significado": "descrever",
+    "regencia": "*",
+    "partizip_ii": "beschrieben",
+    "perfekt": "hat beschrieben",
+    "praeteritum": "beschrieb",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "bitten",
+    "significado": "pedir - foco em solicitar algo",
+    "regencia": "A / um + A",
+    "partizip_ii": "gebeten",
+    "perfekt": "hat gebeten",
+    "praeteritum": "bat",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "bleiben",
+    "significado": "ficar / permanecer",
+    "regencia": null,
+    "partizip_ii": "geblieben",
+    "perfekt": "ist geblieben",
+    "praeteritum": "blieb",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "brauchen",
+    "significado": "precisar",
+    "regencia": "*",
+    "partizip_ii": "gebraucht",
+    "perfekt": "hat gebraucht",
+    "praeteritum": "brauchte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "bringen",
+    "significado": "trazer",
+    "regencia": "*",
+    "partizip_ii": "gebracht",
+    "perfekt": "hat gebracht",
+    "praeteritum": "brachte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "danken",
+    "significado": "agradecer",
+    "regencia": "D / für + A",
+    "partizip_ii": "gedankt",
+    "perfekt": "hat gedankt",
+    "praeteritum": "dankte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "denken",
+    "significado": "pensar",
+    "regencia": "an + Akk.",
+    "partizip_ii": "gedacht",
+    "perfekt": "hat gedacht",
+    "praeteritum": "dachte",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "denken",
+    "significado": "pensar",
+    "regencia": "an + A",
+    "partizip_ii": "gedacht",
+    "perfekt": "hat gedacht",
+    "praeteritum": "dachte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "diskutieren",
+    "significado": "discutir",
+    "regencia": "über + A",
+    "partizip_ii": "diskutiert",
+    "perfekt": "hat diskutiert",
+    "praeteritum": "diskutierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "dürfen",
+    "significado": "indica permissão, geralmente traduzido como \"poder\" no sentido de ser permitido",
+    "regencia": "*",
+    "partizip_ii": "gedurft",
+    "perfekt": "hat gedurft",
+    "praeteritum": "durfte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "einladen",
+    "significado": "convidar",
+    "regencia": "zu + D",
+    "partizip_ii": "eingeladen",
+    "perfekt": "hat eingeladen",
+    "praeteritum": "lud ein",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "eintreten",
+    "significado": "entrar (em um lugar ou situação)",
+    "regencia": "für + A",
+    "partizip_ii": "eingetreten",
+    "perfekt": "ist eingetreten",
+    "praeteritum": "trat ein",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "entstehen",
+    "significado": "surgir/formar-se",
+    "regencia": "*",
+    "partizip_ii": "entstanden",
+    "perfekt": "ist entstanden",
+    "praeteritum": "entstand",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "entwickeln",
+    "significado": "desenvolver",
+    "regencia": "*",
+    "partizip_ii": "entwickelt",
+    "perfekt": "hat entwickelt",
+    "praeteritum": "entwickelte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "erinnern",
+    "significado": "lembrar",
+    "regencia": "sich an + A",
+    "partizip_ii": "erinnert",
+    "perfekt": "hat sich erinnert",
+    "praeteritum": "erinnerte sich",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "erklären",
+    "significado": "explicar",
+    "regencia": "*",
+    "partizip_ii": "erklärt",
+    "perfekt": "hat erklärt",
+    "praeteritum": "erklärte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "erkunden",
+    "significado": "explorar (um local)/ investigar ou descobrir (informações, causas)",
+    "regencia": "*",
+    "partizip_ii": "erkundet",
+    "perfekt": "hat erkundet",
+    "praeteritum": "erkundete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "erreichen",
+    "significado": "alcançar/atingir",
+    "regencia": "*",
+    "partizip_ii": "erreicht",
+    "perfekt": "hat erreicht",
+    "praeteritum": "erreichte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "erwachen",
+    "significado": "acordar/despertar",
+    "regencia": "*",
+    "partizip_ii": "erwacht",
+    "perfekt": "ist erwacht",
+    "praeteritum": "erwachte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "erzählen",
+    "significado": "contar",
+    "regencia": "von + D / über + A",
+    "partizip_ii": "erzählt",
+    "perfekt": "hat erzählt",
+    "praeteritum": "erzählte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "essen",
+    "significado": "comer",
+    "regencia": "*",
+    "partizip_ii": "gegessen",
+    "perfekt": "hat gegessen",
+    "praeteritum": "aß",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "existieren",
+    "significado": "existir",
+    "regencia": "*",
+    "partizip_ii": "existiert",
+    "perfekt": "hat existiert",
+    "praeteritum": "existierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "fahren",
+    "significado": "dirigir, viajar",
+    "regencia": "*",
+    "partizip_ii": "gefahren",
+    "perfekt": "ist gefahren",
+    "praeteritum": "fuhr",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "fallen",
+    "significado": "cair",
+    "regencia": "*",
+    "partizip_ii": "gefallen",
+    "perfekt": "ist gefallen",
+    "praeteritum": "fiel",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "feiern",
+    "significado": "celebrar",
+    "regencia": "*",
+    "partizip_ii": "gefeiert",
+    "perfekt": "hat gefeiert",
+    "praeteritum": "feierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "finden",
+    "significado": "encontrar (ato de encontrar/achar algo/algúem)",
+    "regencia": "*",
+    "partizip_ii": "gefunden",
+    "perfekt": "hat gefunden",
+    "praeteritum": "fand",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "fliegen",
+    "significado": "voar",
+    "regencia": "*",
+    "partizip_ii": "geflogen",
+    "perfekt": "ist geflogen",
+    "praeteritum": "flog",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "flüstern",
+    "significado": "sussurrar",
+    "regencia": "*",
+    "partizip_ii": "geflüstert",
+    "perfekt": "hat geflüstert",
+    "praeteritum": "flüsterte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "folgen",
+    "significado": "seguir",
+    "regencia": "D",
+    "partizip_ii": "gefolgt",
+    "perfekt": "ist gefolgt",
+    "praeteritum": "folgte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "fordern",
+    "significado": "exigir",
+    "regencia": "*",
+    "partizip_ii": "gefordert",
+    "perfekt": "hat gefordert",
+    "praeteritum": "forderte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "fragen",
+    "significado": "perguntar - foco em perguntar algo",
+    "regencia": "nach + D",
+    "partizip_ii": "gefragt",
+    "perfekt": "hat gefragt",
+    "praeteritum": "fragte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "fühlen",
+    "significado": "sentir",
+    "regencia": "*",
+    "partizip_ii": "gefühlt",
+    "perfekt": "hat gefühlt",
+    "praeteritum": "fühlte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "führen",
+    "significado": "guiar/conduzir/levar",
+    "regencia": "A",
+    "partizip_ii": "geführt",
+    "perfekt": "hat geführt",
+    "praeteritum": "führte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "fürchten",
+    "significado": "temer",
+    "regencia": "*",
+    "partizip_ii": "gefürchtet",
+    "perfekt": "hat gefürchtet",
+    "praeteritum": "fürchtete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "geben",
+    "significado": "dar",
+    "regencia": "D + A",
+    "partizip_ii": "gegeben",
+    "perfekt": "hat gegeben",
+    "praeteritum": "gab",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "gehen",
+    "significado": "ir",
+    "regencia": null,
+    "partizip_ii": "gegangen",
+    "perfekt": "ist gegangen",
+    "praeteritum": "ging",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "gehören",
+    "significado": "pertencer",
+    "regencia": "zu + D",
+    "partizip_ii": "gehört",
+    "perfekt": "hat gehört",
+    "praeteritum": "gehörte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "gelingen",
+    "significado": "ter sucesso/conseguir",
+    "regencia": "D",
+    "partizip_ii": "gelungen",
+    "perfekt": "ist gelungen",
+    "praeteritum": "gelang",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "genesen",
+    "significado": "recuperar-se (de uma doença)",
+    "regencia": "*",
+    "partizip_ii": "genesen",
+    "perfekt": "ist genesen",
+    "praeteritum": "genas",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "genießen",
+    "significado": "aproveitar/desfrutar",
+    "regencia": "*",
+    "partizip_ii": "genossen",
+    "perfekt": "hat genossen",
+    "praeteritum": "genoss",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "glauben",
+    "significado": "acreditar",
+    "regencia": "D / an + A",
+    "partizip_ii": "geglaubt",
+    "perfekt": "hat geglaubt",
+    "praeteritum": "glaubte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "haben",
+    "significado": "ter",
+    "regencia": "*",
+    "partizip_ii": "gehabt",
+    "perfekt": "hat gehabt",
+    "praeteritum": "hatte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "halten",
+    "significado": "segurar",
+    "regencia": "für + A",
+    "partizip_ii": "gehalten",
+    "perfekt": "hat gehalten",
+    "praeteritum": "hielt",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "hassen",
+    "significado": "odiar",
+    "regencia": "*",
+    "partizip_ii": "gehasst",
+    "perfekt": "hat gehasst",
+    "praeteritum": "hasste",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "helfen",
+    "significado": "ajudar",
+    "regencia": "D",
+    "partizip_ii": "geholfen",
+    "perfekt": "hat geholfen",
+    "praeteritum": "half",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "hoffen",
+    "significado": "esperar",
+    "regencia": "auf + A",
+    "partizip_ii": "gehofft",
+    "perfekt": "hat gehofft",
+    "praeteritum": "hoffte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "hängen",
+    "significado": "estar pendurado",
+    "regencia": "*",
+    "partizip_ii": "gehangen",
+    "perfekt": "hat gehangen",
+    "praeteritum": "hing",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "hören",
+    "significado": "ouvir",
+    "regencia": null,
+    "partizip_ii": "gehört",
+    "perfekt": "hat gehört",
+    "praeteritum": "hörte",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "kaufen",
+    "significado": "comprar",
+    "regencia": "*",
+    "partizip_ii": "gekauft",
+    "perfekt": "hat gekauft",
+    "praeteritum": "kaufte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "kennen",
+    "significado": "conhecer",
+    "regencia": "*",
+    "partizip_ii": "gekannt",
+    "perfekt": "hat gekannt",
+    "praeteritum": "kannte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "klettern",
+    "significado": "escalar/subir",
+    "regencia": "*",
+    "partizip_ii": "geklettert",
+    "perfekt": "ist geklettert",
+    "praeteritum": "kletterte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "kochen",
+    "significado": "cozinhar",
+    "regencia": "*",
+    "partizip_ii": "gekocht",
+    "perfekt": "hat gekocht",
+    "praeteritum": "kochte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "kommen",
+    "significado": "vir (foco: é o ato de “vir” ou o “movimento geral)",
+    "regencia": "*",
+    "partizip_ii": "gekommen",
+    "perfekt": "ist gekommen",
+    "praeteritum": "kam",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "kritisieren",
+    "significado": "criticar",
+    "regencia": "*",
+    "partizip_ii": "kritisiert",
+    "perfekt": "hat kritisiert",
+    "praeteritum": "kritisierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "kämpfen",
+    "significado": "lutar",
+    "regencia": "um/gegen + A",
+    "partizip_ii": "gekämpft",
+    "perfekt": "hat gekämpft",
+    "praeteritum": "kämpfte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "können",
+    "significado": "expressa habilidade ou possibilidade, traduzido como \"poder\" (ser capaz de)",
+    "regencia": "*",
+    "partizip_ii": "gekonnt",
+    "perfekt": "hat gekonnt",
+    "praeteritum": "konnte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "lassen",
+    "significado": "deixar",
+    "regencia": "*",
+    "partizip_ii": "gelassen",
+    "perfekt": "hat gelassen",
+    "praeteritum": "ließ",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "laufen",
+    "significado": "correr",
+    "regencia": "*",
+    "partizip_ii": "gelaufen",
+    "perfekt": "ist gelaufen",
+    "praeteritum": "lief",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "leben",
+    "significado": "viver",
+    "regencia": "*",
+    "partizip_ii": "gelebt",
+    "perfekt": "hat gelebt",
+    "praeteritum": "lebte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "legen",
+    "significado": "colocar/deitar algo",
+    "regencia": "*",
+    "partizip_ii": "gelegt",
+    "perfekt": "hat gelegt",
+    "praeteritum": "legte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "lesen",
+    "significado": "ler",
+    "regencia": "*",
+    "partizip_ii": "gelesen",
+    "perfekt": "hat gelesen",
+    "praeteritum": "las",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "lieben",
+    "significado": "amar",
+    "regencia": "*",
+    "partizip_ii": "geliebt",
+    "perfekt": "hat geliebt",
+    "praeteritum": "liebte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "liegen",
+    "significado": "estar situado / estar deitado",
+    "regencia": null,
+    "partizip_ii": "gelegen",
+    "perfekt": "hat gelegen",
+    "praeteritum": "lag",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "löschen",
+    "significado": "apagar/excluir",
+    "regencia": "*",
+    "partizip_ii": "gelöscht",
+    "perfekt": "hat gelöscht",
+    "praeteritum": "löschte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "lösen",
+    "significado": "resolver",
+    "regencia": "*",
+    "partizip_ii": "gelöst",
+    "perfekt": "hat gelöst",
+    "praeteritum": "löste",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "machen",
+    "significado": "fazer",
+    "regencia": "*",
+    "partizip_ii": "gemacht",
+    "perfekt": "hat gemacht",
+    "praeteritum": "machte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "misslingen",
+    "significado": "fracassar/não conseguir",
+    "regencia": "D",
+    "partizip_ii": "misslungen",
+    "perfekt": "ist misslungen",
+    "praeteritum": "misslang",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "mögen",
+    "significado": "indica gosto ou preferência, traduzido como \"gostar\"",
+    "regencia": "*",
+    "partizip_ii": "gemocht",
+    "perfekt": "hat gemocht",
+    "praeteritum": "mochte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "müssen",
+    "significado": "expressa necessidade ou obrigação, traduzido como \"ter que\"",
+    "regencia": "*",
+    "partizip_ii": "gemusst",
+    "perfekt": "hat gemusst",
+    "praeteritum": "musste",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "nehmen",
+    "significado": "pegar",
+    "regencia": "*",
+    "partizip_ii": "genommen",
+    "perfekt": "hat genommen",
+    "praeteritum": "nahm",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "organisieren",
+    "significado": "organizar",
+    "regencia": "*",
+    "partizip_ii": "organisiert",
+    "perfekt": "hat organisiert",
+    "praeteritum": "organisierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "packen",
+    "significado": "empacotar",
+    "regencia": "*",
+    "partizip_ii": "gepackt",
+    "perfekt": "hat gepackt",
+    "praeteritum": "packte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "passieren",
+    "significado": "passar/acontecer",
+    "regencia": "D",
+    "partizip_ii": "passiert",
+    "perfekt": "ist passiert",
+    "praeteritum": "passierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "planen",
+    "significado": "planejar",
+    "regencia": "*",
+    "partizip_ii": "geplant",
+    "perfekt": "hat geplant",
+    "praeteritum": "plante",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "probieren",
+    "significado": "experimentar/tentar",
+    "regencia": "*",
+    "partizip_ii": "probiert",
+    "perfekt": "hat probiert",
+    "praeteritum": "probierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "recherchieren",
+    "significado": "pesquisar/investigar",
+    "regencia": "*",
+    "partizip_ii": "recherchiert",
+    "perfekt": "hat recherchiert",
+    "praeteritum": "recherchierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "reisen",
+    "significado": "viajar",
+    "regencia": "*",
+    "partizip_ii": "gereist",
+    "perfekt": "ist gereist",
+    "praeteritum": "reiste",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "reiten",
+    "significado": "cavalgar",
+    "regencia": "*",
+    "partizip_ii": "geritten",
+    "perfekt": "ist geritten",
+    "praeteritum": "ritt",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "rennen",
+    "significado": "correr",
+    "regencia": "*",
+    "partizip_ii": "gerannt",
+    "perfekt": "ist gerannt",
+    "praeteritum": "rannte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "reservieren",
+    "significado": "reservar",
+    "regencia": "*",
+    "partizip_ii": "reserviert",
+    "perfekt": "hat reserviert",
+    "praeteritum": "reservierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "retten",
+    "significado": "salvar (de algo)",
+    "regencia": "*",
+    "partizip_ii": "gerettet",
+    "perfekt": "hat gerettet",
+    "praeteritum": "rettete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "rufen",
+    "significado": "chamar",
+    "regencia": "*",
+    "partizip_ii": "gerufen",
+    "perfekt": "hat gerufen",
+    "praeteritum": "rief",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sagen",
+    "significado": "dizer",
+    "regencia": "zu  + D",
+    "partizip_ii": "gesagt",
+    "perfekt": "hat gesagt",
+    "praeteritum": "sagte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "schauen",
+    "significado": "ver - foco no ato de olhar intencionalmente ou assistir algo",
+    "regencia": "auf + A",
+    "partizip_ii": "geschaut",
+    "perfekt": "hat geschaut",
+    "praeteritum": "schaute",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "schlafen",
+    "significado": "dormir",
+    "regencia": "*",
+    "partizip_ii": "geschlafen",
+    "perfekt": "hat geschlafen",
+    "praeteritum": "schlief",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "schlagen",
+    "significado": "bater",
+    "regencia": "*",
+    "partizip_ii": "geschlagen",
+    "perfekt": "hat geschlagen",
+    "praeteritum": "schlug",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "schließen",
+    "significado": "fechar",
+    "regencia": "*",
+    "partizip_ii": "geschlossen",
+    "perfekt": "hat geschlossen",
+    "praeteritum": "schloss",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "schreiben",
+    "significado": "escrever",
+    "regencia": "an + A",
+    "partizip_ii": "geschrieben",
+    "perfekt": "hat geschrieben",
+    "praeteritum": "schrieb",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "schreien",
+    "significado": "gritar",
+    "regencia": "*",
+    "partizip_ii": "geschrien",
+    "perfekt": "hat geschrien",
+    "praeteritum": "schrie",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "schweigen",
+    "significado": "silenciar/calar",
+    "regencia": "*",
+    "partizip_ii": "geschwiegen",
+    "perfekt": "hat geschwiegen",
+    "praeteritum": "schwieg",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "schwimmen",
+    "significado": "nadar",
+    "regencia": "*",
+    "partizip_ii": "geschwommen",
+    "perfekt": "ist geschwommen",
+    "praeteritum": "schwamm",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sehen",
+    "significado": "ver - refere-se ao ato de perceber algo visualmente",
+    "regencia": "*",
+    "partizip_ii": "gesehen",
+    "perfekt": "hat gesehen",
+    "praeteritum": "sah",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sein",
+    "significado": "ser / estar",
+    "regencia": null,
+    "partizip_ii": "gewesen",
+    "perfekt": "ist gewesen",
+    "praeteritum": "war",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "sein",
+    "significado": "ser/estar",
+    "regencia": "*",
+    "partizip_ii": "gewesen",
+    "perfekt": "ist gewesen",
+    "praeteritum": "war",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sich bemühen",
+    "significado": "esforçar-se (por algo)",
+    "regencia": "um + A",
+    "partizip_ii": "bemüht",
+    "perfekt": "hat sich bemüht",
+    "praeteritum": "bemühte sich",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sich beschweren",
+    "significado": "reclamar/queixar-se",
+    "regencia": "bei + D / über + A",
+    "partizip_ii": "beschwert",
+    "perfekt": "hat sich beschwert",
+    "praeteritum": "beschwerte sich",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sich entscheiden",
+    "significado": "decidir-se; optar",
+    "regencia": "für + A / gegen + A",
+    "partizip_ii": "entschieden",
+    "perfekt": "hat sich entschieden",
+    "praeteritum": "entschied sich",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sich freuen",
+    "significado": "alegrar-se",
+    "regencia": "auf + A / über + A",
+    "partizip_ii": "gefreut",
+    "perfekt": "hat sich gefreut",
+    "praeteritum": "freute sich",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sich freuen",
+    "significado": "alegrar-se (com algo futuro)",
+    "regencia": "auf + A / über + A",
+    "partizip_ii": "gefreut",
+    "perfekt": "hat sich gefreut",
+    "praeteritum": "freute sich",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sich interessieren",
+    "significado": "interessar-se",
+    "regencia": "für + A",
+    "partizip_ii": "interessiert",
+    "perfekt": "hat sich interessiert",
+    "praeteritum": "interessierte sich",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sich verändern",
+    "significado": "mudar / transformar-se",
+    "regencia": null,
+    "partizip_ii": "verändert",
+    "perfekt": "hat sich verändert",
+    "praeteritum": "veränderte sich",
+    "origem": "Caminhada 01"
+  },
+  {
+    "verbo": "sich ärgern",
+    "significado": "irritar-se/ficar bravo (com algo ou alguém)",
+    "regencia": "über + A",
+    "partizip_ii": "geärgert",
+    "perfekt": "hat sich geärgert",
+    "praeteritum": "ärgerte sich",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "singen",
+    "significado": "cantar",
+    "regencia": null,
+    "partizip_ii": "gesungen",
+    "perfekt": "hat gesungen",
+    "praeteritum": "sang",
+    "origem": "Caminhada 05"
+  },
+  {
+    "verbo": "sitzen",
+    "significado": "estar sentado / sentar-se",
+    "regencia": null,
+    "partizip_ii": "gesessen",
+    "perfekt": "hat gesessen",
+    "praeteritum": "saß",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "sitzen",
+    "significado": "estar sentado",
+    "regencia": "*",
+    "partizip_ii": "gesessen",
+    "perfekt": "hat gesessen",
+    "praeteritum": "saß",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sollen",
+    "significado": "indica obrigação ou recomendação moral, traduzido como \"dever\"",
+    "regencia": "*",
+    "partizip_ii": "gesollt",
+    "perfekt": "hat gesollt",
+    "praeteritum": "sollte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "spazieren",
+    "significado": "passear",
+    "regencia": "*",
+    "partizip_ii": "spaziert",
+    "perfekt": "ist spaziert",
+    "praeteritum": "spazierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "speichern",
+    "significado": "salvar/armazenar",
+    "regencia": "*",
+    "partizip_ii": "gespeichert",
+    "perfekt": "hat gespeichert",
+    "praeteritum": "speicherte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "spenden",
+    "significado": "doar",
+    "regencia": "*",
+    "partizip_ii": "gespendet",
+    "perfekt": "hat gespendet",
+    "praeteritum": "spendete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "spielen",
+    "significado": "jogar",
+    "regencia": "*",
+    "partizip_ii": "gespielt",
+    "perfekt": "hat gespielt",
+    "praeteritum": "spielte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sprechen",
+    "significado": "falar",
+    "regencia": "mit + D / über + A",
+    "partizip_ii": "gesprochen",
+    "perfekt": "hat gesprochen",
+    "praeteritum": "sprach",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "springen",
+    "significado": "pular",
+    "regencia": "*",
+    "partizip_ii": "gesprungen",
+    "perfekt": "ist gesprungen",
+    "praeteritum": "sprang",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "stehen",
+    "significado": "estar de pé / ficar parado",
+    "regencia": null,
+    "partizip_ii": "gestanden",
+    "perfekt": "hat gestanden",
+    "praeteritum": "stand",
+    "origem": "Acervo inicial"
+  },
+  {
+    "verbo": "steigen",
+    "significado": "subir (em algo)",
+    "regencia": "*",
+    "partizip_ii": "gestiegen",
+    "perfekt": "ist gestiegen",
+    "praeteritum": "stieg",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "sterben",
+    "significado": "morrer",
+    "regencia": "an + D",
+    "partizip_ii": "gestorben",
+    "perfekt": "ist gestorben",
+    "praeteritum": "starb",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "streiten",
+    "significado": "discutir",
+    "regencia": "mit + D / über + A",
+    "partizip_ii": "gestritten",
+    "perfekt": "hat gestritten",
+    "praeteritum": "stritt",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "suchen",
+    "significado": "procurar/buscar",
+    "regencia": "*",
+    "partizip_ii": "gesucht",
+    "perfekt": "hat gesucht",
+    "praeteritum": "suchte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "teilen",
+    "significado": "dividir",
+    "regencia": "*",
+    "partizip_ii": "geteilt",
+    "perfekt": "hat geteilt",
+    "praeteritum": "teilte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "telefonieren",
+    "significado": "telefonar",
+    "regencia": "mit + D",
+    "partizip_ii": "telefoniert",
+    "perfekt": "hat telefoniert",
+    "praeteritum": "telefonierte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "treffen",
+    "significado": "encontrar",
+    "regencia": "A / sich mit + D",
+    "partizip_ii": "getroffen",
+    "perfekt": "hat getroffen",
+    "praeteritum": "traf",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "trinken",
+    "significado": "beber",
+    "regencia": "*",
+    "partizip_ii": "getrunken",
+    "perfekt": "hat getrunken",
+    "praeteritum": "trank",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "träumen",
+    "significado": "sonhar",
+    "regencia": "von + D",
+    "partizip_ii": "geträumt",
+    "perfekt": "hat geträumt",
+    "praeteritum": "träumte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "vergeben",
+    "significado": "perdoar; conceder/atribuir",
+    "regencia": "D + A",
+    "partizip_ii": "vergeben",
+    "perfekt": "hat vergeben",
+    "praeteritum": "vergab",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "vergessen",
+    "significado": "esquecer",
+    "regencia": "*",
+    "partizip_ii": "vergessen",
+    "perfekt": "hat vergessen",
+    "praeteritum": "vergaß",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "verkaufen",
+    "significado": "vender",
+    "regencia": "*",
+    "partizip_ii": "verkauft",
+    "perfekt": "hat verkauft",
+    "praeteritum": "verkaufte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "verlangen",
+    "significado": "exigir",
+    "regencia": "nach + D",
+    "partizip_ii": "verlangt",
+    "perfekt": "hat verlangt",
+    "praeteritum": "verlangte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "verschwinden",
+    "significado": "desaparecer",
+    "regencia": "*",
+    "partizip_ii": "verschwunden",
+    "perfekt": "ist verschwunden",
+    "praeteritum": "verschwand",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "verstehen",
+    "significado": "entender",
+    "regencia": "*",
+    "partizip_ii": "verstanden",
+    "perfekt": "hat verstanden",
+    "praeteritum": "verstand",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "versuchen",
+    "significado": "tentar/experimentar",
+    "regencia": "*",
+    "partizip_ii": "versucht",
+    "perfekt": "hat versucht",
+    "praeteritum": "versuchte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "verzeihen",
+    "significado": "perdoar",
+    "regencia": "D",
+    "partizip_ii": "verziehen",
+    "perfekt": "hat verziehen",
+    "praeteritum": "verzieh",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "wachen",
+    "significado": "vigiar",
+    "regencia": "*",
+    "partizip_ii": "gewacht",
+    "perfekt": "hat gewacht",
+    "praeteritum": "wachte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "wandern",
+    "significado": "caminhar",
+    "regencia": "*",
+    "partizip_ii": "gewandert",
+    "perfekt": "ist gewandert",
+    "praeteritum": "wanderte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "warten",
+    "significado": "esperar",
+    "regencia": "auf + A",
+    "partizip_ii": "gewartet",
+    "perfekt": "hat gewartet",
+    "praeteritum": "wartete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "werden",
+    "significado": "tornar-se",
+    "regencia": "*",
+    "partizip_ii": "geworden",
+    "perfekt": "ist geworden",
+    "praeteritum": "wurde",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "wissen",
+    "significado": "saber",
+    "regencia": "*",
+    "partizip_ii": "gewusst",
+    "perfekt": "hat gewusst",
+    "praeteritum": "wusste",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "wohnen",
+    "significado": "morar",
+    "regencia": "in + D",
+    "partizip_ii": "gewohnt",
+    "perfekt": "hat gewohnt",
+    "praeteritum": "wohnte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "wollen",
+    "significado": "expressa intenção ou desejo, traduzido como \"querer\"",
+    "regencia": "*",
+    "partizip_ii": "gewollt",
+    "perfekt": "hat gewollt",
+    "praeteritum": "wollte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "wünschen",
+    "significado": "desejar",
+    "regencia": "*",
+    "partizip_ii": "gewünscht",
+    "perfekt": "hat gewünscht",
+    "praeteritum": "wünschte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "zurückkehren",
+    "significado": "retornar/voltar",
+    "regencia": "*",
+    "partizip_ii": "zurückgekehrt",
+    "perfekt": "ist zurückgekehrt",
+    "praeteritum": "kehrte zurück",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "zweifeln",
+    "significado": "duvidar",
+    "regencia": "an + D",
+    "partizip_ii": "gezweifelt",
+    "perfekt": "hat gezweifelt",
+    "praeteritum": "zweifelte",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "öffnen",
+    "significado": "abrir",
+    "regencia": "*",
+    "partizip_ii": "geöffnet",
+    "perfekt": "hat geöffnet",
+    "praeteritum": "öffnete",
+    "origem": "Acervo de Origem — verbos"
+  },
+  {
+    "verbo": "überzeugen",
+    "significado": "convencer/persuadir",
+    "regencia": "A / von + D",
+    "partizip_ii": "überzeugt",
+    "perfekt": "hat überzeugt",
+    "praeteritum": "überzeugte",
+    "origem": "Acervo de Origem — verbos"
+  }
+]

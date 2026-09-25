@@ -1,0 +1,19 @@
+# Ambientes / dependências
+node_modules/
+.venv-fiscal/
+__pycache__/
+*.pyc
+
+# Firebase
+.firebase/
+firebase-debug.log
+*firebase*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Credenciais (NUNCA versionar chaves privadas)
+serviceAccount*.json
+*serviceAccountKey*.json
+.env
