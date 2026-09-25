@@ -22,6 +22,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Deutschleben">
 
+<script type="module" src="firebase-dados.js"></script>
+
 <style>
 
 * {
@@ -1790,8 +1792,22 @@ function salvarCompreensaoLocal(evento) {
 
     window.__caminhadaAtual = () => (sel ? parseInt(sel.value, 10) : 1);
 
-    fetch("./data/caminhadas.json")
-        .then(r => r.json())
+    async function obterCaminhadas() {
+        // Espera o módulo do Firestore carregar (até ~2s) e tenta o banco online.
+        for (let i = 0; i < 20 && !window.DL_DADOS; i++) {
+            await new Promise((res) => setTimeout(res, 100));
+        }
+        if (window.DL_DADOS) {
+            try {
+                const online = await window.DL_DADOS.carregarCaminhadas();
+                if (online && online.length) return online;
+            } catch (e) { /* usa o fallback abaixo */ }
+        }
+        const r = await fetch("./data/caminhadas.json");
+        return await r.json();
+    }
+
+    obterCaminhadas()
         .then(data => {
             caminhadas = data;
             if (!sel) return;
