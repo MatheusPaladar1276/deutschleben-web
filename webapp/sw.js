@@ -1,17 +1,17 @@
-// Service worker do Deutschleben — habilita instalação (PWA) e cache básico.
-const CACHE = "deutschleben-v1";
-const ATIVOS = [
-  "./",
-  "./index.html",
-  "./data/caminhadas.json",
+// Service worker do Deutschleben — instalação (PWA) e cache.
+// Estratégia: rede-primeiro para navegação/JSON (conteúdo sempre atual),
+// cache-primeiro para estáticos (ícones). Suba a versão ao publicar mudanças.
+const CACHE = "deutschleben-v2";
+const ESTATICOS = [
   "./manifest.webmanifest",
   "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./icons/icon-512.png",
+  "./icons/icon-180.png"
 ];
 
 self.addEventListener("install", (evento) => {
   evento.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(ATIVOS)).then(() => self.skipWaiting())
+    caches.open(CACHE).then((c) => c.addAll(ESTATICOS)).then(() => self.skipWaiting())
   );
 });
 
@@ -23,18 +23,39 @@ self.addEventListener("activate", (evento) => {
   );
 });
 
+function ehNavegacaoOuDados(req) {
+  return req.mode === "navigate" || req.destination === "document" || req.url.endsWith(".json");
+}
+
 self.addEventListener("fetch", (evento) => {
-  if (evento.request.method !== "GET") return;
-  evento.respondWith(
-    caches.match(evento.request).then((resposta) =>
-      resposta ||
-      fetch(evento.request)
+  const req = evento.request;
+  if (req.method !== "GET") return;
+
+  // Só intercepta o próprio site; deixa Firebase/Google (auth/firestore) passar direto.
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+
+  if (ehNavegacaoOuDados(req)) {
+    evento.respondWith(
+      fetch(req)
         .then((rede) => {
           const copia = rede.clone();
-          caches.open(CACHE).then((c) => c.put(evento.request, copia)).catch(() => {});
+          caches.open(CACHE).then((c) => c.put(req, copia)).catch(() => {});
           return rede;
         })
-        .catch(() => caches.match("./index.html"))
+        .catch(() => caches.match(req).then((r) => r || caches.match("./index.html")))
+    );
+    return;
+  }
+
+  evento.respondWith(
+    caches.match(req).then((r) =>
+      r ||
+      fetch(req).then((rede) => {
+        const copia = rede.clone();
+        caches.open(CACHE).then((c) => c.put(req, copia)).catch(() => {});
+        return rede;
+      })
     )
   );
 });
