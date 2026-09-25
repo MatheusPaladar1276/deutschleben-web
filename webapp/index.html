@@ -12,6 +12,16 @@
 
 <title>Deutschleben</title>
 
+<meta name="theme-color" content="#aebbd0">
+<meta name="description" content="Do alemão estudado ao vivido.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Deutschleben">
+
 <style>
 
 * {
@@ -1795,6 +1805,14 @@ function salvarCompreensaoLocal(evento) {
         })
         .catch(e => console.error("Falha ao carregar caminhadas:", e));
 })();
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js").catch(function () {});
+    });
+}
 </script>
 
 </body>
