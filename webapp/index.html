@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Deutschleben</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #aebbd0;
+    background-image: radial-gradient(
+        circle,
+        rgba(18, 31, 52, .24) 1.15px,
+        transparent 1.25px
+    );
+    background-size: 16px 16px;
+    color: #17233c;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.topo {
+    background-color: #C7D1DC;
+    background-image: linear-gradient(to right, rgba(20,20,20,.32) 0%, rgba(20,20,20,0) 38%, rgba(20,20,20,0) 62%, rgba(20,20,20,.32) 100%), linear-gradient(to right, rgba(190,30,45,.32) 0%, rgba(190,30,45,0) 38%, rgba(190,30,45,0) 62%, rgba(190,30,45,.32) 100%), linear-gradient(to right, rgba(230,185,35,.34) 0%, rgba(230,185,35,0) 38%, rgba(230,185,35,0) 62%, rgba(230,185,35,.34) 100%);
+    background-size: 100% 33.33%, 100% 33.34%, 100% 33.33%;
+    background-position: top, center, bottom;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #dedbd2;
+    padding: 28px 5% 22px;
+    text-align: center;
+}
+
+
+.marca {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 54px;
+    letter-spacing: -1px;
+}
+
+.marca span {
+    color: #28735f;
+}
+
+.filete {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 6px;
+    margin-top: 7px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.filete div {
+    flex: 1;
+}
+
+.preto {
+    background: #151515;
+}
+
+.vermelho {
+    background: #cf3030;
+}
+
+.amarelo {
+    background: #f1c232;
+}
+
+.subtitulo {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fim-viagem .enviar {
+    display: inline-block;
+    width: 360px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px 0 14px;
+}
+
+.fim-viagem .secundario {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px 5%;
+    background: #E1E7ED;
+    border-bottom: 1px solid #e4e1da;
+}
+
+.nav {
+    padding: 16px 31px;
+    border-radius: 10px;
+    border: 2px solid #9eaaa6;
+    background: #eef1ef;
+    color: #253a35;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 2px 5px rgba(23, 35, 60, .08);
+}
+
+.nav:nth-child(2) {
+    background: #f3eee5;
+    border-color: #b8a98f;
+    color: #554a39;
+}
+
+.nav:nth-child(3) {
+    background: #e9eef5;
+    border-color: #91a4bc;
+    color: #344a64;
+}
+
+.nav:nth-child(4) {
+    background: #f1ebf4;
+    border-color: #aa96b4;
+    color: #594862;
+}
+
+.nav.ativa {
+    background: #CFE6D8;
+    color: #284A3E;
+    border-color: #A6C9B5;
+    box-shadow: 0 3px 7px rgba(74, 112, 94, .16);
+}
+
+.pagina {
+    width: 96%;
+    max-width: 1760px;
+    margin: 26px auto;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 400px;
+    gap: 18px;
+    align-items: start;
+}
+
+.cartao,
+.ajuda {
+    background: #F1F3F4;
+    border: 1px solid #c9ced3;
+    border-left: 4px solid #377f6d;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.cartao {
+    padding: 36px;
+}
+
+.cabecalho-caminhada {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.numero {
+    color: #28735f;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+h1 {
+    margin: 5px 0 0;
+    font-size: 52px;
+}
+
+.visualizacao {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.rotulo {
+    margin-right: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #34423f;
+}
+
+.botao {
+    padding: 14px 22px;
+    border: 2px solid #9eaaa6;
+    border-radius: 10px;
+    background: #eef1ef;
+    color: #253a35;
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 5px;
+    box-shadow: 0 2px 5px rgba(23, 35, 60, .08);
+}
+
+.botao:nth-of-type(2) {
+    background: #f3eee5;
+    border-color: #b8a98f;
+    color: #554a39;
+}
+
+.botao:nth-of-type(3) {
+    background: #e9eef5;
+    border-color: #91a4bc;
+    color: #344a64;
+}
+
+.botao:nth-of-type(4) {
+    background: #f1ebf4;
+    border-color: #aa96b4;
+    color: #594862;
+}
+
+.botao.ativo {
+    background: #CFE6D8;
+    color: #284A3E;
+    border-color: #A6C9B5;
+    box-shadow: 0 3px 7px rgba(74, 112, 94, .16);
+}
+
+.texto {
+    font-size: 42px;
+    line-height: 1.55;
+}
+
+.segmento {
+    border-radius: 6px;
+}
+
+body.modo-limpo .bloco,
+body.modo-limpo .verbo {
+    background: transparent;
+}
+
+body.modo-blocos .bloco {
+    background: #f8e8b9;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+body.modo-verbos .verbo {
+    background: #cfe7fa;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+body.modo-ambos .bloco {
+    background: #f8e8b9;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+body.modo-ambos .verbo {
+    background: #cfe7fa;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+body.modo-ambos .bloco.verbo {
+    background:
+        linear-gradient(
+            to bottom,
+            #cfe7fa 0%,
+            #cfe7fa 72%,
+            #f8e8b9 72%,
+            #f8e8b9 100%
+        );
+}
+
+.ajuda {
+    padding: 30px;
+    position: sticky;
+    top: 20px;
+    min-height: 300px;
+}
+
+.ajuda h2 {
+    margin: 0 0 16px;
+    font-size: 38px;
+}
+
+.ajuda-vazia {
+    color: #6d7774;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    line-height: 1.55;
+}
+
+.ficha {
+    display: none;
+}
+
+.item-titulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.item-sentido {
+    color: #28735f;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+.linha {
+    border-top: 1px solid #ece9e2;
+    padding: 11px 0;
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+}
+
+.linha strong {
+    display: block;
+    font-size: 19px;
+    color: #6a7471;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.link-ajuda {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #9ebbb2;
+    border-radius: 8px;
+    background: #f4faf7;
+    color: #276b59;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.conjugacao {
+    display: none;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #ece9e2;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+}
+
+.conjugacao-linha {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding: 7px 0;
+}
+
+.conjugacao-linha strong {
+    color: #28735f;
+}
+
+.conjugacao-linha span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.opcao-reativacao {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border: 1px solid #d7e2dd;
+    border-radius: 8px;
+    background: #fff;
+    color: #2f4f46;
+    cursor: pointer;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.opcao-reativacao strong {
+    color: #28735f;
+}
+
+.microquadro-reativacao {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    margin-top: 8px;
+    border: 1px solid #d7e2dd;
+    border-radius: 7px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.microquadro-reativacao div {
+    padding: 7px 8px;
+    border-right: 1px solid #e4e9e6;
+    border-bottom: 1px solid #e4e9e6;
+}
+
+.microquadro-reativacao div:nth-child(3n) {
+    border-right: none;
+}
+
+.microquadro-reativacao div:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+
+.microquadro-reconstrucao {
+    margin-top: 9px;
+    line-height: 1.55;
+    white-space: pre-line;
+}
+
+.compreensao {
+    margin-top: 18px;
+    background: #edf6f1;
+    border: 1px solid #bfcfc8;
+    border-left: 4px solid #377f6d;
+    border-radius: 14px;
+    padding: 20px 26px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.07);
+}
+
+.compreensao h2 {
+    margin: 0 0 13px;
+    font-size: 34px;
+}
+
+.textos-prontos-r {
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #bfcfc8;
+}
+
+.textos-prontos-r .enviar {
+    display: inline-block;
+}
+
+textarea {
+    width: 100%;
+    min-height: 95px;
+    resize: vertical;
+    padding: 17px;
+    border: 1px solid #bbc8c3;
+    border-radius: 10px;
+    font-size: 23px;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    background: white;
+}
+
+.acoes-compreensao {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-top: 13px;
+}
+
+.retorno {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #28735f;
+    margin-right: auto;
+}
+
+.retorno.erro {
+    color: #a23d36;
+}
+
+.enviar {
+    padding: 18px 38px;
+    border: 2px solid #284A72;
+    border-radius: 10px;
+    background: #35658F;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,.08);
+}
+
+.enviar:hover {
+    background: #284F73;
+}
+
+.enviar.porta-texto {
+    background: #C9C19A;
+    border-color: #A49A6B;
+    color: #332F1C;
+}
+
+.enviar.porta-texto:hover {
+    background: #BDB487;
+}
+
+.decisao-alternativa {
+    border-color: #557d70;
+    background: #dbe9e3;
+    color: #28483f;
+}
+
+.decisao-alternativa:hover {
+    background: #cbded6;
+}
+
+.enviar:disabled {
+    background: #a9bbb6;
+    border-color: #a9bbb6;
+    color: #f5f7f6;
+    cursor: default;
+    box-shadow: none;
+    opacity: .75;
+}
+
+.secundario {
+    padding: 16px 30px;
+    border: 1px solid #8fa79f;
+    border-radius: 8px;
+    background: transparent;
+    color: #2f5f54;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.secundario:hover {
+    background: #f3f7f5;
+}
+
+.texto-reflexao {
+    margin: 0 0 16px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 600;
+    color: #263d36;
+}
+
+.navegacao-etapa {
+    width: 100%;
+    margin-top: 14px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.voltar-etapa {
+    display: inline-block;
+    padding: 14px 26px;
+    border: 2px solid #7f9d94;
+    border-radius: 10px;
+    background: #eef4f1;
+    color: #28483f;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,.06);
+}
+
+.voltar-etapa:hover {
+    background: #e2e8e5;
+}
+
+.form-encerrar {
+    margin-top: 12px;
+    text-align: right;
+}
+
+.encerrar {
+    padding: 18px 38px;
+    border: 2px solid #557d70;
+    border-radius: 10px;
+    background: #dbe9e3;
+    color: #28483f;
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,.08);
+}
+
+.encerrar:hover {
+    background: #cbded6;
+}
+
+.resultado-compreensao {
+    margin-top: 18px;
+}
+
+.resultado-bloco {
+    background: white;
+    border: 1px solid #d7e2dd;
+    border-radius: 10px;
+    padding: 15px 18px;
+    margin-top: 12px;
+}
+
+.resultado-bloco h3 {
+    margin: 0 0 9px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #28735f;
+}
+
+.resultado-bloco.aberto h3 {
+    color: #8a5b28;
+}
+
+.resultado-bloco ul {
+    margin: 0;
+    padding-left: 26px;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.65;
+    font-weight: 600;
+}
+
+.sem-itens,
+.nota-motor {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sem-itens {
+    margin: 0;
+    color: #6d7774;
+}
+
+.nota-motor {
+    margin: 14px 2px 0;
+    color: #6d7774;
+}
+
+.frase-apoio {
+    margin-top: 16px;
+    background: white;
+    border: 1px solid #d7e2dd;
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.apoios-chave {
+    margin-top: 14px;
+}
+
+.apoio-chave {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    background: #fffaf0;
+    border: 1px solid #eadfca;
+    border-radius: 9px;
+    padding: 12px 15px;
+    margin-top: 8px;
+}
+
+.apoio-chave strong {
+    color: #8a5b28;
+    font-size: 22px;
+}
+
+.apoio-chave span {
+    color: #30423d;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.pergunta-apoio {
+    margin: 18px 0 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.acoes-apoio {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.acoes-apoio .secundario {
+    padding: 18px 38px;
+    border: 2px solid #557d70;
+    border-radius: 10px;
+    background: #dbe9e3;
+    color: #28483f;
+    font-size: 26px;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0,0,0,.08);
+}
+
+.acoes-apoio .secundario:hover {
+    background: #cbded6;
+}
+
+.apoio-limite {
+    max-width: 520px;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #6d7774;
+    line-height: 1.45;
+}
+
+.link-botao {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+
+.recordar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(35, 48, 65, .42);
+}
+
+.recordar-painel {
+    width: min(1050px, 92vw);
+    max-height: 84vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 34px 38px 54px;
+    background: #F1F3F4;
+    border: 1px solid #b9c4c8;
+    border-left: 5px solid #377f6d;
+    border-radius: 12px;
+    box-shadow: 0 12px 34px rgba(0,0,0,.22);
+}
+
+.recordar-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.recordar-painel h2 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.recordar-cabecalho .voltar-etapa {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.recordar-painel h3 {
+    font-size: 23px;
+    margin: 22px 0 10px;
+}
+
+.recordar-painel .texto-reflexao {
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+.recordar-painel .resultado-bloco {
+    margin-top: 18px;
+}
+
+.recordar-painel .resultado-bloco h3 {
+    font-size: 22px;
+}
+
+.recordar-painel .resultado-bloco ul {
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+.recordar-painel .voltar-etapa {
+    margin-top: 12px;
+    margin-bottom: 28px;
+    font-size: 20px;
+}
+
+@media (max-width: 950px) {
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .ajuda {
+        position: static;
+    }
+
+    .cabecalho-caminhada {
+        display: block;
+    }
+
+    .visualizacao {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body class="modo-limpo">
+
+
+<header class="topo">
+
+    <div class="marca">
+        Deutsch<span>leben</span>
+    </div>
+
+    <div class="filete">
+        <div class="preto"></div>
+        <div class="vermelho"></div>
+        <div class="amarelo"></div>
+    </div>
+
+    <div class="subtitulo">
+        Do alemão estudado ao vivido.
+    </div>
+
+</header>
+
+
+<nav class="navegacao">
+
+    <div class="nav ativa" id="nav-caminhada-atual">
+        📖 Caminhada 01
+    </div>
+
+    <select id="seletor-caminhada" title="Escolher Caminhada"
+        style="padding:6px 10px; border-radius:8px; border:1px solid #9eb5cc; background:#f4f8fc; color:#20364d; font:inherit; cursor:pointer; max-width:280px;"></select>
+
+    <button type="button" class="nav recordar-nav" onclick="abrirRecordar()">
+        Recordar
+    </button>
+
+    <a class="nav" href="/?caminhada=1&meu_texto=1">
+        Meu texto
+    </a>
+
+    <div class="nav">
+        Estrada
+    </div>
+
+    <div class="nav">
+        Celeiro
+    </div>
+
+    <div class="nav">
+        Memória Viva
+    </div>
+
+</nav>
+
+
+<main class="pagina">
+
+
+<div class="grade">
+
+
+<section class="cartao">
+
+    <div class="cabecalho-caminhada">
+
+        <div>
+
+            <h1 id="titulo-caminhada">
+                Ein Morgen am See
+            </h1>
+
+        </div>
+
+
+        <div class="visualizacao">
+
+            <span class="rotulo">
+                Visualização:
+            </span>
+
+            <button
+                class="botao ativo"
+                onclick="mudarModo('limpo', this)">
+                Limpo
+            </button>
+
+            <button
+                class="botao"
+                onclick="mudarModo('blocos', this)">
+                Blocos
+            </button>
+
+            <button
+                class="botao"
+                onclick="mudarModo('verbos', this)">
+                Verbos
+            </button>
+
+            <button
+                class="botao"
+                onclick="mudarModo('ambos', this)">
+                Blocos + Verbos
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button" class="botao" style="background:#dbe8f5; border-color:#9eb5cc;" onclick="ouvirTextoAlemao()">
+        &#128266; Ouvir
+    </button>
+
+    <div class="texto" id="texto-caminhada">
+        <span class="segmento bloco" data-bloco="Am frühen Morgen" data-sentido="no início da manhã" data-bloco-tipo="expressão temporal" data-pontos-reativacao="[{&quot;ponto_reativacao_id&quot;: 1, &quot;elemento&quot;: &quot;am&quot;, &quot;pergunta&quot;: &quot;Por que am?&quot;, &quot;ordem&quot;: 1, &quot;primeira_pista&quot;: &quot;am = an + dem&quot;, &quot;segunda_pista&quot;: &quot;Morgen → der Morgen. Aqui: Dativ.&quot;, &quot;terceira_pista&quot;: &quot;der Morgen → dem Morgen | an + dem → am&quot;, &quot;terceira_pista_tipo&quot;: &quot;quadro&quot;}, {&quot;ponto_reativacao_id&quot;: 2, &quot;elemento&quot;: &quot;frühen&quot;, &quot;pergunta&quot;: &quot;Por que frühen termina em -en?&quot;, &quot;ordem&quot;: 2, &quot;primeira_pista&quot;: &quot;Em am frühen Morgen, am já contém dem.&quot;, &quot;segunda_pista&quot;: &quot;Aqui temos Dativ: dem Morgen.&quot;, &quot;terceira_pista&quot;: &quot;dem + früh + en → dem frühen Morgen&quot;, &quot;terceira_pista_tipo&quot;: &quot;quadro&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">Am frühen Morgen</span><span class="segmento"> </span><span class="segmento verbo" data-verbo="gehen" data-significado="ir" data-forma="ich gehe" data-pessoa="ich" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;gehe&quot;}, {&quot;pessoa&quot;: &quot;du&quot;, &quot;forma&quot;: &quot;gehst&quot;}, {&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;geht&quot;}, {&quot;pessoa&quot;: &quot;wir&quot;, &quot;forma&quot;: &quot;gehen&quot;}, {&quot;pessoa&quot;: &quot;ihr&quot;, &quot;forma&quot;: &quot;geht&quot;}, {&quot;pessoa&quot;: &quot;sie/Sie&quot;, &quot;forma&quot;: &quot;gehen&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">gehe</span><span class="segmento"> ich </span><span class="segmento bloco" data-bloco="zum See" data-sentido="até o lago / para o lago" data-bloco-tipo="bloco" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">zum See</span><span class="segmento">.<br></span><span class="segmento bloco" data-bloco="Über dem Wasser" data-sentido="sobre a água" data-bloco-tipo="bloco" data-pontos-reativacao="[{&quot;ponto_reativacao_id&quot;: 3, &quot;elemento&quot;: &quot;über dem Wasser&quot;, &quot;pergunta&quot;: &quot;Por que dem?&quot;, &quot;ordem&quot;: 1, &quot;primeira_pista&quot;: &quot;Onde está o nevoeiro?&quot;, &quot;segunda_pista&quot;: &quot;Isso é localização (wo?) ou direção (wohin?)?&quot;, &quot;terceira_pista&quot;: &quot;wo? → Dativ | wohin? → Akkusativ&quot;, &quot;terceira_pista_tipo&quot;: &quot;quadro&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">Über dem Wasser</span><span class="segmento"> </span><span class="segmento verbo" data-verbo="liegen" data-significado="estar situado / estar deitado" data-forma="liegt" data-pessoa="er/sie/es" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;liegt&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">liegt</span><span class="segmento"> </span><span class="segmento bloco" data-bloco="leichter Nebel" data-sentido="leve neblina" data-bloco-tipo="bloco" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">leichter Nebel</span><span class="segmento">.<br>Ich </span><span class="segmento verbo" data-verbo="bleiben" data-significado="ficar / permanecer" data-forma="ich bleibe" data-pessoa="ich" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;bleibe&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">bleibe</span><span class="segmento"> </span><span class="segmento bloco" data-bloco="einen Moment" data-sentido="por um momento" data-bloco-tipo="bloco" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">einen Moment</span><span class="segmento"> </span><span class="segmento verbo" data-verbo="stehen" data-significado="estar de pé / ficar parado" data-forma="stehen" data-pessoa="-" data-tempo="Infinitiv" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;-&quot;, &quot;forma&quot;: &quot;stehen&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">stehen</span><span class="segmento"> und </span><span class="segmento verbo" data-verbo="beobachten" data-significado="observar" data-forma="ich beobachte" data-pessoa="ich" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;beobachte&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">beobachte</span><span class="segmento"> die Vögel.<br>Langsam </span><span class="segmento verbo" data-verbo="sich verändern" data-significado="mudar / transformar-se" data-forma="verändert sich" data-pessoa="er/sie/es" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;verändert&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">verändert</span><span class="segmento verbo" data-verbo="sich verändern" data-significado="mudar / transformar-se" data-forma="verändert sich" data-pessoa="er/sie/es" data-tempo="Pr?sens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;verändere mich&quot;}, {&quot;pessoa&quot;: &quot;du&quot;, &quot;forma&quot;: &quot;veränderst dich&quot;}, {&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;verändert sich&quot;}, {&quot;pessoa&quot;: &quot;wir&quot;, &quot;forma&quot;: &quot;verändern uns&quot;}, {&quot;pessoa&quot;: &quot;ihr&quot;, &quot;forma&quot;: &quot;verändert euch&quot;}, {&quot;pessoa&quot;: &quot;sie/Sie&quot;, &quot;forma&quot;: &quot;verändern sich&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida"> sich</span><span class="segmento"> </span><span class="segmento bloco" data-bloco="das Licht auf dem Wasser" data-sentido="a luz sobre a água" data-bloco-tipo="bloco" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">das Licht auf dem Wasser</span><span class="segmento">.<br>Dann </span><span class="segmento verbo" data-verbo="denken" data-significado="pensar" data-forma="ich denke" data-pessoa="ich" data-tempo="Präsens" data-regencia="an + Akk." data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;denke&quot;}, {&quot;pessoa&quot;: &quot;du&quot;, &quot;forma&quot;: &quot;denkst&quot;}, {&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;denkt&quot;}, {&quot;pessoa&quot;: &quot;wir&quot;, &quot;forma&quot;: &quot;denken&quot;}, {&quot;pessoa&quot;: &quot;ihr&quot;, &quot;forma&quot;: &quot;denkt&quot;}, {&quot;pessoa&quot;: &quot;sie/Sie&quot;, &quot;forma&quot;: &quot;denken&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">denke</span><span class="segmento"> ich </span><span class="segmento bloco" data-bloco="an den neuen Tag" data-sentido="no novo dia" data-bloco-tipo="bloco verbal" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">an den neuen Tag</span><span class="segmento"> und </span><span class="segmento verbo" data-verbo="gehen" data-significado="ir" data-forma="gehe" data-pessoa="ich" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;gehe&quot;}, {&quot;pessoa&quot;: &quot;du&quot;, &quot;forma&quot;: &quot;gehst&quot;}, {&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;geht&quot;}, {&quot;pessoa&quot;: &quot;wir&quot;, &quot;forma&quot;: &quot;gehen&quot;}, {&quot;pessoa&quot;: &quot;ihr&quot;, &quot;forma&quot;: &quot;geht&quot;}, {&quot;pessoa&quot;: &quot;sie/Sie&quot;, &quot;forma&quot;: &quot;gehen&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">gehe</span><span class="segmento"> weiter.</span>
+    </div>
+
+</section>
+
+
+<aside class="ajuda">
+
+    <h2>
+        Ajuda rápida
+    </h2>
+
+
+    <div
+        id="ajuda-vazia"
+        class="ajuda-vazia">
+
+        Clique em um bloco ou verbo marcado
+        para consultar mais informações.
+
+    </div>
+
+
+    <div
+        id="ficha-verbo"
+        class="ficha">
+
+        <div
+            id="verbo-titulo"
+            class="item-titulo">
+        </div>
+
+        <div
+            id="verbo-significado"
+            class="item-sentido">
+        </div>
+
+        <div class="linha">
+            <strong>Forma encontrada</strong>
+            <span id="forma"></span>
+        </div>
+
+        <div class="linha">
+            <strong>Tempo verbal</strong>
+            <span id="tempo"></span>
+        </div>
+
+        <div class="linha">
+            <strong>Pessoa</strong>
+            <span id="pessoa"></span>
+        </div>
+
+        <div class="linha">
+            <strong>Regência</strong>
+            <span id="regencia"></span>
+        </div>
+
+        <button
+            id="botao-conjugacao"
+            class="link-ajuda"
+            type="button"
+            onclick="alternarConjugacao()">
+            Ver conjugação ›
+        </button>
+
+        <div
+            id="conjugacao"
+            class="conjugacao">
+        </div>
+
+    </div>
+
+
+    <div
+        id="ficha-bloco"
+        class="ficha">
+
+        <div
+            id="bloco-titulo"
+            class="item-titulo">
+        </div>
+
+        <div
+            id="bloco-sentido"
+            class="item-sentido">
+        </div>
+
+        <div class="linha">
+            <strong>Tipo</strong>
+            <span id="bloco-tipo"></span>
+        </div>
+
+        <button
+            id="botao-reativacao"
+            class="link-ajuda"
+            type="button"
+            style="display:none"
+            onclick="abrirReativacao()">
+            Por que é assim? ›
+        </button>
+
+        <button
+            id="botao-revisao"
+            class="link-ajuda"
+            type="button"
+            style="display:none"
+            onclick="reverQuadro()">
+            Rever o quadro ›
+        </button>
+
+        <div
+            id="escolha-reativacao"
+            class="conjugacao">
+
+            <p class="pergunta-apoio" style="margin-top:0">
+                O que você quer olhar mais de perto?
+            </p>
+
+            <div id="opcoes-reativacao"></div>
+
+        </div>
+
+        <div
+            id="quadro-reativacao"
+            class="conjugacao">
+
+            <div class="linha">
+                <strong>ðŸ’¡ Uma pista</strong>
+                <span id="pista-reativacao"></span>
+            </div>
+
+            <div
+                id="segunda-pista-reativacao"
+                class="linha"
+                style="display:none">
+                <strong>ðŸ’¡ Mais uma pista</strong>
+                <span id="texto-segunda-pista-reativacao"></span>
+            </div>
+
+            <div
+                id="terceira-pista-reativacao"
+                class="linha"
+                style="display:none">
+                <strong>ðŸ’¡ Microquadro</strong>
+                <div id="microquadro-casos" class="microquadro-reativacao">
+                    <div></div>
+                    <div>Nominativ</div>
+                    <div>Dativ</div>
+                    <div>masculino</div>
+                    <div><strong>der</strong></div>
+                    <div><strong>dem</strong></div>
+                </div>
+                <div id="texto-terceira-pista-reativacao"
+                     class="microquadro-reconstrucao"></div>
+            </div>
+
+            <p class="pergunta-apoio">
+                Lembrou?
+            </p>
+
+            <div class="acoes-apoio">
+                <button
+                    type="button"
+                    class="encerrar"
+                    onclick="fecharReativacao()">
+                    Sim, lembrei
+                </button>
+
+                <button
+                    id="botao-segunda-pista"
+                    type="button"
+                    class="enviar"
+                    onclick="mostrarSegundaPista()">
+                    Ainda não
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+</div>
+
+
+
+<section class="compreensao">
+
+    <h2>
+        Minha compreensão
+    </h2>
+
+    <form
+        id="form-compreensao"
+        method="POST"
+        action="/compreensao"
+        onsubmit="return salvarCompreensaoLocal(event)">
+
+        <input
+            type="hidden"
+            name="caminhada_id"
+            value="1"
+        >
+        
+
+        <input
+            type="hidden"
+            name="momento"
+            value="inicial"
+        >
+
+        <textarea
+            name="texto_usuario"
+            placeholder="Escreva aqui, com suas palavras, o que você compreendeu..."
+            required></textarea>
+
+        <div class="acoes-compreensao">
+
+            
+
+            <button
+                type="submit"
+                class="enviar">
+                Enviar
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+
+
+
+</main>
+
+
+<script>
+
+function ouvirTextoAlemao() {
+    const elemento = document.getElementById("texto-caminhada");
+
+    if (!elemento || !("speechSynthesis" in window)) {
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const fala = new SpeechSynthesisUtterance(elemento.innerText);
+    fala.lang = "de-DE";
+
+    const vozes = window.speechSynthesis.getVoices();
+    const vozAlema = vozes.find(v => v.lang && v.lang.toLowerCase().startsWith("de"));
+
+    if (vozAlema) {
+        fala.voice = vozAlema;
+    }
+
+    window.speechSynthesis.speak(fala);
+}
+
+
+
+function abrirRecordar() {
+    const url = new URL(window.location.href);
+    url.searchParams.set("recordar", "1");
+    window.location.href = url.toString();
+}
+
+function fecharRecordar() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("recordar");
+    window.location.href = url.toString();
+}
+
+
+function mudarModo(modo, botao) {
+
+    document.body.className =
+        "modo-" + modo;
+
+    document
+        .querySelectorAll(".botao")
+        .forEach(
+            b => b.classList.remove("ativo")
+        );
+
+    botao.classList.add("ativo");
+}
+
+
+function esconderFichas() {
+
+    document
+        .getElementById("ajuda-vazia")
+        .style.display = "none";
+
+    document
+        .getElementById("ficha-verbo")
+        .style.display = "none";
+
+    document
+        .getElementById("ficha-bloco")
+        .style.display = "none";
+}
+
+
+function mostrarItem(elemento) {
+
+    const modo =
+        document.body.className;
+
+    const dados =
+        elemento.dataset;
+
+
+    if (
+        modo === "modo-verbos"
+        && dados.verbo
+    ) {
+        mostrarVerbo(elemento);
+        return;
+    }
+
+
+    if (
+        modo === "modo-blocos"
+        && dados.bloco
+    ) {
+        mostrarBloco(elemento);
+        return;
+    }
+
+
+    if (modo === "modo-ambos") {
+
+        if (dados.verbo) {
+            mostrarVerbo(elemento);
+            return;
+        }
+
+        if (dados.bloco) {
+            mostrarBloco(elemento);
+            return;
+        }
+    }
+}
+
+
+function mostrarBloco(elemento) {
+
+    esconderFichas();
+
+    const dados = elemento.dataset;
+
+    document
+        .getElementById("ficha-bloco")
+        .style.display = "block";
+
+    document
+        .getElementById("bloco-titulo")
+        .textContent = dados.bloco || "";
+
+    document
+        .getElementById("bloco-sentido")
+        .textContent = "— " + (dados.sentido || "");
+
+    document
+        .getElementById("bloco-tipo")
+        .textContent = dados.blocoTipo || "Bloco de sentido";
+
+    const botaoReativacao =
+        document.getElementById("botao-reativacao");
+
+    const botaoRevisao =
+        document.getElementById("botao-revisao");
+
+    botaoRevisao.style.display = "none";
+
+    document
+        .getElementById("escolha-reativacao")
+        .style.display = "none";
+
+    document
+        .getElementById("quadro-reativacao")
+        .style.display = "none";
+
+    let pontos = [];
+
+    try {
+        pontos = JSON.parse(dados.pontosReativacao || "[]");
+    } catch {
+        pontos = [];
+    }
+
+    botaoReativacao.dataset.pontos = JSON.stringify(pontos);
+
+    if (pontos.length > 0) {
+        botaoReativacao.style.display = "block";
+        botaoReativacao.textContent = "Por que é assim? ›";
+    } else {
+        botaoReativacao.style.display = "none";
+        botaoReativacao.dataset.pontos = "[]";
+    }
+}
+
+
+function abrirReativacao() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    let pontos = [];
+
+    try {
+        pontos = JSON.parse(botao.dataset.pontos || "[]");
+    } catch {
+        pontos = [];
+    }
+
+    if (pontos.length === 0) {
+        return;
+    }
+
+    if (pontos.length === 1) {
+        abrirPontoReativacao(pontos[0]);
+        return;
+    }
+
+    const caixa =
+        document.getElementById("opcoes-reativacao");
+
+    caixa.innerHTML = "";
+
+    pontos.forEach(ponto => {
+        const opcao = document.createElement("button");
+        opcao.type = "button";
+        opcao.className = "opcao-reativacao";
+
+        const elemento = ponto.elemento || "";
+        const pergunta = ponto.pergunta || "";
+
+        opcao.innerHTML =
+            "<strong>" + elemento + "</strong> — " + pergunta;
+
+        opcao.onclick = () => abrirPontoReativacao(ponto);
+        caixa.appendChild(opcao);
+    });
+
+    botao.style.display = "none";
+
+    document
+        .getElementById("escolha-reativacao")
+        .style.display = "block";
+}
+
+
+function abrirPontoReativacao(ponto) {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    botao.dataset.primeiraPista = ponto.primeira_pista || "";
+    botao.dataset.segundaPista = ponto.segunda_pista || "";
+    botao.dataset.terceiraPista = ponto.terceira_pista || "";
+    botao.dataset.terceiraPistaTipo = ponto.terceira_pista_tipo || "";
+    botao.dataset.elementoAtivo = ponto.elemento || "";
+
+    document
+        .getElementById("escolha-reativacao")
+        .style.display = "none";
+
+    document
+        .getElementById("pista-reativacao")
+        .textContent = botao.dataset.primeiraPista;
+
+    document
+        .getElementById("segunda-pista-reativacao")
+        .style.display = "none";
+
+    document
+        .getElementById("terceira-pista-reativacao")
+        .style.display = "none";
+
+    const botaoProxima =
+        document.getElementById("botao-segunda-pista");
+
+    botaoProxima.style.display = "inline-block";
+    botaoProxima.textContent = "Ainda não";
+    botaoProxima.onclick = mostrarSegundaPista;
+
+    document
+        .getElementById("quadro-reativacao")
+        .style.display = "block";
+}
+
+
+function mostrarSegundaPista() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    const botaoProxima =
+        document.getElementById("botao-segunda-pista");
+
+    document
+        .getElementById("texto-segunda-pista-reativacao")
+        .textContent =
+            botao.dataset.segundaPista || "";
+
+    document
+        .getElementById("segunda-pista-reativacao")
+        .style.display = "block";
+
+    botaoProxima.textContent = "Mais uma pista";
+    botaoProxima.onclick = mostrarTerceiraPista;
+}
+
+
+function mostrarTerceiraPista() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    const conteudo =
+        botao.dataset.terceiraPista || "";
+
+    const elementoAtivo =
+        botao.dataset.elementoAtivo || "";
+
+    const microquadroCasos =
+        document.getElementById("microquadro-casos");
+
+    // O experimento "am" conserva o microquadro de casos homologado.
+    // A nova ramificaÃ§Ã£o "frÃ¼hen" usa somente a reconstruÃ§Ã£o curta.
+    microquadroCasos.style.display =
+        elementoAtivo === "am" ? "grid" : "none";
+
+    document
+        .getElementById("texto-terceira-pista-reativacao")
+        .textContent =
+            conteudo.replace(" | ", "\n");
+
+    document
+        .getElementById("terceira-pista-reativacao")
+        .style.display = "block";
+
+    document
+        .getElementById("botao-segunda-pista")
+        .style.display = "none";
+}
+
+
+function fecharReativacao() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    const quadro =
+        document.getElementById("quadro-reativacao");
+
+    quadro.style.display = "none";
+
+    document
+        .getElementById("escolha-reativacao")
+        .style.display = "none";
+
+    botao.style.display = "none";
+
+    document
+        .getElementById("botao-revisao")
+        .style.display = "block";
+}
+
+
+function reverQuadro() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    document
+        .getElementById("pista-reativacao")
+        .textContent = botao.dataset.primeiraPista || "";
+
+    document
+        .getElementById("texto-segunda-pista-reativacao")
+        .textContent = botao.dataset.segundaPista || "";
+
+    const elementoAtivo =
+        botao.dataset.elementoAtivo || "";
+
+    document
+        .getElementById("microquadro-casos")
+        .style.display =
+            elementoAtivo === "am" ? "grid" : "none";
+
+    document
+        .getElementById("texto-terceira-pista-reativacao")
+        .textContent =
+            (botao.dataset.terceiraPista || "").replace(" | ", "\n");
+
+    document
+        .getElementById("segunda-pista-reativacao")
+        .style.display = "block";
+
+    document
+        .getElementById("terceira-pista-reativacao")
+        .style.display = "block";
+
+    document
+        .getElementById("botao-segunda-pista")
+        .style.display = "none";
+
+    document
+        .querySelector("#quadro-reativacao .pergunta-apoio")
+        .style.display = "none";
+
+    document
+        .querySelector("#quadro-reativacao .acoes-apoio")
+        .style.display = "none";
+
+    document
+        .getElementById("quadro-reativacao")
+        .style.display = "block";
+}
+
+
+function mostrarVerbo(elemento) {
+
+    esconderFichas();
+
+    const dados =
+        elemento.dataset;
+
+    document
+        .getElementById("ficha-verbo")
+        .style.display = "block";
+
+    document
+        .getElementById("verbo-titulo")
+        .textContent =
+            dados.verbo;
+
+    document
+        .getElementById("verbo-significado")
+        .textContent =
+            "— " + dados.significado;
+
+    document
+        .getElementById("forma")
+        .textContent =
+            dados.forma || "—";
+
+    document
+        .getElementById("tempo")
+        .textContent =
+            dados.tempo || "—";
+
+    document
+        .getElementById("pessoa")
+        .textContent =
+            dados.pessoa || "—";
+
+    document
+        .getElementById("regencia")
+        .textContent =
+            dados.regencia || "—";
+
+
+    const caixa =
+        document.getElementById("conjugacao");
+
+    const botao =
+        document.getElementById("botao-conjugacao");
+
+    caixa.innerHTML = "";
+
+    if (dados.tempo === "Infinitiv") {
+        caixa.style.display = "none";
+        botao.style.display = "none";
+        return;
+    }
+
+    botao.style.display = "";
+
+    let conjugacoes = [];
+
+
+    try {
+
+        conjugacoes =
+            JSON.parse(
+                dados.conjugacoes || "[]"
+            );
+
+    } catch {
+
+        conjugacoes = [];
+    }
+
+
+    if (conjugacoes.length === 0) {
+
+        caixa.innerHTML =
+            "<em>ConjugaÃ§Ã£o ainda não carregada.</em>";
+
+    } else {
+
+        conjugacoes.forEach(item => {
+
+            const linha =
+                document.createElement("div");
+
+            linha.className =
+                "conjugacao-linha";
+
+            linha.innerHTML =
+                "<strong>"
+                + item.pessoa
+                + "</strong><span>"
+                + item.forma
+                + "</span>";
+
+            caixa.appendChild(linha);
+        });
+    }
+
+
+    caixa.style.display = "none";
+
+    botao.textContent =
+        "Ver conjugação ›";
+}
+
+
+function alternarConjugacao() {
+
+    const caixa =
+        document.getElementById("conjugacao");
+
+    const botao =
+        document.getElementById("botao-conjugacao");
+
+
+    if (caixa.style.display === "block") {
+
+        caixa.style.display = "none";
+
+        botao.textContent =
+            "Ver conjugação ›";
+
+    } else {
+
+        caixa.style.display = "block";
+
+        botao.textContent =
+            "Ocultar conjugação ‹";
+    }
+}
+
+
+</script>
+
+<script>
+// ===== Web (Firebase Hosting): navegação entre Caminhadas + compreensão local =====
+function padCaminhada(n) { return String(n).padStart(2, "0"); }
+
+function restaurarCompreensao(numero) {
+    const form = document.getElementById("form-compreensao");
+    if (!form) return;
+    const area = form.querySelector("textarea[name='texto_usuario']");
+    if (area) area.value = "";
+    const aviso = document.getElementById("aviso-compreensao");
+    if (aviso) aviso.remove();
+    const bruto = localStorage.getItem("compreensao_" + numero);
+    if (bruto) {
+        try { const d = JSON.parse(bruto); if (area && d.texto) area.value = d.texto; } catch (e) { /* ignora */ }
+    }
+}
+
+function salvarCompreensaoLocal(evento) {
+    evento.preventDefault();
+    const form = document.getElementById("form-compreensao");
+    const area = form.querySelector("textarea[name='texto_usuario']");
+    const t = (area.value || "").trim();
+    if (!t) return false;
+    const numero = window.__caminhadaAtual ? window.__caminhadaAtual() : 1;
+    localStorage.setItem("compreensao_" + numero, JSON.stringify({ texto: t, data: new Date().toISOString() }));
+    let aviso = document.getElementById("aviso-compreensao");
+    if (!aviso) {
+        aviso = document.createElement("p");
+        aviso.id = "aviso-compreensao";
+        aviso.style.cssText = "margin-top:10px;color:#2f6b46;font-weight:600;";
+        form.appendChild(aviso);
+    }
+    aviso.textContent = "Sua compreensão foi registrada neste navegador.";
+    return false;
+}
+
+(function () {
+    let caminhadas = [];
+    const sel = document.getElementById("seletor-caminhada");
+    const titulo = document.getElementById("titulo-caminhada");
+    const texto = document.getElementById("texto-caminhada");
+    const navAtual = document.getElementById("nav-caminhada-atual");
+
+    function mostrar(numero) {
+        const c = caminhadas.find(x => x.numero === numero);
+        if (!c) return;
+        if (titulo) titulo.textContent = c.titulo;
+        const tmp = document.createElement("div");
+        tmp.innerHTML = c.texto_html;
+        const interno = tmp.querySelector("#texto-caminhada");
+        if (texto) texto.innerHTML = interno ? interno.innerHTML : c.texto_html;
+        if (texto) texto.className = "texto";
+        if (navAtual) navAtual.textContent = "📖 Caminhada " + padCaminhada(numero);
+        document.querySelectorAll(".visualizacao .botao").forEach(b => b.classList.remove("ativo"));
+        const primeiro = document.querySelector(".visualizacao .botao");
+        if (primeiro) primeiro.classList.add("ativo");
+        restaurarCompreensao(numero);
+        localStorage.setItem("caminhada_atual", String(numero));
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
+    }
+
+    window.__caminhadaAtual = () => (sel ? parseInt(sel.value, 10) : 1);
+
+    fetch("./data/caminhadas.json")
+        .then(r => r.json())
+        .then(data => {
+            caminhadas = data;
+            if (!sel) return;
+            sel.innerHTML = data
+                .map(c => '<option value="' + c.numero + '">Caminhada ' + padCaminhada(c.numero) + " — " + c.titulo + "</option>")
+                .join("");
+            const salvo = parseInt(localStorage.getItem("caminhada_atual") || "1", 10);
+            sel.value = String(salvo);
+            sel.addEventListener("change", () => mostrar(parseInt(sel.value, 10)));
+            mostrar(salvo);
+        })
+        .catch(e => console.error("Falha ao carregar caminhadas:", e));
+})();
+</script>
+
+</body>
+</html>
