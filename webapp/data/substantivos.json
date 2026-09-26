@@ -1,0 +1,3313 @@
+[
+  {
+    "palavra": "Abschluss",
+    "artigo": "der",
+    "plural": "die Abschlüsse",
+    "significado": "Término; conclusão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Adresse",
+    "artigo": "die",
+    "plural": "die Adressen",
+    "significado": "Endereço",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Affe",
+    "artigo": "der",
+    "plural": "die Affen",
+    "significado": "Macaco(a)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Akademie",
+    "artigo": "die",
+    "plural": "die Akademien",
+    "significado": "Academia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Alltag",
+    "artigo": "der",
+    "plural": "die Alltage",
+    "significado": "Cotidiano/dia a dia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Altbau",
+    "artigo": "der",
+    "plural": "die Altbauten",
+    "significado": "Construção antiga",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Altenheim",
+    "artigo": "das",
+    "plural": "die Altenheime",
+    "significado": "Asilo; lar para idosos",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Alter",
+    "artigo": "das",
+    "plural": "die Alter",
+    "significado": "Idade; velhice",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Anfang",
+    "artigo": "der",
+    "plural": "die Anfänge",
+    "significado": "Começo/início/princípio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Angriff",
+    "artigo": "der",
+    "plural": "die Angriffe",
+    "significado": "Agressão/ataque/ofensiva",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Angst",
+    "artigo": "die",
+    "plural": "die Ängste",
+    "significado": "Medo/ansiedade/temor",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Anlage",
+    "artigo": "die",
+    "plural": "die Anlagen",
+    "significado": "Instalação",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Anwalt",
+    "artigo": "der",
+    "plural": "die Anwälte",
+    "significado": "Advogado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Apfelsaft",
+    "artigo": "der",
+    "plural": "die Apfelsäfte",
+    "significado": "Suco de maçã",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Apotheke",
+    "artigo": "die",
+    "plural": "die Apotheken",
+    "significado": "Farmácia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Arbeiter",
+    "artigo": "der",
+    "plural": "die Arbeiter",
+    "significado": "Trabalhador(a)/Operário",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Arbeitstag",
+    "artigo": "der",
+    "plural": "die Arbeitstage",
+    "significado": "Jornada/dia de trabalho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Arm",
+    "artigo": "der",
+    "plural": "die Arme",
+    "significado": "Braço",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Arzttermin",
+    "artigo": "der",
+    "plural": "die Arzttermine",
+    "significado": "Consulta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Aufgabe",
+    "artigo": "die",
+    "plural": "die Aufgaben",
+    "significado": "Tarefa/lição",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Auge",
+    "artigo": "das",
+    "plural": "die Augen",
+    "significado": "Olho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ausflug",
+    "artigo": "der",
+    "plural": "die Ausflüge",
+    "significado": "Excursão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Aussehen",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Aparência/Modo de ser",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Auto",
+    "artigo": "das",
+    "plural": "die Autos",
+    "significado": "Carro; automóvel",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Badezimmer",
+    "artigo": "das",
+    "plural": "die Badezimmer",
+    "significado": "Banheiro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ball",
+    "artigo": "der",
+    "plural": "die Bälle",
+    "significado": "Bola",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Banane",
+    "artigo": "die",
+    "plural": "die Bananen",
+    "significado": "Banana",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bank",
+    "artigo": "die",
+    "plural": "die Bänke",
+    "significado": "Banco (assento)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bank",
+    "artigo": "die",
+    "plural": "die Banken",
+    "significado": "Banco (Inst. Financeira)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bart",
+    "artigo": "der",
+    "plural": "die Bärte",
+    "significado": "Barba",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bauer",
+    "artigo": "der",
+    "plural": "die Bauern",
+    "significado": "Camponês(a)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bauernhof",
+    "artigo": "der",
+    "plural": "die Bauernhöfe",
+    "significado": "Fazenda/sítio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Baum",
+    "artigo": "der",
+    "plural": "die Bäume",
+    "significado": "Árvore",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Baustelle",
+    "artigo": "die",
+    "plural": "die Baustellen",
+    "significado": "Local de obras",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Beginn",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Início/começo/princípio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bein",
+    "artigo": "das",
+    "plural": "die Beine",
+    "significado": "Perna",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Berg",
+    "artigo": "der",
+    "plural": "die Berge",
+    "significado": "Montanha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Besen",
+    "artigo": "der",
+    "plural": "die Besen",
+    "significado": "Vassoura",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bett",
+    "artigo": "das",
+    "plural": "die Betten",
+    "significado": "Cama",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bibliothek",
+    "artigo": "die",
+    "plural": "die Bibliotheken",
+    "significado": "Biblioteca",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bild",
+    "artigo": "das",
+    "plural": "die Bilder",
+    "significado": "Imagem; quadro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Birne",
+    "artigo": "die",
+    "plural": "die Birnen",
+    "significado": "Pera",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bleibe",
+    "artigo": "die",
+    "plural": "die Bleiben",
+    "significado": "Lugar onde morar/ficar",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bleistift",
+    "artigo": "der",
+    "plural": "die Bleistifte",
+    "significado": "Lápis",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Blick",
+    "artigo": "der",
+    "plural": "die Blicke",
+    "significado": "Olhar",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Blume",
+    "artigo": "die",
+    "plural": "die Blumen",
+    "significado": "Flor",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Blumenvase",
+    "artigo": "die",
+    "plural": "die Blumenvasen",
+    "significado": "Vaso",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bluse",
+    "artigo": "die",
+    "plural": "die Blusen",
+    "significado": "Blusa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Boden",
+    "artigo": "der",
+    "plural": "die Böden",
+    "significado": "Chão; solo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bonbon",
+    "artigo": "das",
+    "plural": "die Bonbons",
+    "significado": "Bala",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Boot",
+    "artigo": "das",
+    "plural": "die Boote",
+    "significado": "Barco/embarcação",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Brille",
+    "artigo": "die",
+    "plural": "die Brillen",
+    "significado": "Óculos",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Brot",
+    "artigo": "das",
+    "plural": "die Brote",
+    "significado": "Pão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bruder",
+    "artigo": "der",
+    "plural": "die Brüder",
+    "significado": "Irmão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Brötchen",
+    "artigo": "das",
+    "plural": "die Brötchen",
+    "significado": "Pão Francês",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Brücke",
+    "artigo": "die",
+    "plural": "die Brücken",
+    "significado": "Ponte",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Buch",
+    "artigo": "das",
+    "plural": "die Bücher",
+    "significado": "Livro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Buchhandlung",
+    "artigo": "die",
+    "plural": "die Buchhandlungen",
+    "significado": "Livraria",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Busbahnhof",
+    "artigo": "der",
+    "plural": "die Busbahnhöfe",
+    "significado": "Estação rodoviária",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bushaltestelle",
+    "artigo": "die",
+    "plural": "die Bushaltestellen",
+    "significado": "Ponto de ônibus",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Butter",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Manteiga",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Bäckerei",
+    "artigo": "die",
+    "plural": "die Bäckereien",
+    "significado": "Padaria",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Böse",
+    "artigo": "der",
+    "plural": "die Bösen",
+    "significado": "Vilão; pessoa má",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Büro",
+    "artigo": "das",
+    "plural": "die Büros",
+    "significado": "Escritório",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Computer",
+    "artigo": "der",
+    "plural": "die Computer",
+    "significado": "Computador",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Cousine",
+    "artigo": "die",
+    "plural": "die Cousinen",
+    "significado": "Prima",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Dach",
+    "artigo": "das",
+    "plural": "die Dächer",
+    "significado": "Telhado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Datum",
+    "artigo": "das",
+    "plural": "die Daten",
+    "significado": "Data",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Dekoration (Deko)",
+    "artigo": "die",
+    "plural": "die Dekorationen",
+    "significado": "Decoração",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "der Wald",
+    "artigo": "der",
+    "plural": "die Wälder",
+    "significado": "Floresta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Diktator",
+    "artigo": "der",
+    "plural": "die Diktatoren",
+    "significado": "Ditador",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ding",
+    "artigo": "das",
+    "plural": "die Dinge",
+    "significado": "Objeto/coisa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Direktor",
+    "artigo": "der",
+    "plural": "die Direktoren",
+    "significado": "Diretor",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Diät",
+    "artigo": "die",
+    "plural": "die Diäten",
+    "significado": "Dieta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Dokument",
+    "artigo": "das",
+    "plural": "die Dokumente",
+    "significado": "Documento",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Donner",
+    "artigo": "der",
+    "plural": "die Donner",
+    "significado": "Trovão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Donnerschlag",
+    "artigo": "der",
+    "plural": "die Donnerschläge",
+    "significado": "Trovão; estrondo de trovão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Donnerwetter",
+    "artigo": "das",
+    "plural": "die Donnerwetter",
+    "significado": "Temporal com raio e trovão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Dorf",
+    "artigo": "das",
+    "plural": "die Dörfer",
+    "significado": "Povoado; aldeia; vilarejo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Dose",
+    "artigo": "die",
+    "plural": "die Dosen",
+    "significado": "Lata",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Draht",
+    "artigo": "der",
+    "plural": "die Drähte",
+    "significado": "Arame/fio/ligação",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Draufgänger",
+    "artigo": "der",
+    "plural": "die Draufgänger",
+    "significado": "Pessoa destemida",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Durst",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Sede",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ehemann",
+    "artigo": "der",
+    "plural": "die Ehemänner",
+    "significado": "Marido; esposo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ei",
+    "artigo": "das",
+    "plural": "die Eier",
+    "significado": "Ovo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Einkaufszentrum",
+    "artigo": "das",
+    "plural": "die Einkaufszentren",
+    "significado": "Centro comercial; shopping center",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Einlass",
+    "artigo": "der",
+    "plural": "die Einlässe",
+    "significado": "Admissão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Eis",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Sorvete",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Eisdiele",
+    "artigo": "die",
+    "plural": "die Eisdielen",
+    "significado": "Sorveteria",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Eltern",
+    "artigo": "die",
+    "plural": "PLURALIA_TANTUM",
+    "significado": "Pais",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Entscheidung",
+    "artigo": "die",
+    "plural": "die Entscheidungen",
+    "significado": "Decisão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Entschuldigung",
+    "artigo": "die",
+    "plural": "die Entschuldigungen",
+    "significado": "Desculpa/perdão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Erbse",
+    "artigo": "die",
+    "plural": "die Erbsen",
+    "significado": "Ervilha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Erdbeere",
+    "artigo": "die",
+    "plural": "die Erdbeeren",
+    "significado": "Morango",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Erde",
+    "artigo": "die",
+    "plural": "die Erden",
+    "significado": "Terra (planeta), terra",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Erfrischungsgetränk",
+    "artigo": "das",
+    "plural": "die Erfrischungsgetränke",
+    "significado": "Refrigerante/refresco",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Erklärung",
+    "artigo": "die",
+    "plural": "die Erklärungen",
+    "significado": "Explicação",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Erwachsene",
+    "artigo": "der",
+    "plural": "die Erwachsenen",
+    "significado": "Adulto",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Esel",
+    "artigo": "der",
+    "plural": "die Esel",
+    "significado": "Burro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Essen",
+    "artigo": "das",
+    "plural": "die Essen",
+    "significado": "Alimentação",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Esszimmer",
+    "artigo": "das",
+    "plural": "die Esszimmer",
+    "significado": "Sala de jantar",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Eule",
+    "artigo": "die",
+    "plural": "die Eulen",
+    "significado": "Coruja",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fabrik",
+    "artigo": "die",
+    "plural": "die Fabriken",
+    "significado": "Fábrica",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fahrrad",
+    "artigo": "das",
+    "plural": "die Fahrräder",
+    "significado": "Bicicleta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Familie",
+    "artigo": "die",
+    "plural": "die Familien",
+    "significado": "Família",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fantasie",
+    "artigo": "die",
+    "plural": "die Fantasien",
+    "significado": "Fantasia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fenster",
+    "artigo": "das",
+    "plural": "die Fenster",
+    "significado": "Janela",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fernseher",
+    "artigo": "der",
+    "plural": "die Fernseher",
+    "significado": "Televisão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fest",
+    "artigo": "das",
+    "plural": "die Feste",
+    "significado": "Festa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Filzstift",
+    "artigo": "der",
+    "plural": "die Filzstifte",
+    "significado": "Caneta hidrográfica; marcador",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Finger",
+    "artigo": "der",
+    "plural": "die Finger",
+    "significado": "Dedo da mão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Flasche",
+    "artigo": "die",
+    "plural": "die Flaschen",
+    "significado": "Garrafa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fleisch",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Carne",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fleischerin",
+    "artigo": "die",
+    "plural": "die Fleischerinnen",
+    "significado": "Açougueira",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fliege",
+    "artigo": "die",
+    "plural": "die Fliegen",
+    "significado": "Mosca/(pode ser gravata borboleta)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Flug",
+    "artigo": "der",
+    "plural": "die Flüge",
+    "significado": "Voo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Flughafen",
+    "artigo": "der",
+    "plural": "die Flughäfen",
+    "significado": "Aeroporto",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Flugticket",
+    "artigo": "das",
+    "plural": "die Flugtickets",
+    "significado": "Passagem/bilhete de avião",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Flugzeug",
+    "artigo": "das",
+    "plural": "die Flugzeuge",
+    "significado": "Avião",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fluss",
+    "artigo": "der",
+    "plural": "die Flüsse",
+    "significado": "Rio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Foto",
+    "artigo": "das",
+    "plural": "die Fotos",
+    "significado": "Foto; fotografia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Frage",
+    "artigo": "die",
+    "plural": "die Fragen",
+    "significado": "Pergunta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Frau",
+    "artigo": "die",
+    "plural": "die Frauen",
+    "significado": "Mulher; senhora; esposa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Freude",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Alegria",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Freund",
+    "artigo": "der",
+    "plural": "die Freunde",
+    "significado": "Amigo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Friseur",
+    "artigo": "der",
+    "plural": "die Friseure",
+    "significado": "Cabeleireiro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Frühstückstisch",
+    "artigo": "der",
+    "plural": "die Frühstückstische",
+    "significado": "Mesa do café da manhã",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Futter",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Alimento; ração para animais",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fuß",
+    "artigo": "der",
+    "plural": "die Füße",
+    "significado": "Pé",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fußball",
+    "artigo": "der",
+    "plural": "die Fußbälle",
+    "significado": "Bola de futebol",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Fußballplatz",
+    "artigo": "der",
+    "plural": "die Fußballplätze",
+    "significado": "Campo de futebol",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Führer",
+    "artigo": "der",
+    "plural": "die Führer",
+    "significado": "Líder",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gabel",
+    "artigo": "die",
+    "plural": "die Gabeln",
+    "significado": "Garfo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Garten",
+    "artigo": "der",
+    "plural": "die Gärten",
+    "significado": "Jardim",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gast",
+    "artigo": "der",
+    "plural": "die Gäste",
+    "significado": "Hóspede; convidado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gaststätte",
+    "artigo": "die",
+    "plural": "die Gaststätten",
+    "significado": "Restaurante",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Geburtstag",
+    "artigo": "der",
+    "plural": "die Geburtstage",
+    "significado": "Aniversário",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gebäude",
+    "artigo": "das",
+    "plural": "die Gebäude",
+    "significado": "Edifício; prédio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gedanke",
+    "artigo": "der",
+    "plural": "die Gedanken",
+    "significado": "Pensamento; ideia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gedächtnis",
+    "artigo": "das",
+    "plural": "die Gedächtnisse",
+    "significado": "Memória",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gefallen",
+    "artigo": "der",
+    "plural": "die Gefallen",
+    "significado": "Favor",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gehöft",
+    "artigo": "das",
+    "plural": "die Gehöfte",
+    "significado": "Propriedade rural; sítio; conjunto de edificações rurais",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Geist",
+    "artigo": "der",
+    "plural": "die Geister",
+    "significado": "Fantasma/mente/espírito",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Geld",
+    "artigo": "das",
+    "plural": "die Gelder",
+    "significado": "Dinheiro; recursos financeiros",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gemüse",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Legumes; verduras",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gericht",
+    "artigo": "das",
+    "plural": "die Gerichte",
+    "significado": "Prato/refeição; tribunal",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Geschenk",
+    "artigo": "das",
+    "plural": "die Geschenke",
+    "significado": "Presente",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Geschirr",
+    "artigo": "das",
+    "plural": "die Geschirre",
+    "significado": "Louça",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Geschwister",
+    "artigo": "das",
+    "plural": "die Geschwister",
+    "significado": "Irmão(ã)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Geschäft",
+    "artigo": "das",
+    "plural": "die Geschäfte",
+    "significado": "Loja; negócio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gesicht",
+    "artigo": "das",
+    "plural": "die Gesichter",
+    "significado": "Rosto/face/cara",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gesundheit",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Saúde",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "getoastete Brot",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Pão torrado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gewitterwolke",
+    "artigo": "die",
+    "plural": "die Gewitterwolken",
+    "significado": "Nuvem carregada",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Glas",
+    "artigo": "das",
+    "plural": "die Gläser",
+    "significado": "Copo; vidro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Glotze",
+    "artigo": "die",
+    "plural": "die Glotzen",
+    "significado": "Televisão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Gott",
+    "artigo": "der",
+    "plural": "die Götter",
+    "significado": "Deus",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Großeltern",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Avós",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hand",
+    "artigo": "die",
+    "plural": "die Hände",
+    "significado": "Mão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Handschuh",
+    "artigo": "der",
+    "plural": "die Handschuhe",
+    "significado": "Luva",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Handy",
+    "artigo": "das",
+    "plural": "die Handys",
+    "significado": "Celular",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hase",
+    "artigo": "der",
+    "plural": "die Hasen",
+    "significado": "Lebre",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hauptspeise",
+    "artigo": "die",
+    "plural": "die Hauptspeisen",
+    "significado": "Prato principal",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hauptstadt",
+    "artigo": "die",
+    "plural": "die Hauptstädt",
+    "significado": "Capital",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Haus",
+    "artigo": "das",
+    "plural": "die Häuser",
+    "significado": "Casa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hausaufgabe",
+    "artigo": "die",
+    "plural": "die Hausaufgaben",
+    "significado": "Tarefa/lição de casa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Haushalt",
+    "artigo": "der",
+    "plural": "die Haushalte",
+    "significado": "Afazeres de casa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Haxe",
+    "artigo": "die",
+    "plural": "die Haxen",
+    "significado": "Perna (de animal: porco)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Heilige",
+    "artigo": "der",
+    "plural": "die Heiligen",
+    "significado": "Santo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Heilmittel",
+    "artigo": "das",
+    "plural": "die Heilmittel",
+    "significado": "Remédio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Heimweg",
+    "artigo": "der",
+    "plural": "die Heimwege",
+    "significado": "Caminho de volta (p/casa)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Henne",
+    "artigo": "die",
+    "plural": "die Hennen",
+    "significado": "Galo/Galinha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Herberge",
+    "artigo": "die",
+    "plural": "die Herbergen",
+    "significado": "Pousada, hospedaria",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Herz",
+    "artigo": "das",
+    "plural": "die Herzen",
+    "significado": "Coração",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hilfe",
+    "artigo": "die",
+    "plural": "Hilfen",
+    "significado": "Ajuda",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Himmel",
+    "artigo": "der",
+    "plural": "die Himmel",
+    "significado": "Céu",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hin und Her",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Ir e vir/vaivém",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hochschule",
+    "artigo": "die",
+    "plural": "die Hochschulen",
+    "significado": "Universidade",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hochzeit",
+    "artigo": "die",
+    "plural": "die Hochzeiten",
+    "significado": "Casamento",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hose",
+    "artigo": "die",
+    "plural": "die Hosen",
+    "significado": "Calça",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Humor",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Humor",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hunger",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Fome",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hut",
+    "artigo": "der",
+    "plural": "die Hüte",
+    "significado": "Chapéu",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Hähnchen",
+    "artigo": "das",
+    "plural": "die Hähnchen",
+    "significado": "Frango",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Höhle",
+    "artigo": "die",
+    "plural": "die Höhlen",
+    "significado": "Caverna",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Imbiss",
+    "artigo": "der",
+    "plural": "die Imbisse",
+    "significado": "Merenda/lanche",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Imbissstand",
+    "artigo": "der",
+    "plural": "die Imbissständ",
+    "significado": "Lanchonete",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Information",
+    "artigo": "die",
+    "plural": "die Informationen",
+    "significado": "Informação",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ingenieur",
+    "artigo": "der",
+    "plural": "die Ingenieure",
+    "significado": "Engenheiro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Jacke",
+    "artigo": "die",
+    "plural": "die Jacken",
+    "significado": "Jaqueta; casaco",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Joghurt",
+    "artigo": "der",
+    "plural": "die Joghurts",
+    "significado": "Iogurte",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kaffee",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Café",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kaiser",
+    "artigo": "der",
+    "plural": "die Kaiser",
+    "significado": "Imperador",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kampf",
+    "artigo": "der",
+    "plural": "die Kämpfer",
+    "significado": "Combate/luta/briga",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kaninchen",
+    "artigo": "das",
+    "plural": "die Kaninchen",
+    "significado": "Coelho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kartoffel",
+    "artigo": "die",
+    "plural": "die Kartoffeln",
+    "significado": "Batata",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Katze",
+    "artigo": "die",
+    "plural": "die Katzen",
+    "significado": "Gato; gata",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Keller",
+    "artigo": "der",
+    "plural": "die Keller",
+    "significado": "Porão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kellner",
+    "artigo": "der",
+    "plural": "die Kellner",
+    "significado": "Garçom",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kenntnis",
+    "artigo": "die",
+    "plural": "die Kenntnisse",
+    "significado": "Conhecimento",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kerze",
+    "artigo": "die",
+    "plural": "die Kerzen",
+    "significado": "Vela",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Keule",
+    "artigo": "die",
+    "plural": "die Keulen",
+    "significado": "Pernil; coxa; clava, conforme o contexto",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kind",
+    "artigo": "das",
+    "plural": "die Kinder",
+    "significado": "Criança",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kinderarzt",
+    "artigo": "der",
+    "plural": "die Kinderärzte",
+    "significado": "Pediatra",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kino",
+    "artigo": "das",
+    "plural": "die Kinos",
+    "significado": "Cinema",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kirche",
+    "artigo": "die",
+    "plural": "die Kirchen",
+    "significado": "Igreja",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kiste",
+    "artigo": "der",
+    "plural": "die Kisten",
+    "significado": "Caixa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Klasse",
+    "artigo": "die",
+    "plural": "die Klassen",
+    "significado": "Classe",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Klassenzimmer",
+    "artigo": "das",
+    "plural": "die Klassenzimmer",
+    "significado": "Classe de aula",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Klavier",
+    "artigo": "das",
+    "plural": "die Klaviere",
+    "significado": "Piano",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kleid",
+    "artigo": "das",
+    "plural": "die Kleider",
+    "significado": "Vestido",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kleidung",
+    "artigo": "die",
+    "plural": "die Kleidungen",
+    "significado": "Roupa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Klimaanlage",
+    "artigo": "die",
+    "plural": "die Klimaanlagen",
+    "significado": "Ar-condicionado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Klo",
+    "artigo": "das",
+    "plural": "die Klos",
+    "significado": "Banheiro; privada (coloquial)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Knabe",
+    "artigo": "der",
+    "plural": "die Knaben",
+    "significado": "Menino/Rapaz",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Knie",
+    "artigo": "das",
+    "plural": "die Knie",
+    "significado": "Joelho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Knoblauch",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Alho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Knochen",
+    "artigo": "der",
+    "plural": "die Knochen",
+    "significado": "Osso",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Koffer",
+    "artigo": "der",
+    "plural": "die Koffer",
+    "significado": "Mala",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kollege",
+    "artigo": "der",
+    "plural": "die Kollegen",
+    "significado": "Colega",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Konzert",
+    "artigo": "das",
+    "plural": "die Konzerte",
+    "significado": "Concerto (música)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kopf",
+    "artigo": "der",
+    "plural": "die Köpfe",
+    "significado": "Cabeça",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kraft",
+    "artigo": "die",
+    "plural": "die Kräfte",
+    "significado": "Força/potência/vigor",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Krankenhaus",
+    "artigo": "das",
+    "plural": "die Krankenhäuser",
+    "significado": "Hospital",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Krankheit",
+    "artigo": "die",
+    "plural": "die Krankheiten",
+    "significado": "Doença",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Krieg",
+    "artigo": "der",
+    "plural": "die Kriege",
+    "significado": "Guerra",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kugelschreiber",
+    "artigo": "der",
+    "plural": "die Kugelschreiber",
+    "significado": "Caneta esferográfica",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kuh",
+    "artigo": "die",
+    "plural": "die Kühe",
+    "significado": "Vaca",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kunde",
+    "artigo": "der",
+    "plural": "die Kunden",
+    "significado": "Cliente",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kurs",
+    "artigo": "der",
+    "plural": "die Kurse",
+    "significado": "Curso",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "kämpfer",
+    "artigo": "der",
+    "plural": "die Kämpfer",
+    "significado": "Batalhador/lutador",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "König",
+    "artigo": "der",
+    "plural": "die Könige",
+    "significado": "Rei",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Körper",
+    "artigo": "der",
+    "plural": "die Körper",
+    "significado": "Corpo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Küche",
+    "artigo": "die",
+    "plural": "die Küchen",
+    "significado": "Cozinha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Kühlschrank",
+    "artigo": "der",
+    "plural": "die Kühlschränke",
+    "significado": "Geladeira",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Lamm",
+    "artigo": "das",
+    "plural": "die Lämm",
+    "significado": "Cordeiro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Lampe",
+    "artigo": "die",
+    "plural": "die Lampen",
+    "significado": "Lâmpada; luminária",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Land",
+    "artigo": "das",
+    "plural": "die Länder",
+    "significado": "País; terra",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Landstraβe",
+    "artigo": "die",
+    "plural": "die Landstraβe",
+    "significado": "Estrada/estrada estadual",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Lastkrafwagen (LKW)",
+    "artigo": "der",
+    "plural": "die Lastkraftwagen",
+    "significado": "Caminhão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Laub",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Folhas",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Laus",
+    "artigo": "das",
+    "plural": "die Läuse",
+    "significado": "Piolho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Leben",
+    "artigo": "das",
+    "plural": "die Leben",
+    "significado": "Vida",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Lehrer",
+    "artigo": "der",
+    "plural": "die Lehrer",
+    "significado": "Professor",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Leiden",
+    "artigo": "das",
+    "plural": "die Leiden",
+    "significado": "Sofrimento/mal/doença",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Leidenschaft",
+    "artigo": "die",
+    "plural": "die Leidenschaften",
+    "significado": "Paixão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Leiter",
+    "artigo": "der",
+    "plural": "die Leiter",
+    "significado": "Líder/Dirigente",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Leiter",
+    "artigo": "die",
+    "plural": "die Leitern",
+    "significado": "Escada",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Leute",
+    "artigo": "die",
+    "plural": "PLURALIA_TANTUM",
+    "significado": "Gente/pessoas",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Licht",
+    "artigo": "das",
+    "plural": "die Lichter",
+    "significado": "Luz",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Liebling",
+    "artigo": "der",
+    "plural": "die Lieblinge",
+    "significado": "Querido",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Limonade",
+    "artigo": "die",
+    "plural": "die Limonaden",
+    "significado": "Limonada",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Los",
+    "artigo": "das",
+    "plural": "die Lose",
+    "significado": "Sorte",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Luftballon",
+    "artigo": "der",
+    "plural": "die Luftballons",
+    "significado": "Balão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Lunchpaket",
+    "artigo": "das",
+    "plural": "die Lunchpakete",
+    "significado": "Lanche/merenda",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Lächeln",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Sorriso",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Maler",
+    "artigo": "der",
+    "plural": "die Maler",
+    "significado": "Pintor",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Management",
+    "artigo": "das",
+    "plural": "die Managements",
+    "significado": "Gestão/administração",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mann",
+    "artigo": "der",
+    "plural": "die Männer",
+    "significado": "Homem; marido",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mantel",
+    "artigo": "der",
+    "plural": "die Mäntel",
+    "significado": "Casaco/sobretudo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Markt",
+    "artigo": "der",
+    "plural": "die Märkte",
+    "significado": "Mercado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Maschine",
+    "artigo": "die",
+    "plural": "die Maschinen",
+    "significado": "Máquina/equipamento",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mauer",
+    "artigo": "die",
+    "plural": "die Mauern",
+    "significado": "Muro/muralha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Maus",
+    "artigo": "die",
+    "plural": "die Mäuse",
+    "significado": "Rato",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Medikament",
+    "artigo": "das",
+    "plural": "die Medikamente",
+    "significado": "Medicamento/remédio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Meer",
+    "artigo": "das",
+    "plural": "die Meere",
+    "significado": "Mar",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Meer",
+    "artigo": "das",
+    "plural": "die Meere",
+    "significado": "Mar/oceano",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mehl",
+    "artigo": "das",
+    "plural": "die Mehle",
+    "significado": "Farinha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Messer",
+    "artigo": "das",
+    "plural": "die Messer",
+    "significado": "Faca",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Metzgerei",
+    "artigo": "die",
+    "plural": "die Metzgereien",
+    "significado": "Açougue",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Migräne",
+    "artigo": "die",
+    "plural": "die Migränen",
+    "significado": "Enxaqueca",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Milch",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Leite",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mineralwasser",
+    "artigo": "das",
+    "plural": "die Mineralwässer",
+    "significado": "Água mineral",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Minute",
+    "artigo": "die",
+    "plural": "die Minuten",
+    "significado": "Minuto",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mittagessen",
+    "artigo": "das",
+    "plural": "die Mittagessen",
+    "significado": "Almoço",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mond",
+    "artigo": "der",
+    "plural": "die Monde",
+    "significado": "Lua",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Morgen",
+    "artigo": "der",
+    "plural": "die Morgen",
+    "significado": "Manhã",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Moschee",
+    "artigo": "die",
+    "plural": "die Moscheen",
+    "significado": "Mesquita",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Motorrad",
+    "artigo": "das",
+    "plural": "die Motorräder",
+    "significado": "Motocicleta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mund",
+    "artigo": "der",
+    "plural": "die Münder",
+    "significado": "Boca",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Museum",
+    "artigo": "das",
+    "plural": "die Museen",
+    "significado": "Museu",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Musik",
+    "artigo": "die",
+    "plural": "die Musiken",
+    "significado": "Música",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Musikgruppe",
+    "artigo": "die",
+    "plural": "die Musikgruppen",
+    "significado": "Conjunto musical",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mut",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Coragem",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mutter",
+    "artigo": "die",
+    "plural": "die Mütter",
+    "significado": "Mãe",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Mädchen",
+    "artigo": "das",
+    "plural": "die Mädchen",
+    "significado": "Menina; garota",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Müll",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Lixo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Müllfahrzeug",
+    "artigo": "das",
+    "plural": "die Müllfahrzeuge",
+    "significado": "Caminhão de lixo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Nachricht",
+    "artigo": "die",
+    "plural": "die Nachrichten",
+    "significado": "Notícia/recado/mensagem",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Nacht",
+    "artigo": "die",
+    "plural": "die Nächte",
+    "significado": "Noite",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Nachthemd",
+    "artigo": "das",
+    "plural": "die Nachthemden",
+    "significado": "Camisola",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Nachtisch",
+    "artigo": "der",
+    "plural": "die Nachtische",
+    "significado": "Sobremesa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Name",
+    "artigo": "der",
+    "plural": "die Namen",
+    "significado": "Nome",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Nationalität",
+    "artigo": "die",
+    "plural": "die Nationalitäten",
+    "significado": "Nacionalidade",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Natur",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Natureza",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Nickerchen",
+    "artigo": "das",
+    "plural": "die Nickerchen",
+    "significado": "Cochilo/Soneca",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Nudel",
+    "artigo": "die",
+    "plural": "die Nudeln",
+    "significado": "Massa (culinária)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Nähe",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Proximidade/adjacência",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Obst",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Fruta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Obst- und Gemüseladen",
+    "artigo": "der",
+    "plural": "die Obst- und Gemüseläden",
+    "significado": "Quitanda; loja de frutas e verduras",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ochse",
+    "artigo": "der",
+    "plural": "die Ochsen",
+    "significado": "Boi",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ohr",
+    "artigo": "das",
+    "plural": "die Ohren",
+    "significado": "Ouvido",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Oma",
+    "artigo": "die",
+    "plural": "die Omas",
+    "significado": "Vovó",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Onkel",
+    "artigo": "der",
+    "plural": "die Onkel",
+    "significado": "Tio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Opa",
+    "artigo": "der",
+    "plural": "die Opas",
+    "significado": "Vovô",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Orange",
+    "artigo": "die",
+    "plural": "die Orangen",
+    "significado": "Laranja",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Orangensaft",
+    "artigo": "der",
+    "plural": "die Orangensäfte",
+    "significado": "Suco de laranja",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ort",
+    "artigo": "der",
+    "plural": "die Orte",
+    "significado": "Lugar; local",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Paar",
+    "artigo": "das",
+    "plural": "die Paar",
+    "significado": "Casal/Dupla",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Packung",
+    "artigo": "die",
+    "plural": "die Packungen",
+    "significado": "Pacote/embalagem",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Papa",
+    "artigo": "der",
+    "plural": "die Papas",
+    "significado": "Papai",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Papier",
+    "artigo": "das",
+    "plural": "die Papiere",
+    "significado": "Papel; documento",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Paprika",
+    "artigo": "die",
+    "plural": "die Paprikas",
+    "significado": "Pimentão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Park",
+    "artigo": "der",
+    "plural": "die Parks",
+    "significado": "Parque",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Parlament",
+    "artigo": "das",
+    "plural": "die Parlamente",
+    "significado": "Parlamento",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Party",
+    "artigo": "die",
+    "plural": "die Partys",
+    "significado": "Festa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Pausenbrot",
+    "artigo": "das",
+    "plural": "die Pausenbrote",
+    "significado": "Lanche",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Personenkraftwagen (PKW)",
+    "artigo": "der",
+    "plural": "die Personenkraftwagen (PKW)",
+    "significado": "Automóvel",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Pessimismus",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Pessimismo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Pferd",
+    "artigo": "das",
+    "plural": "die Pferde",
+    "significado": "Cavalo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Pizza",
+    "artigo": "die",
+    "plural": "die Pizzen",
+    "significado": "Pizza",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Platz",
+    "artigo": "der",
+    "plural": "die Plätze",
+    "significado": "Lugar; praça",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Polizei",
+    "artigo": "die",
+    "plural": "die Polizeien",
+    "significado": "Polícia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Priester",
+    "artigo": "der",
+    "plural": "die Priester",
+    "significado": "Padre",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Prinz",
+    "artigo": "der",
+    "plural": "die Prinzen",
+    "significado": "Príncipe",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Rad",
+    "artigo": "das",
+    "plural": "die Rad",
+    "significado": "Roda",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Radgruppe",
+    "artigo": "die",
+    "plural": "die Radgruppen",
+    "significado": "Grupo de ciclistas",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Radiergummi",
+    "artigo": "der",
+    "plural": "die Radiergummis",
+    "significado": "Borracha (apagar)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Randgruppe",
+    "artigo": "die",
+    "plural": "die Randgruppen",
+    "significado": "Grupo marginalizado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ranzen",
+    "artigo": "der",
+    "plural": "die Ranzen",
+    "significado": "Mochila escolar; pasta escolar",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Rechnung",
+    "artigo": "die",
+    "plural": "die Rechnungen",
+    "significado": "Fatura/conta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Regen",
+    "artigo": "der",
+    "plural": "die Regen",
+    "significado": "Chuva",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Regenwolke",
+    "artigo": "die",
+    "plural": "die Regenwolken",
+    "significado": "Nuvem de chuva",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Reise",
+    "artigo": "die",
+    "plural": "die Reisen",
+    "significado": "Viagem",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Reporterin",
+    "artigo": "die",
+    "plural": "die Reporterinnen",
+    "significado": "Repórter",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Rieseneishöhle",
+    "artigo": "die",
+    "plural": "die Rieseneishöhlen",
+    "significado": "Grande caverna de gelo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Roller",
+    "artigo": "der",
+    "plural": "die Roller",
+    "significado": "Patinete",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Rucksack",
+    "artigo": "der",
+    "plural": "die Rucksäcke",
+    "significado": "Mochila",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Ruder",
+    "artigo": "das",
+    "plural": "die Ruder",
+    "significado": "Remo/leme",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sache",
+    "artigo": "die",
+    "plural": "die Sachen",
+    "significado": "Coisa/assunto",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Salat",
+    "artigo": "der",
+    "plural": "die Salate",
+    "significado": "Salada",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sammlung",
+    "artigo": "die",
+    "plural": "die Sammlungen",
+    "significado": "Coleção/Coletânea",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Satz",
+    "artigo": "der",
+    "plural": "die Sätze",
+    "significado": "Frase",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sauerkraut",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Chucrute",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schaf",
+    "artigo": "das",
+    "plural": "die Schafe",
+    "significado": "Ovelha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Scheiß",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Merda; porcaria",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schiff",
+    "artigo": "das",
+    "plural": "die Schiffe",
+    "significado": "Navio/embarcação",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schlafzimmer",
+    "artigo": "das",
+    "plural": "die Schlafzimmer",
+    "significado": "Quarto de dormir/dormitório",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schlange",
+    "artigo": "die",
+    "plural": "die Schlangen",
+    "significado": "Cobra/fila",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schloss",
+    "artigo": "das",
+    "plural": "die Schlösser",
+    "significado": "Castelo/fechadura",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schlüssel",
+    "artigo": "der",
+    "plural": "die Schlüssel",
+    "significado": "Chave",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schnecke",
+    "artigo": "die",
+    "plural": "die Schneken",
+    "significado": "Caracol",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schneider",
+    "artigo": "der",
+    "plural": "die Schneider",
+    "significado": "Alfaiate",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schneiderin",
+    "artigo": "die",
+    "plural": "die Schneiderinnen",
+    "significado": "Costureiro(a)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schnitzel",
+    "artigo": "das",
+    "plural": "die Schnitzel",
+    "significado": "Bife à milanesa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schokolade",
+    "artigo": "die",
+    "plural": "die Schokoladen",
+    "significado": "Chocolate",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schrank",
+    "artigo": "der",
+    "plural": "die Schränke",
+    "significado": "Armário",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schreibtisch",
+    "artigo": "der",
+    "plural": "die Schreibtische",
+    "significado": "Escrivaninha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schuh",
+    "artigo": "der",
+    "plural": "die Schuhe",
+    "significado": "Sapato",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schule",
+    "artigo": "die",
+    "plural": "die Schulen",
+    "significado": "Escola",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schultag",
+    "artigo": "der",
+    "plural": "die Schultage",
+    "significado": "Dia de aula",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schwein",
+    "artigo": "das",
+    "plural": "die Schweine",
+    "significado": "Porco/suíno",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schweinekeule",
+    "artigo": "die",
+    "plural": "die Schweinekeulen",
+    "significado": "Pernil de porco",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schwimmbad",
+    "artigo": "das",
+    "plural": "die Schwimmbäder",
+    "significado": "Piscinas",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Schüler",
+    "artigo": "der",
+    "plural": "die Schüler",
+    "significado": "Aluno",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "See",
+    "artigo": "der",
+    "plural": "die Seen",
+    "significado": "Lago",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Seite",
+    "artigo": "die",
+    "plural": "die Seiten",
+    "significado": "Lado (z.b. lado esquerdo)/página",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Shulklasse",
+    "artigo": "die",
+    "plural": "die Shulklassen",
+    "significado": "Classe escolar",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Singen",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Canto",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sitzung",
+    "artigo": "die",
+    "plural": "die Sitzungen",
+    "significado": "Reunião/sessão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sohn",
+    "artigo": "der",
+    "plural": "die Söhne",
+    "significado": "Filho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Soldat",
+    "artigo": "der",
+    "plural": "die Soldaten",
+    "significado": "Soldado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Soll",
+    "artigo": "das",
+    "plural": "die Solls",
+    "significado": "Meta/valor previsto; débito (contabilidade, conforme o contexto)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sommerurlaub",
+    "artigo": "der",
+    "plural": "die Sommerurlaube",
+    "significado": "Veraneio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sonne",
+    "artigo": "die",
+    "plural": "die Sonnen",
+    "significado": "Sol",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Spaβ",
+    "artigo": "der",
+    "plural": "die Späβe",
+    "significado": "Diversão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Speise",
+    "artigo": "die",
+    "plural": "die Speisen",
+    "significado": "Comida (prato de comida)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Spiegel",
+    "artigo": "der",
+    "plural": "die Spiegel",
+    "significado": "Espelho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Spiel",
+    "artigo": "das",
+    "plural": "die Spiele",
+    "significado": "Jogo/brincadeira",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Spielplatz",
+    "artigo": "der",
+    "plural": "die Spielplätze",
+    "significado": "Parquinho, Playground",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Spinne",
+    "artigo": "die",
+    "plural": "die Spinnen",
+    "significado": "Aranha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Spital",
+    "artigo": "das",
+    "plural": "die Spitäler",
+    "significado": "Hospital",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sportler",
+    "artigo": "der",
+    "plural": "die Sportler",
+    "significado": "Esportista",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Spüle",
+    "artigo": "die",
+    "plural": "die Spülen",
+    "significado": "Pia de lavar louça",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Stadt",
+    "artigo": "die",
+    "plural": "die Städte",
+    "significado": "Cidade",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Stand",
+    "artigo": "der",
+    "plural": "die Stände",
+    "significado": "Banca",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Stern",
+    "artigo": "der",
+    "plural": "die Sterne",
+    "significado": "Estrela",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Stiefel",
+    "artigo": "der",
+    "plural": "die Stiefel",
+    "significado": "Bota",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Stille",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Silêncio/calma/ quietude/tranquilidade",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Strand",
+    "artigo": "der",
+    "plural": "die Strände",
+    "significado": "Praia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Straβe",
+    "artigo": "die",
+    "plural": "die Straβen",
+    "significado": "Rua/via",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Studienabschluss",
+    "artigo": "der",
+    "plural": "die Studienabschlüsse",
+    "significado": "Formatura",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Stuhl",
+    "artigo": "der",
+    "plural": "die Stühle",
+    "significado": "Cadeira",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Stunde",
+    "artigo": "die",
+    "plural": "die Stunden",
+    "significado": "Hora",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Stück",
+    "artigo": "das",
+    "plural": "die Stüke",
+    "significado": "Pedaço",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Suppe",
+    "artigo": "die",
+    "plural": "die Suppen",
+    "significado": "Sopa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Sünder",
+    "artigo": "der",
+    "plural": "die Sünder",
+    "significado": "Pecador",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tafel",
+    "artigo": "die",
+    "plural": "die Tafeln",
+    "significado": "Quadro (lousa)",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tag",
+    "artigo": "der",
+    "plural": "die Tage",
+    "significado": "Dia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tagesablauf",
+    "artigo": "der",
+    "plural": "die Tagesabläufe",
+    "significado": "Rotina diária",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tagesanbruch",
+    "artigo": "der",
+    "plural": "die Tagesanbrüche",
+    "significado": "Amanhecer do dia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tankstelle",
+    "artigo": "die",
+    "plural": "die Tankstellen",
+    "significado": "Posto de gasolina",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tasche",
+    "artigo": "die",
+    "plural": "die Taschen",
+    "significado": "Bolsa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tasse",
+    "artigo": "die",
+    "plural": "die Tassen",
+    "significado": "Xícara",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Teil",
+    "artigo": "der",
+    "plural": "die Teile",
+    "significado": "Parte/porção",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Teller",
+    "artigo": "der",
+    "plural": "die Teller",
+    "significado": "Prato",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Termin",
+    "artigo": "der",
+    "plural": "die Termine",
+    "significado": "Data/compromisso",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Terrasse",
+    "artigo": "die",
+    "plural": "die Terrassen",
+    "significado": "Terraço",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tisch",
+    "artigo": "der",
+    "plural": "die Tische",
+    "significado": "Mesa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "To-do-liste",
+    "artigo": "die",
+    "plural": "die To-do-Listen",
+    "significado": "Lista de tarefas/afazeres",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tochter",
+    "artigo": "die",
+    "plural": "die Töchter",
+    "significado": "Filha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tod",
+    "artigo": "der",
+    "plural": "die Tode",
+    "significado": "Morte/falecimento",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Toilette",
+    "artigo": "die",
+    "plural": "die Toiletten",
+    "significado": "Banheiro, sanitário",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Treffen",
+    "artigo": "das",
+    "plural": "die Treffen",
+    "significado": "Encontro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Treppe",
+    "artigo": "die",
+    "plural": "die Treppen",
+    "significado": "Escada",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Turnsaal",
+    "artigo": "der",
+    "plural": "die Turnsäle",
+    "significado": "Ginásio de esportes",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Turnschuh",
+    "artigo": "der",
+    "plural": "die Turnschuhe",
+    "significado": "Tênis",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Tür",
+    "artigo": "die",
+    "plural": "die Türen",
+    "significado": "Porta",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Uhr",
+    "artigo": "die",
+    "plural": "die Uhren",
+    "significado": "Relógio",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Unterricht",
+    "artigo": "der",
+    "plural": "die Unterrichte",
+    "significado": "Aula",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Urlaub",
+    "artigo": "der",
+    "plural": "die Urlaube",
+    "significado": "Férias",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Vase",
+    "artigo": "die",
+    "plural": "die Vasen",
+    "significado": "Vaso",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Vater",
+    "artigo": "der",
+    "plural": "die Väter",
+    "significado": "Pai",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Verlassen",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Abandono",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Verletzte",
+    "artigo": "der",
+    "plural": "die Verletzten",
+    "significado": "Ferido",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Verspätung",
+    "artigo": "die",
+    "plural": "die Verspätungen",
+    "significado": "Atraso, demora",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Vogel",
+    "artigo": "der",
+    "plural": "die Vögel",
+    "significado": "Pássaro, ave",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Vollmond",
+    "artigo": "der",
+    "plural": "die Vollmond",
+    "significado": "Lua cheia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Vorschlag",
+    "artigo": "der",
+    "plural": "die Vorschälge",
+    "significado": "Proposta/sugestão",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Vorspeise",
+    "artigo": "die",
+    "plural": "die Vorspeisen",
+    "significado": "Prato de entrada",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Waffe",
+    "artigo": "die",
+    "plural": "die Waffen",
+    "significado": "Armas",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wand",
+    "artigo": "die",
+    "plural": "die Wände",
+    "significado": "Parede",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Warten",
+    "artigo": "das",
+    "plural": "die Warten",
+    "significado": "Espera",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Waschküche",
+    "artigo": "die",
+    "plural": "die Waschküchen",
+    "significado": "Área de serviço",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wasser",
+    "artigo": "das",
+    "plural": "die Wasser",
+    "significado": "Água",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wasserglas",
+    "artigo": "das",
+    "plural": "die Wassergläser",
+    "significado": "Copo d’água",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "WC",
+    "artigo": "das",
+    "plural": "die WCs",
+    "significado": "Banheiro; toalete",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wecker",
+    "artigo": "der",
+    "plural": "die Wecker",
+    "significado": "Despertador",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Weg",
+    "artigo": "der",
+    "plural": "die Wege",
+    "significado": "Caminho/trajetória",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wein",
+    "artigo": "der",
+    "plural": "die Weine",
+    "significado": "Vinho",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Weinbau",
+    "artigo": "der",
+    "plural": "—",
+    "significado": "Vinicultura",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Werk",
+    "artigo": "das",
+    "plural": "die Werke",
+    "significado": "Obra/fábrica",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Werkstatt",
+    "artigo": "die",
+    "plural": "die Werkstätten",
+    "significado": "Oficina mec., borracheiro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wiese",
+    "artigo": "die",
+    "plural": "die Wiesen",
+    "significado": "Gramado/campo/ prado",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wille",
+    "artigo": "der",
+    "plural": "die Willen",
+    "significado": "Vontade",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Winter",
+    "artigo": "der",
+    "plural": "die Winter",
+    "significado": "Inverno",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wintermantel",
+    "artigo": "der",
+    "plural": "die Wintermäntel",
+    "significado": "Casaco de inverno",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wissen",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Conhecimento, sabedoria",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Woche",
+    "artigo": "die",
+    "plural": "die Wochen",
+    "significado": "Semana",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wochenende",
+    "artigo": "das",
+    "plural": "die Wochenenden",
+    "significado": "Fim de semana",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wohl",
+    "artigo": "das",
+    "plural": "—",
+    "significado": "Bem-estar/saúde",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wohnung",
+    "artigo": "die",
+    "plural": "die Wohnungen",
+    "significado": "Apartamento; moradia",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wohnzimmer",
+    "artigo": "das",
+    "plural": "die Wohnzimmer",
+    "significado": "Sala de estar/visitas",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wolke",
+    "artigo": "die",
+    "plural": "die Wolken",
+    "significado": "Nuvem",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wort",
+    "artigo": "das",
+    "plural": "die Wörter / die Worte",
+    "significado": "Palavra",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wurm",
+    "artigo": "der",
+    "plural": "die Wümer",
+    "significado": "Verme",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wurst",
+    "artigo": "die",
+    "plural": "die Würste",
+    "significado": "Salsicha",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Wäsche",
+    "artigo": "die",
+    "plural": "x",
+    "significado": "Roupa",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zahnarzt",
+    "artigo": "der",
+    "plural": "die Zahnärzte",
+    "significado": "Dentista",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zahnärztin",
+    "artigo": "die",
+    "plural": "die Zahnärztinnen",
+    "significado": "Dentista",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zeitarbeiter",
+    "artigo": "der",
+    "plural": "die Zeitarbeiter",
+    "significado": "Trabalho temporário",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zeitschrift",
+    "artigo": "die",
+    "plural": "die Zeitschriften",
+    "significado": "Revista",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zeitung",
+    "artigo": "die",
+    "plural": "die Zeitungen",
+    "significado": "Jornal",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zentrum",
+    "artigo": "das",
+    "plural": "die Zentren",
+    "significado": "Centro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zimmer",
+    "artigo": "das",
+    "plural": "die Zimmer",
+    "significado": "Quarto; cômodo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zoo",
+    "artigo": "der",
+    "plural": "die Zoos",
+    "significado": "Zoológico",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zucker",
+    "artigo": "der",
+    "plural": "die Zucker",
+    "significado": "Açúcar",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zukunft",
+    "artigo": "die",
+    "plural": "—",
+    "significado": "Futuro",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zweifel",
+    "artigo": "der",
+    "plural": "die Zweifel",
+    "significado": "Dúvida",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Zwiebel",
+    "artigo": "die",
+    "plural": "die Zwiebeln",
+    "significado": "Cebola",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Öl",
+    "artigo": "das",
+    "plural": "die Öle",
+    "significado": "Óleo",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Übernachtung",
+    "artigo": "die",
+    "plural": "die Übernachtungen",
+    "significado": "Pernoite",
+    "origem": "Acervo de Origem — substantivos"
+  },
+  {
+    "palavra": "Übung",
+    "artigo": "die",
+    "plural": "die Übungen",
+    "significado": "Exercício",
+    "origem": "Acervo de Origem — substantivos"
+  }
+]
