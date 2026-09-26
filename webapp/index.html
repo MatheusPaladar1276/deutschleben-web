@@ -1050,6 +1050,139 @@ textarea {
     .estrada-busca { font-size: 18px; }
 }
 
+/* Referência Gramatical (palha) */
+.rg-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(48, 42, 24, .42);
+}
+
+.rg-overlay.aberta { display: flex; }
+
+.rg-painel {
+    width: min(1050px, 92vw);
+    max-height: 84vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 28px 30px 30px;
+    background: #F5F2EA;
+    border: 1px solid #d8cfb6;
+    border-left: 5px solid #b89a3f;
+    border-radius: 12px;
+    box-shadow: 0 12px 34px rgba(0,0,0,.22);
+}
+
+.rg-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+.rg-painel h2 { margin: 0; font-size: 34px; color: #5a4f26; }
+
+.rg-voltar {
+    flex: 0 0 auto;
+    padding: 12px 22px;
+    border-radius: 10px;
+    border: 2px solid #c9b981;
+    background: #f2ebcf;
+    color: #5a4f26;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.rg-busca {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid #c9b981;
+    background: #fbf8f0;
+    color: #4a4327;
+    font: inherit;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.rg-contador { font-size: 15px; color: #7a6f4a; margin: 4px 2px 10px; }
+
+.rg-lista { overflow-y: auto; padding-right: 6px; }
+
+.rg-item {
+    padding: 14px 16px;
+    border: 1px solid #e0d8bf;
+    border-left: 4px solid #c9b981;
+    border-radius: 8px;
+    background: #fdfbf5;
+    margin-bottom: 12px;
+}
+
+.rg-titulo { font-size: 23px; font-weight: 700; color: #4a4327; }
+
+.rg-cat {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #f2ebcf;
+    border: 1px solid #c9b981;
+    color: #5a4f26;
+    font-size: 13px;
+    font-weight: 700;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.rg-resumo { font-size: 19px; color: #4c4634; margin-top: 6px; line-height: 1.5; }
+
+.rg-formula {
+    font-family: "Courier New", monospace;
+    font-size: 17px;
+    color: #5a4f26;
+    background: #f4efdf;
+    border: 1px solid #e0d8bf;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.rg-sub { font-size: 15px; font-weight: 700; color: #6a5f34; margin: 10px 0 4px; }
+
+.rg-detalhes { font-size: 17px; color: #4c4634; margin: 6px 0 0; padding-left: 20px; line-height: 1.5; }
+
+.rg-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+
+.rg-chip {
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #f2ebcf;
+    border: 1px solid #d8cca0;
+    color: #5a4f26;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.rg-vazio { font-size: 18px; color: #7a6f4a; padding: 20px 4px; }
+
+@media (max-width: 820px) {
+    .rg-overlay { padding: 16px; }
+    .rg-painel { padding: 20px 18px 22px; }
+    .rg-painel h2 { font-size: 27px; }
+    .rg-busca { font-size: 18px; }
+}
+
 @media (max-width: 1100px) {
 
     .grade {
@@ -1325,7 +1458,9 @@ textarea {
         Estrada
     </div>
 
-    <div class="nav">
+    <div class="nav" id="nav-referencia" role="button" tabindex="0"
+        onclick="abrirReferencia()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirReferencia();}"
+        style="cursor:pointer">
         Referência Gramatical
     </div>
 
@@ -2360,6 +2495,109 @@ function salvarCompreensaoLocal(evento) {
     overlay.addEventListener("click", ev => { if (ev.target === overlay) window.fecharEstrada(); });
     document.addEventListener("keydown", ev => {
         if (ev.key === "Escape" && overlay.classList.contains("aberta")) window.fecharEstrada();
+    });
+})();
+</script>
+
+<div class="rg-overlay" id="rg-overlay" role="dialog" aria-modal="true" aria-label="Referência Gramatical">
+    <div class="rg-painel">
+        <div class="rg-cabecalho">
+            <h2>Referência Gramatical</h2>
+            <button type="button" class="rg-voltar" onclick="fecharReferencia()">Voltar</button>
+        </div>
+        <input type="search" id="rg-busca" class="rg-busca"
+            placeholder="Buscar tema, regra ou palavra…" autocomplete="off">
+        <div class="rg-contador" id="rg-contador"></div>
+        <div class="rg-lista" id="rg-lista"></div>
+    </div>
+</div>
+
+<script>
+(function () {
+    const overlay = document.getElementById("rg-overlay");
+    const inputBusca = document.getElementById("rg-busca");
+    const lista = document.getElementById("rg-lista");
+    const contador = document.getElementById("rg-contador");
+    let dados = null, carregando = false;
+
+    function esc(t) {
+        return String(t ?? "").replace(/[&<>\"']/g, c =>
+            ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '\"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    function chips(arr) {
+        return '<div class="rg-chips">' + arr.map(x => '<span class="rg-chip">' + esc(x) + '</span>').join("") + '</div>';
+    }
+
+    function textoBusca(m) {
+        const partes = [m.titulo, m.resumo, m.categoria, m.formula];
+        ["gatilhos", "detalhes", "itens", "dativo", "acusativo", "dativo_ou_acusativo"].forEach(k => {
+            if (Array.isArray(m[k])) partes.push(m[k].join(" "));
+        });
+        return partes.filter(Boolean).join(" ").toLowerCase();
+    }
+
+    function renderModulo(m) {
+        let html = '<div class="rg-item">';
+        html += '<div><span class="rg-titulo">' + esc(m.titulo) + '</span>';
+        if (m.categoria) html += '<span class="rg-cat">' + esc(m.categoria) + '</span>';
+        html += '</div>';
+        if (m.resumo) html += '<div class="rg-resumo">' + esc(m.resumo) + '</div>';
+        if (m.formula) html += '<div class="rg-formula">' + esc(m.formula) + '</div>';
+        if (Array.isArray(m.detalhes) && m.detalhes.length) {
+            html += '<ul class="rg-detalhes">' + m.detalhes.map(d => '<li>' + esc(d) + '</li>').join("") + '</ul>';
+        }
+        if (Array.isArray(m.itens) && m.itens.length) html += chips(m.itens);
+        if (Array.isArray(m.dativo)) html += '<div class="rg-sub">Dativo</div>' + chips(m.dativo);
+        if (Array.isArray(m.acusativo)) html += '<div class="rg-sub">Acusativo</div>' + chips(m.acusativo);
+        if (Array.isArray(m.dativo_ou_acusativo)) html += '<div class="rg-sub">Dativo ou acusativo (Wechselpräpositionen)</div>' + chips(m.dativo_ou_acusativo);
+        html += '</div>';
+        return html;
+    }
+
+    async function carregar() {
+        if (dados || carregando) return;
+        carregando = true;
+        lista.innerHTML = '<p class="rg-vazio">Carregando…</p>';
+        try {
+            const r = await fetch("./data/referencia_gramatical.json");
+            if (!r.ok) throw new Error(r.status);
+            const j = await r.json();
+            dados = Array.isArray(j.modulos) ? j.modulos : [];
+        } catch (e) {
+            lista.innerHTML = '<p class="rg-vazio">Não foi possível carregar a referência.</p>';
+            carregando = false;
+            return;
+        }
+        carregando = false;
+        render();
+    }
+
+    function render() {
+        if (!dados) return;
+        const termo = inputBusca.value.trim().toLowerCase();
+        const filtrados = termo ? dados.filter(m => textoBusca(m).includes(termo)) : dados;
+        contador.textContent = filtrados.length + " de " + dados.length + " temas";
+        lista.innerHTML = filtrados.length
+            ? filtrados.map(renderModulo).join("")
+            : '<p class="rg-vazio">Nenhum tema encontrado.</p>';
+    }
+
+    inputBusca.addEventListener("input", render);
+
+    window.abrirReferencia = function () {
+        overlay.classList.add("aberta");
+        document.body.style.overflow = "hidden";
+        carregar();
+        setTimeout(() => inputBusca.focus(), 50);
+    };
+    window.fecharReferencia = function () {
+        overlay.classList.remove("aberta");
+        document.body.style.overflow = "";
+    };
+    overlay.addEventListener("click", ev => { if (ev.target === overlay) window.fecharReferencia(); });
+    document.addEventListener("keydown", ev => {
+        if (ev.key === "Escape" && overlay.classList.contains("aberta")) window.fecharReferencia();
     });
 })();
 </script>

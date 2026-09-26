@@ -1,0 +1,168 @@
+{
+  "colecao": "referencia_gramatical",
+  "versao": "RG_v1",
+  "origem": "Construção de Orações.docx",
+  "principio": "A Referência Gramatical nasce do texto vivido em Cn/Rn e explica apenas o fenômeno que apareceu.",
+  "modulos": [
+    {
+      "id": "estrutura_basica",
+      "titulo": "Estrutura básica da oração",
+      "categoria": "estrutura",
+      "resumo": "Organiza a frase em sujeito, verbo, objetos, complementos TeKaMoLo e negação.",
+      "formula": "S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg)",
+      "gatilhos": [
+        "ordem_da_frase",
+        "sujeito",
+        "objeto_indireto",
+        "objeto_direto",
+        "tekamolo",
+        "negacao"
+      ]
+    },
+    {
+      "id": "casos_objetos",
+      "titulo": "Sujeito, OI e OD",
+      "categoria": "casos",
+      "resumo": "Sujeito no nominativo; OI no dativo; OD geralmente no acusativo.",
+      "gatilhos": [
+        "nominativo",
+        "dativo",
+        "acusativo",
+        "objeto_indireto",
+        "objeto_direto"
+      ]
+    },
+    {
+      "id": "verbo_posicao",
+      "titulo": "Posição do verbo",
+      "categoria": "ordem",
+      "resumo": "Na oração principal, o verbo conjugado ocupa a posição 2; na subordinada, vai ao final.",
+      "gatilhos": [
+        "verbo_posicao_2",
+        "verbo_final",
+        "hauptsatz",
+        "nebensatz"
+      ]
+    },
+    {
+      "id": "tekamolo",
+      "titulo": "TeKaMoLo",
+      "categoria": "ordem",
+      "resumo": "Tempo, Causa, Modo e Lugar organizam informações complementares da oração.",
+      "detalhes": [
+        "Te = Quando?",
+        "Ka = Por quê?",
+        "Mo = Como?",
+        "Lo = Onde?/Para onde?/De onde?"
+      ],
+      "gatilhos": [
+        "tempo",
+        "causa",
+        "modo",
+        "lugar",
+        "tekamolo"
+      ]
+    },
+    {
+      "id": "negacao",
+      "titulo": "Negação",
+      "categoria": "negacao",
+      "resumo": "A negação pode usar nicht ou kein; sua posição depende do elemento negado.",
+      "gatilhos": [
+        "nicht",
+        "kein",
+        "negacao"
+      ]
+    },
+    {
+      "id": "coordenadas",
+      "titulo": "Orações coordenadas",
+      "categoria": "oracoes",
+      "resumo": "Conjunções coordenativas ligam orações independentes sem deslocar o verbo da posição 2.",
+      "itens": [
+        "und",
+        "aber",
+        "oder",
+        "denn",
+        "sondern"
+      ],
+      "gatilhos": [
+        "und",
+        "aber",
+        "oder",
+        "denn",
+        "sondern",
+        "coordenada"
+      ]
+    },
+    {
+      "id": "subordinadas",
+      "titulo": "Orações subordinadas",
+      "categoria": "oracoes",
+      "resumo": "Conjunções subordinativas introduzem uma oração dependente e levam o verbo conjugado ao final.",
+      "itens": [
+        "weil",
+        "dass",
+        "obwohl",
+        "wenn",
+        "damit"
+      ],
+      "gatilhos": [
+        "weil",
+        "dass",
+        "obwohl",
+        "wenn",
+        "damit",
+        "subordinada",
+        "verbo_final"
+      ]
+    },
+    {
+      "id": "preposicoes_casos",
+      "titulo": "Preposições e casos",
+      "categoria": "preposicoes",
+      "resumo": "Algumas preposições exigem dativo, outras acusativo, e algumas podem reger ambos conforme o uso.",
+      "dativo": [
+        "aus",
+        "bei",
+        "mit",
+        "nach",
+        "seit",
+        "von",
+        "zu"
+      ],
+      "acusativo": [
+        "durch",
+        "für",
+        "gegen",
+        "ohne",
+        "um"
+      ],
+      "dativo_ou_acusativo": [
+        "an",
+        "auf",
+        "hinter",
+        "in",
+        "neben",
+        "über",
+        "unter",
+        "vor",
+        "zwischen"
+      ],
+      "gatilhos": [
+        "preposicao",
+        "dativo",
+        "acusativo",
+        "wechselpraeposition"
+      ]
+    }
+  ],
+  "fora_da_v1": [
+    "Genitivo detalhado",
+    "Regras extensas de inversão OI/OD",
+    "Discussões longas sobre ênfase e estilo",
+    "Listas amplas de advérbios",
+    "Exemplos redundantes e exercícios",
+    "Conteúdo não acionado por uma Cn/Rn"
+  ]
+}
