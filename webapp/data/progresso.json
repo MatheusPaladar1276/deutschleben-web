@@ -1,0 +1,647 @@
+{
+ "gerado_em": "2026-09-27 01:56:01 UTC",
+ "evidencias_memoria": [
+  {
+   "elemento": "an etwas denken",
+   "tipo": "bloco",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-13 23:41:47"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "bloco",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 03:17:42"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "bloco",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 03:29:24"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "bloco",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 12:51:37"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 12:59:39"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 13:07:22"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 19:38:37"
+  },
+  {
+   "elemento": "Am Abend",
+   "tipo": "sentido",
+   "evidencia": "destravada_com_apoio_adicional",
+   "caminhada_id": 2,
+   "data_registro": "2026-09-15 14:58:21"
+  },
+  {
+   "elemento": "ruhig",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 2,
+   "data_registro": "2026-09-15 15:01:03"
+  },
+  {
+   "elemento": "eine Weile",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 2,
+   "data_registro": "2026-09-15 17:49:49"
+  },
+  {
+   "elemento": "eine Weile",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 2,
+   "data_registro": "2026-09-15 18:29:54"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "bloco",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-13 23:50:03"
+  },
+  {
+   "elemento": "Ich bleibe einen Moment stehen und höre die Vögel.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 6,
+   "data_registro": "2026-09-17 21:43:05"
+  },
+  {
+   "elemento": "Ich bleibe einen Moment stehen und höre die Vögel.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 6,
+   "data_registro": "2026-09-17 21:44:08"
+  },
+  {
+   "elemento": "an den neuen Tag",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 6,
+   "data_registro": "2026-09-17 21:47:36"
+  },
+  {
+   "elemento": "einen Moment",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 6,
+   "data_registro": "2026-09-17 22:04:03"
+  },
+  {
+   "elemento": "an den neuen Tag",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 6,
+   "data_registro": "2026-09-17 22:05:17"
+  },
+  {
+   "elemento": "Ich bleibe einen Moment stehen und höre die Vögel.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 6,
+   "data_registro": "2026-09-18 01:43:33"
+  },
+  {
+   "elemento": "Ich bleibe einen Moment stehen und höre die Vögel.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 6,
+   "data_registro": "2026-09-18 01:44:23"
+  },
+  {
+   "elemento": "an den neuen Tag",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 6,
+   "data_registro": "2026-09-18 01:45:45"
+  },
+  {
+   "elemento": "Am Morgen gehe ich in die Stadt.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 01:23:58"
+  },
+  {
+   "elemento": "Am Morgen gehe ich in die Stadt.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 01:25:26"
+  },
+  {
+   "elemento": "sich verändern",
+   "tipo": "bloco",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 00:11:10"
+  },
+  {
+   "elemento": "eine Weile",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 01:30:07"
+  },
+  {
+   "elemento": "einen Kaffee trinken",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 01:31:20"
+  },
+  {
+   "elemento": "Am Morgen",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 01:55:56"
+  },
+  {
+   "elemento": "eine Weile",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 01:56:10"
+  },
+  {
+   "elemento": "einen Kaffee trinken",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 01:56:48"
+  },
+  {
+   "elemento": "Ich bleibe einen Moment stehen und beobachte die Menschen.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 14:04:04"
+  },
+  {
+   "elemento": "Ich bleibe einen Moment stehen und beobachte die Menschen.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 14:04:55"
+  },
+  {
+   "elemento": "Ich bleibe einen Moment stehen und beobachte die Menschen.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 13,
+   "data_registro": "2026-09-20 15:28:08"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 20:24:41"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 20:30:42"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "bloco",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 00:13:02"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 20:31:42"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 20:37:16"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 20:37:20"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 21:39:00"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 21:39:34"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 21:43:48"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 21:43:51"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 22:23:42"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-22 22:23:45"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 00:40:42"
+  },
+  {
+   "elemento": "sich verändern",
+   "tipo": "bloco",
+   "evidencia": "destravada_com_apoio_adicional",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 01:09:16"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 00:41:02"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:01:15"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:01:45"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:05:26"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:05:31"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:07:48"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:07:53"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:10:24"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:10:28"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:12:17"
+  },
+  {
+   "elemento": "sich verändern",
+   "tipo": "bloco",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 02:38:25"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:15:18"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:15:20"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:17:07"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:20:13"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:23:02"
+  },
+  {
+   "elemento": "an etwas denken",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:25:14"
+  },
+  {
+   "elemento": "weitergehen",
+   "tipo": "sentido",
+   "evidencia": "destravada_com_apoio_adicional",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 01:27:35"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 02:29:36"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 02:37:00"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 13:38:07"
+  },
+  {
+   "elemento": "sich verändern",
+   "tipo": "bloco",
+   "evidencia": "destravada_com_apoio_adicional",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 03:03:11"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 13:38:10"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 14:11:23"
+  },
+  {
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-23 14:11:44"
+  },
+  {
+   "elemento": "Auf dem Weg zum Bahnhof finde ich einen kleinen Schlüssel.",
+   "tipo": "sentido",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 14:09:31"
+  },
+  {
+   "elemento": "Auf dem Weg zum Bahnhof finde ich einen kleinen Schlüssel.",
+   "tipo": "sentido",
+   "evidencia": "recuperada_com_ponte",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 14:14:03"
+  },
+  {
+   "elemento": "Auf dem Weg zum Bahnhof finde ich einen kleinen Schlüssel.",
+   "tipo": "sentido",
+   "evidencia": "sentido_apresentado",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 14:15:57"
+  },
+  {
+   "elemento": "ihn mitnehmen",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 14:38:40"
+  },
+  {
+   "elemento": "vor einem alten Haus",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 14:39:06"
+  },
+  {
+   "elemento": "den Schlüssel zeigen",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 14:39:45"
+  },
+  {
+   "elemento": "auf dem Weg zum Bahnhof",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 21:51:43"
+  },
+  {
+   "elemento": "sich verändern",
+   "tipo": "bloco",
+   "evidencia": "ainda_aberta",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 03:11:00"
+  },
+  {
+   "elemento": "ihn mitnehmen",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 21:52:56"
+  },
+  {
+   "elemento": "vor einem alten Haus",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 21:53:47"
+  },
+  {
+   "elemento": "den Schlüssel zeigen",
+   "tipo": "sentido",
+   "evidencia": "destravada",
+   "caminhada_id": 21,
+   "data_registro": "2026-09-24 21:54:46"
+  },
+  {
+   "elemento": "sich verändern",
+   "tipo": "bloco",
+   "evidencia": "destravada_com_apoio_adicional",
+   "caminhada_id": 1,
+   "data_registro": "2026-09-14 03:15:43"
+  }
+ ],
+ "reencontros": [
+  {
+   "id": 1,
+   "elemento": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "tipo": "sentido",
+   "estado": "reencontrado",
+   "caminhada_origem_id": 1,
+   "alvo_reencontro": "an etwas denken",
+   "contexto_origem": "Dann denke ich an den neuen Tag und gehe weiter.",
+   "data_registro": "2026-09-14 14:26:33"
+  },
+  {
+   "id": 3,
+   "elemento": "Ich bleibe einen Moment stehen und höre die Vögel.",
+   "tipo": "sentido",
+   "estado": "aguardando",
+   "caminhada_origem_id": 6,
+   "alvo_reencontro": null,
+   "contexto_origem": "Ich bleibe einen Moment stehen und höre die Vögel.",
+   "data_registro": "2026-09-17 21:44:08"
+  },
+  {
+   "id": 4,
+   "elemento": "Am Morgen gehe ich in die Stadt.",
+   "tipo": "sentido",
+   "estado": "aguardando",
+   "caminhada_origem_id": 13,
+   "alvo_reencontro": null,
+   "contexto_origem": "Am Morgen gehe ich in die Stadt.",
+   "data_registro": "2026-09-20 01:25:26"
+  },
+  {
+   "id": 5,
+   "elemento": "Ich bleibe einen Moment stehen und beobachte die Menschen.",
+   "tipo": "sentido",
+   "estado": "reencontrado",
+   "caminhada_origem_id": 13,
+   "alvo_reencontro": "die Menschen beobachten",
+   "contexto_origem": "Ich bleibe einen Moment stehen und beobachte die Menschen.",
+   "data_registro": "2026-09-20 14:04:55"
+  },
+  {
+   "id": 6,
+   "elemento": "Auf dem Weg zum Bahnhof finde ich einen kleinen Schlüssel.",
+   "tipo": "sentido",
+   "estado": "aguardando",
+   "caminhada_origem_id": 21,
+   "alvo_reencontro": "einen kleinen Schlüssel finden",
+   "contexto_origem": "Auf dem Weg zum Bahnhof finde ich einen kleinen Schlüssel.",
+   "data_registro": "2026-09-24 14:15:57"
+  }
+ ],
+ "evidencias_reencontro": [
+  {
+   "reencontro_id": 1,
+   "caminhada_reencontro_id": 2,
+   "evidencia": "reencontrado_sem_apoio_especifico",
+   "contexto_reencontro": "Ich sitze eine Weile dort und denke an den nächsten Tag.",
+   "data_registro": "2026-09-15 18:04:07"
+  },
+  {
+   "reencontro_id": 5,
+   "caminhada_reencontro_id": 14,
+   "evidencia": "reencontrado_sem_apoio_especifico",
+   "contexto_reencontro": "Ich bleibe kurz stehen und beobachte die Menschen um mich herum.",
+   "data_registro": "2026-09-20 16:51:51"
+  }
+ ]
+}

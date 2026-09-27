@@ -1184,6 +1184,188 @@ textarea {
     .rg-busca { font-size: 18px; }
 }
 
+/* Progresso Linguístico — revela o percurso já registrado (verde suave) */
+.prog-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(30, 48, 34, .42);
+}
+
+.prog-overlay.aberta { display: flex; }
+
+.prog-painel {
+    width: min(1050px, 92vw);
+    max-height: 84vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 28px 30px 30px;
+    background: #F1F5F1;
+    border: 1px solid #bcd0bf;
+    border-left: 5px solid #5f9068;
+    border-radius: 12px;
+    box-shadow: 0 12px 34px rgba(0,0,0,.22);
+}
+
+.prog-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+.prog-painel h2 { margin: 0; font-size: 34px; color: #2c4a33; }
+
+.prog-voltar {
+    flex: 0 0 auto;
+    padding: 12px 22px;
+    border-radius: 10px;
+    border: 2px solid #93b899;
+    background: #d8ead9;
+    color: #2c4a33;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.prog-resumo {
+    font-size: 17px;
+    color: #38513e;
+    background: #e6f0e7;
+    border: 1px solid #bcd0bf;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.prog-busca {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid #93b899;
+    background: #eef5ef;
+    color: #24371f;
+    font: inherit;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.prog-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.prog-filtro {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 2px solid #93b899;
+    background: #eef5ef;
+    color: #2c4a33;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.prog-filtro.ativo {
+    background: #d8ead9;
+    border-color: #5f9068;
+}
+
+.prog-contador { font-size: 15px; color: #4c6151; margin: 4px 2px 10px; }
+
+.prog-lista { overflow-y: auto; padding-right: 6px; }
+
+.prog-secao-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c4a33;
+    margin: 18px 2px 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #cddbcf;
+}
+
+.prog-secao-titulo:first-child { margin-top: 4px; }
+
+.prog-item {
+    padding: 12px 14px;
+    border: 1px solid #cddbcf;
+    border-left: 4px solid #93b899;
+    border-radius: 8px;
+    background: #f8fbf8;
+    margin-bottom: 10px;
+}
+
+.prog-item.pendente { border-left-color: #cdb866; }
+.prog-item.resolvido { border-left-color: #5f9068; }
+
+.prog-termo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #24371f;
+}
+
+.prog-tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #d8ead9;
+    border: 1px solid #93b899;
+    color: #2c4a33;
+    font-size: 14px;
+    font-weight: 700;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.prog-tag.estado-aguardando {
+    background: #f3ecd2;
+    border-color: #cdb866;
+    color: #6a5a24;
+}
+
+.prog-tag.estado-reencontrado {
+    background: #d8ead9;
+    border-color: #5f9068;
+    color: #274a30;
+}
+
+.prog-meta { font-size: 16px; color: #55705c; margin-top: 4px; line-height: 1.5; }
+
+.prog-contexto {
+    font-size: 17px;
+    color: #33472f;
+    margin-top: 6px;
+    padding-left: 12px;
+    border-left: 3px solid #cddbcf;
+    font-style: italic;
+}
+
+.prog-situacao { font-size: 17px; color: #33472f; margin-top: 4px; }
+
+.prog-vazio { font-size: 18px; color: #4c6151; padding: 20px 4px; }
+
+@media (max-width: 820px) {
+    .prog-overlay { padding: 16px; }
+    .prog-painel { padding: 20px 18px 22px; }
+    .prog-painel h2 { font-size: 27px; }
+    .prog-busca { font-size: 18px; }
+    .prog-termo { font-size: 21px; }
+}
+
 @media (max-width: 1100px) {
 
     .grade {
@@ -1465,7 +1647,9 @@ textarea {
         Referência Gramatical
     </div>
 
-    <div class="nav">
+    <div class="nav" id="nav-progresso" role="button" tabindex="0"
+        onclick="abrirProgresso()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirProgresso();}"
+        style="cursor:pointer">
         Progresso Linguístico
     </div>
 
@@ -2599,6 +2783,232 @@ function salvarCompreensaoLocal(evento) {
     overlay.addEventListener("click", ev => { if (ev.target === overlay) window.fecharReferencia(); });
     document.addEventListener("keydown", ev => {
         if (ev.key === "Escape" && overlay.classList.contains("aberta")) window.fecharReferencia();
+    });
+})();
+</script>
+
+<div class="prog-overlay" id="prog-overlay" role="dialog" aria-modal="true" aria-label="Progresso Linguístico">
+    <div class="prog-painel">
+        <div class="prog-cabecalho">
+            <h2>Progresso Linguístico</h2>
+            <button type="button" class="prog-voltar" onclick="fecharProgresso()">Voltar</button>
+        </div>
+        <div class="prog-resumo" id="prog-resumo"></div>
+        <input type="search" id="prog-busca" class="prog-busca"
+            placeholder="Buscar elemento ou expressão…" autocomplete="off">
+        <div class="prog-filtros" id="prog-filtros">
+            <button type="button" class="prog-filtro ativo" data-grupo="todos">Tudo</button>
+            <button type="button" class="prog-filtro" data-grupo="sentido">Sentidos</button>
+            <button type="button" class="prog-filtro" data-grupo="bloco">Blocos</button>
+        </div>
+        <div class="prog-contador" id="prog-contador"></div>
+        <div class="prog-lista" id="prog-lista"></div>
+    </div>
+</div>
+
+<script>
+(function () {
+    const overlay = document.getElementById("prog-overlay");
+    const resumo = document.getElementById("prog-resumo");
+    const inputBusca = document.getElementById("prog-busca");
+    const filtros = document.getElementById("prog-filtros");
+    const lista = document.getElementById("prog-lista");
+    const contador = document.getElementById("prog-contador");
+    let dados = null, carregando = false, tipoAtivo = "todos";
+
+    function esc(t) {
+        return String(t ?? "").replace(/[&<>\"']/g, c =>
+            ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '\"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    // Só formatação: troca "_" por espaço nos valores reais do banco.
+    function human(s) { return String(s ?? "").replace(/_/g, " "); }
+
+    // Rótulos apenas quando o estado real do banco existe; senão usa o valor cru.
+    const ESTADO_ROTULO = { aguardando: "Aguardando reencontro", reencontrado: "Reencontrado" };
+
+    function agruparElementos(evidencias) {
+        const mapa = new Map();
+        for (const e of evidencias) {
+            const chave = e.elemento ?? "";
+            if (!mapa.has(chave)) {
+                mapa.set(chave, { elemento: chave, tipo: e.tipo, caminhadas: new Set(), registros: [] });
+            }
+            const g = mapa.get(chave);
+            if (e.caminhada_id != null) g.caminhadas.add(Number(e.caminhada_id));
+            g.registros.push({ evidencia: e.evidencia, caminhada: e.caminhada_id, data: e.data_registro || "" });
+        }
+        const arr = [...mapa.values()];
+        for (const g of arr) {
+            g.registros.sort((a, b) => String(b.data).localeCompare(String(a.data)));
+            g.situacao = g.registros.length ? g.registros[0].evidencia : null;
+            g.caminhadasOrdenadas = [...g.caminhadas].sort((a, b) => a - b);
+        }
+        arr.sort((a, b) => a.elemento.localeCompare(b.elemento, "de"));
+        return arr;
+    }
+
+    function prepararReencontros(reencontros, provas) {
+        const porId = new Map();
+        for (const p of provas) porId.set(Number(p.reencontro_id), p);
+        return reencontros.map(r => ({
+            elemento: r.elemento,
+            tipo: r.tipo,
+            estado: r.estado,
+            caminhadaOrigem: r.caminhada_origem_id,
+            alvo: r.alvo_reencontro,
+            contextoOrigem: r.contexto_origem,
+            prova: porId.get(Number(r.id)) || null,
+        }));
+    }
+
+    function itemElemento(g) {
+        let html = '<div class="prog-item">';
+        html += '<div><span class="prog-termo">' + esc(g.elemento) + '</span>';
+        if (g.tipo) html += '<span class="prog-tag">' + esc(g.tipo) + '</span>';
+        html += '</div>';
+        const cams = g.caminhadasOrdenadas;
+        if (cams.length) {
+            const rot = cams.length > 1 ? "Caminhadas" : "Caminhada";
+            html += '<div class="prog-meta">' + rot + ' de origem: ' + cams.map(c => "C" + c).join(", ") + '</div>';
+        }
+        if (g.situacao != null) {
+            html += '<div class="prog-situacao">Situação atual: <strong>' + esc(human(g.situacao)) + '</strong></div>';
+        }
+        if (g.registros.length > 1) {
+            const evs = [...new Set(g.registros.map(r => human(r.evidencia)))];
+            html += '<div class="prog-meta">Evidências registradas: ' + evs.map(esc).join(" · ") + '</div>';
+        }
+        html += '</div>';
+        return html;
+    }
+
+    function itemReencontro(r) {
+        const classe = r.estado === "reencontrado" ? "resolvido" : (r.estado === "aguardando" ? "pendente" : "");
+        const tagCls = "prog-tag estado-" + esc(String(r.estado || ""));
+        let html = '<div class="prog-item ' + classe + '">';
+        html += '<div><span class="prog-termo">' + esc(r.elemento) + '</span>';
+        if (r.estado) html += '<span class="' + tagCls + '">' + esc(ESTADO_ROTULO[r.estado] || human(r.estado)) + '</span>';
+        html += '</div>';
+        if (r.tipo) html += '<div class="prog-meta">Tipo: ' + esc(human(r.tipo)) + '</div>';
+        if (r.caminhadaOrigem != null) html += '<div class="prog-meta">Caminhada de origem: C' + esc(r.caminhadaOrigem) + '</div>';
+        if (r.alvo) html += '<div class="prog-meta">Alvo do reencontro: ' + esc(r.alvo) + '</div>';
+        if (r.prova) {
+            if (r.prova.caminhada_reencontro_id != null)
+                html += '<div class="prog-meta">Reencontrado em: C' + esc(r.prova.caminhada_reencontro_id) + '</div>';
+            if (r.prova.evidencia)
+                html += '<div class="prog-meta">Evidência: ' + esc(human(r.prova.evidencia)) + '</div>';
+            if (r.prova.contexto_reencontro)
+                html += '<div class="prog-contexto">' + esc(r.prova.contexto_reencontro) + '</div>';
+        }
+        html += '</div>';
+        return html;
+    }
+
+    function render() {
+        if (!dados) return;
+        const termo = inputBusca.value.trim().toLowerCase();
+
+        // Reencontros, agrupados pelos estados reais do banco.
+        const reencFiltrados = dados.reencontros.filter(r => {
+            if (!termo) return true;
+            return String(r.elemento + " " + (r.alvo || "")).toLowerCase().includes(termo);
+        });
+        const porEstado = new Map();
+        for (const r of reencFiltrados) {
+            const k = r.estado || "(sem estado)";
+            if (!porEstado.has(k)) porEstado.set(k, []);
+            porEstado.get(k).push(r);
+        }
+
+        // Elementos na memória, filtrados por tipo real e busca.
+        const elemFiltrados = dados.elementos.filter(g => {
+            if (tipoAtivo !== "todos" && g.tipo !== tipoAtivo) return false;
+            if (!termo) return true;
+            return String(g.elemento).toLowerCase().includes(termo);
+        });
+
+        let html = "";
+
+        if (porEstado.size) {
+            const ordem = ["aguardando", "reencontrado"];
+            const chaves = [...porEstado.keys()].sort((a, b) => {
+                const ia = ordem.indexOf(a), ib = ordem.indexOf(b);
+                return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+            });
+            for (const k of chaves) {
+                const grupo = porEstado.get(k);
+                html += '<div class="prog-secao-titulo">' + esc(ESTADO_ROTULO[k] || human(k)) +
+                    ' (' + grupo.length + ')</div>';
+                html += grupo.map(itemReencontro).join("");
+            }
+        }
+
+        html += '<div class="prog-secao-titulo">Elementos na memória (' + elemFiltrados.length + ')</div>';
+        html += elemFiltrados.length
+            ? elemFiltrados.map(itemElemento).join("")
+            : '<p class="prog-vazio">Nenhum elemento para este filtro.</p>';
+
+        lista.innerHTML = html;
+        contador.textContent = elemFiltrados.length + " de " + dados.elementos.length + " elementos";
+    }
+
+    async function carregar() {
+        if (dados || carregando) return;
+        carregando = true;
+        resumo.textContent = "Carregando memória…";
+        lista.innerHTML = '<p class="prog-vazio">Carregando…</p>';
+
+        let bruto = null;
+        try {
+            const r = await fetch("./data/progresso.json", { cache: "no-store" });
+            if (r.ok) bruto = await r.json();
+        } catch (e) { bruto = null; }
+        carregando = false;
+
+        if (!bruto) {
+            resumo.textContent = "";
+            lista.innerHTML = '<p class="prog-vazio">Não foi possível ler a memória agora. Verifique a conexão e tente novamente.</p>';
+            return;
+        }
+
+        const elementos = agruparElementos(bruto.evidencias_memoria || []);
+        const reencontros = prepararReencontros(bruto.reencontros || [], bruto.evidencias_reencontro || []);
+        dados = { elementos, reencontros };
+
+        const nAgu = reencontros.filter(r => r.estado === "aguardando").length;
+        const nRee = reencontros.filter(r => r.estado === "reencontrado").length;
+        resumo.innerHTML =
+            '<strong>' + elementos.length + '</strong> elementos linguísticos registrados na memória · ' +
+            '<strong>' + reencontros.length + '</strong> reencontros' +
+            (reencontros.length ? (' (' + nAgu + ' aguardando · ' + nRee + ' reencontrados)') : '') + '.';
+
+        render();
+    }
+
+    filtros.addEventListener("click", ev => {
+        const b = ev.target.closest(".prog-filtro");
+        if (!b) return;
+        filtros.querySelectorAll(".prog-filtro").forEach(x => x.classList.remove("ativo"));
+        b.classList.add("ativo");
+        tipoAtivo = b.dataset.grupo;
+        render();
+    });
+    inputBusca.addEventListener("input", () => { if (dados) render(); });
+
+    window.abrirProgresso = function () {
+        overlay.classList.add("aberta");
+        document.body.style.overflow = "hidden";
+        carregar();
+        setTimeout(() => inputBusca.focus(), 50);
+    };
+    window.fecharProgresso = function () {
+        overlay.classList.remove("aberta");
+        document.body.style.overflow = "";
+    };
+    overlay.addEventListener("click", ev => { if (ev.target === overlay) window.fecharProgresso(); });
+    document.addEventListener("keydown", ev => {
+        if (ev.key === "Escape" && overlay.classList.contains("aberta")) window.fecharProgresso();
     });
 })();
 </script>
