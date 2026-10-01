@@ -3026,12 +3026,14 @@ function salvarCompreensaoLocal(evento) {
             <h2 id="meu-texto-titulo">Meu texto</h2>
             <button type="button" class="rg-voltar" id="meu-texto-voltar">Voltar</button>
         </div>
+        <div id="meu-texto-edicao">
         <section aria-label="Texto salvo">
             <p id="meu-texto-leitura" class="retorno" role="status" aria-live="polite"></p>
             <button type="button" class="enviar" id="meu-texto-reabrir" hidden>Tentar abrir novamente</button>
             <article id="meu-texto-salvo" hidden>
                 <h3 id="meu-texto-salvo-titulo" style="white-space:pre-wrap;overflow-wrap:anywhere"></h3>
                 <div id="meu-texto-salvo-conteudo" lang="de" style="white-space:pre-wrap;overflow-wrap:anywhere"></div>
+                <button type="button" class="enviar" id="meu-texto-compreender">Ler e compreender</button>
             </article>
             <details>
                 <summary>Retomar outro texto pelo ID</summary>
@@ -3053,6 +3055,14 @@ function salvarCompreensaoLocal(evento) {
                 <button type="submit" class="enviar" id="meu-texto-salvar">Salvar texto</button>
             </div>
         </form>
+        </div>
+        <section id="meu-texto-area-leitura" aria-label="Leitura e compreensão" hidden>
+            <h3 id="meu-texto-leitura-titulo" style="white-space:pre-wrap;overflow-wrap:anywhere"></h3>
+            <div id="meu-texto-leitura-conteudo" lang="de" style="white-space:pre-wrap;overflow-wrap:anywhere"></div>
+            <label for="meu-texto-compreensao" class="texto-reflexao">Minha compreensão</label>
+            <textarea id="meu-texto-compreensao" aria-describedby="meu-texto-compreensao-aviso"></textarea>
+            <p id="meu-texto-compreensao-aviso" class="texto-reflexao">Sua compreensão fica disponível enquanto esta página estiver aberta.</p>
+        </section>
     </div>
 </div>
 
@@ -3073,6 +3083,15 @@ function salvarCompreensaoLocal(evento) {
     const retomarForm = document.getElementById("form-retomar-texto");
     const textoId = document.getElementById("meu-texto-id");
     const abrir = document.getElementById("meu-texto-abrir");
+    const edicao = document.getElementById("meu-texto-edicao");
+    const areaLeitura = document.getElementById("meu-texto-area-leitura");
+    const compreender = document.getElementById("meu-texto-compreender");
+    const leituraTitulo = document.getElementById("meu-texto-leitura-titulo");
+    const leituraConteudo = document.getElementById("meu-texto-leitura-conteudo");
+    const compreensao = document.getElementById("meu-texto-compreensao");
+    const cabecalho = document.getElementById("meu-texto-titulo");
+    const compreensoes = new Map();
+    let textoAberto = null;
     const ids = new Map();
     let salvando = false, focoAnterior = null;
     let uidAtual = null, ultimoId = null, leituraAtual = 0, lido = false;
@@ -3085,7 +3104,35 @@ function salvarCompreensaoLocal(evento) {
         try { localStorage.setItem(chave(uid), id); return true; }
         catch (_) { return false; }
     }
+    function chaveCompreensao() {
+        return JSON.stringify([textoAberto.uid, textoAberto.id]);
+    }
+    function voltarAoTexto() {
+        areaLeitura.hidden = true;
+        edicao.hidden = false;
+        cabecalho.textContent = "Meu texto";
+        voltar.textContent = "Voltar";
+    }
+    compreender.addEventListener("click", () => {
+        if (!textoAberto || textoAberto.uid !== uidConectado()) return;
+        leituraTitulo.textContent = textoAberto.titulo;
+        leituraConteudo.textContent = textoAberto.conteudo;
+        compreensao.value = compreensoes.get(chaveCompreensao()) || "";
+        edicao.hidden = true;
+        areaLeitura.hidden = false;
+        cabecalho.textContent = "Ler e compreender";
+        voltar.textContent = "Voltar a Meu texto";
+        compreensao.focus();
+    });
+    compreensao.addEventListener("input", () => {
+        if (textoAberto && textoAberto.uid === uidConectado()) {
+            compreensoes.set(chaveCompreensao(), compreensao.value);
+        }
+    });
     function limparLeitura() {
+        voltarAoTexto();
+        textoAberto = null;
+        leituraTitulo.textContent = leituraConteudo.textContent = compreensao.value = "";
         leituraAtual++;
         lido = false;
         artigo.hidden = true;
@@ -3104,6 +3151,7 @@ function salvarCompreensaoLocal(evento) {
         try {
             const texto = await window.DL_DADOS.carregarTexto(id);
             if (tentativa !== leituraAtual || uid !== uidConectado()) return;
+            textoAberto = Object.freeze({ uid, id, titulo: texto.titulo, conteudo: texto.conteudo });
             salvoTitulo.textContent = texto.titulo;
             salvoConteudo.textContent = texto.conteudo;
             artigo.hidden = false;
@@ -3164,6 +3212,11 @@ function salvarCompreensaoLocal(evento) {
     };
 
     function fechar() {
+        if (!areaLeitura.hidden) {
+            voltarAoTexto();
+            compreender.focus();
+            return;
+        }
         if (salvando) return;
         overlay.classList.remove("aberta");
         document.body.style.overflow = "";
