@@ -63,4 +63,4 @@ sem coleção ou índice novo. Exige servidor; falha em qualquer leitura oferece
 nova tentativa, em vez de afirmar ausência de resumos. A exclusão é uma transação
 do original e do resumo conhecido do UID; as regras negam remover apenas um deles
 quando há resumo. O workflow publica e confere as regras ativas antes do Hosting,
-usando configuração temporária e preservando o firebase.json do projeto.
+pela API oficial de regras e preservando o firebase.json do projeto.

@@ -23,7 +23,7 @@ jobs:
           node-version: '22'
 
       - name: Ferramentas de publicação
-        run: npm install --prefix "$RUNNER_TEMP/dl-firebase" firebase-tools@15.32.1 google-auth-library@11.1.0
+        run: npm install --prefix "$RUNNER_TEMP/dl-firebase" google-auth-library@11.1.0
 
       - name: Publicar e conferir regras antes do Hosting
         run: node tools/publicar-regras.cjs
