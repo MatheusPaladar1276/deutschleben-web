@@ -122,6 +122,11 @@ async function ui(env) {
     assert.equal($('resumo-conteudo').value,'Revisão ainda temporária');assert(!$('ultimo-resumo-salvo').hidden);
     assert.equal($('resumo-salvo-leitura').textContent,'Revisão explícita salva.');
     await openChoice();input('escolha-busca','beta');assert(row('beta')&&!row('alpha'));
+    w.DL_DADOS.carregarTexto=async()=>{throw Error('Choice read failure');};
+    row('beta').querySelector('.escolha-abrir').click();
+    await wait(()=>$('escolha-status').textContent.includes('Não foi possível abrir'),'falha visível na escolha');
+    assert($('escolha-textos').open);assert.equal($('titulo-texto').textContent,'alpha');
+    assert.equal($('resumo-conteudo').value,'Revisão ainda temporária');w.DL_DADOS.carregarTexto=originalRead;
     const realDelete=w.DL_DADOS.excluirTexto;let deletes=0;
     w.DL_DADOS.excluirTexto=async(...args)=>{deletes++;return realDelete(...args);};
     row('beta').querySelector('.escolha-excluir').click();assert.equal(w.document.activeElement,$('excluir-cancelar'));
@@ -178,6 +183,6 @@ async function ui(env) {
 }
 (async()=>{
   const env=await initializeTestEnvironment({projectId:'demo-dl-textos',firestore:{host:'127.0.0.1',port:8188,rules:fs.readFileSync(path.join(ROOT,'firestore.rules'),'utf8')}});
-  try { await env.clearFirestore();await rules(env);await ui(env);console.log('ALL PASS. Nenhum documento de produção acessado.'); }
+  try { await env.clearFirestore();if(!process.argv.includes('--ui-only'))await rules(env);await ui(env);console.log('ALL PASS. Nenhum documento de produção acessado.'); }
   finally { await env.cleanup(); }
 })().catch(e=>{console.error(e);process.exitCode=1;});

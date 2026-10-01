@@ -79,7 +79,18 @@
             const linha = document.createElement("div"); linha.className = "escolha-linha"; linha.dataset.textoId = texto.id;
             const nome = document.createElement("span"); nome.className = "escolha-nome"; nome.textContent = texto.titulo || "Sem título";
             const acoes = document.createElement("div"); acoes.className = "escolha-acoes";
-            for (const [rotulo, classe, acao] of [["Abrir", "escolha-abrir", () => abrirTexto(texto.id)],
+            for (const [rotulo, classe, acao] of [["Abrir", "escolha-abrir", async ev => {
+                const botao = ev.currentTarget, conta = uid, epoca = sessao, rodada = geracao + 1;
+                botao.disabled = true; escolhaStatus.textContent = "Abrindo texto…";
+                const aberto = await abrirTexto(texto.id);
+                if (epoca !== sessao || usuario() !== conta || rodada !== geracao) return;
+                if (!aberto && escolha.open) {
+                    escolhaStatus.textContent = "Não foi possível abrir o texto. Tente novamente.";
+                    botao.disabled = false;
+                } else if (aberto) {
+                    titulo.setAttribute("tabindex", "-1"); titulo.focus();
+                }
+            }],
                 ["Excluir", "escolha-excluir", ev => confirmarExclusao(texto, ev.currentTarget)]]) {
                 const b = document.createElement("button"); b.type = "button"; b.className = classe; b.textContent = rotulo;
                 b.setAttribute("aria-label", rotulo + ": " + nome.textContent);
