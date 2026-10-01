@@ -1,0 +1,87 @@
+/* Legibilidade comum a 100% de zoom. Mantém a tipografia literária da leitura. */
+#dl-app { font-size: 20px; font-weight: 500; }
+#dl-app .texto { font-weight: 400; }
+#dl-app .marca span { color: #205d38; }
+#dl-app :is(button, .nav, .caminhadas-face, summary),
+#dl-app #resumo-secao summary {
+    font: 600 22px/1.45 Arial, sans-serif;
+    min-height: 48px;
+    height: auto;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+#dl-app :is(label, p, li, small, [role="status"], [role="alert"], .subtitulo),
+#dl-app #auth-estado {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+#dl-app :is(input, textarea, select, option) {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.6;
+    min-width: 0;
+    max-width: 100%;
+    color: #17233c;
+}
+#dl-app :is(input, textarea)::placeholder { color: #405267; opacity: 1; }
+#dl-app :is(h1, h2, h3, h4, h5, h6, .prog-secao-titulo, .rg-titulo) {
+    font-size: max(28px, 1.4em);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+#dl-app #titulo-texto { font-size: 42px; }
+#dl-app .compreensao h2 label { font-size: inherit; font-weight: inherit; }
+#dl-app :is(.ajuda-vazia, .linha strong, .sem-itens, .nota-motor, .apoio-limite,
+    .estrada-meta, .estrada-contador, .rg-contador, .rg-vazio,
+    .prog-meta, .prog-contador, .numero, .meu-texto-nota) { color: #34423f; }
+#dl-app button:disabled {
+    opacity: 1;
+    color: #34423f;
+    background: #e2e7e4;
+    border-color: #7a8982;
+    border-style: dashed;
+    cursor: default;
+}
+#dl-app :is(button, input, textarea, select, summary, [tabindex], a):focus-visible,
+#dl-app .caminhadas-controle:focus-within .caminhadas-face {
+    outline: 3px solid #17233c;
+    outline-offset: 3px;
+}
+#dl-app #auth-estado { font-size: 24px; font-weight: 600; }
+#dl-app #auth-estado.conectado { color: #205d38; }
+#dl-app #auth-estado.conectado::before {
+    width: 16px; height: 16px; margin-right: 10px;
+    background: #205d38;
+    box-shadow: 0 0 6px rgba(32, 93, 56, .4);
+}
+#dl-app :is(.navegacao, .acoes-apoio, .acoes-compreensao,
+    .estrada-cabecalho, .rg-cabecalho, .prog-cabecalho, .cabecalho-caminhada) {
+    flex-wrap: wrap;
+    gap: 14px;
+}
+#dl-app .navegacao > * { min-width: 0; max-width: 100%; }
+#dl-app #fase-textos .acoes-apoio button { flex: 1 1 180px; white-space: normal; }
+#dl-app :is(.cartao, .ajuda, .estrada-item, .rg-item, .prog-item) { min-width: 0; overflow-wrap: anywhere; }
+#dl-app :is(.estrada-painel, .rg-painel, .prog-painel, .recordar-painel) {
+    min-width: 0;
+    overflow-y: auto;
+    max-height: 90dvh;
+}
+#dl-app :is(.estrada-lista, .rg-lista, .prog-lista) { min-height: 0; flex-shrink: 0; }
+#dl-app :is(.rg-formula, .rg-chip, .rg-cat, .prog-tag, .estrada-tipo) {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+}
+@media (max-width: 520px) {
+    #dl-app .navegacao { align-items: stretch; gap: 12px; }
+    #dl-app .navegacao > * { flex: 1 1 100%; }
+    #dl-app .caminhadas-face { width: 100%; }
+    #dl-app #titulo-texto { font-size: 28px; }
+    #dl-app :is(.estrada-overlay, .rg-overlay, .prog-overlay, .recordar-overlay) { padding: 10px; }
+    #dl-app :is(.estrada-painel, .rg-painel, .prog-painel, .recordar-painel) {
+        width: 100%; padding: 18px 14px; max-height: calc(100dvh - 20px);
+    }
+}
