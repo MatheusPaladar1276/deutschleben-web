@@ -12,6 +12,7 @@
     const novoTitulo = $("adicionar-titulo"), novoConteudo = $("adicionar-conteudo");
     const novoStatus = $("adicionar-status"), salvarNovo = $("adicionar-salvar");
     const voltarNovo = $("adicionar-voltar"), reabrirNovo = $("adicionar-reabrir");
+    const pergunta = $("minha-pergunta");
     const memorias = new Map(), novos = new Map();
     let uid = null, ativo = null, selecionado = null, geracao = 0, listaGeracao = 0;
     let sessao = 0, salvandoNovo = false, novoId = null, focoAnterior = null, tentar = null;
@@ -19,7 +20,7 @@
     function chave(texto) { return JSON.stringify([texto.uid, texto.id]); }
     function memoria(texto = ativo) {
         const k = chave(texto);
-        if (!memorias.has(k)) memorias.set(k, { compreensao: "", resumo: "", carregado: false,
+        if (!memorias.has(k)) memorias.set(k, { compreensao: "", pergunta: "", resumo: "", carregado: false,
             alterado: false, lendo: false, salvando: false, mensagem: "", erroLeitura: false });
         return memorias.get(k);
     }
@@ -59,13 +60,14 @@
         selecionado = null;
         $("selecao-texto").textContent = "";
         $("selecao-aviso").textContent = "Selecione uma palavra ou trecho do original.";
-        $("consultar-leo").disabled = $("copiar-duvida").disabled = true;
+        $("consultar-leo").disabled = true;
+        window.getSelection()?.removeAllRanges();
         $("copia-manual").hidden = true;
         $("copia-conteudo").value = copiaStatus.textContent = "";
     }
     function limparEstudo() {
         ativo = null;
-        titulo.textContent = original.textContent = compreensao.value = resumo.value = resumoStatus.textContent = "";
+        titulo.textContent = original.textContent = compreensao.value = pergunta.value = resumo.value = resumoStatus.textContent = "";
         estudo.hidden = true;
         inicio.hidden = false;
         limparSelecao();
@@ -93,7 +95,7 @@
             const salvo = await window.DL_DADOS.carregarResumo(texto.id, texto.uid);
             if (epoca !== sessao || usuario() !== texto.uid) return;
             m.resumo = salvo; m.carregado = true;
-            m.mensagem = salvo ? "Resumo salvo retomado." : "Cole o resumo do chat. Ele só será salvo ao clicar em Salvar resumo.";
+            m.mensagem = "";
         } catch (_) {
             if (epoca !== sessao || usuario() !== texto.uid) return;
             m.carregado = false; m.erroLeitura = true;
@@ -116,6 +118,7 @@
             titulo.textContent = ativo.titulo;
             original.textContent = ativo.conteudo;
             compreensao.value = memoria().compreensao;
+            pergunta.value = memoria().pergunta;
             limparSelecao();
             window.speechSynthesis?.cancel();
             inicio.hidden = true; estudo.hidden = false;
@@ -142,6 +145,10 @@
     });
     compreensao.addEventListener("input", () => {
         if (ativo && usuario() === ativo.uid) memoria().compreensao = compreensao.value;
+    });
+    pergunta.addEventListener("input", () => {
+        if (ativo && usuario() === ativo.uid) memoria().pergunta = pergunta.value;
+        copiaStatus.textContent = ""; $("copia-manual").hidden = true;
     });
     resumo.addEventListener("input", () => {
         if (!ativo || usuario() !== ativo.uid) return;
@@ -261,7 +268,8 @@
         selecionado = { trecho, contexto: texto.slice(esquerda, direita).trim() };
         $("selecao-texto").textContent = trecho;
         $("selecao-aviso").textContent = "Trecho selecionado:";
-        $("consultar-leo").disabled = $("copiar-duvida").disabled = false;
+        $("consultar-leo").disabled = false;
+        copiaStatus.textContent = ""; $("copia-manual").hidden = true;
     }
     document.addEventListener("selectionchange", capturarSelecao);
     original.addEventListener("mouseup", capturarSelecao);
@@ -277,7 +285,7 @@
             if (!navigator.clipboard?.writeText) throw new Error("Cópia indisponível");
             await navigator.clipboard.writeText(texto);
             if (epoca !== sessao || !ativo || chave(ativo) !== atualId) return;
-            $("copia-manual").hidden = true; copiaStatus.textContent = "Copiado. Cole no chat para estudar.";
+            $("copia-manual").hidden = true; copiaStatus.textContent = "Consulta copiada. Cole no chat com o SDA.";
         } catch (_) {
             if (epoca !== sessao || !ativo || chave(ativo) !== atualId) return;
             copiaStatus.textContent = "A cópia automática não foi possível. Copie manualmente abaixo.";
@@ -285,19 +293,19 @@
             $("copia-conteudo").focus(); $("copia-conteudo").select();
         }
     }
-    $("copiar-duvida").addEventListener("click", () => {
-        if (!ativo || !selecionado || usuario() !== ativo.uid) return;
-        copiar("Título: " + ativo.titulo + "\n\nTrecho: " + selecionado.trecho +
-            "\n\nFrase de contexto: " + selecionado.contexto +
-            "\n\nSDA, ajude-me a compreender este trecho no contexto, sem substituir minha reflexão.");
-    });
-    $("copiar-estudo").addEventListener("click", () => {
+    $("consultar-sda").addEventListener("click", () => {
         if (!ativo || usuario() !== ativo.uid) return;
-        copiar("Título: " + ativo.titulo + "\n\nOriginal:\n" + ativo.conteudo +
-            "\n\nMinha compreensão:\n" + memoria().compreensao +
-            "\n\nAjude-me a estudar este texto de forma contextual, partindo da minha compreensão." +
-            "\nReferência didática: S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg)." +
-            "\nUse a fórmula como ferramenta de consulta, não como regra rígida nem análise automática.");
+        const m = memoria();
+        const partes = ["Título: " + ativo.titulo];
+        if (selecionado) partes.push("Trecho: " + selecionado.trecho,
+            "Frase de contexto: " + selecionado.contexto);
+        else partes.push("Original:\n" + ativo.conteudo);
+        if (m.pergunta.trim()) partes.push("Minha pergunta:\n" + m.pergunta);
+        if (m.compreensao.trim()) partes.push("Minha compreensão:\n" + m.compreensao);
+        partes.push("SDA, ajude-me a estudar de forma contextual, considerando minha pergunta e minha compreensão quando presentes, sem substituir minha reflexão.",
+            "Referência didática: S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg).",
+            "Use a fórmula como ferramenta de consulta, não como regra rígida nem análise automática.");
+        copiar(partes.join("\n\n"));
     });
     function autenticar() {
         const conta = usuario();

@@ -122,7 +122,7 @@ async function uiTests(env) {
   w.open = url => { opened = url; };
   w.getSelection().removeAllRanges(); $('consultar-leo').click();
   assert(opened.endsWith('/Anna'));
-  $('copiar-duvida').click(); await wait(() => copied.includes('Frase de contexto'), 'copy selection');
+  $('consultar-sda').click(); await wait(() => copied.includes('Frase de contexto'), 'copy selection');
   assert(copied.includes('Mein Name ist Anna.')); assert(copied.includes(fixture.titulo));
   // Unicode, punctuation and spaces must be encoded in the destination URL.
   const unicodeStart = fixture.conteudo.indexOf('Österreich');
@@ -131,10 +131,12 @@ async function uiTests(env) {
   w.getSelection().removeAllRanges(); w.getSelection().addRange(unicodeRange);
   w.document.dispatchEvent(new w.Event('selectionchange')); $('consultar-leo').click();
   assert(opened.endsWith('/%C3%96sterreich'));
-  $('copiar-estudo').click(); await wait(() => copied.includes('Te → Ka → Mo → Lo'), 'copy study');
+  await choose('second'); await choose(ID); // Reopening clears the prior selection.
+  $('consultar-sda').click(); await wait(() => copied.includes('Original:'), 'copy study');
+  assert(copied.includes('Te → Ka → Mo → Lo'));
   assert(copied.includes('My understanding\n<not HTML>')); assert(copied.includes(fixture.conteudo));
   Object.defineProperty(w.navigator, 'clipboard', { configurable: true, value: { writeText: async () => { throw Error('denied'); } } });
-  $('copiar-estudo').click(); await wait(() => !$('copia-manual').hidden, 'manual copy');
+  $('consultar-sda').click(); await wait(() => !$('copia-manual').hidden, 'manual copy');
   assert($('copia-conteudo').readOnly); assert($('copia-conteudo').value.includes(fixture.conteudo));
   // No save on typing, successful explicit write, revision and error retention.
   const summaryRef = sdk.doc(db, 'textos', ID, 'resumos', UID);

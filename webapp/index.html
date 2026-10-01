@@ -1633,12 +1633,59 @@ textarea {
 #resumo-secao label { display: block; margin-bottom: 12px; }
 #auth-estado.conectado { color: #22603d; }
 #auth-estado.conectado::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 7px; border-radius: 50%; background: #388858; box-shadow: 0 0 5px #74b68b; }
+
+/* Família de controles do DL: cores suaves, proporções e foco comuns. */
+#dl-app :is(button, .nav, .caminhadas-face, summary) {
+    width: auto; max-width: 100%; min-height: 48px; margin-left: 0;
+    padding: 11px 18px; border: 1px solid #b6c7bf; border-radius: 10px;
+    background: #e6efe9; color: #253a35;
+    font: 400 18px/1.4 Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(23, 35, 60, .08);
+    white-space: normal; text-wrap: pretty; cursor: pointer;
+}
+#dl-app :is(button, .nav, summary):hover { background: #dce9e1; border-color: #8fa99c; }
+#dl-app :is(button, .nav, summary):focus-visible,
+.caminhadas-controle:focus-within .caminhadas-face { outline: 2px solid #377f6d; outline-offset: 3px; }
+#dl-app button:disabled { opacity: .6; cursor: default; }
+#dl-app :is(.estrada-filtro, .prog-filtro).ativo { background: #d5e6dc; border-color: #7b9b88; }
+#dl-app .caminhadas-face, #dl-app #ouvir-texto { background: #e6edf5; border-color: #b4c3d4; }
+#dl-app #nav-referencia, #dl-app .rg-voltar { background: #f2ebd7; border-color: #cbbf9e; }
+#dl-app #nav-progresso { background: #eae5f0; border-color: #c4b8d0; }
+#dl-app summary { width: fit-content; }
+#dl-app details[open] > summary { margin-bottom: 18px; }
+#fase-textos .acoes-apoio { justify-content: flex-start; gap: 10px; }
+#fase-textos .acoes-apoio button { flex: 1 1 140px; white-space: nowrap; }
+#dl-app #consultar-leo { background: #f4d879; border-color: #c9ad55; color: #453811; }
+#dl-app #consultar-leo:hover { background: #edce63; }
+#minha-pergunta { min-height: 240px; font: 400 24px/1.6 Arial, sans-serif; margin-top: 10px; }
+#fase-textos .ajuda { position: static; }
+#fase-textos :where(label, #selecao-aviso, #selecao-texto, [role="status"], #compreensao-temporaria) {
+    font: 400 18px/1.5 Arial, sans-serif;
+}
+#fase-textos .compreensao h2 label { font: inherit; }
+#compreensao-temporaria { padding: 14px 18px; border: 1px solid #c8d5ce; border-radius: 10px; background: #f4f7f3; }
+.resumo-caixa { margin-top: 20px; padding: 24px 26px; border: 1px solid #c7cdbd;
+    border-radius: 14px; background: #f5f4eb; box-shadow: 0 3px 12px rgba(0,0,0,.06); }
+#resumo-secao { margin: 0; }
+#dl-app #resumo-secao summary { margin-bottom: 0; font: 400 18px/1.4 Arial, sans-serif; }
+#dl-app #resumo-secao[open] summary { margin-bottom: 20px; }
+#resumo-secao textarea { display: block; margin-bottom: 16px; }
+#fase-textos [role="status"]:empty, #selecao-texto:empty, #adicionar-status:empty, #auth-erro:empty { display: none; }
+#auth-estado { font: 400 18px/1.5 Arial, sans-serif; }
+#auth-estado.conectado { color: #205d38; }
+#auth-estado.conectado::before { width: 11px; height: 11px; margin-right: 9px;
+    background: #358452; box-shadow: 0 0 7px rgba(65, 154, 92, .55); }
+@media (max-width: 520px) {
+    #dl-app :is(button, .nav, .caminhadas-face, summary) { padding: 10px 14px; }
+    .resumo-caixa { padding: 18px 16px; }
+}
+
 </style>
 
 </head>
 
 
-<body class="modo-limpo">
+<body id="dl-app" class="modo-limpo">
 
 
 <header class="topo">
@@ -1718,16 +1765,23 @@ textarea {
         <div class="grade">
             <section class="cartao">
                 <div class="cabecalho-caminhada"><h1 id="titulo-texto"></h1></div>
-                <button type="button" class="botao" id="ouvir-texto" style="background:#dbe8f5;border-color:#9eb5cc">&#128266; Ouvir</button>
+                <button type="button" class="botao" id="ouvir-texto">&#128266; Ouvir</button>
                 <div class="texto" id="original-texto" lang="de"></div>
             </section>
             <aside class="ajuda" aria-labelledby="ajuda-textos-titulo">
                 <h2 id="ajuda-textos-titulo">Ajuda rápida</h2>
                 <p class="ajuda-vazia" id="selecao-aviso">Selecione uma palavra ou trecho do original.</p>
                 <p id="selecao-texto" class="texto-reflexao"></p>
+                <label for="minha-pergunta">Minha pergunta</label>
+                <textarea id="minha-pergunta" aria-describedby="compreensao-temporaria"></textarea>
                 <div class="acoes-apoio">
-                    <button type="button" class="secundario" id="consultar-leo" disabled>Consultar no LEO</button>
-                    <button type="button" class="secundario" id="copiar-duvida" disabled>Copiar dúvida para o SDA</button>
+                    <button type="button" class="secundario" id="consultar-sda">Consultar SDA</button>
+                    <button type="button" class="secundario" id="consultar-leo" disabled>Consultar LEO</button>
+                </div>
+                <p id="copia-status" role="status" aria-live="polite"></p>
+                <div id="copia-manual" hidden>
+                    <label for="copia-conteudo">Selecione e copie o texto abaixo para colar no chat.</label>
+                    <textarea id="copia-conteudo" readonly></textarea>
                 </div>
             </aside>
         </div>
@@ -1735,13 +1789,8 @@ textarea {
             <h2><label for="texto-compreensao">Minha compreensão</label></h2>
             <textarea id="texto-compreensao" aria-describedby="compreensao-temporaria"></textarea>
             <p id="compreensao-temporaria" class="texto-reflexao">Rascunho temporário: dura enquanto esta página estiver aberta.</p>
-            <button type="button" class="botao" id="copiar-estudo">Copiar para estudar no chat</button>
-            <p class="texto-reflexao">Referência didática: S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg). Ferramenta de consulta, não uma regra rígida ou análise automática.</p>
-            <p id="copia-status" role="status" aria-live="polite"></p>
-            <div id="copia-manual" hidden>
-                <label for="copia-conteudo">Selecione e copie o texto abaixo para colar no chat.</label>
-                <textarea id="copia-conteudo" readonly></textarea>
-            </div>
+        </section>
+        <section class="resumo-caixa" aria-label="Resumo final do estudo">
             <details id="resumo-secao">
                 <summary>Resumo final do estudo</summary>
                 <label for="resumo-conteudo">Cole o resumo produzido no chat</label>
@@ -1753,7 +1802,7 @@ textarea {
         </section>
     </div>
 </main>
-<script src="textos.js?v=1" defer></script>
+<script src="textos.js?v=2" defer></script>
 
 <div class="estrada-overlay" id="estrada-overlay" role="dialog" aria-modal="true" aria-label="Estrada">
     <div class="estrada-painel">

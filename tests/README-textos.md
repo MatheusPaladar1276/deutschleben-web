@@ -26,3 +26,22 @@ leitura administrativa de Vorstellung; não consulta produção durante os teste
 
 O acervo anterior está em `acervo/seguranca-web/index-7fab1f9.html`; os arquivos
 `webapp/data/caminhadas.json`, demais apoios e registros locais não são removidos.
+
+## Humanização: verificação focada
+
+`node tests/textos-humanizacao.test.cjs` reutiliza o jsdom já disponível e testa
+somente seleção/foco, pergunta por conta e texto, consulta SDA com/sem seleção,
+cópia manual, codificação do LEO, abertura simples e resumo recolhível.
+O adaptador de dados é local: não conecta ao Firebase nem grava documentos.
+A suíte completa anterior foi adaptada aos novos controles, mas não precisa ser
+reexecutada neste pacote. A aparência final requer homologação no navegador.
+
+Diagnóstico offline: `carregarTexto`, `listarTextos` e `carregarResumo` exigem o
+servidor (`getDocFromServer`/`getDocsFromServer`); salvar resumo usa transação.
+O texto e o resumo já exibidos podem continuar legíveis na página aberta. Pergunta
+e compreensão ficam somente em memória e se perdem ao recarregar/fechar a página.
+O service worker guarda páginas e recursos do próprio domínio após acesso, mas
+não intercepta os módulos Firebase hospedados no Google nem suas chamadas.
+Assim, pode recuperar uma página visitada do cache, mas não garante reinicialização
+completa offline, listagem ou retomada de textos/resumos. Nenhum suporte offline
+novo foi implementado.
