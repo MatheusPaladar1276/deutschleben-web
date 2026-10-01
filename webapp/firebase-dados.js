@@ -2,7 +2,8 @@
 // Se o Firestore não responder ou não houver permissão, retorna null e o
 // site usa o arquivo estático como reserva.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDCueo_SJ8gAqU9VT6cMdyxyDhXGSP1ma4",
@@ -13,15 +14,37 @@ const firebaseConfig = {
   appId: "1:436880673471:web:f4c3f6178fa8aefc75140a",
 };
 
+let app = null;
 let db = null;
 try {
-  const app = initializeApp(firebaseConfig);
+  app = initializeApp(firebaseConfig);
   db = getFirestore(app);
 } catch (e) {
   db = null;
 }
 
 window.DL_DADOS = {
+  async salvarTexto(conteudo, titulo = "") {
+    if (typeof conteudo !== "string" || !conteudo.trim()) {
+      throw new Error("Informe o texto em alemão.");
+    }
+    if (!db) throw new Error("O serviço de salvamento não está disponível.");
+    const dados = { conteudo, criadoEm: serverTimestamp(), estado: "recebido" };
+    const tituloInformado = titulo.trim();
+    if (tituloInformado) dados.titulo = tituloInformado;
+    const salvo = await addDoc(collection(db, "textos"), dados);
+    return salvo.id;
+  },
+  async carregarTexto(textoId) {
+    if (!db) throw new Error("O serviço de leitura não está disponível.");
+    if (typeof textoId !== "string" || !textoId.trim() || textoId.includes("/")) {
+      throw new Error("ID de texto inválido.");
+    }
+    const salvo = await getDocFromServer(doc(db, "textos", textoId));
+    if (!salvo.exists()) throw new Error("Texto não encontrado.");
+    const dados = salvo.data();
+    return { id: salvo.id, titulo: dados.titulo || "Sem título", conteudo: dados.conteudo };
+  },
   async carregarCaminhadas() {
     if (!db) return null;
     try {
@@ -35,3 +58,37 @@ window.DL_DADOS = {
     }
   },
 };
+
+// O SDK gerencia a autenticação. Não copiamos credenciais para armazenamento próprio.
+let auth = null;
+let usuario = null;
+let authPronta = false;
+try {
+  if (app) auth = getAuth(app);
+} catch (e) {
+  auth = null;
+}
+
+window.DL_AUTH = {
+  get usuario() { return usuario; },
+  get pronta() { return authPronta; },
+  async entrar() {
+    if (!auth || !authPronta) throw new Error("Autenticação indisponível.");
+    const provedor = new GoogleAuthProvider();
+    provedor.setCustomParameters({ prompt: "select_account" });
+    await signInWithPopup(auth, provedor);
+  },
+  async sair() {
+    if (!auth || !authPronta) throw new Error("Autenticação indisponível.");
+    await signOut(auth);
+  },
+};
+
+if (auth) {
+  onAuthStateChanged(auth, atual => {
+    usuario = atual ? Object.freeze({ uid: atual.uid }) : null;
+    authPronta = true;
+    window.dispatchEvent(new Event("dl-auth-alterado"));
+  });
+}
+window.dispatchEvent(new Event("dl-auth-alterado"));

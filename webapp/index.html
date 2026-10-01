@@ -22,7 +22,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Deutschleben">
 
-<script type="module" src="firebase-dados.js"></script>
+<script type="module" src="firebase-dados.js?v=meu-texto-retomada-1"></script>
 
 <style>
 
@@ -1631,9 +1631,9 @@ textarea {
         Recordar
     </button>
 
-    <a class="nav" href="/?caminhada=1&meu_texto=1">
+    <button type="button" class="nav" onclick="abrirMeuTexto()">
         Meu texto
-    </a>
+    </button>
 
     <div class="nav" id="nav-estrada" role="button" tabindex="0"
         onclick="abrirEstrada()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirEstrada();}"
@@ -1651,6 +1651,13 @@ textarea {
         onclick="abrirProgresso()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirProgresso();}"
         style="cursor:pointer">
         Progresso Linguístico
+    </div>
+
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <button type="button" class="nav" id="auth-acao" disabled>Entrar com Google</button>
+        <span id="auth-estado" role="status" aria-live="polite">Não conectado</span>
+        <small id="auth-uid" hidden style="overflow-wrap:anywhere"></small>
+        <span id="auth-erro" class="retorno erro" role="alert"></span>
     </div>
 
 </nav>
@@ -3009,6 +3016,264 @@ function salvarCompreensaoLocal(evento) {
     overlay.addEventListener("click", ev => { if (ev.target === overlay) window.fecharProgresso(); });
     document.addEventListener("keydown", ev => {
         if (ev.key === "Escape" && overlay.classList.contains("aberta")) window.fecharProgresso();
+    });
+})();
+</script>
+
+<div class="rg-overlay" id="meu-texto-overlay" role="dialog" aria-modal="true" aria-labelledby="meu-texto-titulo">
+    <div class="rg-painel">
+        <div class="rg-cabecalho">
+            <h2 id="meu-texto-titulo">Meu texto</h2>
+            <button type="button" class="rg-voltar" id="meu-texto-voltar">Voltar</button>
+        </div>
+        <section aria-label="Texto salvo">
+            <p id="meu-texto-leitura" class="retorno" role="status" aria-live="polite"></p>
+            <button type="button" class="enviar" id="meu-texto-reabrir" hidden>Tentar abrir novamente</button>
+            <article id="meu-texto-salvo" hidden>
+                <h3 id="meu-texto-salvo-titulo" style="white-space:pre-wrap;overflow-wrap:anywhere"></h3>
+                <div id="meu-texto-salvo-conteudo" lang="de" style="white-space:pre-wrap;overflow-wrap:anywhere"></div>
+            </article>
+            <details>
+                <summary>Retomar outro texto pelo ID</summary>
+                <form id="form-retomar-texto">
+                    <label for="meu-texto-id">ID do texto salvo</label>
+                    <input id="meu-texto-id" class="rg-busca" type="text" required autocomplete="off">
+                    <button type="submit" class="enviar" id="meu-texto-abrir">Abrir texto</button>
+                </form>
+            </details>
+        </section>
+        <h3>Novo texto</h3>
+        <form id="form-meu-texto">
+            <label for="meu-texto-nome" class="texto-reflexao">Título (opcional)</label>
+            <input type="text" id="meu-texto-nome" class="rg-busca" autocomplete="off">
+            <label for="meu-texto-conteudo" class="texto-reflexao">Texto em alemão</label>
+            <textarea id="meu-texto-conteudo" lang="de" required></textarea>
+            <p id="meu-texto-retorno" class="retorno" role="status" aria-live="polite"></p>
+            <div class="acoes-compreensao">
+                <button type="submit" class="enviar" id="meu-texto-salvar">Salvar texto</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+(function () {
+    const overlay = document.getElementById("meu-texto-overlay");
+    const form = document.getElementById("form-meu-texto");
+    const titulo = document.getElementById("meu-texto-nome");
+    const conteudo = document.getElementById("meu-texto-conteudo");
+    const salvar = document.getElementById("meu-texto-salvar");
+    const voltar = document.getElementById("meu-texto-voltar");
+    const retorno = document.getElementById("meu-texto-retorno");
+    const leitura = document.getElementById("meu-texto-leitura");
+    const reabrir = document.getElementById("meu-texto-reabrir");
+    const artigo = document.getElementById("meu-texto-salvo");
+    const salvoTitulo = document.getElementById("meu-texto-salvo-titulo");
+    const salvoConteudo = document.getElementById("meu-texto-salvo-conteudo");
+    const retomarForm = document.getElementById("form-retomar-texto");
+    const textoId = document.getElementById("meu-texto-id");
+    const abrir = document.getElementById("meu-texto-abrir");
+    const ids = new Map();
+    let salvando = false, focoAnterior = null;
+    let uidAtual = null, ultimoId = null, leituraAtual = 0, lido = false;
+    let memoriaDisponivel = true;
+
+    function uidConectado() { return window.DL_AUTH?.usuario?.uid || null; }
+    function chave(uid) { return "dl:meu-texto:" + uid; }
+    function lembrar(uid, id) {
+        ids.set(uid, id);
+        try { localStorage.setItem(chave(uid), id); return true; }
+        catch (_) { return false; }
+    }
+    function limparLeitura() {
+        leituraAtual++;
+        lido = false;
+        artigo.hidden = true;
+        salvoTitulo.textContent = salvoConteudo.textContent = "";
+        reabrir.hidden = true;
+        reabrir.disabled = abrir.disabled = false;
+        leitura.textContent = "";
+    }
+    async function abrirSalvo() {
+        const uid = uidAtual, id = ultimoId;
+        if (!uid || uid !== uidConectado() || !id) return;
+        limparLeitura();
+        const tentativa = leituraAtual;
+        reabrir.disabled = abrir.disabled = true;
+        leitura.textContent = "Abrindo texto salvo…";
+        try {
+            const texto = await window.DL_DADOS.carregarTexto(id);
+            if (tentativa !== leituraAtual || uid !== uidConectado()) return;
+            salvoTitulo.textContent = texto.titulo;
+            salvoConteudo.textContent = texto.conteudo;
+            artigo.hidden = false;
+            lido = true;
+            leitura.textContent = memoriaDisponivel ? "Texto salvo aberto." :
+                "Texto salvo aberto. Este navegador não conseguiu guardar o ID para a próxima visita. Anote o ID: " + id;
+        } catch (_) {
+            if (tentativa !== leituraAtual || uid !== uidConectado()) return;
+            leitura.textContent = "O texto está salvo, mas não foi possível abri-lo. Tente abrir novamente, sem reenviar." +
+                (memoriaDisponivel ? "" : " Anote o ID para retomar: " + id);
+            reabrir.hidden = false;
+        } finally {
+            if (tentativa === leituraAtual) reabrir.disabled = abrir.disabled = false;
+        }
+    }
+    function atualizarConta() {
+        const uid = uidConectado();
+        if (uid !== uidAtual) {
+            uidAtual = uid;
+            limparLeitura();
+            form.reset();
+            retorno.textContent = "";
+            ultimoId = uid ? ids.get(uid) || null : null;
+            memoriaDisponivel = true;
+            try { if (uid && !ultimoId) ultimoId = localStorage.getItem(chave(uid)); }
+            catch (_) { memoriaDisponivel = false; }
+            textoId.value = ultimoId || "";
+        }
+        if (!uid) leitura.textContent = "Entre com Google para salvar ou retomar seu texto.";
+        else if (overlay.classList.contains("aberta") && ultimoId && !lido && !abrir.disabled) abrirSalvo();
+    }
+    window.addEventListener("dl-auth-alterado", atualizarConta);
+    reabrir.addEventListener("click", abrirSalvo);
+    retomarForm.addEventListener("submit", ev => {
+        ev.preventDefault();
+        if (abrir.disabled || salvando) return;
+        if (!uidAtual || uidAtual !== uidConectado()) {
+            leitura.textContent = "Entre com Google para retomar seu texto.";
+            return;
+        }
+        const id = textoId.value.trim();
+        if (!id || id.includes("/")) {
+            leitura.textContent = "Informe apenas o ID do texto.";
+            return;
+        }
+        ultimoId = id;
+        memoriaDisponivel = lembrar(uidAtual, id);
+        abrirSalvo();
+    });
+    atualizarConta();
+
+    window.abrirMeuTexto = function () {
+        focoAnterior = document.activeElement;
+        overlay.classList.add("aberta");
+        document.body.style.overflow = "hidden";
+        atualizarConta();
+        titulo.focus();
+    };
+
+    function fechar() {
+        if (salvando) return;
+        overlay.classList.remove("aberta");
+        document.body.style.overflow = "";
+        if (focoAnterior) focoAnterior.focus();
+    }
+
+    voltar.addEventListener("click", fechar);
+    overlay.addEventListener("click", ev => { if (ev.target === overlay) fechar(); });
+    document.addEventListener("keydown", ev => {
+        if (!overlay.classList.contains("aberta")) return;
+        if (ev.key === "Escape") fechar();
+        if (ev.key === "Tab") {
+            const focaveis = Array.from(overlay.querySelectorAll("button, input, textarea, summary"))
+                .filter(el => !el.disabled && el.getClientRects().length);
+            const primeiro = focaveis[0], ultimo = focaveis[focaveis.length - 1];
+            if (ev.shiftKey && document.activeElement === primeiro) {
+                ev.preventDefault(); ultimo.focus();
+            } else if (!ev.shiftKey && document.activeElement === ultimo) {
+                ev.preventDefault(); primeiro.focus();
+            }
+        }
+    });
+    conteudo.addEventListener("input", () => conteudo.setCustomValidity(""));
+
+    form.addEventListener("submit", async ev => {
+        ev.preventDefault();
+        if (salvando) return;
+        const uid = uidConectado();
+        if (!uid) {
+            retorno.textContent = "Entre com Google para salvar seu texto.";
+            return;
+        }
+        conteudo.setCustomValidity(conteudo.value.trim() ? "" : "Informe o texto em alemão.");
+        if (!form.reportValidity()) return;
+        salvando = true;
+        salvar.disabled = voltar.disabled = true;
+        titulo.readOnly = conteudo.readOnly = true;
+        retorno.className = "retorno";
+        retorno.textContent = "Salvando texto…";
+        try {
+            if (!window.DL_DADOS || !window.DL_DADOS.salvarTexto) {
+                throw new Error("Serviço indisponível");
+            }
+            const id = await window.DL_DADOS.salvarTexto(conteudo.value, titulo.value);
+            const persistido = lembrar(uid, id);
+            if (uid !== uidConectado()) return;
+            ultimoId = id;
+            memoriaDisponivel = persistido;
+            textoId.value = id;
+            form.reset();
+            retorno.textContent = "Texto salvo com sucesso.";
+            await abrirSalvo();
+        } catch (erro) {
+            if (uid !== uidConectado()) return;
+            retorno.className = "retorno erro";
+            retorno.textContent = erro.code === "permission-denied"
+                ? "O salvamento não foi autorizado. Seu texto foi mantido; tente novamente quando o acesso estiver disponível."
+                : "Não foi possível salvar o texto. Verifique sua conexão e tente novamente. O conteúdo foi mantido.";
+        } finally {
+            salvando = false;
+            salvar.disabled = voltar.disabled = false;
+            titulo.readOnly = conteudo.readOnly = false;
+        }
+    });
+})();
+</script>
+
+<script>
+(function () {
+    const acao = document.getElementById("auth-acao");
+    const estado = document.getElementById("auth-estado");
+    const uid = document.getElementById("auth-uid");
+    const erro = document.getElementById("auth-erro");
+    let ocupada = false;
+
+    function atualizar() {
+        const auth = window.DL_AUTH;
+        const usuario = auth ? auth.usuario : null;
+        estado.textContent = usuario ? "Conectado" : "Não conectado";
+        acao.textContent = usuario ? "Sair" : "Entrar com Google";
+        acao.disabled = ocupada || !auth || !auth.pronta;
+        uid.hidden = !usuario;
+        uid.textContent = usuario ? "UID: " + usuario.uid : "";
+    }
+
+    window.addEventListener("dl-auth-alterado", atualizar);
+    atualizar();
+    acao.addEventListener("click", async () => {
+        if (ocupada || !window.DL_AUTH || !window.DL_AUTH.pronta) return;
+        ocupada = true;
+        erro.textContent = "";
+        atualizar();
+        try {
+            if (window.DL_AUTH.usuario) await window.DL_AUTH.sair();
+            else await window.DL_AUTH.entrar();
+        } catch (falha) {
+            const mensagens = {
+                "auth/popup-blocked": "Permita a janela de login no navegador e tente novamente.",
+                "auth/popup-closed-by-user": "Login cancelado. Você pode tentar novamente.",
+                "auth/cancelled-popup-request": "Login cancelado. Você pode tentar novamente.",
+                "auth/unauthorized-domain": "Este endereço precisa ser autorizado no Firebase Authentication.",
+                "auth/operation-not-allowed": "O login Google precisa ser habilitado no Console Firebase.",
+                "auth/configuration-not-found": "O Firebase Authentication precisa ser configurado no Console Firebase.",
+                "auth/network-request-failed": "Falha de conexão. Verifique a rede e tente novamente.",
+            };
+            erro.textContent = mensagens[falha.code] || "Não foi possível concluir a autenticação. Tente novamente.";
+        } finally {
+            ocupada = false;
+            atualizar();
+        }
     });
 })();
 </script>
