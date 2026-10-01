@@ -1,0 +1,57 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /web_caminhadas/{doc} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /textos/{textoId} {
+      allow create: if request.auth != null
+        && request.auth.uid == "WuXcMYo6m3OuQttlk7z22gRjlvn1"
+        && request.resource.data.keys().hasAll(['conteudo', 'criadoEm', 'estado'])
+        && request.resource.data.keys().hasOnly(['conteudo', 'titulo', 'criadoEm', 'estado'])
+        && request.resource.data.conteudo is string
+        && request.resource.data.conteudo.size() > 0
+        && request.resource.data.criadoEm == request.time
+        && request.resource.data.estado == 'recebido'
+        && (!('titulo' in request.resource.data)
+          || (request.resource.data.titulo is string && request.resource.data.titulo.size() > 0));
+      allow get, list: if request.auth != null
+        && request.auth.uid == "WuXcMYo6m3OuQttlk7z22gRjlvn1";
+      allow update, delete: if false;
+
+      match /resumos/{uid} {
+        function autorizado() {
+          return request.auth != null
+            && request.auth.uid == "WuXcMYo6m3OuQttlk7z22gRjlvn1"
+            && uid == request.auth.uid;
+        }
+        function originalExiste() {
+          return exists(/databases/$(database)/documents/textos/$(textoId));
+        }
+        function resumoValido() {
+          return request.resource.data.keys().hasAll(['uid', 'textoId', 'conteudo', 'criadoEm', 'atualizadoEm'])
+            && request.resource.data.keys().hasOnly(['uid', 'textoId', 'conteudo', 'criadoEm', 'atualizadoEm'])
+            && request.resource.data.uid == uid
+            && request.resource.data.textoId == textoId
+            && request.resource.data.conteudo is string
+            && request.resource.data.conteudo.size() > 0
+            && request.resource.data.conteudo.size() <= 30000
+            && request.resource.data.criadoEm is timestamp
+            && request.resource.data.atualizadoEm == request.time;
+        }
+        allow get: if autorizado() && originalExiste();
+        allow create: if autorizado() && originalExiste() && resumoValido()
+          && request.resource.data.criadoEm == request.time;
+        allow update: if autorizado() && originalExiste() && resumoValido()
+          && request.resource.data.criadoEm == resource.data.criadoEm
+          && request.resource.data.uid == resource.data.uid
+          && request.resource.data.textoId == resource.data.textoId;
+        allow list, delete: if false;
+      }
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

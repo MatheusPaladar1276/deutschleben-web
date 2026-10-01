@@ -22,7 +22,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Deutschleben">
 
-<script type="module" src="firebase-dados.js?v=textos-1"></script>
+<script type="module" src="firebase-dados.js?v=meu-texto-retomada-1"></script>
 
 <style>
 
@@ -1494,7 +1494,7 @@ textarea {
         font-size: 16px;
     }
 
-    #seletor-texto {
+    #seletor-caminhada {
         max-width: 100% !important;
         flex: 1 1 100%;
     }
@@ -1620,19 +1620,6 @@ textarea {
     .dl-meu-texto .rg-painel { max-height: calc(100dvh - 20px); padding: 18px 14px; }
     .dl-meu-texto .rg-painel h2 { font-size: 25px; }
 }
-
-/* Fase Textos: preserva a grade, as cores e a tipografia da tela principal. */
-#fase-textos [hidden] { display: none !important; }
-#original-texto { white-space: pre-wrap; overflow-wrap: anywhere; }
-#texto-compreensao, #resumo-conteudo, #copia-conteudo { min-height: 240px; font-size: 24px; font-weight: 400; line-height: 1.6; }
-#selecao-texto { white-space: pre-wrap; overflow-wrap: anywhere; }
-#fase-textos .acoes-apoio { flex-wrap: wrap; }
-#fase-textos .acoes-apoio button { max-width: 100%; }
-#resumo-secao { margin-top: 24px; }
-#resumo-secao summary { cursor: pointer; font-size: 22px; margin-bottom: 16px; }
-#resumo-secao label { display: block; margin-bottom: 12px; }
-#auth-estado.conectado { color: #22603d; }
-#auth-estado.conectado::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 7px; border-radius: 50%; background: #388858; box-shadow: 0 0 5px #74b68b; }
 </style>
 
 </head>
@@ -1670,14 +1657,18 @@ textarea {
                 <path d="M10.6 21h2.8"/>
                 <path d="M10.6 10.8 12 9.2l1.4 1.6" stroke-width="1.4"/>
             </svg>
-            <span class="caminhadas-rotulo">Textos</span>
+            <span class="caminhadas-rotulo">Caminhadas</span>
             <svg class="caminhadas-seta" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M6 9l6 6 6-6"/>
             </svg>
         </span>
-        <select id="seletor-texto" class="caminhadas-select"
-            title="Escolher texto" aria-label="Escolher texto"><option value="">Escolher texto</option><option value="adicionar">Adicionar texto</option></select>
+        <select id="seletor-caminhada" class="caminhadas-select"
+            title="Escolher caminhada" aria-label="Escolher caminhada"></select>
     </div>
+
+    <button type="button" class="nav" onclick="abrirMeuTexto()">
+        Meu texto
+    </button>
 
     <div class="nav" id="nav-estrada" role="button" tabindex="0"
         onclick="abrirEstrada()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirEstrada();}"
@@ -1706,54 +1697,927 @@ textarea {
 </nav>
 
 
-<main class="pagina" id="fase-textos">
-    <p id="textos-status" role="status" aria-live="polite"></p>
-    <button type="button" class="botao" id="textos-repetir" hidden>Tentar novamente</button>
-    <section class="cartao" id="abertura-textos">
-        <h1>Textos</h1>
-        <p class="texto-reflexao">Adicione um texto ou escolha um texto salvo para estudar.</p>
-        <button type="button" class="botao" id="adicionar-inicial">Adicionar texto</button>
-    </section>
-    <div id="estudo-texto" hidden>
-        <div class="grade">
-            <section class="cartao">
-                <div class="cabecalho-caminhada"><h1 id="titulo-texto"></h1></div>
-                <button type="button" class="botao" id="ouvir-texto" style="background:#dbe8f5;border-color:#9eb5cc">&#128266; Ouvir</button>
-                <div class="texto" id="original-texto" lang="de"></div>
-            </section>
-            <aside class="ajuda" aria-labelledby="ajuda-textos-titulo">
-                <h2 id="ajuda-textos-titulo">Ajuda rápida</h2>
-                <p class="ajuda-vazia" id="selecao-aviso">Selecione uma palavra ou trecho do original.</p>
-                <p id="selecao-texto" class="texto-reflexao"></p>
-                <div class="acoes-apoio">
-                    <button type="button" class="secundario" id="consultar-leo" disabled>Consultar no LEO</button>
-                    <button type="button" class="secundario" id="copiar-duvida" disabled>Copiar dúvida para o SDA</button>
-                </div>
-            </aside>
+<main class="pagina">
+
+
+<div class="grade">
+
+
+<section class="cartao">
+
+    <div class="cabecalho-caminhada">
+
+        <div>
+
+            <h1 id="titulo-caminhada">
+                Ein Morgen am See
+            </h1>
+
         </div>
-        <section class="compreensao">
-            <h2><label for="texto-compreensao">Minha compreensão</label></h2>
-            <textarea id="texto-compreensao" aria-describedby="compreensao-temporaria"></textarea>
-            <p id="compreensao-temporaria" class="texto-reflexao">Rascunho temporário: dura enquanto esta página estiver aberta.</p>
-            <button type="button" class="botao" id="copiar-estudo">Copiar para estudar no chat</button>
-            <p class="texto-reflexao">Referência didática: S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg). Ferramenta de consulta, não uma regra rígida ou análise automática.</p>
-            <p id="copia-status" role="status" aria-live="polite"></p>
-            <div id="copia-manual" hidden>
-                <label for="copia-conteudo">Selecione e copie o texto abaixo para colar no chat.</label>
-                <textarea id="copia-conteudo" readonly></textarea>
-            </div>
-            <details id="resumo-secao">
-                <summary>Resumo final do estudo</summary>
-                <label for="resumo-conteudo">Cole o resumo produzido no chat</label>
-                <textarea id="resumo-conteudo" maxlength="30000"></textarea>
-                <button type="button" class="botao" id="salvar-resumo" disabled>Salvar resumo</button>
-                <button type="button" class="botao" id="reler-resumo" hidden>Tentar ler resumo novamente</button>
-                <p id="resumo-status" role="status" aria-live="polite"></p>
-            </details>
-        </section>
+
+
+        <div class="visualizacao">
+
+            <span class="rotulo">
+                Visualização:
+            </span>
+
+            <button type="button" class="botao" data-modo="blocos" aria-pressed="false"
+                onclick="mudarModo('blocos')">Blocos</button>
+            <button type="button" class="botao" data-modo="verbos" aria-pressed="false"
+                onclick="mudarModo('verbos')">Verbos</button>
+
+        </div>
+
     </div>
+
+    <button type="button" class="botao" style="background:#dbe8f5; border-color:#9eb5cc;" onclick="ouvirTextoAlemao()">
+        &#128266; Ouvir
+    </button>
+
+    <div class="texto" id="texto-caminhada">
+        <span class="segmento bloco" data-bloco="Am frühen Morgen" data-sentido="no início da manhã" data-bloco-tipo="expressão temporal" data-pontos-reativacao="[{&quot;ponto_reativacao_id&quot;: 1, &quot;elemento&quot;: &quot;am&quot;, &quot;pergunta&quot;: &quot;Por que am?&quot;, &quot;ordem&quot;: 1, &quot;primeira_pista&quot;: &quot;am = an + dem&quot;, &quot;segunda_pista&quot;: &quot;Morgen → der Morgen. Aqui: Dativ.&quot;, &quot;terceira_pista&quot;: &quot;der Morgen → dem Morgen | an + dem → am&quot;, &quot;terceira_pista_tipo&quot;: &quot;quadro&quot;}, {&quot;ponto_reativacao_id&quot;: 2, &quot;elemento&quot;: &quot;frühen&quot;, &quot;pergunta&quot;: &quot;Por que frühen termina em -en?&quot;, &quot;ordem&quot;: 2, &quot;primeira_pista&quot;: &quot;Em am frühen Morgen, am já contém dem.&quot;, &quot;segunda_pista&quot;: &quot;Aqui temos Dativ: dem Morgen.&quot;, &quot;terceira_pista&quot;: &quot;dem + früh + en → dem frühen Morgen&quot;, &quot;terceira_pista_tipo&quot;: &quot;quadro&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">Am frühen Morgen</span><span class="segmento"> </span><span class="segmento verbo" data-verbo="gehen" data-significado="ir" data-forma="ich gehe" data-pessoa="ich" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;gehe&quot;}, {&quot;pessoa&quot;: &quot;du&quot;, &quot;forma&quot;: &quot;gehst&quot;}, {&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;geht&quot;}, {&quot;pessoa&quot;: &quot;wir&quot;, &quot;forma&quot;: &quot;gehen&quot;}, {&quot;pessoa&quot;: &quot;ihr&quot;, &quot;forma&quot;: &quot;geht&quot;}, {&quot;pessoa&quot;: &quot;sie/Sie&quot;, &quot;forma&quot;: &quot;gehen&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">gehe</span><span class="segmento"> ich </span><span class="segmento bloco" data-bloco="zum See" data-sentido="até o lago / para o lago" data-bloco-tipo="bloco" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">zum See</span><span class="segmento">.<br></span><span class="segmento bloco" data-bloco="Über dem Wasser" data-sentido="sobre a água" data-bloco-tipo="bloco" data-pontos-reativacao="[{&quot;ponto_reativacao_id&quot;: 3, &quot;elemento&quot;: &quot;über dem Wasser&quot;, &quot;pergunta&quot;: &quot;Por que dem?&quot;, &quot;ordem&quot;: 1, &quot;primeira_pista&quot;: &quot;Onde está o nevoeiro?&quot;, &quot;segunda_pista&quot;: &quot;Isso é localização (wo?) ou direção (wohin?)?&quot;, &quot;terceira_pista&quot;: &quot;wo? → Dativ | wohin? → Akkusativ&quot;, &quot;terceira_pista_tipo&quot;: &quot;quadro&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">Über dem Wasser</span><span class="segmento"> </span><span class="segmento verbo" data-verbo="liegen" data-significado="estar situado / estar deitado" data-forma="liegt" data-pessoa="er/sie/es" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;liegt&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">liegt</span><span class="segmento"> </span><span class="segmento bloco" data-bloco="leichter Nebel" data-sentido="leve neblina" data-bloco-tipo="bloco" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">leichter Nebel</span><span class="segmento">.<br>Ich </span><span class="segmento verbo" data-verbo="bleiben" data-significado="ficar / permanecer" data-forma="ich bleibe" data-pessoa="ich" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;bleibe&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">bleibe</span><span class="segmento"> </span><span class="segmento bloco" data-bloco="einen Moment" data-sentido="por um momento" data-bloco-tipo="bloco" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">einen Moment</span><span class="segmento"> </span><span class="segmento verbo" data-verbo="stehen" data-significado="estar de pé / ficar parado" data-forma="stehen" data-pessoa="-" data-tempo="Infinitiv" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;-&quot;, &quot;forma&quot;: &quot;stehen&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">stehen</span><span class="segmento"> und </span><span class="segmento verbo" data-verbo="beobachten" data-significado="observar" data-forma="ich beobachte" data-pessoa="ich" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;beobachte&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">beobachte</span><span class="segmento"> die Vögel.<br>Langsam </span><span class="segmento verbo" data-verbo="sich verändern" data-significado="mudar / transformar-se" data-forma="verändert sich" data-pessoa="er/sie/es" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;verändert&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">verändert</span><span class="segmento verbo" data-verbo="sich verändern" data-significado="mudar / transformar-se" data-forma="verändert sich" data-pessoa="er/sie/es" data-tempo="Pr?sens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;verändere mich&quot;}, {&quot;pessoa&quot;: &quot;du&quot;, &quot;forma&quot;: &quot;veränderst dich&quot;}, {&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;verändert sich&quot;}, {&quot;pessoa&quot;: &quot;wir&quot;, &quot;forma&quot;: &quot;verändern uns&quot;}, {&quot;pessoa&quot;: &quot;ihr&quot;, &quot;forma&quot;: &quot;verändert euch&quot;}, {&quot;pessoa&quot;: &quot;sie/Sie&quot;, &quot;forma&quot;: &quot;verändern sich&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida"> sich</span><span class="segmento"> </span><span class="segmento bloco" data-bloco="das Licht auf dem Wasser" data-sentido="a luz sobre a água" data-bloco-tipo="bloco" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">das Licht auf dem Wasser</span><span class="segmento">.<br>Dann </span><span class="segmento verbo" data-verbo="denken" data-significado="pensar" data-forma="ich denke" data-pessoa="ich" data-tempo="Präsens" data-regencia="an + Akk." data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;denke&quot;}, {&quot;pessoa&quot;: &quot;du&quot;, &quot;forma&quot;: &quot;denkst&quot;}, {&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;denkt&quot;}, {&quot;pessoa&quot;: &quot;wir&quot;, &quot;forma&quot;: &quot;denken&quot;}, {&quot;pessoa&quot;: &quot;ihr&quot;, &quot;forma&quot;: &quot;denkt&quot;}, {&quot;pessoa&quot;: &quot;sie/Sie&quot;, &quot;forma&quot;: &quot;denken&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">denke</span><span class="segmento"> ich </span><span class="segmento bloco" data-bloco="an den neuen Tag" data-sentido="no novo dia" data-bloco-tipo="bloco verbal" data-pontos-reativacao="[]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">an den neuen Tag</span><span class="segmento"> und </span><span class="segmento verbo" data-verbo="gehen" data-significado="ir" data-forma="gehe" data-pessoa="ich" data-tempo="Präsens" data-regencia="" data-conjugacoes="[{&quot;pessoa&quot;: &quot;ich&quot;, &quot;forma&quot;: &quot;gehe&quot;}, {&quot;pessoa&quot;: &quot;du&quot;, &quot;forma&quot;: &quot;gehst&quot;}, {&quot;pessoa&quot;: &quot;er/sie/es&quot;, &quot;forma&quot;: &quot;geht&quot;}, {&quot;pessoa&quot;: &quot;wir&quot;, &quot;forma&quot;: &quot;gehen&quot;}, {&quot;pessoa&quot;: &quot;ihr&quot;, &quot;forma&quot;: &quot;geht&quot;}, {&quot;pessoa&quot;: &quot;sie/Sie&quot;, &quot;forma&quot;: &quot;gehen&quot;}]" onclick="mostrarItem(this)" title="Clique para ver a Ajuda rápida">gehe</span><span class="segmento"> weiter.</span>
+    </div>
+
+</section>
+
+
+<aside class="ajuda">
+
+    <h2>
+        Ajuda rápida
+    </h2>
+
+
+    <div
+        id="ajuda-vazia"
+        class="ajuda-vazia">
+
+        Clique em um bloco ou verbo marcado
+        para consultar mais informações.
+
+    </div>
+
+
+    <div
+        id="ficha-verbo"
+        class="ficha">
+
+        <div
+            id="verbo-titulo"
+            class="item-titulo">
+        </div>
+
+        <div
+            id="verbo-significado"
+            class="item-sentido">
+        </div>
+
+        <div class="linha">
+            <strong>Forma encontrada</strong>
+            <span id="forma"></span>
+        </div>
+
+        <div class="linha">
+            <strong>Tempo verbal</strong>
+            <span id="tempo"></span>
+        </div>
+
+        <div class="linha">
+            <strong>Pessoa</strong>
+            <span id="pessoa"></span>
+        </div>
+
+        <div class="linha">
+            <strong>Regência</strong>
+            <span id="regencia"></span>
+        </div>
+
+        <button
+            id="botao-conjugacao"
+            class="link-ajuda"
+            type="button"
+            onclick="alternarConjugacao()">
+            Ver conjugação ›
+        </button>
+
+        <div
+            id="conjugacao"
+            class="conjugacao">
+        </div>
+
+    </div>
+
+
+    <div
+        id="ficha-bloco"
+        class="ficha">
+
+        <div
+            id="bloco-titulo"
+            class="item-titulo">
+        </div>
+
+        <div
+            id="bloco-sentido"
+            class="item-sentido">
+        </div>
+
+        <div class="linha">
+            <strong>Tipo</strong>
+            <span id="bloco-tipo"></span>
+        </div>
+
+        <button
+            id="botao-reativacao"
+            class="link-ajuda"
+            type="button"
+            style="display:none"
+            onclick="abrirReativacao()">
+            Por que é assim? ›
+        </button>
+
+        <button
+            id="botao-revisao"
+            class="link-ajuda"
+            type="button"
+            style="display:none"
+            onclick="reverQuadro()">
+            Rever o quadro ›
+        </button>
+
+        <div
+            id="escolha-reativacao"
+            class="conjugacao">
+
+            <p class="pergunta-apoio" style="margin-top:0">
+                O que você quer olhar mais de perto?
+            </p>
+
+            <div id="opcoes-reativacao"></div>
+
+        </div>
+
+        <div
+            id="quadro-reativacao"
+            class="conjugacao">
+
+            <div class="linha">
+                <strong>&#128161; Uma pista</strong>
+                <span id="pista-reativacao"></span>
+            </div>
+
+            <div
+                id="segunda-pista-reativacao"
+                class="linha"
+                style="display:none">
+                <strong>ðŸ’¡ Mais uma pista</strong>
+                <span id="texto-segunda-pista-reativacao"></span>
+            </div>
+
+            <div
+                id="terceira-pista-reativacao"
+                class="linha"
+                style="display:none">
+                <strong>ðŸ’¡ Microquadro</strong>
+                <div id="microquadro-casos" class="microquadro-reativacao">
+                    <div></div>
+                    <div>Nominativ</div>
+                    <div>Dativ</div>
+                    <div>masculino</div>
+                    <div><strong>der</strong></div>
+                    <div><strong>dem</strong></div>
+                </div>
+                <div id="texto-terceira-pista-reativacao"
+                     class="microquadro-reconstrucao"></div>
+            </div>
+
+            <p class="pergunta-apoio">
+                Lembrou?
+            </p>
+
+            <div class="acoes-apoio">
+                <button
+                    type="button"
+                    class="encerrar"
+                    onclick="fecharReativacao()">
+                    Sim, lembrei
+                </button>
+
+                <button
+                    id="botao-segunda-pista"
+                    type="button"
+                    class="enviar"
+                    onclick="mostrarSegundaPista()">
+                    Ainda não
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+</div>
+
+
+
+<section class="compreensao">
+
+    <h2>
+        Minha compreensão
+    </h2>
+
+    <form
+        id="form-compreensao"
+        method="POST"
+        action="/compreensao"
+        onsubmit="return salvarCompreensaoLocal(event)">
+
+        <input
+            type="hidden"
+            name="caminhada_id"
+            value="1"
+        >
+        
+
+        <input
+            type="hidden"
+            name="momento"
+            value="inicial"
+        >
+
+        <textarea
+            name="texto_usuario"
+            placeholder="Escreva aqui, com suas palavras, o que você compreendeu..."
+            required></textarea>
+
+        <div class="acoes-compreensao">
+            <small>Neste navegador</small>
+            <button
+                type="submit"
+                class="enviar">
+                Guardar compreensão
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+
+
+
 </main>
-<script src="textos.js?v=1" defer></script>
+
+
+<script>
+
+function ouvirTextoAlemao() {
+    const elemento = document.getElementById("texto-caminhada");
+
+    if (!elemento || !("speechSynthesis" in window)) {
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const fala = new SpeechSynthesisUtterance(elemento.innerText);
+    fala.lang = "de-DE";
+
+    const vozes = window.speechSynthesis.getVoices();
+    const vozAlema = vozes.find(v => v.lang && v.lang.toLowerCase().startsWith("de"));
+
+    if (vozAlema) {
+        fala.voice = vozAlema;
+    }
+
+    window.speechSynthesis.speak(fala);
+}
+
+
+
+const destaquesCaminhada = { blocos: false, verbos: false };
+function sincronizarDestaques() {
+    const modo = destaquesCaminhada.blocos
+        ? (destaquesCaminhada.verbos ? "ambos" : "blocos")
+        : (destaquesCaminhada.verbos ? "verbos" : "limpo");
+    document.body.classList.remove("modo-limpo", "modo-blocos", "modo-verbos", "modo-ambos");
+    document.body.classList.add("modo-" + modo);
+    document.querySelectorAll(".visualizacao [data-modo]").forEach(botao => {
+        const ligado = destaquesCaminhada[botao.dataset.modo];
+        botao.classList.toggle("ativo", ligado);
+        botao.setAttribute("aria-pressed", String(ligado));
+    });
+}
+function limparAjudaCaminhada() {
+    esconderFichas();
+    document.getElementById("ajuda-vazia").style.display = "block";
+    document.getElementById("quadro-reativacao").style.display = "none";
+}
+function mudarModo(modo) {
+    if (!(modo in destaquesCaminhada)) return;
+    destaquesCaminhada[modo] = !destaquesCaminhada[modo];
+    sincronizarDestaques();
+    limparAjudaCaminhada();
+}
+
+
+function esconderFichas() {
+
+    document
+        .getElementById("ajuda-vazia")
+        .style.display = "none";
+
+    document
+        .getElementById("ficha-verbo")
+        .style.display = "none";
+
+    document
+        .getElementById("ficha-bloco")
+        .style.display = "none";
+}
+
+
+function mostrarItem(elemento) {
+
+    const modo =
+        document.body.className;
+
+    const dados =
+        elemento.dataset;
+
+
+    if (
+        modo === "modo-verbos"
+        && dados.verbo
+    ) {
+        mostrarVerbo(elemento);
+        return;
+    }
+
+
+    if (
+        modo === "modo-blocos"
+        && dados.bloco
+    ) {
+        mostrarBloco(elemento);
+        return;
+    }
+
+
+    if (modo === "modo-ambos") {
+
+        if (dados.verbo) {
+            mostrarVerbo(elemento);
+            return;
+        }
+
+        if (dados.bloco) {
+            mostrarBloco(elemento);
+            return;
+        }
+    }
+}
+
+
+function mostrarBloco(elemento) {
+
+    esconderFichas();
+
+    const dados = elemento.dataset;
+
+    document
+        .getElementById("ficha-bloco")
+        .style.display = "block";
+
+    document
+        .getElementById("bloco-titulo")
+        .textContent = dados.bloco || "";
+
+    document
+        .getElementById("bloco-sentido")
+        .textContent = "— " + (dados.sentido || "");
+
+    document
+        .getElementById("bloco-tipo")
+        .textContent = dados.blocoTipo || "Bloco de sentido";
+
+    const botaoReativacao =
+        document.getElementById("botao-reativacao");
+
+    const botaoRevisao =
+        document.getElementById("botao-revisao");
+
+    botaoRevisao.style.display = "none";
+
+    document
+        .getElementById("escolha-reativacao")
+        .style.display = "none";
+
+    document
+        .getElementById("quadro-reativacao")
+        .style.display = "none";
+
+    let pontos = [];
+
+    try {
+        pontos = JSON.parse(dados.pontosReativacao || "[]");
+    } catch {
+        pontos = [];
+    }
+
+    botaoReativacao.dataset.pontos = JSON.stringify(pontos);
+
+    if (pontos.length > 0) {
+        botaoReativacao.style.display = "block";
+        botaoReativacao.textContent = "Por que é assim? ›";
+    } else {
+        botaoReativacao.style.display = "none";
+        botaoReativacao.dataset.pontos = "[]";
+    }
+}
+
+
+function abrirReativacao() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    let pontos = [];
+
+    try {
+        pontos = JSON.parse(botao.dataset.pontos || "[]");
+    } catch {
+        pontos = [];
+    }
+
+    if (pontos.length === 0) {
+        return;
+    }
+
+    if (pontos.length === 1) {
+        abrirPontoReativacao(pontos[0]);
+        return;
+    }
+
+    const caixa =
+        document.getElementById("opcoes-reativacao");
+
+    caixa.innerHTML = "";
+
+    pontos.forEach(ponto => {
+        const opcao = document.createElement("button");
+        opcao.type = "button";
+        opcao.className = "opcao-reativacao";
+
+        const elemento = ponto.elemento || "";
+        const pergunta = ponto.pergunta || "";
+
+        opcao.innerHTML =
+            "<strong>" + elemento + "</strong> — " + pergunta;
+
+        opcao.onclick = () => abrirPontoReativacao(ponto);
+        caixa.appendChild(opcao);
+    });
+
+    botao.style.display = "none";
+
+    document
+        .getElementById("escolha-reativacao")
+        .style.display = "block";
+}
+
+
+function abrirPontoReativacao(ponto) {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    botao.dataset.primeiraPista = ponto.primeira_pista || "";
+    botao.dataset.segundaPista = ponto.segunda_pista || "";
+    botao.dataset.terceiraPista = ponto.terceira_pista || "";
+    botao.dataset.terceiraPistaTipo = ponto.terceira_pista_tipo || "";
+    botao.dataset.elementoAtivo = ponto.elemento || "";
+
+    document
+        .getElementById("escolha-reativacao")
+        .style.display = "none";
+
+    document
+        .getElementById("pista-reativacao")
+        .textContent = botao.dataset.primeiraPista;
+
+    document
+        .getElementById("segunda-pista-reativacao")
+        .style.display = "none";
+
+    document
+        .getElementById("terceira-pista-reativacao")
+        .style.display = "none";
+
+    const botaoProxima =
+        document.getElementById("botao-segunda-pista");
+
+    botaoProxima.style.display = "inline-block";
+    botaoProxima.textContent = "Ainda não";
+    botaoProxima.onclick = mostrarSegundaPista;
+
+    document
+        .getElementById("quadro-reativacao")
+        .style.display = "block";
+}
+
+
+function mostrarSegundaPista() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    const botaoProxima =
+        document.getElementById("botao-segunda-pista");
+
+    document
+        .getElementById("texto-segunda-pista-reativacao")
+        .textContent =
+            botao.dataset.segundaPista || "";
+
+    document
+        .getElementById("segunda-pista-reativacao")
+        .style.display = "block";
+
+    botaoProxima.textContent = "Mais uma pista";
+    botaoProxima.onclick = mostrarTerceiraPista;
+}
+
+
+function mostrarTerceiraPista() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    const conteudo =
+        botao.dataset.terceiraPista || "";
+
+    const elementoAtivo =
+        botao.dataset.elementoAtivo || "";
+
+    const microquadroCasos =
+        document.getElementById("microquadro-casos");
+
+    // O experimento "am" conserva o microquadro de casos homologado.
+    // A nova ramificaÃ§Ã£o "frÃ¼hen" usa somente a reconstruÃ§Ã£o curta.
+    microquadroCasos.style.display =
+        elementoAtivo === "am" ? "grid" : "none";
+
+    document
+        .getElementById("texto-terceira-pista-reativacao")
+        .textContent =
+            conteudo.replace(" | ", "\n");
+
+    document
+        .getElementById("terceira-pista-reativacao")
+        .style.display = "block";
+
+    document
+        .getElementById("botao-segunda-pista")
+        .style.display = "none";
+}
+
+
+function fecharReativacao() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    const quadro =
+        document.getElementById("quadro-reativacao");
+
+    quadro.style.display = "none";
+
+    document
+        .getElementById("escolha-reativacao")
+        .style.display = "none";
+
+    botao.style.display = "none";
+
+    document
+        .getElementById("botao-revisao")
+        .style.display = "block";
+}
+
+
+function reverQuadro() {
+
+    const botao =
+        document.getElementById("botao-reativacao");
+
+    document
+        .getElementById("pista-reativacao")
+        .textContent = botao.dataset.primeiraPista || "";
+
+    document
+        .getElementById("texto-segunda-pista-reativacao")
+        .textContent = botao.dataset.segundaPista || "";
+
+    const elementoAtivo =
+        botao.dataset.elementoAtivo || "";
+
+    document
+        .getElementById("microquadro-casos")
+        .style.display =
+            elementoAtivo === "am" ? "grid" : "none";
+
+    document
+        .getElementById("texto-terceira-pista-reativacao")
+        .textContent =
+            (botao.dataset.terceiraPista || "").replace(" | ", "\n");
+
+    document
+        .getElementById("segunda-pista-reativacao")
+        .style.display = "block";
+
+    document
+        .getElementById("terceira-pista-reativacao")
+        .style.display = "block";
+
+    document
+        .getElementById("botao-segunda-pista")
+        .style.display = "none";
+
+    document
+        .querySelector("#quadro-reativacao .pergunta-apoio")
+        .style.display = "none";
+
+    document
+        .querySelector("#quadro-reativacao .acoes-apoio")
+        .style.display = "none";
+
+    document
+        .getElementById("quadro-reativacao")
+        .style.display = "block";
+}
+
+
+function mostrarVerbo(elemento) {
+
+    esconderFichas();
+
+    const dados =
+        elemento.dataset;
+
+    document
+        .getElementById("ficha-verbo")
+        .style.display = "block";
+
+    document
+        .getElementById("verbo-titulo")
+        .textContent =
+            dados.verbo;
+
+    document
+        .getElementById("verbo-significado")
+        .textContent =
+            "— " + dados.significado;
+
+    document
+        .getElementById("forma")
+        .textContent =
+            dados.forma || "—";
+
+    document
+        .getElementById("tempo")
+        .textContent =
+            dados.tempo || "—";
+
+    document
+        .getElementById("pessoa")
+        .textContent =
+            dados.pessoa || "—";
+
+    document
+        .getElementById("regencia")
+        .textContent =
+            dados.regencia || "—";
+
+
+    const caixa =
+        document.getElementById("conjugacao");
+
+    const botao =
+        document.getElementById("botao-conjugacao");
+
+    caixa.innerHTML = "";
+
+    if (dados.tempo === "Infinitiv") {
+        caixa.style.display = "none";
+        botao.style.display = "none";
+        return;
+    }
+
+    botao.style.display = "";
+
+    let conjugacoes = [];
+
+
+    try {
+
+        conjugacoes =
+            JSON.parse(
+                dados.conjugacoes || "[]"
+            );
+
+    } catch {
+
+        conjugacoes = [];
+    }
+
+
+    if (conjugacoes.length === 0) {
+
+        caixa.innerHTML =
+            "<em>ConjugaÃ§Ã£o ainda não carregada.</em>";
+
+    } else {
+
+        conjugacoes.forEach(item => {
+
+            const linha =
+                document.createElement("div");
+
+            linha.className =
+                "conjugacao-linha";
+
+            linha.innerHTML =
+                "<strong>"
+                + item.pessoa
+                + "</strong><span>"
+                + item.forma
+                + "</span>";
+
+            caixa.appendChild(linha);
+        });
+    }
+
+
+    caixa.style.display = "none";
+
+    botao.textContent =
+        "Ver conjugação ›";
+}
+
+
+function alternarConjugacao() {
+
+    const caixa =
+        document.getElementById("conjugacao");
+
+    const botao =
+        document.getElementById("botao-conjugacao");
+
+
+    if (caixa.style.display === "block") {
+
+        caixa.style.display = "none";
+
+        botao.textContent =
+            "Ver conjugação ›";
+
+    } else {
+
+        caixa.style.display = "block";
+
+        botao.textContent =
+            "Ocultar conjugação ‹";
+    }
+}
+
+
+</script>
+
+<script>
+// ===== Web (Firebase Hosting): navegação entre Caminhadas + compreensão local =====
+function padCaminhada(n) { return String(n).padStart(2, "0"); }
+
+const rascunhosCaminhada = new Map();
+function restaurarCompreensao(numero) {
+    const form = document.getElementById("form-compreensao");
+    if (!form) return;
+    const area = form.querySelector("textarea[name='texto_usuario']");
+    const aviso = document.getElementById("aviso-compreensao");
+    if (aviso) aviso.remove();
+    if (rascunhosCaminhada.has(numero)) {
+        area.value = rascunhosCaminhada.get(numero);
+        return;
+    }
+    area.value = "";
+    try {
+        const d = JSON.parse(localStorage.getItem("compreensao_" + numero) || "null");
+        if (d && typeof d.texto === "string") area.value = d.texto;
+    } catch (_) { /* O rascunho da sessão independe do armazenamento local. */ }
+}
+function salvarCompreensaoLocal(evento) {
+    evento.preventDefault();
+    const form = document.getElementById("form-compreensao");
+    const area = form.querySelector("textarea[name='texto_usuario']");
+    if (!area.value.trim()) return false;
+    const numero = window.__caminhadaAtual();
+    let aviso = document.getElementById("aviso-compreensao");
+    if (!aviso) {
+        aviso = document.createElement("p");
+        aviso.id = "aviso-compreensao";
+        aviso.setAttribute("role", "status");
+        aviso.style.cssText = "margin-top:10px;color:#2f6b46;font-weight:600;";
+        form.appendChild(aviso);
+    }
+    try {
+        localStorage.setItem("compreensao_" + numero,
+            JSON.stringify({ texto: area.value, data: new Date().toISOString() }));
+        aviso.textContent = "Compreensão guardada neste navegador.";
+        window.dispatchEvent(new Event("dl-compreensao-guardada"));
+    } catch (_) {
+        aviso.textContent = "Não foi possível guardar neste navegador. Seu rascunho continua nesta sessão.";
+    }
+    return false;
+}
+
+(function () {
+    let caminhadas = [], atual = null;
+    const area = document.querySelector("#form-compreensao textarea");
+    area.addEventListener("input", () => {
+        if (atual !== null) rascunhosCaminhada.set(atual, area.value);
+    });
+    const sel = document.getElementById("seletor-caminhada");
+    const titulo = document.getElementById("titulo-caminhada");
+    const texto = document.getElementById("texto-caminhada");
+    const navAtual = document.getElementById("nav-caminhada-atual");
+
+    function mostrar(numero) {
+        const c = caminhadas.find(x => x.numero === numero);
+        if (!c) return false;
+        if (atual !== null) rascunhosCaminhada.set(atual, area.value);
+        atual = numero;
+        sel.value = String(numero);
+        if (titulo) titulo.textContent = c.titulo;
+        const tmp = document.createElement("div");
+        tmp.innerHTML = c.texto_html;
+        const interno = tmp.querySelector("#texto-caminhada");
+        if (texto) texto.innerHTML = interno ? interno.innerHTML : c.texto_html;
+        if (texto) texto.className = "texto";
+        if (navAtual) navAtual.textContent = "📖 Caminhada " + padCaminhada(numero);
+        sincronizarDestaques();
+        limparAjudaCaminhada();
+        restaurarCompreensao(numero);
+        try { localStorage.setItem("caminhada_atual", String(numero)); } catch (_) {}
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
+        return true;
+    }
+
+    window.__caminhadaAtual = () => atual || 1;
+    window.retomarCaminhada = numero => {
+        if (!mostrar(numero)) return false;
+        window.fecharProgresso();
+        area.focus();
+        return true;
+    };
+
+    async function obterCaminhadas() {
+        // Espera o módulo do Firestore carregar (até ~2s) e tenta o banco online.
+        for (let i = 0; i < 20 && !window.DL_DADOS; i++) {
+            await new Promise((res) => setTimeout(res, 100));
+        }
+        if (window.DL_DADOS) {
+            try {
+                const online = await window.DL_DADOS.carregarCaminhadas();
+                if (online && online.length) return online;
+            } catch (e) { /* usa o fallback abaixo */ }
+        }
+        const r = await fetch("./data/caminhadas.json");
+        return await r.json();
+    }
+
+    obterCaminhadas()
+        .then(data => {
+            caminhadas = data;
+            if (!sel) return;
+            sel.innerHTML = data
+                .map(c => '<option value="' + c.numero + '">Caminhada ' + padCaminhada(c.numero) + " — " + c.titulo + "</option>")
+                .join("");
+            let salvo = data[0]?.numero;
+            try {
+                const anterior = Number(localStorage.getItem("caminhada_atual"));
+                if (data.some(c => c.numero === anterior)) salvo = anterior;
+            } catch (_) {}
+            sel.value = String(salvo);
+            sel.addEventListener("change", () => mostrar(parseInt(sel.value, 10)));
+            mostrar(salvo);
+        })
+        .catch(e => console.error("Falha ao carregar caminhadas:", e));
+})();
+</script>
 
 <div class="estrada-overlay" id="estrada-overlay" role="dialog" aria-modal="true" aria-label="Estrada">
     <div class="estrada-painel">
@@ -2027,13 +2891,22 @@ textarea {
             const item = document.createElement("details");
             item.className = "prog-item";
             const rotulo = document.createElement("summary");
-            rotulo.textContent = "Caminhada " + String(registro.numero).padStart(2, "0");
+            rotulo.textContent = "Caminhada " + padCaminhada(registro.numero);
             const texto = document.createElement("p");
             texto.className = "prog-contexto";
             texto.style.whiteSpace = "pre-wrap";
             texto.style.overflowWrap = "anywhere";
             texto.textContent = registro.texto;
-            item.append(rotulo, texto);
+            const botao = document.createElement("button");
+            botao.type = "button";
+            botao.className = "prog-voltar";
+            botao.textContent = "Retomar Caminhada " + padCaminhada(registro.numero);
+            botao.addEventListener("click", () => {
+                if (!window.retomarCaminhada(registro.numero)) {
+                    botao.textContent = "Caminhada indisponível agora";
+                }
+            });
+            item.append(rotulo, texto, botao);
             locais.appendChild(item);
         }
         if (!registros.length) locais.textContent = "Nenhuma compreensão guardada neste navegador.";
@@ -2241,25 +3114,271 @@ textarea {
 })();
 </script>
 
-<div class="rg-overlay dl-meu-texto" id="adicionar-texto-overlay" role="dialog" aria-modal="true" aria-labelledby="adicionar-texto-titulo">
+<div class="rg-overlay dl-meu-texto" id="meu-texto-overlay" role="dialog" aria-modal="true" aria-labelledby="meu-texto-titulo">
     <div class="rg-painel">
         <div class="rg-cabecalho">
-            <h2 id="adicionar-texto-titulo">Adicionar texto</h2>
-            <button type="button" id="adicionar-voltar">Voltar</button>
+            <h2 id="meu-texto-titulo">Meu texto</h2>
+            <button type="button" id="meu-texto-voltar">Voltar</button>
         </div>
         <div class="meu-texto-corpo">
-            <form id="form-adicionar-texto">
-                <label for="adicionar-titulo">Título (opcional)</label>
-                <input type="text" id="adicionar-titulo" autocomplete="off">
-                <label for="adicionar-conteudo">Texto em alemão</label>
-                <textarea id="adicionar-conteudo" lang="de" required></textarea>
-                <p id="adicionar-status" role="status" aria-live="polite"></p>
-                <button type="submit" id="adicionar-salvar">Salvar texto</button>
-                <button type="button" id="adicionar-reabrir" hidden>Tentar abrir texto salvo</button>
+            <form id="form-meu-texto">
+                <label for="meu-texto-nome">Título (opcional)</label>
+                <input type="text" id="meu-texto-nome" autocomplete="off">
+                <label for="meu-texto-conteudo">Texto em alemão</label>
+                <textarea id="meu-texto-conteudo" lang="de" required></textarea>
+                <p id="meu-texto-retorno" role="status" aria-live="polite"></p>
+                <button type="submit" id="meu-texto-salvar">Salvar texto</button>
             </form>
+            <details class="meu-texto-retomada">
+                <summary>Retomar texto salvo</summary>
+                <button type="button" id="meu-texto-ultimo" hidden>Abrir último texto</button>
+                <form id="form-retomar-texto">
+                    <label for="meu-texto-id">ID do texto salvo</label>
+                    <input id="meu-texto-id" type="text" required autocomplete="off">
+                    <button type="submit" id="meu-texto-abrir">Abrir texto</button>
+                </form>
+            </details>
+            <p id="meu-texto-leitura" role="status" aria-live="polite"></p>
+            <button type="button" id="meu-texto-reabrir" hidden>Tentar abrir novamente</button>
         </div>
     </div>
 </div>
+<div class="rg-overlay dl-meu-texto" id="meu-texto-leitor-overlay" role="dialog" aria-modal="true" aria-labelledby="meu-texto-leitor-titulo">
+    <div class="rg-painel">
+        <div class="rg-cabecalho">
+            <h2 id="meu-texto-leitor-titulo">Ler e compreender</h2>
+            <button type="button" id="meu-texto-leitor-voltar">Voltar a Meu texto</button>
+        </div>
+        <div class="meu-texto-corpo">
+            <h3 id="meu-texto-leitura-titulo"></h3>
+            <div id="meu-texto-leitura-conteudo" lang="de"></div>
+            <label for="meu-texto-compreensao">Minha compreensão</label>
+            <textarea id="meu-texto-compreensao" aria-describedby="meu-texto-compreensao-aviso"></textarea>
+            <p id="meu-texto-compreensao-aviso" class="meu-texto-nota">Sua compreensão fica disponível enquanto esta página estiver aberta.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+(function () {
+    const overlay = document.getElementById("meu-texto-overlay");
+    const leitor = document.getElementById("meu-texto-leitor-overlay");
+    const form = document.getElementById("form-meu-texto");
+    const titulo = document.getElementById("meu-texto-nome");
+    const conteudo = document.getElementById("meu-texto-conteudo");
+    const salvar = document.getElementById("meu-texto-salvar");
+    const voltar = document.getElementById("meu-texto-voltar");
+    const retorno = document.getElementById("meu-texto-retorno");
+    const leitura = document.getElementById("meu-texto-leitura");
+    const reabrir = document.getElementById("meu-texto-reabrir");
+    const ultimo = document.getElementById("meu-texto-ultimo");
+    const retomarForm = document.getElementById("form-retomar-texto");
+    const textoId = document.getElementById("meu-texto-id");
+    const abrir = document.getElementById("meu-texto-abrir");
+    const leituraTitulo = document.getElementById("meu-texto-leitura-titulo");
+    const leituraConteudo = document.getElementById("meu-texto-leitura-conteudo");
+    const compreensao = document.getElementById("meu-texto-compreensao");
+    const voltarLeitor = document.getElementById("meu-texto-leitor-voltar");
+    const compreensoes = new Map(), novosTextos = new Map(), ids = new Map();
+    let textoAberto = null, uidAtual = null, ultimoId = null, tentativaId = null;
+    let salvando = false, carregando = false, leituraAtual = 0, focoAnterior = null;
+
+    function uidConectado() { return window.DL_AUTH?.usuario?.uid || null; }
+    function chave(uid) { return "dl:meu-texto:" + uid; }
+    function chaveCompreensao() { return JSON.stringify([textoAberto.uid, textoAberto.id]); }
+    function guardarNovoRascunho() {
+        novosTextos.set(uidAtual, { titulo: titulo.value, conteudo: conteudo.value });
+    }
+    function botoes() {
+        salvar.disabled = voltar.disabled = salvando;
+        abrir.disabled = ultimo.disabled = reabrir.disabled = salvando || carregando;
+        ultimo.hidden = !ultimoId;
+        titulo.readOnly = conteudo.readOnly = salvando;
+    }
+    function lembrar(uid, id) {
+        ids.set(uid, id);
+        try { localStorage.setItem(chave(uid), id); return true; }
+        catch (_) { return false; }
+    }
+    function voltarAoTexto() {
+        leitor.classList.remove("aberta");
+        overlay.classList.add("aberta");
+        document.body.style.overflow = "hidden";
+        titulo.focus();
+    }
+    function mostrarLeitor() {
+        if (!textoAberto || textoAberto.uid !== uidConectado()) return;
+        leituraTitulo.textContent = textoAberto.titulo;
+        leituraConteudo.textContent = textoAberto.conteudo;
+        compreensao.value = compreensoes.get(chaveCompreensao()) || "";
+        overlay.classList.remove("aberta");
+        leitor.classList.add("aberta");
+        document.body.style.overflow = "hidden";
+        leitor.querySelector(".meu-texto-corpo").scrollTop = 0;
+        voltarLeitor.focus();
+    }
+    async function abrirSalvo(id, salvoAgora = false) {
+        const uid = uidAtual;
+        if (!uid || uid !== uidConectado() || !id || carregando) return;
+        const tentativa = ++leituraAtual;
+        tentativaId = id;
+        carregando = true;
+        botoes();
+        reabrir.hidden = true;
+        leitura.textContent = "Abrindo texto salvo…";
+        try {
+            const texto = await window.DL_DADOS.carregarTexto(id);
+            if (tentativa !== leituraAtual || uid !== uidConectado()) return;
+            textoAberto = Object.freeze({ uid, id, titulo: texto.titulo, conteudo: texto.conteudo });
+            ultimoId = id;
+            textoId.value = id;
+            const persistido = lembrar(uid, id);
+            leitura.textContent = persistido ? "" : "Anote o ID para a próxima visita: " + id;
+            if (overlay.classList.contains("aberta")) mostrarLeitor();
+        } catch (_) {
+            if (tentativa !== leituraAtual || uid !== uidConectado()) return;
+            leitura.textContent = salvoAgora
+                ? "O texto foi salvo, mas não foi possível abri-lo. Tente abrir novamente, sem reenviar. ID: " + id
+                : "Não foi possível abrir o texto. Confira o ID, sua conta e a conexão e tente novamente.";
+            reabrir.hidden = false;
+        } finally {
+            if (tentativa === leituraAtual) {
+                carregando = false;
+                botoes();
+            }
+        }
+    }
+    function atualizarConta() {
+        const uid = uidConectado();
+        if (uid !== uidAtual) {
+            guardarNovoRascunho();
+            uidAtual = uid;
+            leituraAtual++;
+            carregando = false;
+            textoAberto = null;
+            leituraTitulo.textContent = leituraConteudo.textContent = compreensao.value = "";
+            if (leitor.classList.contains("aberta")) voltarAoTexto();
+            const rascunho = novosTextos.get(uid);
+            titulo.value = rascunho?.titulo || "";
+            conteudo.value = rascunho?.conteudo || "";
+            conteudo.setCustomValidity("");
+            retorno.textContent = leitura.textContent = "";
+            reabrir.hidden = true;
+            ultimoId = uid ? ids.get(uid) || null : null;
+            try { if (uid && !ultimoId) ultimoId = localStorage.getItem(chave(uid)); } catch (_) {}
+            tentativaId = ultimoId;
+            textoId.value = ultimoId || "";
+        }
+        if (!uid) leitura.textContent = "Entre com Google para salvar ou retomar seu texto.";
+        botoes();
+    }
+    titulo.addEventListener("input", guardarNovoRascunho);
+    conteudo.addEventListener("input", () => {
+        conteudo.setCustomValidity("");
+        guardarNovoRascunho();
+    });
+    compreensao.addEventListener("input", () => {
+        if (textoAberto && textoAberto.uid === uidConectado()) {
+            compreensoes.set(chaveCompreensao(), compreensao.value);
+        }
+    });
+    window.addEventListener("dl-auth-alterado", atualizarConta);
+    ultimo.addEventListener("click", () => abrirSalvo(ultimoId));
+    reabrir.addEventListener("click", () => abrirSalvo(tentativaId));
+    voltarLeitor.addEventListener("click", voltarAoTexto);
+    retomarForm.addEventListener("submit", ev => {
+        ev.preventDefault();
+        if (carregando || salvando) return;
+        if (!uidAtual) {
+            leitura.textContent = "Entre com Google para retomar seu texto.";
+            return;
+        }
+        const id = textoId.value.trim();
+        if (!id || id.includes("/")) {
+            leitura.textContent = "Informe apenas o ID do texto.";
+            return;
+        }
+        abrirSalvo(id);
+    });
+    window.abrirMeuTexto = function () {
+        focoAnterior = document.activeElement;
+        atualizarConta();
+        voltarAoTexto();
+    };
+    function fechar() {
+        if (salvando) return;
+        guardarNovoRascunho();
+        leituraAtual++;
+        carregando = false;
+        botoes();
+        overlay.classList.remove("aberta");
+        document.body.style.overflow = "";
+        if (focoAnterior) focoAnterior.focus();
+    }
+    voltar.addEventListener("click", fechar);
+    overlay.addEventListener("click", ev => { if (ev.target === overlay) fechar(); });
+    leitor.addEventListener("click", ev => { if (ev.target === leitor) voltarAoTexto(); });
+    document.addEventListener("keydown", ev => {
+        const ativo = leitor.classList.contains("aberta") ? leitor :
+            (overlay.classList.contains("aberta") ? overlay : null);
+        if (!ativo) return;
+        if (ev.key === "Escape") {
+            ev.preventDefault();
+            if (ativo === leitor) voltarAoTexto(); else fechar();
+        }
+        if (ev.key === "Tab") {
+            const focaveis = Array.from(ativo.querySelectorAll("button, input, textarea, summary"))
+                .filter(el => !el.disabled && el.getClientRects().length);
+            const primeiro = focaveis[0], ultimo = focaveis[focaveis.length - 1];
+            if (ev.shiftKey && document.activeElement === primeiro) {
+                ev.preventDefault(); ultimo.focus();
+            } else if (!ev.shiftKey && document.activeElement === ultimo) {
+                ev.preventDefault(); primeiro.focus();
+            }
+        }
+    });
+    form.addEventListener("submit", async ev => {
+        ev.preventDefault();
+        if (salvando) return;
+        const uid = uidConectado();
+        if (!uid) {
+            retorno.textContent = "Entre com Google para salvar seu texto.";
+            return;
+        }
+        conteudo.setCustomValidity(conteudo.value.trim() ? "" : "Informe o texto em alemão.");
+        if (!form.reportValidity()) return;
+        // Invalida uma leitura anterior para que ela não troque a janela durante o envio.
+        leituraAtual++;
+        carregando = false;
+        salvando = true;
+        botoes();
+        retorno.textContent = "Salvando texto…";
+        let id;
+        try {
+            id = await window.DL_DADOS.salvarTexto(conteudo.value, titulo.value);
+        } catch (erro) {
+            if (uid === uidConectado()) {
+                retorno.textContent = erro.code === "permission-denied"
+                    ? "O salvamento não foi autorizado. Seu texto foi mantido."
+                    : "Não foi possível salvar. Verifique a conexão e tente novamente. Seu texto foi mantido.";
+            }
+        } finally {
+            salvando = false;
+            botoes();
+        }
+        if (!id) return;
+        lembrar(uid, id);
+        novosTextos.delete(uid);
+        if (uid !== uidConectado()) return;
+        ultimoId = id;
+        textoId.value = id;
+        form.reset();
+        retorno.textContent = "Texto salvo com sucesso.";
+        await abrirSalvo(id, true);
+    });
+    atualizarConta();
+})();
+</script>
 
 <script>
 (function () {
@@ -2272,8 +3391,6 @@ textarea {
         const auth = window.DL_AUTH;
         const usuario = auth ? auth.usuario : null;
         estado.textContent = usuario ? "Conectado" : "Não conectado";
-        estado.classList.toggle("conectado", !!usuario);
-        estado.title = usuario ? "Autenticado com Google" : "Sem autenticação";
         acao.textContent = usuario ? "Sair" : "Entrar com Google";
         acao.disabled = ocupada || !auth || !auth.pronta;
     }

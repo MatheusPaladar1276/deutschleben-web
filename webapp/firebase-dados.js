@@ -3,7 +3,7 @@
 // site usa o arquivo estático como reserva.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer, getDocsFromServer, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDCueo_SJ8gAqU9VT6cMdyxyDhXGSP1ma4",
@@ -44,6 +44,31 @@ window.DL_DADOS = {
     if (!salvo.exists()) throw new Error("Texto não encontrado.");
     const dados = salvo.data();
     return { id: salvo.id, titulo: dados.titulo || "Sem título", conteudo: dados.conteudo };
+  },
+  async listarTextos() {
+    if (!db) throw new Error("Serviço indisponível.");
+    const snap = await getDocsFromServer(collection(db, "textos"));
+    return snap.docs.map(d => ({ id: d.id, titulo: d.data().titulo || "Sem título" }))
+      .sort((a, b) => a.titulo.localeCompare(b.titulo, "pt"));
+  },
+  async carregarResumo(textoId, uid) {
+    if (!db || !auth?.currentUser || auth.currentUser.uid !== uid) throw new Error("Conta desconectada.");
+    const snap = await getDocFromServer(doc(db, "textos", textoId, "resumos", uid));
+    return snap.exists() ? snap.data().conteudo : "";
+  },
+  async salvarResumo(textoId, uid, conteudo) {
+    if (!db || !auth?.currentUser || auth.currentUser.uid !== uid) throw new Error("Conta desconectada.");
+    if (typeof conteudo !== "string" || !conteudo.trim() || conteudo.length > 30000) {
+      throw new Error("Informe um resumo de até 30.000 caracteres.");
+    }
+    const ref = doc(db, "textos", textoId, "resumos", uid);
+    // A transação só conclui após confirmação do backend; não há salvamento automático.
+    await runTransaction(db, async transacao => {
+      const anterior = await transacao.get(ref);
+      transacao.set(ref, { uid, textoId, conteudo,
+        criadoEm: anterior.exists() ? anterior.data().criadoEm : serverTimestamp(),
+        atualizadoEm: serverTimestamp() });
+    });
   },
   async carregarCaminhadas() {
     if (!db) return null;
