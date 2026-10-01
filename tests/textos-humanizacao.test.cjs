@@ -10,6 +10,8 @@ const textos = [ { id, titulo: 'Vorstellung', conteudo: 'Mein Name ist Anna. Ich
 const dom = new JSDOM(fs.readFileSync(path.join(root, 'webapp/index.html'), 'utf8'), {
   url: 'https://example.test/', runScripts: 'outside-only', pretendToBeVisual: true });
 const w = dom.window, $ = id => w.document.getElementById(id);
+w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
+w.HTMLDialogElement.prototype.close = function () { this.open = false; };
 const tick = () => new Promise(resolve => setTimeout(resolve, 10));
 const input = (id, value) => { $(id).value = value; $(id).dispatchEvent(new w.Event('input')); };
 const choose = async id => { $('seletor-texto').value = id; $('seletor-texto').dispatchEvent(new w.Event('change')); await tick(); };
@@ -41,7 +43,8 @@ function select(text) {
   assert(copied.includes('Minha pergunta:\nQual é o sentido?')); assert(copied.includes('Minha compreensão:\nMinha leitura\n<segura>'));
   assert(copied.includes('Título: Vorstellung')); assert(!copied.includes('Original:'));
   assert(copied.includes('S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg).'));
-  assert.equal($('copia-status').textContent, 'Consulta copiada. Cole no chat com o SDA.');
+  assert.equal($('copia-status').textContent, ''); assert($('consulta-confirmacao').open);
+  $('consulta-entendi').click();
   assert(!$('fase-textos').textContent.includes('S + V + (OI)'));
   select('Österreich.\nNoch'); $('minha-pergunta').focus(); w.getSelection().removeAllRanges();
   $('consultar-leo').click();

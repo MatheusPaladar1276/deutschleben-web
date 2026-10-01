@@ -2,6 +2,7 @@
 const fs = require('node:fs'), path = require('node:path'), os = require('node:os');
 const { spawn } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
+const final = process.argv.includes('--pacote-final');
 const out = fs.mkdtempSync(path.join(os.tmpdir(), 'dl-legibilidade-'));
 const chrome = spawn('C:/Program Files/Google/Chrome/Application/chrome.exe',
   ['--headless=new', '--disable-gpu', '--disable-extensions', '--no-first-run', '--remote-debugging-port=9339',
@@ -25,7 +26,7 @@ const evaluate = async expression => {
   await send('Page.enable');
   let html=fs.readFileSync(path.join(root,'webapp/index.html'),'utf8')
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<link\b[^>]*>/gi,'');
-  html=html.replace('</head>','<style>'+fs.readFileSync(path.join(root,'webapp/acessibilidade.css'),'utf8')+'</style></head>');
+  html=html.replace('</head>','<style>'+['acessibilidade.css','pacote-final.css'].map(f=>fs.readFileSync(path.join(root,'webapp',f),'utf8')).join('\n')+'</style></head>');
   const frame=(await send('Page.getFrameTree')).frameTree.frame.id;
   await send('Page.setDocumentContent',{frameId:frame,html});
   await evaluate(`(()=>{
@@ -37,29 +38,34 @@ const evaluate = async expression => {
     $('resumo-conteudo').value='Resumo final do estudo: Anna apresenta sua origem e seu interesse pelo alemão.';
     $('minha-pergunta').value='Qual é o sentido deste trecho?';
     $('texto-compreensao').value='Minha compreensão temporária do texto.';
-    $('copia-status').textContent='Consulta copiada. Cole no chat com o SDA.';
+    $('copia-status').textContent='';
     $('resumo-status').textContent='Resumo salvo com sucesso.';
     $('estrada-contador').textContent='3 palavras e expressões';
     $('estrada-lista').innerHTML='<div class="estrada-item"><div class="estrada-termo">verstehen <span class="estrada-tipo">Verbo</span></div><div class="estrada-sentido">compreender</div><div class="estrada-meta">Encontrado no estudo de Vorstellung.</div></div>';
     $('rg-contador').textContent='1 referência';
     $('rg-lista').innerHTML='<div class="rg-item"><div class="rg-titulo">Ordem da frase <span class="rg-cat">Sintaxe</span></div><div class="rg-resumo">Referência didática para estudar a frase.</div><div class="rg-formula">S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg).</div><div class="rg-sub">Exemplo</div><ul class="rg-detalhes"><li>Ich lerne heute Deutsch.</li></ul><div class="rg-chips"><span class="rg-chip">Ordem dos elementos</span></div></div>';
-    $('prog-resumo').textContent='Seu percurso de estudo'; $('prog-contador').textContent='1 registro';
+    $('historico-resumo').textContent='Exportação estática da memória'; $('prog-contador').textContent='1 registro';
     $('prog-lista').innerHTML='<div class="prog-secao-titulo">Palavras reencontradas</div><div class="prog-item"><div class="prog-termo">verstehen <span class="prog-tag">Reencontrado</span></div><div class="prog-meta">Estudo de Vorstellung</div><div class="prog-contexto">Ich möchte verstehen.</div><div class="prog-situacao">Em estudo</div></div>';
+    $('memoria-lista').innerHTML='<article class="memoria-item"><h3>Vorstellung — minha apresentação</h3><p class="memoria-conteudo">Anna apresenta sua origem. Ela deseja compreender melhor o alemão.&#10;Este é o resumo explicitamente salvo.</p><button type="button">Retomar estudo</button></article>';
+    $('escolha-lista').innerHTML=['Vorstellung — minha apresentação e primeiros estudos','Um segundo texto em alemão'].map(t=>'<div class="escolha-linha"><span class="escolha-nome">'+t+'</span><div class="escolha-acoes"><button type="button">Abrir</button><button type="button" class="escolha-excluir">Excluir</button></div></div>').join('');
+    $('excluir-texto-titulo').textContent='Vorstellung — minha apresentação e primeiros estudos';
   })()`);
   const results=[];
-  for(const width of [1440,390,320]) {
+  for(const width of (final?[1440,390]:[1440,390,320])) {
     await send('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:false});
-    for(const screen of ['abertura','estudo','estrada-overlay','rg-overlay','prog-overlay','adicionar-texto-overlay']) {
+    for(const screen of (final?['estudo','escolha-textos','excluir-confirmacao','consulta-confirmacao','prog-overlay','estrada-overlay']:['abertura','estudo','estrada-overlay','rg-overlay','prog-overlay','adicionar-texto-overlay'])) {
       await evaluate(`(()=>{
         document.querySelectorAll('.aberta').forEach(e=>e.classList.remove('aberta'));
+        document.querySelectorAll('dialog[open]').forEach(e=>e.close());
         document.getElementById('abertura-textos').hidden=${screen!=='abertura'};
         document.getElementById('estudo-texto').hidden=${screen!=='estudo'};
         document.getElementById('resumo-secao').open=true;
         ${screen.endsWith('overlay')?`document.getElementById('${screen}').classList.add('aberta');`:''}
+        ${['escolha-textos','excluir-confirmacao','consulta-confirmacao'].includes(screen)?`document.getElementById('${screen}').showModal();`:''}
       })()`);
       await sleep(60);
       const report=await evaluate(`(()=>{
-        const errors=[]; const overlay=document.querySelector('.aberta');
+        const errors=[]; const overlay=document.querySelector('dialog[open]')||document.querySelector('.aberta');
         const scope=overlay||document.body;
         const rgb=c=>(c.match(/[\\d.]+/g)||[]).map(Number);
         const lum=c=>rgb(c).slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4}).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);

@@ -45,3 +45,22 @@ não intercepta os módulos Firebase hospedados no Google nem suas chamadas.
 Assim, pode recuperar uma página visitada do cache, mas não garante reinicialização
 completa offline, listagem ou retomada de textos/resumos. Nenhum suporte offline
 novo foi implementado.
+
+## Pacote final sobre 1c5535e
+
+`node tests/textos-final.test.cjs` usa o mesmo emulador e dependências acima.
+Valida somente as novas permissões de exclusão (incluindo atomicidade e UID),
+memória de resumos do Firebase, busca, retomada, revisão explícita, falha e
+cancelamento, limpeza de rascunhos/ID lembrado e confirmação de cópia/foco/Escape.
+Não lê nem altera documentos de produção. Não executa a suíte completa anterior.
+
+`node tests/acessibilidade-layout.cjs --pacote-final` reaproveita a renderização
+local com Chrome headless em Windows, a 100% de zoom, nas larguras 1440 e 390 px.
+Confere apenas telas alteradas e salva imagens/resultado em uma pasta temporária.
+
+A memória faz uma listagem de textos e uma leitura do resumo do UID por texto,
+sem coleção ou índice novo. Exige servidor; falha em qualquer leitura oferece
+nova tentativa, em vez de afirmar ausência de resumos. A exclusão é uma transação
+do original e do resumo conhecido do UID; as regras negam remover apenas um deles
+quando há resumo. O workflow publica e confere as regras ativas antes do Hosting,
+usando configuração temporária e preservando o firebase.json do projeto.

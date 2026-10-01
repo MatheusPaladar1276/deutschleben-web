@@ -18,7 +18,11 @@ service cloud.firestore {
           || (request.resource.data.titulo is string && request.resource.data.titulo.size() > 0));
       allow get, list: if request.auth != null
         && request.auth.uid == "WuXcMYo6m3OuQttlk7z22gRjlvn1";
-      allow update, delete: if false;
+      allow update: if false;
+      // O original só sai quando o resumo conhecido também deixa de existir.
+      allow delete: if request.auth != null
+        && request.auth.uid == "WuXcMYo6m3OuQttlk7z22gRjlvn1"
+        && !existsAfter(/databases/$(database)/documents/textos/$(textoId)/resumos/$(request.auth.uid));
 
       match /resumos/{uid} {
         function autorizado() {
@@ -47,7 +51,10 @@ service cloud.firestore {
           && request.resource.data.criadoEm == resource.data.criadoEm
           && request.resource.data.uid == resource.data.uid
           && request.resource.data.textoId == resource.data.textoId;
-        allow list, delete: if false;
+        // Não permite remover só o resumo nem deixar uma exclusão parcial.
+        allow delete: if autorizado() && originalExiste()
+          && !existsAfter(/databases/$(database)/documents/textos/$(textoId));
+        allow list: if false;
       }
     }
     match /{document=**} {

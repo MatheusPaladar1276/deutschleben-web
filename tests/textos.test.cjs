@@ -24,7 +24,7 @@ async function rulesTests(env) {
   await allow(sdk.getDocFromServer(ref));
   await allow(sdk.getDocsFromServer(sdk.collection(db, 'textos')));
   await deny(sdk.updateDoc(ref, { conteudo: 'Modified original' }));
-  await deny(sdk.deleteDoc(ref));
+  // Exclusão com/sem resumo e atomicidade: textos-final.test.cjs.
   for (const bad of [{ conteudo: '' }, { conteudo: 2 }, { titulo: '' }, { titulo: 4 }, { estado: 'other' },
     { criadoEm: sdk.Timestamp.fromMillis(1) }, { extra: true }]) {
     await deny(sdk.setDoc(sdk.doc(db, 'textos', 'invalid'), { ...validText(), ...bad }));
@@ -50,6 +50,7 @@ async function rulesTests(env) {
   assert.equal((await sdk.getDocFromServer(sum)).data().criadoEm.toMillis(), created.toMillis());
   await deny(sdk.getDocs(sdk.collection(db, 'textos', 'rules-source', 'resumos')));
   await deny(sdk.deleteDoc(sum));
+  await deny(sdk.deleteDoc(ref)); // Não permite deixar o resumo conhecido órfão.
   for (const context of [env.unauthenticatedContext(), env.authenticatedContext('unauthorized')]) {
     const other = context.firestore(), t = sdk.doc(other, 'textos', 'rules-source');
     const s = sdk.doc(other, 'textos', 'rules-source', 'resumos', UID);
@@ -73,6 +74,8 @@ async function uiTests(env) {
   const html = fs.readFileSync(path.join(ROOT, 'webapp/index.html'), 'utf8');
   const dom = new JSDOM(html, { url: 'https://ricardo-d6119.web.app/', runScripts: 'outside-only', pretendToBeVisual: true });
   const w = dom.window, $ = id => w.document.getElementById(id), authCallbacks = [];
+  w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
+  w.HTMLDialogElement.prototype.close = function () { this.open = false; };
   let db = env.authenticatedContext(UID).firestore();
   const auth = { currentUser: { uid: UID } };
   for (const name of ['collection', 'getDocs', 'query', 'orderBy', 'addDoc', 'serverTimestamp', 'doc',

@@ -1,0 +1,44 @@
+/* Mesma família e escala homologadas; organização das novas janelas. */
+#dl-app button.caminhadas-face { pointer-events: auto; }
+.dl-dialog {
+    width: min(1000px, calc(100% - 24px)); max-height: calc(100dvh - 24px);
+    padding: 0; border: 1px solid #b9b2cb; border-radius: 14px;
+    background: #f5f4f8; color: #17233c; overflow-y: auto;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, .22);
+}
+.dl-dialog::backdrop { background: rgba(23, 35, 60, .4); }
+.dl-confirmacao { width: min(680px, calc(100% - 24px)); text-align: center; background: #edf5ef; }
+.dl-dialog-cabecalho {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 14px; padding: 24px;
+    background: #eae5f0; border-bottom: 1px solid #c4b8d0;
+}
+.dl-dialog-corpo { padding: 24px; }
+.dl-dialog-corpo label { display: block; margin-bottom: 10px; }
+.dl-dialog-corpo input { width: 100%; padding: 12px 14px; margin-bottom: 16px;
+    border: 1px solid #9eaaa6; border-radius: 10px; background: #fff; }
+.dl-dialog-acoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.escolha-linha { display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px; padding: 18px; border: 1px solid #cbc6d5;
+    border-radius: 10px; background: #fff; margin-bottom: 12px; }
+.escolha-linha:nth-child(even) { background: #efedf5; }
+.escolha-nome { flex: 1 1 260px; min-width: 0; font-size: 24px; font-weight: 600; overflow-wrap: anywhere; }
+.escolha-acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+#dl-app #excluir-confirmar, #dl-app .escolha-excluir { background: #f5e4de; color: #662b25; border-color: #ba8c83; }
+#dl-app #consulta-confirmacao-titulo { font-size: 32px; margin: 0 0 24px; }
+#dl-app #excluir-texto-titulo { font-size: 24px; font-weight: 600; overflow-wrap: anywhere; }
+#dl-app .memoria-conteudo { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 24px; line-height: 1.6; }
+.memoria-corpo { min-height: 0; overflow-y: auto; }
+.memoria-item { padding: 22px; margin-bottom: 18px; background: #f8fbf8;
+    border: 1px solid #bcd0bf; border-radius: 12px; }
+.memoria-item h3 { margin: 0 0 12px; }
+#historico-anterior { margin-top: 24px; border-top: 1px solid #bcd0bf; padding-top: 20px; }
+#dl-app :is(#escolha-status, #memoria-status, #excluir-status):empty { display: none; }
+@media (max-width: 520px) {
+    .dl-dialog-cabecalho, .dl-dialog-corpo { padding: 18px 14px; }
+    .escolha-linha { padding: 14px; }
+    .escolha-nome { flex-basis: 100%; }
+    .escolha-acoes { width: 100%; }
+    .escolha-acoes button { flex: 1 1 100px; }
+    .memoria-item { padding: 16px; }
+}

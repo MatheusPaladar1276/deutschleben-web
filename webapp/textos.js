@@ -14,17 +14,177 @@
     const voltarNovo = $("adicionar-voltar"), reabrirNovo = $("adicionar-reabrir");
     const pergunta = $("minha-pergunta");
     const memorias = new Map(), novos = new Map();
+    const escolha = $("escolha-textos"), escolhaStatus = $("escolha-status");
+    const confirmacao = $("consulta-confirmacao"), excluirDialogo = $("excluir-confirmacao");
+    const origens = new WeakMap();
+    let textosListados = [], listaErro = false, listaLendo = false, exclusao = null;
+    let resumosSalvos = [], memoriaGeracao = 0, memoriaPronta = false;
     let uid = null, ativo = null, selecionado = null, geracao = 0, listaGeracao = 0;
     let sessao = 0, salvandoNovo = false, novoId = null, focoAnterior = null, tentar = null;
     function usuario() { return window.DL_AUTH?.usuario?.uid || null; }
     function chave(texto) { return JSON.stringify([texto.uid, texto.id]); }
     function memoria(texto = ativo) {
         const k = chave(texto);
-        if (!memorias.has(k)) memorias.set(k, { compreensao: "", pergunta: "", resumo: "", carregado: false,
+        if (!memorias.has(k)) memorias.set(k, { compreensao: "", pergunta: "", resumo: "", salvo: "", carregado: false,
             alterado: false, lendo: false, salvando: false, mensagem: "", erroLeitura: false });
         return memorias.get(k);
     }
     function atual(texto) { return ativo && usuario() === texto.uid && chave(ativo) === chave(texto); }
+    function abrirDialogo(dialogo, origem, foco) {
+        origens.set(dialogo, origem || document.activeElement);
+        if (!dialogo.open) dialogo.showModal();
+        foco?.focus();
+    }
+    function fecharDialogo(dialogo, devolver = true) {
+        if (dialogo.open) dialogo.close();
+        if (devolver) {
+            const origem = origens.get(dialogo);
+            if (origem?.isConnected && !origem.disabled) origem.focus();
+            else if (escolha.open) $("escolha-busca").focus();
+        }
+    }
+    for (const dialogo of [escolha, confirmacao, excluirDialogo]) {
+        dialogo.addEventListener("cancel", ev => {
+            ev.preventDefault();
+            if (dialogo === excluirDialogo && exclusao?.emCurso) return;
+            fecharDialogo(dialogo);
+            if (dialogo === excluirDialogo) exclusao = null;
+        });
+    }
+    $("consulta-entendi").addEventListener("click", () => fecharDialogo(confirmacao));
+    $("escolha-voltar").addEventListener("click", () => fecharDialogo(escolha));
+    $("escolher-textos").addEventListener("click", () => {
+        geracao++; // Uma abertura antiga não deve fechar a escolha recém-aberta.
+        abrirDialogo(escolha, $("escolher-textos"), $("escolha-busca"));
+        renderEscolha();
+        if (uid === UID && !listaLendo) listar();
+    });
+    $("escolha-busca").addEventListener("input", renderEscolha);
+    $("escolha-repetir").addEventListener("click", listar);
+    $("escolha-adicionar").addEventListener("click", () => {
+        fecharDialogo(escolha, false); abrirAdicionar();
+    });
+    function renderEscolha() {
+        const lista = $("escolha-lista"); lista.replaceChildren();
+        $("escolha-adicionar").disabled = uid !== UID || !!exclusao?.emCurso;
+        $("escolha-repetir").hidden = !listaErro;
+        if (uid !== UID) { escolhaStatus.textContent = "Entre com a conta Google autorizada para escolher textos."; return; }
+        if (listaLendo) { escolhaStatus.textContent = "Carregando textos…"; return; }
+        if (listaErro) { escolhaStatus.textContent = "Não foi possível atualizar a lista. Tente novamente."; }
+        const termo = $("escolha-busca").value.trim().toLocaleLowerCase("pt");
+        const visiveis = textosListados.filter(t => (t.titulo || "Sem título").toLocaleLowerCase("pt").includes(termo));
+        if (!listaErro) escolhaStatus.textContent = textosListados.length
+            ? (visiveis.length ? "" : "Nenhum texto corresponde à busca.") : "Nenhum texto salvo. Você pode adicionar o primeiro.";
+        for (const texto of visiveis) {
+            const linha = document.createElement("div"); linha.className = "escolha-linha"; linha.dataset.textoId = texto.id;
+            const nome = document.createElement("span"); nome.className = "escolha-nome"; nome.textContent = texto.titulo || "Sem título";
+            const acoes = document.createElement("div"); acoes.className = "escolha-acoes";
+            for (const [rotulo, classe, acao] of [["Abrir", "escolha-abrir", () => abrirTexto(texto.id)],
+                ["Excluir", "escolha-excluir", ev => confirmarExclusao(texto, ev.currentTarget)]]) {
+                const b = document.createElement("button"); b.type = "button"; b.className = classe; b.textContent = rotulo;
+                b.setAttribute("aria-label", rotulo + ": " + nome.textContent);
+                b.disabled = !!exclusao?.emCurso; b.addEventListener("click", acao); acoes.append(b);
+            }
+            linha.append(nome, acoes); lista.append(linha);
+        }
+    }
+    function renderMemoria() {
+        const lista = $("memoria-lista"); lista.replaceChildren();
+        if (uid !== UID) return;
+        const termo = $("prog-busca").value.trim().toLocaleLowerCase("pt");
+        const visiveis = resumosSalvos.filter(t => (t.titulo + " " + t.conteudo).toLocaleLowerCase("pt").includes(termo));
+        if (memoriaPronta) $("memoria-status").textContent = resumosSalvos.length
+            ? (visiveis.length ? "" : "Nenhum resumo corresponde à busca.") : "Nenhum resumo final salvo nesta conta.";
+        for (const texto of visiveis) {
+            const item = document.createElement("article"); item.className = "memoria-item"; item.dataset.textoId = texto.id;
+            const h = document.createElement("h3"); h.textContent = texto.titulo;
+            const conteudo = document.createElement("p"); conteudo.className = "memoria-conteudo"; conteudo.textContent = texto.conteudo;
+            const retomar = document.createElement("button"); retomar.type = "button"; retomar.textContent = "Retomar estudo";
+            retomar.setAttribute("aria-label", "Retomar estudo: " + texto.titulo);
+            retomar.disabled = !!exclusao?.emCurso;
+            retomar.addEventListener("click", async () => {
+                const conta = uid, epoca = sessao;
+                retomar.disabled = true;
+                const aberto = await abrirTexto(texto.id);
+                if (epoca !== sessao || usuario() !== conta) return;
+                if (aberto) {
+                    const m = memoria(); m.salvo = texto.conteudo;
+                    if (!m.alterado) m.resumo = texto.conteudo;
+                    mostrarResumo(ativo); $("resumo-secao").open = true;
+                    window.fecharProgresso(); $("titulo-texto").setAttribute("tabindex", "-1"); $("titulo-texto").focus();
+                } else {
+                    $("memoria-status").textContent = "Não foi possível retomar o texto. Tente novamente.";
+                    retomar.disabled = false;
+                }
+            });
+            item.append(h, conteudo, retomar); lista.append(item);
+        }
+    }
+    async function carregarMemoria() {
+        const rodada = ++memoriaGeracao, conta = uid, epoca = sessao;
+        $("memoria-repetir").hidden = true; memoriaPronta = false;
+        resumosSalvos = []; renderMemoria();
+        if (conta !== UID || usuario() !== conta) {
+            $("memoria-status").textContent = "Entre com a conta Google autorizada para ler seus resumos."; return;
+        }
+        $("memoria-status").textContent = "Carregando resumos salvos…";
+        try {
+            const dados = await window.DL_DADOS.listarResumos(conta);
+            if (rodada !== memoriaGeracao || epoca !== sessao || usuario() !== conta) return;
+            resumosSalvos = dados; memoriaPronta = true; renderMemoria();
+        } catch (_) {
+            if (rodada !== memoriaGeracao || epoca !== sessao || usuario() !== conta) return;
+            $("memoria-status").textContent = "Não foi possível carregar os resumos salvos. Tente novamente.";
+            $("memoria-repetir").hidden = false;
+        }
+    }
+    $("prog-busca").addEventListener("input", renderMemoria);
+    $("memoria-repetir").addEventListener("click", carregarMemoria);
+    window.DL_TEXTOS = { carregarMemoria };
+    function confirmarExclusao(texto, origem) {
+        if (uid !== UID || usuario() !== uid || exclusao?.emCurso) return;
+        exclusao = { id: texto.id, titulo: texto.titulo, uid, sessao, emCurso: false };
+        $("excluir-texto-titulo").textContent = texto.titulo || "Sem título";
+        $("excluir-status").textContent = "";
+        $("excluir-confirmar").disabled = $("excluir-cancelar").disabled = false;
+        abrirDialogo(excluirDialogo, origem, $("excluir-cancelar"));
+    }
+    $("excluir-cancelar").addEventListener("click", () => {
+        if (exclusao?.emCurso) return;
+        fecharDialogo(excluirDialogo); exclusao = null;
+    });
+    $("excluir-confirmar").addEventListener("click", async () => {
+        const pedido = exclusao;
+        if (!pedido || pedido.emCurso || pedido.uid !== UID || usuario() !== pedido.uid) return;
+        pedido.emCurso = true; geracao++;
+        $("excluir-confirmar").disabled = $("excluir-cancelar").disabled = true;
+        $("excluir-status").textContent = "Excluindo texto e resumo…";
+        renderEscolha(); renderMemoria();
+        try {
+            await window.DL_DADOS.excluirTexto(pedido.id, pedido.uid);
+            if (pedido.sessao !== sessao || usuario() !== pedido.uid) return;
+            listaGeracao++; memoriaGeracao++; listaLendo = false;
+            memorias.delete(JSON.stringify([pedido.uid, pedido.id]));
+            textosListados = textosListados.filter(t => t.id !== pedido.id);
+            resumosSalvos = resumosSalvos.filter(t => t.id !== pedido.id);
+            if (novoId === pedido.id) { novoId = null; reabrirNovo.hidden = true; }
+            if (ativo?.id === pedido.id && ativo.uid === pedido.uid) limparEstudo();
+            pedido.emCurso = false; exclusao = null;
+            opcoes(textosListados); renderMemoria();
+            fecharDialogo(excluirDialogo);
+            escolhaStatus.textContent = "Texto e resumo excluídos.";
+            mensagem("");
+            $("escolha-busca").focus();
+            // Invalida uma leitura anterior da memória e consulta o estado confirmado.
+            carregarMemoria();
+        } catch (_) {
+            if (pedido.sessao !== sessao || usuario() !== pedido.uid) return;
+            pedido.emCurso = false;
+            $("excluir-status").textContent = "Não foi possível confirmar a exclusão. Texto e rascunhos foram mantidos na tela. Atualize a lista antes de tentar novamente.";
+            $("excluir-confirmar").disabled = $("excluir-cancelar").disabled = false;
+            renderEscolha(); renderMemoria();
+        }
+    });
     function mensagem(texto, acao = null) {
         status.textContent = texto;
         tentar = acao;
@@ -32,16 +192,19 @@
     }
     repetir.addEventListener("click", () => { if (tentar) tentar(); });
     function opcoes(textos = []) {
+        textosListados = textos;
         seletor.replaceChildren(new Option("Escolher texto", ""), new Option("Adicionar texto", "adicionar"));
         for (const texto of textos) seletor.add(new Option(texto.titulo || "Sem título", texto.id));
         if (ativo && !Array.from(seletor.options).some(o => o.value === ativo.id)) {
             seletor.add(new Option(ativo.titulo, ativo.id));
         }
         seletor.value = ativo?.id || "";
+        renderEscolha();
     }
     async function listar() {
         if (uid !== UID || usuario() !== uid) return;
         const conta = uid, rodada = ++listaGeracao, epoca = sessao;
+        listaLendo = true; listaErro = false; renderEscolha();
         seletor.disabled = true;
         mensagem("Carregando textos…");
         try {
@@ -51,9 +214,12 @@
             mensagem(textos.length ? "" : "Nenhum texto salvo. Você pode adicionar o primeiro.");
         } catch (_) {
             if (rodada !== listaGeracao || epoca !== sessao || usuario() !== conta) return;
+            listaErro = true;
             mensagem("Não foi possível carregar os textos. Confira a conexão e o acesso da conta.", listar);
         } finally {
-            if (rodada === listaGeracao && epoca === sessao) seletor.disabled = false;
+            if (rodada === listaGeracao && epoca === sessao) {
+                seletor.disabled = false; listaLendo = false; renderEscolha();
+            }
         }
     }
     function limparSelecao() {
@@ -82,6 +248,8 @@
         relerResumo.hidden = !m.erroLeitura;
         relerResumo.disabled = m.lendo;
         resumoStatus.textContent = m.mensagem;
+        $("ultimo-resumo-salvo").hidden = !m.alterado || !m.salvo.trim();
+        $("resumo-salvo-leitura").textContent = m.salvo;
     }
     async function carregarResumo(texto) {
         const m = memoria(texto), epoca = sessao;
@@ -94,7 +262,7 @@
         try {
             const salvo = await window.DL_DADOS.carregarResumo(texto.id, texto.uid);
             if (epoca !== sessao || usuario() !== texto.uid) return;
-            m.resumo = salvo; m.carregado = true;
+            m.resumo = m.salvo = salvo; m.carregado = true;
             m.mensagem = "";
         } catch (_) {
             if (epoca !== sessao || usuario() !== texto.uid) return;
@@ -108,7 +276,7 @@
         }
     }
     async function abrirTexto(id) {
-        if (uid !== UID || usuario() !== uid) return false;
+        if (uid !== UID || usuario() !== uid || exclusao?.emCurso) return false;
         const conta = uid, rodada = ++geracao, epoca = sessao;
         mensagem("Abrindo texto…");
         try {
@@ -126,6 +294,8 @@
             if (!Array.from(seletor.options).some(o => o.value === id)) seletor.add(new Option(ativo.titulo, id));
             seletor.value = id;
             fecharAdicionar();
+            fecharDialogo(escolha, false);
+            fecharDialogo(confirmacao, false);
             mensagem("");
             mostrarResumo(ativo);
             carregarResumo(ativo);
@@ -167,10 +337,13 @@
             mostrarResumo(texto); return;
         }
         m.salvando = true; m.mensagem = "Salvando resumo…"; mostrarResumo(texto);
+        const conteudo = m.resumo;
         try {
-            await window.DL_DADOS.salvarResumo(texto.id, texto.uid, m.resumo);
+            await window.DL_DADOS.salvarResumo(texto.id, texto.uid, conteudo);
             m.alterado = false;
+            m.salvo = conteudo;
             m.mensagem = "Resumo salvo com sucesso.";
+            if (epoca === sessao && usuario() === texto.uid) carregarMemoria();
         } catch (_) {
             m.mensagem = "Não foi possível salvar o resumo. O conteúdo foi mantido; tente novamente.";
         } finally {
@@ -281,11 +454,12 @@
     });
     async function copiar(texto) {
         const atualId = ativo && chave(ativo), epoca = sessao;
+        fecharDialogo(confirmacao, false);
         try {
             if (!navigator.clipboard?.writeText) throw new Error("Cópia indisponível");
             await navigator.clipboard.writeText(texto);
             if (epoca !== sessao || !ativo || chave(ativo) !== atualId) return;
-            $("copia-manual").hidden = true; copiaStatus.textContent = "Consulta copiada. Cole no chat com o SDA.";
+            confirmarCopia($("consultar-sda"));
         } catch (_) {
             if (epoca !== sessao || !ativo || chave(ativo) !== atualId) return;
             copiaStatus.textContent = "A cópia automática não foi possível. Copie manualmente abaixo.";
@@ -293,6 +467,18 @@
             $("copia-conteudo").focus(); $("copia-conteudo").select();
         }
     }
+    function confirmarCopia(origem) {
+        $("copia-manual").hidden = true; copiaStatus.textContent = "";
+        abrirDialogo(confirmacao, origem, $("consulta-entendi"));
+    }
+    $("copia-manual-copiar").addEventListener("click", () => {
+        if (!ativo || usuario() !== ativo.uid || $("copia-manual").hidden) return;
+        $("copia-conteudo").focus(); $("copia-conteudo").select();
+        let efetiva = false;
+        try { efetiva = document.execCommand("copy") === true; } catch (_) { /* Mantém a alternativa manual. */ }
+        if (efetiva) confirmarCopia($("consultar-sda"));
+        else copiaStatus.textContent = "Não foi possível confirmar a cópia. Selecione e copie manualmente o conteúdo abaixo.";
+    });
     $("consultar-sda").addEventListener("click", () => {
         if (!ativo || usuario() !== ativo.uid) return;
         const m = memoria();
@@ -311,12 +497,19 @@
         const conta = usuario();
         if (conta !== uid) {
             guardarFormulario(); uid = conta; sessao++; geracao++; listaGeracao++;
+            memoriaGeracao++; resumosSalvos = []; memoriaPronta = false;
+            listaLendo = listaErro = false; exclusao = null;
+            for (const dialogo of [confirmacao, excluirDialogo, escolha]) fecharDialogo(dialogo, false);
+            $("excluir-texto-titulo").textContent = $("excluir-status").textContent = "";
+            $("escolha-busca").value = $("prog-busca").value = "";
+            $("memoria-status").textContent = ""; $("memoria-repetir").hidden = true; renderMemoria();
             limparEstudo(); opcoes(); novoId = null; reabrirNovo.hidden = true;
             novoStatus.textContent = "";
             const rascunho = novos.get(uid);
             novoTitulo.value = rascunho?.titulo || ""; novoConteudo.value = rascunho?.conteudo || "";
             novoConteudo.setCustomValidity("");
             if (uid === UID) listar();
+            if ($("prog-overlay").classList.contains("aberta")) carregarMemoria();
         }
         if (!window.DL_AUTH?.pronta) { seletor.disabled = true; mensagem("Preparando acesso…"); }
         else if (uid !== UID) {

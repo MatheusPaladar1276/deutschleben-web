@@ -22,7 +22,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Deutschleben">
 
-<script type="module" src="firebase-dados.js?v=textos-1"></script>
+<script type="module" src="firebase-dados.js?v=textos-2"></script>
 
 <style>
 
@@ -1683,6 +1683,7 @@ textarea {
 </style>
 
 <link rel="stylesheet" href="acessibilidade.css?v=1">
+<link rel="stylesheet" href="pacote-final.css?v=1">
 </head>
 
 
@@ -1711,7 +1712,7 @@ textarea {
 <nav class="navegacao">
 
     <div class="caminhadas-controle">
-        <span class="caminhadas-face">
+        <button type="button" class="caminhadas-face" id="escolher-textos" aria-haspopup="dialog">
             <svg class="caminhadas-icone" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 3a6 6 0 0 0-3.8 10.6c.7.6 1.1 1.2 1.3 2.4h5c.2-1.2.6-1.8 1.3-2.4A6 6 0 0 0 12 3z"/>
                 <path d="M9.7 18.5h4.6"/>
@@ -1722,15 +1723,15 @@ textarea {
             <svg class="caminhadas-seta" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M6 9l6 6 6-6"/>
             </svg>
-        </span>
+        </button>
         <select id="seletor-texto" class="caminhadas-select"
-            title="Escolher texto" aria-label="Escolher texto"><option value="">Escolher texto</option><option value="adicionar">Adicionar texto</option></select>
+            title="Escolher texto" aria-label="Escolher texto" hidden><option value="">Escolher texto</option><option value="adicionar">Adicionar texto</option></select>
     </div>
 
     <div class="nav" id="nav-estrada" role="button" tabindex="0"
         onclick="abrirEstrada()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirEstrada();}"
         style="cursor:pointer">
-        Estrada
+        Apostila
     </div>
 
     <div class="nav" id="nav-referencia" role="button" tabindex="0"
@@ -1742,7 +1743,7 @@ textarea {
     <div class="nav" id="nav-progresso" role="button" tabindex="0"
         onclick="abrirProgresso()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirProgresso();}"
         style="cursor:pointer">
-        Progresso Linguístico
+        Memória de estudo
     </div>
 
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -1783,6 +1784,7 @@ textarea {
                 <div id="copia-manual" hidden>
                     <label for="copia-conteudo">Selecione e copie o texto abaixo para colar no chat.</label>
                     <textarea id="copia-conteudo" readonly></textarea>
+                    <button type="button" id="copia-manual-copiar">Copiar consulta</button>
                 </div>
             </aside>
         </div>
@@ -1799,16 +1801,52 @@ textarea {
                 <button type="button" class="botao" id="salvar-resumo" disabled>Salvar resumo</button>
                 <button type="button" class="botao" id="reler-resumo" hidden>Tentar ler resumo novamente</button>
                 <p id="resumo-status" role="status" aria-live="polite"></p>
+                <section id="ultimo-resumo-salvo" hidden>
+                    <h3>Último resumo salvo</h3>
+                    <p id="resumo-salvo-leitura" class="memoria-conteudo"></p>
+                </section>
             </details>
         </section>
     </div>
 </main>
-<script src="textos.js?v=2" defer></script>
+<dialog id="consulta-confirmacao" class="dl-dialog dl-confirmacao" aria-labelledby="consulta-confirmacao-titulo">
+    <div class="dl-dialog-corpo">
+        <h2 id="consulta-confirmacao-titulo">✓ Consulta copiada! Envie ao SDA</h2>
+        <button type="button" id="consulta-entendi" autofocus>Entendi</button>
+    </div>
+</dialog>
+<dialog id="escolha-textos" class="dl-dialog" aria-labelledby="escolha-titulo">
+    <div class="dl-dialog-cabecalho">
+        <h2 id="escolha-titulo">Escolher texto</h2>
+        <button type="button" id="escolha-voltar">Voltar</button>
+    </div>
+    <div class="dl-dialog-corpo">
+        <label for="escolha-busca">Buscar texto pelo título</label>
+        <input type="search" id="escolha-busca" autocomplete="off">
+        <p id="escolha-status" role="status" aria-live="polite"></p>
+        <button type="button" id="escolha-repetir" hidden>Tentar novamente</button>
+        <div id="escolha-lista"></div>
+        <button type="button" id="escolha-adicionar">Adicionar texto</button>
+    </div>
+</dialog>
+<dialog id="excluir-confirmacao" class="dl-dialog dl-confirmacao" aria-labelledby="excluir-titulo" aria-describedby="excluir-descricao">
+    <div class="dl-dialog-corpo">
+        <h2 id="excluir-titulo">Excluir este texto e seu resumo salvo?</h2>
+        <p id="excluir-texto-titulo"></p>
+        <p id="excluir-descricao">A exclusão é definitiva. O texto original e seu resumo salvo serão removidos.</p>
+        <p id="excluir-status" role="status" aria-live="polite"></p>
+        <div class="dl-dialog-acoes">
+            <button type="button" id="excluir-cancelar" autofocus>Cancelar</button>
+            <button type="button" id="excluir-confirmar">Excluir</button>
+        </div>
+    </div>
+</dialog>
+<script src="textos.js?v=3" defer></script>
 
-<div class="estrada-overlay" id="estrada-overlay" role="dialog" aria-modal="true" aria-label="Estrada">
+<div class="estrada-overlay" id="estrada-overlay" role="dialog" aria-modal="true" aria-label="Apostila">
     <div class="estrada-painel">
         <div class="estrada-cabecalho">
-            <h2>Estrada</h2>
+            <h2>Apostila</h2>
             <button type="button" class="estrada-voltar" onclick="fecharEstrada()">Voltar</button>
         </div>
         <input type="search" id="estrada-busca" class="estrada-busca"
@@ -2018,16 +2056,25 @@ textarea {
 })();
 </script>
 
-<div class="prog-overlay" id="prog-overlay" role="dialog" aria-modal="true" aria-label="Progresso Linguístico">
+<div class="prog-overlay" id="prog-overlay" role="dialog" aria-modal="true" aria-label="Memória de estudo">
     <div class="prog-painel">
         <div class="prog-cabecalho">
-            <h2>Progresso Linguístico</h2>
+            <h2>Memória de estudo</h2>
             <button type="button" class="prog-voltar" onclick="fecharProgresso()">Voltar</button>
         </div>
-        <div class="prog-resumo" id="prog-resumo"></div>
         <input type="search" id="prog-busca" class="prog-busca"
-            placeholder="Buscar elemento ou expressão…" autocomplete="off">
-        <div class="prog-filtros" id="prog-filtros">
+            aria-label="Buscar nos resumos salvos" placeholder="Buscar título ou conteúdo do resumo…" autocomplete="off">
+        <p id="memoria-status" role="status" aria-live="polite"></p>
+        <button type="button" id="memoria-repetir" hidden>Tentar novamente</button>
+        <div class="memoria-corpo">
+        <div id="memoria-lista"></div>
+        <details id="historico-anterior">
+            <summary>Histórico anterior</summary>
+            <p>Esta seção preserva registros antigos: compreensões deste navegador e exportação estática. Eles não são os resumos finais salvos no Firebase.</p>
+            <div class="prog-resumo" id="historico-resumo"></div>
+            <input type="search" id="historico-busca" class="prog-busca"
+                aria-label="Buscar na exportação estática" placeholder="Buscar no histórico anterior…" autocomplete="off">
+            <div class="prog-filtros" id="prog-filtros">
             <button type="button" class="prog-filtro ativo" data-grupo="todos">Tudo</button>
             <button type="button" class="prog-filtro" data-grupo="sentido">Sentidos</button>
             <button type="button" class="prog-filtro" data-grupo="bloco">Blocos</button>
@@ -2042,14 +2089,16 @@ textarea {
             <p id="prog-exportacao" class="prog-meta">Exportação estática da memória</p>
             <div id="prog-lista"></div>
         </div>
+        </details>
+        </div>
     </div>
 </div>
 
 <script>
 (function () {
     const overlay = document.getElementById("prog-overlay");
-    const resumo = document.getElementById("prog-resumo");
-    const inputBusca = document.getElementById("prog-busca");
+    const resumo = document.getElementById("historico-resumo");
+    const inputBusca = document.getElementById("historico-busca");
     const filtros = document.getElementById("prog-filtros");
     const lista = document.getElementById("prog-lista");
     const contador = document.getElementById("prog-contador");
@@ -2277,13 +2326,17 @@ textarea {
         mostrarCompreensoesLocais();
         overlay.classList.add("aberta");
         document.body.style.overflow = "hidden";
-        carregar();
-        setTimeout(() => inputBusca.focus(), 50);
+        window.DL_TEXTOS?.carregarMemoria();
+        document.getElementById("prog-busca").focus();
     };
     window.fecharProgresso = function () {
         overlay.classList.remove("aberta");
         document.body.style.overflow = "";
+        document.getElementById("nav-progresso").focus();
     };
+    document.getElementById("historico-anterior").addEventListener("toggle", ev => {
+        if (ev.target.open) { mostrarCompreensoesLocais(); carregar(); }
+    });
     overlay.addEventListener("click", ev => { if (ev.target === overlay) window.fecharProgresso(); });
     document.addEventListener("keydown", ev => {
         if (ev.key === "Escape" && overlay.classList.contains("aberta")) window.fecharProgresso();

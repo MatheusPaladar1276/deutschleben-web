@@ -1,5 +1,5 @@
 # Deploy automático para o Firebase Hosting a cada push na branch principal.
-# Publica o conteúdo já gerado em public/ (os JSON são versionados no repositório).
+# Confere as regras ativas antes de publicar webapp/ (sem alterar firebase.json).
 name: Deploy Firebase Hosting
 
 on:
@@ -16,6 +16,19 @@ jobs:
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
+
+      - name: Node para publicação das regras
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Ferramentas de publicação
+        run: npm install --prefix "$RUNNER_TEMP/dl-firebase" firebase-tools@15.32.1 google-auth-library@11.1.0
+
+      - name: Publicar e conferir regras antes do Hosting
+        run: node tools/publicar-regras.cjs
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
       - name: Deploy no Firebase Hosting (canal live)
         uses: FirebaseExtended/action-hosting-deploy@v0

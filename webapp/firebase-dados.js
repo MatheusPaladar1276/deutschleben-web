@@ -70,6 +70,30 @@ window.DL_DADOS = {
         atualizadoEm: serverTimestamp() });
     });
   },
+  async listarResumos(uid) {
+    if (!db || !auth?.currentUser || auth.currentUser.uid !== uid) throw new Error("Conta desconectada.");
+    const textos = await this.listarTextos();
+    const resumos = await Promise.all(textos.map(async texto => {
+      const conteudo = await this.carregarResumo(texto.id, uid);
+      return { ...texto, conteudo };
+    }));
+    if (auth.currentUser?.uid !== uid) throw new Error("Conta desconectada.");
+    return resumos.filter(resumo => resumo.conteudo.trim());
+  },
+  async excluirTexto(textoId, uid) {
+    if (!db || !auth?.currentUser || auth.currentUser.uid !== uid) throw new Error("Conta desconectada.");
+    if (typeof textoId !== "string" || !textoId.trim() || textoId.includes("/")) throw new Error("ID de texto inválido.");
+    const original = doc(db, "textos", textoId), resumo = doc(db, "textos", textoId, "resumos", uid);
+    // Transação online: lê ambos antes de escrever e só conclui após o backend.
+    await runTransaction(db, async transacao => {
+      const texto = await transacao.get(original);
+      const salvo = await transacao.get(resumo);
+      if (auth.currentUser?.uid !== uid) throw new Error("Conta desconectada.");
+      if (!texto.exists()) throw new Error("Texto não encontrado; atualize a lista antes de excluir.");
+      if (salvo.exists()) transacao.delete(resumo);
+      transacao.delete(original);
+    });
+  },
   async carregarCaminhadas() {
     if (!db) return null;
     try {
