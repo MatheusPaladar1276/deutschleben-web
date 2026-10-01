@@ -304,13 +304,13 @@ h1 {
     box-shadow: 0 2px 5px rgba(23, 35, 60, .08);
 }
 
-.botao:nth-of-type(2) {
+.botao[data-modo="blocos"] {
     background: #f3eee5;
     border-color: #b8a98f;
     color: #554a39;
 }
 
-.botao:nth-of-type(3) {
+.botao[data-modo="verbos"] {
     background: #e9eef5;
     border-color: #91a4bc;
     color: #344a64;
@@ -1581,6 +1581,41 @@ textarea {
     }
 }
 
+
+/* Ajustes restritos às duas janelas de Meu texto. */
+.dl-meu-texto .rg-painel {
+    width: min(980px, 100%);
+    max-height: 90vh;
+    max-height: 90dvh;
+    overflow: hidden;
+}
+.dl-meu-texto .rg-cabecalho { flex: 0 0 auto; flex-wrap: wrap; gap: 12px; }
+.dl-meu-texto .meu-texto-corpo { min-height: 0; overflow-y: auto; padding: 0 6px 8px 0; }
+.dl-meu-texto label { display: block; font-size: 20px; line-height: 1.6; margin: 18px 0 8px; }
+.dl-meu-texto input, .dl-meu-texto textarea {
+    width: 100%; font-family: Arial, sans-serif; font-size: 20px; line-height: 1.6;
+    font-weight: 400; padding: 14px; border: 1px solid #bbc8c3; border-radius: 10px; background: white;
+}
+.dl-meu-texto textarea { min-height: 220px; }
+.dl-meu-texto #meu-texto-leitura-titulo { font-size: 26px; line-height: 1.4; margin: 0 0 20px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.dl-meu-texto #meu-texto-leitura-conteudo { font-size: 20px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; margin-bottom: 28px; }
+.dl-meu-texto button {
+    width: auto; min-height: 44px; padding: 10px 18px; border: 1px solid #b8c9c1;
+    border-radius: 10px; background: #e6efe9; color: #253a35; cursor: pointer;
+    font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4;
+}
+.dl-meu-texto button:hover { background: #d8e8de; }
+.dl-meu-texto button:disabled { opacity: .6; cursor: wait; }
+.dl-meu-texto button:focus-visible, .dl-meu-texto summary:focus-visible { outline: 2px solid #377f6d; outline-offset: 3px; }
+.dl-meu-texto p { font-family: Arial, sans-serif; font-size: 17px; line-height: 1.5; }
+.dl-meu-texto .meu-texto-nota { color: #4c6151; }
+.dl-meu-texto .meu-texto-retomada { margin-top: 28px; border-top: 1px solid #d8cfb6; padding-top: 18px; }
+.dl-meu-texto summary { font-size: 18px; cursor: pointer; margin-bottom: 12px; }
+@media (max-width: 520px) {
+    .dl-meu-texto { padding: 10px; }
+    .dl-meu-texto .rg-painel { max-height: calc(100dvh - 20px); padding: 18px 14px; }
+    .dl-meu-texto .rg-painel h2 { font-size: 25px; }
+}
 </style>
 
 </head>
@@ -1627,10 +1662,6 @@ textarea {
             title="Escolher caminhada" aria-label="Escolher caminhada"></select>
     </div>
 
-    <button type="button" class="nav recordar-nav" onclick="abrirRecordar()">
-        Recordar
-    </button>
-
     <button type="button" class="nav" onclick="abrirMeuTexto()">
         Meu texto
     </button>
@@ -1656,7 +1687,6 @@ textarea {
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
         <button type="button" class="nav" id="auth-acao" disabled>Entrar com Google</button>
         <span id="auth-estado" role="status" aria-live="polite">Não conectado</span>
-        <small id="auth-uid" hidden style="overflow-wrap:anywhere"></small>
         <span id="auth-erro" class="retorno erro" role="alert"></span>
     </div>
 
@@ -1688,29 +1718,10 @@ textarea {
                 Visualização:
             </span>
 
-            <button
-                class="botao ativo"
-                onclick="mudarModo('limpo', this)">
-                Limpo
-            </button>
-
-            <button
-                class="botao"
-                onclick="mudarModo('blocos', this)">
-                Blocos
-            </button>
-
-            <button
-                class="botao"
-                onclick="mudarModo('verbos', this)">
-                Verbos
-            </button>
-
-            <button
-                class="botao"
-                onclick="mudarModo('ambos', this)">
-                Blocos + Verbos
-            </button>
+            <button type="button" class="botao" data-modo="blocos" aria-pressed="false"
+                onclick="mudarModo('blocos')">Blocos</button>
+            <button type="button" class="botao" data-modo="verbos" aria-pressed="false"
+                onclick="mudarModo('verbos')">Verbos</button>
 
         </div>
 
@@ -1940,13 +1951,11 @@ textarea {
             required></textarea>
 
         <div class="acoes-compreensao">
-
-            
-
+            <small>Neste navegador</small>
             <button
                 type="submit"
                 class="enviar">
-                Enviar
+                Guardar compreensão
             </button>
 
         </div>
@@ -1987,31 +1996,29 @@ function ouvirTextoAlemao() {
 
 
 
-function abrirRecordar() {
-    const url = new URL(window.location.href);
-    url.searchParams.set("recordar", "1");
-    window.location.href = url.toString();
+const destaquesCaminhada = { blocos: false, verbos: false };
+function sincronizarDestaques() {
+    const modo = destaquesCaminhada.blocos
+        ? (destaquesCaminhada.verbos ? "ambos" : "blocos")
+        : (destaquesCaminhada.verbos ? "verbos" : "limpo");
+    document.body.classList.remove("modo-limpo", "modo-blocos", "modo-verbos", "modo-ambos");
+    document.body.classList.add("modo-" + modo);
+    document.querySelectorAll(".visualizacao [data-modo]").forEach(botao => {
+        const ligado = destaquesCaminhada[botao.dataset.modo];
+        botao.classList.toggle("ativo", ligado);
+        botao.setAttribute("aria-pressed", String(ligado));
+    });
 }
-
-function fecharRecordar() {
-    const url = new URL(window.location.href);
-    url.searchParams.delete("recordar");
-    window.location.href = url.toString();
+function limparAjudaCaminhada() {
+    esconderFichas();
+    document.getElementById("ajuda-vazia").style.display = "block";
+    document.getElementById("quadro-reativacao").style.display = "none";
 }
-
-
-function mudarModo(modo, botao) {
-
-    document.body.className =
-        "modo-" + modo;
-
-    document
-        .querySelectorAll(".botao")
-        .forEach(
-            b => b.classList.remove("ativo")
-        );
-
-    botao.classList.add("ativo");
+function mudarModo(modo) {
+    if (!(modo in destaquesCaminhada)) return;
+    destaquesCaminhada[modo] = !destaquesCaminhada[modo];
+    sincronizarDestaques();
+    limparAjudaCaminhada();
 }
 
 
@@ -2491,40 +2498,54 @@ function alternarConjugacao() {
 // ===== Web (Firebase Hosting): navegação entre Caminhadas + compreensão local =====
 function padCaminhada(n) { return String(n).padStart(2, "0"); }
 
+const rascunhosCaminhada = new Map();
 function restaurarCompreensao(numero) {
     const form = document.getElementById("form-compreensao");
     if (!form) return;
     const area = form.querySelector("textarea[name='texto_usuario']");
-    if (area) area.value = "";
     const aviso = document.getElementById("aviso-compreensao");
     if (aviso) aviso.remove();
-    const bruto = localStorage.getItem("compreensao_" + numero);
-    if (bruto) {
-        try { const d = JSON.parse(bruto); if (area && d.texto) area.value = d.texto; } catch (e) { /* ignora */ }
+    if (rascunhosCaminhada.has(numero)) {
+        area.value = rascunhosCaminhada.get(numero);
+        return;
     }
+    area.value = "";
+    try {
+        const d = JSON.parse(localStorage.getItem("compreensao_" + numero) || "null");
+        if (d && typeof d.texto === "string") area.value = d.texto;
+    } catch (_) { /* O rascunho da sessão independe do armazenamento local. */ }
 }
-
 function salvarCompreensaoLocal(evento) {
     evento.preventDefault();
     const form = document.getElementById("form-compreensao");
     const area = form.querySelector("textarea[name='texto_usuario']");
-    const t = (area.value || "").trim();
-    if (!t) return false;
-    const numero = window.__caminhadaAtual ? window.__caminhadaAtual() : 1;
-    localStorage.setItem("compreensao_" + numero, JSON.stringify({ texto: t, data: new Date().toISOString() }));
+    if (!area.value.trim()) return false;
+    const numero = window.__caminhadaAtual();
     let aviso = document.getElementById("aviso-compreensao");
     if (!aviso) {
         aviso = document.createElement("p");
         aviso.id = "aviso-compreensao";
+        aviso.setAttribute("role", "status");
         aviso.style.cssText = "margin-top:10px;color:#2f6b46;font-weight:600;";
         form.appendChild(aviso);
     }
-    aviso.textContent = "Sua compreensão foi registrada neste navegador.";
+    try {
+        localStorage.setItem("compreensao_" + numero,
+            JSON.stringify({ texto: area.value, data: new Date().toISOString() }));
+        aviso.textContent = "Compreensão guardada neste navegador.";
+        window.dispatchEvent(new Event("dl-compreensao-guardada"));
+    } catch (_) {
+        aviso.textContent = "Não foi possível guardar neste navegador. Seu rascunho continua nesta sessão.";
+    }
     return false;
 }
 
 (function () {
-    let caminhadas = [];
+    let caminhadas = [], atual = null;
+    const area = document.querySelector("#form-compreensao textarea");
+    area.addEventListener("input", () => {
+        if (atual !== null) rascunhosCaminhada.set(atual, area.value);
+    });
     const sel = document.getElementById("seletor-caminhada");
     const titulo = document.getElementById("titulo-caminhada");
     const texto = document.getElementById("texto-caminhada");
@@ -2532,7 +2553,10 @@ function salvarCompreensaoLocal(evento) {
 
     function mostrar(numero) {
         const c = caminhadas.find(x => x.numero === numero);
-        if (!c) return;
+        if (!c) return false;
+        if (atual !== null) rascunhosCaminhada.set(atual, area.value);
+        atual = numero;
+        sel.value = String(numero);
         if (titulo) titulo.textContent = c.titulo;
         const tmp = document.createElement("div");
         tmp.innerHTML = c.texto_html;
@@ -2540,15 +2564,21 @@ function salvarCompreensaoLocal(evento) {
         if (texto) texto.innerHTML = interno ? interno.innerHTML : c.texto_html;
         if (texto) texto.className = "texto";
         if (navAtual) navAtual.textContent = "📖 Caminhada " + padCaminhada(numero);
-        document.querySelectorAll(".visualizacao .botao").forEach(b => b.classList.remove("ativo"));
-        const primeiro = document.querySelector(".visualizacao .botao");
-        if (primeiro) primeiro.classList.add("ativo");
+        sincronizarDestaques();
+        limparAjudaCaminhada();
         restaurarCompreensao(numero);
-        localStorage.setItem("caminhada_atual", String(numero));
+        try { localStorage.setItem("caminhada_atual", String(numero)); } catch (_) {}
         if (window.speechSynthesis) window.speechSynthesis.cancel();
+        return true;
     }
 
-    window.__caminhadaAtual = () => (sel ? parseInt(sel.value, 10) : 1);
+    window.__caminhadaAtual = () => atual || 1;
+    window.retomarCaminhada = numero => {
+        if (!mostrar(numero)) return false;
+        window.fecharProgresso();
+        area.focus();
+        return true;
+    };
 
     async function obterCaminhadas() {
         // Espera o módulo do Firestore carregar (até ~2s) e tenta o banco online.
@@ -2572,7 +2602,11 @@ function salvarCompreensaoLocal(evento) {
             sel.innerHTML = data
                 .map(c => '<option value="' + c.numero + '">Caminhada ' + padCaminhada(c.numero) + " — " + c.titulo + "</option>")
                 .join("");
-            const salvo = parseInt(localStorage.getItem("caminhada_atual") || "1", 10);
+            let salvo = data[0]?.numero;
+            try {
+                const anterior = Number(localStorage.getItem("caminhada_atual"));
+                if (data.some(c => c.numero === anterior)) salvo = anterior;
+            } catch (_) {}
             sel.value = String(salvo);
             sel.addEventListener("change", () => mostrar(parseInt(sel.value, 10)));
             mostrar(salvo);
@@ -2809,7 +2843,15 @@ function salvarCompreensaoLocal(evento) {
             <button type="button" class="prog-filtro" data-grupo="bloco">Blocos</button>
         </div>
         <div class="prog-contador" id="prog-contador"></div>
-        <div class="prog-lista" id="prog-lista"></div>
+        <div class="prog-lista">
+            <section aria-label="Compreensões guardadas neste navegador">
+                <h3>Compreensões neste navegador</h3>
+                <p class="prog-meta">Registros locais guardados por você, separados da exportação abaixo.</p>
+                <div id="prog-compreensoes-locais"></div>
+            </section>
+            <p id="prog-exportacao" class="prog-meta">Exportação estática da memória</p>
+            <div id="prog-lista"></div>
+        </div>
     </div>
 </div>
 
@@ -2821,6 +2863,51 @@ function salvarCompreensaoLocal(evento) {
     const filtros = document.getElementById("prog-filtros");
     const lista = document.getElementById("prog-lista");
     const contador = document.getElementById("prog-contador");
+    const locais = document.getElementById("prog-compreensoes-locais");
+    function mostrarCompreensoesLocais() {
+        locais.replaceChildren();
+        const registros = [];
+        try {
+            for (let i = 0; i < localStorage.length; i++) {
+                const chave = localStorage.key(i);
+                if (!/^compreensao_\d+$/.test(chave)) continue;
+                try {
+                    const registro = JSON.parse(localStorage.getItem(chave));
+                    if (registro && typeof registro.texto === "string") {
+                        registros.push({ numero: Number(chave.slice(12)), texto: registro.texto });
+                    }
+                } catch (_) { /* Preserva registros antigos que não possam ser lidos. */ }
+            }
+        } catch (_) {
+            locais.textContent = "Não foi possível ler os registros deste navegador.";
+            return;
+        }
+        registros.sort((a, b) => a.numero - b.numero);
+        for (const registro of registros) {
+            const item = document.createElement("details");
+            item.className = "prog-item";
+            const rotulo = document.createElement("summary");
+            rotulo.textContent = "Caminhada " + padCaminhada(registro.numero);
+            const texto = document.createElement("p");
+            texto.className = "prog-contexto";
+            texto.style.whiteSpace = "pre-wrap";
+            texto.style.overflowWrap = "anywhere";
+            texto.textContent = registro.texto;
+            const botao = document.createElement("button");
+            botao.type = "button";
+            botao.className = "prog-voltar";
+            botao.textContent = "Retomar Caminhada " + padCaminhada(registro.numero);
+            botao.addEventListener("click", () => {
+                if (!window.retomarCaminhada(registro.numero)) {
+                    botao.textContent = "Caminhada indisponível agora";
+                }
+            });
+            item.append(rotulo, texto, botao);
+            locais.appendChild(item);
+        }
+        if (!registros.length) locais.textContent = "Nenhuma compreensão guardada neste navegador.";
+    }
+    window.addEventListener("dl-compreensao-guardada", mostrarCompreensoesLocais);
     let dados = null, carregando = false, tipoAtivo = "todos";
 
     function esc(t) {
@@ -2979,6 +3066,8 @@ function salvarCompreensaoLocal(evento) {
             return;
         }
 
+        document.getElementById("prog-exportacao").textContent =
+            "Exportação estática da memória — " + (bruto.gerado_em || "data não informada");
         const elementos = agruparElementos(bruto.evidencias_memoria || []);
         const reencontros = prepararReencontros(bruto.reencontros || [], bruto.evidencias_reencontro || []);
         dados = { elementos, reencontros };
@@ -3004,6 +3093,7 @@ function salvarCompreensaoLocal(evento) {
     inputBusca.addEventListener("input", () => { if (dados) render(); });
 
     window.abrirProgresso = function () {
+        mostrarCompreensoesLocais();
         overlay.classList.add("aberta");
         document.body.style.overflow = "hidden";
         carregar();
@@ -3020,55 +3110,55 @@ function salvarCompreensaoLocal(evento) {
 })();
 </script>
 
-<div class="rg-overlay" id="meu-texto-overlay" role="dialog" aria-modal="true" aria-labelledby="meu-texto-titulo">
+<div class="rg-overlay dl-meu-texto" id="meu-texto-overlay" role="dialog" aria-modal="true" aria-labelledby="meu-texto-titulo">
     <div class="rg-painel">
         <div class="rg-cabecalho">
             <h2 id="meu-texto-titulo">Meu texto</h2>
-            <button type="button" class="rg-voltar" id="meu-texto-voltar">Voltar</button>
+            <button type="button" id="meu-texto-voltar">Voltar</button>
         </div>
-        <div id="meu-texto-edicao">
-        <section aria-label="Texto salvo">
-            <p id="meu-texto-leitura" class="retorno" role="status" aria-live="polite"></p>
-            <button type="button" class="enviar" id="meu-texto-reabrir" hidden>Tentar abrir novamente</button>
-            <article id="meu-texto-salvo" hidden>
-                <h3 id="meu-texto-salvo-titulo" style="white-space:pre-wrap;overflow-wrap:anywhere"></h3>
-                <div id="meu-texto-salvo-conteudo" lang="de" style="white-space:pre-wrap;overflow-wrap:anywhere"></div>
-                <button type="button" class="enviar" id="meu-texto-compreender">Ler e compreender</button>
-            </article>
-            <details>
-                <summary>Retomar outro texto pelo ID</summary>
+        <div class="meu-texto-corpo">
+            <form id="form-meu-texto">
+                <label for="meu-texto-nome">Título (opcional)</label>
+                <input type="text" id="meu-texto-nome" autocomplete="off">
+                <label for="meu-texto-conteudo">Texto em alemão</label>
+                <textarea id="meu-texto-conteudo" lang="de" required></textarea>
+                <p id="meu-texto-retorno" role="status" aria-live="polite"></p>
+                <button type="submit" id="meu-texto-salvar">Salvar texto</button>
+            </form>
+            <details class="meu-texto-retomada">
+                <summary>Retomar texto salvo</summary>
+                <button type="button" id="meu-texto-ultimo" hidden>Abrir último texto</button>
                 <form id="form-retomar-texto">
                     <label for="meu-texto-id">ID do texto salvo</label>
-                    <input id="meu-texto-id" class="rg-busca" type="text" required autocomplete="off">
-                    <button type="submit" class="enviar" id="meu-texto-abrir">Abrir texto</button>
+                    <input id="meu-texto-id" type="text" required autocomplete="off">
+                    <button type="submit" id="meu-texto-abrir">Abrir texto</button>
                 </form>
             </details>
-        </section>
-        <h3>Novo texto</h3>
-        <form id="form-meu-texto">
-            <label for="meu-texto-nome" class="texto-reflexao">Título (opcional)</label>
-            <input type="text" id="meu-texto-nome" class="rg-busca" autocomplete="off">
-            <label for="meu-texto-conteudo" class="texto-reflexao">Texto em alemão</label>
-            <textarea id="meu-texto-conteudo" lang="de" required></textarea>
-            <p id="meu-texto-retorno" class="retorno" role="status" aria-live="polite"></p>
-            <div class="acoes-compreensao">
-                <button type="submit" class="enviar" id="meu-texto-salvar">Salvar texto</button>
-            </div>
-        </form>
+            <p id="meu-texto-leitura" role="status" aria-live="polite"></p>
+            <button type="button" id="meu-texto-reabrir" hidden>Tentar abrir novamente</button>
         </div>
-        <section id="meu-texto-area-leitura" aria-label="Leitura e compreensão" hidden>
-            <h3 id="meu-texto-leitura-titulo" style="white-space:pre-wrap;overflow-wrap:anywhere"></h3>
-            <div id="meu-texto-leitura-conteudo" lang="de" style="white-space:pre-wrap;overflow-wrap:anywhere"></div>
-            <label for="meu-texto-compreensao" class="texto-reflexao">Minha compreensão</label>
+    </div>
+</div>
+<div class="rg-overlay dl-meu-texto" id="meu-texto-leitor-overlay" role="dialog" aria-modal="true" aria-labelledby="meu-texto-leitor-titulo">
+    <div class="rg-painel">
+        <div class="rg-cabecalho">
+            <h2 id="meu-texto-leitor-titulo">Ler e compreender</h2>
+            <button type="button" id="meu-texto-leitor-voltar">Voltar a Meu texto</button>
+        </div>
+        <div class="meu-texto-corpo">
+            <h3 id="meu-texto-leitura-titulo"></h3>
+            <div id="meu-texto-leitura-conteudo" lang="de"></div>
+            <label for="meu-texto-compreensao">Minha compreensão</label>
             <textarea id="meu-texto-compreensao" aria-describedby="meu-texto-compreensao-aviso"></textarea>
-            <p id="meu-texto-compreensao-aviso" class="texto-reflexao">Sua compreensão fica disponível enquanto esta página estiver aberta.</p>
-        </section>
+            <p id="meu-texto-compreensao-aviso" class="meu-texto-nota">Sua compreensão fica disponível enquanto esta página estiver aberta.</p>
+        </div>
     </div>
 </div>
 
 <script>
 (function () {
     const overlay = document.getElementById("meu-texto-overlay");
+    const leitor = document.getElementById("meu-texto-leitor-overlay");
     const form = document.getElementById("form-meu-texto");
     const titulo = document.getElementById("meu-texto-nome");
     const conteudo = document.getElementById("meu-texto-conteudo");
@@ -3077,118 +3167,125 @@ function salvarCompreensaoLocal(evento) {
     const retorno = document.getElementById("meu-texto-retorno");
     const leitura = document.getElementById("meu-texto-leitura");
     const reabrir = document.getElementById("meu-texto-reabrir");
-    const artigo = document.getElementById("meu-texto-salvo");
-    const salvoTitulo = document.getElementById("meu-texto-salvo-titulo");
-    const salvoConteudo = document.getElementById("meu-texto-salvo-conteudo");
+    const ultimo = document.getElementById("meu-texto-ultimo");
     const retomarForm = document.getElementById("form-retomar-texto");
     const textoId = document.getElementById("meu-texto-id");
     const abrir = document.getElementById("meu-texto-abrir");
-    const edicao = document.getElementById("meu-texto-edicao");
-    const areaLeitura = document.getElementById("meu-texto-area-leitura");
-    const compreender = document.getElementById("meu-texto-compreender");
     const leituraTitulo = document.getElementById("meu-texto-leitura-titulo");
     const leituraConteudo = document.getElementById("meu-texto-leitura-conteudo");
     const compreensao = document.getElementById("meu-texto-compreensao");
-    const cabecalho = document.getElementById("meu-texto-titulo");
-    const compreensoes = new Map();
-    let textoAberto = null;
-    const ids = new Map();
-    let salvando = false, focoAnterior = null;
-    let uidAtual = null, ultimoId = null, leituraAtual = 0, lido = false;
-    let memoriaDisponivel = true;
+    const voltarLeitor = document.getElementById("meu-texto-leitor-voltar");
+    const compreensoes = new Map(), novosTextos = new Map(), ids = new Map();
+    let textoAberto = null, uidAtual = null, ultimoId = null, tentativaId = null;
+    let salvando = false, carregando = false, leituraAtual = 0, focoAnterior = null;
 
     function uidConectado() { return window.DL_AUTH?.usuario?.uid || null; }
     function chave(uid) { return "dl:meu-texto:" + uid; }
+    function chaveCompreensao() { return JSON.stringify([textoAberto.uid, textoAberto.id]); }
+    function guardarNovoRascunho() {
+        novosTextos.set(uidAtual, { titulo: titulo.value, conteudo: conteudo.value });
+    }
+    function botoes() {
+        salvar.disabled = voltar.disabled = salvando;
+        abrir.disabled = ultimo.disabled = reabrir.disabled = salvando || carregando;
+        ultimo.hidden = !ultimoId;
+        titulo.readOnly = conteudo.readOnly = salvando;
+    }
     function lembrar(uid, id) {
         ids.set(uid, id);
         try { localStorage.setItem(chave(uid), id); return true; }
         catch (_) { return false; }
     }
-    function chaveCompreensao() {
-        return JSON.stringify([textoAberto.uid, textoAberto.id]);
-    }
     function voltarAoTexto() {
-        areaLeitura.hidden = true;
-        edicao.hidden = false;
-        cabecalho.textContent = "Meu texto";
-        voltar.textContent = "Voltar";
+        leitor.classList.remove("aberta");
+        overlay.classList.add("aberta");
+        document.body.style.overflow = "hidden";
+        titulo.focus();
     }
-    compreender.addEventListener("click", () => {
+    function mostrarLeitor() {
         if (!textoAberto || textoAberto.uid !== uidConectado()) return;
         leituraTitulo.textContent = textoAberto.titulo;
         leituraConteudo.textContent = textoAberto.conteudo;
         compreensao.value = compreensoes.get(chaveCompreensao()) || "";
-        edicao.hidden = true;
-        areaLeitura.hidden = false;
-        cabecalho.textContent = "Ler e compreender";
-        voltar.textContent = "Voltar a Meu texto";
-        compreensao.focus();
+        overlay.classList.remove("aberta");
+        leitor.classList.add("aberta");
+        document.body.style.overflow = "hidden";
+        leitor.querySelector(".meu-texto-corpo").scrollTop = 0;
+        voltarLeitor.focus();
+    }
+    async function abrirSalvo(id, salvoAgora = false) {
+        const uid = uidAtual;
+        if (!uid || uid !== uidConectado() || !id || carregando) return;
+        const tentativa = ++leituraAtual;
+        tentativaId = id;
+        carregando = true;
+        botoes();
+        reabrir.hidden = true;
+        leitura.textContent = "Abrindo texto salvo…";
+        try {
+            const texto = await window.DL_DADOS.carregarTexto(id);
+            if (tentativa !== leituraAtual || uid !== uidConectado()) return;
+            textoAberto = Object.freeze({ uid, id, titulo: texto.titulo, conteudo: texto.conteudo });
+            ultimoId = id;
+            textoId.value = id;
+            const persistido = lembrar(uid, id);
+            leitura.textContent = persistido ? "" : "Anote o ID para a próxima visita: " + id;
+            if (overlay.classList.contains("aberta")) mostrarLeitor();
+        } catch (_) {
+            if (tentativa !== leituraAtual || uid !== uidConectado()) return;
+            leitura.textContent = salvoAgora
+                ? "O texto foi salvo, mas não foi possível abri-lo. Tente abrir novamente, sem reenviar. ID: " + id
+                : "Não foi possível abrir o texto. Confira o ID, sua conta e a conexão e tente novamente.";
+            reabrir.hidden = false;
+        } finally {
+            if (tentativa === leituraAtual) {
+                carregando = false;
+                botoes();
+            }
+        }
+    }
+    function atualizarConta() {
+        const uid = uidConectado();
+        if (uid !== uidAtual) {
+            guardarNovoRascunho();
+            uidAtual = uid;
+            leituraAtual++;
+            carregando = false;
+            textoAberto = null;
+            leituraTitulo.textContent = leituraConteudo.textContent = compreensao.value = "";
+            if (leitor.classList.contains("aberta")) voltarAoTexto();
+            const rascunho = novosTextos.get(uid);
+            titulo.value = rascunho?.titulo || "";
+            conteudo.value = rascunho?.conteudo || "";
+            conteudo.setCustomValidity("");
+            retorno.textContent = leitura.textContent = "";
+            reabrir.hidden = true;
+            ultimoId = uid ? ids.get(uid) || null : null;
+            try { if (uid && !ultimoId) ultimoId = localStorage.getItem(chave(uid)); } catch (_) {}
+            tentativaId = ultimoId;
+            textoId.value = ultimoId || "";
+        }
+        if (!uid) leitura.textContent = "Entre com Google para salvar ou retomar seu texto.";
+        botoes();
+    }
+    titulo.addEventListener("input", guardarNovoRascunho);
+    conteudo.addEventListener("input", () => {
+        conteudo.setCustomValidity("");
+        guardarNovoRascunho();
     });
     compreensao.addEventListener("input", () => {
         if (textoAberto && textoAberto.uid === uidConectado()) {
             compreensoes.set(chaveCompreensao(), compreensao.value);
         }
     });
-    function limparLeitura() {
-        voltarAoTexto();
-        textoAberto = null;
-        leituraTitulo.textContent = leituraConteudo.textContent = compreensao.value = "";
-        leituraAtual++;
-        lido = false;
-        artigo.hidden = true;
-        salvoTitulo.textContent = salvoConteudo.textContent = "";
-        reabrir.hidden = true;
-        reabrir.disabled = abrir.disabled = false;
-        leitura.textContent = "";
-    }
-    async function abrirSalvo() {
-        const uid = uidAtual, id = ultimoId;
-        if (!uid || uid !== uidConectado() || !id) return;
-        limparLeitura();
-        const tentativa = leituraAtual;
-        reabrir.disabled = abrir.disabled = true;
-        leitura.textContent = "Abrindo texto salvo…";
-        try {
-            const texto = await window.DL_DADOS.carregarTexto(id);
-            if (tentativa !== leituraAtual || uid !== uidConectado()) return;
-            textoAberto = Object.freeze({ uid, id, titulo: texto.titulo, conteudo: texto.conteudo });
-            salvoTitulo.textContent = texto.titulo;
-            salvoConteudo.textContent = texto.conteudo;
-            artigo.hidden = false;
-            lido = true;
-            leitura.textContent = memoriaDisponivel ? "Texto salvo aberto." :
-                "Texto salvo aberto. Este navegador não conseguiu guardar o ID para a próxima visita. Anote o ID: " + id;
-        } catch (_) {
-            if (tentativa !== leituraAtual || uid !== uidConectado()) return;
-            leitura.textContent = "O texto está salvo, mas não foi possível abri-lo. Tente abrir novamente, sem reenviar." +
-                (memoriaDisponivel ? "" : " Anote o ID para retomar: " + id);
-            reabrir.hidden = false;
-        } finally {
-            if (tentativa === leituraAtual) reabrir.disabled = abrir.disabled = false;
-        }
-    }
-    function atualizarConta() {
-        const uid = uidConectado();
-        if (uid !== uidAtual) {
-            uidAtual = uid;
-            limparLeitura();
-            form.reset();
-            retorno.textContent = "";
-            ultimoId = uid ? ids.get(uid) || null : null;
-            memoriaDisponivel = true;
-            try { if (uid && !ultimoId) ultimoId = localStorage.getItem(chave(uid)); }
-            catch (_) { memoriaDisponivel = false; }
-            textoId.value = ultimoId || "";
-        }
-        if (!uid) leitura.textContent = "Entre com Google para salvar ou retomar seu texto.";
-        else if (overlay.classList.contains("aberta") && ultimoId && !lido && !abrir.disabled) abrirSalvo();
-    }
     window.addEventListener("dl-auth-alterado", atualizarConta);
-    reabrir.addEventListener("click", abrirSalvo);
+    ultimo.addEventListener("click", () => abrirSalvo(ultimoId));
+    reabrir.addEventListener("click", () => abrirSalvo(tentativaId));
+    voltarLeitor.addEventListener("click", voltarAoTexto);
     retomarForm.addEventListener("submit", ev => {
         ev.preventDefault();
-        if (abrir.disabled || salvando) return;
-        if (!uidAtual || uidAtual !== uidConectado()) {
+        if (carregando || salvando) return;
+        if (!uidAtual) {
             leitura.textContent = "Entre com Google para retomar seu texto.";
             return;
         }
@@ -3197,39 +3294,36 @@ function salvarCompreensaoLocal(evento) {
             leitura.textContent = "Informe apenas o ID do texto.";
             return;
         }
-        ultimoId = id;
-        memoriaDisponivel = lembrar(uidAtual, id);
-        abrirSalvo();
+        abrirSalvo(id);
     });
-    atualizarConta();
-
     window.abrirMeuTexto = function () {
         focoAnterior = document.activeElement;
-        overlay.classList.add("aberta");
-        document.body.style.overflow = "hidden";
         atualizarConta();
-        titulo.focus();
+        voltarAoTexto();
     };
-
     function fechar() {
-        if (!areaLeitura.hidden) {
-            voltarAoTexto();
-            compreender.focus();
-            return;
-        }
         if (salvando) return;
+        guardarNovoRascunho();
+        leituraAtual++;
+        carregando = false;
+        botoes();
         overlay.classList.remove("aberta");
         document.body.style.overflow = "";
         if (focoAnterior) focoAnterior.focus();
     }
-
     voltar.addEventListener("click", fechar);
     overlay.addEventListener("click", ev => { if (ev.target === overlay) fechar(); });
+    leitor.addEventListener("click", ev => { if (ev.target === leitor) voltarAoTexto(); });
     document.addEventListener("keydown", ev => {
-        if (!overlay.classList.contains("aberta")) return;
-        if (ev.key === "Escape") fechar();
+        const ativo = leitor.classList.contains("aberta") ? leitor :
+            (overlay.classList.contains("aberta") ? overlay : null);
+        if (!ativo) return;
+        if (ev.key === "Escape") {
+            ev.preventDefault();
+            if (ativo === leitor) voltarAoTexto(); else fechar();
+        }
         if (ev.key === "Tab") {
-            const focaveis = Array.from(overlay.querySelectorAll("button, input, textarea, summary"))
+            const focaveis = Array.from(ativo.querySelectorAll("button, input, textarea, summary"))
                 .filter(el => !el.disabled && el.getClientRects().length);
             const primeiro = focaveis[0], ultimo = focaveis[focaveis.length - 1];
             if (ev.shiftKey && document.activeElement === primeiro) {
@@ -3239,8 +3333,6 @@ function salvarCompreensaoLocal(evento) {
             }
         }
     });
-    conteudo.addEventListener("input", () => conteudo.setCustomValidity(""));
-
     form.addEventListener("submit", async ev => {
         ev.preventDefault();
         if (salvando) return;
@@ -3251,36 +3343,36 @@ function salvarCompreensaoLocal(evento) {
         }
         conteudo.setCustomValidity(conteudo.value.trim() ? "" : "Informe o texto em alemão.");
         if (!form.reportValidity()) return;
+        // Invalida uma leitura anterior para que ela não troque a janela durante o envio.
+        leituraAtual++;
+        carregando = false;
         salvando = true;
-        salvar.disabled = voltar.disabled = true;
-        titulo.readOnly = conteudo.readOnly = true;
-        retorno.className = "retorno";
+        botoes();
         retorno.textContent = "Salvando texto…";
+        let id;
         try {
-            if (!window.DL_DADOS || !window.DL_DADOS.salvarTexto) {
-                throw new Error("Serviço indisponível");
-            }
-            const id = await window.DL_DADOS.salvarTexto(conteudo.value, titulo.value);
-            const persistido = lembrar(uid, id);
-            if (uid !== uidConectado()) return;
-            ultimoId = id;
-            memoriaDisponivel = persistido;
-            textoId.value = id;
-            form.reset();
-            retorno.textContent = "Texto salvo com sucesso.";
-            await abrirSalvo();
+            id = await window.DL_DADOS.salvarTexto(conteudo.value, titulo.value);
         } catch (erro) {
-            if (uid !== uidConectado()) return;
-            retorno.className = "retorno erro";
-            retorno.textContent = erro.code === "permission-denied"
-                ? "O salvamento não foi autorizado. Seu texto foi mantido; tente novamente quando o acesso estiver disponível."
-                : "Não foi possível salvar o texto. Verifique sua conexão e tente novamente. O conteúdo foi mantido.";
+            if (uid === uidConectado()) {
+                retorno.textContent = erro.code === "permission-denied"
+                    ? "O salvamento não foi autorizado. Seu texto foi mantido."
+                    : "Não foi possível salvar. Verifique a conexão e tente novamente. Seu texto foi mantido.";
+            }
         } finally {
             salvando = false;
-            salvar.disabled = voltar.disabled = false;
-            titulo.readOnly = conteudo.readOnly = false;
+            botoes();
         }
+        if (!id) return;
+        lembrar(uid, id);
+        novosTextos.delete(uid);
+        if (uid !== uidConectado()) return;
+        ultimoId = id;
+        textoId.value = id;
+        form.reset();
+        retorno.textContent = "Texto salvo com sucesso.";
+        await abrirSalvo(id, true);
     });
+    atualizarConta();
 })();
 </script>
 
@@ -3288,7 +3380,6 @@ function salvarCompreensaoLocal(evento) {
 (function () {
     const acao = document.getElementById("auth-acao");
     const estado = document.getElementById("auth-estado");
-    const uid = document.getElementById("auth-uid");
     const erro = document.getElementById("auth-erro");
     let ocupada = false;
 
@@ -3298,8 +3389,6 @@ function salvarCompreensaoLocal(evento) {
         estado.textContent = usuario ? "Conectado" : "Não conectado";
         acao.textContent = usuario ? "Sair" : "Entrar com Google";
         acao.disabled = ocupada || !auth || !auth.pronta;
-        uid.hidden = !usuario;
-        uid.textContent = usuario ? "UID: " + usuario.uid : "";
     }
 
     window.addEventListener("dl-auth-alterado", atualizar);
