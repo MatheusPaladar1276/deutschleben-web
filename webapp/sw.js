@@ -1,7 +1,7 @@
 // Service worker do Deutschleben — instalação (PWA) e cache.
 // Estratégia: rede-primeiro para navegação/JSON (conteúdo sempre atual),
 // cache-primeiro para estáticos (ícones). Suba a versão ao publicar mudanças.
-const CACHE = "deutschleben-v15";
+const CACHE = "deutschleben-v16";
 const ESTATICOS = [
   "./manifest.webmanifest",
   "./icons/icon-192.png",

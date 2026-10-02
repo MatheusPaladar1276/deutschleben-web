@@ -1,5 +1,20 @@
 /* Mesma família e escala homologadas; organização das novas janelas. */
-.consulta-sda { margin: 24px 0; }
+.consulta-sda {
+    margin: 24px 0; padding: 22px 26px; background: #eeebf5;
+    border: 1px solid #988bac; border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .07);
+}
+#dl-app #consulta-sda-indicacao { margin: 0 0 16px; font-size: 22px; font-weight: 600; color: #17233c; }
+.selecao-caixa { padding: 18px; background: #f2ebd7; border: 1px solid #9e936f; border-radius: 10px; }
+#dl-app #selecao-aviso { margin: 0; font-size: 22px; font-weight: 600; color: #17233c; }
+#dl-app #selecao-texto { margin: 12px 0 0; font-size: 24px; color: #17233c; }
+#dl-app .ajuda label[for="minha-pergunta"] { display: block; margin-top: 24px; font-size: 22px; font-weight: 600; color: #17233c; }
+#dl-app #resumo-status {
+    padding: 16px 20px; border: 1px solid #a6ab9b; border-radius: 10px;
+    background: #f7f4eb; color: #17233c; font-size: 22px; font-weight: 600;
+}
+#dl-app #resumo-status.resumo-sucesso { background: #e2f2e5; border-color: #699472; color: #1d402c; }
+#dl-app #resumo-status.resumo-erro { background: #f8e9e3; border-color: #ba8c83; color: #662b25; }
 #dl-app button.caminhadas-face { pointer-events: auto; }
 .dl-dialog {
     width: min(1000px, calc(100% - 24px)); max-height: calc(100dvh - 24px);
@@ -36,6 +51,7 @@
 #historico-anterior { margin-top: 24px; border-top: 1px solid #bcd0bf; padding-top: 20px; }
 #dl-app :is(#escolha-status, #memoria-status, #excluir-status):empty { display: none; }
 @media (max-width: 520px) {
+    .consulta-sda { padding: 18px 16px; }
     .dl-dialog-cabecalho, .dl-dialog-corpo { padding: 18px 14px; }
     .escolha-linha { padding: 14px; }
     .escolha-nome { flex-basis: 100%; }

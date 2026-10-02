@@ -41,7 +41,7 @@ function select(text) {
   $('consultar-sda').click(); await tick();
   assert(copied.includes('Trecho: Anna')); assert(copied.includes('Frase de contexto: Mein Name ist Anna.'));
   assert(copied.includes('Minha pergunta:\nQual é o sentido?')); assert(copied.includes('Minha compreensão:\nMinha leitura\n<segura>'));
-  assert(copied.includes('Título: Vorstellung')); assert(!copied.includes('Original:'));
+  assert(copied.includes('Título: Vorstellung')); assert(copied.includes('Original:'));
   assert(copied.includes('S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg).'));
   assert.equal($('copia-status').textContent, ''); assert($('consulta-confirmacao').open);
   $('consulta-entendi').click();

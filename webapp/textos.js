@@ -20,7 +20,7 @@
     let textosListados = [], listaErro = false, listaLendo = false, exclusao = null;
     let resumosSalvos = [], memoriaGeracao = 0, memoriaPronta = false;
     let uid = null, ativo = null, selecionado = null, geracao = 0, listaGeracao = 0;
-    let sessao = 0, salvandoNovo = false, novoId = null, focoAnterior = null, tentar = null;
+    let sessao = 0, salvandoNovo = false, novoId = null, focoAnterior = null, tentar = null, copiaGeracao = 0;
     function usuario() { return window.DL_AUTH?.usuario?.uid || null; }
     function chave(texto) { return JSON.stringify([texto.uid, texto.id]); }
     function memoria(texto = ativo) {
@@ -234,6 +234,7 @@
         }
     }
     function limparSelecao() {
+        copiaGeracao++; // Descarta respostas pendentes da consulta que acaba de ser limpa.
         selecionado = null;
         $("selecao-texto").textContent = "";
         $("selecao-aviso").textContent = "Selecione uma palavra ou trecho do original.";
@@ -242,13 +243,24 @@
         $("copia-manual").hidden = true;
         $("copia-conteudo").value = copiaStatus.textContent = "";
     }
+    $("limpar-consulta").addEventListener("click", () => {
+        if (!ativo || usuario() !== ativo.uid) return;
+        pergunta.value = ""; memoria().pergunta = "";
+        fecharDialogo(confirmacao, false); pergunta.focus(); limparSelecao();
+    });
     function limparEstudo() {
         ativo = null;
         titulo.textContent = original.textContent = compreensao.value = pergunta.value = resumo.value = resumoStatus.textContent = "";
+        resumoStatus.classList.remove("resumo-sucesso", "resumo-erro");
         estudo.hidden = true;
         inicio.hidden = false;
         limparSelecao();
         window.speechSynthesis?.cancel();
+    }
+    function mostrarMensagemResumo(m) {
+        resumoStatus.textContent = m.mensagem;
+        resumoStatus.classList.toggle("resumo-sucesso", m.mensagem === "✓ Resumo salvo com sucesso" && !m.alterado && !m.salvando && !m.lendo);
+        resumoStatus.classList.toggle("resumo-erro", /^(Não foi possível|Informe um resumo)/.test(m.mensagem));
     }
     function mostrarResumo(texto) {
         if (!atual(texto)) return;
@@ -258,7 +270,7 @@
         salvarResumo.disabled = !m.carregado || m.lendo || m.salvando;
         relerResumo.hidden = !m.erroLeitura;
         relerResumo.disabled = m.lendo;
-        resumoStatus.textContent = m.mensagem;
+        mostrarMensagemResumo(m);
         $("ultimo-resumo-salvo").hidden = !m.alterado || !m.salvo.trim();
         $("resumo-salvo-leitura").textContent = m.salvo;
     }
@@ -336,7 +348,7 @@
         const m = memoria();
         m.resumo = resumo.value; m.alterado = true;
         m.mensagem = "Alterações ainda não salvas.";
-        resumoStatus.textContent = m.mensagem;
+        mostrarMensagemResumo(m);
     });
     relerResumo.addEventListener("click", () => { if (ativo) carregarResumo(ativo); });
     salvarResumo.addEventListener("click", async () => {
@@ -353,7 +365,7 @@
             await window.DL_DADOS.salvarResumo(texto.id, texto.uid, conteudo);
             m.alterado = false;
             m.salvo = conteudo;
-            m.mensagem = "Resumo salvo com sucesso.";
+            m.mensagem = "✓ Resumo salvo com sucesso";
             if (epoca === sessao && usuario() === texto.uid) carregarMemoria();
         } catch (_) {
             m.mensagem = "Não foi possível salvar o resumo. O conteúdo foi mantido; tente novamente.";
@@ -464,15 +476,15 @@
         }
     });
     async function copiar(texto) {
-        const atualId = ativo && chave(ativo), epoca = sessao;
+        const atualId = ativo && chave(ativo), epoca = sessao, rodada = ++copiaGeracao;
         fecharDialogo(confirmacao, false);
         try {
             if (!navigator.clipboard?.writeText) throw new Error("Cópia indisponível");
             await navigator.clipboard.writeText(texto);
-            if (epoca !== sessao || !ativo || chave(ativo) !== atualId) return;
+            if (rodada !== copiaGeracao || epoca !== sessao || !ativo || chave(ativo) !== atualId) return;
             confirmarCopia($("consultar-sda"));
         } catch (_) {
-            if (epoca !== sessao || !ativo || chave(ativo) !== atualId) return;
+            if (rodada !== copiaGeracao || epoca !== sessao || !ativo || chave(ativo) !== atualId) return;
             copiaStatus.textContent = "A cópia automática não foi possível. Copie manualmente abaixo.";
             $("copia-conteudo").value = texto; $("copia-manual").hidden = false;
             $("copia-conteudo").focus(); $("copia-conteudo").select();
@@ -494,10 +506,9 @@
         if (!ativo || usuario() !== ativo.uid) return;
         // A consulta usa o que está visível agora, sem depender do último evento input.
         const perguntaAtual = pergunta.value, compreensaoAtual = compreensao.value;
-        const partes = ["Título: " + ativo.titulo];
+        const partes = ["Título: " + ativo.titulo, "Original:\n" + ativo.conteudo];
         if (selecionado) partes.push("Trecho: " + selecionado.trecho,
             "Frase de contexto: " + selecionado.contexto);
-        else partes.push("Original:\n" + ativo.conteudo);
         if (perguntaAtual.trim()) partes.push("Minha pergunta:\n" + perguntaAtual);
         if (compreensaoAtual.trim()) partes.push("Minha compreensão:\n" + compreensaoAtual);
         partes.push("SDA, ajude-me a estudar de forma contextual, considerando minha pergunta e minha compreensão quando presentes, sem substituir minha reflexão.",

@@ -49,7 +49,7 @@ async function caso(campos, selecionar) {
     assert(!copiado.includes('Pergunta anterior') && !copiado.includes('Compreensão anterior'));
     if (selecionar) {
       assert(copiado.includes('Trecho: Anna')); assert(copiado.includes('Frase de contexto: Mein Name ist Anna.'));
-      assert(!copiado.includes('Original:')); assert.equal($('selecao-texto').textContent, 'Anna');
+      assert(copiado.includes('Original:\n' + texto.conteudo)); assert.equal($('selecao-texto').textContent, 'Anna');
     } else { assert(copiado.includes('Original:\n' + texto.conteudo)); assert(!copiado.includes('Trecho:')); }
     assert(copiado.includes('S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg).'));
     assert(copiado.includes('sem substituir minha reflexão')); assert(copiado.includes('não como regra rígida nem análise automática'));

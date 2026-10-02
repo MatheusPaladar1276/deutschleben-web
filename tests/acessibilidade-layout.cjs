@@ -3,6 +3,7 @@ const fs = require('node:fs'), path = require('node:path'), os = require('node:o
 const { spawn } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const final = process.argv.includes('--pacote-final');
+const sdaFinal = process.argv.includes('--sda-final');
 const out = fs.mkdtempSync(path.join(os.tmpdir(), 'dl-legibilidade-'));
 const chrome = spawn('C:/Program Files/Google/Chrome/Application/chrome.exe',
   ['--headless=new', '--disable-gpu', '--disable-extensions', '--no-first-run', '--remote-debugging-port=9339',
@@ -39,7 +40,10 @@ const evaluate = async expression => {
     $('minha-pergunta').value='Qual é o sentido deste trecho?';
     $('texto-compreensao').value='Minha compreensão temporária do texto.';
     $('copia-status').textContent='';
-    $('resumo-status').textContent='Resumo salvo com sucesso.';
+    $('resumo-status').textContent='✓ Resumo salvo com sucesso';
+    $('resumo-status').classList.add('resumo-sucesso');
+    $('selecao-aviso').textContent='Trecho selecionado:';
+    $('selecao-texto').textContent='Ich lerne Deutsch und möchte die Welt besser verstehen.';
     $('estrada-contador').textContent='3 palavras e expressões';
     $('estrada-lista').innerHTML='<div class="estrada-item"><div class="estrada-termo">verstehen <span class="estrada-tipo">Verbo</span></div><div class="estrada-sentido">compreender</div><div class="estrada-meta">Encontrado no estudo de Vorstellung.</div></div>';
     $('rg-contador').textContent='1 referência';
@@ -51,9 +55,9 @@ const evaluate = async expression => {
     $('excluir-texto-titulo').textContent='Vorstellung — minha apresentação e primeiros estudos';
   })()`);
   const results=[];
-  for(const width of (final?[1440,390]:[1440,390,320])) {
+  for(const width of (final||sdaFinal?[1440,390]:[1440,390,320])) {
     await send('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:false});
-    for(const screen of (final?['estudo','escolha-textos','excluir-confirmacao','consulta-confirmacao','prog-overlay','estrada-overlay']:['abertura','estudo','estrada-overlay','rg-overlay','prog-overlay','adicionar-texto-overlay'])) {
+    for(const screen of (sdaFinal?['estudo']:final?['estudo','escolha-textos','excluir-confirmacao','consulta-confirmacao','prog-overlay','estrada-overlay']:['abertura','estudo','estrada-overlay','rg-overlay','prog-overlay','adicionar-texto-overlay'])) {
       await evaluate(`(()=>{
         document.querySelectorAll('.aberta').forEach(e=>e.classList.remove('aberta'));
         document.querySelectorAll('dialog[open]').forEach(e=>e.close());
