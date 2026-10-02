@@ -1,4 +1,5 @@
 /* Mesma família e escala homologadas; organização das novas janelas. */
+.consulta-sda { margin: 24px 0; }
 #dl-app button.caminhadas-face { pointer-events: auto; }
 .dl-dialog {
     width: min(1000px, calc(100% - 24px)); max-height: calc(100dvh - 24px);

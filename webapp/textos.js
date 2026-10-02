@@ -492,13 +492,14 @@
     });
     $("consultar-sda").addEventListener("click", () => {
         if (!ativo || usuario() !== ativo.uid) return;
-        const m = memoria();
+        // A consulta usa o que está visível agora, sem depender do último evento input.
+        const perguntaAtual = pergunta.value, compreensaoAtual = compreensao.value;
         const partes = ["Título: " + ativo.titulo];
         if (selecionado) partes.push("Trecho: " + selecionado.trecho,
             "Frase de contexto: " + selecionado.contexto);
         else partes.push("Original:\n" + ativo.conteudo);
-        if (m.pergunta.trim()) partes.push("Minha pergunta:\n" + m.pergunta);
-        if (m.compreensao.trim()) partes.push("Minha compreensão:\n" + m.compreensao);
+        if (perguntaAtual.trim()) partes.push("Minha pergunta:\n" + perguntaAtual);
+        if (compreensaoAtual.trim()) partes.push("Minha compreensão:\n" + compreensaoAtual);
         partes.push("SDA, ajude-me a estudar de forma contextual, considerando minha pergunta e minha compreensão quando presentes, sem substituir minha reflexão.",
             "Referência didática: S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg).",
             "Use a fórmula como ferramenta de consulta, não como regra rígida nem análise automática.");
