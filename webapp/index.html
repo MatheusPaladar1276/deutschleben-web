@@ -1787,6 +1787,7 @@ textarea {
         <section class="compreensao">
             <h2><label for="texto-compreensao">Minha compreensão</label></h2>
             <textarea id="texto-compreensao" aria-describedby="compreensao-temporaria"></textarea>
+            <div class="acoes-apoio"><button type="button" class="secundario" id="limpar-compreensao">Limpar compreensão</button></div>
             <p id="compreensao-temporaria" class="texto-reflexao">Rascunho temporário: dura enquanto esta página estiver aberta.</p>
         </section>
         <div class="consulta-sda">
@@ -1847,7 +1848,16 @@ textarea {
         </div>
     </div>
 </dialog>
-<script src="textos.js?v=6" defer></script>
+<dialog id="compreensao-confirmacao" class="dl-dialog dl-confirmacao" aria-labelledby="compreensao-confirmacao-titulo">
+    <div class="dl-dialog-corpo">
+        <h2 id="compreensao-confirmacao-titulo">Limpar sua compreensão?</h2>
+        <div class="dl-dialog-acoes">
+            <button type="button" id="compreensao-cancelar" autofocus>Cancelar</button>
+            <button type="button" id="compreensao-limpar">Limpar</button>
+        </div>
+    </div>
+</dialog>
+<script src="textos.js?v=7" defer></script>
 
 <div class="estrada-overlay" id="estrada-overlay" role="dialog" aria-modal="true" aria-label="Apostila">
     <div class="estrada-painel">

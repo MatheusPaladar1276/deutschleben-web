@@ -16,6 +16,8 @@
     const memorias = new Map(), novos = new Map();
     const escolha = $("escolha-textos"), escolhaStatus = $("escolha-status");
     const confirmacao = $("consulta-confirmacao"), excluirDialogo = $("excluir-confirmacao");
+    const compreensaoDialogo = $("compreensao-confirmacao");
+    let compreensaoAlvo = null;
     const origens = new WeakMap();
     let textosListados = [], listaErro = false, listaLendo = false, exclusao = null;
     let resumosSalvos = [], memoriaGeracao = 0, memoriaPronta = false;
@@ -43,15 +45,30 @@
             else if (escolha.open) $("escolha-busca").focus();
         }
     }
-    for (const dialogo of [escolha, confirmacao, excluirDialogo]) {
+    for (const dialogo of [escolha, confirmacao, excluirDialogo, compreensaoDialogo]) {
         dialogo.addEventListener("cancel", ev => {
             ev.preventDefault();
             if (dialogo === excluirDialogo && exclusao?.emCurso) return;
             fecharDialogo(dialogo);
             if (dialogo === excluirDialogo) exclusao = null;
+            if (dialogo === compreensaoDialogo) compreensaoAlvo = null;
         });
     }
     $("consulta-entendi").addEventListener("click", () => fecharDialogo(confirmacao));
+    $("limpar-compreensao").addEventListener("click", () => {
+        if (!ativo || usuario() !== ativo.uid || !compreensao.value) return;
+        compreensaoAlvo = chave(ativo);
+        abrirDialogo(compreensaoDialogo, $("limpar-compreensao"), $("compreensao-cancelar"));
+    });
+    $("compreensao-cancelar").addEventListener("click", () => {
+        compreensaoAlvo = null; fecharDialogo(compreensaoDialogo);
+    });
+    $("compreensao-limpar").addEventListener("click", () => {
+        const valido = ativo && usuario() === ativo.uid && compreensaoAlvo === chave(ativo);
+        compreensaoAlvo = null; fecharDialogo(compreensaoDialogo, false);
+        if (!valido) return;
+        compreensao.value = ""; memoria().compreensao = ""; compreensao.focus();
+    });
     $("escolha-voltar").addEventListener("click", () => fecharDialogo(escolha));
     $("escolher-textos").addEventListener("click", () => {
         geracao++; // Uma abertura antiga não deve fechar a escolha recém-aberta.
@@ -249,6 +266,7 @@
         fecharDialogo(confirmacao, false); pergunta.focus(); limparSelecao();
     });
     function limparEstudo() {
+        compreensaoAlvo = null; fecharDialogo(compreensaoDialogo, false);
         ativo = null;
         titulo.textContent = original.textContent = compreensao.value = pergunta.value = resumo.value = resumoStatus.textContent = "";
         resumoStatus.classList.remove("resumo-sucesso", "resumo-erro");
@@ -306,6 +324,7 @@
             const texto = await window.DL_DADOS.carregarTexto(id);
             if (rodada !== geracao || epoca !== sessao || usuario() !== conta) return false;
             ativo = Object.freeze({ ...texto, uid: conta });
+            compreensaoAlvo = null; fecharDialogo(compreensaoDialogo, false);
             titulo.textContent = ativo.titulo;
             original.textContent = ativo.conteudo;
             compreensao.value = memoria().compreensao;
