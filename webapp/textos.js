@@ -89,12 +89,13 @@
         if (listaLendo) { escolhaStatus.textContent = "Carregando textos…"; return; }
         if (listaErro) { escolhaStatus.textContent = "Não foi possível atualizar a lista. Tente novamente."; }
         const termo = $("escolha-busca").value.trim().toLocaleLowerCase("pt");
-        const visiveis = textosListados.filter(t => (t.titulo || "Sem título").toLocaleLowerCase("pt").includes(termo));
+        const visiveis = textosListados.map((texto, indice) => ({ texto, numero: indice + 1 }))
+            .filter(({ texto }) => (texto.titulo || "Sem título").toLocaleLowerCase("pt").includes(termo));
         if (!listaErro) escolhaStatus.textContent = textosListados.length
             ? (visiveis.length ? "" : "Nenhum texto corresponde à busca.") : "Nenhum texto salvo. Você pode adicionar o primeiro.";
-        for (const texto of visiveis) {
+        for (const { texto, numero } of visiveis) {
             const linha = document.createElement("div"); linha.className = "escolha-linha"; linha.dataset.textoId = texto.id;
-            const nome = document.createElement("span"); nome.className = "escolha-nome"; nome.textContent = texto.titulo || "Sem título";
+            const nome = document.createElement("span"); nome.className = "escolha-nome"; nome.textContent = `${numero} - ${texto.titulo || "Sem título"}`;
             const acoes = document.createElement("div"); acoes.className = "escolha-acoes";
             for (const [rotulo, classe, acao] of [["Abrir", "escolha-abrir", async ev => {
                 const botao = ev.currentTarget, conta = uid, epoca = sessao, rodada = geracao + 1;

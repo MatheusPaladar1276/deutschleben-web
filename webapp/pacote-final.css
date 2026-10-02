@@ -36,8 +36,7 @@
 .dl-dialog-acoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
 .escolha-linha { display: flex; align-items: center; justify-content: space-between;
     flex-wrap: wrap; gap: 16px; padding: 18px; border: 1px solid #cbc6d5;
-    border-radius: 10px; background: #fff; margin-bottom: 12px; }
-.escolha-linha:nth-child(even) { background: #efedf5; }
+    border-radius: 10px; background: #e9def5; margin-bottom: 12px; }
 .escolha-nome { flex: 1 1 260px; min-width: 0; font-size: 24px; font-weight: 600; overflow-wrap: anywhere; }
 .escolha-acoes { display: flex; flex-wrap: wrap; gap: 12px; }
 #dl-app #excluir-confirmar, #dl-app .escolha-excluir { background: #f5e4de; color: #662b25; border-color: #ba8c83; }
