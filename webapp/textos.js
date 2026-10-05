@@ -471,25 +471,36 @@
         const sel = window.getSelection();
         if (!sel || !sel.rangeCount || sel.isCollapsed) return;
         const r = sel.getRangeAt(0);
-        if (!original.contains(r.startContainer) || !original.contains(r.endContainer)) return;
+        const area = [titulo, original].find(el => el.contains(r.startContainer) && el.contains(r.endContainer));
+        if (!area) return;
         const trecho = sel.toString().trim();
         if (!trecho) return;
-        const antes = r.cloneRange(); antes.selectNodeContents(original); antes.setEnd(r.startContainer, r.startOffset);
+        const antes = r.cloneRange(); antes.selectNodeContents(area); antes.setEnd(r.startContainer, r.startOffset);
         const inicio = antes.toString().length, fim = inicio + r.toString().length;
-        const texto = ativo.conteudo;
+        const texto = area === titulo ? ativo.titulo : ativo.conteudo;
         const prefixo = texto.slice(0, inicio);
         const esquerda = Math.max(prefixo.lastIndexOf("."), prefixo.lastIndexOf("!"), prefixo.lastIndexOf("?"), prefixo.lastIndexOf("\n")) + 1;
         const proximo = texto.slice(fim).search(/[.!?\n]/);
         const direita = proximo < 0 ? texto.length : fim + proximo + 1;
-        selecionado = { trecho, contexto: texto.slice(esquerda, direita).trim() };
+        selecionado = { trecho, origem: area === titulo ? "titulo" : "corpo",
+            contexto: area === titulo ? ativo.titulo : texto.slice(esquerda, direita).trim() };
         $("selecao-texto").textContent = trecho;
         $("selecao-aviso").textContent = "Trecho selecionado:";
         $("consultar-leo").disabled = false;
         copiaStatus.textContent = ""; $("copia-manual").hidden = true;
     }
     document.addEventListener("selectionchange", capturarSelecao);
-    original.addEventListener("mouseup", capturarSelecao);
-    original.addEventListener("keyup", capturarSelecao);
+    for (const area of [titulo, original]) {
+        area.addEventListener("mouseup", capturarSelecao);
+        area.addEventListener("keyup", capturarSelecao);
+    }
+    for (const id of ["consultar-leo", "consultar-sda"]) {
+        $(id).addEventListener("mousedown", ev => {
+            capturarSelecao();
+            // Evita que o foco do botão desfaça a seleção antes da consulta.
+            if (ev.button === 0 && selecionado) ev.preventDefault();
+        });
+    }
     $("consultar-leo").addEventListener("click", () => {
         if (selecionado && ativo && usuario() === ativo.uid) {
             window.open("https://dict.leo.org/alem%C3%A3o-portugu%C3%AAs/" + encodeURIComponent(selecionado.trecho), "_blank", "noopener,noreferrer");
@@ -527,8 +538,12 @@
         // A consulta usa o que está visível agora, sem depender do último evento input.
         const perguntaAtual = pergunta.value, compreensaoAtual = compreensao.value;
         const partes = ["Título: " + ativo.titulo, "Original:\n" + ativo.conteudo];
-        if (selecionado) partes.push("Trecho: " + selecionado.trecho,
-            "Frase de contexto: " + selecionado.contexto);
+        if (selecionado) {
+            partes.push("Trecho: " + selecionado.trecho);
+            if (selecionado.origem === "titulo") {
+                partes.push("Origem do trecho: título", "Título de contexto: " + selecionado.contexto);
+            } else partes.push("Frase de contexto: " + selecionado.contexto);
+        }
         if (perguntaAtual.trim()) partes.push("Minha pergunta:\n" + perguntaAtual);
         if (compreensaoAtual.trim()) partes.push("Minha compreensão:\n" + compreensaoAtual);
         partes.push("SDA, ajude-me a estudar de forma contextual, considerando minha pergunta e minha compreensão quando presentes, sem substituir minha reflexão.",
