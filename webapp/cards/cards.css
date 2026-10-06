@@ -1,4 +1,4 @@
-:root{font:22px/1.55 Arial,sans-serif;color:#253746;background:#f3f5f7}
+:root{font:22px/1.55 Arial,sans-serif;color:#253746;background:#CBD8CF;background-image:radial-gradient(circle,rgba(0,0,0,.15) 1px,transparent 1px);background-size:14px 14px}
 *{box-sizing:border-box}body{margin:0}main{max-width:1050px;margin:auto;padding:24px}
 h1{font-size:36px;margin:12px 0}h2{font-size:29px;margin:12px 0}h3{font-size:25px;margin:12px 0}p{margin:10px 0;overflow-wrap:anywhere}
 header,section{margin:16px 0;padding:18px;border:1px solid #7b8b9c;border-left:5px solid #8c9fb4;border-radius:16px;background:#dce4ec;box-shadow:0 3px 10px #25374614}
