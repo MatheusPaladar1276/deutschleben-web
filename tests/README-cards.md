@@ -1,5 +1,64 @@
 # Cards v1
 
+## Organização e fluxo — fluxo-4
+
+Entrada com lista de textos e Adicionar card; Atualizar lista fica em Mais
+opções. Escolher um texto abre seu estudo. Sem card, aparece Adicionar card para
+este texto, sem controles de estudo vazios. Os cards já salvos abrem normalmente,
+sem nova importação.
+
+Estudo: título, botões de seção e uma caixa. Minhas dúvidas mostra `duvidas`;
+todas as seções exibem seus itens completos. Essencial/Completa saiu da interface,
+mas as marcações `essencial` permanecem intactas no JSON. Contextos começam
+recolhidos; traduções começam visíveis e podem ser ocultadas junto com suas notas.
+Reler texto e Usar sem internet são apoios. Mais opções começa recolhido e reúne
+revisão, remoção da cópia local e exclusão do card remoto, com descrições e
+confirmações distintas. Ajuda contém instalação e detalhes da cópia; o estudo
+mostra só uma indicação curta de disponibilidade.
+
+Adicionar/revisar usa `dialog` modal nativo, com foco inicial, confinamento de Tab,
+Escape e retorno ao botão de origem ao cancelar. Revisão carrega o registro atual
+e mantém o original pelo ID, com o seletor bloqueado. O fluxo continua original,
+conteúdo, conferência da prévia e salvamento explícito. Pacote Texto 01 e modelo
+ficam somente na janela. Alterações invalidam a prévia. Cancelar/Escape confirma
+descarte de alterações; uma falha mantém conteúdo, seleção e janela abertos.
+Ao salvar com confirmação do servidor, fecha a janela, abre o card e foca
+“✓ Card salvo”. “✓ Disponível sem internet” aparece junto ao apoio apenas depois
+da verificação do shell e conclusão do armazenamento local.
+
+Sem mudanças no adaptador de dados, formato JSON v1, regras, registros remotos,
+banco de conteúdo local ou service worker raiz. O shell dos Cards recebe
+`fluxo-4`; abrir com internet atualiza os recursos mantendo cópias pessoais.
+Cores, fontes e aparência dos botões foram preservadas. O CSS novo limita a
+janela ao viewport e usa as mesmas fontes, bordas e cores existentes.
+
+Verificação desta entrega: `node tests/cards-fluxo.cjs`, somente os fluxos
+alterados, com Chrome isolado, Auth REST local simulado em `127.0.0.1:8769` e
+Firestore `demo-dl-textos` em `127.0.0.1:8188`. A fixture começa com um card já
+salvo e uma cópia do shell anterior, que migra sem nova importação nem alteração
+do conteúdo local. Confere abertura, seções completas, tradução/contexto,
+adicionar/revisar, Tab/Escape/foco, recusa/aceitação de descarte, carga/colagem,
+validação, falha real de permissão do emulador e manutenção do conteúdo digitado,
+sucesso só depois de liberação/conclusão da transação, revisão no mesmo UID/ID
+com criação preservada, falha/sucesso de disponibilidade, remoção local sem apagar
+o remoto e exclusão remota preservando o original. Reinicia o processo do Chrome
+com rede bloqueada e consulta o card revisado e o original offline.
+
+Layout de estudo e janela conferido em 1440, 390 e 768 px, fontes de 22 px,
+sem overflow horizontal, janela dentro do viewport e botões com a cor pastel
+existente. Capturas ficam na pasta temporária indicada na saída. Verificação
+concluída com sucesso em 06/10/2026. Nenhum documento de produção foi lido,
+gravado ou excluído; suítes anteriores não foram executadas.
+
+Limites: Chrome Windows foi efetivamente testado. Celular/tablet foram simulados
+por viewport; aparelhos físicos, Safari/iOS, Firefox e Edge não foram testados.
+O aparelho precisa abrir os Cards com internet uma vez para receber a atualização.
+Conferir/salvar exige internet; uma falha não apaga o conteúdo enquanto a janela
+permanece aberta. Rascunhos não são persistidos ao recarregar/sair da conta.
+
+As seções abaixo documentam entregas anteriores; para a interface atual, use a
+verificação focada `cards-fluxo.cjs`.
+
 ## Correção focada — conferencia-3
 
 Reprodução de `7def0ae` com `node tests/cards-conferir.cjs --antes`, usando

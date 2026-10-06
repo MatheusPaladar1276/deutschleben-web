@@ -8,3 +8,5 @@
 .secoes{margin-top:16px}.secoes [aria-pressed="true"]{outline:2px solid #213a34;outline-offset:2px}
 .acoes-previa{margin-bottom:16px}
 @media(max-width:600px){.par{grid-template-columns:minmax(0,1fr);gap:6px}.par .seta{display:none}}
+
+dialog{font:inherit;color:inherit;width:min(1050px,calc(100% - 20px));max-height:calc(100dvh - 24px);overflow-y:auto;padding:20px;border:1px solid #80968d;border-radius:16px;background:#fff}dialog h2{margin-top:0}.ferramentas{margin-top:16px}.apoios{margin-top:16px}#conferencia-status,#salvo-status,#offline-status,#opcoes-status{overflow-wrap:anywhere}#entrada-status:empty,#salvo-status:empty,#offline-status:empty,#opcoes-status:empty,#recursos-status:empty{display:none}@media(max-width:600px){dialog{padding:14px}}
