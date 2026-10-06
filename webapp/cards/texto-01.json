@@ -1,0 +1,252 @@
+{
+  "versao": 1,
+  "numero": 1,
+  "titulo": "Ein Morgen auf dem Land",
+  "secoes": {
+    "duvidas": [
+      {
+        "de": "schaut",
+        "pt": "olha; infinitivo schauen",
+        "essencial": true,
+        "origem": "Er sitzt auf einem Ast und schaut ins Wasser."
+      },
+      {
+        "de": "die Weile / nach einer Weile",
+        "pt": "algum tempo / depois de algum tempo. Weile = algum tempo; Luft = ar.",
+        "essencial": true,
+        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück."
+      },
+      {
+        "de": "die Luft",
+        "pt": "ar. Luft = ar; Weile = algum tempo.",
+        "essencial": true,
+        "origem": "Die Luft ist kühl, aber die Sonne scheint schon."
+      }
+    ],
+    "blocos": [
+      {
+        "de": "am frühen Morgen",
+        "pt": "bem cedo, pela manhã",
+        "essencial": true,
+        "origem": "Am frühen Morgen gehe ich zum See."
+      },
+      {
+        "de": "einen Moment stehen bleiben",
+        "pt": "ficar parado por um momento, em pé",
+        "essencial": true,
+        "origem": "Ich höre die Vögel und bleibe einen Moment stehen."
+      },
+      {
+        "de": "nach einer Weile",
+        "pt": "depois de algum tempo",
+        "essencial": true,
+        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück."
+      },
+      {
+        "de": "zum Haus zurückgehen",
+        "pt": "voltar para a casa",
+        "essencial": true,
+        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück."
+      },
+      {
+        "de": "an den Tag denken",
+        "pt": "pensar no dia",
+        "essencial": true,
+        "origem": "Ich sitze am Fenster und denke an den Tag."
+      }
+    ],
+    "sentencas": [
+      {
+        "de": "Am frühen Morgen gehe ich zum See.",
+        "pt": "Bem cedo, vou ao lago.",
+        "essencial": false,
+        "origem": "Am frühen Morgen gehe ich zum See."
+      },
+      {
+        "de": "Die Luft ist kühl, aber die Sonne scheint schon.",
+        "pt": "O ar está fresco, mas o sol já brilha.",
+        "essencial": false,
+        "origem": "Die Luft ist kühl, aber die Sonne scheint schon."
+      },
+      {
+        "de": "Heute möchte ich im Garten arbeiten.",
+        "pt": "Hoje gostaria de trabalhar no jardim.",
+        "essencial": false,
+        "origem": "Heute möchte ich im Garten arbeiten."
+      }
+    ],
+    "substantivos": [
+      {
+        "de": "der Morgen; die Morgen",
+        "pt": "manhã",
+        "essencial": false
+      },
+      {
+        "de": "der See; die Seen",
+        "pt": "lago",
+        "essencial": false
+      },
+      {
+        "de": "das Wasser; —",
+        "pt": "água (sem plural neste uso)",
+        "essencial": false
+      },
+      {
+        "de": "der Nebel; die Nebel",
+        "pt": "neblina",
+        "essencial": false
+      },
+      {
+        "de": "die Luft; —",
+        "pt": "ar (sem plural neste uso)",
+        "essencial": false
+      },
+      {
+        "de": "das Ufer; die Ufer",
+        "pt": "margem",
+        "essencial": false
+      },
+      {
+        "de": "der Vogel; die Vögel",
+        "pt": "pássaro",
+        "essencial": false
+      },
+      {
+        "de": "der Ast; die Äste",
+        "pt": "galho",
+        "essencial": false
+      },
+      {
+        "de": "die Weile; die Weilen",
+        "pt": "algum tempo / intervalo de tempo",
+        "essencial": false
+      },
+      {
+        "de": "das Fenster; die Fenster",
+        "pt": "janela",
+        "essencial": false
+      },
+      {
+        "de": "der Garten; die Gärten",
+        "pt": "jardim",
+        "essencial": false
+      }
+    ],
+    "verbos": [
+      {
+        "de": "gehe; gehen",
+        "pt": "ir",
+        "essencial": false
+      },
+      {
+        "de": "liegt; liegen",
+        "pt": "pairar sobre a água, neste contexto",
+        "essencial": false
+      },
+      {
+        "de": "höre; hören",
+        "pt": "ouvir",
+        "essencial": false
+      },
+      {
+        "de": "bleibe … stehen; stehen bleiben",
+        "pt": "parar / ficar parado, em pé",
+        "essencial": false
+      },
+      {
+        "de": "scheint; scheinen",
+        "pt": "brilhar",
+        "essencial": false
+      },
+      {
+        "de": "sehe; sehen",
+        "pt": "ver",
+        "essencial": false
+      },
+      {
+        "de": "sitzt / sitze; sitzen",
+        "pt": "estar sentado",
+        "essencial": false
+      },
+      {
+        "de": "schaut; schauen",
+        "pt": "olhar",
+        "essencial": false
+      },
+      {
+        "de": "gehe … zurück; zurückgehen",
+        "pt": "voltar",
+        "essencial": false
+      },
+      {
+        "de": "mache … einen Kaffee; machen",
+        "pt": "preparar um café",
+        "essencial": false
+      },
+      {
+        "de": "denke; denken",
+        "pt": "pensar",
+        "essencial": false
+      },
+      {
+        "de": "möchte; mögen",
+        "pt": "gostaria de (forma de Konjunktiv II)",
+        "essencial": false
+      },
+      {
+        "de": "arbeiten; arbeiten",
+        "pt": "trabalhar",
+        "essencial": false
+      }
+    ],
+    "adjetivos": [
+      {
+        "de": "frühen",
+        "pt": "cedo, em “am frühen Morgen”",
+        "essencial": false
+      },
+      {
+        "de": "leichter",
+        "pt": "leve, em “leichter Nebel”",
+        "essencial": false
+      },
+      {
+        "de": "kühl",
+        "pt": "fresco",
+        "essencial": false
+      },
+      {
+        "de": "kleinen",
+        "pt": "pequeno, em “einen kleinen Vogel”",
+        "essencial": false
+      }
+    ],
+    "adverbios": [
+      {
+        "de": "schon",
+        "pt": "já",
+        "essencial": false
+      },
+      {
+        "de": "langsam",
+        "pt": "devagar",
+        "essencial": false
+      },
+      {
+        "de": "dort",
+        "pt": "lá",
+        "essencial": false
+      },
+      {
+        "de": "heute",
+        "pt": "hoje",
+        "essencial": false
+      },
+      {
+        "de": "zurück",
+        "pt": "de volta, aqui parte de zurückgehen",
+        "essencial": false
+      }
+    ]
+  }
+}

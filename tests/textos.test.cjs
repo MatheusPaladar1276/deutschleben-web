@@ -81,6 +81,7 @@ async function uiTests(env) {
   for (const name of ['collection', 'getDocs', 'query', 'orderBy', 'addDoc', 'serverTimestamp', 'doc',
     'getDocFromServer', 'getDocsFromServer', 'runTransaction']) w[name] = sdk[name];
   Object.assign(w, { initializeApp: () => ({}), getFirestore: () => db, getAuth: () => auth,
+    limparLocal: async () => {}, removerLocal: async () => {},
     GoogleAuthProvider: class {}, signInWithPopup: async () => {}, signOut: async () => switchAccount(null),
     onAuthStateChanged: (_a, f) => { authCallbacks.push(f); f(auth.currentUser); } });
   const switchAccount = id => {
@@ -92,7 +93,7 @@ async function uiTests(env) {
   const firebaseSource = fs.readFileSync(path.join(ROOT, 'webapp/firebase-dados.js'), 'utf8').replace(/^import .*;\r?$/gm, '');
   // Run the adapter in the SDK realm; jsdom objects would otherwise fail SDK plain-object validation.
   const bindings = ['initializeApp', 'getFirestore', 'getAuth', 'GoogleAuthProvider', 'signInWithPopup', 'signOut', 'onAuthStateChanged',
-    'collection', 'getDocs', 'query', 'orderBy', 'addDoc', 'serverTimestamp', 'doc', 'getDocFromServer', 'getDocsFromServer', 'runTransaction'];
+    'collection', 'getDocs', 'query', 'orderBy', 'addDoc', 'serverTimestamp', 'doc', 'getDocFromServer', 'getDocsFromServer', 'runTransaction', 'limparLocal', 'removerLocal'];
   new Function('window', 'Event', ...bindings, firebaseSource)(w, w.Event, ...bindings.map(name => w[name]));
   for (const script of [...w.document.scripts]) if (!script.src && script.textContent.trim()) w.eval(script.textContent);
   w.eval(fs.readFileSync(path.join(ROOT, 'webapp/textos.js'), 'utf8'));

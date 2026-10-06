@@ -4,6 +4,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer, getDocsFromServer, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { limparLocal, removerLocal } from './cards/offline.js';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDCueo_SJ8gAqU9VT6cMdyxyDhXGSP1ma4",
@@ -84,15 +85,23 @@ window.DL_DADOS = {
     if (!db || !auth?.currentUser || auth.currentUser.uid !== uid) throw new Error("Conta desconectada.");
     if (typeof textoId !== "string" || !textoId.trim() || textoId.includes("/")) throw new Error("ID de texto inválido.");
     const original = doc(db, "textos", textoId), resumo = doc(db, "textos", textoId, "resumos", uid);
+    const card = doc(db, "textos", textoId, "cards", uid);
     // Transação online: lê ambos antes de escrever e só conclui após o backend.
     await runTransaction(db, async transacao => {
       const texto = await transacao.get(original);
       const salvo = await transacao.get(resumo);
+      const cardSalvo = await transacao.get(card);
       if (auth.currentUser?.uid !== uid) throw new Error("Conta desconectada.");
       if (!texto.exists()) throw new Error("Texto não encontrado; atualize a lista antes de excluir.");
       if (salvo.exists()) transacao.delete(resumo);
+      if (cardSalvo.exists()) transacao.delete(card);
       transacao.delete(original);
     });
+    await removerLocal(uid, textoId);
+    if (typeof BroadcastChannel === 'function') {
+      const canal = new BroadcastChannel('dl-cards-contas');
+      canal.postMessage({ tipo: 'excluir-texto', id: textoId }); canal.close();
+    }
   },
   async carregarCaminhadas() {
     if (!db) return null;
@@ -129,6 +138,11 @@ window.DL_AUTH = {
   },
   async sair() {
     if (!auth || !authPronta) throw new Error("Autenticação indisponível.");
+    await limparLocal();
+    if (typeof BroadcastChannel === 'function') {
+      const canal = new BroadcastChannel('dl-cards-contas');
+      canal.postMessage({ tipo: 'sair' }); canal.close();
+    }
     await signOut(auth);
   },
 };

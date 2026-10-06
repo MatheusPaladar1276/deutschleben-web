@@ -1,0 +1,28 @@
+{
+  "versao": 1,
+  "numero": 2,
+  "titulo": "Título do próximo texto",
+  "secoes": {
+    "duvidas": [
+      {
+        "de": "Trecho alemão",
+        "pt": "Sentido em português",
+        "origem": "Frase copiada exatamente do original escolhido.",
+        "essencial": true
+      }
+    ],
+    "blocos": [
+      {
+        "de": "Trecho alemão",
+        "pt": "Sentido em português",
+        "origem": "Frase copiada exatamente do original escolhido.",
+        "essencial": true
+      }
+    ],
+    "sentencas": [],
+    "substantivos": [],
+    "verbos": [],
+    "adjetivos": [],
+    "adverbios": []
+  }
+}

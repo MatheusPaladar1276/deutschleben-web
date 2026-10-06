@@ -56,6 +56,7 @@ async function rules(env) {
 async function ui(env) {
   await env.clearFirestore();
   await seed(env,'alpha','Resumo explícito sobre Anna.'); await seed(env,'beta','Resumo para excluir.'); await seed(env,'empty');
+  await env.withSecurityRulesDisabled(async ctx=>{await sdk.setDoc(sdk.doc(ctx.firestore(),'textos','beta','cards',UID),{uid:UID,textoId:'beta',versao:1,conteudo:'{}',criadoEm:sdk.Timestamp.now(),atualizadoEm:sdk.Timestamp.now()});});
   const dom=new JSDOM(fs.readFileSync(path.join(ROOT,'webapp/index.html'),'utf8'),
     {url:'https://example.test/',runScripts:'outside-only',pretendToBeVisual:true});
   const w=dom.window,$=id=>w.document.getElementById(id);
@@ -64,6 +65,7 @@ async function ui(env) {
   let db=env.authenticatedContext(UID).firestore(); const auth={currentUser:{uid:UID}}, callbacks=[];
   const switchAccount=uid=>{auth.currentUser=uid?{uid}:null;db=(uid?env.authenticatedContext(uid):env.unauthenticatedContext()).firestore();callbacks.forEach(f=>f(auth.currentUser));};
   const bindings={...sdk,initializeApp:()=>({}),getFirestore:()=>db,getAuth:()=>auth,
+    limparLocal:async()=>{},removerLocal:async()=>{},
     GoogleAuthProvider:class{},signInWithPopup:async()=>{},signOut:async()=>switchAccount(null),
     onAuthStateChanged:(_a,f)=>{callbacks.push(f);f(auth.currentUser);}};
   const source=fs.readFileSync(path.join(ROOT,'webapp/firebase-dados.js'),'utf8').replace(/^import .*;\r?$/gm,'');
@@ -140,6 +142,7 @@ async function ui(env) {
     w.DL_DADOS.excluirTexto=realDelete;row('beta').querySelector('.escolha-excluir').click();$('excluir-confirmar').click();$('excluir-confirmar').click();
     await wait(()=>!$('excluir-confirmacao').open&&!row('beta'),'exclusão confirmada por ID');
     assert.deepEqual(await stored(env,'beta'),{original:false,resumo:false});assert.equal($('titulo-texto').textContent,'alpha');
+    await env.withSecurityRulesDisabled(async ctx=>{assert(!(await sdk.getDoc(sdk.doc(ctx.firestore(),'textos','beta','cards',UID))).exists(),'Card removido pela mesma transação de exclusão do DL');});
     assert.equal($('resumo-conteudo').value,'Revisão ainda temporária');
     input('escolha-busca','');row('empty').querySelector('.escolha-excluir').click();$('excluir-confirmar').click();
     await wait(()=>!$('excluir-confirmacao').open&&!row('empty'),'excluir sem resumo');
