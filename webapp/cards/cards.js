@@ -3,7 +3,7 @@ import * as dados from './dados.js';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='fundo-8';
+const VERSAO='pontos-9';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
