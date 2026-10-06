@@ -1,5 +1,50 @@
 # Cards v1
 
+## Consulta e importação — consulta-2
+
+Consulta e prévia usam a mesma apresentação: botões de seção e uma única caixa
+com linhas alemão → português (português abaixo no celular). Essencial oferece
+somente seções com itens essenciais; Completa oferece todas as seções não vazias.
+Uma seção indisponível após trocar o modo cede à primeira disponível. Contextos
+começam recolhidos em “Ver contexto”; frases idênticas ao alemão do item não são
+repetidas. Traduções e suas notas ficam no campo `pt` e são ocultadas juntas.
+
+“Carregar Texto 01” busca o pacote existente e preenche o formulário. Nunca
+escolhe o original pelo título. “Cole o conteúdo do card” continua aceitando
+JSON v1 do chat. Conferir card, Salvar card e Cancelar ficam no começo da prévia.
+Editar o conteúdo ou trocar o original invalida a prévia. Não há gravação durante
+carregamento/conferência; salvar exige novo clique explícito depois de validar.
+Falha no carregamento tem mensagem e permite repetir o mesmo botão.
+
+O SW exclusivo dos Cards identifica o shell `consulta-2`, inclui o pacote e
+atualiza os recursos públicos atomicamente no banco de shell existente. A página
+confere a versão após instalar/ativar o worker e faz a atualização ao abrir com
+internet ou recuperar a conexão. Scripts/CSS têm URLs com versão para evitar
+cache antigo. Cópias pessoais, banco de conteúdo, regras, adaptador de dados,
+exclusão e service worker raiz não foram alterados. Um aparelho que permaneça
+offline desde a versão anterior precisa abrir os Cards com internet para receber
+esta atualização; depois pode consultar novamente offline.
+
+Verificação desta mudança: `node tests/cards-consulta.cjs`. Reutiliza a
+infraestrutura local descrita abaixo, com Auth REST simulado em
+`127.0.0.1:8767`, Firestore `demo-dl-textos` em `127.0.0.1:8188` e Chrome isolado.
+Executa apenas consulta/importação alteradas: migração do shell anterior sem
+alterar a cópia pessoal, carga direta/falha/nova tentativa, escolha manual,
+colagem, JSON inválido/válido, invalidação, cancelamento, gravação explícita,
+seções/modos, português e notas ocultos, contextos e consulta offline após
+reiniciar o processo do navegador. Celular/tablet em 390/768 px, prévia e card,
+fontes de 22 px, sem overflow ou cortes horizontais; capturas na pasta temporária
+indicada na saída. Verificação concluída com sucesso em 06/10/2026.
+
+Somente Chrome Windows foi testado. Celular/tablet foram simulados por viewport;
+Safari/iOS, Firefox, Edge e aparelhos físicos continuam sem verificação.
+Nenhum documento de produção foi criado, lido ou excluído durante os testes.
+
+As verificações v1 abaixo são o histórico da primeira entrega; não foram
+reexecutadas nesta mudança. Para a interface atual, use a suíte focada acima.
+
+## Histórico da primeira entrega
+
 Página: `/cards/`. Firebase Authentication existente; autorização mantém somente
 o UID já autorizado a ler os originais. Registro `textos/{textoId}/cards/{uid}`:
 UID, ID, versão, JSON do card e datas de criação/atualização. O original não é
