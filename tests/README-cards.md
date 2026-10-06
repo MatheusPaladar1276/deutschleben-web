@@ -1,5 +1,33 @@
 # Cards v1
 
+## Correção focada — conferencia-3
+
+Reprodução de `7def0ae` com `node tests/cards-conferir.cjs --antes`, usando
+perfil Chrome temporário, clique real do mouse e somente o emulador. Carregar
+Texto 01, selecionar o original compatível e conferir executava o evento e a
+validação corretamente, criando três linhas de prévia. Na tela de 390 × 844 px,
+o início da prévia ficava em 1042 px, fora da tela. A mensagem de sucesso também
+ficava acima da tela. Com original incompatível, o erro da validação era lançado
+corretamente, mas só aparecia no status global, mais de 700 px acima da área
+visível. Portanto, a causa comprovada foi a posição/falta de foco do retorno.
+O cenário incompatível é uma simulação local, não uma afirmação sobre o original
+selecionado por Ricardo na produção. Não foi atribuída a cache.
+
+Correção: retorno local junto a Conferir card, com aviso durante a conferência,
+erro ou confirmação de prévia; foco e rolagem trazem o conjunto para a tela.
+Falta de original indica o campo “Texto existente”, associado à mensagem por
+`aria-describedby` e marcado com `aria-invalid`. A validação e o salvamento
+explícito continuam intactos. Não há mudança de CSS, regras ou dados. Apenas
+script e shell dos Cards recebem versão `conferencia-3` para distribuir a
+correção; o service worker do DL permanece preservado.
+
+Teste corrigido: `node tests/cards-conferir.cjs`. Confirma evento, validação,
+prévia visível, erro de vínculo visível, original ausente, JSON inválido,
+invalidação/recuperação, foco e fonte de 22 px em celular/tablet simulados.
+Também confere que nenhum card foi salvo no emulador. Não acessa documentos
+de produção. As capturas antes/depois ficam na pasta temporária indicada na
+saída. Só essa verificação focada foi executada nesta correção.
+
 ## Consulta e importação — consulta-2
 
 Consulta e prévia usam a mesma apresentação: botões de seção e uma única caixa
