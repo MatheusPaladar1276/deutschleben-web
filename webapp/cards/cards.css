@@ -27,3 +27,9 @@ dialog::backdrop{background:#25374666}dialog h2{margin-top:0}
 #conferencia-status,#salvo-status,#offline-status,#opcoes-status,#recursos-status{color:#253746;font-weight:700;overflow-wrap:anywhere}
 #entrada-status:empty,#salvo-status:empty,#offline-status:empty,#opcoes-status:empty,#recursos-status:empty,#status:empty{display:none}
 @media(max-width:600px){main{padding:10px}section,header,dialog{padding:14px}h1{font-size:32px}.secoes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.secoes button{min-width:0;padding:10px}.par{grid-template-columns:minmax(0,1fr);gap:6px}.par .seta{display:none}}
+
+/* Indicador de autenticacao: mesmo acabamento do DL, independente da rede. */
+.conta-acoes{display:flex;align-items:center;flex-wrap:wrap;gap:14px}
+#conta{font-size:24px;line-height:1.6}
+#conta.conectado{display:inline-flex;align-items:center;color:#205d38;font-weight:700}
+#conta.conectado::before{content:"";display:inline-block;flex:none;width:16px;height:16px;margin-right:10px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#dcfce7 0 16%,#22c55e 45% 100%);box-shadow:0 0 8px rgba(34,197,94,.45)}

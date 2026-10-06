@@ -3,7 +3,7 @@ import * as dados from './dados.js';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='mapc-5';
+const VERSAO='cabecalho-6';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -234,7 +234,7 @@ $('excluir').onclick=()=>tarefa(async(u,g)=>{
 },s=>retorno('opcoes-status',s));
 dados.observar((u,pronto,erro)=>{
   limpar();conta=u;$('auth').disabled=!pronto;$('auth').textContent=u?'Sair':'Entrar com Google';
-  $('conta').textContent=u?'Conta conectada':pronto?'Não conectado':'Verificando conta…';if(erro)aviso(erro);
+  $('conta').classList.toggle('conectado',!!u);$('conta').textContent=u?'Conectado':pronto?'Não conectado':'Verificando conta…';if(erro)aviso(erro);
   if(u){$('area').hidden=false;const g=geracao;atualizar(u,g).catch(e=>{if(vivo(u,g))retorno('entrada-status',e.message);});}
 });
 window.addEventListener('pageshow',()=>{if(conta!==dados.uid())limpar();});
