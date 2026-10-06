@@ -3,7 +3,7 @@ import * as dados from './dados.js';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='fluxo-4';
+const VERSAO='mapc-5';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -46,7 +46,7 @@ function limpar(){
   geracao++;conta=null;atual=null;copiaDisponivel=false;fecharEditor(false);
   $('area').hidden=true;$('entrada').hidden=false;$('estudo').hidden=true;$('consulta').hidden=true;
   $('lista').replaceChildren();$('texto').replaceChildren();
-  for(const id of ['card','original','titulo','local','copia-detalhe'])$(id).replaceChildren();
+  for(const id of ['card','original','titulo','local'])$(id).replaceChildren();
   for(const id of ['entrada-status','lista-status','salvo-status','offline-status','opcoes-status'])retorno(id,'',false);
   $('opcoes-estudo').open=false;$('opcoes-entrada').open=false;$('releitura').hidden=true;visoes.card.secao=null;aviso('');
 }
@@ -111,7 +111,6 @@ async function localStatus(u,g){
   if(!vivo(u,g)||id!==atual?.textoId)return;
   copiaDisponivel=!!salvo;
   $('local').textContent=salvo?'Disponível sem internet':'Sem cópia neste aparelho';
-  $('copia-detalhe').textContent=salvo?'Cópia deste aparelho feita em '+new Date(salvo.salvoEm).toLocaleString('pt-BR')+'.':'Não há cópia deste texto neste aparelho.';
   controles();
 }
 function estudar(){
