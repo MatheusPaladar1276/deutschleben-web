@@ -5,7 +5,7 @@ import * as dados from './dados.js?v=blocos-15';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js?v=blocos-15';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='blocos-16';
+const VERSAO='blocos-controles-17';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -115,6 +115,7 @@ function render(dest,c,port=true){
   const caixa=document.createElement('div');caixa.className='secao-caixa';
   const h=document.createElement('h3');h.textContent=estado.secao==='duvidas'?'Minhas dúvidas':F.nomes[F.secoes.indexOf(estado.secao)];caixa.append(h);
   if(estado.secao==='blocos'){
+    caixa.classList.add('blocos-caixa');
     const p=document.createElement('p');p.className='nota';p.textContent='Reconheça o bloco inteiro pelo sentido, sem remontar palavra por palavra. Nem todo bloco é uma expressão fixa.';caixa.append(p);
   }
   const consultas=[];

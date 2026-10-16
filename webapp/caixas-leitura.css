@@ -1,3 +1,10 @@
 .consulta-verbal,.exemplo-caixa{margin:8px 0;padding:12px 14px;background:#F5F7FA;border:1px solid #AAB7C4;border-radius:10px;box-shadow:0 3px 8px rgba(35,50,70,.12)}
 .consulta-verbal p,.exemplo-caixa p{margin:6px 0}
 .exemplo-caixa{overflow-wrap:anywhere}
+
+:is(.blocos-caixa .contexto,#dl-app #estrada-overlay .apostila-contexto,#dl-app #estrada-overlay .apostila-exemplo){margin-top:12px;--controle-fundo:#E1EDF7;--controle-texto:#245A7A;--controle-borda:#9FB8CA;--controle-hover:#D4E5F2}
+:is(.blocos-caixa .outro-exemplo,#dl-app #estrada-overlay .apostila-exemplo){--controle-fundo:#DCEBDD;--controle-texto:#28543A;--controle-borda:#A5BDA8;--controle-hover:#CEE2D0}
+:is(.blocos-caixa .contexto,#dl-app #estrada-overlay .apostila-contexto,#dl-app #estrada-overlay .apostila-exemplo)>summary{display:list-item;list-style-position:inside;width:fit-content;max-width:100%;min-height:48px;padding:8px 12px;margin:0;border:1px solid var(--controle-borda);border-radius:10px;background:var(--controle-fundo);color:var(--controle-texto);font:inherit;font-weight:700;line-height:1.4;cursor:pointer}
+:is(.blocos-caixa .contexto,#dl-app #estrada-overlay .apostila-contexto,#dl-app #estrada-overlay .apostila-exemplo)>summary:hover{background:var(--controle-hover);border-color:var(--controle-texto);color:var(--controle-texto)}
+:is(.blocos-caixa .contexto,#dl-app #estrada-overlay .apostila-contexto,#dl-app #estrada-overlay .apostila-exemplo)>summary:focus-visible{outline:3px solid var(--controle-texto);outline-offset:3px}
+:is(.blocos-caixa .contexto,#dl-app #estrada-overlay .apostila-contexto,#dl-app #estrada-overlay .apostila-exemplo)[open]>summary{margin-bottom:12px}
