@@ -33,6 +33,45 @@
       "wir": "arbeiten",
       "ihr": "arbeitet",
       "sie/Sie": "arbeiten"
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "arbeite",
+        "du": "arbeitest",
+        "er/sie/es": "arbeitet",
+        "wir": "arbeiten",
+        "ihr": "arbeitet",
+        "sie/Sie": "arbeiten"
+      },
+      "perfekt": {
+        "ich": "habe gearbeitet",
+        "du": "hast gearbeitet",
+        "er/sie/es": "hat gearbeitet",
+        "wir": "haben gearbeitet",
+        "ihr": "habt gearbeitet",
+        "sie/Sie": "haben gearbeitet"
+      },
+      "praeteritum": {
+        "ich": "arbeitete",
+        "du": "arbeitetest",
+        "er/sie/es": "arbeitete",
+        "wir": "arbeiteten",
+        "ihr": "arbeitetet",
+        "sie/Sie": "arbeiteten"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/arbeiten"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
     }
   },
   "aufstehen": {
@@ -237,6 +276,45 @@
       "wir": "denken",
       "ihr": "denkt",
       "sie/Sie": "denken"
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "denke",
+        "du": "denkst",
+        "er/sie/es": "denkt",
+        "wir": "denken",
+        "ihr": "denkt",
+        "sie/Sie": "denken"
+      },
+      "perfekt": {
+        "ich": "habe gedacht",
+        "du": "hast gedacht",
+        "er/sie/es": "hat gedacht",
+        "wir": "haben gedacht",
+        "ihr": "habt gedacht",
+        "sie/Sie": "haben gedacht"
+      },
+      "praeteritum": {
+        "ich": "dachte",
+        "du": "dachtest",
+        "er/sie/es": "dachte",
+        "wir": "dachten",
+        "ihr": "dachtet",
+        "sie/Sie": "dachten"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/denken"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
     }
   },
   "diskutieren": {
@@ -573,6 +651,45 @@
       "wir": "gehen",
       "ihr": "geht",
       "sie/Sie": "gehen"
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "gehe",
+        "du": "gehst",
+        "er/sie/es": "geht",
+        "wir": "gehen",
+        "ihr": "geht",
+        "sie/Sie": "gehen"
+      },
+      "perfekt": {
+        "ich": "bin gegangen",
+        "du": "bist gegangen",
+        "er/sie/es": "ist gegangen",
+        "wir": "sind gegangen",
+        "ihr": "seid gegangen",
+        "sie/Sie": "sind gegangen"
+      },
+      "praeteritum": {
+        "ich": "ging",
+        "du": "gingst",
+        "er/sie/es": "ging",
+        "wir": "gingen",
+        "ihr": "gingt",
+        "sie/Sie": "gingen"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/gehen"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
     }
   },
   "gehören": {
@@ -717,6 +834,45 @@
       "wir": "hören",
       "ihr": "hört",
       "sie/Sie": "hören"
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "höre",
+        "du": "hörst",
+        "er/sie/es": "hört",
+        "wir": "hören",
+        "ihr": "hört",
+        "sie/Sie": "hören"
+      },
+      "perfekt": {
+        "ich": "habe gehört",
+        "du": "hast gehört",
+        "er/sie/es": "hat gehört",
+        "wir": "haben gehört",
+        "ihr": "habt gehört",
+        "sie/Sie": "haben gehört"
+      },
+      "praeteritum": {
+        "ich": "hörte",
+        "du": "hörtest",
+        "er/sie/es": "hörte",
+        "wir": "hörten",
+        "ihr": "hörtet",
+        "sie/Sie": "hörten"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/hoeren"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
     }
   },
   "kaufen": {
@@ -897,7 +1053,47 @@
       "wir": "liegen",
       "ihr": "liegt",
       "sie/Sie": "liegen"
-    }
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "liege",
+        "du": "liegst",
+        "er/sie/es": "liegt",
+        "wir": "liegen",
+        "ihr": "liegt",
+        "sie/Sie": "liegen"
+      },
+      "perfekt": {
+        "ich": "habe gelegen",
+        "du": "hast gelegen",
+        "er/sie/es": "hat gelegen",
+        "wir": "haben gelegen",
+        "ihr": "habt gelegen",
+        "sie/Sie": "haben gelegen"
+      },
+      "praeteritum": {
+        "ich": "lag",
+        "du": "lagst",
+        "er/sie/es": "lag",
+        "wir": "lagen",
+        "ihr": "lagt",
+        "sie/Sie": "lagen"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/liegen_lehnen_ruhen"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
+    },
+    "nota": "Perfekt com haben, conforme o acervo; sein também ocorre no sul da Alemanha, na Áustria e na Suíça."
   },
   "löschen": {
     "perfekt": "hat gelöscht",
@@ -933,6 +1129,45 @@
       "wir": "machen",
       "ihr": "macht",
       "sie/Sie": "machen"
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "mache",
+        "du": "machst",
+        "er/sie/es": "macht",
+        "wir": "machen",
+        "ihr": "macht",
+        "sie/Sie": "machen"
+      },
+      "perfekt": {
+        "ich": "habe gemacht",
+        "du": "hast gemacht",
+        "er/sie/es": "hat gemacht",
+        "wir": "haben gemacht",
+        "ihr": "habt gemacht",
+        "sie/Sie": "haben gemacht"
+      },
+      "praeteritum": {
+        "ich": "machte",
+        "du": "machtest",
+        "er/sie/es": "machte",
+        "wir": "machten",
+        "ihr": "machtet",
+        "sie/Sie": "machten"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/machen"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
     }
   },
   "misslingen": {
@@ -1149,6 +1384,45 @@
       "wir": "schauen",
       "ihr": "schaut",
       "sie/Sie": "schauen"
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "schaue",
+        "du": "schaust",
+        "er/sie/es": "schaut",
+        "wir": "schauen",
+        "ihr": "schaut",
+        "sie/Sie": "schauen"
+      },
+      "perfekt": {
+        "ich": "habe geschaut",
+        "du": "hast geschaut",
+        "er/sie/es": "hat geschaut",
+        "wir": "haben geschaut",
+        "ihr": "habt geschaut",
+        "sie/Sie": "haben geschaut"
+      },
+      "praeteritum": {
+        "ich": "schaute",
+        "du": "schautest",
+        "er/sie/es": "schaute",
+        "wir": "schauten",
+        "ihr": "schautet",
+        "sie/Sie": "schauten"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/schauen"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
     }
   },
   "schlafen": {
@@ -1245,6 +1519,45 @@
       "wir": "sehen",
       "ihr": "seht",
       "sie/Sie": "sehen"
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "sehe",
+        "du": "siehst",
+        "er/sie/es": "sieht",
+        "wir": "sehen",
+        "ihr": "seht",
+        "sie/Sie": "sehen"
+      },
+      "perfekt": {
+        "ich": "habe gesehen",
+        "du": "hast gesehen",
+        "er/sie/es": "hat gesehen",
+        "wir": "haben gesehen",
+        "ihr": "habt gesehen",
+        "sie/Sie": "haben gesehen"
+      },
+      "praeteritum": {
+        "ich": "sah",
+        "du": "sahst",
+        "er/sie/es": "sah",
+        "wir": "sahen",
+        "ihr": "saht",
+        "sie/Sie": "sahen"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/sehen"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
     }
   },
   "sein": {
@@ -1365,7 +1678,47 @@
       "wir": "sitzen",
       "ihr": "sitzt",
       "sie/Sie": "sitzen"
-    }
+    },
+    "tabelas": {
+      "presens": {
+        "ich": "sitze",
+        "du": "sitzt",
+        "er/sie/es": "sitzt",
+        "wir": "sitzen",
+        "ihr": "sitzt",
+        "sie/Sie": "sitzen"
+      },
+      "perfekt": {
+        "ich": "habe gesessen",
+        "du": "hast gesessen",
+        "er/sie/es": "hat gesessen",
+        "wir": "haben gesessen",
+        "ihr": "habt gesessen",
+        "sie/Sie": "haben gesessen"
+      },
+      "praeteritum": {
+        "ich": "saß",
+        "du": "saßest",
+        "er/sie/es": "saß",
+        "wir": "saßen",
+        "ihr": "saßt",
+        "sie/Sie": "saßen"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "dados/acervo_verbal_presens.json",
+        "webapp/data/verbos.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/sitzen"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Perfekt e Präteritum: seis pessoas"
+      ]
+    },
+    "nota": "Perfekt com haben, conforme o acervo; sein também ocorre no sul da Alemanha, na Áustria e na Suíça."
   },
   "sollen": {
     "perfekt": "hat gesollt",
@@ -1809,6 +2162,180 @@
       "wir": "überzeugen",
       "ihr": "überzeugt",
       "sie/Sie": "überzeugen"
+    }
+  },
+  "stehen bleiben": {
+    "presens": {
+      "ich": "bleibe stehen",
+      "du": "bleibst stehen",
+      "er/sie/es": "bleibt stehen",
+      "wir": "bleiben stehen",
+      "ihr": "bleibt stehen",
+      "sie/Sie": "bleiben stehen"
+    },
+    "perfekt": "ist stehen geblieben",
+    "praeteritum": "blieb stehen",
+    "tabelas": {
+      "presens": {
+        "ich": "bleibe stehen",
+        "du": "bleibst stehen",
+        "er/sie/es": "bleibt stehen",
+        "wir": "bleiben stehen",
+        "ihr": "bleibt stehen",
+        "sie/Sie": "bleiben stehen"
+      },
+      "perfekt": {
+        "ich": "bin stehen geblieben",
+        "du": "bist stehen geblieben",
+        "er/sie/es": "ist stehen geblieben",
+        "wir": "sind stehen geblieben",
+        "ihr": "seid stehen geblieben",
+        "sie/Sie": "sind stehen geblieben"
+      },
+      "praeteritum": {
+        "ich": "blieb stehen",
+        "du": "bliebst stehen",
+        "er/sie/es": "blieb stehen",
+        "wir": "blieben stehen",
+        "ihr": "bliebt stehen",
+        "sie/Sie": "blieben stehen"
+      }
+    },
+    "fontes": {
+      "acervo": [],
+      "conferencia": [
+        "https://www.duden.de/konjugation/bleiben",
+        "https://www.duden.de/rechtschreibung/stehen_bleiben"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Präsens, Perfekt e Präteritum: seis pessoas"
+      ]
+    },
+    "nota": "No sentido literal do texto, stehen bleiben e stehen geblieben são escritos separados."
+  },
+  "scheinen": {
+    "presens": {
+      "ich": "scheine",
+      "du": "scheinst",
+      "er/sie/es": "scheint",
+      "wir": "scheinen",
+      "ihr": "scheint",
+      "sie/Sie": "scheinen"
+    },
+    "perfekt": "hat geschienen",
+    "praeteritum": "schien",
+    "tabelas": {
+      "presens": {
+        "ich": "scheine",
+        "du": "scheinst",
+        "er/sie/es": "scheint",
+        "wir": "scheinen",
+        "ihr": "scheint",
+        "sie/Sie": "scheinen"
+      },
+      "perfekt": {
+        "ich": "habe geschienen",
+        "du": "hast geschienen",
+        "er/sie/es": "hat geschienen",
+        "wir": "haben geschienen",
+        "ihr": "habt geschienen",
+        "sie/Sie": "haben geschienen"
+      },
+      "praeteritum": {
+        "ich": "schien",
+        "du": "schienst",
+        "er/sie/es": "schien",
+        "wir": "schienen",
+        "ihr": "schient",
+        "sie/Sie": "schienen"
+      }
+    },
+    "fontes": {
+      "acervo": [],
+      "conferencia": [
+        "https://www.duden.de/konjugation/scheinen"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Präsens, Perfekt e Präteritum: seis pessoas"
+      ]
+    }
+  },
+  "zurückgehen": {
+    "presens": {
+      "ich": "gehe zurück",
+      "du": "gehst zurück",
+      "er/sie/es": "geht zurück",
+      "wir": "gehen zurück",
+      "ihr": "geht zurück",
+      "sie/Sie": "gehen zurück"
+    },
+    "perfekt": "ist zurückgegangen",
+    "praeteritum": "ging zurück",
+    "tabelas": {
+      "presens": {
+        "ich": "gehe zurück",
+        "du": "gehst zurück",
+        "er/sie/es": "geht zurück",
+        "wir": "gehen zurück",
+        "ihr": "geht zurück",
+        "sie/Sie": "gehen zurück"
+      },
+      "perfekt": {
+        "ich": "bin zurückgegangen",
+        "du": "bist zurückgegangen",
+        "er/sie/es": "ist zurückgegangen",
+        "wir": "sind zurückgegangen",
+        "ihr": "seid zurückgegangen",
+        "sie/Sie": "sind zurückgegangen"
+      },
+      "praeteritum": {
+        "ich": "ging zurück",
+        "du": "gingst zurück",
+        "er/sie/es": "ging zurück",
+        "wir": "gingen zurück",
+        "ihr": "gingt zurück",
+        "sie/Sie": "gingen zurück"
+      }
+    },
+    "fontes": {
+      "acervo": [],
+      "conferencia": [
+        "https://www.duden.de/konjugation/zurueckgehen"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Präsens, Perfekt e Präteritum: seis pessoas"
+      ]
+    }
+  },
+  "möchte": {
+    "tipo": "konjunktiv_ii",
+    "lema": "mögen",
+    "nota": "möchte é Konjunktiv II de mögen. Aqui expressa um desejo: gostaria de. Esta forma não possui tabelas próprias de Präsens, Perfekt e Präteritum do indicativo; os tempos de mögen não equivalem a gostaria.",
+    "tabelas": {
+      "konjunktiv_ii": {
+        "ich": "möchte",
+        "du": "möchtest",
+        "er/sie/es": "möchte",
+        "wir": "möchten",
+        "ihr": "möchtet",
+        "sie/Sie": "möchten"
+      }
+    },
+    "fontes": {
+      "acervo": [
+        "webapp/cards/texto-01.json"
+      ],
+      "conferencia": [
+        "https://www.duden.de/konjugation/moegen",
+        "https://gfds.de/unterschied-zwischen-moechten-und-moegen/"
+      ],
+      "consultado_em": "2026-10-16",
+      "complemento": [
+        "Konjunktiv II: seis pessoas e distinção contextual"
+      ]
     }
   }
 }

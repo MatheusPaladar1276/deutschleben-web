@@ -3,7 +3,7 @@ import * as dados from './dados.js';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='verbos-11';
+const VERSAO='verbos-tabelas-13';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -57,6 +57,7 @@ function acervoVerbal(){
   return acervoPendente;
 }
 function infinitivoSeguro(item,acervo){
+  if(item.de.split(';')[0].trim()==='möchte')return Object.hasOwn(acervo,'möchte')?'möchte':null;
   if(item.infinitivo){const lema=item.infinitivo.trim();return Object.hasOwn(acervo,lema)?lema:null;}
   const partes=item.de.split(';').map(s=>s.trim());
   // O segundo campo dos cards antigos declara o infinitivo; nunca inferir de uma forma flexionada.
@@ -71,12 +72,27 @@ function consultaVerbal(item){
     try{
       const acervo=await acervoVerbal(),lema=infinitivoSeguro(item,acervo),v=lema?acervo[lema]:{};
       if(painel.hidden)return;
+      if(v.tabelas){
+        if(v.nota){const nota=document.createElement('p');nota.textContent=v.nota;painel.append(nota);}
+        const caixa=document.createElement('div');caixa.className='tabela-verbal';caixa.tabIndex=0;caixa.setAttribute('role','region');caixa.setAttribute('aria-label','Conjugação de '+lema);
+        const tabela=document.createElement('table'),caption=document.createElement('caption');caption.textContent=v.tipo==='konjunktiv_ii'?'möchte — Konjunktiv II de mögen':lema;tabela.append(caption);
+        const colunas=v.tipo==='konjunktiv_ii'?[['konjunktiv_ii','Konjunktiv II']]:[['presens','Präsens'],['perfekt','Perfekt'],['praeteritum','Präteritum']];
+        const head=document.createElement('thead'),cab=document.createElement('tr');
+        for(const rotulo of ['Pessoa',...colunas.map(c=>c[1])]){const th=document.createElement('th');th.scope='col';th.textContent=rotulo;cab.append(th);}head.append(cab);tabela.append(head);
+        const body=document.createElement('tbody');
+        for(const pessoa of ['ich','du','er/sie/es','wir','ihr','sie/Sie']){
+          const tr=document.createElement('tr'),th=document.createElement('th');th.scope='row';th.textContent=pessoa;tr.append(th);
+          for(const [tempo] of colunas){const td=document.createElement('td');td.lang='de';td.textContent=v.tabelas[tempo]?.[pessoa]||AUSENTE;tr.append(td);}body.append(tr);
+        }
+        tabela.append(body);caixa.append(tabela);painel.append(caixa);
+      }else{
       for(const [titulo,valor] of [
         ['Präsens',v.presens?['ich','du','er/sie/es','wir','ihr','sie/Sie'].map(p=>p+': '+(v.presens[p]||AUSENTE)).join(' / '):AUSENTE],
         ['Perfekt — forma de referência',v.perfekt||AUSENTE],
         ['Präteritum — forma de referência',v.praeteritum||AUSENTE]
       ]){
         const p=document.createElement('p'),b=document.createElement('strong');b.textContent=titulo+': ';p.append(b,document.createTextNode(valor));painel.append(p);
+      }
       }
     }catch{if(!painel.hidden)painel.textContent=AUSENTE;}
   }
