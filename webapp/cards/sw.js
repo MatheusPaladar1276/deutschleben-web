@@ -15,3 +15,5 @@ self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.me
   if(!ARQUIVOS.some(p=>new URL(p,self.location).href===url)&&!(e.request.mode==='navigate'&&u.pathname.startsWith('/cards/')))return;
   e.respondWith(fetch(e.request).catch(async()=>{const r=await ler(e.request.mode==='navigate'?new URL('index.html',self.location).href:url);if(!r)return Response.error();return new Response(r.body,{headers:{'Content-Type':r.type}});}));
 });
+
+// Atualizacao visual do botao de conjugacao: verbos-verde-12.

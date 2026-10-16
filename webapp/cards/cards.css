@@ -46,3 +46,7 @@ header a.marca-dl{display:block;flex:0 1 320px;padding:0;border:0;border-radius:
 @media(max-width:600px){.marca-dl .marca{font-size:32px}}
 
 .consulta-verbal{margin:8px 0;padding:8px 12px;border-left:3px solid #a492b6}.consulta-verbal p{margin:6px 0}
+
+.conjugar-verbos,.conjugar-verbos[aria-expanded="true"]{background:#DCEBDD;color:#28543A;border-color:#28543A}
+.conjugar-verbos:not(:disabled):hover{background:#DCEBDD;color:#28543A;border-color:#28543A;box-shadow:0 2px 5px #28543A40}
+.conjugar-verbos:focus-visible{outline-color:#28543A}
