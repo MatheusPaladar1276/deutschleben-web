@@ -1,10 +1,11 @@
+import { preencherFraseBloco } from '../destaques-blocos.js?v=blocos-16';
 import { prepararCard } from '../blocos.js';
 import './formato.js?v=blocos-15';
 import * as dados from './dados.js?v=blocos-15';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js?v=blocos-15';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='blocos-15';
+const VERSAO='blocos-16';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -132,11 +133,11 @@ function render(dest,c,port=true){
     if(estado.secao==='verbos'){const consulta=consultaVerbal(i);consultas.push(consulta);linha.append(consulta.painel);}
     if(i.origem && i.origem.trim()!==i.de.trim()){
       const contexto=document.createElement('details');contexto.className='contexto';const sum=document.createElement('summary');sum.textContent='Ver contexto';
-      const p=document.createElement('p');p.lang='de';p.textContent=i.origem;contexto.append(sum,p);linha.append(contexto);
+      const p=document.createElement('p');p.lang='de';if(estado.secao==='blocos')preencherFraseBloco(p,i.de,i.origem);else p.textContent=i.origem;contexto.append(sum,p);linha.append(contexto);
     }
     if(i.outroExemplo){
       const exemplo=document.createElement('details');exemplo.className='contexto outro-exemplo';const sum=document.createElement('summary');sum.textContent='Outro exemplo';
-      const de=document.createElement('p');de.lang='de';de.textContent=i.outroExemplo.de;const ptEx=document.createElement('p');ptEx.className='pt';ptEx.textContent=i.outroExemplo.pt;exemplo.append(sum,de,ptEx);linha.append(exemplo);
+      const de=document.createElement('p');de.lang='de';preencherFraseBloco(de,i.de,i.outroExemplo.de);const ptEx=document.createElement('p');ptEx.className='pt';ptEx.textContent=i.outroExemplo.pt;const caixaEx=document.createElement('div');caixaEx.className='exemplo-caixa';caixaEx.append(de,ptEx);exemplo.append(sum,caixaEx);linha.append(exemplo);
     }
     caixa.append(linha);
   }

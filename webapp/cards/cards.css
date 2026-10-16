@@ -45,7 +45,6 @@ header a.marca-dl{display:block;flex:0 1 320px;padding:0;border:0;border-radius:
 .marca-dl .subtitulo{display:block;margin-top:7px;font-size:22px;font-weight:700;line-height:1.4}
 @media(max-width:600px){.marca-dl .marca{font-size:32px}}
 
-.consulta-verbal{margin:8px 0;padding:12px 14px;background:#F5F7FA;border:1px solid #AAB7C4;border-radius:10px;box-shadow:0 3px 8px rgba(35,50,70,.12)}.consulta-verbal p{margin:6px 0}
 
 .conjugar-verbos,.conjugar-verbos[aria-expanded="true"]{background:#DCEBDD;color:#28543A;border-color:#28543A}
 .conjugar-verbos:not(:disabled):hover{background:#DCEBDD;color:#28543A;border-color:#28543A;box-shadow:0 2px 5px #28543A40}

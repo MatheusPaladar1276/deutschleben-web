@@ -1,3 +1,4 @@
+import { partesDestacadas } from './destaques-blocos.js?v=blocos-16';
 import { agruparBlocos, blocosDosRegistros } from './blocos.js';
 const overlay=document.getElementById('estrada-overlay'),inputBusca=document.getElementById('estrada-busca'),filtros=document.getElementById('estrada-filtros'),lista=document.getElementById('estrada-lista'),contador=document.getElementById('estrada-contador');
 const status=document.createElement('p');status.id='apostila-status';status.setAttribute('role','status');contador.after(status);
@@ -19,8 +20,9 @@ async function carregarBase(){
   return basePendente;
 }
 function recompor(){dados=agruparBlocos([...estaticos,...privados]);render();}
-function outroExemplo(exemplos){
-  return exemplos?.length?'<details class="apostila-exemplo"><summary>Outro exemplo</summary>'+exemplos.map(e=>'<div><p lang="de">'+esc(e.de)+'</p><p>'+esc(e.pt)+'</p></div>').join('')+'</details>':'';
+function fraseBloco(bloco,frase){return partesDestacadas(bloco,frase).map(p=>p.destaque?'<strong>'+esc(p.texto)+'</strong>':esc(p.texto)).join('');}
+function outroExemplo(exemplos,bloco){
+  return exemplos?.length?'<details class="apostila-exemplo"><summary>Outro exemplo</summary>'+exemplos.map(e=>'<div class="exemplo-caixa"><p lang="de">'+fraseBloco(bloco,e.de)+'</p><p>'+esc(e.pt)+'</p></div>').join('')+'</details>':'';
 }
 function render(){
   const termo=inputBusca.value.trim().toLocaleLowerCase('de');
@@ -29,8 +31,8 @@ function render(){
   lista.innerHTML=filtrados.length?filtrados.map(i=>{
     let html='<div class="estrada-item"><div><span class="estrada-termo">'+esc(i.termo)+'</span><span class="estrada-tipo">'+esc(i.tipo)+'</span></div><div class="estrada-sentido">'+esc(i.sentido)+'</div>';
     if(i.grupo==='bloco'){
-      html+=i.ocorrencias.map(o=>'<div class="estrada-meta">'+[o.extra,o.origem,o.titulo&&!o.origem.endsWith(o.titulo)?o.titulo:''].filter(Boolean).map(esc).join(' — ')+(o.contexto?'<p lang="de">'+esc(o.contexto)+'</p>':'')+'</div>').join('');
-      html+=outroExemplo(i.outrosExemplos);
+      html+=i.ocorrencias.map(o=>'<div class="estrada-meta">'+[o.extra,o.origem,o.titulo&&!o.origem.endsWith(o.titulo)?o.titulo:''].filter(Boolean).map(esc).join(' — ')+(o.contexto?'<details class="apostila-contexto"><summary>Ver contexto</summary><p lang="de">'+fraseBloco(i.termo,o.contexto)+'</p></details>':'')+'</div>').join('');
+      html+=outroExemplo(i.outrosExemplos,i.termo);
     }else if(i.extra||i.origem)html+='<div class="estrada-meta">'+[i.extra,i.origem].filter(Boolean).map(esc).join(' — ')+'</div>';
     return html+'</div>';
   }).join(''):'<p class="estrada-vazio">Nenhum resultado.</p>';
