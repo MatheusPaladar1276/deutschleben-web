@@ -17,3 +17,5 @@ self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.me
 });
 
 // Atualizacao visual do botao de conjugacao: verbos-verde-12.
+
+// Atualizacao visual das caixas de conjugacao: verbos-caixas-14.

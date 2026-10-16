@@ -45,10 +45,10 @@ header a.marca-dl{display:block;flex:0 1 320px;padding:0;border:0;border-radius:
 .marca-dl .subtitulo{display:block;margin-top:7px;font-size:22px;font-weight:700;line-height:1.4}
 @media(max-width:600px){.marca-dl .marca{font-size:32px}}
 
-.consulta-verbal{margin:8px 0;padding:8px 12px;border-left:3px solid #a492b6}.consulta-verbal p{margin:6px 0}
+.consulta-verbal{margin:8px 0;padding:12px 14px;background:#F5F7FA;border:1px solid #AAB7C4;border-radius:10px;box-shadow:0 3px 8px rgba(35,50,70,.12)}.consulta-verbal p{margin:6px 0}
 
 .conjugar-verbos,.conjugar-verbos[aria-expanded="true"]{background:#DCEBDD;color:#28543A;border-color:#28543A}
 .conjugar-verbos:not(:disabled):hover{background:#DCEBDD;color:#28543A;border-color:#28543A;box-shadow:0 2px 5px #28543A40}
 .conjugar-verbos:focus-visible{outline-color:#28543A}
 
-.tabela-verbal{max-width:100%;overflow-x:auto;margin:10px 0}.tabela-verbal table{width:100%;min-width:620px;border-collapse:collapse}.tabela-verbal th,.tabela-verbal td{border:1px solid #8b7a9b;padding:8px;text-align:left}.tabela-verbal th{background:#dce4ec}.tabela-verbal caption{text-align:left;font-weight:700;margin-bottom:8px}
+.tabela-verbal{max-width:100%;overflow-x:auto;margin:10px 0}.tabela-verbal table{width:100%;min-width:620px;border-collapse:collapse}.tabela-verbal th,.tabela-verbal td{border:1px solid #AAB7C4;padding:8px;text-align:left;background:#F5F7FA}.tabela-verbal th{background:#dce4ec}.tabela-verbal caption{text-align:left;font-weight:700;margin-bottom:8px}
