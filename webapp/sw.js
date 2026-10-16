@@ -1,8 +1,22 @@
 // Service worker do Deutschleben — instalação (PWA) e cache.
 // Estratégia: rede-primeiro para navegação/JSON (conteúdo sempre atual),
 // cache-primeiro para estáticos (ícones). Suba a versão ao publicar mudanças.
-const CACHE = "deutschleben-v18";
+const CACHE = "deutschleben-v19-blocos-15";
 const ESTATICOS = [
+  "./index.html",
+  "./apostila.js?v=blocos-15",
+  "./blocos.js",
+  "./firebase-dados.js?v=blocos-15",
+  "./cards/formato.js?v=blocos-15",
+  "./cards/offline.js?v=blocos-15",
+  "./cards/texto-01.json",
+  "./cards/vendor/firebase-app.js",
+  "./cards/vendor/firebase-auth.js",
+  "./cards/vendor/firebase-firestore.js",
+  "./data/substantivos.json",
+  "./data/verbos.json",
+  "./data/adjetivos_adverbios.json",
+  "./data/blocos.json",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

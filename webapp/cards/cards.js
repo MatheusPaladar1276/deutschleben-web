@@ -1,9 +1,10 @@
-import './formato.js';
-import * as dados from './dados.js';
-import { listarLocal, guardarLocal, removerLocal } from './offline.js';
+import { prepararCard } from '../blocos.js';
+import './formato.js?v=blocos-15';
+import * as dados from './dados.js?v=blocos-15';
+import { listarLocal, guardarLocal, removerLocal } from './offline.js?v=blocos-15';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='verbos-tabelas-13';
+const VERSAO='blocos-15';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -133,6 +134,10 @@ function render(dest,c,port=true){
       const contexto=document.createElement('details');contexto.className='contexto';const sum=document.createElement('summary');sum.textContent='Ver contexto';
       const p=document.createElement('p');p.lang='de';p.textContent=i.origem;contexto.append(sum,p);linha.append(contexto);
     }
+    if(i.outroExemplo){
+      const exemplo=document.createElement('details');exemplo.className='contexto outro-exemplo';const sum=document.createElement('summary');sum.textContent='Outro exemplo';
+      const de=document.createElement('p');de.lang='de';de.textContent=i.outroExemplo.de;const ptEx=document.createElement('p');ptEx.className='pt';ptEx.textContent=i.outroExemplo.pt;exemplo.append(sum,de,ptEx);linha.append(exemplo);
+    }
     caixa.append(linha);
   }
   dest.append(caixa);
@@ -160,7 +165,7 @@ async function atualizar(u,g){
 }
 async function registro(id,u){
   if(navigator.onLine)return dados.carregar(id,u);
-  const l=(await listarLocal(u)).find(x=>x.textoId===id);if(!l)throw Error('Use sem internet com uma conexão ativa primeiro.');return l;
+  const l=(await listarLocal(u)).find(x=>x.textoId===id);if(!l)throw Error('Use sem internet com uma conexão ativa primeiro.');return {...l,card:await prepararCard(l.card)};
 }
 async function localStatus(u,g){
   const id=atual?.textoId,salvo=(await listarLocal(u)).find(x=>x.textoId===id);

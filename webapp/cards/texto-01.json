@@ -28,31 +28,51 @@
         "de": "am frühen Morgen",
         "pt": "bem cedo, pela manhã",
         "essencial": true,
-        "origem": "Am frühen Morgen gehe ich zum See."
+        "origem": "Am frühen Morgen gehe ich zum See.",
+        "outroExemplo": {
+          "de": "Am frühen Morgen trinke ich einen Tee.",
+          "pt": "Bem cedo, pela manhã, tomo um chá."
+        }
       },
       {
         "de": "einen Moment stehen bleiben",
         "pt": "ficar parado por um momento, em pé",
         "essencial": true,
-        "origem": "Ich höre die Vögel und bleibe einen Moment stehen."
+        "origem": "Ich höre die Vögel und bleibe einen Moment stehen.",
+        "outroExemplo": {
+          "de": "Vor der Tür bleibe ich einen Moment stehen.",
+          "pt": "Fico parado por um momento em frente à porta."
+        }
       },
       {
         "de": "nach einer Weile",
         "pt": "depois de algum tempo",
         "essencial": true,
-        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück."
+        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück.",
+        "outroExemplo": {
+          "de": "Nach einer Weile beginnt es zu regnen.",
+          "pt": "Depois de algum tempo, começa a chover."
+        }
       },
       {
         "de": "zum Haus zurückgehen",
         "pt": "voltar para a casa",
         "essencial": true,
-        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück."
+        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück.",
+        "outroExemplo": {
+          "de": "Nach dem Spaziergang gehe ich zum Haus zurück.",
+          "pt": "Depois da caminhada, volto para a casa."
+        }
       },
       {
         "de": "an den Tag denken",
         "pt": "pensar no dia",
         "essencial": true,
-        "origem": "Ich sitze am Fenster und denke an den Tag."
+        "origem": "Ich sitze am Fenster und denke an den Tag.",
+        "outroExemplo": {
+          "de": "Am Abend denke ich an den Tag.",
+          "pt": "À noite, penso no dia."
+        }
       }
     ],
     "sentencas": [

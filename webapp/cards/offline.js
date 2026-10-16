@@ -15,9 +15,10 @@ export async function operar(modo, acao) {
   }); } finally { db.close(); }
 }
 export const listarLocal = uid => operar('readonly',s=>s.getAll()).then(a=>a.filter(x=>x.uid===uid));
-export const removerLocal = (uid,id) => operar('readwrite',s=>s.delete([uid,id]));
+function avisarBlocos(){if(typeof BroadcastChannel==='function'){const c=new BroadcastChannel('dl-cards-contas');c.postMessage({tipo:'cards-alterados'});c.close();}}
+export const removerLocal = (uid,id) => operar('readwrite',s=>s.delete([uid,id])).then(r=>{avisarBlocos();return r;});
 export const limparLocal = () => operar('readwrite',s=>s.clear());
-export const guardarLocal = registro => operar('readwrite',s=>s.put(registro));
+export const guardarLocal = registro => operar('readwrite',s=>s.put(registro)).then(r=>{avisarBlocos();return r;});
 export async function isolarLocal(uid) {
   const todos=await operar('readonly',s=>s.getAll());
   await operar('readwrite',s=>{for(const c of todos) if(c.uid!==uid) s.delete([c.uid,c.textoId]);});

@@ -1,10 +1,11 @@
 // Leitura das Caminhadas direto do Firestore (banco online).
 // Se o Firestore não responder ou não houver permissão, retorna null e o
 // site usa o arquivo estático como reserva.
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer, getDocsFromServer, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { limparLocal, removerLocal } from './cards/offline.js';
+import { initializeApp } from "./cards/vendor/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "./cards/vendor/firebase-auth.js";
+import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer, getDocsFromServer, runTransaction } from "./cards/vendor/firebase-firestore.js";
+import './cards/formato.js?v=blocos-15';
+import { listarLocal, limparLocal, removerLocal } from './cards/offline.js?v=blocos-15';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDCueo_SJ8gAqU9VT6cMdyxyDhXGSP1ma4",
@@ -51,6 +52,27 @@ window.DL_DADOS = {
     const snap = await getDocsFromServer(collection(db, "textos"));
     return snap.docs.map(d => ({ id: d.id, titulo: d.data().titulo || "Sem título" }))
       .sort((a, b) => a.titulo.localeCompare(b.titulo, "pt"));
+  },
+  async listarBlocosCards(uid) {
+    const conferir=()=>{if(!db || !auth?.currentUser || auth.currentUser.uid!==uid)throw Error('Conta desconectada.');};
+    conferir();
+    let locais=[];try{locais=await listarLocal(uid);}catch{}conferir();
+    const validar=r=>{try{return {...r,card:window.DL_CARD_FORMATO.validar(r.card)};}catch{return null;}};
+    locais=locais.map(validar).filter(Boolean);
+    if(!navigator.onLine)return {registros:locais,offline:true,parcial:false};
+    let textos;
+    try{textos=await getDocsFromServer(collection(db,'textos'));}catch{conferir();return {registros:locais,offline:false,parcial:true};}
+    conferir();let parcial=false;
+    const registros=await Promise.all(textos.docs.map(async t=>{
+      try{
+        const c=await getDocFromServer(doc(db,'textos',t.id,'cards',uid));conferir();
+        if(!c.exists())return null;
+        const card=window.DL_CARD_FORMATO.validar(c.data().conteudo);
+        window.DL_CARD_FORMATO.vincular(card,t.data().conteudo);
+        return {uid,textoId:t.id,titulo:t.data().titulo||card.titulo,card};
+      }catch{parcial=true;return locais.find(l=>l.textoId===t.id)||null;}
+    }));
+    conferir();return {registros:registros.filter(Boolean),offline:false,parcial};
   },
   async carregarResumo(textoId, uid) {
     if (!db || !auth?.currentUser || auth.currentUser.uid !== uid) throw new Error("Conta desconectada.");

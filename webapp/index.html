@@ -22,7 +22,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Deutschleben">
 
-<script type="module" src="firebase-dados.js?v=cards-1"></script>
+<script type="module" src="firebase-dados.js?v=blocos-15"></script>
 
 <style>
 
@@ -1881,95 +1881,7 @@ textarea {
     </div>
 </div>
 
-<script>
-(function () {
-    const overlay = document.getElementById("estrada-overlay");
-    const inputBusca = document.getElementById("estrada-busca");
-    const filtros = document.getElementById("estrada-filtros");
-    const lista = document.getElementById("estrada-lista");
-    const contador = document.getElementById("estrada-contador");
-    let dados = null, carregando = false, grupoAtivo = "todos";
-
-    function esc(t) {
-        return String(t ?? "").replace(/[&<>\"']/g, c =>
-            ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '\"': "&quot;", "'": "&#39;" }[c]));
-    }
-
-    const FONTES = [
-        { arq: "./data/substantivos.json", map: it => ({ termo: ((it.artigo ? it.artigo + " " : "") + it.palavra).trim(), sentido: it.significado, tipo: "Substantivo", grupo: "sub", origem: it.origem, extra: it.plural ? ("Plural: " + it.plural) : "" }) },
-        { arq: "./data/verbos.json", map: it => ({ termo: it.verbo, sentido: it.significado, tipo: "Verbo", grupo: "verb", origem: it.origem, extra: [it.praeteritum ? ("Prät.: " + it.praeteritum) : "", it.partizip_ii ? ("Part. II: " + it.partizip_ii) : ""].filter(Boolean).join(" · ") }) },
-        { arq: "./data/adjetivos_adverbios.json", map: it => ({ termo: it.palavra, sentido: it.significado, tipo: (it.categoria === "ADV" ? "Advérbio" : "Adjetivo"), grupo: "adjadv", origem: it.origem, extra: "" }) },
-        { arq: "./data/blocos.json", map: it => ({ termo: it.bloco, sentido: it.sentido, tipo: "Expressão/Bloco", grupo: "bloco", origem: it.origem, extra: it.tipo ? String(it.tipo).replace(/_/g, " ").toLowerCase() : "" }) },
-    ];
-
-    async function carregar() {
-        if (dados || carregando) return;
-        carregando = true;
-        lista.innerHTML = '<p class="estrada-vazio">Carregando…</p>';
-        const acc = [];
-        for (const f of FONTES) {
-            try {
-                const r = await fetch(f.arq);
-                if (!r.ok) continue;
-                const arr = await r.json();
-                arr.forEach(it => acc.push(f.map(it)));
-            } catch (e) { /* fonte ausente: ignora */ }
-        }
-        acc.sort((a, b) => a.termo.localeCompare(b.termo, "de"));
-        dados = acc;
-        carregando = false;
-        render();
-    }
-
-    function render() {
-        if (!dados) return;
-        const termo = inputBusca.value.trim().toLowerCase();
-        const filtrados = dados.filter(it => {
-            if (grupoAtivo !== "todos" && it.grupo !== grupoAtivo) return false;
-            if (!termo) return true;
-            return (it.termo + " " + it.sentido).toLowerCase().includes(termo);
-        });
-        contador.textContent = filtrados.length + " de " + dados.length + " itens";
-        lista.innerHTML = filtrados.length
-            ? filtrados.map(it =>
-                '<div class="estrada-item">' +
-                    '<div><span class="estrada-termo">' + esc(it.termo) + '</span>' +
-                    '<span class="estrada-tipo">' + esc(it.tipo) + '</span></div>' +
-                    '<div class="estrada-sentido">' + esc(it.sentido) + '</div>' +
-                    ((it.extra || it.origem)
-                        ? ('<div class="estrada-meta">' + [it.extra, it.origem].filter(Boolean).map(esc).join(" — ") + '</div>')
-                        : '') +
-                '</div>'
-            ).join("")
-            : '<p class="estrada-vazio">Nenhum resultado.</p>';
-    }
-
-    filtros.addEventListener("click", ev => {
-        const b = ev.target.closest(".estrada-filtro");
-        if (!b) return;
-        filtros.querySelectorAll(".estrada-filtro").forEach(x => x.classList.remove("ativo"));
-        b.classList.add("ativo");
-        grupoAtivo = b.dataset.grupo;
-        render();
-    });
-    inputBusca.addEventListener("input", render);
-
-    window.abrirEstrada = function () {
-        overlay.classList.add("aberta");
-        document.body.style.overflow = "hidden";
-        carregar();
-        setTimeout(() => inputBusca.focus(), 50);
-    };
-    window.fecharEstrada = function () {
-        overlay.classList.remove("aberta");
-        document.body.style.overflow = "";
-    };
-    overlay.addEventListener("click", ev => { if (ev.target === overlay) window.fecharEstrada(); });
-    document.addEventListener("keydown", ev => {
-        if (ev.key === "Escape" && overlay.classList.contains("aberta")) window.fecharEstrada();
-    });
-})();
-</script>
+<script type="module" src="apostila.js?v=blocos-15"></script>
 
 <div class="rg-overlay" id="rg-overlay" role="dialog" aria-modal="true" aria-label="Referência Gramatical">
     <div class="rg-painel">
