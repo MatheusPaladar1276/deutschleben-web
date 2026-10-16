@@ -1,0 +1,1814 @@
+{
+  "ankommen": {
+    "perfekt": "ist angekommen",
+    "praeteritum": "kam an",
+    "presens": {
+      "ich": "komme an",
+      "du": "kommst an",
+      "er/sie/es": "kommt an",
+      "wir": "kommen an",
+      "ihr": "kommt an",
+      "sie/Sie": "kommen an"
+    }
+  },
+  "antworten": {
+    "perfekt": "hat geantwortet",
+    "praeteritum": "antwortete",
+    "presens": {
+      "ich": "antworte",
+      "du": "antwortest",
+      "er/sie/es": "antwortet",
+      "wir": "antworten",
+      "ihr": "antwortet",
+      "sie/Sie": "antworten"
+    }
+  },
+  "arbeiten": {
+    "perfekt": "hat gearbeitet",
+    "praeteritum": "arbeitete",
+    "presens": {
+      "ich": "arbeite",
+      "du": "arbeitest",
+      "er/sie/es": "arbeitet",
+      "wir": "arbeiten",
+      "ihr": "arbeitet",
+      "sie/Sie": "arbeiten"
+    }
+  },
+  "aufstehen": {
+    "perfekt": "ist aufgestanden",
+    "praeteritum": "stand auf",
+    "presens": {
+      "ich": "stehe auf",
+      "du": "stehst auf",
+      "er/sie/es": "steht auf",
+      "wir": "stehen auf",
+      "ihr": "steht auf",
+      "sie/Sie": "stehen auf"
+    }
+  },
+  "aufwachen": {
+    "perfekt": "ist aufgewacht",
+    "praeteritum": "wachte auf",
+    "presens": {
+      "ich": "wache auf",
+      "du": "wachst auf",
+      "er/sie/es": "wacht auf",
+      "wir": "wachen auf",
+      "ihr": "wacht auf",
+      "sie/Sie": "wachen auf"
+    }
+  },
+  "aussteigen": {
+    "perfekt": "ist ausgestiegen",
+    "praeteritum": "stieg aus",
+    "presens": {
+      "ich": "steige aus",
+      "du": "steigst aus",
+      "er/sie/es": "steigt aus",
+      "wir": "steigen aus",
+      "ihr": "steigt aus",
+      "sie/Sie": "steigen aus"
+    }
+  },
+  "backen": {
+    "perfekt": "hat gebacken",
+    "praeteritum": "backte/buk",
+    "presens": {
+      "ich": "backe",
+      "du": "bäckst",
+      "er/sie/es": "bäckt",
+      "wir": "backen",
+      "ihr": "backt",
+      "sie/Sie": "backen"
+    }
+  },
+  "bauen": {
+    "perfekt": "hat gebaut",
+    "praeteritum": "baute",
+    "presens": {
+      "ich": "baue",
+      "du": "baust",
+      "er/sie/es": "baut",
+      "wir": "bauen",
+      "ihr": "baut",
+      "sie/Sie": "bauen"
+    }
+  },
+  "bedürfen": {
+    "perfekt": "hat bedurft",
+    "praeteritum": "bedurfte",
+    "presens": {
+      "ich": "bedarf",
+      "du": "bedarfst",
+      "er/sie/es": "bedarf",
+      "wir": "bedürfen",
+      "ihr": "bedürft",
+      "sie/Sie": "bedürfen"
+    }
+  },
+  "beenden": {
+    "perfekt": "hat beendet",
+    "praeteritum": "beendete",
+    "presens": {
+      "ich": "beende",
+      "du": "beendest",
+      "er/sie/es": "beendet",
+      "wir": "beenden",
+      "ihr": "beendet",
+      "sie/Sie": "beenden"
+    }
+  },
+  "begegnen": {
+    "perfekt": "ist begegnet",
+    "praeteritum": "begegnete",
+    "presens": {
+      "ich": "begegne",
+      "du": "begegnest",
+      "er/sie/es": "begegnet",
+      "wir": "begegnen",
+      "ihr": "begegnet",
+      "sie/Sie": "begegnen"
+    }
+  },
+  "beobachten": {
+    "perfekt": "hat beobachtet",
+    "praeteritum": "beobachtete",
+    "presens": {
+      "ich": "beobachte",
+      "du": "beobachtest",
+      "er/sie/es": "beobachtet",
+      "wir": "beobachten",
+      "ihr": "beobachtet",
+      "sie/Sie": "beobachten"
+    }
+  },
+  "berichten": {
+    "perfekt": "hat berichtet",
+    "praeteritum": "berichtete",
+    "presens": {
+      "ich": "berichte",
+      "du": "berichtest",
+      "er/sie/es": "berichtet",
+      "wir": "berichten",
+      "ihr": "berichtet",
+      "sie/Sie": "berichten"
+    }
+  },
+  "beschreiben": {
+    "perfekt": "hat beschrieben",
+    "praeteritum": "beschrieb",
+    "presens": {
+      "ich": "beschreibe",
+      "du": "beschreibst",
+      "er/sie/es": "beschreibt",
+      "wir": "beschreiben",
+      "ihr": "beschreibt",
+      "sie/Sie": "beschreiben"
+    }
+  },
+  "bitten": {
+    "perfekt": "hat gebeten",
+    "praeteritum": "bat",
+    "presens": {
+      "ich": "bitte",
+      "du": "bittest",
+      "er/sie/es": "bittet",
+      "wir": "bitten",
+      "ihr": "bittet",
+      "sie/Sie": "bitten"
+    }
+  },
+  "bleiben": {
+    "perfekt": "ist geblieben",
+    "praeteritum": "blieb",
+    "presens": {
+      "ich": "bleibe",
+      "du": "bleibst",
+      "er/sie/es": "bleibt",
+      "wir": "bleiben",
+      "ihr": "bleibt",
+      "sie/Sie": "bleiben"
+    }
+  },
+  "brauchen": {
+    "perfekt": "hat gebraucht",
+    "praeteritum": "brauchte",
+    "presens": {
+      "ich": "brauche",
+      "du": "brauchst",
+      "er/sie/es": "braucht",
+      "wir": "brauchen",
+      "ihr": "braucht",
+      "sie/Sie": "brauchen"
+    }
+  },
+  "bringen": {
+    "perfekt": "hat gebracht",
+    "praeteritum": "brachte",
+    "presens": {
+      "ich": "bringe",
+      "du": "bringst",
+      "er/sie/es": "bringt",
+      "wir": "bringen",
+      "ihr": "bringt",
+      "sie/Sie": "bringen"
+    }
+  },
+  "danken": {
+    "perfekt": "hat gedankt",
+    "praeteritum": "dankte",
+    "presens": {
+      "ich": "danke",
+      "du": "dankst",
+      "er/sie/es": "dankt",
+      "wir": "danken",
+      "ihr": "dankt",
+      "sie/Sie": "danken"
+    }
+  },
+  "denken": {
+    "perfekt": "hat gedacht",
+    "praeteritum": "dachte",
+    "presens": {
+      "ich": "denke",
+      "du": "denkst",
+      "er/sie/es": "denkt",
+      "wir": "denken",
+      "ihr": "denkt",
+      "sie/Sie": "denken"
+    }
+  },
+  "diskutieren": {
+    "perfekt": "hat diskutiert",
+    "praeteritum": "diskutierte",
+    "presens": {
+      "ich": "diskutiere",
+      "du": "diskutierst",
+      "er/sie/es": "diskutiert",
+      "wir": "diskutieren",
+      "ihr": "diskutiert",
+      "sie/Sie": "diskutieren"
+    }
+  },
+  "dürfen": {
+    "perfekt": "hat gedurft",
+    "praeteritum": "durfte",
+    "presens": {
+      "ich": "darf",
+      "du": "darfst",
+      "er/sie/es": "darf",
+      "wir": "dürfen",
+      "ihr": "dürft",
+      "sie/Sie": "dürfen"
+    }
+  },
+  "einladen": {
+    "perfekt": "hat eingeladen",
+    "praeteritum": "lud ein",
+    "presens": {
+      "ich": "lade ein",
+      "du": "lädst ein",
+      "er/sie/es": "lädt ein",
+      "wir": "laden ein",
+      "ihr": "ladet ein",
+      "sie/Sie": "laden ein"
+    }
+  },
+  "eintreten": {
+    "perfekt": "ist eingetreten",
+    "praeteritum": "trat ein",
+    "presens": {
+      "ich": "trete ein",
+      "du": "trittst ein",
+      "er/sie/es": "tritt ein",
+      "wir": "treten ein",
+      "ihr": "tretet ein",
+      "sie/Sie": "treten ein"
+    }
+  },
+  "entstehen": {
+    "perfekt": "ist entstanden",
+    "praeteritum": "entstand",
+    "presens": {
+      "ich": "entstehe",
+      "du": "entstehst",
+      "er/sie/es": "entsteht",
+      "wir": "entstehen",
+      "ihr": "entsteht",
+      "sie/Sie": "entstehen"
+    }
+  },
+  "entwickeln": {
+    "perfekt": "hat entwickelt",
+    "praeteritum": "entwickelte",
+    "presens": {
+      "ich": "entwickle",
+      "du": "entwickelst",
+      "er/sie/es": "entwickelt",
+      "wir": "entwickeln",
+      "ihr": "entwickelt",
+      "sie/Sie": "entwickeln"
+    }
+  },
+  "erinnern": {
+    "perfekt": "hat sich erinnert",
+    "praeteritum": "erinnerte sich",
+    "presens": {
+      "ich": "erinnere",
+      "du": "erinnerst",
+      "er/sie/es": "erinnert",
+      "wir": "erinnern",
+      "ihr": "erinnert",
+      "sie/Sie": "erinnern"
+    }
+  },
+  "erklären": {
+    "perfekt": "hat erklärt",
+    "praeteritum": "erklärte",
+    "presens": {
+      "ich": "erkläre",
+      "du": "erklärst",
+      "er/sie/es": "erklärt",
+      "wir": "erklären",
+      "ihr": "erklärt",
+      "sie/Sie": "erklären"
+    }
+  },
+  "erkunden": {
+    "perfekt": "hat erkundet",
+    "praeteritum": "erkundete",
+    "presens": {
+      "ich": "erkunde",
+      "du": "erkundest",
+      "er/sie/es": "erkundet",
+      "wir": "erkunden",
+      "ihr": "erkundet",
+      "sie/Sie": "erkunden"
+    }
+  },
+  "erreichen": {
+    "perfekt": "hat erreicht",
+    "praeteritum": "erreichte",
+    "presens": {
+      "ich": "erreiche",
+      "du": "erreichst",
+      "er/sie/es": "erreicht",
+      "wir": "erreichen",
+      "ihr": "erreicht",
+      "sie/Sie": "erreichen"
+    }
+  },
+  "erwachen": {
+    "perfekt": "ist erwacht",
+    "praeteritum": "erwachte",
+    "presens": {
+      "ich": "erwache",
+      "du": "erwachst",
+      "er/sie/es": "erwacht",
+      "wir": "erwachen",
+      "ihr": "erwacht",
+      "sie/Sie": "erwachen"
+    }
+  },
+  "erzählen": {
+    "perfekt": "hat erzählt",
+    "praeteritum": "erzählte",
+    "presens": {
+      "ich": "erzähle",
+      "du": "erzählst",
+      "er/sie/es": "erzählt",
+      "wir": "erzählen",
+      "ihr": "erzählt",
+      "sie/Sie": "erzählen"
+    }
+  },
+  "essen": {
+    "perfekt": "hat gegessen",
+    "praeteritum": "aß",
+    "presens": {
+      "ich": "esse",
+      "du": "isst",
+      "er/sie/es": "isst",
+      "wir": "essen",
+      "ihr": "esst",
+      "sie/Sie": "essen"
+    }
+  },
+  "existieren": {
+    "perfekt": "hat existiert",
+    "praeteritum": "existierte",
+    "presens": {
+      "ich": "existiere",
+      "du": "existierst",
+      "er/sie/es": "existiert",
+      "wir": "existieren",
+      "ihr": "existiert",
+      "sie/Sie": "existieren"
+    }
+  },
+  "fahren": {
+    "perfekt": "ist gefahren",
+    "praeteritum": "fuhr",
+    "presens": {
+      "ich": "fahre",
+      "du": "fährst",
+      "er/sie/es": "fährt",
+      "wir": "fahren",
+      "ihr": "fahrt",
+      "sie/Sie": "fahren"
+    }
+  },
+  "fallen": {
+    "perfekt": "ist gefallen",
+    "praeteritum": "fiel",
+    "presens": {
+      "ich": "falle",
+      "du": "fällst",
+      "er/sie/es": "fällt",
+      "wir": "fallen",
+      "ihr": "fallt",
+      "sie/Sie": "fallen"
+    }
+  },
+  "feiern": {
+    "perfekt": "hat gefeiert",
+    "praeteritum": "feierte",
+    "presens": {
+      "ich": "feiere",
+      "du": "feierst",
+      "er/sie/es": "feiert",
+      "wir": "feiern",
+      "ihr": "feiert",
+      "sie/Sie": "feiern"
+    }
+  },
+  "finden": {
+    "perfekt": "hat gefunden",
+    "praeteritum": "fand",
+    "presens": {
+      "ich": "finde",
+      "du": "findest",
+      "er/sie/es": "findet",
+      "wir": "finden",
+      "ihr": "findet",
+      "sie/Sie": "finden"
+    }
+  },
+  "fliegen": {
+    "perfekt": "ist geflogen",
+    "praeteritum": "flog",
+    "presens": {
+      "ich": "fliege",
+      "du": "fliegst",
+      "er/sie/es": "fliegt",
+      "wir": "fliegen",
+      "ihr": "fliegt",
+      "sie/Sie": "fliegen"
+    }
+  },
+  "flüstern": {
+    "perfekt": "hat geflüstert",
+    "praeteritum": "flüsterte",
+    "presens": {
+      "ich": "flüstere",
+      "du": "flüsterst",
+      "er/sie/es": "flüstert",
+      "wir": "flüstern",
+      "ihr": "flüstert",
+      "sie/Sie": "flüstern"
+    }
+  },
+  "folgen": {
+    "perfekt": "ist gefolgt",
+    "praeteritum": "folgte",
+    "presens": {
+      "ich": "folge",
+      "du": "folgst",
+      "er/sie/es": "folgt",
+      "wir": "folgen",
+      "ihr": "folgt",
+      "sie/Sie": "folgen"
+    }
+  },
+  "fordern": {
+    "perfekt": "hat gefordert",
+    "praeteritum": "forderte",
+    "presens": {
+      "ich": "fordere",
+      "du": "forderst",
+      "er/sie/es": "fordert",
+      "wir": "fordern",
+      "ihr": "fordert",
+      "sie/Sie": "fordern"
+    }
+  },
+  "fragen": {
+    "perfekt": "hat gefragt",
+    "praeteritum": "fragte",
+    "presens": {
+      "ich": "frage",
+      "du": "fragst",
+      "er/sie/es": "fragt",
+      "wir": "fragen",
+      "ihr": "fragt",
+      "sie/Sie": "fragen"
+    }
+  },
+  "fühlen": {
+    "perfekt": "hat gefühlt",
+    "praeteritum": "fühlte",
+    "presens": {
+      "ich": "fühle",
+      "du": "fühlst",
+      "er/sie/es": "fühlt",
+      "wir": "fühlen",
+      "ihr": "fühlt",
+      "sie/Sie": "fühlen"
+    }
+  },
+  "führen": {
+    "perfekt": "hat geführt",
+    "praeteritum": "führte",
+    "presens": {
+      "ich": "führe",
+      "du": "führst",
+      "er/sie/es": "führt",
+      "wir": "führen",
+      "ihr": "führt",
+      "sie/Sie": "führen"
+    }
+  },
+  "fürchten": {
+    "perfekt": "hat gefürchtet",
+    "praeteritum": "fürchtete",
+    "presens": {
+      "ich": "fürchte",
+      "du": "fürchtest",
+      "er/sie/es": "fürchtet",
+      "wir": "fürchten",
+      "ihr": "fürchtet",
+      "sie/Sie": "fürchten"
+    }
+  },
+  "geben": {
+    "perfekt": "hat gegeben",
+    "praeteritum": "gab",
+    "presens": {
+      "ich": "gebe",
+      "du": "gibst",
+      "er/sie/es": "gibt",
+      "wir": "geben",
+      "ihr": "gebt",
+      "sie/Sie": "geben"
+    }
+  },
+  "gehen": {
+    "perfekt": "ist gegangen",
+    "praeteritum": "ging",
+    "presens": {
+      "ich": "gehe",
+      "du": "gehst",
+      "er/sie/es": "geht",
+      "wir": "gehen",
+      "ihr": "geht",
+      "sie/Sie": "gehen"
+    }
+  },
+  "gehören": {
+    "perfekt": "hat gehört",
+    "praeteritum": "gehörte",
+    "presens": {
+      "ich": "gehöre",
+      "du": "gehörst",
+      "er/sie/es": "gehört",
+      "wir": "gehören",
+      "ihr": "gehört",
+      "sie/Sie": "gehören"
+    }
+  },
+  "gelingen": {
+    "perfekt": "ist gelungen",
+    "praeteritum": "gelang",
+    "presens": {
+      "ich": "gelinge",
+      "du": "gelingst",
+      "er/sie/es": "gelingt",
+      "wir": "gelingen",
+      "ihr": "gelingt",
+      "sie/Sie": "gelingen"
+    }
+  },
+  "genesen": {
+    "perfekt": "ist genesen",
+    "praeteritum": "genas",
+    "presens": {
+      "ich": "genese",
+      "du": "genest",
+      "er/sie/es": "genest",
+      "wir": "genesen",
+      "ihr": "genest",
+      "sie/Sie": "genesen"
+    }
+  },
+  "genießen": {
+    "perfekt": "hat genossen",
+    "praeteritum": "genoss",
+    "presens": {
+      "ich": "genieße",
+      "du": "genießt",
+      "er/sie/es": "genießt",
+      "wir": "genießen",
+      "ihr": "genießt",
+      "sie/Sie": "genießen"
+    }
+  },
+  "glauben": {
+    "perfekt": "hat geglaubt",
+    "praeteritum": "glaubte",
+    "presens": {
+      "ich": "glaube",
+      "du": "glaubst",
+      "er/sie/es": "glaubt",
+      "wir": "glauben",
+      "ihr": "glaubt",
+      "sie/Sie": "glauben"
+    }
+  },
+  "haben": {
+    "perfekt": "hat gehabt",
+    "praeteritum": "hatte",
+    "presens": {
+      "ich": "habe",
+      "du": "hast",
+      "er/sie/es": "hat",
+      "wir": "haben",
+      "ihr": "habt",
+      "sie/Sie": "haben"
+    }
+  },
+  "halten": {
+    "perfekt": "hat gehalten",
+    "praeteritum": "hielt",
+    "presens": {
+      "ich": "halte",
+      "du": "hältst",
+      "er/sie/es": "hält",
+      "wir": "halten",
+      "ihr": "haltet",
+      "sie/Sie": "halten"
+    }
+  },
+  "hassen": {
+    "perfekt": "hat gehasst",
+    "praeteritum": "hasste",
+    "presens": {
+      "ich": "hasse",
+      "du": "hasst",
+      "er/sie/es": "hasst",
+      "wir": "hassen",
+      "ihr": "hasst",
+      "sie/Sie": "hassen"
+    }
+  },
+  "helfen": {
+    "perfekt": "hat geholfen",
+    "praeteritum": "half",
+    "presens": {
+      "ich": "helfe",
+      "du": "hilfst",
+      "er/sie/es": "hilft",
+      "wir": "helfen",
+      "ihr": "helft",
+      "sie/Sie": "helfen"
+    }
+  },
+  "hoffen": {
+    "perfekt": "hat gehofft",
+    "praeteritum": "hoffte",
+    "presens": {
+      "ich": "hoffe",
+      "du": "hoffst",
+      "er/sie/es": "hofft",
+      "wir": "hoffen",
+      "ihr": "hofft",
+      "sie/Sie": "hoffen"
+    }
+  },
+  "hängen": {
+    "perfekt": "hat gehangen",
+    "praeteritum": "hing",
+    "presens": {
+      "ich": "hänge",
+      "du": "hängst",
+      "er/sie/es": "hängt",
+      "wir": "hängen",
+      "ihr": "hängt",
+      "sie/Sie": "hängen"
+    }
+  },
+  "hören": {
+    "perfekt": "hat gehört",
+    "praeteritum": "hörte",
+    "presens": {
+      "ich": "höre",
+      "du": "hörst",
+      "er/sie/es": "hört",
+      "wir": "hören",
+      "ihr": "hört",
+      "sie/Sie": "hören"
+    }
+  },
+  "kaufen": {
+    "perfekt": "hat gekauft",
+    "praeteritum": "kaufte",
+    "presens": {
+      "ich": "kaufe",
+      "du": "kaufst",
+      "er/sie/es": "kauft",
+      "wir": "kaufen",
+      "ihr": "kauft",
+      "sie/Sie": "kaufen"
+    }
+  },
+  "kennen": {
+    "perfekt": "hat gekannt",
+    "praeteritum": "kannte",
+    "presens": {
+      "ich": "kenne",
+      "du": "kennst",
+      "er/sie/es": "kennt",
+      "wir": "kennen",
+      "ihr": "kennt",
+      "sie/Sie": "kennen"
+    }
+  },
+  "klettern": {
+    "perfekt": "ist geklettert",
+    "praeteritum": "kletterte",
+    "presens": {
+      "ich": "klettere",
+      "du": "kletterst",
+      "er/sie/es": "klettert",
+      "wir": "klettern",
+      "ihr": "klettert",
+      "sie/Sie": "klettern"
+    }
+  },
+  "kochen": {
+    "perfekt": "hat gekocht",
+    "praeteritum": "kochte",
+    "presens": {
+      "ich": "koche",
+      "du": "kochst",
+      "er/sie/es": "kocht",
+      "wir": "kochen",
+      "ihr": "kocht",
+      "sie/Sie": "kochen"
+    }
+  },
+  "kommen": {
+    "perfekt": "ist gekommen",
+    "praeteritum": "kam",
+    "presens": {
+      "ich": "komme",
+      "du": "kommst",
+      "er/sie/es": "kommt",
+      "wir": "kommen",
+      "ihr": "kommt",
+      "sie/Sie": "kommen"
+    }
+  },
+  "kritisieren": {
+    "perfekt": "hat kritisiert",
+    "praeteritum": "kritisierte",
+    "presens": {
+      "ich": "kritisiere",
+      "du": "kritisierst",
+      "er/sie/es": "kritisiert",
+      "wir": "kritisieren",
+      "ihr": "kritisiert",
+      "sie/Sie": "kritisieren"
+    }
+  },
+  "kämpfen": {
+    "perfekt": "hat gekämpft",
+    "praeteritum": "kämpfte",
+    "presens": {
+      "ich": "kämpfe",
+      "du": "kämpfst",
+      "er/sie/es": "kämpft",
+      "wir": "kämpfen",
+      "ihr": "kämpft",
+      "sie/Sie": "kämpfen"
+    }
+  },
+  "können": {
+    "perfekt": "hat gekonnt",
+    "praeteritum": "konnte",
+    "presens": {
+      "ich": "kann",
+      "du": "kannst",
+      "er/sie/es": "kann",
+      "wir": "können",
+      "ihr": "könnt",
+      "sie/Sie": "können"
+    }
+  },
+  "lassen": {
+    "perfekt": "hat gelassen",
+    "praeteritum": "ließ",
+    "presens": {
+      "ich": "lasse",
+      "du": "lässt",
+      "er/sie/es": "lässt",
+      "wir": "lassen",
+      "ihr": "lasst",
+      "sie/Sie": "lassen"
+    }
+  },
+  "laufen": {
+    "perfekt": "ist gelaufen",
+    "praeteritum": "lief",
+    "presens": {
+      "ich": "laufe",
+      "du": "läufst",
+      "er/sie/es": "läuft",
+      "wir": "laufen",
+      "ihr": "lauft",
+      "sie/Sie": "laufen"
+    }
+  },
+  "leben": {
+    "perfekt": "hat gelebt",
+    "praeteritum": "lebte",
+    "presens": {
+      "ich": "lebe",
+      "du": "lebst",
+      "er/sie/es": "lebt",
+      "wir": "leben",
+      "ihr": "lebt",
+      "sie/Sie": "leben"
+    }
+  },
+  "legen": {
+    "perfekt": "hat gelegt",
+    "praeteritum": "legte",
+    "presens": {
+      "ich": "lege",
+      "du": "legst",
+      "er/sie/es": "legt",
+      "wir": "legen",
+      "ihr": "legt",
+      "sie/Sie": "legen"
+    }
+  },
+  "lesen": {
+    "perfekt": "hat gelesen",
+    "praeteritum": "las",
+    "presens": {
+      "ich": "lese",
+      "du": "liest",
+      "er/sie/es": "liest",
+      "wir": "lesen",
+      "ihr": "lest",
+      "sie/Sie": "lesen"
+    }
+  },
+  "lieben": {
+    "perfekt": "hat geliebt",
+    "praeteritum": "liebte",
+    "presens": {
+      "ich": "liebe",
+      "du": "liebst",
+      "er/sie/es": "liebt",
+      "wir": "lieben",
+      "ihr": "liebt",
+      "sie/Sie": "lieben"
+    }
+  },
+  "liegen": {
+    "perfekt": "hat gelegen",
+    "praeteritum": "lag",
+    "presens": {
+      "ich": "liege",
+      "du": "liegst",
+      "er/sie/es": "liegt",
+      "wir": "liegen",
+      "ihr": "liegt",
+      "sie/Sie": "liegen"
+    }
+  },
+  "löschen": {
+    "perfekt": "hat gelöscht",
+    "praeteritum": "löschte",
+    "presens": {
+      "ich": "lösche",
+      "du": "löschst",
+      "er/sie/es": "löscht",
+      "wir": "löschen",
+      "ihr": "löscht",
+      "sie/Sie": "löschen"
+    }
+  },
+  "lösen": {
+    "perfekt": "hat gelöst",
+    "praeteritum": "löste",
+    "presens": {
+      "ich": "löse",
+      "du": "löst",
+      "er/sie/es": "löst",
+      "wir": "lösen",
+      "ihr": "löst",
+      "sie/Sie": "lösen"
+    }
+  },
+  "machen": {
+    "perfekt": "hat gemacht",
+    "praeteritum": "machte",
+    "presens": {
+      "ich": "mache",
+      "du": "machst",
+      "er/sie/es": "macht",
+      "wir": "machen",
+      "ihr": "macht",
+      "sie/Sie": "machen"
+    }
+  },
+  "misslingen": {
+    "perfekt": "ist misslungen",
+    "praeteritum": "misslang",
+    "presens": {
+      "ich": "misslinge",
+      "du": "misslingst",
+      "er/sie/es": "misslingt",
+      "wir": "misslingen",
+      "ihr": "misslingt",
+      "sie/Sie": "misslingen"
+    }
+  },
+  "mögen": {
+    "perfekt": "hat gemocht",
+    "praeteritum": "mochte",
+    "presens": {
+      "ich": "mag",
+      "du": "magst",
+      "er/sie/es": "mag",
+      "wir": "mögen",
+      "ihr": "mögt",
+      "sie/Sie": "mögen"
+    }
+  },
+  "müssen": {
+    "perfekt": "hat gemusst",
+    "praeteritum": "musste",
+    "presens": {
+      "ich": "muss",
+      "du": "musst",
+      "er/sie/es": "muss",
+      "wir": "müssen",
+      "ihr": "müsst",
+      "sie/Sie": "müssen"
+    }
+  },
+  "nehmen": {
+    "perfekt": "hat genommen",
+    "praeteritum": "nahm",
+    "presens": {
+      "ich": "nehme",
+      "du": "nimmst",
+      "er/sie/es": "nimmt",
+      "wir": "nehmen",
+      "ihr": "nehmt",
+      "sie/Sie": "nehmen"
+    }
+  },
+  "organisieren": {
+    "perfekt": "hat organisiert",
+    "praeteritum": "organisierte",
+    "presens": {
+      "ich": "organisiere",
+      "du": "organisierst",
+      "er/sie/es": "organisiert",
+      "wir": "organisieren",
+      "ihr": "organisiert",
+      "sie/Sie": "organisieren"
+    }
+  },
+  "packen": {
+    "perfekt": "hat gepackt",
+    "praeteritum": "packte",
+    "presens": {
+      "ich": "packe",
+      "du": "packst",
+      "er/sie/es": "packt",
+      "wir": "packen",
+      "ihr": "packt",
+      "sie/Sie": "packen"
+    }
+  },
+  "passieren": {
+    "perfekt": "ist passiert",
+    "praeteritum": "passierte",
+    "presens": {
+      "ich": "passiere",
+      "du": "passierst",
+      "er/sie/es": "passiert",
+      "wir": "passieren",
+      "ihr": "passiert",
+      "sie/Sie": "passieren"
+    }
+  },
+  "planen": {
+    "perfekt": "hat geplant",
+    "praeteritum": "plante",
+    "presens": {
+      "ich": "plane",
+      "du": "planst",
+      "er/sie/es": "plant",
+      "wir": "planen",
+      "ihr": "plant",
+      "sie/Sie": "planen"
+    }
+  },
+  "probieren": {
+    "perfekt": "hat probiert",
+    "praeteritum": "probierte",
+    "presens": {
+      "ich": "probiere",
+      "du": "probierst",
+      "er/sie/es": "probiert",
+      "wir": "probieren",
+      "ihr": "probiert",
+      "sie/Sie": "probieren"
+    }
+  },
+  "recherchieren": {
+    "perfekt": "hat recherchiert",
+    "praeteritum": "recherchierte",
+    "presens": {
+      "ich": "recherchiere",
+      "du": "recherchierst",
+      "er/sie/es": "recherchiert",
+      "wir": "recherchieren",
+      "ihr": "recherchiert",
+      "sie/Sie": "recherchieren"
+    }
+  },
+  "reisen": {
+    "perfekt": "ist gereist",
+    "praeteritum": "reiste",
+    "presens": {
+      "ich": "reise",
+      "du": "reist",
+      "er/sie/es": "reist",
+      "wir": "reisen",
+      "ihr": "reist",
+      "sie/Sie": "reisen"
+    }
+  },
+  "reiten": {
+    "perfekt": "ist geritten",
+    "praeteritum": "ritt",
+    "presens": {
+      "ich": "reite",
+      "du": "reitest",
+      "er/sie/es": "reitet",
+      "wir": "reiten",
+      "ihr": "reitet",
+      "sie/Sie": "reiten"
+    }
+  },
+  "rennen": {
+    "perfekt": "ist gerannt",
+    "praeteritum": "rannte",
+    "presens": {
+      "ich": "renne",
+      "du": "rennst",
+      "er/sie/es": "rennt",
+      "wir": "rennen",
+      "ihr": "rennt",
+      "sie/Sie": "rennen"
+    }
+  },
+  "reservieren": {
+    "perfekt": "hat reserviert",
+    "praeteritum": "reservierte",
+    "presens": {
+      "ich": "reserviere",
+      "du": "reservierst",
+      "er/sie/es": "reserviert",
+      "wir": "reservieren",
+      "ihr": "reserviert",
+      "sie/Sie": "reservieren"
+    }
+  },
+  "retten": {
+    "perfekt": "hat gerettet",
+    "praeteritum": "rettete",
+    "presens": {
+      "ich": "rette",
+      "du": "rettest",
+      "er/sie/es": "rettet",
+      "wir": "retten",
+      "ihr": "rettet",
+      "sie/Sie": "retten"
+    }
+  },
+  "rufen": {
+    "perfekt": "hat gerufen",
+    "praeteritum": "rief",
+    "presens": {
+      "ich": "rufe",
+      "du": "rufst",
+      "er/sie/es": "ruft",
+      "wir": "rufen",
+      "ihr": "ruft",
+      "sie/Sie": "rufen"
+    }
+  },
+  "sagen": {
+    "perfekt": "hat gesagt",
+    "praeteritum": "sagte",
+    "presens": {
+      "ich": "sage",
+      "du": "sagst",
+      "er/sie/es": "sagt",
+      "wir": "sagen",
+      "ihr": "sagt",
+      "sie/Sie": "sagen"
+    }
+  },
+  "schauen": {
+    "perfekt": "hat geschaut",
+    "praeteritum": "schaute",
+    "presens": {
+      "ich": "schaue",
+      "du": "schaust",
+      "er/sie/es": "schaut",
+      "wir": "schauen",
+      "ihr": "schaut",
+      "sie/Sie": "schauen"
+    }
+  },
+  "schlafen": {
+    "perfekt": "hat geschlafen",
+    "praeteritum": "schlief",
+    "presens": {
+      "ich": "schlafe",
+      "du": "schläfst",
+      "er/sie/es": "schläft",
+      "wir": "schlafen",
+      "ihr": "schlaft",
+      "sie/Sie": "schlafen"
+    }
+  },
+  "schlagen": {
+    "perfekt": "hat geschlagen",
+    "praeteritum": "schlug",
+    "presens": {
+      "ich": "schlage",
+      "du": "schlägst",
+      "er/sie/es": "schlägt",
+      "wir": "schlagen",
+      "ihr": "schlagt",
+      "sie/Sie": "schlagen"
+    }
+  },
+  "schließen": {
+    "perfekt": "hat geschlossen",
+    "praeteritum": "schloss",
+    "presens": {
+      "ich": "schließe",
+      "du": "schließt",
+      "er/sie/es": "schließt",
+      "wir": "schließen",
+      "ihr": "schließt",
+      "sie/Sie": "schließen"
+    }
+  },
+  "schreiben": {
+    "perfekt": "hat geschrieben",
+    "praeteritum": "schrieb",
+    "presens": {
+      "ich": "schreibe",
+      "du": "schreibst",
+      "er/sie/es": "schreibt",
+      "wir": "schreiben",
+      "ihr": "schreibt",
+      "sie/Sie": "schreiben"
+    }
+  },
+  "schreien": {
+    "perfekt": "hat geschrien",
+    "praeteritum": "schrie",
+    "presens": {
+      "ich": "schreie",
+      "du": "schreist",
+      "er/sie/es": "schreit",
+      "wir": "schreien",
+      "ihr": "schreit",
+      "sie/Sie": "schreien"
+    }
+  },
+  "schweigen": {
+    "perfekt": "hat geschwiegen",
+    "praeteritum": "schwieg",
+    "presens": {
+      "ich": "schweige",
+      "du": "schweigst",
+      "er/sie/es": "schweigt",
+      "wir": "schweigen",
+      "ihr": "schweigt",
+      "sie/Sie": "schweigen"
+    }
+  },
+  "schwimmen": {
+    "perfekt": "ist geschwommen",
+    "praeteritum": "schwamm",
+    "presens": {
+      "ich": "schwimme",
+      "du": "schwimmst",
+      "er/sie/es": "schwimmt",
+      "wir": "schwimmen",
+      "ihr": "schwimmt",
+      "sie/Sie": "schwimmen"
+    }
+  },
+  "sehen": {
+    "perfekt": "hat gesehen",
+    "praeteritum": "sah",
+    "presens": {
+      "ich": "sehe",
+      "du": "siehst",
+      "er/sie/es": "sieht",
+      "wir": "sehen",
+      "ihr": "seht",
+      "sie/Sie": "sehen"
+    }
+  },
+  "sein": {
+    "perfekt": "ist gewesen",
+    "praeteritum": "war",
+    "presens": {
+      "ich": "bin",
+      "du": "bist",
+      "er/sie/es": "ist",
+      "wir": "sind",
+      "ihr": "seid",
+      "sie/Sie": "sind"
+    }
+  },
+  "sich bemühen": {
+    "perfekt": "hat sich bemüht",
+    "praeteritum": "bemühte sich",
+    "presens": {
+      "ich": "bemühe mich",
+      "du": "bemühst dich",
+      "er/sie/es": "bemüht sich",
+      "wir": "bemühen uns",
+      "ihr": "bemüht euch",
+      "sie/Sie": "bemühen sich"
+    }
+  },
+  "sich beschweren": {
+    "perfekt": "hat sich beschwert",
+    "praeteritum": "beschwerte sich",
+    "presens": {
+      "ich": "beschwere mich",
+      "du": "beschwerst dich",
+      "er/sie/es": "beschwert sich",
+      "wir": "beschweren uns",
+      "ihr": "beschwert euch",
+      "sie/Sie": "beschweren sich"
+    }
+  },
+  "sich entscheiden": {
+    "perfekt": "hat sich entschieden",
+    "praeteritum": "entschied sich",
+    "presens": {
+      "ich": "entscheide mich",
+      "du": "entscheidest dich",
+      "er/sie/es": "entscheidet sich",
+      "wir": "entscheiden uns",
+      "ihr": "entscheidet euch",
+      "sie/Sie": "entscheiden sich"
+    }
+  },
+  "sich freuen": {
+    "perfekt": "hat sich gefreut",
+    "praeteritum": "freute sich",
+    "presens": {
+      "ich": "freue mich",
+      "du": "freust dich",
+      "er/sie/es": "freut sich",
+      "wir": "freuen uns",
+      "ihr": "freut euch",
+      "sie/Sie": "freuen sich"
+    }
+  },
+  "sich interessieren": {
+    "perfekt": "hat sich interessiert",
+    "praeteritum": "interessierte sich",
+    "presens": {
+      "ich": "interessiere mich",
+      "du": "interessierst dich",
+      "er/sie/es": "interessiert sich",
+      "wir": "interessieren uns",
+      "ihr": "interessiert euch",
+      "sie/Sie": "interessieren sich"
+    }
+  },
+  "sich verändern": {
+    "perfekt": "hat sich verändert",
+    "praeteritum": "veränderte sich",
+    "presens": {
+      "ich": "verändere mich",
+      "du": "veränderst dich",
+      "er/sie/es": "verändert sich",
+      "wir": "verändern uns",
+      "ihr": "verändert euch",
+      "sie/Sie": "verändern sich"
+    }
+  },
+  "sich ärgern": {
+    "perfekt": "hat sich geärgert",
+    "praeteritum": "ärgerte sich",
+    "presens": {
+      "ich": "ärgere mich",
+      "du": "ärgerst dich",
+      "er/sie/es": "ärgert sich",
+      "wir": "ärgern uns",
+      "ihr": "ärgert euch",
+      "sie/Sie": "ärgern sich"
+    }
+  },
+  "singen": {
+    "perfekt": "hat gesungen",
+    "praeteritum": "sang",
+    "presens": {
+      "ich": "singe",
+      "du": "singst",
+      "er/sie/es": "singt",
+      "wir": "singen",
+      "ihr": "singt",
+      "sie/Sie": "singen"
+    }
+  },
+  "sitzen": {
+    "perfekt": "hat gesessen",
+    "praeteritum": "saß",
+    "presens": {
+      "ich": "sitze",
+      "du": "sitzt",
+      "er/sie/es": "sitzt",
+      "wir": "sitzen",
+      "ihr": "sitzt",
+      "sie/Sie": "sitzen"
+    }
+  },
+  "sollen": {
+    "perfekt": "hat gesollt",
+    "praeteritum": "sollte",
+    "presens": {
+      "ich": "soll",
+      "du": "sollst",
+      "er/sie/es": "soll",
+      "wir": "sollen",
+      "ihr": "sollt",
+      "sie/Sie": "sollen"
+    }
+  },
+  "spazieren": {
+    "perfekt": "ist spaziert",
+    "praeteritum": "spazierte",
+    "presens": {
+      "ich": "spaziere",
+      "du": "spazierst",
+      "er/sie/es": "spaziert",
+      "wir": "spazieren",
+      "ihr": "spaziert",
+      "sie/Sie": "spazieren"
+    }
+  },
+  "speichern": {
+    "perfekt": "hat gespeichert",
+    "praeteritum": "speicherte",
+    "presens": {
+      "ich": "speichere",
+      "du": "speicherst",
+      "er/sie/es": "speichert",
+      "wir": "speichern",
+      "ihr": "speichert",
+      "sie/Sie": "speichern"
+    }
+  },
+  "spenden": {
+    "perfekt": "hat gespendet",
+    "praeteritum": "spendete",
+    "presens": {
+      "ich": "spende",
+      "du": "spendest",
+      "er/sie/es": "spendet",
+      "wir": "spenden",
+      "ihr": "spendet",
+      "sie/Sie": "spenden"
+    }
+  },
+  "spielen": {
+    "perfekt": "hat gespielt",
+    "praeteritum": "spielte",
+    "presens": {
+      "ich": "spiele",
+      "du": "spielst",
+      "er/sie/es": "spielt",
+      "wir": "spielen",
+      "ihr": "spielt",
+      "sie/Sie": "spielen"
+    }
+  },
+  "sprechen": {
+    "perfekt": "hat gesprochen",
+    "praeteritum": "sprach",
+    "presens": {
+      "ich": "spreche",
+      "du": "sprichst",
+      "er/sie/es": "spricht",
+      "wir": "sprechen",
+      "ihr": "sprecht",
+      "sie/Sie": "sprechen"
+    }
+  },
+  "springen": {
+    "perfekt": "ist gesprungen",
+    "praeteritum": "sprang",
+    "presens": {
+      "ich": "springe",
+      "du": "springst",
+      "er/sie/es": "springt",
+      "wir": "springen",
+      "ihr": "springt",
+      "sie/Sie": "springen"
+    }
+  },
+  "stehen": {
+    "perfekt": "hat gestanden",
+    "praeteritum": "stand",
+    "presens": {
+      "ich": "stehe",
+      "du": "stehst",
+      "er/sie/es": "steht",
+      "wir": "stehen",
+      "ihr": "steht",
+      "sie/Sie": "stehen"
+    }
+  },
+  "steigen": {
+    "perfekt": "ist gestiegen",
+    "praeteritum": "stieg",
+    "presens": {
+      "ich": "steige",
+      "du": "steigst",
+      "er/sie/es": "steigt",
+      "wir": "steigen",
+      "ihr": "steigt",
+      "sie/Sie": "steigen"
+    }
+  },
+  "sterben": {
+    "perfekt": "ist gestorben",
+    "praeteritum": "starb",
+    "presens": {
+      "ich": "sterbe",
+      "du": "stirbst",
+      "er/sie/es": "stirbt",
+      "wir": "sterben",
+      "ihr": "sterbt",
+      "sie/Sie": "sterben"
+    }
+  },
+  "streiten": {
+    "perfekt": "hat gestritten",
+    "praeteritum": "stritt",
+    "presens": {
+      "ich": "streite",
+      "du": "streitest",
+      "er/sie/es": "streitet",
+      "wir": "streiten",
+      "ihr": "streitet",
+      "sie/Sie": "streiten"
+    }
+  },
+  "suchen": {
+    "perfekt": "hat gesucht",
+    "praeteritum": "suchte",
+    "presens": {
+      "ich": "suche",
+      "du": "suchst",
+      "er/sie/es": "sucht",
+      "wir": "suchen",
+      "ihr": "sucht",
+      "sie/Sie": "suchen"
+    }
+  },
+  "teilen": {
+    "perfekt": "hat geteilt",
+    "praeteritum": "teilte",
+    "presens": {
+      "ich": "teile",
+      "du": "teilst",
+      "er/sie/es": "teilt",
+      "wir": "teilen",
+      "ihr": "teilt",
+      "sie/Sie": "teilen"
+    }
+  },
+  "telefonieren": {
+    "perfekt": "hat telefoniert",
+    "praeteritum": "telefonierte",
+    "presens": {
+      "ich": "telefoniere",
+      "du": "telefonierst",
+      "er/sie/es": "telefoniert",
+      "wir": "telefonieren",
+      "ihr": "telefoniert",
+      "sie/Sie": "telefonieren"
+    }
+  },
+  "treffen": {
+    "perfekt": "hat getroffen",
+    "praeteritum": "traf",
+    "presens": {
+      "ich": "treffe",
+      "du": "triffst",
+      "er/sie/es": "trifft",
+      "wir": "treffen",
+      "ihr": "trefft",
+      "sie/Sie": "treffen"
+    }
+  },
+  "trinken": {
+    "perfekt": "hat getrunken",
+    "praeteritum": "trank",
+    "presens": {
+      "ich": "trinke",
+      "du": "trinkst",
+      "er/sie/es": "trinkt",
+      "wir": "trinken",
+      "ihr": "trinkt",
+      "sie/Sie": "trinken"
+    }
+  },
+  "träumen": {
+    "perfekt": "hat geträumt",
+    "praeteritum": "träumte",
+    "presens": {
+      "ich": "träume",
+      "du": "träumst",
+      "er/sie/es": "träumt",
+      "wir": "träumen",
+      "ihr": "träumt",
+      "sie/Sie": "träumen"
+    }
+  },
+  "vergeben": {
+    "perfekt": "hat vergeben",
+    "praeteritum": "vergab",
+    "presens": {
+      "ich": "vergebe",
+      "du": "vergibst",
+      "er/sie/es": "vergibt",
+      "wir": "vergeben",
+      "ihr": "vergebt",
+      "sie/Sie": "vergeben"
+    }
+  },
+  "vergessen": {
+    "perfekt": "hat vergessen",
+    "praeteritum": "vergaß",
+    "presens": {
+      "ich": "vergesse",
+      "du": "vergisst",
+      "er/sie/es": "vergisst",
+      "wir": "vergessen",
+      "ihr": "vergesst",
+      "sie/Sie": "vergessen"
+    }
+  },
+  "verkaufen": {
+    "perfekt": "hat verkauft",
+    "praeteritum": "verkaufte",
+    "presens": {
+      "ich": "verkaufe",
+      "du": "verkaufst",
+      "er/sie/es": "verkauft",
+      "wir": "verkaufen",
+      "ihr": "verkauft",
+      "sie/Sie": "verkaufen"
+    }
+  },
+  "verlangen": {
+    "perfekt": "hat verlangt",
+    "praeteritum": "verlangte",
+    "presens": {
+      "ich": "verlange",
+      "du": "verlangst",
+      "er/sie/es": "verlangt",
+      "wir": "verlangen",
+      "ihr": "verlangt",
+      "sie/Sie": "verlangen"
+    }
+  },
+  "verschwinden": {
+    "perfekt": "ist verschwunden",
+    "praeteritum": "verschwand",
+    "presens": {
+      "ich": "verschwinde",
+      "du": "verschwindest",
+      "er/sie/es": "verschwindet",
+      "wir": "verschwinden",
+      "ihr": "verschwindet",
+      "sie/Sie": "verschwinden"
+    }
+  },
+  "verstehen": {
+    "perfekt": "hat verstanden",
+    "praeteritum": "verstand",
+    "presens": {
+      "ich": "verstehe",
+      "du": "verstehst",
+      "er/sie/es": "versteht",
+      "wir": "verstehen",
+      "ihr": "versteht",
+      "sie/Sie": "verstehen"
+    }
+  },
+  "versuchen": {
+    "perfekt": "hat versucht",
+    "praeteritum": "versuchte",
+    "presens": {
+      "ich": "versuche",
+      "du": "versuchst",
+      "er/sie/es": "versucht",
+      "wir": "versuchen",
+      "ihr": "versucht",
+      "sie/Sie": "versuchen"
+    }
+  },
+  "verzeihen": {
+    "perfekt": "hat verziehen",
+    "praeteritum": "verzieh",
+    "presens": {
+      "ich": "verzeihe",
+      "du": "verzeihst",
+      "er/sie/es": "verzeiht",
+      "wir": "verzeihen",
+      "ihr": "verzeiht",
+      "sie/Sie": "verzeihen"
+    }
+  },
+  "wachen": {
+    "perfekt": "hat gewacht",
+    "praeteritum": "wachte",
+    "presens": {
+      "ich": "wache",
+      "du": "wachst",
+      "er/sie/es": "wacht",
+      "wir": "wachen",
+      "ihr": "wacht",
+      "sie/Sie": "wachen"
+    }
+  },
+  "wandern": {
+    "perfekt": "ist gewandert",
+    "praeteritum": "wanderte",
+    "presens": {
+      "ich": "wandere",
+      "du": "wanderst",
+      "er/sie/es": "wandert",
+      "wir": "wandern",
+      "ihr": "wandert",
+      "sie/Sie": "wandern"
+    }
+  },
+  "warten": {
+    "perfekt": "hat gewartet",
+    "praeteritum": "wartete",
+    "presens": {
+      "ich": "warte",
+      "du": "wartest",
+      "er/sie/es": "wartet",
+      "wir": "warten",
+      "ihr": "wartet",
+      "sie/Sie": "warten"
+    }
+  },
+  "werden": {
+    "perfekt": "ist geworden",
+    "praeteritum": "wurde",
+    "presens": {
+      "ich": "werde",
+      "du": "wirst",
+      "er/sie/es": "wird",
+      "wir": "werden",
+      "ihr": "werdet",
+      "sie/Sie": "werden"
+    }
+  },
+  "wissen": {
+    "perfekt": "hat gewusst",
+    "praeteritum": "wusste",
+    "presens": {
+      "ich": "weiß",
+      "du": "weißt",
+      "er/sie/es": "weiß",
+      "wir": "wissen",
+      "ihr": "wisst",
+      "sie/Sie": "wissen"
+    }
+  },
+  "wohnen": {
+    "perfekt": "hat gewohnt",
+    "praeteritum": "wohnte",
+    "presens": {
+      "ich": "wohne",
+      "du": "wohnst",
+      "er/sie/es": "wohnt",
+      "wir": "wohnen",
+      "ihr": "wohnt",
+      "sie/Sie": "wohnen"
+    }
+  },
+  "wollen": {
+    "perfekt": "hat gewollt",
+    "praeteritum": "wollte",
+    "presens": {
+      "ich": "will",
+      "du": "willst",
+      "er/sie/es": "will",
+      "wir": "wollen",
+      "ihr": "wollt",
+      "sie/Sie": "wollen"
+    }
+  },
+  "wünschen": {
+    "perfekt": "hat gewünscht",
+    "praeteritum": "wünschte",
+    "presens": {
+      "ich": "wünsche",
+      "du": "wünschst",
+      "er/sie/es": "wünscht",
+      "wir": "wünschen",
+      "ihr": "wünscht",
+      "sie/Sie": "wünschen"
+    }
+  },
+  "zurückkehren": {
+    "perfekt": "ist zurückgekehrt",
+    "praeteritum": "kehrte zurück",
+    "presens": {
+      "ich": "kehre zurück",
+      "du": "kehrst zurück",
+      "er/sie/es": "kehrt zurück",
+      "wir": "kehren zurück",
+      "ihr": "kehrt zurück",
+      "sie/Sie": "kehren zurück"
+    }
+  },
+  "zweifeln": {
+    "perfekt": "hat gezweifelt",
+    "praeteritum": "zweifelte",
+    "presens": {
+      "ich": "zweifle",
+      "du": "zweifelst",
+      "er/sie/es": "zweifelt",
+      "wir": "zweifeln",
+      "ihr": "zweifelt",
+      "sie/Sie": "zweifeln"
+    }
+  },
+  "öffnen": {
+    "perfekt": "hat geöffnet",
+    "praeteritum": "öffnete",
+    "presens": {
+      "ich": "öffne",
+      "du": "öffnest",
+      "er/sie/es": "öffnet",
+      "wir": "öffnen",
+      "ihr": "öffnet",
+      "sie/Sie": "öffnen"
+    }
+  },
+  "überzeugen": {
+    "perfekt": "hat überzeugt",
+    "praeteritum": "überzeugte",
+    "presens": {
+      "ich": "überzeuge",
+      "du": "überzeugst",
+      "er/sie/es": "überzeugt",
+      "wir": "überzeugen",
+      "ihr": "überzeugt",
+      "sie/Sie": "überzeugen"
+    }
+  }
+}

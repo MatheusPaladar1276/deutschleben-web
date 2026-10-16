@@ -44,3 +44,5 @@ header a.marca-dl{display:block;flex:0 1 320px;padding:0;border:0;border-radius:
 .marca-dl .filete span{flex:1}.marca-dl .preto{background:#151515}.marca-dl .vermelho{background:#cf3030}.marca-dl .amarelo{background:#f1c232}
 .marca-dl .subtitulo{display:block;margin-top:7px;font-size:22px;font-weight:700;line-height:1.4}
 @media(max-width:600px){.marca-dl .marca{font-size:32px}}
+
+.consulta-verbal{margin:8px 0;padding:8px 12px;border-left:3px solid #a492b6}.consulta-verbal p{margin:6px 0}

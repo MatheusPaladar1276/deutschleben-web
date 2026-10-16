@@ -3,7 +3,7 @@ import * as dados from './dados.js';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='pontos-9';
+const VERSAO='verbos-11';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -50,6 +50,38 @@ function limpar(){
   for(const id of ['entrada-status','lista-status','salvo-status','offline-status','opcoes-status'])retorno(id,'',false);
   $('opcoes-estudo').open=false;$('opcoes-entrada').open=false;$('releitura').hidden=true;visoes.card.secao=null;aviso('');
 }
+const AUSENTE='Ainda não disponível no acervo';
+let acervoPendente=null;
+function acervoVerbal(){
+  if(!acervoPendente)acervoPendente=fetch('./verbos-consulta.json').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{acervoPendente=null;throw e;});
+  return acervoPendente;
+}
+function infinitivoSeguro(item,acervo){
+  if(item.infinitivo){const lema=item.infinitivo.trim();return Object.hasOwn(acervo,lema)?lema:null;}
+  const partes=item.de.split(';').map(s=>s.trim());
+  // O segundo campo dos cards antigos declara o infinitivo; nunca inferir de uma forma flexionada.
+  if(partes.length===2 && /\bmöchte\b/iu.test(partes[0]))return null;
+  const lema=partes.length===1?partes[0]:partes.length===2?partes[1]:null;
+  return lema && Object.hasOwn(acervo,lema)?lema:null;
+}
+function consultaVerbal(item){
+  const painel=document.createElement('div');painel.className='consulta-verbal';painel.hidden=true;
+  async function abrir(){
+    painel.replaceChildren();
+    try{
+      const acervo=await acervoVerbal(),lema=infinitivoSeguro(item,acervo),v=lema?acervo[lema]:{};
+      if(painel.hidden)return;
+      for(const [titulo,valor] of [
+        ['Präsens',v.presens?['ich','du','er/sie/es','wir','ihr','sie/Sie'].map(p=>p+': '+(v.presens[p]||AUSENTE)).join(' / '):AUSENTE],
+        ['Perfekt — forma de referência',v.perfekt||AUSENTE],
+        ['Präteritum — forma de referência',v.praeteritum||AUSENTE]
+      ]){
+        const p=document.createElement('p'),b=document.createElement('strong');b.textContent=titulo+': ';p.append(b,document.createTextNode(valor));painel.append(p);
+      }
+    }catch{if(!painel.hidden)painel.textContent=AUSENTE;}
+  }
+  return {painel,abrir};
+}
 function render(dest,c,port=true){
   dest.replaceChildren();dest.classList.toggle('sem-pt',!port);
   const estado=visoes[dest.id], disponiveis=F.secoes.filter(s=>c.secoes[s].length);
@@ -67,12 +99,20 @@ function render(dest,c,port=true){
   if(estado.secao==='blocos'){
     const p=document.createElement('p');p.className='nota';p.textContent='Reconheça o bloco inteiro pelo sentido, sem remontar palavra por palavra. Nem todo bloco é uma expressão fixa.';caixa.append(p);
   }
+  const consultas=[];
+  if(estado.secao==='verbos'){
+    const b=document.createElement('button');b.type='button';b.className='conjugar-verbos';b.textContent='Conjugar verbos';b.setAttribute('aria-expanded','false');b.disabled=ocupado;
+    b.onclick=()=>{const abrir=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(abrir));for(const consulta of consultas){consulta.painel.hidden=!abrir;if(abrir)consulta.abrir();}};
+    caixa.append(b);
+  }
   for(const i of c.secoes[estado.secao]){
     const linha=document.createElement('div');linha.className='linha';const par=document.createElement('div');par.className='par';
     for(const [cl,txt] of [['de',i.de],['pt seta','→'],['pt',i.pt]]){
-      const span=document.createElement('span');span.className=cl;span.textContent=txt;if(cl==='de')span.lang='de';par.append(span);
+      const span=document.createElement('span');span.className=cl;span.textContent=txt;if(cl==='de')span.lang='de';
+      par.append(span);
     }
     linha.append(par);
+    if(estado.secao==='verbos'){const consulta=consultaVerbal(i);consultas.push(consulta);linha.append(consulta.painel);}
     if(i.origem && i.origem.trim()!==i.de.trim()){
       const contexto=document.createElement('details');contexto.className='contexto';const sum=document.createElement('summary');sum.textContent='Ver contexto';
       const p=document.createElement('p');p.lang='de';p.textContent=i.origem;contexto.append(sum,p);linha.append(contexto);

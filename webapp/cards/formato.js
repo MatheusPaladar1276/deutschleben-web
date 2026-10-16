@@ -12,7 +12,7 @@
       const itens = c.secoes[nome];
       if (!Array.isArray(itens) || itens.length > 100) throw Error('Seção inválida: '+nome);
       for (const i of itens) {
-        if (!keys(i,['de','pt','origem','essencial']) || !str(i.de) || !str(i.pt) || typeof i.essencial !== 'boolean' || ('origem' in i && !str(i.origem))) throw Error('Item inválido em '+nome+': use de, pt, essencial e origem opcional.');
+        if (!keys(i,['de','pt','origem','essencial','infinitivo']) || !str(i.de) || !str(i.pt) || typeof i.essencial !== 'boolean' || ('origem' in i && !str(i.origem)) || ('infinitivo' in i && (nome !== 'verbos' || !str(i.infinitivo,200)))) throw Error('Item inválido em '+nome+': use de, pt, essencial e origem opcional.');
         if (['blocos','duvidas'].includes(nome) && (!i.essencial || !str(i.origem))) throw Error(nome+': cada item deve ser essencial e ter frase de origem.');
       }
     }
