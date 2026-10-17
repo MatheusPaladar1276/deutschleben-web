@@ -267,6 +267,88 @@
         "pt": "de volta, aqui parte de zurückgehen",
         "essencial": false
       }
+    ],
+    "construcoes": [
+      {
+        "de": "am frühen Morgen",
+        "pt": "bem cedo, pela manhã",
+        "nota": "parte do dia; am = an + dem.",
+        "origem": "Am frühen Morgen gehe ich zum See.",
+        "usoId": "prep-037",
+        "essencial": true
+      },
+      {
+        "de": "zum See",
+        "pt": "ao lago",
+        "nota": "destino; zum = zu + dem.",
+        "origem": "Am frühen Morgen gehe ich zum See.",
+        "usoId": "prep-028",
+        "essencial": true
+      },
+      {
+        "de": "über dem Wasser",
+        "pt": "sobre a água",
+        "nota": "posição acima da água.",
+        "origem": "Über dem Wasser liegt leichter Nebel.",
+        "usoId": "prep-044",
+        "essencial": true
+      },
+      {
+        "de": "am Ufer",
+        "pt": "na margem",
+        "nota": "localização junto à margem; am = an + dem.",
+        "origem": "Am Ufer sehe ich einen kleinen Vogel.",
+        "usoId": "prep-035",
+        "essencial": true
+      },
+      {
+        "de": "auf einem Ast",
+        "pt": "num galho",
+        "nota": "localização sobre uma superfície.",
+        "origem": "Er sitzt auf einem Ast und schaut ins Wasser.",
+        "usoId": "prep-038",
+        "essencial": true
+      },
+      {
+        "de": "ins Wasser",
+        "pt": "para dentro da água",
+        "nota": "direção do olhar; ins = in + das.",
+        "origem": "Er sitzt auf einem Ast und schaut ins Wasser.",
+        "usoId": "prep-041",
+        "essencial": true
+      },
+      {
+        "de": "nach einer Weile",
+        "pt": "depois de algum tempo",
+        "nota": "posterioridade.",
+        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück.",
+        "usoId": "prep-023",
+        "essencial": true
+      },
+      {
+        "de": "zum Haus",
+        "pt": "para a casa",
+        "nota": "destino; zum = zu + dem.",
+        "origem": "Nach einer Weile gehe ich langsam zum Haus zurück.",
+        "usoId": "prep-028",
+        "essencial": true
+      },
+      {
+        "de": "am Fenster",
+        "pt": "à janela",
+        "nota": "localização junto à janela; am = an + dem.",
+        "origem": "Ich sitze am Fenster und denke an den Tag.",
+        "usoId": "prep-035",
+        "essencial": true
+      },
+      {
+        "de": "an den Tag",
+        "pt": "no dia",
+        "nota": "denken + an: pensar em algo.",
+        "origem": "Ich sitze am Fenster und denke an den Tag.",
+        "usoId": "prep-081",
+        "essencial": true
+      }
     ]
   }
 }

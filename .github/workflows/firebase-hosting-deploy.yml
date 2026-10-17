@@ -17,7 +17,7 @@ jobs:
       - name: Checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Node para publicação das regras
+      - name: Node para conferência das regras
         uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -25,7 +25,7 @@ jobs:
       - name: Ferramentas de publicação
         run: npm install --prefix "$RUNNER_TEMP/dl-firebase" google-auth-library@11.1.0
 
-      - name: Publicar e conferir regras antes do Hosting
+      - name: Conferir regras sem alterações antes do Hosting
         run: node tools/publicar-regras.cjs
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}

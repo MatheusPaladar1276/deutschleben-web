@@ -51,3 +51,6 @@ header a.marca-dl{display:block;flex:0 1 320px;padding:0;border:0;border-radius:
 .conjugar-verbos:focus-visible{outline-color:#28543A}
 
 .tabela-verbal{max-width:100%;overflow-x:auto;margin:10px 0}.tabela-verbal table{width:100%;min-width:620px;border-collapse:collapse}.tabela-verbal th,.tabela-verbal td{border:1px solid #AAB7C4;padding:8px;text-align:left;background:#F5F7FA}.tabela-verbal th{background:#dce4ec}.tabela-verbal caption{text-align:left;font-weight:700;margin-bottom:8px}
+
+/* Construções usa a mesma caixa das categorias e rolagem normal da página. */
+.comparacao-construcao+.comparacao-construcao{border-top:1px solid #AAB7C4;margin-top:12px;padding-top:12px}

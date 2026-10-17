@@ -1,7 +1,7 @@
 // Formato público DL Cards v1. Todos os campos de conteúdo são texto, nunca HTML.
 (function(root) {
-  const secoes = ['duvidas', 'blocos', 'sentencas', 'substantivos', 'verbos', 'adjetivos', 'adverbios'];
-  const nomes = ['Dúvidas e esquecimentos', 'Blocos de sentido', 'Sentenças', 'Substantivos', 'Verbos', 'Adjetivos', 'Advérbios'];
+  const secoes = ['duvidas', 'blocos', 'sentencas', 'substantivos', 'verbos', 'adjetivos', 'adverbios', 'construcoes'];
+  const nomes = ['Dúvidas e esquecimentos', 'Blocos de sentido', 'Sentenças', 'Substantivos', 'Verbos', 'Adjetivos', 'Advérbios', 'Construções'];
   function validar(entrada) {
     if (typeof entrada === 'string' && entrada.length > 60000) throw Error('Limite: 60.000 caracteres.');
     let c; try { c = typeof entrada === 'string' ? JSON.parse(entrada) : entrada; } catch { throw Error('JSON inválido. Confira aspas e vírgulas.'); }
@@ -9,10 +9,12 @@
     const str = (s, max=4000) => typeof s === 'string' && s.trim().length > 0 && s.length <= max;
     if (!keys(c, ['versao','numero','titulo','secoes']) || c.versao !== 1 || !Number.isInteger(c.numero) || c.numero < 1 || c.numero > 9999 || !str(c.titulo,200) || !keys(c.secoes,secoes)) throw Error('Esperado formato v1, número, título e seções válidas.');
     for (const nome of secoes) {
+      if (nome === 'construcoes' && !Object.hasOwn(c.secoes,nome)) continue;
       const itens = c.secoes[nome];
       if (!Array.isArray(itens) || itens.length > 100) throw Error('Seção inválida: '+nome);
       for (const i of itens) {
-        if (!keys(i,['de','pt','origem','essencial','infinitivo','outroExemplo']) || !str(i.de) || !str(i.pt) || typeof i.essencial !== 'boolean' || ('origem' in i && !str(i.origem)) || ('infinitivo' in i && (nome !== 'verbos' || !str(i.infinitivo,200)))) throw Error('Item inválido em '+nome+': use de, pt, essencial e origem opcional.');
+        if (!keys(i,['de','pt','origem','essencial','infinitivo','outroExemplo','nota','usoId']) || !str(i.de) || !str(i.pt) || typeof i.essencial !== 'boolean' || ('origem' in i && !str(i.origem)) || ('infinitivo' in i && (nome !== 'verbos' || !str(i.infinitivo,200)))) throw Error('Item inválido em '+nome+': use de, pt, essencial e origem opcional.');
+        if (('nota' in i && (nome !== 'construcoes' || !str(i.nota,2000))) || ('usoId' in i && (nome !== 'construcoes' || !str(i.usoId,200))) || (nome === 'construcoes' && !str(i.origem))) throw Error('Construções: informe origem e, opcionalmente, nota e usoId em texto.');
         if ('outroExemplo' in i && (nome !== 'blocos' || !keys(i.outroExemplo,['de','pt']) || !str(i.outroExemplo.de) || !str(i.outroExemplo.pt))) throw Error('Outro exemplo: informe de e pt nos blocos.');
         if (['blocos','duvidas'].includes(nome) && (!i.essencial || !str(i.origem))) throw Error(nome+': cada item deve ser essencial e ter frase de origem.');
       }

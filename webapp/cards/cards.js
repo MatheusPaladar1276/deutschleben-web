@@ -1,11 +1,11 @@
 import { preencherFraseBloco } from '../destaques-blocos.js?v=blocos-16';
-import { prepararCard } from '../blocos.js';
-import './formato.js?v=blocos-15';
+import { prepararCard, carregarModelo } from '../blocos.js';
+import './formato.js?v=cards-construcoes-21';
 import * as dados from './dados.js?v=blocos-15';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js?v=blocos-15';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='blocos-controles-17';
+const VERSAO='cards-construcoes-21';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -100,12 +100,43 @@ function consultaVerbal(item){
   }
   return {painel,abrir};
 }
+
+// O sentido vem do card/revisão; o acervo oferece somente comparação.
+async function construcoesDoCard(card,original){
+  if(!card || Object.hasOwn(card.secoes,'construcoes') || card.numero!==1)return card;
+  try{const modelo=await carregarModelo();if(card.titulo.normalize('NFC').trim()!==modelo.titulo.normalize('NFC').trim())return card;
+    const itens=(modelo.secoes.construcoes||[]).filter(i=>original.includes(i.origem));
+    return {...card,secoes:{...card.secoes,construcoes:itens}};
+  }catch{return card;}
+}
+let construcoesPendentes=null;
+function acervoConstrucoes(){
+  if(!construcoesPendentes)construcoesPendentes=fetch(new URL('../data/DL_Preposicoes_Base_Revisada.json',import.meta.url)).then(async r=>{
+    if(!r.ok)throw Error();const d=await r.json();
+    if(!Array.isArray(d.registros)||!d.contracoes||!d.registros.every(i=>['id','palavra','tipo','uso','exemplo_de','traducao_pt'].every(k=>typeof i[k]==='string'))||!Object.values(d.contracoes).every(v=>typeof v==='string'))throw Error();return d;
+  }).catch(e=>{construcoesPendentes=null;throw e;});return construcoesPendentes;
+}
+function compararConstrucoes(item){
+  const detalhes=document.createElement('details');detalhes.className='contexto comparar-construcoes';
+  const sum=document.createElement('summary');sum.textContent='Comparar usos';const resultado=document.createElement('div');resultado.className='exemplo-caixa';detalhes.append(sum,resultado);let pronto=false,rodada=0;
+  detalhes.addEventListener('toggle',async()=>{if(!detalhes.open||pronto)return;const vez=++rodada;resultado.textContent='Consultando o acervo…';
+    try{const d=await acervoConstrucoes();if(!detalhes.isConnected||!detalhes.open||vez!==rodada)return;
+      const palavras=s=>(s.normalize('NFC').toLocaleLowerCase('de').match(/[\p{L}\p{M}\p{N}]+/gu)||[]),termos=new Set(palavras(item.de));
+      for(const termo of [...termos])if(Object.hasOwn(d.contracoes,termo)){const p=palavras(d.contracoes[termo])[0];if(p)termos.add(p);}
+      const candidatos=d.registros.filter(i=>termos.has(i.palavra.normalize('NFC').toLocaleLowerCase('de'))&&i.id!==item.usoId);
+      resultado.replaceChildren();const nota=document.createElement('p');nota.textContent='Outros usos possíveis. Compare os exemplos com a frase do texto.';resultado.append(nota);
+      for(const i of candidatos){const artigo=document.createElement('div');artigo.className='comparacao-construcao';const titulo=document.createElement('strong');titulo.textContent=i.palavra;const uso=document.createElement('span');uso.className='pt';uso.textContent=' — '+i.uso;titulo.append(uso);const de=document.createElement('p');de.lang='de';de.textContent=i.exemplo_de;const pt=document.createElement('p');pt.className='pt';pt.textContent=i.traducao_pt;artigo.append(titulo,de,pt);resultado.append(artigo);}
+      if(!candidatos.length){const p=document.createElement('p');p.textContent='Nenhum outro uso cadastrado para as palavras desta construção.';resultado.append(p);}pronto=true;
+    }catch{if(detalhes.isConnected&&detalhes.open)resultado.textContent='O acervo de comparação ainda não está disponível neste aparelho. Conecte-se e use “Usar sem internet” para armazená-lo.';}
+  });return detalhes;
+}
+
 function render(dest,c,port=true){
   dest.replaceChildren();dest.classList.toggle('sem-pt',!port);
-  const estado=visoes[dest.id], disponiveis=F.secoes.filter(s=>c.secoes[s].length);
+  const estado=visoes[dest.id], disponiveis=F.secoes.filter(s=>s==='construcoes'||c.secoes[s]?.length);
   if(!disponiveis.includes(estado.secao))estado.secao=disponiveis[0];
   const nav=document.createElement('nav');nav.className='secoes';nav.setAttribute('aria-label','Seções do card');
-  const rotulos=['Minhas dúvidas','Blocos','Sentenças','Substantivos','Verbos','Adjetivos','Advérbios'];
+  const rotulos=['Minhas dúvidas','Blocos','Sentenças','Substantivos','Verbos','Adjetivos','Advérbios','Construções'];
   for(const s of disponiveis){
     const b=document.createElement('button');b.type='button';b.textContent=rotulos[F.secoes.indexOf(s)];
     b.dataset.secao=s;b.setAttribute('aria-pressed',String(s===estado.secao));b.disabled=ocupado;
@@ -124,15 +155,19 @@ function render(dest,c,port=true){
     b.onclick=()=>{const abrir=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(abrir));for(const consulta of consultas){consulta.painel.hidden=!abrir;if(abrir)consulta.abrir();}};
     caixa.append(b);
   }
-  for(const i of c.secoes[estado.secao]){
+  if(estado.secao==='construcoes'){
+    const p=document.createElement('p');p.className='nota';p.textContent=(c.secoes.construcoes||[]).length?'Sentidos registrados no card. Abra “Comparar usos” para consultar outros usos do acervo.':'Este card ainda não tem construções registradas. Acrescente-as em “Revisar card”.';caixa.append(p);
+  }
+  for(const i of c.secoes[estado.secao]||[]){
     const linha=document.createElement('div');linha.className='linha';const par=document.createElement('div');par.className='par';
     for(const [cl,txt] of [['de',i.de],['pt seta','→'],['pt',i.pt]]){
       const span=document.createElement('span');span.className=cl;span.textContent=txt;if(cl==='de')span.lang='de';
       par.append(span);
     }
     linha.append(par);
+    if(estado.secao==='construcoes'&&i.nota){const p=document.createElement('p');p.className='nota pt';p.textContent=i.nota;linha.append(p);}
     if(estado.secao==='verbos'){const consulta=consultaVerbal(i);consultas.push(consulta);linha.append(consulta.painel);}
-    if(i.origem && i.origem.trim()!==i.de.trim()){
+    if(i.origem && (estado.secao==='construcoes'||i.origem.trim()!==i.de.trim())){
       const contexto=document.createElement('details');contexto.className='contexto';const sum=document.createElement('summary');sum.textContent='Ver contexto';
       const p=document.createElement('p');p.lang='de';if(estado.secao==='blocos')preencherFraseBloco(p,i.de,i.origem);else p.textContent=i.origem;contexto.append(sum,p);linha.append(contexto);
     }
@@ -140,6 +175,7 @@ function render(dest,c,port=true){
       const exemplo=document.createElement('details');exemplo.className='contexto outro-exemplo';const sum=document.createElement('summary');sum.textContent='Outro exemplo';
       const de=document.createElement('p');de.lang='de';preencherFraseBloco(de,i.de,i.outroExemplo.de);const ptEx=document.createElement('p');ptEx.className='pt';ptEx.textContent=i.outroExemplo.pt;const caixaEx=document.createElement('div');caixaEx.className='exemplo-caixa';caixaEx.append(de,ptEx);exemplo.append(sum,caixaEx);linha.append(exemplo);
     }
+    if(estado.secao==='construcoes')linha.append(compararConstrucoes(i));
     caixa.append(linha);
   }
   dest.append(caixa);
@@ -166,8 +202,8 @@ async function atualizar(u,g){
   if(!textos.length)$('lista').textContent='Nenhum texto disponível. Conecte-se para escolher um original.';
 }
 async function registro(id,u){
-  if(navigator.onLine)return dados.carregar(id,u);
-  const l=(await listarLocal(u)).find(x=>x.textoId===id);if(!l)throw Error('Use sem internet com uma conexão ativa primeiro.');return {...l,card:await prepararCard(l.card)};
+  if(navigator.onLine){const r=await dados.carregar(id,u);return {...r,card:await construcoesDoCard(r.card,r.original)};}
+  const l=(await listarLocal(u)).find(x=>x.textoId===id);if(!l)throw Error('Use sem internet com uma conexão ativa primeiro.');return {...l,card:await construcoesDoCard(await prepararCard(l.card),l.original)};
 }
 async function localStatus(u,g){
   const id=atual?.textoId,salvo=(await listarLocal(u)).find(x=>x.textoId===id);

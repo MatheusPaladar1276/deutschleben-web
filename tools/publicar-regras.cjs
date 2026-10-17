@@ -16,13 +16,7 @@ const normalizar = s => s.replace(/\r\n/g, '\n').trim();
   const client = await auth.getClient();
   const base = 'https://firebaserules.googleapis.com/v1/';
   const nomeRelease = 'projects/' + projeto + '/releases/cloud.firestore';
-  // Confere o acesso à release existente antes de criar a nova versão.
-  await client.request({ url: base + nomeRelease });
-  const criada = await client.request({ url: base + 'projects/' + projeto + '/rulesets', method: 'POST',
-    data: { source: { files: [{ name: 'firestore.rules', content: fs.readFileSync(regras, 'utf8') }] } } });
-  // A API valida a sintaxe/semântica ao criar o ruleset e só então permite ativá-lo.
-  await client.request({ url: base + nomeRelease, method: 'PATCH',
-    data: { release: { name: nomeRelease, rulesetName: criada.data.name } } });
+  // Somente leitura: divergencias bloqueiam Hosting sem alterar a release.
   const release = await client.request({ url: base + nomeRelease });
   const publicada = await client.request({ url: base + release.data.rulesetName });
   const arquivo = publicada.data.source.files.find(f => f.name.endsWith('firestore.rules'));
@@ -30,5 +24,5 @@ const normalizar = s => s.replace(/\r\n/g, '\n').trim();
     throw Error('As regras ativas não correspondem ao commit. Hosting bloqueado.');
   }
   console.log('Regras ativas conferidas: ' + release.data.rulesetName + '. Hosting liberado.');
-})().catch(e => { console.error('Publicação/verificação de regras falhou: ' + e.message); process.exitCode = 1; })
+})().catch(e => { console.error('Verificação de regras falhou: ' + e.message); process.exitCode = 1; })
   .finally(() => { if (fs.existsSync(credencial)) fs.unlinkSync(credencial); });
