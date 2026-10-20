@@ -4,7 +4,7 @@
 import { initializeApp } from "./cards/vendor/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "./cards/vendor/firebase-auth.js";
 import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer, getDocsFromServer, runTransaction } from "./cards/vendor/firebase-firestore.js";
-import './cards/formato.js?v=blocos-15';
+import './cards/formato.js?v=cards-construcoes-21';
 import { listarLocal, limparLocal, removerLocal } from './cards/offline.js?v=blocos-15';
 
 const firebaseConfig = {

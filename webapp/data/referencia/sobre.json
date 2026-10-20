@@ -1,0 +1,199 @@
+{
+  "revisao": "Revisão editorial SDA de 17/10/2026, com complementos de conhecimento geral de alemão. Não equivale a validação bibliográfica externa.",
+  "bibliografia": "O módulo 10 registra conferência da nota de pontuação no regulamento ortográfico de 2024, §73. Essa conferência é restrita à pontuação; não valida bibliograficamente os demais conteúdos.",
+  "fontes": [
+    {
+      "modulo": "01",
+      "titulo": "Construção de Orações(1).docx"
+    },
+    {
+      "modulo": "02",
+      "titulo": "Verbos Modais.docx"
+    },
+    {
+      "modulo": "02",
+      "titulo": "Verbos Re-Ir-Mo-Au(1).docx"
+    },
+    {
+      "modulo": "02",
+      "titulo": "Tempos Verbais - Estudo Completo(1).docx"
+    },
+    {
+      "modulo": "02",
+      "titulo": "Verbos Formação(1).docx"
+    },
+    {
+      "modulo": "02",
+      "titulo": "Verbos Lista Atualizada (15_02_25).docx"
+    },
+    {
+      "modulo": "03",
+      "titulo": "Lista Der Die Das.docx"
+    },
+    {
+      "modulo": "03",
+      "titulo": "Artigos definidos para Nominativo.docx"
+    },
+    {
+      "modulo": "04",
+      "titulo": "Preposições - Conceitos Fundamentais(2).docx"
+    },
+    {
+      "modulo": "05",
+      "titulo": "Tabela explicação clara(1).docx"
+    },
+    {
+      "modulo": "05",
+      "titulo": "Pronomes-Estudo Inicial(1).docx"
+    },
+    {
+      "modulo": "06",
+      "titulo": "O Uso de nicht (A1-B2)(1).docx"
+    },
+    {
+      "modulo": "07",
+      "titulo": "Conj Posição Zero.docx"
+    },
+    {
+      "modulo": "08",
+      "titulo": "Elementos Estruturais.docx"
+    },
+    {
+      "modulo": "09",
+      "titulo": "Komposita.docx"
+    },
+    {
+      "modulo": "10",
+      "titulo": "Verbos Infinitvo Exigem zu.docx"
+    },
+    {
+      "titulo": "Amtliches Regelwerk der deutschen Rechtschreibung 2024",
+      "url": "https://www.rechtschreibrat.com/DOX/RfdR_Amtliches-Regelwerk_2024.pdf",
+      "secao": "73",
+      "uso": "Pontuação de orações infinitivas"
+    }
+  ],
+  "catalogo": [
+    {
+      "numero": "01",
+      "titulo": "Construção de Orações",
+      "integrado": true,
+      "versao": "1.0"
+    },
+    {
+      "numero": "02",
+      "titulo": "Verbos, construções e tempos",
+      "integrado": true,
+      "versao": "1.1"
+    },
+    {
+      "numero": "03",
+      "titulo": "Substantivos, artigos e casos",
+      "integrado": true,
+      "versao": "1.0"
+    },
+    {
+      "numero": "04",
+      "titulo": "Preposições",
+      "integrado": true,
+      "versao": "1.0"
+    },
+    {
+      "numero": "05",
+      "titulo": "Pronomes no contexto",
+      "integrado": true,
+      "versao": "1.0"
+    },
+    {
+      "numero": "06",
+      "titulo": "Negação no contexto",
+      "integrado": true,
+      "versao": "1.0"
+    },
+    {
+      "numero": "07",
+      "titulo": "Conectores",
+      "integrado": true,
+      "versao": "1.0"
+    },
+    {
+      "numero": "08",
+      "titulo": "Relações entre ideias",
+      "integrado": true,
+      "versao": "1.0"
+    },
+    {
+      "numero": "09",
+      "titulo": "Palavras Compostas",
+      "integrado": true,
+      "versao": "1.0"
+    },
+    {
+      "numero": "10",
+      "titulo": "Infinitivo com e sem zu",
+      "integrado": true,
+      "versao": "1.0"
+    }
+  ],
+  "escopo": "Os dez assuntos de 01 a 10 estão integrados nesta prévia local. Palavras Compostas é 09; tempos verbais pertencem ao 02, revisão 1.1. Somente consultas e fichas revisadas participam do estudo.",
+  "inventarios": "Inventários originais, entradas pendentes e notas técnicas não participam da busca ou do conteúdo de estudo.",
+  "origens": [
+    {
+      "arquivo": "01_Construcao_de_Oracoes_Revisada.json",
+      "sha256": "bd791ad868b15b6b0399058506e1154121cc8fd2eb715ac855983bb6657dcba6"
+    },
+    {
+      "arquivo": "02_Verbos_Construcoes_e_Tempos_Revisado.json",
+      "sha256": "be3477ae28a32eb25e4fdfe3f6e3941fcb807b69a6a8ee88c9b29a4da1913ad3"
+    },
+    {
+      "arquivo": "03_Substantivos_Artigos_e_Casos_Revisado.json",
+      "sha256": "c52d75e82a08f64667a6dc0d037a6c6a0520b6d22dab3b420cb85b8e204610cf"
+    },
+    {
+      "arquivo": "04_Preposicoes_Conceitos_e_Usos_Revisado.json",
+      "sha256": "cf7dcaf4cbf11a7f7ce9ce5556b7c9dc196cf6456d06c5715a01174b74079981"
+    },
+    {
+      "arquivo": "05_Pronomes_no_Contexto_Revisado.json",
+      "sha256": "21cce14f6e38e29d7099bae0fb8de6c58c46b98b09fdbf4338b03abc51dec6b0"
+    },
+    {
+      "arquivo": "06_Negacao_no_Contexto_Revisado.json",
+      "sha256": "c76a9cb303552e83c801af3d85571e20df559147a2c2716a80dd7df8afebbb14"
+    },
+    {
+      "arquivo": "07_Conectores_e_Ligacao_entre_Oracoes_Revisado.json",
+      "sha256": "79c719c34e0de8cbf8b3c2b5c5b6e020be9c6dc11d3baf80c95a1932dabf4ce0"
+    },
+    {
+      "arquivo": "08_Relacoes_entre_Ideias_no_Texto_Revisado.json",
+      "sha256": "6efa74ea692a979a5e4627d2c0b6542275038d6c72e2cd1a6c56a2107074f94b"
+    },
+    {
+      "arquivo": "09_Palavras_Compostas_na_Leitura_Revisado.json",
+      "sha256": "8e6cba70b77f132ec413a728217e3fb5cb546be34dfa98ae9ab266e7a584725c"
+    },
+    {
+      "arquivo": "10_Infinitivo_com_e_sem_Zu_Revisado.json",
+      "sha256": "ff45a6f90b1b0627a54cda063ce6e0957021ac8b49d975e10e085e5310499c73"
+    }
+  ],
+  "ajustes_remissoes": [
+    {
+      "modulo": "09",
+      "antes": "módulo 11",
+      "depois": "módulo 09"
+    },
+    {
+      "modulo": "08/10",
+      "antes": "item 09 de tempos verbais",
+      "depois": "tempos verbais no módulo 02"
+    },
+    {
+      "modulo": "05",
+      "antes": "item 3 continua pendente",
+      "depois": "módulo 03 disponível; inventário parcialmente pendente"
+    }
+  ]
+}

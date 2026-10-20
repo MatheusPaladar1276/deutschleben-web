@@ -1,0 +1,455 @@
+{
+  "colecao": "referencia_gramatical",
+  "versao": "RG_v1",
+  "origem": "Construção de Orações.docx",
+  "principio": "A Referência Gramatical nasce do texto vivido em Cn/Rn e explica apenas o fenômeno que apareceu.",
+  "modulos": [
+    {
+      "id": "estrutura_basica",
+      "titulo": "Estrutura básica da oração",
+      "categoria": "estrutura",
+      "resumo": "Organiza a frase em sujeito, verbo, objetos, complementos TeKaMoLo e negação. A fórmula é um mapa de funções, não uma ordem rígida; a negação não tem lugar fixo no final.",
+      "formula": "S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg)",
+      "gatilhos": [
+        "ordem_da_frase",
+        "sujeito",
+        "objeto_indireto",
+        "objeto_direto",
+        "tekamolo",
+        "negacao"
+      ],
+      "exemplos": [
+        {
+          "de": "Ich gebe dem Kind ein Buch.",
+          "pt": "Dou um livro à criança."
+        }
+      ],
+      "relacionados": [
+        "CO-01-02",
+        "CO-01-01"
+      ],
+      "tipo_consulta": "tema",
+      "explicacao": [
+        "Organiza a frase em sujeito, verbo, objetos, complementos TeKaMoLo e negação. A fórmula é um mapa de funções, não uma ordem rígida; a negação não tem lugar fixo no final.",
+        "Em “Ich gebe dem Kind ein Buch”: “Dou um livro à criança”.",
+        "Como apoio: S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg)"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Organiza a frase em sujeito, verbo, objetos, complementos TeKaMoLo e negação. A fórmula é um mapa de funções, não uma ordem rígida; a negação não tem lugar fixo no final.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gebe dem Kind ein Buch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Dou um livro à criança"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Como apoio: S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg)",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "casos_objetos",
+      "titulo": "Sujeito, OI e OD",
+      "categoria": "casos",
+      "resumo": "O sujeito fica no nominativo. Nos modelos básicos apresentados, o OD fica no acusativo e o OI no dativo. Uma preposição também pode exigir um caso, sem transformar seu complemento automaticamente em OI ou OD.",
+      "gatilhos": [
+        "nominativo",
+        "dativo",
+        "acusativo",
+        "objeto_indireto",
+        "objeto_direto"
+      ],
+      "exemplos": [
+        {
+          "de": "Ich helfe dem Kind.",
+          "pt": "Ajudo a criança."
+        }
+      ],
+      "relacionados": [
+        "CO-03-01",
+        "SC-005",
+        "SC-006",
+        "SC-007"
+      ],
+      "tipo_consulta": "tema",
+      "explicacao": [
+        "O sujeito fica no nominativo. Nos modelos básicos apresentados, o OD fica no acusativo e o OI no dativo. Uma preposição também pode exigir um caso, sem transformar seu complemento automaticamente em OI ou OD.",
+        "Em “Ich helfe dem Kind”: “Ajudo a criança”."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O sujeito fica no nominativo. Nos modelos básicos apresentados, o OD fica no acusativo e o OI no dativo. Uma preposição também pode exigir um caso, sem transformar seu complemento automaticamente em OI ou OD.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich helfe dem Kind"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ajudo a criança"
+        }
+      ]
+    },
+    {
+      "id": "verbo_posicao",
+      "titulo": "Posição do verbo",
+      "categoria": "ordem",
+      "resumo": "Na oração principal, o verbo conjugado ocupa a posição 2; na subordinada, vai ao final.",
+      "gatilhos": [
+        "verbo_posicao_2",
+        "verbo_final",
+        "hauptsatz",
+        "nebensatz"
+      ],
+      "exemplos": [
+        {
+          "de": "Heute gehe ich zum See.",
+          "pt": "Hoje vou ao lago."
+        }
+      ],
+      "relacionados": [
+        "CO-01-01",
+        "CQ-003"
+      ],
+      "tipo_consulta": "tema",
+      "explicacao": [
+        "Na oração principal, o verbo conjugado ocupa a posição 2; na subordinada, vai ao final.",
+        "Em “Heute gehe ich zum See”: “Hoje vou ao lago”."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Na oração principal, o verbo conjugado ocupa a posição 2; na subordinada, vai ao final.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Heute gehe ich zum See"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje vou ao lago"
+        }
+      ]
+    },
+    {
+      "id": "tekamolo",
+      "titulo": "TeKaMoLo",
+      "categoria": "ordem",
+      "resumo": "Tempo, Causa, Modo e Lugar organizam informações complementares da oração.",
+      "detalhes": [
+        "Te = Quando?",
+        "Ka = Por quê?",
+        "Mo = Como?",
+        "Lo = Onde?/Para onde?/De onde?"
+      ],
+      "gatilhos": [
+        "tempo",
+        "causa",
+        "modo",
+        "lugar",
+        "tekamolo"
+      ],
+      "exemplos": [
+        {
+          "de": "Ich gehe morgen mit meinem Bruder zum See.",
+          "pt": "Amanhã vou ao lago com meu irmão."
+        }
+      ],
+      "relacionados": [
+        "CO-04-01",
+        "NEG-016"
+      ],
+      "tipo_consulta": "tema",
+      "explicacao": [
+        "Tempo, Causa, Modo e Lugar organizam informações complementares da oração.",
+        "Em “Ich gehe morgen mit meinem Bruder zum See”: “Amanhã vou ao lago com meu irmão”.",
+        "Referências: Te = Quando?; Ka = Por quê?; Mo = Como?; Lo = Onde?/Para onde?/De onde?."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Tempo, Causa, Modo e Lugar organizam informações complementares da oração.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe morgen mit meinem Bruder zum See"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Amanhã vou ao lago com meu irmão"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Referências: Te = Quando?; Ka = Por quê?; Mo = Como?; Lo = Onde?/Para onde?/De onde?.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "negacao",
+      "titulo": "Negação",
+      "categoria": "negacao",
+      "resumo": "A negação pode usar nicht ou kein; sua posição depende do elemento negado.",
+      "gatilhos": [
+        "nicht",
+        "kein",
+        "negacao"
+      ],
+      "exemplos": [
+        {
+          "de": "Ich lese kein Buch.",
+          "pt": "Não leio nenhum livro."
+        }
+      ],
+      "relacionados": [
+        "NEG-001",
+        "NEG-002",
+        "NEG-010"
+      ],
+      "tipo_consulta": "tema",
+      "explicacao": [
+        "A negação pode usar nicht ou kein; sua posição depende do elemento negado.",
+        "Em “Ich lese kein Buch”: “Não leio nenhum livro”."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "A negação pode usar nicht ou kein; sua posição depende do elemento negado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lese kein Buch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não leio nenhum livro"
+        }
+      ]
+    },
+    {
+      "id": "coordenadas",
+      "titulo": "Orações coordenadas",
+      "categoria": "oracoes",
+      "resumo": "Conjunções coordenativas ligam orações independentes sem deslocar o verbo da posição 2.",
+      "itens": [
+        "und",
+        "aber",
+        "oder",
+        "denn",
+        "sondern"
+      ],
+      "gatilhos": [
+        "und",
+        "aber",
+        "oder",
+        "denn",
+        "sondern",
+        "coordenada"
+      ],
+      "exemplos": [
+        {
+          "de": "Es regnet, aber ich gehe spazieren.",
+          "pt": "Chove, mas saio para caminhar."
+        }
+      ],
+      "relacionados": [
+        "CQ-002",
+        "CON-001"
+      ],
+      "tipo_consulta": "tema",
+      "explicacao": [
+        "Conjunções coordenativas ligam orações independentes sem deslocar o verbo da posição 2.",
+        "Em “Es regnet, aber ich gehe spazieren”: “Chove, mas saio para caminhar”.",
+        "Exemplos de ligação: und; aber; oder; denn; sondern."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Conjunções coordenativas ligam orações independentes sem deslocar o verbo da posição 2.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet, aber ich gehe spazieren"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Chove, mas saio para caminhar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Exemplos de ligação: und; aber; oder; denn; sondern.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "subordinadas",
+      "titulo": "Orações subordinadas",
+      "categoria": "oracoes",
+      "resumo": "Conjunções subordinativas introduzem uma oração dependente e levam o verbo conjugado ao final.",
+      "itens": [
+        "weil",
+        "dass",
+        "obwohl",
+        "wenn",
+        "damit"
+      ],
+      "gatilhos": [
+        "weil",
+        "dass",
+        "obwohl",
+        "wenn",
+        "damit",
+        "subordinada",
+        "verbo_final"
+      ],
+      "exemplos": [
+        {
+          "de": "Ich bleibe zu Hause, weil es regnet.",
+          "pt": "Fico em casa porque chove."
+        }
+      ],
+      "relacionados": [
+        "CQ-004",
+        "CQ-005"
+      ],
+      "tipo_consulta": "tema",
+      "explicacao": [
+        "Conjunções subordinativas introduzem uma oração dependente e levam o verbo conjugado ao final.",
+        "Em “Ich bleibe zu Hause, weil es regnet”: “Fico em casa porque chove”.",
+        "Exemplos de ligação: weil; dass; obwohl; wenn; damit."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Conjunções subordinativas introduzem uma oração dependente e levam o verbo conjugado ao final.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, weil es regnet"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa porque chove"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Exemplos de ligação: weil; dass; obwohl; wenn; damit.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "preposicoes_casos",
+      "titulo": "Preposições e casos",
+      "categoria": "preposicoes",
+      "resumo": "Algumas preposições exigem dativo, outras acusativo, e algumas podem reger ambos conforme o uso.",
+      "dativo": [
+        "aus",
+        "bei",
+        "mit",
+        "nach",
+        "seit",
+        "von",
+        "zu"
+      ],
+      "acusativo": [
+        "durch",
+        "für",
+        "gegen",
+        "ohne",
+        "um"
+      ],
+      "dativo_ou_acusativo": [
+        "an",
+        "auf",
+        "hinter",
+        "in",
+        "neben",
+        "über",
+        "unter",
+        "vor",
+        "zwischen"
+      ],
+      "gatilhos": [
+        "preposicao",
+        "dativo",
+        "acusativo",
+        "wechselpraeposition"
+      ],
+      "exemplos": [
+        {
+          "de": "Ich gehe zum See.",
+          "pt": "Vou ao lago."
+        }
+      ],
+      "relacionados": [
+        "PC-003",
+        "PC-006",
+        "PC-002",
+        "SC-008"
+      ],
+      "tipo_consulta": "tema",
+      "explicacao": [
+        "Algumas preposições exigem dativo, outras acusativo, e algumas podem reger ambos conforme o uso.",
+        "Em “Ich gehe zum See”: “Vou ao lago”.",
+        "Dativo: aus; bei; mit; nach; seit; von; zu.",
+        "Acusativo: durch; für; gegen; ohne; um.",
+        "Dativo ou acusativo: an; auf; hinter; in; neben; über; unter; vor; zwischen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Algumas preposições exigem dativo, outras acusativo, e algumas podem reger ambos conforme o uso.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe zum See"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou ao lago"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Dativo: aus; bei; mit; nach; seit; von; zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Acusativo: durch; für; gegen; ohne; um.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Dativo ou acusativo: an; auf; hinter; in; neben; über; unter; vor; zwischen.",
+          "citacoes_de": []
+        }
+      ]
+    }
+  ],
+  "fora_da_v1": [
+    "Genitivo detalhado",
+    "Regras extensas de inversão OI/OD",
+    "Discussões longas sobre ênfase e estilo",
+    "Listas amplas de advérbios",
+    "Exemplos redundantes e exercícios",
+    "Conteúdo não acionado por uma Cn/Rn"
+  ]
+}

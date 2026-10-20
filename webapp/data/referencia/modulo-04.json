@@ -1,0 +1,2670 @@
+{
+  "id": "preposicoes_conceitos_e_usos",
+  "numero": "04",
+  "titulo": "Preposições",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "PC-001",
+      "titulo": "Como consultar",
+      "palavras_chave": [],
+      "relacionados": [],
+      "tipo_consulta": "ajuda",
+      "explicacao": [
+        "Leia a construção inteira e a frase original. Use o sentido da ficha como aproximação contextual, não como tradução fixa.",
+        "Compare o exemplo traduzido com o trecho selecionado. As sugestões de Construções são candidatos de consulta; o contexto ajuda a distinguir os usos.",
+        "As consultas relacionadas são opcionais. “← Voltar à consulta anterior” recupera a busca, os resultados e a rolagem. “Voltar ao texto” recupera a leitura original."
+      ]
+    },
+    {
+      "id": "PC-002",
+      "titulo": "Caso e função na frase",
+      "palavras_chave": [],
+      "relacionados": [
+        "SC-008"
+      ],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "O caso exigido por uma preposição não transforma automaticamente o complemento em OI ou OD.",
+        "Em “Ich gehe mit meinem Bruder”: “Vou com meu irmão”.",
+        "Em mit meinem Bruder, o dativo é regido por mit. Esse grupo preposicional não se torna automaticamente OI ou OD."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O caso exigido por uma preposição não transforma automaticamente o complemento em OI ou OD.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe mit meinem Bruder."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou com meu irmão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em mit meinem Bruder, o dativo é regido por mit. Esse grupo preposicional não se torna automaticamente OI ou OD.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-003",
+      "titulo": "Localização e destino",
+      "palavras_chave": [],
+      "relacionados": [
+        "PREP-025",
+        "PREP-026",
+        "PREP-027",
+        "CO-04-03"
+      ],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Nas nove preposições mistas, em usos espaciais básicos, o dativo situa o evento e o acusativo indica destino ou percurso direcionado conforme a construção.",
+        "Em “Ich schwimme im See. Ich gehe in den Garten”: “Nado no lago. Vou para o jardim”.",
+        "Movimento sozinho não decide: Ich schwimme im See tem dativo. Essa ferramenta não determina regência abstrata ou usos temporais."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nas nove preposições mistas, em usos espaciais básicos, o dativo situa o evento e o acusativo indica destino ou percurso direcionado conforme a construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich schwimme im See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Nado no lago."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe in den Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou para o jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Movimento sozinho não decide: Ich schwimme im See tem dativo. Essa ferramenta não determina regência abstrata ou usos temporais.",
+          "citacoes_de": [
+            "Ich schwimme im See"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PC-004",
+      "titulo": "Construções aprendidas em conjunto",
+      "palavras_chave": [],
+      "relacionados": [
+        "PC-005",
+        "PC-002",
+        "CO-03-03"
+      ],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "denken an + acusativo; arbeiten an + dativo; warten auf + acusativo; sprechen über + acusativo; sprechen mit + dativo; suchen nach + dativo; sich freuen auf + acusativo; sich freuen über + acusativo.",
+        "Em “Ich warte auf den Bus”: “Espero o ônibus”.",
+        "Essas regências não se decidem pelas perguntas Wo ou Wohin."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "denken an + acusativo; arbeiten an + dativo; warten auf + acusativo; sprechen über + acusativo; sprechen mit + dativo; suchen nach + dativo; sich freuen auf + acusativo; sich freuen über + acusativo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich warte auf den Bus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Espero o ônibus."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Essas regências não se decidem pelas perguntas Wo ou Wohin.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-005",
+      "titulo": "Alegria pelo que vem e pelo que acontece",
+      "palavras_chave": [],
+      "relacionados": [],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Ich freue mich auf die Reise — Estou contente com a viagem que virá.",
+        "Em “Ich freue mich auf die Reise”: “Estou contente com a viagem que virá”.",
+        "Ich freue mich über das Geschenk — Fico contente com o presente recebido ou com o fato de recebê-lo. A distinção é de perspectiva; não basta perguntar se a data é futura ou passada."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Ich freue mich auf die Reise."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estou contente com a viagem que virá."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich freue mich auf die Reise."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estou contente com a viagem que virá."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich freue mich über das Geschenk."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico contente com o presente recebido ou com o fato de recebê-lo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A distinção é de perspectiva; não basta perguntar se a data é futura ou passada.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-006",
+      "titulo": "Destino com nach zu e in",
+      "palavras_chave": [],
+      "relacionados": [
+        "PREP-015",
+        "PREP-020"
+      ],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Nach Berlin; nach Deutschland; zu meiner Freundin; zum Arzt; in die Schweiz; ins Haus.",
+        "Em “Ich fahre nach Berlin. Ich gehe zum Arzt”: “Vou para Berlim. Vou ao médico”.",
+        "Aprenda esses modelos com o lugar mencionado. Zu não confirma entrada, mas também não a proíbe no acontecimento real."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nach Berlin; nach Deutschland; zu meiner Freundin; zum Arzt; in die Schweiz; ins Haus.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich fahre nach Berlin."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou para Berlim."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe zum Arzt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou ao médico."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aprenda esses modelos com o lugar mencionado. Zu não confirma entrada, mas também não a proíbe no acontecimento real.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-007",
+      "titulo": "Tempo com um gegen an in e vor",
+      "palavras_chave": [],
+      "relacionados": [],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Um acht Uhr — às oito; gegen acht Uhr — por volta das oito; am Montag — na segunda; im Sommer — no verão; in einer Stunde — daqui a uma hora; vor einer Stunde — há uma hora.",
+        "Em “Ich komme um acht Uhr”: “Venho às oito horas”.",
+        "Esses usos têm construções próprias."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Um acht Uhr — às oito; gegen acht Uhr — por volta das oito; am Montag — na segunda; im Sommer — no verão; in einer Stunde — daqui a uma hora; vor einer Stunde — há uma hora.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich komme um acht Uhr."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Venho às oito horas."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Esses usos têm construções próprias.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-008",
+      "titulo": "Seit e vor",
+      "palavras_chave": [],
+      "relacionados": [],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Seit einem Jahr wohne ich hier — Moro aqui há um ano e continuo morando.",
+        "Em “Seit einem Jahr wohne ich hier”: “Moro aqui há um ano”.",
+        "Vor einem Jahr bin ich hierhergezogen — Mudei-me para cá há um ano. A duração em andamento e o evento passado não se constroem da mesma maneira."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Seit einem Jahr wohne ich hier."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Moro aqui há um ano e continuo morando."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Seit einem Jahr wohne ich hier."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Moro aqui há um ano."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Vor einem Jahr bin ich hierhergezogen — Mudei-me para cá há um ano. A duração em andamento e o evento passado não se constroem da mesma maneira.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-009",
+      "titulo": "Unter e zwischen",
+      "palavras_chave": [],
+      "relacionados": [],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Unter Freunden — entre amigos, como parte de um grupo.",
+        "Em “Wir sind unter Freunden”: “Estamos entre amigos”.",
+        "Zwischen den Häusern — entre as casas, tomadas como referências distintas. Zwischen pode ligar mais de dois participantes ou elementos; o número sozinho não resolve."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Unter Freunden — entre amigos, como parte de um grupo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir sind unter Freunden."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estamos entre amigos."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Zwischen den Häusern — entre as casas, tomadas como referências distintas. Zwischen pode ligar mais de dois participantes ou elementos; o número sozinho não resolve.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-010",
+      "titulo": "Preposição e outra função",
+      "palavras_chave": [],
+      "relacionados": [
+        "INF-020"
+      ],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Während des Essens — durante a refeição, preposição.",
+        "Em “Während des Essens spreche ich wenig”: “Durante a refeição, falo pouco”.",
+        "Während ich esse — enquanto como, conjunção. Wegen des Regens — por causa da chuva, preposição. Es regnet; deshalb bleibe ich zu Hause — Chove; por isso fico em casa, advérbio."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Während des Essens — durante a refeição, preposição.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Während des Essens spreche ich wenig."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Durante a refeição, falo pouco."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Während ich esse — enquanto como, conjunção. Wegen des Regens — por causa da chuva, preposição.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet; deshalb bleibe ich zu Hause."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Chove; por isso fico em casa, advérbio."
+        }
+      ]
+    },
+    {
+      "id": "PC-011",
+      "titulo": "Percurso e partículas de direção",
+      "palavras_chave": [],
+      "relacionados": [],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Ich gehe an der Schule vorbei — Passo pela escola.",
+        "Em “Ich gehe an der Schule vorbei”: “Passo pela escola”.",
+        "Wir fahren an der Küste entlang — Seguimos de veículo ao longo da costa. Er geht ins Zimmer hinein — Ele entra no quarto. Sie kommt aus dem Zimmer heraus — Ela sai do quarto. Não tratar vorbei, hinein e heraus automaticamente como uma segunda preposição."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe an der Schule vorbei."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Passo pela escola."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe an der Schule vorbei."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Passo pela escola."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir fahren an der Küste entlang."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Seguimos de veículo ao longo da costa."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er geht ins Zimmer hinein."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele entra no quarto."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Sie kommt aus dem Zimmer heraus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ela sai do quarto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não tratar vorbei, hinein e heraus automaticamente como uma segunda preposição.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-012",
+      "titulo": "Saída sem combinações artificiais",
+      "palavras_chave": [],
+      "relacionados": [],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Er kommt aus dem Haus — Ele sai da casa.",
+        "Em “Er kommt aus dem Haus”: “Ele sai da casa”.",
+        "Sie holt den Ball unter dem Sofa hervor — Ela tira a bola de debaixo do sofá. Er springt vom Tisch herunter — Ele pula da mesa para baixo. Não formar sequências por tradução literal como von aus dem Haus ou aus unter dem Sofa."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Er kommt aus dem Haus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele sai da casa."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er kommt aus dem Haus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele sai da casa."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Sie holt den Ball unter dem Sofa hervor."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ela tira a bola de debaixo do sofá."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er springt vom Tisch herunter."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele pula da mesa para baixo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não formar sequências por tradução literal como von aus dem Haus ou aus unter dem Sofa.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PC-013",
+      "titulo": "Te Ka Mo Lo como apoio",
+      "palavras_chave": [],
+      "relacionados": [],
+      "tipo_consulta": "orientacao",
+      "explicacao": [
+        "Te: nach dem Essen.",
+        "Em “Nach dem Essen gehe ich in den Garten”: “Depois da refeição, vou para o jardim”.",
+        "Ka: wegen des Regens. Mo: mit großer Freude. Lo: im Garten. Trotz expressa concessão e não deve ser encaixado à força em Mo. A fórmula S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) é uma consulta didática; não determina caso nem toda a ordem da frase."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Te: nach dem Essen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Nach dem Essen gehe ich in den Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Depois da refeição, vou para o jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ka: wegen des Regens. Mo: mit großer Freude. Lo: im Garten. Trotz expressa concessão e não deve ser encaixado à força em Mo. A fórmula S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) é uma consulta didática; não determina caso nem toda a ordem da frase.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-001",
+      "titulo": "für — Destinação ou benefício",
+      "palavras_chave": [
+        "für",
+        "preposicao",
+        "Destinação ou benefício"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Destinação ou benefício.",
+        "Em “Der Kaffee ist für meinen Vater”: “O café é para meu pai”.",
+        "Também aparece em construções como sich für etwas interessieren. Não equivale a todo para do português.",
+        "Caso: acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Destinação ou benefício.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Kaffee ist für meinen Vater."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O café é para meu pai."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também aparece em construções como sich für etwas interessieren. Não equivale a todo para do português.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-002",
+      "titulo": "ohne — Ausência",
+      "palavras_chave": [
+        "ohne",
+        "preposicao",
+        "Ausência"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Ausência.",
+        "Em “Ich trinke Kaffee ohne Zucker”: “Tomo café sem açúcar”.",
+        "O elemento ausente não precisa ser essencial.",
+        "Caso: acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ausência.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich trinke Kaffee ohne Zucker."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tomo café sem açúcar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O elemento ausente não precisa ser essencial.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-003",
+      "titulo": "durch — Percurso através de um espaço",
+      "palavras_chave": [
+        "durch",
+        "preposicao",
+        "Percurso através de um espaço"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Percurso através de um espaço.",
+        "Em “Ich gehe durch den Garten”: “Atravesso o jardim a pé”.",
+        "Também pode expressar meio ou causa: durch Übung — por meio da prática.",
+        "Caso: acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Percurso através de um espaço.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe durch den Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Atravesso o jardim a pé."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também pode expressar meio ou causa: durch Übung — por meio da prática.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-004",
+      "titulo": "um — Ao redor",
+      "palavras_chave": [
+        "um",
+        "preposicao",
+        "Ao redor"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Ao redor.",
+        "Em “Wir sitzen um den Tisch”: “Estamos sentados ao redor da mesa”.",
+        "Não exige movimento.",
+        "Caso: acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ao redor.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir sitzen um den Tisch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estamos sentados ao redor da mesa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não exige movimento.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-005",
+      "titulo": "um — Hora indicada",
+      "palavras_chave": [
+        "um",
+        "preposicao",
+        "Hora indicada"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Hora indicada.",
+        "Em “Ich komme um acht Uhr”: “Venho às oito horas”.",
+        "Para aproximação: gegen acht Uhr, por volta das oito. Um cerca de não é a equivalência normal neste uso.",
+        "Caso: acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Hora indicada.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich komme um acht Uhr."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Venho às oito horas."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Para aproximação: gegen acht Uhr, por volta das oito. Um cerca de não é a equivalência normal neste uso.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-006",
+      "titulo": "gegen — Oposição ou contato contra",
+      "palavras_chave": [
+        "gegen",
+        "preposicao",
+        "Oposição ou contato contra"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Oposição ou contato contra.",
+        "Em “Der Ball fliegt gegen die Wand”: “A bola bate na parede”.",
+        "Também oposição abstrata: gegen den Plan — contra o plano.",
+        "Caso: acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Oposição ou contato contra.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Ball fliegt gegen die Wand."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A bola bate na parede."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também oposição abstrata: gegen den Plan — contra o plano.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-007",
+      "titulo": "gegen — Horário aproximado",
+      "palavras_chave": [
+        "gegen",
+        "preposicao",
+        "Horário aproximado"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Horário aproximado.",
+        "Em “Ich komme gegen acht Uhr”: “Venho por volta das oito horas”.",
+        "Compare com um acht Uhr — às oito.",
+        "Caso: acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Horário aproximado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich komme gegen acht Uhr."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Venho por volta das oito horas."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Compare com um acht Uhr — às oito.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-008",
+      "titulo": "bis — Limite final",
+      "palavras_chave": [
+        "bis",
+        "preposicao",
+        "Limite final"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Limite final.",
+        "Em “Ich bleibe bis nächsten Montag”: “Fico até a próxima segunda-feira”.",
+        "Com outra preposição, esta rege o caso: bis zum Bahnhof; zu + dativo. Em bis morgen e bis Berlin, o caso não é visível.",
+        "Caso: acusativo na construção simples."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Limite final.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe bis nächsten Montag."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico até a próxima segunda-feira."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com outra preposição, esta rege o caso: bis zum Bahnhof; zu + dativo. Em bis morgen e bis Berlin, o caso não é visível.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo na construção simples.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-009",
+      "titulo": "aus — Origem ou saída de um interior",
+      "palavras_chave": [
+        "aus",
+        "preposicao",
+        "Origem ou saída de um interior"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Origem ou saída de um interior.",
+        "Em “Ich komme aus dem Haus”: “Saio da casa”.",
+        "Também origem geográfica: aus Brasilien. Aus não exige que a origem seja um espaço fechado.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Origem ou saída de um interior.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich komme aus dem Haus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Saio da casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também origem geográfica: aus Brasilien. Aus não exige que a origem seja um espaço fechado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-010",
+      "titulo": "aus — Material",
+      "palavras_chave": [
+        "aus",
+        "preposicao",
+        "Material"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Material.",
+        "Em “Der Tisch ist aus Holz”: “A mesa é de madeira”.",
+        "A mesma preposição assume outro uso conforme a construção.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Material.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Tisch ist aus Holz."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A mesa é de madeira."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A mesma preposição assume outro uso conforme a construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-011",
+      "titulo": "aus — Motivação",
+      "palavras_chave": [
+        "aus",
+        "preposicao",
+        "Motivação"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Motivação.",
+        "Em “Sie hilft aus Liebe”: “Ela ajuda por amor”.",
+        "Não traduz toda causa; compare wegen e vor em suas construções.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Motivação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Sie hilft aus Liebe."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ela ajuda por amor."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não traduz toda causa; compare wegen e vor em suas construções.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-012",
+      "titulo": "bei — Estar com alguém ou na casa de alguém",
+      "palavras_chave": [
+        "bei",
+        "preposicao",
+        "Estar com alguém ou na casa de alguém"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Estar com alguém ou na casa de alguém.",
+        "Em “Ich bin bei meiner Freundin”: “Estou na casa da minha amiga ou com ela”.",
+        "O contexto decide a localização exata. Também: beim Arzt — no médico; bei einer Firma arbeiten — trabalhar numa empresa.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Estar com alguém ou na casa de alguém.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bin bei meiner Freundin."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estou na casa da minha amiga ou com ela."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O contexto decide a localização exata. Também: beim Arzt — no médico; bei einer Firma arbeiten — trabalhar numa empresa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-013",
+      "titulo": "bei — Circunstância",
+      "palavras_chave": [
+        "bei",
+        "preposicao",
+        "Circunstância"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Circunstância.",
+        "Em “Bei Regen bleiben wir zu Hause”: “Quando chove, ficamos em casa”.",
+        "Também proximidade: bei Berlin — perto de Berlim.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Circunstância.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Bei Regen bleiben wir zu Hause."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Quando chove, ficamos em casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também proximidade: bei Berlin — perto de Berlim.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-014",
+      "titulo": "mit — Companhia ou instrumento",
+      "palavras_chave": [
+        "mit",
+        "preposicao",
+        "Companhia ou instrumento"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Companhia ou instrumento.",
+        "Em “Ich fahre mit meinem Bruder mit dem Bus”: “Vou com meu irmão de ônibus”.",
+        "Mit meinem Bruder indica companhia; mit dem Bus, meio de transporte. Companhia e meio de transporte são usos distintos de mit.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Companhia ou instrumento.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich fahre mit meinem Bruder mit dem Bus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou com meu irmão de ônibus."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Mit meinem Bruder indica companhia; mit dem Bus, meio de transporte. Companhia e meio de transporte são usos distintos de mit.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-015",
+      "titulo": "nach — Destino com nomes sem artigo",
+      "palavras_chave": [
+        "nach",
+        "preposicao",
+        "Destino com nomes sem artigo"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Destino com nomes sem artigo.",
+        "Em “Ich fahre nach Berlin”: “Vou para Berlim”.",
+        "Também nach Deutschland, nach Hause. Com país com artigo: in die Schweiz. Para pessoas: zu meiner Freundin.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Destino com nomes sem artigo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich fahre nach Berlin."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou para Berlim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também nach Deutschland, nach Hause. Com país com artigo: in die Schweiz. Para pessoas: zu meiner Freundin.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-016",
+      "titulo": "nach — Posterioridade",
+      "palavras_chave": [
+        "nach",
+        "preposicao",
+        "Posterioridade"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Posterioridade.",
+        "Em “Nach einer Weile gehe ich zurück”: “Depois de um tempo, volto”.",
+        "Nach dem Essen — depois da refeição. Não significa um momento futuro em qualquer contexto.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Posterioridade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Nach einer Weile gehe ich zurück."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Depois de um tempo, volto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nach dem Essen — depois da refeição. Não significa um momento futuro em qualquer contexto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-017",
+      "titulo": "nach — Conformidade",
+      "palavras_chave": [
+        "nach",
+        "preposicao",
+        "Conformidade"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Conformidade.",
+        "Em “Nach dem Plan beginnen wir um neun Uhr”: “De acordo com o plano, começamos às nove”.",
+        "Em suchen nach + dativo, a ideia de procura pertence à construção inteira.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Conformidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Nach dem Plan beginnen wir um neun Uhr."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "De acordo com o plano, começamos às nove."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em suchen nach + dativo, a ideia de procura pertence à construção inteira.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-018",
+      "titulo": "von — Procedência ou ponto de partida",
+      "palavras_chave": [
+        "von",
+        "preposicao",
+        "Procedência ou ponto de partida"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Procedência ou ponto de partida.",
+        "Em “Ich komme vom See”: “Venho do lago”.",
+        "Vom = von dem. Compare aus dem Haus, saída de um interior, com vom Haus, a partir da casa.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Procedência ou ponto de partida.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich komme vom See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Venho do lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Vom = von dem. Compare aus dem Haus, saída de um interior, com vom Haus, a partir da casa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-019",
+      "titulo": "von — Autoria ou relação de pertencimento",
+      "palavras_chave": [
+        "von",
+        "preposicao",
+        "Autoria ou relação de pertencimento"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Autoria ou relação de pertencimento.",
+        "Em “Das ist ein Buch von Kafka”: “Este é um livro de Kafka”.",
+        "Na passiva, pode indicar o agente: Das Buch wird von Anna gelesen.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Autoria ou relação de pertencimento.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das ist ein Buch von Kafka."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Este é um livro de Kafka."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Na passiva, pode indicar o agente: Das Buch wird von Anna gelesen.",
+          "citacoes_de": [
+            "Das Buch wird von Anna gelesen"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-020",
+      "titulo": "Zum See — ao lago",
+      "palavras_chave": [
+        "zu",
+        "preposicao",
+        "Destino"
+      ],
+      "relacionados": [
+        "PC-006",
+        "INF-020",
+        "VB-001",
+        "RI-018"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Em “Ich gehe zum See”, o lago é o destino: “Vou ao lago”.",
+        "Zum é a junção de zu + dem. See é masculino: der See. Como a preposição zu pede dativo, o artigo der passa a dem:",
+        "zu dem See → zum See.",
+        "A frase indica a ida ao lago; não diz que a pessoa entra na água."
+      ],
+      "termos_busca": [
+        "zum See",
+        "zu dem See"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O lago é o destino.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Zum é a junção de zu + dem. See é masculino: der See. Como a preposição zu pede dativo, o artigo der passa a dem:",
+          "citacoes_de": [
+            "der See"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "zu dem See → zum See.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A frase indica a ida ao lago; não diz que a pessoa entra na água.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-021",
+      "titulo": "seit — Início ou duração até o momento de referência",
+      "palavras_chave": [
+        "seit",
+        "preposicao",
+        "Início ou duração até o momento de referência"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Início ou duração até o momento de referência.",
+        "Em “Ich lerne seit einem Jahr Deutsch”: “Estudo alemão há um ano”.",
+        "Com presente, a situação continua agora. Em narrativa passada, pode continuar até um momento passado; não é sempre até o presente.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Início ou duração até o momento de referência.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lerne seit einem Jahr Deutsch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estudo alemão há um ano."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com presente, a situação continua agora. Em narrativa passada, pode continuar até um momento passado; não é sempre até o presente.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-022",
+      "titulo": "ab — Ponto inicial",
+      "palavras_chave": [
+        "ab",
+        "preposicao",
+        "Ponto inicial"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Ponto inicial.",
+        "Em “Ab nächster Woche arbeite ich hier”: “A partir da próxima semana, trabalho aqui”.",
+        "Há variantes de caso em certas expressões temporais. Em Ab Montag, a forma do caso não fica visível.",
+        "Caso: dativo como modelo básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ponto inicial.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ab nächster Woche arbeite ich hier."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A partir da próxima semana, trabalho aqui."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Há variantes de caso em certas expressões temporais. Em Ab Montag, a forma do caso não fica visível.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo como modelo básico.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-023",
+      "titulo": "außer — Exclusão",
+      "palavras_chave": [
+        "außer",
+        "preposicao",
+        "Exclusão"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Exclusão.",
+        "Em “Alle kommen außer meinem Bruder”: “Todos vêm, exceto meu irmão”.",
+        "Außer também ocorre em expressões fixas com outros padrões; esta ficha cobre o uso básico.",
+        "Caso: dativo como modelo básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Exclusão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Alle kommen außer meinem Bruder."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Todos vêm, exceto meu irmão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Außer também ocorre em expressões fixas com outros padrões; esta ficha cobre o uso básico.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo como modelo básico.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-024",
+      "titulo": "gegenüber — Posição em frente ou atitude em relação a",
+      "palavras_chave": [
+        "gegenüber",
+        "preposicao",
+        "Posição em frente ou atitude em relação a"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Posição em frente ou atitude em relação a.",
+        "Em “Die Schule liegt gegenüber dem Bahnhof”: “A escola fica em frente à estação”.",
+        "Também dem Bahnhof gegenüber. Em gegenüber anderen Menschen, significa em relação a outras pessoas.",
+        "Caso: dativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Posição em frente ou atitude em relação a.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Schule liegt gegenüber dem Bahnhof."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A escola fica em frente à estação."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também dem Bahnhof gegenüber. Em gegenüber anderen Menschen, significa em relação a outras pessoas.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-025",
+      "titulo": "an — Junto à margem ou em contato",
+      "palavras_chave": [
+        "an",
+        "preposicao",
+        "Junto à margem ou em contato"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Junto à margem ou em contato.",
+        "Em “Ich sitze am See”: “Estou sentado à beira do lago”.",
+        "An não significa apenas contato vertical. Am Fenster — junto à janela; am Montag — na segunda-feira. Destino: Ich gehe an den See. — Vou até a margem do lago.",
+        "Caso: dativo no exemplo de localização; acusativo no de destino."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Junto à margem ou em contato.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich sitze am See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estou sentado à beira do lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "An não significa apenas contato vertical. Am Fenster — junto à janela; am Montag — na segunda-feira. Destino:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe an den See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou até a margem do lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo no exemplo de localização; acusativo no de destino.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-026",
+      "titulo": "auf — Sobre uma superfície",
+      "palavras_chave": [
+        "auf",
+        "preposicao",
+        "Sobre uma superfície"
+      ],
+      "relacionados": [
+        "PC-003"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Sobre uma superfície.",
+        "Em “Das Buch liegt auf dem Tisch”: “O livro está sobre a mesa”.",
+        "Der Vogel sitzt auf einem Ast.",
+        "O pássaro está num galho.",
+        "Há usos convencionais como auf dem Land — no campo. Não reduzir todos os usos à horizontalidade. Destino: Ich lege das Buch auf den Tisch. — Coloco o livro sobre a mesa.",
+        "Caso: dativo no exemplo de localização; acusativo no de destino."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sobre uma superfície.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Buch liegt auf dem Tisch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O livro está sobre a mesa."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Vogel sitzt auf einem Ast."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O pássaro está num galho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Há usos convencionais como auf dem Land — no campo. Não reduzir todos os usos à horizontalidade. Destino:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lege das Buch auf den Tisch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Coloco o livro sobre a mesa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo no exemplo de localização; acusativo no de destino.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-027",
+      "titulo": "in — Dentro de uma área ou espaço",
+      "palavras_chave": [
+        "in",
+        "preposicao",
+        "Dentro de uma área ou espaço"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Dentro de uma área ou espaço.",
+        "Em “Ich gehe im Garten spazieren”: “Caminho pelo jardim”.",
+        "Na primeira frase há movimento dentro do local; na segunda, esse local é o destino. Também im Sommer e in einer Stunde, usos temporais com dativo. Destino: Ich gehe in den Garten. — Vou para o jardim.",
+        "Caso: dativo no exemplo de localização; acusativo no de destino."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Dentro de uma área ou espaço.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe im Garten spazieren."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Caminho pelo jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Na primeira frase há movimento dentro do local; na segunda, esse local é o destino. Também im Sommer e in einer Stunde, usos temporais com dativo. Destino:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe in den Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou para o jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo no exemplo de localização; acusativo no de destino.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-028",
+      "titulo": "über — Localização acima de algo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "über",
+        "localização",
+        "acima"
+      ],
+      "explicacao": [
+        "Über dem Wasser liegt leichter Nebel.",
+        "Sobre a água há uma leve neblina.",
+        "Aqui, “über dem Wasser” indica onde a neblina está: sobre a água. Nesse uso de localização, “über” acompanha o dativo: das Wasser → dem Wasser."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Über dem Wasser liegt leichter Nebel."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Sobre a água há uma leve neblina."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui, “über dem Wasser” indica onde a neblina está: sobre a água. Nesse uso de localização, “über” acompanha o dativo: das Wasser → dem Wasser.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PREP-048",
+        "PREP-049",
+        "PC-003"
+      ]
+    },
+    {
+      "id": "PREP-029",
+      "titulo": "unter — Abaixo ou entre integrantes de um grupo",
+      "palavras_chave": [
+        "unter",
+        "preposicao",
+        "Abaixo ou entre integrantes de um grupo"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Abaixo ou entre integrantes de um grupo.",
+        "Em “Die Katze liegt unter dem Tisch”: “O gato está deitado debaixo da mesa”.",
+        "Unter Freunden — entre amigos. Não confundir o uso espacial com essa relação de grupo. Destino: Die Katze läuft unter den Tisch. — O gato corre para debaixo da mesa.",
+        "Caso: dativo no exemplo de localização; acusativo no de destino."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Abaixo ou entre integrantes de um grupo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Katze liegt unter dem Tisch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O gato está deitado debaixo da mesa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Unter Freunden — entre amigos. Não confundir o uso espacial com essa relação de grupo. Destino:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Katze läuft unter den Tisch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O gato corre para debaixo da mesa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo no exemplo de localização; acusativo no de destino.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-030",
+      "titulo": "hinter — Atrás de",
+      "palavras_chave": [
+        "hinter",
+        "preposicao",
+        "Atrás de"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Atrás de.",
+        "Em “Das Kind steht hinter dem Baum”: “A criança está atrás da árvore”.",
+        "O destino é a região atrás da árvore; isso não exige andar de costas. Destino: Das Kind läuft hinter den Baum. — A criança corre para trás da árvore.",
+        "Caso: dativo no exemplo de localização; acusativo no de destino."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Atrás de.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Kind steht hinter dem Baum."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A criança está atrás da árvore."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O destino é a região atrás da árvore; isso não exige andar de costas. Destino:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Kind läuft hinter den Baum."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A criança corre para trás da árvore."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo no exemplo de localização; acusativo no de destino.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-031",
+      "titulo": "vor — À frente de",
+      "palavras_chave": [
+        "vor",
+        "preposicao",
+        "À frente de"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "À frente de.",
+        "Em “Das Auto steht vor dem Haus”: “O carro está parado em frente à casa”.",
+        "No tempo, dativo: vor einer Stunde — há uma hora; vor dem Essen — antes da refeição. Destino: Ich stelle das Auto vor das Haus. — Estaciono o carro em frente à casa.",
+        "Caso: dativo no exemplo de localização; acusativo no de destino."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "À frente de.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Auto steht vor dem Haus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O carro está parado em frente à casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No tempo, dativo: vor einer Stunde — há uma hora; vor dem Essen — antes da refeição. Destino:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich stelle das Auto vor das Haus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estaciono o carro em frente à casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo no exemplo de localização; acusativo no de destino.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-032",
+      "titulo": "neben — Ao lado de",
+      "palavras_chave": [
+        "neben",
+        "preposicao",
+        "Ao lado de"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Ao lado de.",
+        "Em “Ich sitze neben meinem Bruder”: “Estou sentado ao lado do meu irmão”.",
+        "Não há proibição de contato físico: a relação principal é lateral. Destino: Ich setze mich neben meinen Bruder. — Sento-me ao lado do meu irmão.",
+        "Caso: dativo no exemplo de localização; acusativo no de destino."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ao lado de.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich sitze neben meinem Bruder."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estou sentado ao lado do meu irmão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não há proibição de contato físico: a relação principal é lateral. Destino:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich setze mich neben meinen Bruder."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Sento-me ao lado do meu irmão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo no exemplo de localização; acusativo no de destino.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-033",
+      "titulo": "zwischen — Entre referências distintas",
+      "palavras_chave": [
+        "zwischen",
+        "preposicao",
+        "Entre referências distintas"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Entre referências distintas.",
+        "Em “Der Tisch steht zwischen den Fenstern”: “A mesa fica entre as janelas”.",
+        "Pode relacionar mais de dois elementos. Não aplicar a regra entre dois versus entre muitos para decidir entre zwischen e unter. Destino: Ich stelle den Tisch zwischen die Fenster. — Coloco a mesa entre as janelas.",
+        "Caso: dativo no exemplo de localização; acusativo no de destino."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Entre referências distintas.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Tisch steht zwischen den Fenstern."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A mesa fica entre as janelas."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Pode relacionar mais de dois elementos. Não aplicar a regra entre dois versus entre muitos para decidir entre zwischen e unter. Destino:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich stelle den Tisch zwischen die Fenster."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Coloco a mesa entre as janelas."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: dativo no exemplo de localização; acusativo no de destino.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-034",
+      "titulo": "wegen — Causa",
+      "palavras_chave": [
+        "wegen",
+        "preposicao",
+        "Causa"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Causa.",
+        "Em “Wegen des Regens bleibe ich zu Hause”: “Por causa da chuva, fico em casa”.",
+        "O dativo ocorre na fala e em outras condições. Não confundir wegen, preposição, com deshalb, advérbio.",
+        "Caso: genitivo como modelo da escrita cuidada."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Causa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wegen des Regens bleibe ich zu Hause."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Por causa da chuva, fico em casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O dativo ocorre na fala e em outras condições. Não confundir wegen, preposição, com deshalb, advérbio.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo como modelo da escrita cuidada.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-035",
+      "titulo": "trotz — Concessão",
+      "palavras_chave": [
+        "trotz",
+        "preposicao",
+        "Concessão"
+      ],
+      "relacionados": [
+        "RI-013"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Concessão.",
+        "Em “Trotz des Regens gehe ich spazieren”: “Apesar da chuva, saio para caminhar”.",
+        "Expressa uma circunstância que não impede o fato. Embora introduz uma oração: obwohl es regnet. O dativo também ocorre em certos usos.",
+        "Caso: genitivo como modelo básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Concessão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Trotz des Regens gehe ich spazieren."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Apesar da chuva, saio para caminhar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Expressa uma circunstância que não impede o fato. Embora introduz uma oração: obwohl es regnet. O dativo também ocorre em certos usos.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo como modelo básico.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-036",
+      "titulo": "während — Durante um período",
+      "palavras_chave": [
+        "während",
+        "preposicao",
+        "Durante um período"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Durante um período.",
+        "Em “Während des Unterrichts lese ich”: “Durante a aula, leio”.",
+        "Como conjunção: während ich lese — enquanto leio. A classe depende da construção.",
+        "Caso: genitivo como preposição."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Durante um período.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Während des Unterrichts lese ich."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Durante a aula, leio."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Como conjunção: während ich lese — enquanto leio. A classe depende da construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo como preposição.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-037",
+      "titulo": "innerhalb — Dentro de um limite",
+      "palavras_chave": [
+        "innerhalb",
+        "preposicao",
+        "Dentro de um limite"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Dentro de um limite.",
+        "Em “Ich antworte innerhalb einer Woche”: “Respondo dentro de uma semana”.",
+        "Também limite espacial: innerhalb der Stadt. Há construções com von + dativo.",
+        "Caso: genitivo no modelo com complemento nominal."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Dentro de um limite.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich antworte innerhalb einer Woche."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Respondo dentro de uma semana."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também limite espacial: innerhalb der Stadt. Há construções com von + dativo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo no modelo com complemento nominal.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-038",
+      "titulo": "außerhalb — Fora de um limite",
+      "palavras_chave": [
+        "außerhalb",
+        "preposicao",
+        "Fora de um limite"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Fora de um limite.",
+        "Em “Ich wohne außerhalb der Stadt”: “Moro fora da cidade”.",
+        "Também limite temporal: außerhalb der Öffnungszeiten — fora do horário de funcionamento.",
+        "Caso: genitivo no modelo com complemento nominal."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Fora de um limite.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich wohne außerhalb der Stadt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Moro fora da cidade."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também limite temporal: außerhalb der Öffnungszeiten — fora do horário de funcionamento.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo no modelo com complemento nominal.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-039",
+      "titulo": "oberhalb — Acima de um ponto de referência",
+      "palavras_chave": [
+        "oberhalb",
+        "preposicao",
+        "Acima de um ponto de referência"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Acima de um ponto de referência.",
+        "Em “Das Dorf liegt oberhalb des Sees”: “A aldeia fica acima do lago”.",
+        "Não significa necessariamente no topo. Há construções com von + dativo.",
+        "Caso: genitivo no modelo básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Acima de um ponto de referência.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Dorf liegt oberhalb des Sees."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A aldeia fica acima do lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não significa necessariamente no topo. Há construções com von + dativo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo no modelo básico.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-040",
+      "titulo": "unterhalb — Abaixo de um ponto de referência",
+      "palavras_chave": [
+        "unterhalb",
+        "preposicao",
+        "Abaixo de um ponto de referência"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Abaixo de um ponto de referência.",
+        "Em “Das Dorf liegt unterhalb des Berges”: “A aldeia fica abaixo da montanha”.",
+        "Relação de altura, não inferioridade de valor.",
+        "Caso: genitivo no modelo básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Abaixo de um ponto de referência.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Dorf liegt unterhalb des Berges."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A aldeia fica abaixo da montanha."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Relação de altura, não inferioridade de valor.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo no modelo básico.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-041",
+      "titulo": "statt ou anstatt — Substituição",
+      "palavras_chave": [
+        "statt ou anstatt",
+        "preposicao",
+        "Substituição"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Substituição.",
+        "Em “Statt eines Kaffees bestelle ich einen Tee”: “Em vez de um café, peço um chá”.",
+        "Anstatt zu warten, gehe ich — em vez de esperar, vou. Nessa construção não há complemento nominal regido por genitivo.",
+        "Caso: genitivo no modelo nominal básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Substituição.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Statt eines Kaffees bestelle ich einen Tee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Em vez de um café, peço um chá."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Anstatt zu warten, gehe ich."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "em vez de esperar, vou."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nessa construção não há complemento nominal regido por genitivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo no modelo nominal básico.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-042",
+      "titulo": "diesseits — Deste lado de um limite",
+      "palavras_chave": [
+        "diesseits",
+        "preposicao",
+        "Deste lado de um limite"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Deste lado de um limite.",
+        "Em “Das Dorf liegt diesseits des Flusses”: “A aldeia fica deste lado do rio”.",
+        "O sentido depende do ponto de referência.",
+        "Caso: genitivo no modelo básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Deste lado de um limite.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Dorf liegt diesseits des Flusses."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A aldeia fica deste lado do rio."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O sentido depende do ponto de referência.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo no modelo básico.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-043",
+      "titulo": "jenseits — Do outro lado ou além de um limite",
+      "palavras_chave": [
+        "jenseits",
+        "preposicao",
+        "Do outro lado ou além de um limite"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Do outro lado ou além de um limite.",
+        "Em “Das Dorf liegt jenseits des Flusses”: “A aldeia fica do outro lado do rio”.",
+        "Também pode expressar relações abstratas.",
+        "Caso: genitivo no modelo básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Do outro lado ou além de um limite.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Dorf liegt jenseits des Flusses."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A aldeia fica do outro lado do rio."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também pode expressar relações abstratas.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: genitivo no modelo básico.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-044",
+      "titulo": "entlang — Ao longo de",
+      "palavras_chave": [
+        "entlang",
+        "preposicao",
+        "Ao longo de"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Ao longo de.",
+        "Em “Ich gehe den Fluss entlang”: “Caminho ao longo do rio”.",
+        "Antes do nome, o genitivo é frequente: entlang des Flusses. O dativo também ocorre. Em an der Küste entlang, an rege dativo. A posição não cria uma regra de movimento versus imobilidade.",
+        "Caso: acusativo depois do nome; genitivo ou dativo antes do nome."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ao longo de.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe den Fluss entlang."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Caminho ao longo do rio."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Antes do nome, o genitivo é frequente: entlang des Flusses. O dativo também ocorre. Em an der Küste entlang, an rege dativo. A posição não cria uma regra de movimento versus imobilidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: acusativo depois do nome; genitivo ou dativo antes do nome.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-045",
+      "titulo": "zu — Excesso",
+      "palavras_chave": [
+        "zu",
+        "adverbio_de_grau",
+        "Excesso"
+      ],
+      "relacionados": [
+        "INF-020"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Excesso.",
+        "Em “Der Kaffee ist zu heiß”: “O café está quente demais”.",
+        "Em “Das Haus ist zu klein”: “A casa é pequena demais”.",
+        "Aqui zu modifica o adjetivo; não rege dativo.",
+        "Caso: não se aplica a esta função."
+      ],
+      "termos_busca": [
+        "zu klein",
+        "zu schwer"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Excesso.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Kaffee ist zu heiß."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O café está quente demais."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Haus ist zu klein."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A casa é pequena demais."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui zu modifica o adjetivo; não rege dativo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: não se aplica a esta função.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-046",
+      "titulo": "zu — Marca de infinitivo",
+      "palavras_chave": [
+        "zu",
+        "particula_de_infinitivo",
+        "Marca de infinitivo"
+      ],
+      "relacionados": [
+        "INF-001",
+        "INF-011",
+        "INF-012",
+        "INF-020"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Marca de infinitivo.",
+        "Em “Ich versuche, den Text zu verstehen”: “Tento compreender o texto”.",
+        "Aqui zu acompanha verstehen. Não usar a regra toda segunda oração leva zu: modais usam infinitivo sem zu; bleiben em stehen bleiben também.",
+        "Caso: não se aplica a esta função."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Marca de infinitivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, den Text zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento compreender o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui zu acompanha verstehen. Não usar a regra toda segunda oração leva zu: modais usam infinitivo sem zu; bleiben em stehen bleiben também.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: não se aplica a esta função.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-047",
+      "titulo": "um ... zu — Finalidade",
+      "palavras_chave": [
+        "um ... zu",
+        "construcao_infinitiva",
+        "Finalidade"
+      ],
+      "relacionados": [
+        "INF-016"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Finalidade.",
+        "Em “Ich lese den Text noch einmal, um ihn besser zu verstehen”: “Leio o texto mais uma vez para compreendê-lo melhor”.",
+        "Construção infinitiva com finalidade; o sujeito entendido normalmente é o da oração principal. Não confundir com um acht Uhr.",
+        "Caso: não se aplica a esta função."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Finalidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lese den Text noch einmal, um ihn besser zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Leio o texto mais uma vez para compreendê-lo melhor."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção infinitiva com finalidade; o sujeito entendido normalmente é o da oração principal. Não confundir com um acht Uhr.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Caso: não se aplica a esta função.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "PREP-048",
+      "titulo": "über — Passagem por cima",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "über",
+        "passagem",
+        "travessia"
+      ],
+      "explicacao": [
+        "Der Vogel fliegt über den See.",
+        "O pássaro atravessa o lago voando por cima.",
+        "Neste uso de passagem por cima, über acompanha o acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Der Vogel fliegt über den See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O pássaro atravessa o lago voando por cima."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Neste uso de passagem por cima, über acompanha o acusativo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PREP-028",
+        "PREP-049"
+      ]
+    },
+    {
+      "id": "PREP-049",
+      "titulo": "über — Assunto de conversa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "über",
+        "sprechen über",
+        "assunto",
+        "conversa"
+      ],
+      "explicacao": [
+        "Ich spreche mit Anna über das Buch.",
+        "Falo com Anna sobre o livro.",
+        "Sprechen über apresenta o assunto da conversa e acompanha o acusativo. Este uso não indica localização nem passagem por cima."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Ich spreche mit Anna über das Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Falo com Anna sobre o livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sprechen über apresenta o assunto da conversa e acompanha o acusativo. Este uso não indica localização nem passagem por cima.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PREP-028",
+        "PREP-048",
+        "PC-004",
+        "VB-039"
+      ]
+    }
+  ]
+}

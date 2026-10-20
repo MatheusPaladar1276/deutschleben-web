@@ -1,0 +1,1651 @@
+{
+  "versao": "rg-previa-01-10-v10",
+  "vinculos": [
+    {
+      "uso_id": "prep-001",
+      "consulta_id": "PREP-001",
+      "relacao": "comparacao_de_uso",
+      "palavra": "für",
+      "uso": "destinação e benefício"
+    },
+    {
+      "uso_id": "prep-003",
+      "consulta_id": "PREP-002",
+      "relacao": "comparacao_de_uso",
+      "palavra": "ohne",
+      "uso": "ausência"
+    },
+    {
+      "uso_id": "prep-004",
+      "consulta_id": "PREP-003",
+      "relacao": "comparacao_de_uso",
+      "palavra": "durch",
+      "uso": "percurso através de"
+    },
+    {
+      "uso_id": "prep-005",
+      "consulta_id": "PREP-003",
+      "relacao": "comparacao_de_uso",
+      "palavra": "durch",
+      "uso": "meio ou causa"
+    },
+    {
+      "uso_id": "prep-006",
+      "consulta_id": "PREP-004",
+      "relacao": "comparacao_de_uso",
+      "palavra": "um",
+      "uso": "ao redor"
+    },
+    {
+      "uso_id": "prep-007",
+      "consulta_id": "PREP-005",
+      "relacao": "comparacao_de_uso",
+      "palavra": "um",
+      "uso": "horário exato"
+    },
+    {
+      "uso_id": "prep-010",
+      "consulta_id": "PREP-006",
+      "relacao": "comparacao_de_uso",
+      "palavra": "gegen",
+      "uso": "oposição"
+    },
+    {
+      "uso_id": "prep-011",
+      "consulta_id": "PREP-007",
+      "relacao": "comparacao_de_uso",
+      "palavra": "gegen",
+      "uso": "horário aproximado"
+    },
+    {
+      "uso_id": "prep-008",
+      "consulta_id": "PREP-008",
+      "relacao": "comparacao_de_uso",
+      "palavra": "bis",
+      "uso": "limite temporal"
+    },
+    {
+      "uso_id": "prep-009",
+      "consulta_id": "PREP-008",
+      "relacao": "comparacao_de_uso",
+      "palavra": "bis",
+      "uso": "limite espacial com outra preposição"
+    },
+    {
+      "uso_id": "prep-012",
+      "consulta_id": "PREP-009",
+      "relacao": "comparacao_de_uso",
+      "palavra": "aus",
+      "uso": "origem de dentro"
+    },
+    {
+      "uso_id": "prep-013",
+      "consulta_id": "PREP-009",
+      "relacao": "comparacao_de_uso",
+      "palavra": "aus",
+      "uso": "origem geográfica"
+    },
+    {
+      "uso_id": "prep-014",
+      "consulta_id": "PREP-010",
+      "relacao": "comparacao_de_uso",
+      "palavra": "aus",
+      "uso": "material"
+    },
+    {
+      "uso_id": "prep-015",
+      "consulta_id": "PREP-011",
+      "relacao": "comparacao_de_uso",
+      "palavra": "aus",
+      "uso": "motivação"
+    },
+    {
+      "uso_id": "prep-016",
+      "consulta_id": "PREP-012",
+      "relacao": "comparacao_de_uso",
+      "palavra": "bei",
+      "uso": "junto de ou na casa de"
+    },
+    {
+      "uso_id": "prep-017",
+      "consulta_id": "PREP-012",
+      "relacao": "comparacao_de_uso",
+      "palavra": "bei",
+      "uso": "vínculo profissional"
+    },
+    {
+      "uso_id": "prep-018",
+      "consulta_id": "PREP-013",
+      "relacao": "comparacao_de_uso",
+      "palavra": "bei",
+      "uso": "circunstância"
+    },
+    {
+      "uso_id": "prep-019",
+      "consulta_id": "PREP-014",
+      "relacao": "comparacao_de_uso",
+      "palavra": "mit",
+      "uso": "companhia"
+    },
+    {
+      "uso_id": "prep-020",
+      "consulta_id": "PREP-014",
+      "relacao": "comparacao_de_uso",
+      "palavra": "mit",
+      "uso": "instrumento"
+    },
+    {
+      "uso_id": "prep-021",
+      "consulta_id": "PREP-014",
+      "relacao": "comparacao_de_uso",
+      "palavra": "mit",
+      "uso": "transporte"
+    },
+    {
+      "uso_id": "prep-022",
+      "consulta_id": "PREP-015",
+      "relacao": "comparacao_de_uso",
+      "palavra": "nach",
+      "uso": "destino geográfico sem artigo"
+    },
+    {
+      "uso_id": "prep-023",
+      "consulta_id": "PREP-016",
+      "relacao": "comparacao_de_uso",
+      "palavra": "nach",
+      "uso": "posterioridade"
+    },
+    {
+      "uso_id": "prep-024",
+      "consulta_id": "PREP-017",
+      "relacao": "comparacao_de_uso",
+      "palavra": "nach",
+      "uso": "conformidade"
+    },
+    {
+      "uso_id": "prep-025",
+      "consulta_id": "PREP-018",
+      "relacao": "comparacao_de_uso",
+      "palavra": "von",
+      "uso": "procedência"
+    },
+    {
+      "uso_id": "prep-026",
+      "consulta_id": "PREP-019",
+      "relacao": "comparacao_de_uso",
+      "palavra": "von",
+      "uso": "autoria ou pertencimento"
+    },
+    {
+      "uso_id": "prep-027",
+      "consulta_id": "PREP-019",
+      "relacao": "comparacao_de_uso",
+      "palavra": "von",
+      "uso": "agente da passiva"
+    },
+    {
+      "uso_id": "prep-028",
+      "consulta_id": "PREP-020",
+      "relacao": "comparacao_de_uso",
+      "palavra": "zu",
+      "uso": "destino"
+    },
+    {
+      "uso_id": "prep-029",
+      "consulta_id": "PREP-020",
+      "relacao": "comparacao_de_uso",
+      "palavra": "zu",
+      "uso": "destino pessoa ou serviço"
+    },
+    {
+      "uso_id": "prep-031",
+      "consulta_id": "PREP-021",
+      "relacao": "comparacao_de_uso",
+      "palavra": "seit",
+      "uso": "início no passado com continuidade"
+    },
+    {
+      "uso_id": "prep-032",
+      "consulta_id": "PREP-022",
+      "relacao": "comparacao_de_uso",
+      "palavra": "ab",
+      "uso": "ponto inicial"
+    },
+    {
+      "uso_id": "prep-073",
+      "consulta_id": "PREP-023",
+      "relacao": "comparacao_de_uso",
+      "palavra": "außer",
+      "uso": "exclusão"
+    },
+    {
+      "uso_id": "prep-033",
+      "consulta_id": "PREP-024",
+      "relacao": "comparacao_de_uso",
+      "palavra": "gegenüber",
+      "uso": "posição em frente"
+    },
+    {
+      "uso_id": "prep-034",
+      "consulta_id": "PREP-024",
+      "relacao": "comparacao_de_uso",
+      "palavra": "gegenüber",
+      "uso": "atitude em relação a"
+    },
+    {
+      "uso_id": "prep-035",
+      "consulta_id": "PREP-025",
+      "relacao": "comparacao_de_uso",
+      "palavra": "an",
+      "uso": "localização junto de"
+    },
+    {
+      "uso_id": "prep-036",
+      "consulta_id": "PREP-025",
+      "relacao": "comparacao_de_uso",
+      "palavra": "an",
+      "uso": "destino junto de"
+    },
+    {
+      "uso_id": "prep-038",
+      "consulta_id": "PREP-026",
+      "relacao": "comparacao_de_uso",
+      "palavra": "auf",
+      "uso": "localização sobre superfície"
+    },
+    {
+      "uso_id": "prep-039",
+      "consulta_id": "PREP-026",
+      "relacao": "comparacao_de_uso",
+      "palavra": "auf",
+      "uso": "destino sobre superfície"
+    },
+    {
+      "uso_id": "prep-040",
+      "consulta_id": "PREP-027",
+      "relacao": "comparacao_de_uso",
+      "palavra": "in",
+      "uso": "localização em espaço"
+    },
+    {
+      "uso_id": "prep-041",
+      "consulta_id": "PREP-027",
+      "relacao": "comparacao_de_uso",
+      "palavra": "in",
+      "uso": "destino para dentro"
+    },
+    {
+      "uso_id": "prep-042",
+      "consulta_id": "PREP-027",
+      "relacao": "comparacao_de_uso",
+      "palavra": "in",
+      "uso": "prazo a contar de agora"
+    },
+    {
+      "uso_id": "prep-043",
+      "consulta_id": "PREP-027",
+      "relacao": "comparacao_de_uso",
+      "palavra": "in",
+      "uso": "período"
+    },
+    {
+      "uso_id": "prep-044",
+      "consulta_id": "PREP-028",
+      "relacao": "comparacao_de_uso",
+      "palavra": "über",
+      "uso": "posição acima"
+    },
+    {
+      "uso_id": "prep-045",
+      "consulta_id": "PREP-028",
+      "relacao": "comparacao_de_uso",
+      "palavra": "über",
+      "uso": "travessia"
+    },
+    {
+      "uso_id": "prep-046",
+      "consulta_id": "PREP-028",
+      "relacao": "comparacao_de_uso",
+      "palavra": "über",
+      "uso": "assunto"
+    },
+    {
+      "uso_id": "prep-047",
+      "consulta_id": "PREP-029",
+      "relacao": "comparacao_de_uso",
+      "palavra": "unter",
+      "uso": "posição abaixo"
+    },
+    {
+      "uso_id": "prep-048",
+      "consulta_id": "PREP-029",
+      "relacao": "comparacao_de_uso",
+      "palavra": "unter",
+      "uso": "destino para debaixo"
+    },
+    {
+      "uso_id": "prep-049",
+      "consulta_id": "PREP-029",
+      "relacao": "comparacao_de_uso",
+      "palavra": "unter",
+      "uso": "entre membros de um grupo"
+    },
+    {
+      "uso_id": "prep-050",
+      "consulta_id": "PREP-030",
+      "relacao": "comparacao_de_uso",
+      "palavra": "hinter",
+      "uso": "posição atrás"
+    },
+    {
+      "uso_id": "prep-051",
+      "consulta_id": "PREP-030",
+      "relacao": "comparacao_de_uso",
+      "palavra": "hinter",
+      "uso": "destino para trás"
+    },
+    {
+      "uso_id": "prep-052",
+      "consulta_id": "PREP-031",
+      "relacao": "comparacao_de_uso",
+      "palavra": "vor",
+      "uso": "posição à frente"
+    },
+    {
+      "uso_id": "prep-053",
+      "consulta_id": "PREP-031",
+      "relacao": "comparacao_de_uso",
+      "palavra": "vor",
+      "uso": "destino à frente"
+    },
+    {
+      "uso_id": "prep-054",
+      "consulta_id": "PREP-031",
+      "relacao": "comparacao_de_uso",
+      "palavra": "vor",
+      "uso": "anterioridade"
+    },
+    {
+      "uso_id": "prep-055",
+      "consulta_id": "PREP-031",
+      "relacao": "comparacao_de_uso",
+      "palavra": "vor",
+      "uso": "tempo decorrido"
+    },
+    {
+      "uso_id": "prep-056",
+      "consulta_id": "PREP-032",
+      "relacao": "comparacao_de_uso",
+      "palavra": "neben",
+      "uso": "posição ao lado"
+    },
+    {
+      "uso_id": "prep-057",
+      "consulta_id": "PREP-032",
+      "relacao": "comparacao_de_uso",
+      "palavra": "neben",
+      "uso": "destino ao lado"
+    },
+    {
+      "uso_id": "prep-058",
+      "consulta_id": "PREP-033",
+      "relacao": "comparacao_de_uso",
+      "palavra": "zwischen",
+      "uso": "posição entre referências"
+    },
+    {
+      "uso_id": "prep-059",
+      "consulta_id": "PREP-033",
+      "relacao": "comparacao_de_uso",
+      "palavra": "zwischen",
+      "uso": "destino entre referências"
+    },
+    {
+      "uso_id": "prep-062",
+      "consulta_id": "PREP-034",
+      "relacao": "comparacao_de_uso",
+      "palavra": "wegen",
+      "uso": "causa"
+    },
+    {
+      "uso_id": "prep-063",
+      "consulta_id": "PREP-035",
+      "relacao": "comparacao_de_uso",
+      "palavra": "trotz",
+      "uso": "concessão"
+    },
+    {
+      "uso_id": "prep-064",
+      "consulta_id": "PREP-036",
+      "relacao": "comparacao_de_uso",
+      "palavra": "während",
+      "uso": "período simultâneo"
+    },
+    {
+      "uso_id": "prep-065",
+      "consulta_id": "PREP-037",
+      "relacao": "comparacao_de_uso",
+      "palavra": "innerhalb",
+      "uso": "limite temporal"
+    },
+    {
+      "uso_id": "prep-066",
+      "consulta_id": "PREP-037",
+      "relacao": "comparacao_de_uso",
+      "palavra": "innerhalb",
+      "uso": "limite espacial"
+    },
+    {
+      "uso_id": "prep-067",
+      "consulta_id": "PREP-038",
+      "relacao": "comparacao_de_uso",
+      "palavra": "außerhalb",
+      "uso": "fora de limite"
+    },
+    {
+      "uso_id": "prep-068",
+      "consulta_id": "PREP-039",
+      "relacao": "comparacao_de_uso",
+      "palavra": "oberhalb",
+      "uso": "posição acima"
+    },
+    {
+      "uso_id": "prep-069",
+      "consulta_id": "PREP-040",
+      "relacao": "comparacao_de_uso",
+      "palavra": "unterhalb",
+      "uso": "posição abaixo"
+    },
+    {
+      "uso_id": "prep-070",
+      "consulta_id": "PREP-041",
+      "relacao": "comparacao_de_uso",
+      "palavra": "statt",
+      "uso": "substituição"
+    },
+    {
+      "uso_id": "prep-071",
+      "consulta_id": "PREP-042",
+      "relacao": "comparacao_de_uso",
+      "palavra": "diesseits",
+      "uso": "deste lado"
+    },
+    {
+      "uso_id": "prep-072",
+      "consulta_id": "PREP-043",
+      "relacao": "comparacao_de_uso",
+      "palavra": "jenseits",
+      "uso": "do outro lado"
+    },
+    {
+      "uso_id": "prep-060",
+      "consulta_id": "PREP-044",
+      "relacao": "comparacao_de_uso",
+      "palavra": "entlang",
+      "uso": "percurso com posição posterior"
+    },
+    {
+      "uso_id": "prep-061",
+      "consulta_id": "PREP-044",
+      "relacao": "comparacao_de_uso",
+      "palavra": "entlang",
+      "uso": "extensão com posição anterior"
+    },
+    {
+      "uso_id": "prep-074",
+      "consulta_id": "PREP-045",
+      "relacao": "comparacao_de_uso",
+      "palavra": "zu",
+      "uso": "excesso"
+    },
+    {
+      "uso_id": "prep-075",
+      "consulta_id": "PREP-046",
+      "relacao": "comparacao_de_uso",
+      "palavra": "zu",
+      "uso": "infinitivo dependente"
+    },
+    {
+      "uso_id": "prep-002",
+      "consulta_id": "PC-001",
+      "relacao": "apoio_conceitual",
+      "palavra": "für",
+      "uso": "finalidade"
+    },
+    {
+      "uso_id": "prep-037",
+      "consulta_id": "PC-007",
+      "relacao": "apoio_conceitual",
+      "palavra": "an",
+      "uso": "dia ou parte do dia"
+    },
+    {
+      "uso_id": "prep-081",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "an",
+      "uso": "denken + an"
+    },
+    {
+      "uso_id": "prep-082",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "an",
+      "uso": "arbeiten + an"
+    },
+    {
+      "uso_id": "prep-083",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "auf",
+      "uso": "warten + auf"
+    },
+    {
+      "uso_id": "prep-084",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "auf",
+      "uso": "achten + auf"
+    },
+    {
+      "uso_id": "prep-085",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "für",
+      "uso": "sich entscheiden + für"
+    },
+    {
+      "uso_id": "prep-086",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "für",
+      "uso": "sich einsetzen + für"
+    },
+    {
+      "uso_id": "prep-087",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "gegen",
+      "uso": "protestieren + gegen"
+    },
+    {
+      "uso_id": "prep-088",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "gegen",
+      "uso": "sich wehren + gegen"
+    },
+    {
+      "uso_id": "prep-089",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "mit",
+      "uso": "sprechen + mit"
+    },
+    {
+      "uso_id": "prep-090",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "mit",
+      "uso": "zufrieden sein + mit"
+    },
+    {
+      "uso_id": "prep-091",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "nach",
+      "uso": "fragen + nach"
+    },
+    {
+      "uso_id": "prep-092",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "nach",
+      "uso": "suchen + nach"
+    },
+    {
+      "uso_id": "prep-093",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "nach",
+      "uso": "riechen + nach"
+    },
+    {
+      "uso_id": "prep-094",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "bei",
+      "uso": "sich entschuldigen + bei"
+    },
+    {
+      "uso_id": "prep-095",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "von",
+      "uso": "überzeugt sein + von"
+    },
+    {
+      "uso_id": "prep-096",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "über",
+      "uso": "sprechen + über"
+    },
+    {
+      "uso_id": "prep-097",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "über",
+      "uso": "sich freuen + über"
+    },
+    {
+      "uso_id": "prep-098",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "vor",
+      "uso": "Angst haben + vor"
+    },
+    {
+      "uso_id": "prep-099",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "vor",
+      "uso": "Respekt haben + vor"
+    },
+    {
+      "uso_id": "prep-100",
+      "consulta_id": "PC-004",
+      "relacao": "apoio_conceitual",
+      "palavra": "auf",
+      "uso": "neugierig sein + auf"
+    },
+    {
+      "uso_id": "prep-076",
+      "consulta_id": "PC-010",
+      "relacao": "apoio_conceitual",
+      "palavra": "zu",
+      "uso": "fechamento com zumachen"
+    },
+    {
+      "uso_id": "prep-077",
+      "consulta_id": "PC-010",
+      "relacao": "apoio_conceitual",
+      "palavra": "zu",
+      "uso": "estado fechado"
+    },
+    {
+      "uso_id": "prep-078",
+      "consulta_id": "PC-010",
+      "relacao": "apoio_conceitual",
+      "palavra": "auf",
+      "uso": "levantar com aufstehen"
+    },
+    {
+      "uso_id": "prep-079",
+      "consulta_id": "PC-010",
+      "relacao": "apoio_conceitual",
+      "palavra": "auf",
+      "uso": "estado aberto"
+    },
+    {
+      "uso_id": "prep-080",
+      "consulta_id": "PC-010",
+      "relacao": "apoio_conceitual",
+      "palavra": "während",
+      "uso": "simultaneidade entre orações"
+    },
+    {
+      "uso_id": "prep-030",
+      "consulta_id": "PC-006",
+      "relacao": "apoio_conceitual",
+      "palavra": "zu",
+      "uso": "expressão fixa de localização"
+    },
+    {
+      "uso_id": "prep-075",
+      "consulta_id": "INF-011",
+      "relacao": "aprofundamento",
+      "palavra": "zu",
+      "uso": "infinitivo dependente"
+    },
+    {
+      "uso_id": "prep-075",
+      "consulta_id": "INF-012",
+      "relacao": "aprofundamento",
+      "palavra": "zu",
+      "uso": "infinitivo dependente"
+    },
+    {
+      "uso_id": "prep-045",
+      "consulta_id": "PREP-048",
+      "relacao": "uso_revisado",
+      "palavra": "über",
+      "uso": "travessia"
+    },
+    {
+      "uso_id": "prep-046",
+      "consulta_id": "PREP-049",
+      "relacao": "uso_revisado",
+      "palavra": "über",
+      "uso": "assunto"
+    }
+  ],
+  "contracoes": {
+    "am": "an dem",
+    "ans": "an das",
+    "im": "in dem",
+    "ins": "in das",
+    "beim": "bei dem",
+    "vom": "von dem",
+    "zum": "zu dem",
+    "zur": "zu der"
+  },
+  "pistas_exatas": [
+    {
+      "forma": "weiterzuarbeiten",
+      "consultas": [
+        "INF-012"
+      ]
+    },
+    {
+      "forma": "aufzustehen",
+      "consultas": [
+        "INF-012"
+      ]
+    },
+    {
+      "forma": "aufzuräumen",
+      "consultas": [
+        "INF-012"
+      ]
+    },
+    {
+      "forma": "fernzusehen",
+      "consultas": [
+        "INF-017"
+      ]
+    }
+  ],
+  "entre_consultas": [
+    {
+      "origem": "estrutura_basica",
+      "destino": "CO-01-02",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "estrutura_basica",
+      "destino": "CO-01-01",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "casos_objetos",
+      "destino": "CO-03-01",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "casos_objetos",
+      "destino": "SC-005",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "casos_objetos",
+      "destino": "SC-006",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "casos_objetos",
+      "destino": "SC-007",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "verbo_posicao",
+      "destino": "CO-01-01",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "verbo_posicao",
+      "destino": "CQ-003",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "tekamolo",
+      "destino": "CO-04-01",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "tekamolo",
+      "destino": "NEG-016",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "negacao",
+      "destino": "NEG-001",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "negacao",
+      "destino": "NEG-002",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "negacao",
+      "destino": "NEG-010",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "coordenadas",
+      "destino": "CQ-002",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "coordenadas",
+      "destino": "CON-001",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "subordinadas",
+      "destino": "CQ-004",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "subordinadas",
+      "destino": "CQ-005",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "preposicoes_casos",
+      "destino": "PC-002",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "preposicoes_casos",
+      "destino": "PC-003",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "preposicoes_casos",
+      "destino": "SC-008",
+      "relacao": "tema_antigo_reconciliado"
+    },
+    {
+      "origem": "CO-05-01",
+      "destino": "NEG-002",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "NEG-002",
+      "destino": "CO-05-01",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "NEG-002",
+      "destino": "PR-020",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PR-020",
+      "destino": "NEG-002",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-05-02",
+      "destino": "NEG-001",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "NEG-001",
+      "destino": "CO-05-02",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-05-03",
+      "destino": "NEG-010",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "NEG-010",
+      "destino": "CO-05-03",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "NEG-010",
+      "destino": "MD-müssen",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "MD-müssen",
+      "destino": "NEG-010",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "MD-müssen",
+      "destino": "MD-dürfen",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "MD-dürfen",
+      "destino": "MD-müssen",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-06-01",
+      "destino": "CQ-002",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CQ-002",
+      "destino": "CO-06-01",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CQ-002",
+      "destino": "CON-001",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CON-001",
+      "destino": "CQ-002",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-06-02",
+      "destino": "CQ-004",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CQ-004",
+      "destino": "CO-06-02",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CQ-004",
+      "destino": "CON-007",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CON-007",
+      "destino": "CQ-004",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-06-03",
+      "destino": "INF-001",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-001",
+      "destino": "CO-06-03",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-001",
+      "destino": "FV-01",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "FV-01",
+      "destino": "INF-001",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-03-02",
+      "destino": "PR-024",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PR-024",
+      "destino": "CO-03-02",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-03-03",
+      "destino": "PC-004",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PC-004",
+      "destino": "CO-03-03",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-04-03",
+      "destino": "PC-003",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PC-003",
+      "destino": "CO-04-03",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PC-003",
+      "destino": "PREP-026",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PREP-026",
+      "destino": "PC-003",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "SC-017",
+      "destino": "KC-001",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "KC-001",
+      "destino": "SC-017",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "VB-001",
+      "destino": "PREP-020",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PREP-020",
+      "destino": "VB-001",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "VB-005",
+      "destino": "INF-008",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-008",
+      "destino": "VB-005",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-008",
+      "destino": "CO-02-03",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-02-03",
+      "destino": "INF-008",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "VB-030",
+      "destino": "INF-002",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-002",
+      "destino": "VB-030",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "VB-031",
+      "destino": "CO-06-03",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-06-03",
+      "destino": "VB-031",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "VB-032",
+      "destino": "INF-002",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-002",
+      "destino": "VB-032",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "VB-035",
+      "destino": "INF-010",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-010",
+      "destino": "VB-035",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "SC-008",
+      "destino": "PC-002",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PC-002",
+      "destino": "SC-008",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-002",
+      "destino": "INF-016",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-016",
+      "destino": "RI-002",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-003",
+      "destino": "INF-016",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-016",
+      "destino": "RI-003",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-007",
+      "destino": "CON-014",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CON-014",
+      "destino": "RI-007",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CON-014",
+      "destino": "CQ-006",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CQ-006",
+      "destino": "CON-014",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-008",
+      "destino": "CON-007",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CON-007",
+      "destino": "RI-008",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-010",
+      "destino": "CON-004",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CON-004",
+      "destino": "RI-010",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-011",
+      "destino": "CON-011",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CON-011",
+      "destino": "RI-011",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-012",
+      "destino": "CON-015",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CON-015",
+      "destino": "RI-012",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-013",
+      "destino": "PREP-035",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PREP-035",
+      "destino": "RI-013",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-014",
+      "destino": "INF-017",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-017",
+      "destino": "RI-014",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-015",
+      "destino": "INF-017",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-017",
+      "destino": "RI-015",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "RI-018",
+      "destino": "PREP-020",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PREP-020",
+      "destino": "RI-018",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CQ-009",
+      "destino": "CO-06-03",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-06-03",
+      "destino": "CQ-009",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "CO-06-03",
+      "destino": "INF-001",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "INF-001",
+      "destino": "CO-06-03",
+      "relacao": "tema_compartilhado"
+    },
+    {
+      "origem": "PREP-028",
+      "destino": "PREP-048",
+      "relacao": "comparacao_de_usos"
+    },
+    {
+      "origem": "PREP-028",
+      "destino": "PREP-049",
+      "relacao": "comparacao_de_usos"
+    },
+    {
+      "origem": "PREP-048",
+      "destino": "PREP-028",
+      "relacao": "comparacao_de_usos"
+    },
+    {
+      "origem": "PREP-048",
+      "destino": "PREP-049",
+      "relacao": "comparacao_de_usos"
+    },
+    {
+      "origem": "PREP-049",
+      "destino": "PREP-028",
+      "relacao": "comparacao_de_usos"
+    },
+    {
+      "origem": "PREP-049",
+      "destino": "PREP-048",
+      "relacao": "comparacao_de_usos"
+    },
+    {
+      "origem": "PREP-028",
+      "destino": "PC-003",
+      "relacao": "localizacao"
+    },
+    {
+      "origem": "PREP-049",
+      "destino": "PC-004",
+      "relacao": "construcao_verbal"
+    },
+    {
+      "origem": "PREP-049",
+      "destino": "VB-039",
+      "relacao": "mesmo_exemplo_revisado"
+    },
+    {
+      "origem": "MD-mögen",
+      "destino": "MD-COMP-001",
+      "relacao": "comparacao_compartilhada"
+    },
+    {
+      "origem": "MD-COMP-001",
+      "destino": "MD-mögen",
+      "relacao": "uso_especifico"
+    },
+    {
+      "origem": "MD-mögen",
+      "destino": "TV-07",
+      "relacao": "modais_no_passado"
+    },
+    {
+      "origem": "MD-moechte",
+      "destino": "MD-COMP-001",
+      "relacao": "comparacao_compartilhada"
+    },
+    {
+      "origem": "MD-COMP-001",
+      "destino": "MD-moechte",
+      "relacao": "uso_especifico"
+    },
+    {
+      "origem": "MD-moechte",
+      "destino": "TV-08",
+      "relacao": "modo_e_desejo"
+    },
+    {
+      "origem": "MD-wollen",
+      "destino": "MD-COMP-001",
+      "relacao": "comparacao_compartilhada"
+    },
+    {
+      "origem": "MD-COMP-001",
+      "destino": "MD-wollen",
+      "relacao": "uso_especifico"
+    },
+    {
+      "origem": "MD-wollen",
+      "destino": "TV-07",
+      "relacao": "modais_no_passado"
+    },
+    {
+      "origem": "MD-COMP-001",
+      "destino": "TV-08",
+      "relacao": "modo_e_desejo"
+    },
+    {
+      "origem": "SC-002",
+      "destino": "ST-01",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "SC-003",
+      "destino": "ST-01",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "SC-003",
+      "destino": "ST-02",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "SC-009",
+      "destino": "ST-01",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-001",
+      "destino": "PT-01",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-002",
+      "destino": "PT-01",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-005",
+      "destino": "PT-02",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-005",
+      "destino": "PT-03",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-006",
+      "destino": "PT-03",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-006",
+      "destino": "PT-04",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-008",
+      "destino": "PT-05",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-009",
+      "destino": "PT-05",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-012",
+      "destino": "PT-06",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-014",
+      "destino": "PT-07",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-021",
+      "destino": "PT-08",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-022",
+      "destino": "PT-08",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-020",
+      "destino": "NT-01",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "PR-020",
+      "destino": "NEG-002",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "NEG-002",
+      "destino": "NT-01",
+      "relacao": "tabela_ou_comparacao"
+    },
+    {
+      "origem": "CQ-001",
+      "destino": "CON-003",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-002",
+      "destino": "CON-004",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-003",
+      "destino": "CON-001",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-004",
+      "destino": "CON-007",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-005",
+      "destino": "CON-007",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-006",
+      "destino": "CON-014",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-007",
+      "destino": "CON-015",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-008",
+      "destino": "CON-005",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-009",
+      "destino": "CON-001",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "CQ-010",
+      "destino": "CON-003",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-001",
+      "destino": "KO-008",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-002",
+      "destino": "KO-018",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-003",
+      "destino": "KO-026",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-004",
+      "destino": "KO-030",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-005",
+      "destino": "KO-048",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-006",
+      "destino": "KO-039",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-007",
+      "destino": "KO-008",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-008",
+      "destino": "KO-020",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-009",
+      "destino": "KO-040",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "KC-010",
+      "destino": "KO-056",
+      "relacao": "exemplo_do_mesmo_modulo"
+    },
+    {
+      "origem": "SV-017",
+      "destino": "KO-026",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-026",
+      "destino": "SV-017",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-017",
+      "destino": "KO-032",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-032",
+      "destino": "SV-017",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-017",
+      "destino": "KO-056",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-056",
+      "destino": "SV-017",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-023",
+      "destino": "KO-018",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-018",
+      "destino": "SV-023",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-012",
+      "destino": "KO-008",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-008",
+      "destino": "SV-012",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-012",
+      "destino": "KO-060",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-060",
+      "destino": "SV-012",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-037",
+      "destino": "KO-025",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-025",
+      "destino": "SV-037",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-035",
+      "destino": "KO-001",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-001",
+      "destino": "SV-035",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-036",
+      "destino": "KO-005",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-005",
+      "destino": "SV-036",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "SV-036",
+      "destino": "KO-006",
+      "relacao": "nucleo_do_composto"
+    },
+    {
+      "origem": "KO-006",
+      "destino": "SV-036",
+      "relacao": "nucleo_do_composto"
+    }
+  ]
+}

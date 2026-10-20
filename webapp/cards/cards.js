@@ -1,3 +1,4 @@
+import { criarAcesso as acessoGramatical } from '../referencia.js?v=rg-01-10-v10';
 import { preencherFraseBloco } from '../destaques-blocos.js?v=blocos-16';
 import { prepararCard, carregarModelo } from '../blocos.js';
 import './formato.js?v=cards-construcoes-21';
@@ -5,7 +6,7 @@ import * as dados from './dados.js?v=blocos-15';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js?v=blocos-15';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='cards-construcoes-21';
+const VERSAO='rg-previa-01-10-v10';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};
@@ -175,7 +176,7 @@ function render(dest,c,port=true){
       const exemplo=document.createElement('details');exemplo.className='contexto outro-exemplo';const sum=document.createElement('summary');sum.textContent='Outro exemplo';
       const de=document.createElement('p');de.lang='de';preencherFraseBloco(de,i.de,i.outroExemplo.de);const ptEx=document.createElement('p');ptEx.className='pt';ptEx.textContent=i.outroExemplo.pt;const caixaEx=document.createElement('div');caixaEx.className='exemplo-caixa';caixaEx.append(de,ptEx);exemplo.append(sum,caixaEx);linha.append(exemplo);
     }
-    if(estado.secao==='construcoes')linha.append(compararConstrucoes(i));
+    if(estado.secao==='construcoes'){linha.append(compararConstrucoes(i));linha.append(acessoGramatical({trecho:i.de,contexto:i.origem,usoId:i.usoId}));}
     caixa.append(linha);
   }
   dest.append(caixa);

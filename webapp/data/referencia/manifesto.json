@@ -1,0 +1,206 @@
+{
+  "versao": "rg-previa-01-10-v10",
+  "schema_version": 1,
+  "modulos": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10"
+  ],
+  "recursos": [
+    {
+      "url": "index.html",
+      "sha256": "a4ea789a9305c0b6ec43a6cebf4b0c8800de8cb7521a8789ca569b6e0debe1d1"
+    },
+    {
+      "url": "referencia.js?v=rg-01-10-v10",
+      "sha256": "8d09d2273ac5f1ec2c6a94f6515caf912ce46fc14fd35be69397ee5cec137a25"
+    },
+    {
+      "url": "referencia-dados.js?v=rg-01-10-v10",
+      "sha256": "9bd4784865adb3bfcd3d914af3a6423a9136e8b99b426c2ac73b3399f8e427b3"
+    },
+    {
+      "url": "referencia.css?v=rg-01-10-v10",
+      "sha256": "7105bc477d977fea0f98f8c956c342ba8821f764212a4fa31a39f0432f1530da"
+    },
+    {
+      "url": "referencia-sw.js",
+      "sha256": "61b4ac5de6e2bf6df85e3cab6a063a579425a69b0a182fab6361cfbfe077b027"
+    },
+    {
+      "url": "textos.js?v=rg-01-10-v10",
+      "sha256": "ddfc64cae8cda1591a0844585948b3a120bf2c8f0f81d46f172d507fcc07406b"
+    },
+    {
+      "url": "firebase-dados.js?v=cards-construcoes-21",
+      "sha256": "40d4a38bc22f82a719a58ccd9b084b5c3948d1b086063ec5d47010d8d84ecef1"
+    },
+    {
+      "url": "apostila.js?v=rg-01-10-v10",
+      "sha256": "aa25c1c2699f6a4658d730e6c6b2ce312e58d0ed34531d0291e6ac1b75ec42d5"
+    },
+    {
+      "url": "blocos.js",
+      "sha256": "abf9e0fc1a60fcfad0b6ec7c6ab4fd0e5cdc5e4ddf838d6242885530ab196742"
+    },
+    {
+      "url": "destaques-blocos.js?v=blocos-16",
+      "sha256": "ee2886139a152c83f06bd83060170d69e82bcaa54c5a7f6b8260d08d8ebe691d"
+    },
+    {
+      "url": "acessibilidade.css?v=2",
+      "sha256": "646923da0a57e361bb81fb31c375094a0a24b85e3742c01ec4a7e46be1a39853"
+    },
+    {
+      "url": "pacote-final.css?v=4",
+      "sha256": "9dc803749d88cba8c14e3adcfce322cd8e89d01caa5d76ae208360596467e7ca"
+    },
+    {
+      "url": "caixas-leitura.css?v=blocos-controles-17",
+      "sha256": "a9f445f23c697593817359d0b05e65adf550dcbd30502027410ff7f4fe3b525b"
+    },
+    {
+      "url": "cards/formato.js?v=cards-construcoes-21",
+      "sha256": "4b9380d1ff4c20a4c63ace5cecf18b7d58f2de0007bbba47dc8ea3c3af9f7fdc"
+    },
+    {
+      "url": "cards/offline.js?v=blocos-15",
+      "sha256": "713cf67c3088292348be6f3a720f65062068aa10992489d9c5678b4b9320a37f"
+    },
+    {
+      "url": "cards/texto-01.json",
+      "sha256": "e331bbeed1485582f67b28d55d69bb129a626984ccafe7c3ac4ddf4c77f646c5"
+    },
+    {
+      "url": "cards/vendor/firebase-app.js",
+      "sha256": "7ec88c9192318445c6a0f0be606a96e9702e3e15dd133698ff53cf60cdfdd3f4"
+    },
+    {
+      "url": "cards/vendor/firebase-auth.js",
+      "sha256": "c59396d0c7c77ee46b5d684232b476a5df9d58cf2875470bf5dc27c89d90d321"
+    },
+    {
+      "url": "cards/vendor/firebase-firestore.js",
+      "sha256": "120a6c806ee450cda184842116c3aecff88799c29ec368b1811bb6f205fd16da"
+    },
+    {
+      "url": "data/substantivos.json",
+      "sha256": "aeeca027636a005fbe72891842472a5bba86c8482983129065dc9eee07541b3e"
+    },
+    {
+      "url": "data/verbos.json",
+      "sha256": "68827300a6f71b9f00b58832218aec25b340a5745b2178040083d5aa1ab8e568"
+    },
+    {
+      "url": "data/adjetivos_adverbios.json",
+      "sha256": "3fc3438467a3ed979942ebe36203b4bd0b0a87487f49ee7ea709366ade9e4252"
+    },
+    {
+      "url": "data/blocos.json",
+      "sha256": "8ad9d69b5c7aa6f51d759318b920e7c85f383fbd628c8b8ee2a7d01fb0ea9c06"
+    },
+    {
+      "url": "data/DL_Preposicoes_Base_Revisada.json",
+      "sha256": "c1de5201ee235adc430ae51106b026be43669bc0b98920022e9970d0dce86209"
+    },
+    {
+      "url": "cards/index.html",
+      "sha256": "1f396acdde2f5e1ff9119fe49cb0c4c7b48d2ebf5bc9492ce08e57ed3cf5f2da"
+    },
+    {
+      "url": "cards/cards.js?v=rg-01-10-v10",
+      "sha256": "579009253affd44e4325306f075c72d01b207217cdeb242d43250df6bdd50c13"
+    },
+    {
+      "url": "cards/cards.css?v=cards-construcoes-21",
+      "sha256": "15b7df3e039d23e6639afd0278450f94d75e9a9031a1d1b9355972082780ee3f"
+    },
+    {
+      "url": "cards/dados.js?v=blocos-15",
+      "sha256": "351f37b76e9ae46f0638317b465cf93201fde907d0fd54fb39ce6c1291175ff2"
+    },
+    {
+      "url": "cards/verbos-consulta.json",
+      "sha256": "de2429dcc2d06a72667eb76355cc5d1d35c1ad3b3a9cfaf0fc85a5eb226f84e8"
+    },
+    {
+      "url": "cards/manifest.webmanifest",
+      "sha256": "1f224a9e1f7def37b9b9bf237ca9cead0ebcb358429728203b036ab7a1a47b4f"
+    },
+    {
+      "url": "manifest.webmanifest",
+      "sha256": "d7ed433b27e1823d3a079d8f5086257e6a5c9ab50c416ab36e8a01a08073c82e"
+    },
+    {
+      "url": "icons/icon-192.png",
+      "sha256": "4db21523fb3f37bcd55869b8fd16f89422270f6eec4b2563bf8b6616dc8e0ac1"
+    },
+    {
+      "url": "icons/icon-512.png",
+      "sha256": "19e42e743817b727e2bec9b9062e4584df6c75f54c2ca25ee0448fc9623f7baf"
+    },
+    {
+      "url": "icons/icon-180.png",
+      "sha256": "8dc466bf0bff2e65c8e1941eac565821dc04a64605a8a70ff792cc6967b2cb5f"
+    },
+    {
+      "url": "data/referencia/base.json",
+      "sha256": "5a6472e4bedff3f13110c3f18f1281945e620cc5793c01e2e06812ca0c81f102"
+    },
+    {
+      "url": "data/referencia/modulo-04.json",
+      "sha256": "c9604bca587b70be6ced9c4c75bf366ce515ae2f1f333fb1d3cfb43101740eee"
+    },
+    {
+      "url": "data/referencia/modulo-10.json",
+      "sha256": "556079bd806d9a561003d420584bc8a4b3900034f6bad106f90701f6e0635dfa"
+    },
+    {
+      "url": "data/referencia/vinculos.json",
+      "sha256": "1deba17f2d4ad328930bea6692249773221c61ab75042c79207071501333fabe"
+    },
+    {
+      "url": "data/referencia/sobre.json",
+      "sha256": "b3ebdb2f2cc7205b00f9cc88b9419329140cb42b354419635ae28302b6231595"
+    },
+    {
+      "url": "data/referencia/modulo-01.json",
+      "sha256": "2c1c82a67f516694cde25c490dface3799248323b5545022f822e55fbbf9e430"
+    },
+    {
+      "url": "data/referencia/modulo-02.json",
+      "sha256": "d59fae5c54b3c39167f3c300a9b0d2cb2a500d2b39e9172f1414a332d1b714a5"
+    },
+    {
+      "url": "data/referencia/modulo-03.json",
+      "sha256": "25cba71d9573effe6df378e95ac3c3a9ea3d3f09d6bab315d52e9bc5a48ae2d9"
+    },
+    {
+      "url": "data/referencia/modulo-05.json",
+      "sha256": "d12cee3183e6921d4a738ce6b21025326e6cdb20e6a5b8ac2a03292461d6bdce"
+    },
+    {
+      "url": "data/referencia/modulo-06.json",
+      "sha256": "08d1c975dd416fcca71c03b8f68bb26f55ad0f6b2d8c48923551f84deca4cffb"
+    },
+    {
+      "url": "data/referencia/modulo-07.json",
+      "sha256": "7def465bc37c560da344267bc1b14f509fd77a518ad526f4c9e50f181e8699e3"
+    },
+    {
+      "url": "data/referencia/modulo-08.json",
+      "sha256": "31622306cd3110293b9d0e2008916093c0d4ec81dfe5dd6808890cf2d85a4003"
+    },
+    {
+      "url": "data/referencia/modulo-09.json",
+      "sha256": "13aa16fb74cfcafb9816f576afb618ba67816e6a5dae89cdecb7a70e4349284a"
+    }
+  ]
+}

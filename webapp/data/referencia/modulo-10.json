@@ -1,0 +1,963 @@
+{
+  "id": "infinitivo_com_e_sem_zu",
+  "numero": "10",
+  "titulo": "Infinitivo com e sem zu",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "INF-001",
+      "titulo": "Reconhecer a construção",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "INF-011",
+        "INF-012",
+        "CO-06-03",
+        "FV-01"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "O infinitivo é uma forma verbal não conjugada. A construção em que ele aparece determina o uso com ou sem zu.",
+        "Em “Ich versuche, den Text zu verstehen. Ich muss den Text verstehen”: “Tento compreender o texto. Preciso compreender o texto”.",
+        "Verstehen continua no infinitivo nos dois exemplos. Zu não transforma um verbo conjugado em infinitivo. Aprenda o modelo inteiro, sem concluir que toda segunda ação exige zu."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O infinitivo é uma forma verbal não conjugada. A construção em que ele aparece determina o uso com ou sem zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, den Text zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento compreender o texto."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich muss den Text verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Preciso compreender o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Verstehen continua no infinitivo nos dois exemplos. Zu não transforma um verbo conjugado em infinitivo. Aprenda o modelo inteiro, sem concluir que toda segunda ação exige zu.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-002",
+      "titulo": "Tentar e planejar",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "VB-030",
+        "VB-032"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Com versuchen e planen, o complemento infinitivo usa zu no modelo apresentado.",
+        "Em “Ich versuche, Deutsch zu lernen. Ich plane, morgen zu kommen”: “Tento aprender alemão. Planejo vir amanhã”.",
+        "Os mesmos verbos podem aparecer com outros tipos de complemento: Ich plane eine Reise."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Com versuchen e planen, o complemento infinitivo usa zu no modelo apresentado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, Deutsch zu lernen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento aprender alemão."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich plane, morgen zu kommen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Planejo vir amanhã."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Os mesmos verbos podem aparecer com outros tipos de complemento: Ich plane eine Reise.",
+          "citacoes_de": [
+            "Ich plane eine Reise"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INF-003",
+      "titulo": "Decidir esquecer e começar",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "INF-012"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Reconheça o infinitivo com zu nestas construções frequentes.",
+        "Em “Wir beschließen, weiterzuarbeiten. Ich vergesse, die Tür zu schließen. Ich fange an, den Text zu lesen”: “Decidimos continuar trabalhando. Esqueço de fechar a porta. Começo a ler o texto”.",
+        "Em Ich fange an, anfangen é o verbo conjugado separável; zu pertence ao infinitivo lesen. Separabilidade e necessidade de zu são questões diferentes."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Reconheça o infinitivo com zu nestas construções frequentes.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir beschließen, weiterzuarbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Decidimos continuar trabalhando."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich vergesse, die Tür zu schließen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Esqueço de fechar a porta."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich fange an, den Text zu lesen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Começo a ler o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em Ich fange an, anfangen é o verbo conjugado separável; zu pertence ao infinitivo lesen. Separabilidade e necessidade de zu são questões diferentes.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-004",
+      "titulo": "Parar uma atividade",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Aufhören com complemento infinitivo usa zu.",
+        "Em “Sie hört auf, zu arbeiten”: “Ela para de trabalhar”.",
+        "No Perfekt: Sie hat aufgehört, zu arbeiten. A presença de hat não elimina o zu exigido por essa construção."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Aufhören com complemento infinitivo usa zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Sie hört auf, zu arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ela para de trabalhar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No Perfekt: Sie hat aufgehört, zu arbeiten. A presença de hat não elimina o zu exigido por essa construção.",
+          "citacoes_de": [
+            "Sie hat aufgehört, zu arbeiten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INF-005",
+      "titulo": "O tempo da oração",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "O infinitivo simples não é conjugado para pessoa ou tempo; o verbo conjugado e o contexto situam o acontecimento.",
+        "Em “Wir beschlossen, weiterzuarbeiten”: “Decidimos continuar trabalhando”.",
+        "Beschlossen é Präteritum nesta frase; em Wir haben beschlossen, é Partizip II. Existe infinitivo perfeito, como gearbeitet zu haben, para anterioridade relativa."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O infinitivo simples não é conjugado para pessoa ou tempo; o verbo conjugado e o contexto situam o acontecimento.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir beschlossen, weiterzuarbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Decidimos continuar trabalhando."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Beschlossen é Präteritum nesta frase; em Wir haben beschlossen, é Partizip II. Existe infinitivo perfeito, como gearbeitet zu haben, para anterioridade relativa.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-006",
+      "titulo": "Com verbos modais",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "INF-008"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Können, müssen, dürfen, sollen e wollen usam complemento infinitivo sem zu no modelo modal; möchte segue esse padrão.",
+        "Em “Heute möchte ich im Garten arbeiten. Wir müssen weiterarbeiten”: “Hoje gostaria de trabalhar no jardim. Precisamos continuar trabalhando”.",
+        "Mögen como modal também pode acompanhar infinitivo sem zu, mas para gosto por uma atividade o modelo cotidiano útil é Ich arbeite gern im Garten — Gosto de trabalhar no jardim."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Können, müssen, dürfen, sollen e wollen usam complemento infinitivo sem zu no modelo modal; möchte segue esse padrão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Heute möchte ich im Garten arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje gostaria de trabalhar no jardim."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir müssen weiterarbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Precisamos continuar trabalhando."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Mögen como modal também pode acompanhar infinitivo sem zu, mas para gosto por uma atividade o modelo cotidiano útil é",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich arbeite gern im Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Gosto de trabalhar no jardim."
+        }
+      ]
+    },
+    {
+      "id": "INF-007",
+      "titulo": "Com werden no futuro",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Werden como auxiliar de Futur I liga-se ao infinitivo sem zu.",
+        "Em “Ich werde morgen arbeiten”: “Trabalharei amanhã”.",
+        "Não generalizar para toda ocorrência de werden, sein ou haben. Werden também pode significar tornar-se ou formar passiva; são construções diferentes."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Werden como auxiliar de Futur I liga-se ao infinitivo sem zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich werde morgen arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Trabalharei amanhã."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não generalizar para toda ocorrência de werden, sein ou haben. Werden também pode significar tornar-se ou formar passiva; são construções diferentes.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-008",
+      "titulo": "Permanecer parado",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "VB-005",
+        "CO-02-03"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Em stehen bleiben, o infinitivo stehen aparece sem zu no modelo básico.",
+        "Em “Ich bleibe einen Moment stehen”: “Paro por um momento”.",
+        "Frase do Texto 01. Em Ich höre die Vögel und bleibe einen Moment stehen, und coordena as partes, mas não provoca a forma infinitiva; stehen vem da construção com bleiben."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Em stehen bleiben, o infinitivo stehen aparece sem zu no modelo básico.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe einen Moment stehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Paro por um momento."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Frase do Texto 01. Em Ich höre die Vögel und bleibe einen Moment stehen, und coordena as partes, mas não provoca a forma infinitiva; stehen vem da construção com bleiben.",
+          "citacoes_de": [
+            "Ich höre die Vögel und bleibe einen Moment stehen",
+            "Ich höre die Vögel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INF-009",
+      "titulo": "Percepção e lassen",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Sehen e hören podem introduzir uma pessoa ou coisa e uma ação percebida no infinitivo sem zu; lassen também tem modelos sem zu.",
+        "Em “Ich sehe den Vogel fliegen. Ich höre die Vögel singen. Ich lasse ihn arbeiten”: “Vejo o pássaro voar. Ouço os pássaros cantar. Deixo que ele trabalhe”.",
+        "Nessas construções, den Vogel, die Vögel e ihn se ligam ao verbo anterior e são entendidos como participantes da ação no infinitivo. Não ampliar o modelo a todo verbo de percepção sem conferir sua construção."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sehen e hören podem introduzir uma pessoa ou coisa e uma ação percebida no infinitivo sem zu; lassen também tem modelos sem zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich sehe den Vogel fliegen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vejo o pássaro voar."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich höre die Vögel singen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ouço os pássaros cantar."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lasse ihn arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Deixo que ele trabalhe."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nessas construções, den Vogel, die Vögel e ihn se ligam ao verbo anterior e são entendidos como participantes da ação no infinitivo. Não ampliar o modelo a todo verbo de percepção sem conferir sua construção.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-010",
+      "titulo": "Com helfen",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "VB-035"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Helfen admite construções com infinitivo com ou sem zu; não deve entrar numa lista absoluta de verbos que proíbem zu.",
+        "Em “Ich helfe dir, den Text zu verstehen”: “Ajudo você a compreender o texto”.",
+        "Modelo curto sem zu: Ich helfe dir tragen — Ajudo você a carregar. Em grupos mais extensos, o modelo com zu é especialmente útil. Aprenda a frase, sem converter a extensão em proibição gramatical."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Helfen admite construções com infinitivo com ou sem zu; não deve entrar numa lista absoluta de verbos que proíbem zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich helfe dir, den Text zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ajudo você a compreender o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Modelo curto sem zu:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich helfe dir tragen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ajudo você a carregar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em grupos mais extensos, o modelo com zu é especialmente útil. Aprenda a frase, sem converter a extensão em proibição gramatical.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-011",
+      "titulo": "Verbo simples ou inseparável",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Quando a construção pede zu, ele vem separado antes de um infinitivo simples ou com prefixo inseparável.",
+        "Em “Ich versuche, zu lernen. Ich versuche, den Text zu verstehen”: “Tento aprender. Tento compreender o texto”.",
+        "Lernen e planen são verbos simples; verstehen contém prefixo inseparável. Um verbo sem partícula separável não é necessariamente um verbo com prefixo inseparável."
+      ],
+      "termos_busca": [
+        "zu verstehen",
+        "zu lernen"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Quando a construção pede zu, ele vem separado antes de um infinitivo simples ou com prefixo inseparável.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, zu lernen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento aprender."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, den Text zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento compreender o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Lernen e planen são verbos simples; verstehen contém prefixo inseparável. Um verbo sem partícula separável não é necessariamente um verbo com prefixo inseparável.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-012",
+      "titulo": "Verbo separável",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "INF-011"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Se o infinitivo tiver uma partícula separável, o zu entra entre essa partícula e a base verbal, formando uma palavra.",
+        "Em “Ich versuche, weiterzuarbeiten. Ich plane, früh aufzustehen”: “Tento continuar trabalhando. Planejo levantar cedo”.",
+        "Weiterarbeiten → weiterzuarbeiten; aufstehen → aufzustehen; aufräumen → aufzuräumen. Compare Wir müssen weiterarbeiten, sem zu, e Ich versuche, weiterzuarbeiten, com zu."
+      ],
+      "termos_busca": [
+        "weiterzuarbeiten",
+        "aufzustehen",
+        "aufzuräumen"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Se o infinitivo tiver uma partícula separável, o zu entra entre essa partícula e a base verbal, formando uma palavra.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, weiterzuarbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento continuar trabalhando."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich plane, früh aufzustehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Planejo levantar cedo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Weiterarbeiten → weiterzuarbeiten; aufstehen → aufzustehen; aufräumen → aufzuräumen. Compare Wir müssen weiterarbeiten, sem zu, e Ich versuche, weiterzuarbeiten, com zu.",
+          "citacoes_de": [
+            "Ich versuche, weiterzuarbeiten",
+            "Wir müssen weiterarbeiten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INF-013",
+      "titulo": "Com adjetivo",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Algumas construções com adjetivos admitem ou pedem um grupo infinitivo com zu.",
+        "Em “Es ist wichtig, den Text zu verstehen”: “É importante compreender o texto”.",
+        "Não há um verbo como versuchen pedindo o complemento: a construção inclui wichtig. Outros modelos úteis: Es ist schwierig, ..; Es ist möglich, .. . Não estender automaticamente a todo adjetivo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Algumas construções com adjetivos admitem ou pedem um grupo infinitivo com zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es ist wichtig, den Text zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "É importante compreender o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não há um verbo como versuchen pedindo o complemento: a construção inclui wichtig. Outros modelos úteis: Es ist schwierig, ..; Es ist möglich, .. . Não estender automaticamente a todo adjetivo.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-014",
+      "titulo": "Com substantivo",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Substantivos em certas construções podem introduzir um infinitivo com zu.",
+        "Em “Ich habe Lust, im Garten zu arbeiten. Ich habe Zeit, den Text zu lesen”: “Tenho vontade de trabalhar no jardim. Tenho tempo para ler o texto”.",
+        "A construção Lust haben ou Zeit haben permite o grupo infinitivo. Não concluir que a presença de haben exclui zu."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Substantivos em certas construções podem introduzir um infinitivo com zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe Lust, im Garten zu arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tenho vontade de trabalhar no jardim."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe Zeit, den Text zu lesen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tenho tempo para ler o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A construção Lust haben ou Zeit haben permite o grupo infinitivo. Não concluir que a presença de haben exclui zu.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-015",
+      "titulo": "Haben e sein com zu",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Há construções próprias com haben ou sein mais zu e infinitivo.",
+        "Em “Ich habe viel zu tun. Der Text ist leicht zu verstehen”: “Tenho muito a fazer. O texto é fácil de compreender”.",
+        "Haben zu pode expressar necessidade ou obrigação: Ich habe die Regeln zu beachten — Tenho de observar as regras. Sein zu pode expressar possibilidade ou necessidade conforme o contexto. Esses modelos não são o Perfekt."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Há construções próprias com haben ou sein mais zu e infinitivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe viel zu tun."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tenho muito a fazer."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Text ist leicht zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O texto é fácil de compreender."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Haben zu pode expressar necessidade ou obrigação:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe die Regeln zu beachten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tenho de observar as regras."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sein zu pode expressar possibilidade ou necessidade conforme o contexto. Esses modelos não são o Perfekt.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-016",
+      "titulo": "Finalidade com um zu",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "PREP-047",
+        "RI-002",
+        "RI-003"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Um .. zu apresenta uma finalidade. O sujeito entendido no infinitivo normalmente coincide com o da oração principal.",
+        "Em “Ich lese den Text noch einmal, um ihn besser zu verstehen”: “Leio o texto mais uma vez para compreendê-lo melhor”.",
+        "Se a finalidade envolve outro sujeito, use como modelo damit: Ich erkläre den Satz, damit du ihn verstehst — Explico a frase para que você a compreenda. Não escolher apenas pela tradução para."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Um .. zu apresenta uma finalidade. O sujeito entendido no infinitivo normalmente coincide com o da oração principal.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lese den Text noch einmal, um ihn besser zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Leio o texto mais uma vez para compreendê-lo melhor."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Se a finalidade envolve outro sujeito, use como modelo damit:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich erkläre den Satz, damit du ihn verstehst."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Explico a frase para que você a compreenda."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não escolher apenas pela tradução para.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-017",
+      "titulo": "Ohne e anstatt com zu",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "RI-014",
+        "RI-015"
+      ],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Ohne .. zu expressa uma ação que não ocorre junto da outra; anstatt .. zu apresenta uma alternativa não realizada.",
+        "Em “Ich gehe, ohne etwas zu sagen. Anstatt fernzusehen, lese ich”: “Vou embora sem dizer nada. Em vez de ver televisão, leio”.",
+        "Fernsehen → fernzusehen. Nestes exemplos o sujeito entendido é o da principal. Sem isso, pode ser necessária outra construção, como ohne dass."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ohne .. zu expressa uma ação que não ocorre junto da outra; anstatt .. zu apresenta uma alternativa não realizada.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe, ohne etwas zu sagen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou embora sem dizer nada."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Anstatt fernzusehen, lese ich."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Em vez de ver televisão, leio."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Fernsehen → fernzusehen. Nestes exemplos o sujeito entendido é o da principal. Sem isso, pode ser necessária outra construção, como ohne dass.",
+          "citacoes_de": []
+        }
+      ]
+    },
+    {
+      "id": "INF-018",
+      "titulo": "Vírgula para separar as construções",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "Nestes exemplos, a vírgula torna visível o limite do grupo infinitivo.",
+        "Em “Ich hoffe, dich morgen zu sehen”: “Espero ver você amanhã”.",
+        "A norma atual exige vírgula para orações infinitivas ampliadas com zu. Infinitivos não ampliados admitem escolhas em certos contextos, e construções integradas num predicado complexo têm tratamento próprio. Por exemplo, em Er scheint zu schlafen, não separar scheint e zu schlafen com vírgula. Não aplicar inserir vírgula antes de todo zu."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nestes exemplos, a vírgula torna visível o limite do grupo infinitivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich hoffe, dich morgen zu sehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Espero ver você amanhã."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A norma atual exige vírgula para orações infinitivas ampliadas com zu. Infinitivos não ampliados admitem escolhas em certos contextos, e construções integradas num predicado complexo têm tratamento próprio. Por exemplo, em Er scheint zu schlafen, não separar scheint e zu schlafen com vírgula. Não aplicar inserir vírgula antes de todo zu.",
+          "citacoes_de": [
+            "Er scheint zu schlafen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INF-019",
+      "titulo": "O sujeito entendido",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [],
+      "tipo_consulta": "uso",
+      "explicacao": [
+        "O participante da ação no infinitivo pode depender do verbo e de seus complementos.",
+        "Em “Ich bitte dich, den Text zu lesen”: “Peço que você leia o texto”.",
+        "Dich é entendido como quem lê; o sujeito ich é quem pede. Contraste com Ich versuche, den Text zu lesen, em que eu tento e eu leio. Portanto, nem todo grupo infinitivo tem obrigatoriamente o mesmo sujeito da oração principal."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O participante da ação no infinitivo pode depender do verbo e de seus complementos.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bitte dich, den Text zu lesen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Peço que você leia o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Dich é entendido como quem lê; o sujeito ich é quem pede. Contraste com Ich versuche, den Text zu lesen, em que eu tento e eu leio. Portanto, nem todo grupo infinitivo tem obrigatoriamente o mesmo sujeito da oração principal.",
+          "citacoes_de": [
+            "Ich versuche, den Text zu lesen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INF-020",
+      "titulo": "Três funções de zu",
+      "palavras_chave": [
+        "infinitivo",
+        "zu"
+      ],
+      "relacionados": [
+        "PREP-020",
+        "PREP-045",
+        "PREP-046"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Compare as funções de zu",
+          "colunas": [
+            "Construção",
+            "Função",
+            "Caso"
+          ],
+          "linhas": [
+            [
+              "zum See",
+              "destino: zu dem See",
+              "dativo"
+            ],
+            [
+              "zu klein",
+              "excesso: pequeno demais",
+              "não se aplica"
+            ],
+            [
+              "zu verstehen",
+              "marca de infinitivo",
+              "não se aplica"
+            ],
+            [
+              "weiterzuarbeiten",
+              "zu dentro de verbo separável",
+              "não se aplica"
+            ]
+          ]
+        }
+      ],
+      "tipo_consulta": "comparacao",
+      "explicacao": [
+        "Zu pode exercer funções diferentes. Observe a construção:",
+        "Ich gehe zum See.\nVou ao lago.\nAqui, zu indica destino e pede dativo. Zum = zu dem.",
+        "Der Text ist zu schwer.\nO texto é difícil demais.\nAqui, zu indica excesso: “demais”.",
+        "Ich versuche, den Text zu lesen.\nTento ler o texto.\nAqui, zu acompanha o infinitivo lesen na construção com versuchen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Zu pode exercer funções diferentes. Observe a construção:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui, zu indica destino e pede dativo. Zum = zu dem.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Text ist zu schwer."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O texto é difícil demais."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui, zu indica excesso: “demais”.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, den Text zu lesen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento ler o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui, zu acompanha o infinitivo lesen na construção com versuchen.",
+          "citacoes_de": []
+        }
+      ]
+    }
+  ]
+}

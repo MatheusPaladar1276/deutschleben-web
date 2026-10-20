@@ -1,15 +1,21 @@
+importScripts('./referencia-sw.js');
 // Service worker do Deutschleben — instalação (PWA) e cache.
 // Estratégia: rede-primeiro para navegação/JSON (conteúdo sempre atual),
 // cache-primeiro para estáticos (ícones). Suba a versão ao publicar mudanças.
-const CACHE = "deutschleben-v21-blocos-controles-17";
+const CACHE = "deutschleben-v34-rg-01-10-v10";
+const ACERVO_CONSTRUCOES = "/data/DL_Preposicoes_Base_Revisada.json";
 const ESTATICOS = [
+  "./referencia.js?v=rg-01-10-v10", "./referencia-dados.js?v=rg-01-10-v10", "./referencia.css?v=rg-01-10-v10", "./referencia-sw.js",
+  "./textos.js?v=rg-01-10-v10",
   "./index.html",
-  "./apostila.js?v=blocos-16",
+  "./acessibilidade.css?v=2",
+  "./pacote-final.css?v=4",
+  "./apostila.js?v=rg-01-10-v10",
   "./blocos.js",
   "./destaques-blocos.js?v=blocos-16",
   "./caixas-leitura.css?v=blocos-controles-17",
-  "./firebase-dados.js?v=blocos-15",
-  "./cards/formato.js?v=blocos-15",
+  "./firebase-dados.js?v=cards-construcoes-21",
+  "./cards/formato.js?v=cards-construcoes-21",
   "./cards/offline.js?v=blocos-15",
   "./cards/texto-01.json",
   "./cards/vendor/firebase-app.js",
@@ -27,14 +33,19 @@ const ESTATICOS = [
 
 self.addEventListener("install", (evento) => {
   evento.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(ESTATICOS)).then(() => self.skipWaiting())
+    caches.open(CACHE).then(async (c) => {
+      await c.addAll(ESTATICOS);
+      // Preserva somente um acervo público já consultado; não o baixa na instalação.
+      const anterior = await caches.match(ACERVO_CONSTRUCOES);
+      if (anterior?.ok) await c.put(ACERVO_CONSTRUCOES, anterior);
+    }).then(() => self.skipWaiting())
   );
 });
 
 self.addEventListener("activate", (evento) => {
   evento.waitUntil(
     caches.keys()
-      .then((chaves) => Promise.all(chaves.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then((chaves) => Promise.all(chaves.filter((k) => k !== CACHE && k.startsWith("deutschleben-")).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -54,12 +65,18 @@ self.addEventListener("fetch", (evento) => {
   if (ehNavegacaoOuDados(req)) {
     evento.respondWith(
       fetch(req)
-        .then((rede) => {
-          const copia = rede.clone();
-          caches.open(CACHE).then((c) => c.put(req, copia)).catch(() => {});
+        .then(async (rede) => {
+          if (rede.ok) {
+            const copia = rede.clone();
+            const guardar = caches.open(CACHE).then((c) => c.put(req, copia));
+            if (url.pathname === ACERVO_CONSTRUCOES) await guardar.catch(() => {});
+            else guardar.catch(() => {});
+          }
           return rede;
         })
-        .catch(() => caches.match(req).then((r) => r || caches.match("./index.html")))
+        .catch(async () => (await rgRecursoOffline(req)) || caches.match(req).then((r) => r || (url.pathname === ACERVO_CONSTRUCOES || url.pathname.includes("/data/referencia/")
+          ? new Response('{"erro":"Acervo ainda não armazenado."}', {status:503,headers:{'Content-Type':'application/json; charset=utf-8'}})
+          : caches.match("./index.html"))))
     );
     return;
   }
@@ -67,7 +84,7 @@ self.addEventListener("fetch", (evento) => {
   evento.respondWith(
     caches.match(req).then((r) =>
       r ||
-      fetch(req).then((rede) => {
+      fetch(req).catch(async () => (await rgRecursoOffline(req)) || Response.error()).then((rede) => {
         const copia = rede.clone();
         caches.open(CACHE).then((c) => c.put(req, copia)).catch(() => {});
         return rede;

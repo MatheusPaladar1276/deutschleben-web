@@ -21,8 +21,93 @@
     const origens = new WeakMap();
     let textosListados = [], listaErro = false, listaLendo = false, exclusao = null;
     let resumosSalvos = [], memoriaGeracao = 0, memoriaPronta = false;
-    let uid = null, ativo = null, selecionado = null, geracao = 0, listaGeracao = 0;
+    let uid = null, ativo = null, selecionado = null, intervaloSelecionado = null, geracao = 0, listaGeracao = 0;
+    // Projeção em memória da seleção já capturada pela Ajuda rápida. Não persiste dados.
+    window.DL_TEXTO_SELECAO = { obter() {
+        if (!ativo || usuario() !== ativo.uid || estudo.hidden || !selecionado || !intervaloSelecionado?.startContainer.isConnected || intervaloSelecionado.toString().trim() !== selecionado.trecho) return null;
+        return {...selecionado, intervalo:intervaloSelecionado.cloneRange()};
+    }};
     let sessao = 0, salvandoNovo = false, novoId = null, focoAnterior = null, tentar = null, copiaGeracao = 0;
+    let acervoConstrucoes = null, consultaConstrucoes = 0;
+    const assinaturaSelecao = s => s ? JSON.stringify([s.trecho, s.origem, s.contexto]) : '';
+    const normalizarPalavra = s => s.normalize('NFC').toLocaleLowerCase('de');
+    const palavrasInteiras = s => (s.match(/[\p{L}\p{M}\p{N}]+/gu) || []).map(normalizarPalavra);
+    function limparConstrucoes() {
+        consultaConstrucoes++;
+        $('consulta-construcoes').hidden = true;
+        for (const id of ['construcoes-trecho','construcoes-contexto','construcoes-expansoes','construcoes-status','construcoes-resultados']) $(id).replaceChildren();
+    }
+    function carregarConstrucoes() {
+        if (!acervoConstrucoes) acervoConstrucoes = fetch('./data/DL_Preposicoes_Base_Revisada.json').then(async r => {
+            if (!r.ok) throw Error('Acervo indisponível.');
+            const d = await r.json();
+            if (!Array.isArray(d.registros) || !d.contracoes || typeof d.contracoes !== 'object' || !d.casos ||
+                !d.registros.every(i => ['id','palavra','tipo','uso','exemplo_de','traducao_pt'].every(k => typeof i[k] === 'string') && (i.caso === null || typeof i.caso === 'string')) ||
+                !Object.values(d.contracoes).every(v => typeof v === 'string')) throw Error('Acervo inválido.');
+            return d;
+        }).catch(e => { acervoConstrucoes = null; throw e; });
+        return acervoConstrucoes;
+    }
+    function mostrarConstrucoes(d, selecao) {
+        const termos = new Set(palavrasInteiras(selecao.trecho)), expansoes = [];
+        for (const termo of [...termos]) if (Object.hasOwn(d.contracoes, termo)) {
+            const expansao = d.contracoes[termo];
+            expansoes.push(termo + ' → ' + expansao);
+            // Expansão serve só à consulta; original e seleção permanecem intactos.
+            const base = palavrasInteiras(expansao)[0]; if (base) termos.add(base);
+        }
+        $('construcoes-expansoes').textContent = expansoes.length ? 'Expansões para consulta: ' + expansoes.join('; ') + '.' : '';
+        const grupos = new Map();
+        for (const registro of d.registros) {
+            if (!termos.has(normalizarPalavra(registro.palavra))) continue;
+            const palavra = normalizarPalavra(registro.palavra);
+            if (!grupos.has(palavra)) grupos.set(palavra, new Map());
+            const funcoes = grupos.get(palavra);
+            if (!funcoes.has(registro.tipo)) funcoes.set(registro.tipo, []);
+            funcoes.get(registro.tipo).push(registro);
+        }
+        const tipos = {preposicao:'Preposição',construcao_com_regencia:'Construção com regência',particula_verbal:'Partícula verbal',predicativo:'Predicativo',adverbio_de_grau:'Advérbio de grau',marca_de_infinitivo:'Marca de infinitivo',conjuncao:'Conjunção'};
+        const resultado = $('construcoes-resultados'); resultado.replaceChildren();
+        if (window.DL_REFERENCIA) resultado.append(window.DL_REFERENCIA.criarAcesso({trecho:selecao.trecho, contexto:selecao.contexto}));
+        let total = 0;
+        const p = (dest, texto, lang) => { const e = document.createElement('p'); e.textContent = texto; if (lang) e.lang = lang; dest.append(e); return e; };
+        for (const [palavra, funcoes] of grupos) {
+            const grupo = document.createElement('section'); grupo.className = 'construcoes-palavra';
+            const h = document.createElement('h4'); h.lang = 'de'; h.textContent = palavra; grupo.append(h);
+            for (const registros of funcoes.values()) {
+                const funcao = document.createElement('div'); funcao.className = 'construcao-funcao';
+                for (const i of registros) {
+                    total++;
+                    const candidato = document.createElement('article'); candidato.className = 'construcao-candidato';
+                    const uso = document.createElement('strong'); uso.textContent = i.uso; candidato.append(uso);
+                    p(candidato, i.exemplo_de, 'de'); p(candidato, i.traducao_pt, 'pt-BR');
+                    const detalhes = document.createElement('details'), sum = document.createElement('summary'); sum.textContent = 'Tipo e caso'; detalhes.append(sum);
+                    p(detalhes, 'Tipo: ' + (tipos[i.tipo] || i.tipo));
+                    p(detalhes, 'Caso: ' + (i.caso === null ? 'Não se aplica a esta função.' : (Object.hasOwn(d.casos, i.caso) ? d.casos[i.caso] : i.caso)));
+                    candidato.append(detalhes);
+                    if (window.DL_REFERENCIA) candidato.append(window.DL_REFERENCIA.criarAcesso({trecho:selecao.trecho, contexto:selecao.contexto, usoId:i.id, rotulo:'Consultar explicação gramatical'}));
+                    funcao.append(candidato);
+                }
+                grupo.append(funcao);
+            }
+            resultado.append(grupo);
+        }
+        $('construcoes-status').textContent = total ? total + (total === 1 ? ' candidato.' : ' candidatos.') : 'Nenhum uso cadastrado para as palavras deste trecho.';
+    }
+    $('consultar-construcoes').addEventListener('click', async () => {
+        if (!ativo || usuario() !== ativo.uid) return;
+        if (!selecionado) { $('consulta-construcoes').hidden = false; $('construcoes-status').textContent = 'Selecione uma palavra ou trecho do título ou do corpo do texto.'; return; }
+        const selecao = {...selecionado}, assinatura = assinaturaSelecao(selecao), texto = ativo, epoca = sessao, rodada = ++consultaConstrucoes;
+        $('consulta-construcoes').hidden = false;
+        $('construcoes-trecho').textContent = (selecao.origem === 'titulo' ? 'Trecho do título: ' : 'Trecho do texto: ') + selecao.trecho;
+        $('construcoes-contexto').textContent = (selecao.origem === 'titulo' ? 'Título de contexto: ' : 'Frase de contexto: ') + selecao.contexto;
+        $('construcoes-expansoes').textContent = ''; $('construcoes-resultados').replaceChildren(); $('construcoes-status').textContent = 'Consultando o acervo…';
+        // Torna a abertura perceptível mesmo com o botão no fim da tela, sem mudar o foco ou a seleção.
+        $('construcoes-titulo').scrollIntoView({block: 'start', behavior: 'instant'});
+        const vigente = () => rodada === consultaConstrucoes && epoca === sessao && atual(texto) && assinatura === assinaturaSelecao(selecionado);
+        try { const d = await carregarConstrucoes(); if (vigente()) mostrarConstrucoes(d, selecao); }
+        catch { if (vigente()) $('construcoes-status').textContent = navigator.onLine ? 'Não foi possível carregar o acervo. Conecte-se e tente consultar novamente.' : 'O acervo ainda não está disponível neste aparelho. Conecte-se e consulte uma vez para armazená-lo.'; }
+    });
     function usuario() { return window.DL_AUTH?.usuario?.uid || null; }
     function chave(texto) { return JSON.stringify([texto.uid, texto.id]); }
     function memoria(texto = ativo) {
@@ -253,7 +338,8 @@
     }
     function limparSelecao() {
         copiaGeracao++; // Descarta respostas pendentes da consulta que acaba de ser limpa.
-        selecionado = null;
+        selecionado = null; intervaloSelecionado = null;
+        limparConstrucoes(); $("consultar-construcoes").disabled = true;
         $("selecao-texto").textContent = "";
         $("selecao-aviso").textContent = "Selecione uma palavra ou trecho do original.";
         $("consultar-leo").disabled = true;
@@ -482,8 +568,11 @@
         const esquerda = Math.max(prefixo.lastIndexOf("."), prefixo.lastIndexOf("!"), prefixo.lastIndexOf("?"), prefixo.lastIndexOf("\n")) + 1;
         const proximo = texto.slice(fim).search(/[.!?\n]/);
         const direita = proximo < 0 ? texto.length : fim + proximo + 1;
-        selecionado = { trecho, origem: area === titulo ? "titulo" : "corpo",
+        const proxima = { trecho, origem: area === titulo ? "titulo" : "corpo",
             contexto: area === titulo ? ativo.titulo : texto.slice(esquerda, direita).trim() };
+        if (assinaturaSelecao(proxima) !== assinaturaSelecao(selecionado)) limparConstrucoes();
+        selecionado = proxima; intervaloSelecionado = r.cloneRange();
+        $('consultar-construcoes').disabled = false;
         $("selecao-texto").textContent = trecho;
         $("selecao-aviso").textContent = "Trecho selecionado:";
         $("consultar-leo").disabled = false;
@@ -493,8 +582,9 @@
     for (const area of [titulo, original]) {
         area.addEventListener("mouseup", capturarSelecao);
         area.addEventListener("keyup", capturarSelecao);
+        area.addEventListener("touchend", () => requestAnimationFrame(capturarSelecao), {passive:true});
     }
-    for (const id of ["consultar-leo", "consultar-sda"]) {
+    for (const id of ["consultar-leo", "consultar-sda", "consultar-construcoes"]) {
         $(id).addEventListener("mousedown", ev => {
             capturarSelecao();
             // Evita que o foco do botão desfaça a seleção antes da consulta.

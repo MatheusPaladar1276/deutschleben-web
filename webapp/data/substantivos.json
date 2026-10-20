@@ -627,7 +627,8 @@
     "artigo": "die",
     "plural": "PLURALIA_TANTUM",
     "significado": "Pais",
-    "origem": "Acervo de Origem — substantivos"
+    "origem": "Acervo de Origem — substantivos",
+    "nota_uso": "Forma usada no plural: os pais. Para um dos pais, der Elternteil; é outra palavra."
   },
   {
     "palavra": "Entscheidung",
@@ -1341,7 +1342,8 @@
     "artigo": "der",
     "plural": "—",
     "significado": "Café",
-    "origem": "Acervo de Origem — substantivos"
+    "origem": "Acervo de Origem — substantivos",
+    "nota_uso": "Como bebida, geralmente sem plural. Die Kaffees pode indicar porções ou variedades de café."
   },
   {
     "palavra": "Kaiser",
@@ -1740,7 +1742,8 @@
     "artigo": "die",
     "plural": "PLURALIA_TANTUM",
     "significado": "Gente/pessoas",
-    "origem": "Acervo de Origem — substantivos"
+    "origem": "Acervo de Origem — substantivos",
+    "nota_uso": "Forma usada no plural: as pessoas. Sem singular correspondente; não se forma um singular por flexão de Leute."
   },
   {
     "palavra": "Licht",
@@ -3042,7 +3045,8 @@
     "artigo": "das",
     "plural": "die Wasser",
     "significado": "Água",
-    "origem": "Acervo de Origem — substantivos"
+    "origem": "Acervo de Origem — substantivos",
+    "nota_uso": "No uso cotidiano de água, geralmente sem plural. Em usos especiais: die Wasser (águas ou massas de água) e die Wässer (tipos de água)."
   },
   {
     "palavra": "Wasserglas",

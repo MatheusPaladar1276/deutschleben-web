@@ -1,0 +1,4810 @@
+{
+  "id": "verbos_construcoes_formacao_tempos",
+  "numero": "02",
+  "titulo": "Verbos, construções e tempos",
+  "versao": "1.1",
+  "consultas": [
+    {
+      "id": "FV-01",
+      "titulo": "Infinitivo e verbo conjugado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "O infinitivo é a forma de entrada do verbo; a forma conjugada se ajusta ao sujeito e ao tempo ou modo.",
+        "lernen → ich lerne; gehen → ich gehe",
+        "aprender → eu aprendo; ir → eu vou",
+        "A maioria dos infinitivos termina em -en; outros em -n, como sammeln. As formas não devem ser produzidas por uma regra única sem considerar irregularidades."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O infinitivo é a forma de entrada do verbo; a forma conjugada se ajusta ao sujeito e ao tempo ou modo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "lernen → ich lerne; gehen → ich gehe"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "aprender → eu aprendo; ir → eu vou"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A maioria dos infinitivos termina em -en; outros em -n, como sammeln. As formas não devem ser produzidas por uma regra única sem considerar irregularidades.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-001"
+      ]
+    },
+    {
+      "id": "FV-02",
+      "titulo": "Regulares fortes e mistos",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Use os modelos para reconhecer formas; guarde as formas principais dos verbos que reencontra.",
+        "lernen → lernte → gelernt; schreiben → schrieb → geschrieben; denken → dachte → gedacht",
+        "aprender; escrever; pensar",
+        "Regulares ou fracos seguem normalmente -te no Präteritum e -(e)t no Partizip II. Fortes geralmente alteram a vogal e têm particípio em -en. Mistos combinam alteração de radical com terminações fracas. Não classificar todo particípio em -t como regular."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Use os modelos para reconhecer formas; guarde as formas principais dos verbos que reencontra.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "lernen → lernte → gelernt; schreiben → schrieb → geschrieben; denken → dachte → gedacht"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "aprender; escrever; pensar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Regulares ou fracos seguem normalmente -te no Präteritum e -(e)t no Partizip II. Fortes geralmente alteram a vogal e têm particípio em -en. Mistos combinam alteração de radical com terminações fracas. Não classificar todo particípio em -t como regular.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "FV-03",
+      "titulo": "Partizip II dos regulares",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "O modelo frequente é ge- + radical + -(e)t.",
+        "lernen → gelernt; arbeiten → gearbeitet",
+        "aprender; trabalhar",
+        "A vogal de apoio aparece em formas como gearbeitet e gewartet. Esta fórmula não cobre prefixos inseparáveis nem verbos em -ieren."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O modelo frequente é ge- + radical + -(e)t.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "lernen → gelernt; arbeiten → gearbeitet"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "aprender; trabalhar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A vogal de apoio aparece em formas como gearbeitet e gewartet. Esta fórmula não cobre prefixos inseparáveis nem verbos em -ieren.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "FV-04",
+      "titulo": "Prefixos no particípio",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Nos separáveis, ge- costuma entrar entre a partícula e a base; inseparáveis não recebem esse ge- adicional.",
+        "aufstehen → aufgestanden; besuchen → besucht",
+        "levantar-se; visitar",
+        "Prefixos inseparáveis frequentes: be-, emp-, ent-, er-, ge-, miss-, ver-, zer-. Em partículas de comportamento variável, como um- e über-, sentido e acento precisam ser verificados. Não inferir separabilidade apenas pelas letras iniciais."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nos separáveis, ge- costuma entrar entre a partícula e a base; inseparáveis não recebem esse ge- adicional.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "aufstehen → aufgestanden; besuchen → besucht"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "levantar-se; visitar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Prefixos inseparáveis frequentes: be-, emp-, ent-, er-, ge-, miss-, ver-, zer-. Em partículas de comportamento variável, como um- e über-, sentido e acento precisam ser verificados. Não inferir separabilidade apenas pelas letras iniciais.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "FV-05",
+      "titulo": "Verbos em ieren",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Nos verbos usuais em -ieren com essa terminação acentuada, o particípio não recebe ge-.",
+        "studieren → studiert; telefonieren → telefoniert",
+        "estudar; telefonar",
+        "Não aplicar mecanicamente a qualquer palavra que termine nas mesmas letras: verlieren → verloren. Verbos como ausprobieren têm partícula separável, mas não ganham ge- na base em -ieren: ausprobiert."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nos verbos usuais em -ieren com essa terminação acentuada, o particípio não recebe ge-.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "studieren → studiert; telefonieren → telefoniert"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "estudar; telefonar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não aplicar mecanicamente a qualquer palavra que termine nas mesmas letras: verlieren → verloren. Verbos como ausprobieren têm partícula separável, mas não ganham ge- na base em -ieren: ausprobiert.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "FV-06",
+      "titulo": "Haben ou sein",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Aprenda o auxiliar junto com o verbo e com seu sentido.",
+        "Ich habe gelesen. / Ich bin zum See gegangen.",
+        "Li. / Fui ao lago.",
+        "Haben é usado em muitas construções; sein aparece frequentemente em deslocamento intransitivo ou mudança de estado e com sein e bleiben. Movimento físico sozinho não basta: Ich habe getanzt. Há variação por sentido e região."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Aprenda o auxiliar junto com o verbo e com seu sentido.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe gelesen. / Ich bin zum See gegangen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Li. / Fui ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Haben é usado em muitas construções; sein aparece frequentemente em deslocamento intransitivo ou mudança de estado e com sein e bleiben. Movimento físico sozinho não basta: Ich habe getanzt. Há variação por sentido e região.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-01",
+      "titulo": "Presente também pode falar do futuro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "O Präsens pode indicar ação atual, hábito ou futuro reconhecível pelo contexto.",
+        "Morgen arbeite ich im Garten.",
+        "Amanhã trabalho no jardim.",
+        "A palavra morgen localiza o acontecimento no futuro; a forma verbal continua no Präsens. Não é necessário empregar werden em todo futuro."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O Präsens pode indicar ação atual, hábito ou futuro reconhecível pelo contexto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Morgen arbeite ich im Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Amanhã trabalho no jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A palavra morgen localiza o acontecimento no futuro; a forma verbal continua no Präsens. Não é necessário empregar werden em todo futuro.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-02",
+      "titulo": "Perfekt",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "No modelo básico, haben ou sein conjugado combina-se com Partizip II.",
+        "Ich habe den Text gelesen. / Ich bin zum See gegangen.",
+        "Li o texto. / Fui ao lago.",
+        "Perfekt é frequente na conversa, mas também aparece na escrita. O nome passado composto não significa que a tradução portuguesa deva ser tenho lido. A tradução depende do contexto."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "No modelo básico, haben ou sein conjugado combina-se com Partizip II.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe den Text gelesen. / Ich bin zum See gegangen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Li o texto. / Fui ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Perfekt é frequente na conversa, mas também aparece na escrita. O nome passado composto não significa que a tradução portuguesa deva ser tenho lido. A tradução depende do contexto.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-03",
+      "titulo": "Präteritum",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Forma de passado muito frequente em narrativas; war, hatte e formas modais também são comuns na conversa.",
+        "Ich war müde. / Der Vogel saß auf einem Ast.",
+        "Eu estava cansado. / O pássaro estava num galho.",
+        "Präteritum não equivale sempre ao imperfeito português. Ich las pode significar li ou lia. Não proibir Perfekt com sein e haben: Ich bin schon dort gewesen é possível e natural em muitos contextos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Forma de passado muito frequente em narrativas; war, hatte e formas modais também são comuns na conversa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich war müde. / Der Vogel saß auf einem Ast."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Eu estava cansado. / O pássaro estava num galho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Präteritum não equivale sempre ao imperfeito português. Ich las pode significar li ou lia. Não proibir Perfekt com sein e haben: Ich bin schon dort gewesen é possível e natural em muitos contextos.",
+          "citacoes_de": [
+            "Ich bin schon dort gewesen"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-04",
+      "titulo": "Escolher entre os passados",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Contexto, gênero textual, região e verbo influenciam a escolha.",
+        "Gestern las ich ein Buch. / Gestern habe ich ein Buch gelesen.",
+        "Ontem li um livro, nas duas formas.",
+        "Präteritum é frequente na narrativa; Perfekt é frequente na fala. Gestern e früher não obrigam um tempo. Verbos fracos não ficam restritos ao Perfekt, nem fortes ao Präteritum."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Contexto, gênero textual, região e verbo influenciam a escolha.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Gestern las ich ein Buch. / Gestern habe ich ein Buch gelesen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ontem li um livro, nas duas formas."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Präteritum é frequente na narrativa; Perfekt é frequente na fala. Gestern e früher não obrigam um tempo. Verbos fracos não ficam restritos ao Perfekt, nem fortes ao Präteritum.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-05",
+      "titulo": "Uma ação anterior a outra no passado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Plusquamperfekt usa hatte ou war com Partizip II.",
+        "Ich hatte den Text gelesen, bevor Anna kam.",
+        "Eu tinha lido o texto antes de Anna chegar.",
+        "Reconhecer a anterioridade é mais importante do que memorizar uma fórmula com várias posições V1 V2 V3 V4. Consultar estruturas maiores quando aparecerem."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Plusquamperfekt usa hatte ou war com Partizip II.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich hatte den Text gelesen, bevor Anna kam."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Eu tinha lido o texto antes de Anna chegar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Reconhecer a anterioridade é mais importante do que memorizar uma fórmula com várias posições V1 V2 V3 V4. Consultar estruturas maiores quando aparecerem.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-06",
+      "titulo": "Futuro e suposição",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Werden + infinitivo pode expressar futuro ou uma suposição.",
+        "Ich werde morgen arbeiten. / Er wird zu Hause sein.",
+        "Trabalharei amanhã. / Ele provavelmente está em casa.",
+        "Wollen e möchte exprimem vontade ou desejo; não são substitutos neutros de werden. Futur II fica no aprofundamento: Er wird angekommen sein pode expressar suposição de que ele já chegou. Futur II não se chama futuro no passado."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Werden + infinitivo pode expressar futuro ou uma suposição.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich werde morgen arbeiten. / Er wird zu Hause sein."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Trabalharei amanhã. / Ele provavelmente está em casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Wollen e möchte exprimem vontade ou desejo; não são substitutos neutros de werden. Futur II fica no aprofundamento: Er wird angekommen sein pode expressar suposição de que ele já chegou. Futur II não se chama futuro no passado.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-07",
+      "titulo": "Modais no passado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Präteritum é um modelo útil e frequente; Perfekt com outro verbo tem uma construção própria.",
+        "Ich konnte nicht kommen. / Ich habe arbeiten müssen.",
+        "Não pude vir. / Precisei trabalhar.",
+        "No segundo exemplo, müssen está no infinitivo substitutivo, junto de arbeiten. Isso não é doppeltes Perfekt. Sem outro infinitivo, existe particípio: Ich habe das nicht gewollt. Não mostrar hat gekonnt como único modelo universal de Perfekt do modal.",
+        "Sem outro infinitivo, há formas como hat gekonnt, hat gemusst e hat gewollt. Com outro infinitivo, usa-se o infinitivo substitutivo: Ich habe arbeiten müssen. — Precisei trabalhar. Não usar hat gemusst arbeiten. No cotidiano, ich musste arbeiten também é frequente. Não transformar a forma isolada do Perfekt em modelo universal."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Präteritum é um modelo útil e frequente; Perfekt com outro verbo tem uma construção própria.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich konnte nicht kommen. / Ich habe arbeiten müssen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não pude vir. / Precisei trabalhar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No segundo exemplo, müssen está no infinitivo substitutivo, junto de arbeiten. Isso não é doppeltes Perfekt. Sem outro infinitivo, existe particípio: Ich habe das nicht gewollt. Não mostrar hat gekonnt como único modelo universal de Perfekt do modal.",
+          "citacoes_de": [
+            "Ich habe das nicht gewollt"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sem outro infinitivo, há formas como hat gekonnt, hat gemusst e hat gewollt. Com outro infinitivo, usa-se o infinitivo substitutivo: Ich habe arbeiten müssen. — Precisei trabalhar. Não usar hat gemusst arbeiten. No cotidiano, ich musste arbeiten também é frequente. Não transformar a forma isolada do Perfekt em modelo universal.",
+          "citacoes_de": [
+            "Ich habe arbeiten müssen"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-08",
+      "titulo": "Hipótese conselho e desejo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Konjunktiv II é modo, não um tempo passado obrigatório.",
+        "Ich hätte Zeit. / Du solltest dich ausruhen. / Ich möchte lesen.",
+        "Eu teria tempo. / Você deveria descansar. / Gostaria de ler.",
+        "Sollte coincide formalmente no Präteritum e no Konjunktiv II; o contexto decide. A frase Er sagte, er hätte keine Zeit contém Konjunktiv II em hätte, não Präteritum. Konjunktiv I para discurso indireto pode ser estudado depois."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Konjunktiv II é modo, não um tempo passado obrigatório.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich hätte Zeit. / Du solltest dich ausruhen. / Ich möchte lesen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Eu teria tempo. / Você deveria descansar. / Gostaria de ler."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sollte coincide formalmente no Präteritum e no Konjunktiv II; o contexto decide. A frase Er sagte, er hätte keine Zeit contém Konjunktiv II em hätte, não Präteritum. Konjunktiv I para discurso indireto pode ser estudado depois.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "TV-09",
+      "titulo": "Auxiliar não tem sempre o mesmo papel",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Sein, haben e werden podem exercer funções diferentes conforme a construção.",
+        "Ich habe ein Buch. / Ich habe gelesen. / Das Haus wird gebaut.",
+        "Tenho um livro. / Li. / A casa está sendo construída.",
+        "No primeiro exemplo, haben é verbo pleno; no segundo, auxiliar. A passiva é voz, não tempo verbal. Worden pertence ao Perfekt da passiva: Das Haus ist gebaut worden. Tun também possui todos os tempos usuais: Ich habe das getan."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sein, haben e werden podem exercer funções diferentes conforme a construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe ein Buch. / Ich habe gelesen. / Das Haus wird gebaut."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tenho um livro. / Li. / A casa está sendo construída."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No primeiro exemplo, haben é verbo pleno; no segundo, auxiliar. A passiva é voz, não tempo verbal. Worden pertence ao Perfekt da passiva: Das Haus ist gebaut worden. Tun também possui todos os tempos usuais: Ich habe das getan.",
+          "citacoes_de": [
+            "Das Haus ist gebaut worden",
+            "Ich habe das getan"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "VB-001",
+      "titulo": "gehen — ir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "gehen",
+        "ir"
+      ],
+      "explicacao": [
+        "Ir.",
+        "Ich gehe zum See.",
+        "Vou ao lago.",
+        "Construção deste uso: zum See gehen.",
+        "Zum See é um destino com zu, não a única preposição possível com gehen. Local e sentido determinam a construção."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ir.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: zum See gehen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Zum See é um destino com zu, não a única preposição possível com gehen. Local e sentido determinam a construção.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PREP-020"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de gehen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "ging"
+            ],
+            [
+              "Partizip II",
+              "gegangen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist gegangen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-002",
+      "titulo": "zurückgehen — voltar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "zurückgehen",
+        "voltar"
+      ],
+      "explicacao": [
+        "Voltar.",
+        "Ich gehe zum Haus zurück.",
+        "Volto para casa.",
+        "Construção deste uso: zum Haus zurückgehen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Voltar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe zum Haus zurück."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Volto para casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: zum Haus zurückgehen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de zurückgehen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "ging zurück"
+            ],
+            [
+              "Partizip II",
+              "zurückgegangen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist zurückgegangen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-003",
+      "titulo": "liegen — estar deitado ou situado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "liegen",
+        "estar deitado ou situado"
+      ],
+      "explicacao": [
+        "Estar deitado ou situado.",
+        "Das Buch liegt auf dem Tisch.",
+        "O livro está sobre a mesa.",
+        "Construção deste uso: auf dem Tisch liegen.",
+        "Haben é a referência desta ficha; sein também ocorre regionalmente com liegen, sitzen e stehen. A variação não é simplesmente formal ou literária."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Estar deitado ou situado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Buch liegt auf dem Tisch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O livro está sobre a mesa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: auf dem Tisch liegen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Haben é a referência desta ficha; sein também ocorre regionalmente com liegen, sitzen e stehen. A variação não é simplesmente formal ou literária.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de liegen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "lag"
+            ],
+            [
+              "Partizip II",
+              "gelegen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gelegen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-004",
+      "titulo": "hören — ouvir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "hören",
+        "ouvir"
+      ],
+      "explicacao": [
+        "Ouvir.",
+        "Ich höre die Vögel.",
+        "Ouço os pássaros.",
+        "Construção deste uso: etwas hören A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ouvir.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich höre die Vögel."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ouço os pássaros."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas hören A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de hören neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "hörte"
+            ],
+            [
+              "Partizip II",
+              "gehört"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gehört"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-005",
+      "titulo": "bleiben — ficar ou permanecer",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "bleiben",
+        "ficar ou permanecer"
+      ],
+      "explicacao": [
+        "Ficar ou permanecer.",
+        "Ich bleibe einen Moment stehen.",
+        "Fico parado um momento, em pé.",
+        "Construção deste uso: stehen bleiben sem zu.",
+        "Ich bleibe zu Hause.",
+        "Fico em casa."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ficar ou permanecer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe einen Moment stehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico parado um momento, em pé."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: stehen bleiben sem zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa."
+        }
+      ],
+      "relacionados": [
+        "INF-008"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de bleiben neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "blieb"
+            ],
+            [
+              "Partizip II",
+              "geblieben"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist geblieben"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-006",
+      "titulo": "stehen — estar em pé ou situado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "stehen",
+        "estar em pé ou situado"
+      ],
+      "explicacao": [
+        "Estar em pé ou situado.",
+        "Ich stehe am Fenster.",
+        "Estou em pé junto à janela.",
+        "Construção deste uso: am Fenster stehen.",
+        "Descreve posição. Auxiliar sein também ocorre regionalmente; a ficha apresenta haben como referência."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Estar em pé ou situado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich stehe am Fenster."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estou em pé junto à janela."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: am Fenster stehen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Descreve posição. Auxiliar sein também ocorre regionalmente; a ficha apresenta haben como referência.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de stehen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "stand"
+            ],
+            [
+              "Partizip II",
+              "gestanden"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gestanden"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-007",
+      "titulo": "sein — ser ou estar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sein",
+        "ser ou estar"
+      ],
+      "explicacao": [
+        "Ser ou estar.",
+        "Die Luft ist kühl.",
+        "O ar está fresco.",
+        "Construção deste uso: sein + qualidade.",
+        "Ser ou estar conforme o contexto; também auxiliar: Er ist gegangen. Não é verbo modal. Um predicativo nominal fica no nominativo: Er ist ein guter Lehrer."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ser ou estar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Luft ist kühl."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O ar está fresco."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: sein + qualidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ser ou estar conforme o contexto; também auxiliar: Er ist gegangen. Não é verbo modal. Um predicativo nominal fica no nominativo: Er ist ein guter Lehrer.",
+          "citacoes_de": [
+            "Er ist ein guter Lehrer",
+            "Er ist gegangen"
+          ]
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de sein neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "war"
+            ],
+            [
+              "Partizip II",
+              "gewesen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist gewesen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-008",
+      "titulo": "scheinen — brilhar; parecer em outra construção",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "scheinen",
+        "brilhar; parecer em outra construção"
+      ],
+      "explicacao": [
+        "Brilhar; parecer em outra construção.",
+        "Die Sonne scheint schon.",
+        "O sol já brilha.",
+        "Construção deste uso: die Sonne scheint.",
+        "Em Das scheint richtig zu sein, significa parecer e admite infinitivo com zu; isso não muda o sentido de brilhar no Texto 01."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Brilhar; parecer em outra construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Sonne scheint schon."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O sol já brilha."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: die Sonne scheint.",
+          "citacoes_de": [
+            "die Sonne"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em Das scheint richtig zu sein, significa parecer e admite infinitivo com zu; isso não muda o sentido de brilhar no Texto 01.",
+          "citacoes_de": [
+            "Das scheint richtig zu sein"
+          ]
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de scheinen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "schien"
+            ],
+            [
+              "Partizip II",
+              "geschienen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geschienen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-009",
+      "titulo": "sehen — ver",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sehen",
+        "ver"
+      ],
+      "explicacao": [
+        "Ver.",
+        "Ich sehe einen Vogel.",
+        "Vejo um pássaro.",
+        "Construção deste uso: jemanden ou etwas sehen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ver.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich sehe einen Vogel."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vejo um pássaro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemanden ou etwas sehen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de sehen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "sah"
+            ],
+            [
+              "Partizip II",
+              "gesehen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gesehen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-010",
+      "titulo": "sitzen — estar sentado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sitzen",
+        "estar sentado"
+      ],
+      "explicacao": [
+        "Estar sentado.",
+        "Der Vogel sitzt auf einem Ast.",
+        "O pássaro está num galho.",
+        "Construção deste uso: auf einem Ast sitzen.",
+        "Descreve posição; sich setzen expressa a mudança para a posição sentada. Auxiliar sein também ocorre regionalmente."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Estar sentado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Vogel sitzt auf einem Ast."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O pássaro está num galho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: auf einem Ast sitzen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Descreve posição; sich setzen expressa a mudança para a posição sentada. Auxiliar sein também ocorre regionalmente.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de sitzen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "saß"
+            ],
+            [
+              "Partizip II",
+              "gesessen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gesessen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-011",
+      "titulo": "schauen — olhar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "schauen",
+        "olhar"
+      ],
+      "explicacao": [
+        "Olhar.",
+        "Er schaut ins Wasser.",
+        "Ele olha para a água.",
+        "Construção deste uso: ins Wasser schauen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Olhar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er schaut ins Wasser."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele olha para a água."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: ins Wasser schauen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de schauen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "schaute"
+            ],
+            [
+              "Partizip II",
+              "geschaut"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geschaut"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-012",
+      "titulo": "machen — fazer ou preparar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "machen",
+        "fazer ou preparar"
+      ],
+      "explicacao": [
+        "Ich mache mir einen Kaffee.",
+        "Preparo um café para mim.",
+        "Mir indica para quem preparo o café: para mim. Einen Kaffee indica o que preparo: um café."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Ich mache mir einen Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Preparo um café para mim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Mir indica para quem preparo o café: para mim. Einen Kaffee indica o que preparo: um café.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de machen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "machte"
+            ],
+            [
+              "Partizip II",
+              "gemacht"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gemacht"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-013",
+      "titulo": "denken — pensar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "denken",
+        "pensar"
+      ],
+      "explicacao": [
+        "Pensar.",
+        "Ich denke an den Tag.",
+        "Penso no dia.",
+        "Construção deste uso: an + A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Pensar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich denke an den Tag."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Penso no dia."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: an + A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de denken neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "dachte"
+            ],
+            [
+              "Partizip II",
+              "gedacht"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gedacht"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-014",
+      "titulo": "arbeiten — trabalhar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "arbeiten",
+        "trabalhar"
+      ],
+      "explicacao": [
+        "Trabalhar.",
+        "Ich arbeite an einem Text.",
+        "Trabalho em um texto.",
+        "Construção deste uso: an + D quando se trabalha em algo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Trabalhar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich arbeite an einem Text."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Trabalho em um texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: an + D quando se trabalha em algo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de arbeiten neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "arbeitete"
+            ],
+            [
+              "Partizip II",
+              "gearbeitet"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gearbeitet"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-015",
+      "titulo": "haben — ter",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "haben",
+        "ter"
+      ],
+      "explicacao": [
+        "Ter.",
+        "Ich habe ein Buch.",
+        "Tenho um livro.",
+        "Construção deste uso: etwas haben A.",
+        "No uso de possuir, o objeto fica no acusativo. Também auxiliar: Er hat gearbeitet. Hatte gehabt é Plusquamperfekt, não Perfekt."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ter.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe ein Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tenho um livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas haben A.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No uso de possuir, o objeto fica no acusativo. Também auxiliar: Er hat gearbeitet. Hatte gehabt é Plusquamperfekt, não Perfekt.",
+          "citacoes_de": [
+            "Er hat gearbeitet"
+          ]
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de haben neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "hatte"
+            ],
+            [
+              "Partizip II",
+              "gehabt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gehabt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-016",
+      "titulo": "werden — tornar-se; auxiliar em outras construções",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "werden",
+        "tornar-se; auxiliar em outras construções"
+      ],
+      "explicacao": [
+        "Tornar-se; auxiliar em outras construções.",
+        "Es wird kühl.",
+        "Está ficando fresco.",
+        "Construção deste uso: werden + qualidade.",
+        "Geworden pertence ao verbo pleno tornar-se. Na passiva no Perfekt usa-se worden: Das Haus ist gebaut worden.",
+        "Aqui expressa mudança de estado. Também participa de futuro e passiva, com construções próprias. Na passiva do Perfekt: ist gelesen worden, não geworden. Não é verbo modal."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Tornar-se; auxiliar em outras construções.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es wird kühl."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Está ficando fresco."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: werden + qualidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Geworden pertence ao verbo pleno tornar-se. Na passiva no Perfekt usa-se worden: Das Haus ist gebaut worden.",
+          "citacoes_de": [
+            "Das Haus ist gebaut worden"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui expressa mudança de estado. Também participa de futuro e passiva, com construções próprias. Na passiva do Perfekt: ist gelesen worden, não geworden. Não é verbo modal.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de werden neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "wurde"
+            ],
+            [
+              "Partizip II",
+              "geworden"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist geworden"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-017",
+      "titulo": "lernen — aprender ou estudar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "lernen",
+        "aprender ou estudar"
+      ],
+      "explicacao": [
+        "Aprender ou estudar.",
+        "Ich lerne Deutsch.",
+        "Estudo alemão.",
+        "Construção deste uso: etwas lernen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Aprender ou estudar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lerne Deutsch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estudo alemão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas lernen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de lernen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "lernte"
+            ],
+            [
+              "Partizip II",
+              "gelernt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gelernt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-018",
+      "titulo": "lesen — ler",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "lesen",
+        "ler"
+      ],
+      "explicacao": [
+        "Ler.",
+        "Ich lese ein Buch.",
+        "Leio um livro.",
+        "Construção deste uso: etwas lesen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ler.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lese ein Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Leio um livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas lesen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de lesen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "las"
+            ],
+            [
+              "Partizip II",
+              "gelesen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gelesen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-019",
+      "titulo": "schreiben — escrever",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "schreiben",
+        "escrever"
+      ],
+      "explicacao": [
+        "Escrever.",
+        "Ich schreibe meiner Schwester einen Brief.",
+        "Escrevo uma carta à minha irmã.",
+        "Construção deste uso: jemandem D etwas A schreiben."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Escrever.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich schreibe meiner Schwester einen Brief."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Escrevo uma carta à minha irmã."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemandem D etwas A schreiben.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de schreiben neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "schrieb"
+            ],
+            [
+              "Partizip II",
+              "geschrieben"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geschrieben"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-020",
+      "titulo": "geben — dar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "geben",
+        "dar"
+      ],
+      "explicacao": [
+        "Dar.",
+        "Ich gebe dem Kind ein Buch.",
+        "Dou um livro à criança.",
+        "Construção deste uso: jemandem D etwas A geben."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Dar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gebe dem Kind ein Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Dou um livro à criança."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemandem D etwas A geben.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de geben neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "gab"
+            ],
+            [
+              "Partizip II",
+              "gegeben"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gegeben"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-021",
+      "titulo": "bringen — trazer ou levar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "bringen",
+        "trazer ou levar"
+      ],
+      "explicacao": [
+        "Trazer ou levar.",
+        "Ich bringe dir das Buch.",
+        "Trago o livro para você.",
+        "Construção deste uso: jemandem D etwas A bringen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Trazer ou levar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bringe dir das Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Trago o livro para você."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemandem D etwas A bringen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de bringen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "brachte"
+            ],
+            [
+              "Partizip II",
+              "gebracht"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gebracht"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-022",
+      "titulo": "nehmen — pegar ou tomar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "nehmen",
+        "pegar ou tomar"
+      ],
+      "explicacao": [
+        "Pegar ou tomar.",
+        "Ich nehme das Buch.",
+        "Pego o livro.",
+        "Construção deste uso: etwas nehmen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Pegar ou tomar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich nehme das Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Pego o livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas nehmen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de nehmen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "nahm"
+            ],
+            [
+              "Partizip II",
+              "genommen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat genommen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-023",
+      "titulo": "kaufen — comprar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "kaufen",
+        "comprar"
+      ],
+      "explicacao": [
+        "Comprar.",
+        "Ich kaufe Brot.",
+        "Compro pão.",
+        "Construção deste uso: etwas kaufen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Comprar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich kaufe Brot."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Compro pão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas kaufen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de kaufen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "kaufte"
+            ],
+            [
+              "Partizip II",
+              "gekauft"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gekauft"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-024",
+      "titulo": "kommen — vir; chegar conforme o contexto",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "kommen",
+        "vir; chegar conforme o contexto"
+      ],
+      "explicacao": [
+        "Vir; chegar conforme o contexto.",
+        "Ich komme aus dem Garten.",
+        "Venho do jardim.",
+        "Construção deste uso: aus + D para procedência."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Vir; chegar conforme o contexto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich komme aus dem Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Venho do jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: aus + D para procedência.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de kommen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "kam"
+            ],
+            [
+              "Partizip II",
+              "gekommen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist gekommen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-025",
+      "titulo": "fahren — ir em veículo; dirigir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "fahren",
+        "ir em veículo; dirigir"
+      ],
+      "explicacao": [
+        "Ir em veículo; dirigir.",
+        "Ich fahre mit dem Bus.",
+        "Vou de ônibus.",
+        "Construção deste uso: mit dem Bus fahren.",
+        "Sein corresponde aqui ao deslocamento. Em uso transitivo como dirigir um veículo, haben também é possível: Ich habe das Auto gefahren."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ir em veículo; dirigir.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich fahre mit dem Bus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou de ônibus."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: mit dem Bus fahren.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sein corresponde aqui ao deslocamento. Em uso transitivo como dirigir um veículo, haben também é possível: Ich habe das Auto gefahren.",
+          "citacoes_de": [
+            "das Auto"
+          ]
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de fahren neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "fuhr"
+            ],
+            [
+              "Partizip II",
+              "gefahren"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist gefahren"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-026",
+      "titulo": "aufstehen — levantar-se",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "aufstehen",
+        "levantar-se"
+      ],
+      "explicacao": [
+        "Levantar-se.",
+        "Ich stehe früh auf.",
+        "Levanto-me cedo.",
+        "Construção deste uso: aufstehen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Levantar-se.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich stehe früh auf."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Levanto-me cedo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: aufstehen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de aufstehen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "stand auf"
+            ],
+            [
+              "Partizip II",
+              "aufgestanden"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist aufgestanden"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-027",
+      "titulo": "sich setzen — sentar-se",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sich setzen",
+        "sentar-se"
+      ],
+      "explicacao": [
+        "Sentar-se.",
+        "Ich setze mich ans Fenster.",
+        "Sento-me junto à janela.",
+        "Construção deste uso: sich A setzen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sentar-se.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich setze mich ans Fenster."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Sento-me junto à janela."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: sich A setzen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de sich setzen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "setzte sich"
+            ],
+            [
+              "Partizip II",
+              "gesetzt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat sich gesetzt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-028",
+      "titulo": "legen — colocar deitado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "legen",
+        "colocar deitado"
+      ],
+      "explicacao": [
+        "Colocar deitado.",
+        "Ich lege das Buch auf den Tisch.",
+        "Coloco o livro sobre a mesa.",
+        "Construção deste uso: etwas A an einen Ort legen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Colocar deitado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lege das Buch auf den Tisch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Coloco o livro sobre a mesa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas A an einen Ort legen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de legen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "legte"
+            ],
+            [
+              "Partizip II",
+              "gelegt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gelegt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-029",
+      "titulo": "stellen — colocar em pé",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "stellen",
+        "colocar em pé"
+      ],
+      "explicacao": [
+        "Colocar em pé.",
+        "Ich stelle die Tasse auf den Tisch.",
+        "Coloco a xícara sobre a mesa.",
+        "Construção deste uso: etwas A an einen Ort stellen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Colocar em pé.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich stelle die Tasse auf den Tisch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Coloco a xícara sobre a mesa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas A an einen Ort stellen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de stellen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "stellte"
+            ],
+            [
+              "Partizip II",
+              "gestellt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gestellt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-030",
+      "titulo": "versuchen — tentar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "versuchen",
+        "tentar"
+      ],
+      "explicacao": [
+        "Tentar.",
+        "Ich versuche, den Text zu verstehen.",
+        "Tento compreender o texto.",
+        "Construção deste uso: versuchen etwas zu tun."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Tentar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, den Text zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento compreender o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: versuchen etwas zu tun.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-002"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de versuchen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "versuchte"
+            ],
+            [
+              "Partizip II",
+              "versucht"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat versucht"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-031",
+      "titulo": "hoffen — esperar com esperança",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "hoffen",
+        "esperar com esperança"
+      ],
+      "explicacao": [
+        "Esperar com esperança.",
+        "Ich hoffe, dich bald zu sehen.",
+        "Espero ver você em breve.",
+        "Construção deste uso: auf + A ou infinitivo com zu.",
+        "Auf exige acusativo: Ich hoffe auf gutes Wetter. Hoffen também admite oração com dass."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Esperar com esperança.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich hoffe, dich bald zu sehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Espero ver você em breve."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: auf + A ou infinitivo com zu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Auf exige acusativo: Ich hoffe auf gutes Wetter. Hoffen também admite oração com dass.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CO-06-03"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de hoffen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "hoffte"
+            ],
+            [
+              "Partizip II",
+              "gehofft"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gehofft"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-032",
+      "titulo": "planen — planejar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "planen",
+        "planejar"
+      ],
+      "explicacao": [
+        "Planejar.",
+        "Ich plane, morgen zu kommen.",
+        "Planejo vir amanhã.",
+        "Construção deste uso: etwas planen A ou infinitivo com zu."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Planejar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich plane, morgen zu kommen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Planejo vir amanhã."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas planen A ou infinitivo com zu.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-002"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de planen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "plante"
+            ],
+            [
+              "Partizip II",
+              "geplant"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geplant"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-033",
+      "titulo": "verstehen — compreender",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "verstehen",
+        "compreender"
+      ],
+      "explicacao": [
+        "Compreender.",
+        "Ich verstehe den Text.",
+        "Compreendo o texto.",
+        "Construção deste uso: etwas verstehen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Compreender.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich verstehe den Text."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Compreendo o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas verstehen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de verstehen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "verstand"
+            ],
+            [
+              "Partizip II",
+              "verstanden"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat verstanden"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-034",
+      "titulo": "warten — esperar ou aguardar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "warten",
+        "esperar ou aguardar"
+      ],
+      "explicacao": [
+        "Esperar ou aguardar.",
+        "Ich warte auf den Bus.",
+        "Espero o ônibus.",
+        "Construção deste uso: auf + A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Esperar ou aguardar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich warte auf den Bus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Espero o ônibus."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: auf + A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de warten neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "wartete"
+            ],
+            [
+              "Partizip II",
+              "gewartet"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gewartet"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-035",
+      "titulo": "helfen — ajudar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "helfen",
+        "ajudar"
+      ],
+      "explicacao": [
+        "Ajudar.",
+        "Ich helfe meinem Bruder.",
+        "Ajudo meu irmão.",
+        "Construção deste uso: jemandem helfen D."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ajudar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich helfe meinem Bruder."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ajudo meu irmão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemandem helfen D.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-010"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de helfen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "half"
+            ],
+            [
+              "Partizip II",
+              "geholfen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geholfen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-036",
+      "titulo": "antworten — responder",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "antworten",
+        "responder"
+      ],
+      "explicacao": [
+        "Responder.",
+        "Ich antworte dir auf deine Frage.",
+        "Respondo à sua pergunta.",
+        "Construção deste uso: jemandem D auf etwas A antworten.",
+        "Dativo para a pessoa e auf + acusativo para o conteúdo não são a mesma relação. Não chamar todo caso de preposição."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Responder.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich antworte dir auf deine Frage."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Respondo à sua pergunta."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemandem D auf etwas A antworten.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Dativo para a pessoa e auf + acusativo para o conteúdo não são a mesma relação. Não chamar todo caso de preposição.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de antworten neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "antwortete"
+            ],
+            [
+              "Partizip II",
+              "geantwortet"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geantwortet"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-037",
+      "titulo": "bitten — pedir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "bitten",
+        "pedir"
+      ],
+      "explicacao": [
+        "Pedir.",
+        "Ich bitte dich um Hilfe.",
+        "Peço ajuda a você.",
+        "Construção deste uso: jemanden A um etwas A bitten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Pedir.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bitte dich um Hilfe."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Peço ajuda a você."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemanden A um etwas A bitten.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de bitten neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "bat"
+            ],
+            [
+              "Partizip II",
+              "gebeten"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gebeten"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-038",
+      "titulo": "fragen — perguntar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "fragen",
+        "perguntar"
+      ],
+      "explicacao": [
+        "Perguntar.",
+        "Ich frage Anna nach dem Weg.",
+        "Pergunto a Anna pelo caminho.",
+        "Construção deste uso: jemanden A nach etwas D fragen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Perguntar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich frage Anna nach dem Weg."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Pergunto a Anna pelo caminho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemanden A nach etwas D fragen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de fragen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "fragte"
+            ],
+            [
+              "Partizip II",
+              "gefragt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gefragt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-039",
+      "titulo": "sprechen — falar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sprechen",
+        "falar"
+      ],
+      "explicacao": [
+        "Falar.",
+        "Ich spreche mit Anna über das Buch.",
+        "Falo com Anna sobre o livro.",
+        "Construção deste uso: mit + D e über + A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Falar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich spreche mit Anna über das Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Falo com Anna sobre o livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: mit + D e über + A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de sprechen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "sprach"
+            ],
+            [
+              "Partizip II",
+              "gesprochen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gesprochen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-040",
+      "titulo": "einladen — convidar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "einladen",
+        "convidar"
+      ],
+      "explicacao": [
+        "Convidar.",
+        "Ich lade dich zum Essen ein.",
+        "Convido você para uma refeição.",
+        "Construção deste uso: jemanden A zu etwas D einladen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Convidar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lade dich zum Essen ein."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Convido você para uma refeição."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemanden A zu etwas D einladen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de einladen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "lud ein"
+            ],
+            [
+              "Partizip II",
+              "eingeladen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat eingeladen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-041",
+      "titulo": "sich erinnern — lembrar-se",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sich erinnern",
+        "lembrar-se"
+      ],
+      "explicacao": [
+        "Lembrar-se.",
+        "Ich erinnere mich an den Tag.",
+        "Lembro-me do dia.",
+        "Construção deste uso: sich A an + A erinnern.",
+        "Erinnern também aparece sem reflexivo: jemanden an etwas erinnern = lembrar algo a alguém."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Lembrar-se.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich erinnere mich an den Tag."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Lembro-me do dia."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: sich A an + A erinnern.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Erinnern também aparece sem reflexivo: jemanden an etwas erinnern = lembrar algo a alguém.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de sich erinnern neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "erinnerte sich"
+            ],
+            [
+              "Partizip II",
+              "erinnert"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat sich erinnert"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-042",
+      "titulo": "sich freuen — alegrar-se",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sich freuen",
+        "alegrar-se"
+      ],
+      "explicacao": [
+        "Alegrar-se.",
+        "Ich freue mich auf die Reise.",
+        "Estou contente com a perspectiva da viagem.",
+        "Construção deste uso: sich A über + A ou auf + A freuen.",
+        "Auf destaca expectativa de algo ainda por acontecer; über destaca o fato ou motivo da alegria. A oposição futuro/passado não é uma regra absoluta."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Alegrar-se.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich freue mich auf die Reise."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estou contente com a perspectiva da viagem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: sich A über + A ou auf + A freuen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Auf destaca expectativa de algo ainda por acontecer; über destaca o fato ou motivo da alegria. A oposição futuro/passado não é uma regra absoluta.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de sich freuen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "freute sich"
+            ],
+            [
+              "Partizip II",
+              "gefreut"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat sich gefreut"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-043",
+      "titulo": "begegnen — encontrar casualmente",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "begegnen",
+        "encontrar casualmente"
+      ],
+      "explicacao": [
+        "Encontrar casualmente.",
+        "Ich begegne einem Freund.",
+        "Encontro um amigo por acaso.",
+        "Construção deste uso: jemandem begegnen D."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Encontrar casualmente.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich begegne einem Freund."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Encontro um amigo por acaso."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemandem begegnen D.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de begegnen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "begegnete"
+            ],
+            [
+              "Partizip II",
+              "begegnet"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "ist begegnet"
+            ],
+            [
+              "Auxiliar neste uso",
+              "sein"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-044",
+      "titulo": "berichten — relatar ou informar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "berichten",
+        "relatar ou informar"
+      ],
+      "explicacao": [
+        "Relatar ou informar.",
+        "Sie berichtet über die Reise.",
+        "Ela relata a viagem.",
+        "Construção deste uso: über + A ou von + D."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Relatar ou informar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Sie berichtet über die Reise."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ela relata a viagem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: über + A ou von + D.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de berichten neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "berichtete"
+            ],
+            [
+              "Partizip II",
+              "berichtet"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat berichtet"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-045",
+      "titulo": "fürchten — temer",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "fürchten",
+        "temer"
+      ],
+      "explicacao": [
+        "Temer.",
+        "Ich fürchte den Hund.",
+        "Temo o cachorro.",
+        "Construção deste uso: etwas A fürchten; sich A vor + D fürchten.",
+        "Fürchten + acusativo e sich fürchten vor + dativo são construções diferentes."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Temer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich fürchte den Hund."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Temo o cachorro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas A fürchten; sich A vor + D fürchten.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Fürchten + acusativo e sich fürchten vor + dativo são construções diferentes.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de fürchten neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "fürchtete"
+            ],
+            [
+              "Partizip II",
+              "gefürchtet"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gefürchtet"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-046",
+      "titulo": "tun — fazer",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "tun",
+        "fazer"
+      ],
+      "explicacao": [
+        "Fazer.",
+        "Ich habe das getan.",
+        "Fiz isso.",
+        "Construção deste uso: etwas tun A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Fazer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe das getan."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fiz isso."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas tun A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de tun neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "tat"
+            ],
+            [
+              "Partizip II",
+              "getan"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat getan"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-047",
+      "titulo": "kennen — conhecer",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "kennen",
+        "conhecer"
+      ],
+      "explicacao": [
+        "Conhecer.",
+        "Ich kenne diesen Ort.",
+        "Conheço este lugar.",
+        "Construção deste uso: jemanden ou etwas kennen A.",
+        "Compare wissen, que trata de informação ou conhecimento expresso como conteúdo; kennen refere-se a familiaridade."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Conhecer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich kenne diesen Ort."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Conheço este lugar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: jemanden ou etwas kennen A.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Compare wissen, que trata de informação ou conhecimento expresso como conteúdo; kennen refere-se a familiaridade.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de kennen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "kannte"
+            ],
+            [
+              "Partizip II",
+              "gekannt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gekannt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-048",
+      "titulo": "wissen — saber uma informação",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "wissen",
+        "saber uma informação"
+      ],
+      "explicacao": [
+        "Saber uma informação.",
+        "Ich weiß, dass Anna kommt.",
+        "Sei que Anna vem.",
+        "Construção deste uso: etwas wissen; wissen dass.",
+        "Infinitivo wissen; ich weiß, du weißt, er weiß. Não substituir automaticamente kennen por wissen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Saber uma informação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich weiß, dass Anna kommt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Sei que Anna vem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas wissen; wissen dass.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Infinitivo wissen; ich weiß, du weißt, er weiß. Não substituir automaticamente kennen por wissen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de wissen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "wusste"
+            ],
+            [
+              "Partizip II",
+              "gewusst"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gewusst"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-049",
+      "titulo": "schlafen — dormir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "schlafen",
+        "dormir"
+      ],
+      "explicacao": [
+        "Dormir.",
+        "Ich schlafe gut.",
+        "Durmo bem.",
+        "Construção deste uso: schlafen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Dormir.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich schlafe gut."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Durmo bem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: schlafen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de schlafen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "schlief"
+            ],
+            [
+              "Partizip II",
+              "geschlafen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geschlafen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-050",
+      "titulo": "essen — comer",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "essen",
+        "comer"
+      ],
+      "explicacao": [
+        "Comer.",
+        "Ich esse einen Apfel.",
+        "Como uma maçã.",
+        "Construção deste uso: etwas essen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Comer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich esse einen Apfel."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Como uma maçã."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas essen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de essen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "aß"
+            ],
+            [
+              "Partizip II",
+              "gegessen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gegessen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-051",
+      "titulo": "trinken — beber",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "trinken",
+        "beber"
+      ],
+      "explicacao": [
+        "Ich trinke einen Kaffee.",
+        "Tomo um café.",
+        "Einen Kaffee indica o que bebo. Nesse uso, o complemento de trinken fica no acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "Ich trinke einen Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tomo um café."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Einen Kaffee indica o que bebo. Nesse uso, o complemento de trinken fica no acusativo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de trinken neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "trank"
+            ],
+            [
+              "Partizip II",
+              "getrunken"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat getrunken"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-052",
+      "titulo": "wohnen — morar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "wohnen",
+        "morar"
+      ],
+      "explicacao": [
+        "Morar.",
+        "Ich wohne in Brasilien.",
+        "Moro no Brasil.",
+        "Construção deste uso: in + D para localização."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Morar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich wohne in Brasilien."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Moro no Brasil."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: in + D para localização.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de wohnen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "wohnte"
+            ],
+            [
+              "Partizip II",
+              "gewohnt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gewohnt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-053",
+      "titulo": "leben — viver",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "leben",
+        "viver"
+      ],
+      "explicacao": [
+        "Viver.",
+        "Ich lebe seit drei Jahren hier.",
+        "Moro aqui há três anos.",
+        "Construção deste uso: leben."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Viver.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lebe seit drei Jahren hier."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Moro aqui há três anos."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: leben.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de leben neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "lebte"
+            ],
+            [
+              "Partizip II",
+              "gelebt"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat gelebt"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-054",
+      "titulo": "öffnen — abrir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "öffnen",
+        "abrir"
+      ],
+      "explicacao": [
+        "Abrir.",
+        "Ich öffne die Tür.",
+        "Abro a porta.",
+        "Construção deste uso: etwas öffnen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Abrir.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich öffne die Tür."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Abro a porta."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas öffnen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de öffnen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "öffnete"
+            ],
+            [
+              "Partizip II",
+              "geöffnet"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geöffnet"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-055",
+      "titulo": "schließen — fechar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "schließen",
+        "fechar"
+      ],
+      "explicacao": [
+        "Fechar.",
+        "Ich schließe die Tür.",
+        "Fecho a porta.",
+        "Construção deste uso: etwas schließen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Fechar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich schließe die Tür."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fecho a porta."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas schließen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de schließen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "schloss"
+            ],
+            [
+              "Partizip II",
+              "geschlossen"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat geschlossen"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-056",
+      "titulo": "zumachen — fechar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "zumachen",
+        "fechar"
+      ],
+      "explicacao": [
+        "Fechar.",
+        "Ich mache die Tür zu.",
+        "Fecho a porta.",
+        "Construção deste uso: etwas zumachen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Fechar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich mache die Tür zu."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fecho a porta."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas zumachen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de zumachen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "machte zu"
+            ],
+            [
+              "Partizip II",
+              "zugemacht"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat zugemacht"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VB-057",
+      "titulo": "aufmachen — abrir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "aufmachen",
+        "abrir"
+      ],
+      "explicacao": [
+        "Abrir.",
+        "Ich mache die Tür auf.",
+        "Abro a porta.",
+        "Construção deste uso: etwas aufmachen A."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Abrir.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich mache die Tür auf."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Abro a porta."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Construção deste uso: etwas aufmachen A.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de aufmachen neste uso",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Präteritum (3ª pessoa singular)",
+              "machte auf"
+            ],
+            [
+              "Partizip II",
+              "aufgemacht"
+            ],
+            [
+              "Perfekt (3ª pessoa singular)",
+              "hat aufgemacht"
+            ],
+            [
+              "Auxiliar neste uso",
+              "haben"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MD-können",
+      "titulo": "können — capacidade ou possibilidade",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "können",
+        "modal"
+      ],
+      "explicacao": [
+        "Capacidade ou possibilidade.",
+        "Ich kann schwimmen.",
+        "Sei nadar.",
+        "Com outro verbo, o modelo modal usa infinitivo sem zu. No Perfekt com outro infinitivo, consultar a construção de infinitivo substitutivo.",
+        "Formas com ich no presente e no Präteritum: können — kann — konnte; müssen — muss — musste; dürfen — darf — durfte; sollen — soll — sollte; wollen — will — wollte; mögen — mag — mochte. Möchte expressa desejo atual e vem do Konjunktiv II de mögen; não confundir com mochte."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Capacidade ou possibilidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich kann schwimmen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Sei nadar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com outro verbo, o modelo modal usa infinitivo sem zu. No Perfekt com outro infinitivo, consultar a construção de infinitivo substitutivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Formas com ich no presente e no Präteritum: können — kann — konnte; müssen — muss — musste; dürfen — darf — durfte; sollen — soll — sollte; wollen — will — wollte; mögen — mag — mochte. Möchte expressa desejo atual e vem do Konjunktiv II de mögen; não confundir com mochte.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de können",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Presente com ich",
+              "kann"
+            ],
+            [
+              "Präteritum com ich",
+              "konnte"
+            ],
+            [
+              "Partizip II",
+              "gekonnt"
+            ],
+            [
+              "Perfekt sem outro infinitivo",
+              "hat gekonnt"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MD-müssen",
+      "titulo": "müssen — necessidade ou obrigação",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "müssen",
+        "modal"
+      ],
+      "explicacao": [
+        "Necessidade ou obrigação.",
+        "Ich muss heute arbeiten.",
+        "Preciso trabalhar hoje.",
+        "Com outro verbo, o modelo modal usa infinitivo sem zu. No Perfekt com outro infinitivo, consultar a construção de infinitivo substitutivo.",
+        "Ich muss heute nicht arbeiten. — Hoje não preciso trabalhar. Ich darf heute nicht arbeiten. — Hoje não tenho permissão para trabalhar. A negação muda a necessidade ou a permissão conforme o modal; nicht müssen não é proibição.",
+        "Ich muss heute arbeiten. — Preciso trabalhar hoje. Ich soll heute arbeiten. — É para eu trabalhar hoje, conforme uma orientação ou exigência. Du solltest eine Pause machen. — Você deveria fazer uma pausa, conselho. Müssen não é sempre autoritário; sollen pode transmitir uma ordem. Sollte pode ser Präteritum ou Konjunktiv II, conforme o contexto."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Necessidade ou obrigação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich muss heute arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Preciso trabalhar hoje."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com outro verbo, o modelo modal usa infinitivo sem zu. No Perfekt com outro infinitivo, consultar a construção de infinitivo substitutivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ich muss heute nicht arbeiten. — Hoje não preciso trabalhar. Ich darf heute nicht arbeiten. — Hoje não tenho permissão para trabalhar. A negação muda a necessidade ou a permissão conforme o modal; nicht müssen não é proibição.",
+          "citacoes_de": [
+            "Ich darf heute nicht arbeiten",
+            "Ich muss heute nicht arbeiten"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ich muss heute arbeiten. — Preciso trabalhar hoje. Ich soll heute arbeiten. — É para eu trabalhar hoje, conforme uma orientação ou exigência. Du solltest eine Pause machen. — Você deveria fazer uma pausa, conselho. Müssen não é sempre autoritário; sollen pode transmitir uma ordem. Sollte pode ser Präteritum ou Konjunktiv II, conforme o contexto.",
+          "citacoes_de": [
+            "Du solltest eine Pause machen",
+            "Ich muss heute arbeiten"
+          ]
+        }
+      ],
+      "relacionados": [
+        "NEG-010",
+        "MD-dürfen"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de müssen",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Presente com ich",
+              "muss"
+            ],
+            [
+              "Präteritum com ich",
+              "musste"
+            ],
+            [
+              "Partizip II",
+              "gemusst"
+            ],
+            [
+              "Perfekt sem outro infinitivo",
+              "hat gemusst"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MD-dürfen",
+      "titulo": "dürfen — permissão",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "dürfen",
+        "modal"
+      ],
+      "explicacao": [
+        "Permissão.",
+        "Ich darf hier parken.",
+        "Tenho permissão para estacionar aqui.",
+        "Com outro verbo, o modelo modal usa infinitivo sem zu. No Perfekt com outro infinitivo, consultar a construção de infinitivo substitutivo.",
+        "Ich muss heute nicht arbeiten. — Hoje não preciso trabalhar. Ich darf heute nicht arbeiten. — Hoje não tenho permissão para trabalhar. A negação muda a necessidade ou a permissão conforme o modal; nicht müssen não é proibição."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Permissão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich darf hier parken."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tenho permissão para estacionar aqui."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com outro verbo, o modelo modal usa infinitivo sem zu. No Perfekt com outro infinitivo, consultar a construção de infinitivo substitutivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ich muss heute nicht arbeiten. — Hoje não preciso trabalhar. Ich darf heute nicht arbeiten. — Hoje não tenho permissão para trabalhar. A negação muda a necessidade ou a permissão conforme o modal; nicht müssen não é proibição.",
+          "citacoes_de": [
+            "Ich darf heute nicht arbeiten",
+            "Ich muss heute nicht arbeiten"
+          ]
+        }
+      ],
+      "relacionados": [
+        "MD-müssen"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de dürfen",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Presente com ich",
+              "darf"
+            ],
+            [
+              "Präteritum com ich",
+              "durfte"
+            ],
+            [
+              "Partizip II",
+              "gedurft"
+            ],
+            [
+              "Perfekt sem outro infinitivo",
+              "hat gedurft"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MD-sollen",
+      "titulo": "sollen — orientação ou exigência de outra fonte",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sollen",
+        "modal"
+      ],
+      "explicacao": [
+        "Orientação ou exigência de outra fonte.",
+        "Ich soll Anna anrufen.",
+        "É para eu telefonar para Anna.",
+        "Com outro verbo, o modelo modal usa infinitivo sem zu. No Perfekt com outro infinitivo, consultar a construção de infinitivo substitutivo.",
+        "Ich muss heute arbeiten. — Preciso trabalhar hoje. Ich soll heute arbeiten. — É para eu trabalhar hoje, conforme uma orientação ou exigência. Du solltest eine Pause machen. — Você deveria fazer uma pausa, conselho. Müssen não é sempre autoritário; sollen pode transmitir uma ordem. Sollte pode ser Präteritum ou Konjunktiv II, conforme o contexto."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Orientação ou exigência de outra fonte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich soll Anna anrufen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "É para eu telefonar para Anna."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com outro verbo, o modelo modal usa infinitivo sem zu. No Perfekt com outro infinitivo, consultar a construção de infinitivo substitutivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ich muss heute arbeiten. — Preciso trabalhar hoje. Ich soll heute arbeiten. — É para eu trabalhar hoje, conforme uma orientação ou exigência. Du solltest eine Pause machen. — Você deveria fazer uma pausa, conselho. Müssen não é sempre autoritário; sollen pode transmitir uma ordem. Sollte pode ser Präteritum ou Konjunktiv II, conforme o contexto.",
+          "citacoes_de": [
+            "Du solltest eine Pause machen",
+            "Ich muss heute arbeiten"
+          ]
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "titulo": "Formas de sollen",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Presente com ich",
+              "soll"
+            ],
+            [
+              "Präteritum com ich",
+              "sollte"
+            ],
+            [
+              "Partizip II",
+              "gesollt"
+            ],
+            [
+              "Perfekt sem outro infinitivo",
+              "hat gesollt"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MD-wollen",
+      "titulo": "wollen — vontade ou intenção",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "wollen",
+        "modal"
+      ],
+      "explicacao": [
+        "Will expressa vontade ou intenção.",
+        "Ich will einen Kaffee.",
+        "Quero um café.",
+        "Ich will Deutsch lernen.",
+        "Quero aprender alemão.",
+        "Com outro verbo, o infinitivo vem sem zu."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Will expressa vontade ou intenção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich will einen Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Quero um café."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich will Deutsch lernen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Quero aprender alemão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com outro verbo, o infinitivo vem sem zu.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "MD-COMP-001",
+        "TV-07"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de wollen",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Presente com ich",
+              "will"
+            ],
+            [
+              "Präteritum com ich",
+              "wollte"
+            ],
+            [
+              "Partizip II",
+              "gewollt"
+            ],
+            [
+              "Perfekt sem outro infinitivo",
+              "hat gewollt"
+            ]
+          ]
+        }
+      ],
+      "termos_busca": [
+        "will"
+      ]
+    },
+    {
+      "id": "MD-mögen",
+      "titulo": "mögen — gosto ou apreço",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "mögen",
+        "modal"
+      ],
+      "explicacao": [
+        "Mag expressa gosto ou apreço.",
+        "Ich mag Kaffee.",
+        "Gosto de café."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Mag expressa gosto ou apreço.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich mag Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Gosto de café."
+        }
+      ],
+      "relacionados": [
+        "MD-COMP-001",
+        "TV-07"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Formas de mögen",
+          "colunas": [
+            "Forma",
+            "Referência"
+          ],
+          "linhas": [
+            [
+              "Presente com ich",
+              "mag"
+            ],
+            [
+              "Präteritum com ich",
+              "mochte"
+            ],
+            [
+              "Partizip II",
+              "gemocht"
+            ],
+            [
+              "Perfekt sem outro infinitivo",
+              "hat gemocht"
+            ]
+          ]
+        }
+      ],
+      "termos_busca": [
+        "mag"
+      ]
+    },
+    {
+      "id": "MD-moechte",
+      "titulo": "möchte — gostaria de; desejo mais suave",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "möchte",
+        "modal"
+      ],
+      "explicacao": [
+        "Möchte expressa um desejo atual, geralmente de modo mais suave.",
+        "Ich möchte einen Kaffee.",
+        "Gostaria de um café.",
+        "Heute möchte ich im Garten arbeiten.",
+        "Hoje gostaria de trabalhar no jardim.",
+        "Com outro verbo, o infinitivo vem sem zu."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Möchte expressa um desejo atual, geralmente de modo mais suave.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich möchte einen Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Gostaria de um café."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Heute möchte ich im Garten arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje gostaria de trabalhar no jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com outro verbo, o infinitivo vem sem zu.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "MD-COMP-001",
+        "TV-08"
+      ]
+    },
+    {
+      "id": "MD-COMP-001",
+      "titulo": "Mag, möchte e will — gosto, desejo e vontade",
+      "tipo_consulta": "comparacao",
+      "palavras_chave": [
+        "mag",
+        "möchte",
+        "will",
+        "comparação de modais"
+      ],
+      "termos_busca": [
+        "mag",
+        "möchte",
+        "will"
+      ],
+      "relacionados": [
+        "MD-mögen",
+        "MD-moechte",
+        "MD-wollen",
+        "TV-08"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Compare gosto, desejo mais suave e vontade ou intenção:",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich mag Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Gosto de café."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich möchte einen Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Gostaria de um café."
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich will einen Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Quero um café."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Mag expressa gosto; möchte, desejo mais suave; will, vontade mais direta. Wollen não é rude por definição nem restrito ao ambiente familiar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich arbeite gern im Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Gosto de trabalhar no jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Para uma atividade habitual, também se usa gern. Möchte vem do Konjunktiv II de mögen e expressa desejo atual; mochte, sem trema, é passado de mögen.",
+          "citacoes_de": []
+        }
+      ],
+      "explicacao": [
+        "Compare gosto, desejo mais suave e vontade ou intenção:",
+        "Ich mag Kaffee.",
+        "Gosto de café.",
+        "Ich möchte einen Kaffee.",
+        "Gostaria de um café.",
+        "Ich will einen Kaffee.",
+        "Quero um café.",
+        "Mag expressa gosto; möchte, desejo mais suave; will, vontade mais direta. Wollen não é rude por definição nem restrito ao ambiente familiar.",
+        "Ich arbeite gern im Garten.",
+        "Gosto de trabalhar no jardim.",
+        "Para uma atividade habitual, também se usa gern. Möchte vem do Konjunktiv II de mögen e expressa desejo atual; mochte, sem trema, é passado de mögen."
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@ const esc=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 let estaticos=[],privados=[],dados=[],basePendente=null,grupoAtivo='todos',geracao=0;
 const usuario=()=>window.DL_AUTH?.usuario?.uid||null;
     const FONTES = [
-        { arq: "./data/substantivos.json", map: it => ({ termo: ((it.artigo ? it.artigo + " " : "") + it.palavra).trim(), sentido: it.significado, tipo: "Substantivo", grupo: "sub", origem: it.origem, extra: it.plural ? ("Plural: " + it.plural) : "" }) },
+        { arq: "./data/substantivos.json", map: it => ({ termo: ((it.artigo ? it.artigo + " " : "") + it.palavra).trim(), sentido: it.significado, tipo: "Substantivo", grupo: "sub", origem: it.origem, extra: it.nota_uso || (it.plural ? ("Plural: " + it.plural) : "") }) },
         { arq: "./data/verbos.json", map: it => ({ termo: it.verbo, sentido: it.significado, tipo: "Verbo", grupo: "verb", origem: it.origem, extra: [it.praeteritum ? ("Prät.: " + it.praeteritum) : "", it.partizip_ii ? ("Part. II: " + it.partizip_ii) : ""].filter(Boolean).join(" · ") }) },
         { arq: "./data/adjetivos_adverbios.json", map: it => ({ termo: it.palavra, sentido: it.significado, tipo: (it.categoria === "ADV" ? "Advérbio" : "Adjetivo"), grupo: "adjadv", origem: it.origem, extra: "" }) },
         { arq: "./data/blocos.json", map: it => ({ termo: it.bloco, sentido: it.sentido, tipo: "Expressão/Bloco", grupo: "bloco", origem: it.origem, contexto: it.contexto, outroExemplo: it.outroExemplo, extra: it.tipo ? String(it.tipo).replace(/_/g, " ").toLowerCase() : "" }) },

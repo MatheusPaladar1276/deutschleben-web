@@ -1,0 +1,1008 @@
+{
+  "id": "conectores_e_ligacao_entre_oracoes",
+  "numero": "07",
+  "titulo": "Conectores",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "CON-001",
+      "titulo": "und — Acrescentar uma informação",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "und",
+        "Acrescentar uma informação",
+        "coordenacao"
+      ],
+      "explicacao": [
+        "Acrescentar uma informação.",
+        "Ich höre die Vögel und bleibe einen Moment stehen.",
+        "Ouço os pássaros e paro por um momento.",
+        "Frase original do Texto 01. O sujeito ich vale para as duas partes; não é necessário repeti-lo. Höre e bleibe estão conjugados; stehen é infinitivo sem zu na construção stehen bleiben. A coordenação não obriga o segundo verbo a ficar no infinitivo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Acrescentar uma informação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich höre die Vögel und bleibe einen Moment stehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ouço os pássaros e paro por um momento."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Frase original do Texto 01. O sujeito ich vale para as duas partes; não é necessário repeti-lo. Höre e bleibe estão conjugados; stehen é infinitivo sem zu na construção stehen bleiben. A coordenação não obriga o segundo verbo a ficar no infinitivo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CQ-002"
+      ]
+    },
+    {
+      "id": "CON-002",
+      "titulo": "oder — Apresentar alternativas",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "oder",
+        "Apresentar alternativas",
+        "coordenacao"
+      ],
+      "explicacao": [
+        "Apresentar alternativas.",
+        "Liest du heute oder arbeitest du im Garten?",
+        "Você lê hoje ou trabalha no jardim?",
+        "Oder também liga palavras: Möchtest du Tee oder Kaffee? — Gostaria de chá ou café? A ordem interrogativa desse exemplo vem da pergunta, não de oder."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Apresentar alternativas.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Liest du heute oder arbeitest du im Garten?"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Você lê hoje ou trabalha no jardim?"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Oder também liga palavras: Möchtest du Tee oder Kaffee? — Gostaria de chá ou café? A ordem interrogativa desse exemplo vem da pergunta, não de oder.",
+          "citacoes_de": [
+            "der Kaffee"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-003",
+      "titulo": "aber — Expressar contraste",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "aber",
+        "Expressar contraste",
+        "coordenacao"
+      ],
+      "explicacao": [
+        "Expressar contraste.",
+        "Die Luft ist kühl, aber die Sonne scheint schon.",
+        "O ar está fresco, mas o sol já brilha.",
+        "Frase original do Texto 01. Aber não exige que a oração seguinte comece pelo sujeito: ..., aber heute scheint die Sonne."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Expressar contraste.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Luft ist kühl, aber die Sonne scheint schon."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O ar está fresco, mas o sol já brilha."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Frase original do Texto 01. Aber não exige que a oração seguinte comece pelo sujeito: ..., aber heute scheint die Sonne.",
+          "citacoes_de": [
+            "die Sonne"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-004",
+      "titulo": "denn — Apresentar uma razão ou explicação",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "denn",
+        "Apresentar uma razão ou explicação",
+        "coordenacao"
+      ],
+      "explicacao": [
+        "Apresentar uma razão ou explicação.",
+        "Ich bleibe zu Hause, denn heute regnet es.",
+        "Fico em casa, pois hoje chove.",
+        "Depois de denn, heute ocupa a primeira posição e regnet a segunda. Neste uso, denn não leva o verbo ao final. Outros usos de denn, como partícula em perguntas, ficam fora desta ficha."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Apresentar uma razão ou explicação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, denn heute regnet es."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa, pois hoje chove."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Depois de denn, heute ocupa a primeira posição e regnet a segunda. Neste uso, denn não leva o verbo ao final. Outros usos de denn, como partícula em perguntas, ficam fora desta ficha.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "RI-010"
+      ]
+    },
+    {
+      "id": "CON-005",
+      "titulo": "sondern — Corrigir uma alternativa negada",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sondern",
+        "Corrigir uma alternativa negada",
+        "coordenacao"
+      ],
+      "explicacao": [
+        "Corrigir uma alternativa negada.",
+        "Ich trinke keinen Kaffee, sondern Tee.",
+        "Não tomo café, mas chá.",
+        "A segunda parte substitui aquilo que foi negado. Compare aber: Der Kaffee ist heiß, aber gut — O café está quente, mas é bom. Uma negação anterior não obriga sempre sondern; depende da relação pretendida."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Corrigir uma alternativa negada.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich trinke keinen Kaffee, sondern Tee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não tomo café, mas chá."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A segunda parte substitui aquilo que foi negado. Compare aber: Der Kaffee ist heiß, aber gut — O café está quente, mas é bom. Uma negação anterior não obriga sempre sondern; depende da relação pretendida.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-006",
+      "titulo": "doch — Expressar contraste ou quebra de expectativa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "doch",
+        "Expressar contraste ou quebra de expectativa",
+        "coordenacao"
+      ],
+      "explicacao": [
+        "Expressar contraste ou quebra de expectativa.",
+        "Ich wollte nicht gehen, doch ich musste.",
+        "Eu não queria ir, mas precisava.",
+        "Neste exemplo, doch funciona como conjunção coordenativa. Não é apenas um aber mais enfático. Também pode ocupar a primeira posição como advérbio: Doch musste ich gehen — Contudo, precisei ir. A resposta Doch! e as partículas têm outros usos; ver módulo 06."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Expressar contraste ou quebra de expectativa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich wollte nicht gehen, doch ich musste."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Eu não queria ir, mas precisava."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Neste exemplo, doch funciona como conjunção coordenativa. Não é apenas um aber mais enfático. Também pode ocupar a primeira posição como advérbio: Doch musste ich gehen — Contudo, precisei ir. A resposta Doch! e as partículas têm outros usos; ver módulo 06.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-007",
+      "titulo": "weil — Apresentar uma causa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "weil",
+        "Apresentar uma causa",
+        "subordinacao"
+      ],
+      "explicacao": [
+        "Apresentar uma causa.",
+        "Ich bleibe zu Hause, weil es heute regnet.",
+        "Fico em casa porque hoje chove.",
+        "No modelo da escrita padrão, regnet fica no final da subordinada. Com Perfekt: ..., weil es geregnet hat. Não ensinar a ordem coloquial com verbo em segunda posição como modelo básico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Apresentar uma causa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, weil es heute regnet."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa porque hoje chove."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No modelo da escrita padrão, regnet fica no final da subordinada. Com Perfekt: ..., weil es geregnet hat. Não ensinar a ordem coloquial com verbo em segunda posição como modelo básico.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CQ-004",
+        "RI-008"
+      ]
+    },
+    {
+      "id": "CON-008",
+      "titulo": "dass — Introduzir o conteúdo de uma ideia ou informação",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "dass",
+        "Introduzir o conteúdo de uma ideia ou informação",
+        "subordinacao"
+      ],
+      "explicacao": [
+        "Introduzir o conteúdo de uma ideia ou informação.",
+        "Ich denke, dass der Text interessant ist.",
+        "Acho que o texto é interessante.",
+        "Dass não indica causa. Não confundir com das, artigo ou pronome: das Buch; das Buch, das ich lese. A grafia e a função são diferentes."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Introduzir o conteúdo de uma ideia ou informação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich denke, dass der Text interessant ist."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Acho que o texto é interessante."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Dass não indica causa. Não confundir com das, artigo ou pronome: das Buch; das Buch, das ich lese. A grafia e a função são diferentes.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-009",
+      "titulo": "wenn — Indicar condição",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "wenn",
+        "Indicar condição",
+        "subordinacao"
+      ],
+      "explicacao": [
+        "Indicar condição.",
+        "Wenn es morgen regnet, bleibe ich zu Hause.",
+        "Se chover amanhã, fico em casa.",
+        "A subordinada inicial ocupa a primeira posição estrutural da principal; depois da vírgula vem bleibe e em seguida ich. Não inserir automaticamente dann; ele é possível, mas não obrigatório."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Indicar condição.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wenn es morgen regnet, bleibe ich zu Hause."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Se chover amanhã, fico em casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A subordinada inicial ocupa a primeira posição estrutural da principal; depois da vírgula vem bleibe e em seguida ich. Não inserir automaticamente dann; ele é possível, mas não obrigatório.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-010",
+      "titulo": "wenn — Situar um acontecimento habitual ou futuro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "wenn",
+        "Situar um acontecimento habitual ou futuro",
+        "subordinacao"
+      ],
+      "explicacao": [
+        "Situar um acontecimento habitual ou futuro.",
+        "Wenn ich Zeit habe, lese ich.",
+        "Quando tenho tempo, leio.",
+        "Wenn pode corresponder a quando ou se. Para uma ocasião única situada no passado, o modelo usual é als: Als ich gestern nach Hause kam, war es spät."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Situar um acontecimento habitual ou futuro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wenn ich Zeit habe, lese ich."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Quando tenho tempo, leio."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Wenn pode corresponder a quando ou se. Para uma ocasião única situada no passado, o modelo usual é als: Als ich gestern nach Hause kam, war es spät.",
+          "citacoes_de": [
+            "Als ich gestern nach Hause kam, war es spät"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-011",
+      "titulo": "obwohl — Apresentar uma circunstância que não impede o fato",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "obwohl",
+        "Apresentar uma circunstância que não impede o fato",
+        "subordinacao"
+      ],
+      "explicacao": [
+        "Apresentar uma circunstância que não impede o fato.",
+        "Obwohl es regnet, gehe ich zum See.",
+        "Embora esteja chovendo, vou ao lago.",
+        "Expressa concessão. Regnet encerra a subordinada; gehe vem logo depois da vírgula na principal. Compare trotz des Regens: apesar da chuva, grupo preposicional."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Apresentar uma circunstância que não impede o fato.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Obwohl es regnet, gehe ich zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Embora esteja chovendo, vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Expressa concessão. Regnet encerra a subordinada; gehe vem logo depois da vírgula na principal. Compare trotz des Regens: apesar da chuva, grupo preposicional.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "RI-011"
+      ]
+    },
+    {
+      "id": "CON-012",
+      "titulo": "ob — Introduzir uma dúvida de resposta sim ou não",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "ob",
+        "Introduzir uma dúvida de resposta sim ou não",
+        "subordinacao"
+      ],
+      "explicacao": [
+        "Introduzir uma dúvida de resposta sim ou não.",
+        "Ich weiß nicht, ob er heute kommt.",
+        "Não sei se ele vem hoje.",
+        "Ob introduz aqui uma pergunta indireta. Não equivale a wenn condicional: Wenn er kommt, mache ich Kaffee — Se ele vier, faço café."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Introduzir uma dúvida de resposta sim ou não.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich weiß nicht, ob er heute kommt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não sei se ele vem hoje."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ob introduz aqui uma pergunta indireta. Não equivale a wenn condicional: Wenn er kommt, mache ich Kaffee — Se ele vier, faço café.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-013",
+      "titulo": "als — Situar uma ocasião ou período único no passado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "als",
+        "Situar uma ocasião ou período único no passado",
+        "subordinacao"
+      ],
+      "explicacao": [
+        "Situar uma ocasião ou período único no passado.",
+        "Als ich gestern nach Hause kam, war es spät.",
+        "Quando cheguei em casa ontem, era tarde.",
+        "Als também situa um período único: Als ich ein Kind war — Quando eu era criança. Não traduz todo quando; repetição no passado normalmente usa wenn."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Situar uma ocasião ou período único no passado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Als ich gestern nach Hause kam, war es spät."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Quando cheguei em casa ontem, era tarde."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Als também situa um período único: Als ich ein Kind war — Quando eu era criança. Não traduz todo quando; repetição no passado normalmente usa wenn.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-014",
+      "titulo": "deshalb — Apresentar uma consequência",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "deshalb",
+        "Apresentar uma consequência",
+        "adverbio conector"
+      ],
+      "explicacao": [
+        "Apresentar uma consequência.",
+        "Es regnet. Deshalb bleibe ich zu Hause.",
+        "Está chovendo. Por isso, fico em casa.",
+        "Deshalb ocupa a primeira posição da segunda oração; bleibe ocupa a segunda e ich vem depois. Também: Ich bleibe deshalb zu Hause. Não impor inversão em qualquer posição de deshalb."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Apresentar uma consequência.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet. Deshalb bleibe ich zu Hause."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Está chovendo. Por isso, fico em casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Deshalb ocupa a primeira posição da segunda oração; bleibe ocupa a segunda e ich vem depois. Também: Ich bleibe deshalb zu Hause. Não impor inversão em qualquer posição de deshalb.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "RI-007",
+        "CQ-006"
+      ]
+    },
+    {
+      "id": "CON-015",
+      "titulo": "trotzdem — Apresentar um resultado contrário à expectativa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "trotzdem",
+        "Apresentar um resultado contrário à expectativa",
+        "adverbio conector"
+      ],
+      "explicacao": [
+        "Apresentar um resultado contrário à expectativa.",
+        "Es regnet. Trotzdem gehe ich zum See.",
+        "Está chovendo. Mesmo assim, vou ao lago.",
+        "Quando trotzdem inicia a declaração, gehe vem depois dele. Compare obwohl: Obwohl es regnet, gehe ich zum See. A relação é próxima, mas a estrutura muda."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Apresentar um resultado contrário à expectativa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet. Trotzdem gehe ich zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Está chovendo. Mesmo assim, vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Quando trotzdem inicia a declaração, gehe vem depois dele. Compare obwohl: Obwohl es regnet, gehe ich zum See. A relação é próxima, mas a estrutura muda.",
+          "citacoes_de": [
+            "Obwohl es regnet, gehe ich zum See"
+          ]
+        }
+      ],
+      "relacionados": [
+        "RI-012"
+      ]
+    },
+    {
+      "id": "CON-016",
+      "titulo": "dann — Indicar sequência ou consequência contextual",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "dann",
+        "Indicar sequência ou consequência contextual",
+        "adverbio conector"
+      ],
+      "explicacao": [
+        "Indicar sequência ou consequência contextual.",
+        "Ich mache Kaffee. Dann lese ich den Text.",
+        "Faço café. Depois, leio o texto.",
+        "Aqui dann organiza a sequência; em condição, pode indicar então: Wenn ich Zeit habe, dann lese ich. Dann não é conjunção de posição zero."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Indicar sequência ou consequência contextual.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich mache Kaffee. Dann lese ich den Text."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Faço café. Depois, leio o texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui dann organiza a sequência; em condição, pode indicar então: Wenn ich Zeit habe, dann lese ich. Dann não é conjunção de posição zero.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CON-017",
+      "titulo": "danach — Retomar um acontecimento e indicar o que vem depois",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "danach",
+        "Retomar um acontecimento e indicar o que vem depois",
+        "adverbio conector"
+      ],
+      "explicacao": [
+        "Danach retoma o acontecimento anterior: depois disso.",
+        "Ich arbeite im Garten. Danach trinke ich einen Kaffee.",
+        "Trabalho no jardim. Depois disso, tomo um café.",
+        "Compare nach der Arbeit: depois do trabalho. Nach acompanha o dativo; danach é um advérbio."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Danach retoma o acontecimento anterior: depois disso.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich arbeite im Garten. Danach trinke ich einen Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Trabalho no jardim. Depois disso, tomo um café."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Compare nach der Arbeit: depois do trabalho. Nach acompanha o dativo; danach é um advérbio.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "CQ-001",
+      "titulo": "Primeiro a relação de sentido",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Pergunte se a ligação acrescenta informação, contrasta, explica uma razão, apresenta consequência ou situa o acontecimento. A tradução isolada do conector não basta para escolher a estrutura.",
+        "Die Luft ist kühl, aber die Sonne scheint schon.",
+        "O ar está fresco, mas o sol já brilha."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Pergunte se a ligação acrescenta informação, contrasta, explica uma razão, apresenta consequência ou situa o acontecimento. A tradução isolada do conector não basta para escolher a estrutura.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Luft ist kühl, aber die Sonne scheint schon."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O ar está fresco, mas o sol já brilha."
+        }
+      ],
+      "relacionados": [
+        "CON-003"
+      ]
+    },
+    {
+      "id": "CQ-002",
+      "titulo": "Posição zero como ferramenta",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Em declarações coordenadas com und, oder, aber, denn e sondern, o conector não ocupa a primeira posição estrutural da oração seguinte. Depois dele, o verbo conjugado conserva o modelo de segunda posição. Essa posição conta grupos, não palavras: ..., denn am frühen Morgen gehe ich zum See.",
+        "Ich bleibe zu Hause, denn heute regnet es.",
+        "Fico em casa, pois hoje chove."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Em declarações coordenadas com und, oder, aber, denn e sondern, o conector não ocupa a primeira posição estrutural da oração seguinte. Depois dele, o verbo conjugado conserva o modelo de segunda posição. Essa posição conta grupos, não palavras: ..., denn am frühen Morgen gehe ich zum See.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, denn heute regnet es."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa, pois hoje chove."
+        }
+      ],
+      "relacionados": [
+        "CO-06-01",
+        "CON-001",
+        "CON-004"
+      ]
+    },
+    {
+      "id": "CQ-003",
+      "titulo": "Uma oração pode começar por outro elemento",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Ich lese heute. Heute lese ich. Ambas estão corretas. Depois de um conector coordenativo, a mesma possibilidade existe: ..., und heute lese ich. Não usar a fórmula conector mais sujeito como obrigação.",
+        "Ich höre die Vögel und bleibe einen Moment stehen.",
+        "Ouço os pássaros e paro por um momento."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ich lese heute. Heute lese ich. Ambas estão corretas. Depois de um conector coordenativo, a mesma possibilidade existe: ..., und heute lese ich. Não usar a fórmula conector mais sujeito como obrigação.",
+          "citacoes_de": [
+            "Heute lese ich",
+            "Ich lese heute"
+          ]
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich höre die Vögel und bleibe einen Moment stehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ouço os pássaros e paro por um momento."
+        }
+      ],
+      "relacionados": [
+        "CON-001"
+      ]
+    },
+    {
+      "id": "CQ-004",
+      "titulo": "Subordinada com verbo no final",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "No modelo básico introduzido por weil, dass, wenn, obwohl, ob ou als, o verbo conjugado vai ao final. Com modal: ..., weil ich heute arbeiten muss. Com Perfekt: ..., weil ich heute gearbeitet habe. Há construções verbais avançadas que ficam fora deste núcleo.",
+        "Ich bleibe zu Hause, weil es heute regnet.",
+        "Fico em casa porque hoje chove."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "No modelo básico introduzido por weil, dass, wenn, obwohl, ob ou als, o verbo conjugado vai ao final. Com modal: ..., weil ich heute arbeiten muss. Com Perfekt: ..., weil ich heute gearbeitet habe. Há construções verbais avançadas que ficam fora deste núcleo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, weil es heute regnet."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa porque hoje chove."
+        }
+      ],
+      "relacionados": [
+        "CO-06-02",
+        "CON-007"
+      ]
+    },
+    {
+      "id": "CQ-005",
+      "titulo": "Subordinada antes da principal",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Weil es regnet, bleibe ich zu Hause. — Como está chovendo, fico em casa. Toda a subordinada ocupa a primeira posição estrutural; bleibe vem depois da vírgula. Se a principal vier primeiro: Ich bleibe zu Hause, weil es regnet.",
+        "Ich bleibe zu Hause, weil es heute regnet.",
+        "Fico em casa porque hoje chove."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Weil es regnet, bleibe ich zu Hause. — Como está chovendo, fico em casa. Toda a subordinada ocupa a primeira posição estrutural; bleibe vem depois da vírgula. Se a principal vier primeiro: Ich bleibe zu Hause, weil es regnet.",
+          "citacoes_de": [
+            "Weil es regnet, bleibe ich zu Hause",
+            "Ich bleibe zu Hause, weil es regnet",
+            "Ich bleibe zu Hause"
+          ]
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, weil es heute regnet."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa porque hoje chove."
+        }
+      ],
+      "relacionados": [
+        "CON-007"
+      ]
+    },
+    {
+      "id": "CQ-006",
+      "titulo": "Razão e consequência",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Ich bleibe zu Hause, denn es regnet. Ich bleibe zu Hause, weil es regnet. Es regnet. Deshalb bleibe ich zu Hause. — Fico em casa porque chove; chove, por isso fico em casa. Denn e weil apresentam a razão; deshalb apresenta a consequência. Não são substituições mecânicas na mesma ordem.",
+        "Es regnet. Deshalb bleibe ich zu Hause.",
+        "Está chovendo. Por isso, fico em casa."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ich bleibe zu Hause, denn es regnet. Ich bleibe zu Hause, weil es regnet. Es regnet. Deshalb bleibe ich zu Hause. — Fico em casa porque chove; chove, por isso fico em casa. Denn e weil apresentam a razão; deshalb apresenta a consequência. Não são substituições mecânicas na mesma ordem.",
+          "citacoes_de": [
+            "Es regnet. Deshalb bleibe ich zu Hause",
+            "Ich bleibe zu Hause, weil es regnet",
+            "Ich bleibe zu Hause, denn es regnet",
+            "Deshalb bleibe ich zu Hause",
+            "Ich bleibe zu Hause",
+            "Es regnet"
+          ]
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet. Deshalb bleibe ich zu Hause."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Está chovendo. Por isso, fico em casa."
+        }
+      ],
+      "relacionados": [
+        "CON-014"
+      ]
+    },
+    {
+      "id": "CQ-007",
+      "titulo": "Concessão em três construções",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Obwohl es regnet, gehe ich spazieren. Es regnet. Trotzdem gehe ich spazieren. Trotz des Regens gehe ich spazieren. — Embora chova, saio para caminhar; chove, mesmo assim saio; apesar da chuva, saio. Obwohl introduz oração, trotzdem conecta como advérbio e trotz rege grupo nominal.",
+        "Es regnet. Trotzdem gehe ich zum See.",
+        "Está chovendo. Mesmo assim, vou ao lago."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Obwohl es regnet, gehe ich spazieren. Es regnet. Trotzdem gehe ich spazieren. Trotz des Regens gehe ich spazieren. — Embora chova, saio para caminhar; chove, mesmo assim saio; apesar da chuva, saio. Obwohl introduz oração, trotzdem conecta como advérbio e trotz rege grupo nominal.",
+          "citacoes_de": [
+            "Obwohl es regnet, gehe ich spazieren",
+            "Trotz des Regens gehe ich spazieren",
+            "Trotzdem gehe ich spazieren",
+            "Es regnet"
+          ]
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet. Trotzdem gehe ich zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Está chovendo. Mesmo assim, vou ao lago."
+        }
+      ],
+      "relacionados": [
+        "CON-015"
+      ]
+    },
+    {
+      "id": "CQ-008",
+      "titulo": "Vírgulas essenciais",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Separar a subordinada da principal por vírgula. Antes de aber, denn, sondern e doch coordenativo, usar vírgula nos modelos apresentados. Entre duas orações principais independentes ligadas por und ou oder, a vírgula pode ser usada para clareza. Não inserir vírgula automaticamente em toda ligação de palavras ou verbos com und/ou oder.",
+        "Ich trinke keinen Kaffee, sondern Tee.",
+        "Não tomo café, mas chá."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Separar a subordinada da principal por vírgula. Antes de aber, denn, sondern e doch coordenativo, usar vírgula nos modelos apresentados. Entre duas orações principais independentes ligadas por und ou oder, a vírgula pode ser usada para clareza. Não inserir vírgula automaticamente em toda ligação de palavras ou verbos com und/ou oder.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich trinke keinen Kaffee, sondern Tee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não tomo café, mas chá."
+        }
+      ],
+      "relacionados": [
+        "CON-005"
+      ]
+    },
+    {
+      "id": "CQ-009",
+      "titulo": "Ligação sem repetir tudo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Ich höre die Vögel und bleibe stehen. — Ouço os pássaros e paro. O sujeito compartilhado pode não se repetir. Ich versuche, den Text zu verstehen — Tento compreender o texto — tem outra construção: o infinitivo com zu não surge simplesmente porque existe uma segunda ação. Consulte também as construções de infinitivo relacionadas.",
+        "Ich höre die Vögel und bleibe einen Moment stehen.",
+        "Ouço os pássaros e paro por um momento."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ich höre die Vögel und bleibe stehen. — Ouço os pássaros e paro. O sujeito compartilhado pode não se repetir. Ich versuche, den Text zu verstehen — Tento compreender o texto — tem outra construção: o infinitivo com zu não surge simplesmente porque existe uma segunda ação. Consulte também as construções de infinitivo relacionadas.",
+          "citacoes_de": [
+            "Ich höre die Vögel und bleibe stehen",
+            "Ich versuche, den Text zu verstehen",
+            "Ich höre die Vögel"
+          ]
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich höre die Vögel und bleibe einen Moment stehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ouço os pássaros e paro por um momento."
+        }
+      ],
+      "relacionados": [
+        "CO-06-03",
+        "CON-001"
+      ]
+    },
+    {
+      "id": "CQ-010",
+      "titulo": "A fórmula como apoio",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) ajuda a consultar a oração principal. Não impõe a ordem de toda frase nem substitui os modelos de coordenação, subordinação e advérbio conector. Identificar primeiro o tipo de ligação.",
+        "Die Luft ist kühl, aber die Sonne scheint schon.",
+        "O ar está fresco, mas o sol já brilha."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) ajuda a consultar a oração principal. Não impõe a ordem de toda frase nem substitui os modelos de coordenação, subordinação e advérbio conector. Identificar primeiro o tipo de ligação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Luft ist kühl, aber die Sonne scheint schon."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O ar está fresco, mas o sol já brilha."
+        }
+      ],
+      "relacionados": [
+        "CON-003"
+      ],
+      "tabelas": [
+        {
+          "titulo": "Três modelos de ligação",
+          "colunas": [
+            "Ligação",
+            "Modelo",
+            "Exemplo alemão"
+          ],
+          "colunas_alemao": [
+            2
+          ],
+          "linhas": [
+            [
+              "coordenacao",
+              "conector de posição zero + oração com verbo conjugado em segunda posição no modelo declarativo",
+              "..., denn heute regnet es."
+            ],
+            [
+              "subordinacao",
+              "conector + subordinada com verbo conjugado no final no modelo básico",
+              "..., weil es heute regnet."
+            ],
+            [
+              "adverbio conector",
+              "advérbio na primeira posição + verbo conjugado + sujeito quando este não ocupa a primeira posição",
+              "Deshalb bleibe ich zu Hause."
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

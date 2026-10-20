@@ -23,7 +23,7 @@
 <meta name="apple-mobile-web-app-title" content="Deutschleben">
 
 <link rel="stylesheet" href="caixas-leitura.css?v=blocos-controles-17">
-<script type="module" src="firebase-dados.js?v=blocos-15"></script>
+<script type="module" src="firebase-dados.js?v=cards-construcoes-21"></script>
 
 <style>
 
@@ -1470,6 +1470,17 @@ textarea {
     }
 }
 
+/* Consulta local de construções: mesmo painel e tipografia da Ajuda rápida. */
+#fase-textos #consultar-construcoes{white-space:normal}
+.consulta-construcoes{margin-top:18px;padding:14px 8px 8px 0;border-top:1px solid #aab7c4;overflow-wrap:anywhere;max-height:70vh;max-height:70dvh;overflow-y:auto;scrollbar-gutter:stable}
+.consulta-construcoes h3{scroll-margin-top:20px}
+.consulta-construcoes h3,.consulta-construcoes h4{margin:12px 0 8px}
+.construcao-funcao+.construcao-funcao{margin-top:16px;padding-top:8px;border-top:1px solid #aab7c4}
+.construcao-candidato{margin:12px 0;padding:10px 12px;background:#F5F7FA;border:1px solid #AAB7C4;border-radius:10px}
+.construcao-candidato p{margin:6px 0}
+#dl-app .consulta-construcoes details>summary{font:inherit;font-size:20px;cursor:pointer;margin-top:8px}
+#construcoes-status:empty,#construcoes-expansoes:empty{display:none}
+
 /* Celulares */
 @media (max-width: 520px) {
 
@@ -1783,8 +1794,18 @@ textarea {
                 <textarea id="minha-pergunta" aria-describedby="compreensao-temporaria"></textarea>
                 <div class="acoes-apoio">
                     <button type="button" class="secundario" id="consultar-leo" disabled>Consultar LEO</button>
+                    <button type="button" class="secundario" id="consultar-construcoes" disabled>Consultar construções</button>
                     <button type="button" class="secundario" id="limpar-consulta">Limpar consulta</button>
                 </div>
+                <section id="consulta-construcoes" class="consulta-construcoes" aria-labelledby="construcoes-titulo" tabindex="0" hidden>
+                    <h3 id="construcoes-titulo">Usos possíveis</h3>
+                    <p>Compare os exemplos com a frase do texto.</p>
+                    <p id="construcoes-trecho"></p>
+                    <p id="construcoes-contexto"></p>
+                    <p id="construcoes-expansoes"></p>
+                    <p id="construcoes-status" role="status" aria-live="polite"></p>
+                    <div id="construcoes-resultados"></div>
+                </section>
             </aside>
         </div>
         <section class="compreensao">
@@ -1860,7 +1881,7 @@ textarea {
         </div>
     </div>
 </dialog>
-<script src="textos.js?v=8" defer></script>
+<script src="textos.js?v=rg-01-10-v10" defer></script>
 
 <div class="estrada-overlay" id="estrada-overlay" role="dialog" aria-modal="true" aria-label="Apostila">
     <div class="estrada-painel">
@@ -1882,110 +1903,10 @@ textarea {
     </div>
 </div>
 
-<script type="module" src="apostila.js?v=blocos-16"></script>
+<script type="module" src="apostila.js?v=rg-01-10-v10"></script>
 
-<div class="rg-overlay" id="rg-overlay" role="dialog" aria-modal="true" aria-label="Referência Gramatical">
-    <div class="rg-painel">
-        <div class="rg-cabecalho">
-            <h2>Referência Gramatical</h2>
-            <button type="button" class="rg-voltar" onclick="fecharReferencia()">Voltar</button>
-        </div>
-        <input type="search" id="rg-busca" class="rg-busca"
-            placeholder="Buscar tema, regra ou palavra…" autocomplete="off">
-        <div class="rg-contador" id="rg-contador"></div>
-        <div class="rg-lista" id="rg-lista"></div>
-    </div>
-</div>
-
-<script>
-(function () {
-    const overlay = document.getElementById("rg-overlay");
-    const inputBusca = document.getElementById("rg-busca");
-    const lista = document.getElementById("rg-lista");
-    const contador = document.getElementById("rg-contador");
-    let dados = null, carregando = false;
-
-    function esc(t) {
-        return String(t ?? "").replace(/[&<>\"']/g, c =>
-            ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '\"': "&quot;", "'": "&#39;" }[c]));
-    }
-
-    function chips(arr) {
-        return '<div class="rg-chips">' + arr.map(x => '<span class="rg-chip">' + esc(x) + '</span>').join("") + '</div>';
-    }
-
-    function textoBusca(m) {
-        const partes = [m.titulo, m.resumo, m.categoria, m.formula];
-        ["gatilhos", "detalhes", "itens", "dativo", "acusativo", "dativo_ou_acusativo"].forEach(k => {
-            if (Array.isArray(m[k])) partes.push(m[k].join(" "));
-        });
-        return partes.filter(Boolean).join(" ").toLowerCase();
-    }
-
-    function renderModulo(m) {
-        let html = '<div class="rg-item">';
-        html += '<div><span class="rg-titulo">' + esc(m.titulo) + '</span>';
-        if (m.categoria) html += '<span class="rg-cat">' + esc(m.categoria) + '</span>';
-        html += '</div>';
-        if (m.resumo) html += '<div class="rg-resumo">' + esc(m.resumo) + '</div>';
-        if (m.formula) html += '<div class="rg-formula">' + esc(m.formula) + '</div>';
-        if (Array.isArray(m.detalhes) && m.detalhes.length) {
-            html += '<ul class="rg-detalhes">' + m.detalhes.map(d => '<li>' + esc(d) + '</li>').join("") + '</ul>';
-        }
-        if (Array.isArray(m.itens) && m.itens.length) html += chips(m.itens);
-        if (Array.isArray(m.dativo)) html += '<div class="rg-sub">Dativo</div>' + chips(m.dativo);
-        if (Array.isArray(m.acusativo)) html += '<div class="rg-sub">Acusativo</div>' + chips(m.acusativo);
-        if (Array.isArray(m.dativo_ou_acusativo)) html += '<div class="rg-sub">Dativo ou acusativo (Wechselpräpositionen)</div>' + chips(m.dativo_ou_acusativo);
-        html += '</div>';
-        return html;
-    }
-
-    async function carregar() {
-        if (dados || carregando) return;
-        carregando = true;
-        lista.innerHTML = '<p class="rg-vazio">Carregando…</p>';
-        try {
-            const r = await fetch("./data/referencia_gramatical.json");
-            if (!r.ok) throw new Error(r.status);
-            const j = await r.json();
-            dados = Array.isArray(j.modulos) ? j.modulos : [];
-        } catch (e) {
-            lista.innerHTML = '<p class="rg-vazio">Não foi possível carregar a referência.</p>';
-            carregando = false;
-            return;
-        }
-        carregando = false;
-        render();
-    }
-
-    function render() {
-        if (!dados) return;
-        const termo = inputBusca.value.trim().toLowerCase();
-        const filtrados = termo ? dados.filter(m => textoBusca(m).includes(termo)) : dados;
-        contador.textContent = filtrados.length + " de " + dados.length + " temas";
-        lista.innerHTML = filtrados.length
-            ? filtrados.map(renderModulo).join("")
-            : '<p class="rg-vazio">Nenhum tema encontrado.</p>';
-    }
-
-    inputBusca.addEventListener("input", render);
-
-    window.abrirReferencia = function () {
-        overlay.classList.add("aberta");
-        document.body.style.overflow = "hidden";
-        carregar();
-        setTimeout(() => inputBusca.focus(), 50);
-    };
-    window.fecharReferencia = function () {
-        overlay.classList.remove("aberta");
-        document.body.style.overflow = "";
-    };
-    overlay.addEventListener("click", ev => { if (ev.target === overlay) window.fecharReferencia(); });
-    document.addEventListener("keydown", ev => {
-        if (ev.key === "Escape" && overlay.classList.contains("aberta")) window.fecharReferencia();
-    });
-})();
-</script>
+<!-- Referência Gramatical: componente compartilhado; temas e IDs existentes preservados. -->
+<script type="module" src="referencia.js?v=rg-01-10-v10"></script>
 
 <div class="prog-overlay" id="prog-overlay" role="dialog" aria-modal="true" aria-label="Memória de estudo">
     <div class="prog-painel">

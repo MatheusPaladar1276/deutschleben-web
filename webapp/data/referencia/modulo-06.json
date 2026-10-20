@@ -1,0 +1,746 @@
+{
+  "id": "negacao_no_contexto",
+  "numero": "06",
+  "titulo": "Negação no contexto",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "NEG-001",
+      "titulo": "O que está sendo negado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Compreenda o sentido da frase antes de procurar uma posição para nicht. A negação pode recusar o acontecimento ou contrastar uma parte dele.",
+        "Ich arbeite morgen nicht.",
+        "Amanhã não trabalho.",
+        "Aqui a leitura normal é que amanhã não haverá trabalho da minha parte. A posição, o contexto e, na fala, a entonação ajudam a definir o alcance da negação."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Compreenda o sentido da frase antes de procurar uma posição para nicht. A negação pode recusar o acontecimento ou contrastar uma parte dele.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich arbeite morgen nicht."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Amanhã não trabalho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui a leitura normal é que amanhã não haverá trabalho da minha parte. A posição, o contexto e, na fala, a entonação ajudam a definir o alcance da negação.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CO-05-02"
+      ]
+    },
+    {
+      "id": "NEG-002",
+      "titulo": "Nicht e kein",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Kein é o modelo básico para negar um grupo nominal indefinido com ein ou sem artigo. Nicht serve para outras negações conforme a construção.",
+        "Ich habe ein Auto. Ich habe kein Auto. Ich lese das Buch nicht.",
+        "Tenho um carro. Não tenho carro. Não leio o livro.",
+        "Na última frase, das Buch continua definido: nego a leitura desse livro. Evitar a regra todo substantivo se nega com kein."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Kein é o modelo básico para negar um grupo nominal indefinido com ein ou sem artigo. Nicht serve para outras negações conforme a construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe ein Auto. Ich habe kein Auto. Ich lese das Buch nicht."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tenho um carro. Não tenho carro. Não leio o livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Na última frase, das Buch continua definido: nego a leitura desse livro. Evitar a regra todo substantivo se nega com kein.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        }
+      ],
+      "relacionados": [
+        "CO-05-01",
+        "PR-020",
+        "NT-01"
+      ]
+    },
+    {
+      "id": "NEG-003",
+      "titulo": "Substantivo sem artigo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Com um nome de substância ou plural indefinido, kein é uma forma comum de negar sua presença, consumo ou existência.",
+        "Ich esse kein Fleisch. Ich habe keine Bücher.",
+        "Não como carne. Não tenho livros.",
+        "Ich esse nicht Fleisch é possível em contraste explícito: Ich esse nicht Fleisch, sondern Fisch — Não como carne, mas peixe. Não apresentar essa ordem como modelo neutro para não comer carne."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Com um nome de substância ou plural indefinido, kein é uma forma comum de negar sua presença, consumo ou existência.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich esse kein Fleisch. Ich habe keine Bücher."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não como carne. Não tenho livros."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ich esse nicht Fleisch é possível em contraste explícito: Ich esse nicht Fleisch, sondern Fisch — Não como carne, mas peixe. Não apresentar essa ordem como modelo neutro para não comer carne.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-004",
+      "titulo": "Adjetivo ou advérbio",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Nicht normalmente precede o adjetivo ou advérbio negado nesse tipo de construção.",
+        "Die Luft ist nicht kühl. Ich gehe nicht langsam.",
+        "O ar não está fresco. Não caminho devagar.",
+        "No Texto 01: Die Luft ist kühl. A negação mantém a estrutura e acrescenta nicht antes de kühl. Não é necessário inserir kein."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht normalmente precede o adjetivo ou advérbio negado nesse tipo de construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Luft ist nicht kühl. Ich gehe nicht langsam."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O ar não está fresco. Não caminho devagar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No Texto 01: Die Luft ist kühl. A negação mantém a estrutura e acrescenta nicht antes de kühl. Não é necessário inserir kein.",
+          "citacoes_de": [
+            "Die Luft ist kühl"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-005",
+      "titulo": "Grupo definido ou possessivo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Um nome definido ou acompanhado de possessivo também pode integrar um contraste com nicht.",
+        "Das ist nicht mein Buch.",
+        "Este não é meu livro.",
+        "Não usar kein mein Buch. Compare Das ist kein Buch — Isto não é um livro. Os sentidos são diferentes."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Um nome definido ou acompanhado de possessivo também pode integrar um contraste com nicht.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das ist nicht mein Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Este não é meu livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não usar kein mein Buch. Compare Das ist kein Buch — Isto não é um livro. Os sentidos são diferentes.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-006",
+      "titulo": "Frase curta com verbo simples",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Em algumas frases curtas, nicht aparece ao final. Aprenda o modelo sem transformá-lo em regra universal.",
+        "Ich schlafe nicht. Er arbeitet heute nicht.",
+        "Não estou dormindo. Ele não trabalha hoje.",
+        "Um só verbo não garante nicht na última posição: Ich bin nicht müde — Não estou cansado; Ich gehe nicht zum See — Não vou ao lago."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Em algumas frases curtas, nicht aparece ao final. Aprenda o modelo sem transformá-lo em regra universal.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich schlafe nicht. Er arbeitet heute nicht."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não estou dormindo. Ele não trabalha hoje."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Um só verbo não garante nicht na última posição: Ich bin nicht müde — Não estou cansado; Ich gehe nicht zum See — Não vou ao lago.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-007",
+      "titulo": "Destino e localização",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Nicht pode vir antes de um grupo de lugar que integra o sentido negado.",
+        "Heute gehe ich nicht zum See.",
+        "Hoje não vou ao lago.",
+        "Esta frase pode simplesmente negar a ida ao lago, sem afirmar ida a outro lugar. Um contraste com outro destino só aparece se o contexto o sustentar."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht pode vir antes de um grupo de lugar que integra o sentido negado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Heute gehe ich nicht zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje não vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Esta frase pode simplesmente negar a ida ao lago, sem afirmar ida a outro lugar. Um contraste com outro destino só aparece se o contexto o sustentar.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-008",
+      "titulo": "Verbo separável",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "A partícula separada costuma continuar no final da oração principal; nicht pode vir antes dela.",
+        "Ich stehe heute nicht auf.",
+        "Hoje não me levanto.",
+        "Aufstehen aparece como stehe ... auf. Não colocar nicht mecanicamente depois da partícula: o modelo aqui é nicht auf."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "A partícula separada costuma continuar no final da oração principal; nicht pode vir antes dela.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich stehe heute nicht auf."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje não me levanto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aufstehen aparece como stehe ... auf. Não colocar nicht mecanicamente depois da partícula: o modelo aqui é nicht auf.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-009",
+      "titulo": "Com verbo modal",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Na construção principal com modal e infinitivo final, nicht pode vir antes do infinitivo e de outros elementos ligados ao predicado.",
+        "Ich kann nicht schlafen. Ich kann heute nicht im Garten arbeiten.",
+        "Não consigo dormir. Hoje não posso trabalhar no jardim.",
+        "Nicht não precisa estar imediatamente antes do infinitivo. Na segunda frase, im Garten aparece entre nicht e arbeiten. A leitura exata depende da situação."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Na construção principal com modal e infinitivo final, nicht pode vir antes do infinitivo e de outros elementos ligados ao predicado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich kann nicht schlafen. Ich kann heute nicht im Garten arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não consigo dormir. Hoje não posso trabalhar no jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht não precisa estar imediatamente antes do infinitivo. Na segunda frase, im Garten aparece entre nicht e arbeiten. A leitura exata depende da situação.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-010",
+      "titulo": "Não precisar e não ter permissão",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Nicht müssen nega a necessidade; nicht dürfen nega a permissão.",
+        "Ich muss heute nicht arbeiten. Ich darf heute nicht arbeiten.",
+        "Hoje não preciso trabalhar. Hoje não tenho permissão para trabalhar.",
+        "A primeira frase não proíbe o trabalho. Para impedir uma ação, nicht müssen não substitui nicht dürfen. Consultar também o módulo 02 de verbos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht müssen nega a necessidade; nicht dürfen nega a permissão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich muss heute nicht arbeiten. Ich darf heute nicht arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje não preciso trabalhar. Hoje não tenho permissão para trabalhar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A primeira frase não proíbe o trabalho. Para impedir uma ação, nicht müssen não substitui nicht dürfen. Consultar também o módulo 02 de verbos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CO-05-03",
+        "MD-müssen"
+      ]
+    },
+    {
+      "id": "NEG-011",
+      "titulo": "Perfekt",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "No modelo básico do Perfekt em oração principal, o particípio fica no final e nicht pode precedê-lo, com ou sem outros termos entre eles.",
+        "Ich habe das Buch nicht gelesen. Ich habe heute nicht im Garten gearbeitet.",
+        "Não li o livro. Hoje não trabalhei no jardim.",
+        "O auxiliar conjugado ocupa a segunda posição estrutural na declaração principal: Heute habe ich ... Não dizer que ele sempre vem no início da frase."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "No modelo básico do Perfekt em oração principal, o particípio fica no final e nicht pode precedê-lo, com ou sem outros termos entre eles.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe das Buch nicht gelesen. Ich habe heute nicht im Garten gearbeitet."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não li o livro. Hoje não trabalhei no jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O auxiliar conjugado ocupa a segunda posição estrutural na declaração principal: Heute habe ich ... Não dizer que ele sempre vem no início da frase.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-012",
+      "titulo": "Na oração subordinada",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Com weil ou dass, o verbo conjugado vai normalmente ao final; a negação permanece dentro da oração.",
+        "Ich bleibe zu Hause, weil ich heute nicht arbeite.",
+        "Fico em casa porque hoje não trabalho.",
+        "Com Perfekt: ..., weil ich das Buch nicht gelesen habe — porque não li o livro. Não transportar a ordem da oração principal para a subordinada."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Com weil ou dass, o verbo conjugado vai normalmente ao final; a negação permanece dentro da oração.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, weil ich heute nicht arbeite."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa porque hoje não trabalho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com Perfekt: ..., weil ich das Buch nicht gelesen habe — porque não li o livro. Não transportar a ordem da oração principal para a subordinada.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-013",
+      "titulo": "Contraste com o tempo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Para corrigir o dia ou horário, destaque a expressão temporal negada e a alternativa.",
+        "Ich arbeite nicht morgen, sondern am Montag.",
+        "Trabalho na segunda-feira, não amanhã.",
+        "Isso não equivale simplesmente a Ich arbeite morgen nicht. Sondern introduz a alternativa que corrige o elemento negado."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Para corrigir o dia ou horário, destaque a expressão temporal negada e a alternativa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich arbeite nicht morgen, sondern am Montag."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Trabalho na segunda-feira, não amanhã."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Isso não equivale simplesmente a Ich arbeite morgen nicht. Sondern introduz a alternativa que corrige o elemento negado.",
+          "citacoes_de": [
+            "Ich arbeite morgen nicht"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-014",
+      "titulo": "Contraste com o lugar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "A alternativa explícita deixa claro que a negação recai sobre o lugar, mantendo a atividade.",
+        "Ich arbeite morgen nicht im Garten, sondern im Haus.",
+        "Amanhã trabalho dentro de casa, não no jardim.",
+        "Sem a alternativa, não se deve afirmar automaticamente que a pessoa trabalha em outro local. O contexto pode apenas negar o trabalho no jardim."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "A alternativa explícita deixa claro que a negação recai sobre o lugar, mantendo a atividade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich arbeite morgen nicht im Garten, sondern im Haus."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Amanhã trabalho dentro de casa, não no jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sem a alternativa, não se deve afirmar automaticamente que a pessoa trabalha em outro local. O contexto pode apenas negar o trabalho no jardim.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-015",
+      "titulo": "Contraste com a causa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Nicht pode negar a razão apresentada, sem negar que a ação acontece.",
+        "Ich gehe nicht wegen der Arbeit in die Stadt, sondern wegen eines Termins.",
+        "Vou à cidade por causa de um compromisso, não por causa do trabalho.",
+        "Escolher exemplos com contraste explícito ajuda a compreender o alcance. Não usar a fórmula nicht antes do primeiro Te para negar o verbo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht pode negar a razão apresentada, sem negar que a ação acontece.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe nicht wegen der Arbeit in die Stadt, sondern wegen eines Termins."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou à cidade por causa de um compromisso, não por causa do trabalho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Escolher exemplos com contraste explícito ajuda a compreender o alcance. Não usar a fórmula nicht antes do primeiro Te para negar o verbo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-016",
+      "titulo": "Te Ka Mo Lo como consulta",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "A fórmula ajuda a localizar informações, mas não fornece um lugar fixo para nicht.",
+        "Ich gehe morgen nicht ins Büro.",
+        "Amanhã não vou ao escritório.",
+        "Morgen indica Te e ins Büro indica Lo. A construção não exige nicht antes de morgen. S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) é apoio didático, não uma sequência rígida; Neg não significa sempre última palavra."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "A fórmula ajuda a localizar informações, mas não fornece um lugar fixo para nicht.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe morgen nicht ins Büro."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Amanhã não vou ao escritório."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Morgen indica Te e ins Büro indica Lo. A construção não exige nicht antes de morgen. S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) é apoio didático, não uma sequência rígida; Neg não significa sempre última palavra.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-017",
+      "titulo": "Nada ninguém e nunca",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Nichts, niemand e nie já expressam negação no alemão padrão.",
+        "Ich sehe nichts. Niemand kommt. Ich rauche nie.",
+        "Não vejo nada. Ninguém vem. Nunca fumo.",
+        "Não acrescentar nicht apenas porque o português usa não ... nada ou não ... ninguém. Há negações múltiplas com outros efeitos de sentido; não são o modelo básico desta consulta."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nichts, niemand e nie já expressam negação no alemão padrão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich sehe nichts. Niemand kommt. Ich rauche nie."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não vejo nada. Ninguém vem. Nunca fumo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não acrescentar nicht apenas porque o português usa não ... nada ou não ... ninguém. Há negações múltiplas com outros efeitos de sentido; não são o modelo básico desta consulta.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-018",
+      "titulo": "Ainda não e não mais",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Noch nicht indica que algo ainda não aconteceu ou não se verifica; nicht mehr indica que deixou de acontecer ou de se verificar.",
+        "Ich verstehe den Text noch nicht. Ich arbeite nicht mehr hier.",
+        "Ainda não compreendo o texto. Não trabalho mais aqui.",
+        "Compare noch kein: Ich habe noch keinen Kaffee getrunken — Ainda não tomei café; kein ... mehr: Ich habe keinen Kaffee mehr — Não tenho mais café."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Noch nicht indica que algo ainda não aconteceu ou não se verifica; nicht mehr indica que deixou de acontecer ou de se verificar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich verstehe den Text noch nicht. Ich arbeite nicht mehr hier."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ainda não compreendo o texto. Não trabalho mais aqui."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Compare noch kein: Ich habe noch keinen Kaffee getrunken — Ainda não tomei café; kein ... mehr: Ich habe keinen Kaffee mehr — Não tenho mais café.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-019",
+      "titulo": "Nem todo e nenhum",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Negar a totalidade não é o mesmo que negar cada elemento do conjunto.",
+        "Nicht alle Bücher sind neu. Keine Bücher sind neu.",
+        "Nem todos os livros são novos. Nenhum dos livros é novo.",
+        "Nicht alle não afirma que todos sejam antigos; recusa que todos sejam novos. O contexto delimita quais livros estão em questão."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Negar a totalidade não é o mesmo que negar cada elemento do conjunto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Nicht alle Bücher sind neu. Keine Bücher sind neu."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Nem todos os livros são novos. Nenhum dos livros é novo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht alle não afirma que todos sejam antigos; recusa que todos sejam novos. O contexto delimita quais livros estão em questão.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NEG-020",
+      "titulo": "Resposta a pergunta negativa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Doch pode contrariar uma negação formulada na pergunta.",
+        "Arbeitest du heute nicht? Doch, ich arbeite heute.",
+        "Você não trabalha hoje? Trabalho, sim.",
+        "Nein, ich arbeite heute nicht confirma a negação. Doch tem outros usos; esta ficha cobre a resposta afirmativa que contraria uma pergunta negativa."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Doch pode contrariar uma negação formulada na pergunta.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Arbeitest du heute nicht? Doch, ich arbeite heute."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Você não trabalha hoje? Trabalho, sim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nein, ich arbeite heute nicht confirma a negação. Doch tem outros usos; esta ficha cobre a resposta afirmativa que contraria uma pergunta negativa.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "NT-01",
+      "titulo": "Kein acompanhando um substantivo",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "N = nominativo; A = acusativo; D = dativo; G = genitivo. O nome também pode variar: mit keinen Freunden; keines Kindes. G fica em aprofundamento. Uso independente como keins: consultar o módulo 05. Nicht não se declina."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "N = nominativo; A = acusativo; D = dativo; G = genitivo. O nome também pode variar: mit keinen Freunden; keines Kindes. G fica em aprofundamento. Uso independente como keins: consultar o módulo 05. Nicht não se declina.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "NT-01",
+          "titulo": "Kein acompanhando um substantivo",
+          "colunas": [
+            "Caso",
+            "Masculino",
+            "Feminino",
+            "Neutro",
+            "Plural"
+          ],
+          "linhas": [
+            [
+              "Nominativo",
+              "kein",
+              "keine",
+              "kein",
+              "keine"
+            ],
+            [
+              "Acusativo",
+              "keinen",
+              "keine",
+              "kein",
+              "keine"
+            ],
+            [
+              "Dativo",
+              "keinem",
+              "keiner",
+              "keinem",
+              "keinen"
+            ],
+            [
+              "Genitivo",
+              "keines",
+              "keiner",
+              "keines",
+              "keiner"
+            ]
+          ],
+          "nota": "N = nominativo; A = acusativo; D = dativo; G = genitivo. O nome também pode variar: mit keinen Freunden; keines Kindes. G fica em aprofundamento. Uso independente como keins: consultar o módulo 05. Nicht não se declina."
+        }
+      ]
+    }
+  ]
+}

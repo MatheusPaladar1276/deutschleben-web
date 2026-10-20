@@ -1,0 +1,1404 @@
+{
+  "id": "pronomes_no_contexto",
+  "numero": "05",
+  "titulo": "Pronomes no contexto",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "PR-001",
+      "titulo": "Quem ou o que o pronome retoma",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "pessoais"
+      ],
+      "explicacao": [
+        "Procure a pessoa ou o substantivo retomado. O gênero gramatical alemão orienta er, sie e es.",
+        "Das Buch ist interessant. Ich lese es.",
+        "O livro é interessante. Eu o leio.",
+        "Es retoma das Buch. Er pode retomar der Tisch; sie pode retomar die Tasche. A tradução portuguesa não define o gênero alemão."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Procure a pessoa ou o substantivo retomado. O gênero gramatical alemão orienta er, sie e es.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Buch ist interessant. Ich lese es."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O livro é interessante. Eu o leio."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Es retoma das Buch. Er pode retomar der Tisch; sie pode retomar die Tasche. A tradução portuguesa não define o gênero alemão.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        }
+      ],
+      "relacionados": [
+        "PT-01"
+      ]
+    },
+    {
+      "id": "PR-002",
+      "titulo": "O caso vem da construção",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "pessoais"
+      ],
+      "explicacao": [
+        "Ich é sujeito; mich e mir aparecem em outras funções, conforme verbo ou preposição.",
+        "Ich sehe ihn. Ich helfe ihm. Ich spreche mit ihm.",
+        "Eu o vejo. Eu o ajudo. Falo com ele.",
+        "Sehen exige acusativo no uso mostrado; helfen exige dativo; mit exige dativo. Em mit ihm, o dativo não torna automaticamente o grupo em OI. A tradução portuguesa pode esconder essa diferença."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ich é sujeito; mich e mir aparecem em outras funções, conforme verbo ou preposição.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich sehe ihn. Ich helfe ihm. Ich spreche mit ihm."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Eu o vejo. Eu o ajudo. Falo com ele."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sehen exige acusativo no uso mostrado; helfen exige dativo; mit exige dativo. Em mit ihm, o dativo não torna automaticamente o grupo em OI. A tradução portuguesa pode esconder essa diferença.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PT-01"
+      ]
+    },
+    {
+      "id": "PR-003",
+      "titulo": "Sie sie e ihr",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "pessoais"
+      ],
+      "explicacao": [
+        "Sie é tratamento formal; sie pode ser ela ou eles/elas. Observe contexto e verbo.",
+        "Sie kommt heute. Sie kommen heute.",
+        "Ela vem hoje. Eles/elas vêm hoje ou o senhor/a senhora vem hoje.",
+        "No início de frase, a maiúscula de Sie não basta para identificar tratamento. Ihr pode ser vocês, dativo de sie singular, ou base de um possessivo. A função depende da frase."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sie é tratamento formal; sie pode ser ela ou eles/elas. Observe contexto e verbo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Sie kommt heute. Sie kommen heute."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ela vem hoje. Eles/elas vêm hoje ou o senhor/a senhora vem hoje."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No início de frase, a maiúscula de Sie não basta para identificar tratamento. Ihr pode ser vocês, dativo de sie singular, ou base de um possessivo. A função depende da frase.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-004",
+      "titulo": "Es sem antecedente",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "pessoais"
+      ],
+      "explicacao": [
+        "Nem todo es substitui um substantivo. Algumas construções exigem es como sujeito formal.",
+        "Es regnet. Es gibt einen See.",
+        "Chove. Há um lago.",
+        "Em es gibt + A, es não retoma o lago. Não é preciso traduzir es separadamente. Há outros usos; esta ficha cobre apenas esses modelos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nem todo es substitui um substantivo. Algumas construções exigem es como sujeito formal.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet. Es gibt einen See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Chove. Há um lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em es gibt + A, es não retoma o lago. Não é preciso traduzir es separadamente. Há outros usos; esta ficha cobre apenas esses modelos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-005",
+      "titulo": "Quem possui e o que é possuído",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "possessivos"
+      ],
+      "explicacao": [
+        "A base do possessivo aponta para o possuidor; sua terminação acompanha o gênero, número e caso do substantivo.",
+        "Paul sucht sein Buch und seine Tasche.",
+        "Paul procura seu livro e sua bolsa.",
+        "Sein- aponta para Paul nos dois grupos; Buch é neutro e Tasche é feminino. Anna sucht ihr Buch — Anna procura o livro dela. Não escolher sein ou ihr pelo gênero da coisa possuída."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "A base do possessivo aponta para o possuidor; sua terminação acompanha o gênero, número e caso do substantivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Paul sucht sein Buch und seine Tasche."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Paul procura seu livro e sua bolsa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sein- aponta para Paul nos dois grupos; Buch é neutro e Tasche é feminino. Anna sucht ihr Buch — Anna procura o livro dela. Não escolher sein ou ihr pelo gênero da coisa possuída.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PT-02",
+        "PT-03"
+      ]
+    },
+    {
+      "id": "PR-006",
+      "titulo": "Com substantivo e no lugar dele",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "possessivos"
+      ],
+      "explicacao": [
+        "Compare o possessivo acompanhando um nome com o possessivo usado sozinho.",
+        "Das ist mein Buch. Das ist meins.",
+        "Este é meu livro. Este é o meu.",
+        "Meins substitui um substantivo neutro no nominativo neste exemplo. Não transportar automaticamente a forma sem terminação de mein Buch para o uso independente."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Compare o possessivo acompanhando um nome com o possessivo usado sozinho.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das ist mein Buch. Das ist meins."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Este é meu livro. Este é o meu."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Meins substitui um substantivo neutro no nominativo neste exemplo. Não transportar automaticamente a forma sem terminação de mein Buch para o uso independente.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PT-03",
+        "PT-04"
+      ]
+    },
+    {
+      "id": "PR-007",
+      "titulo": "Caso no grupo possessivo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "possessivos"
+      ],
+      "explicacao": [
+        "O possessivo varia conforme a construção inteira.",
+        "Ich spreche mit meinem Freund.",
+        "Falo com meu amigo.",
+        "Mit exige dativo; Freund é masculino singular, por isso meinem. Declinação é o nome dessa variação. Conjugação é a variação do verbo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O possessivo varia conforme a construção inteira.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich spreche mit meinem Freund."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Falo com meu amigo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Mit exige dativo; Freund é masculino singular, por isso meinem. Declinação é o nome dessa variação. Conjugação é a variação do verbo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-008",
+      "titulo": "A ação volta ao sujeito",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "reflexivos"
+      ],
+      "explicacao": [
+        "Em um uso reflexivo, o pronome se refere ao sujeito da própria oração. Aprenda o verbo junto com sua construção.",
+        "Ich wasche mich. Er erinnert sich an den Tag.",
+        "Eu me lavo. Ele se lembra do dia.",
+        "Nem todas as formas de sich correspondem a uma ação física sobre si. Sich erinnern an + A é uma construção a reconhecer em conjunto."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Em um uso reflexivo, o pronome se refere ao sujeito da própria oração. Aprenda o verbo junto com sua construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich wasche mich. Er erinnert sich an den Tag."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Eu me lavo. Ele se lembra do dia."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nem todas as formas de sich correspondem a uma ação física sobre si. Sich erinnern an + A é uma construção a reconhecer em conjunto.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PT-05"
+      ]
+    },
+    {
+      "id": "PR-009",
+      "titulo": "Mich ou mir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "reflexivos"
+      ],
+      "explicacao": [
+        "Nas construções de cuidado do corpo, compare a pessoa como objeto com a presença de uma parte do corpo como objeto.",
+        "Ich wasche mich. Ich wasche mir die Hände.",
+        "Eu me lavo. Eu lavo as mãos.",
+        "Na segunda frase, die Hände é OD em A; mir é D. Não generalizar toda frase com outro objeto exige reflexivo D: a regência do verbo continua sendo decisiva."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nas construções de cuidado do corpo, compare a pessoa como objeto com a presença de uma parte do corpo como objeto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich wasche mich. Ich wasche mir die Hände."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Eu me lavo. Eu lavo as mãos."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Na segunda frase, die Hände é OD em A; mir é D. Não generalizar toda frase com outro objeto exige reflexivo D: a regência do verbo continua sendo decisiva.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PT-05"
+      ]
+    },
+    {
+      "id": "PR-010",
+      "titulo": "Wer wen wem e wessen",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "interrogativos"
+      ],
+      "explicacao": [
+        "As formas permitem perguntar por pessoas em casos diferentes.",
+        "Wer kommt? Wen siehst du? Wem hilfst du? Wessen Buch ist das?",
+        "Quem vem? Quem você vê? Quem você ajuda? De quem é este livro?",
+        "Wer: N; wen: A; wem: D; wessen: G. Em Mit wem gehst du?, mit exige dativo. Em português, a mesma palavra quem pode aparecer em várias traduções."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "As formas permitem perguntar por pessoas em casos diferentes.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wer kommt? Wen siehst du? Wem hilfst du? Wessen Buch ist das?"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Quem vem? Quem você vê? Quem você ajuda? De quem é este livro?"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Wer: N; wen: A; wem: D; wessen: G. Em Mit wem gehst du?, mit exige dativo. Em português, a mesma palavra quem pode aparecer em várias traduções.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-011",
+      "titulo": "Was e welcher",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "interrogativos"
+      ],
+      "explicacao": [
+        "Was pergunta por uma coisa ou informação; welcher permite escolher ou identificar entre possibilidades.",
+        "Was liest du? Welches Buch liest du?",
+        "O que você lê? Qual livro você lê?",
+        "Welch- varia como dies- quando acompanha um nome. Também pode substituí-lo: Welches nimmst du? — Qual você escolhe?"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Was pergunta por uma coisa ou informação; welcher permite escolher ou identificar entre possibilidades.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Was liest du? Welches Buch liest du?"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O que você lê? Qual livro você lê?"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Welch- varia como dies- quando acompanha um nome. Também pode substituí-lo: Welches nimmst du? — Qual você escolhe?",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-012",
+      "titulo": "Dieser aponta ou retoma",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "demonstrativos"
+      ],
+      "explicacao": [
+        "Dies- pode destacar algo presente ou já mencionado no texto. A proximidade é uma pista, não uma regra absoluta.",
+        "Dieses Buch ist interessant. Ich nehme dieses.",
+        "Este livro é interessante. Vou escolher este.",
+        "No primeiro exemplo, dieses acompanha Buch; no segundo, substitui o nome. A escolha entre este e esse em português depende do contexto. Na fala, der/die/das também são frequentes para apontar."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Dies- pode destacar algo presente ou já mencionado no texto. A proximidade é uma pista, não uma regra absoluta.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Dieses Buch ist interessant. Ich nehme dieses."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Este livro é interessante. Vou escolher este."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No primeiro exemplo, dieses acompanha Buch; no segundo, substitui o nome. A escolha entre este e esse em português depende do contexto. Na fala, der/die/das também são frequentes para apontar.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PT-06"
+      ]
+    },
+    {
+      "id": "PR-013",
+      "titulo": "Der die das usados sozinhos",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "demonstrativos"
+      ],
+      "explicacao": [
+        "As formas do artigo definido também podem funcionar como demonstrativos.",
+        "Welchen Pullover nimmst du? Ich nehme den.",
+        "Qual suéter você escolhe? Vou escolher esse.",
+        "Den retoma der Pullover e está em A como objeto de nehmen. Não classificar todo der/die/das isolado sem examinar sua função."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "As formas do artigo definido também podem funcionar como demonstrativos.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Welchen Pullover nimmst du? Ich nehme den."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Qual suéter você escolhe? Vou escolher esse."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Den retoma der Pullover e está em A como objeto de nehmen. Não classificar todo der/die/das isolado sem examinar sua função.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-014",
+      "titulo": "Jener para reconhecer na leitura",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "demonstrativos"
+      ],
+      "explicacao": [
+        "Jen- pode indicar algo mais distante ou retomar uma referência, sobretudo na escrita.",
+        "Jenes Buch dort ist alt.",
+        "Aquele livro ali é antigo.",
+        "É menos frequente na conversa cotidiana; das Buch dort é uma alternativa comum. As terminações seguem o mesmo padrão de dieser. Não há correspondência fixa com o sistema este/esse/aquele."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Jen- pode indicar algo mais distante ou retomar uma referência, sobretudo na escrita.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Jenes Buch dort ist alt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Aquele livro ali é antigo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "É menos frequente na conversa cotidiana; das Buch dort é uma alternativa comum. As terminações seguem o mesmo padrão de dieser. Não há correspondência fixa com o sistema este/esse/aquele.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        }
+      ],
+      "relacionados": [
+        "PT-07"
+      ]
+    },
+    {
+      "id": "PR-015",
+      "titulo": "O mesmo objeto ou outro igual",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "demonstrativos"
+      ],
+      "explicacao": [
+        "Derselbe destaca identidade; der gleiche destaca igualdade ou semelhança relevante.",
+        "Wir lesen dasselbe Buch. Wir haben das gleiche Buch in zwei Exemplaren.",
+        "Lemos o mesmo livro. Temos o mesmo livro em dois exemplares.",
+        "O contraste didático ajuda: o mesmo exemplar versus exemplares iguais. No uso real, der gleiche também pode indicar identidade; contexto e sentido de Buch, obra ou exemplar, importam."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Derselbe destaca identidade; der gleiche destaca igualdade ou semelhança relevante.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir lesen dasselbe Buch. Wir haben das gleiche Buch in zwei Exemplaren."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Lemos o mesmo livro. Temos o mesmo livro em dois exemplares."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O contraste didático ajuda: o mesmo exemplar versus exemplares iguais. No uso real, der gleiche também pode indicar identidade; contexto e sentido de Buch, obra ou exemplar, importam.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-016",
+      "titulo": "Man é sujeito genérico",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "indefinidos"
+      ],
+      "explicacao": [
+        "Man refere-se às pessoas em geral ou a alguém não identificado; o verbo fica na terceira pessoa singular.",
+        "Hier kann man gut lesen.",
+        "Aqui se pode ler bem.",
+        "Não confundir man com der Mann, homem. Para os casos oblíquos dessa referência genérica, reconhecer einen e einem: Das hilft einem — Isso ajuda a gente."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Man refere-se às pessoas em geral ou a alguém não identificado; o verbo fica na terceira pessoa singular.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Hier kann man gut lesen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Aqui se pode ler bem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não confundir man com der Mann, homem. Para os casos oblíquos dessa referência genérica, reconhecer einen e einem: Das hilft einem — Isso ajuda a gente.",
+          "citacoes_de": [
+            "der Mann"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-017",
+      "titulo": "Jemand e niemand",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "indefinidos"
+      ],
+      "explicacao": [
+        "Jemand indica alguém; niemand indica ninguém. O caso depende da construção.",
+        "Jemand ist hier. Ich helfe niemandem.",
+        "Alguém está aqui. Não ajudo ninguém.",
+        "Formas úteis: jemand — jemanden — jemandem; niemand — niemanden — niemandem. Existem usos sem terminação em A/D; conservar as formas marcadas como modelo de consulta."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Jemand indica alguém; niemand indica ninguém. O caso depende da construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Jemand ist hier. Ich helfe niemandem."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Alguém está aqui. Não ajudo ninguém."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Formas úteis: jemand — jemanden — jemandem; niemand — niemanden — niemandem. Existem usos sem terminação em A/D; conservar as formas marcadas como modelo de consulta.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-018",
+      "titulo": "Etwas nichts e alles",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "indefinidos"
+      ],
+      "explicacao": [
+        "Etwas indica algo; nichts, nada; alles, tudo. Não são intercambiáveis.",
+        "Ich verstehe etwas, aber nicht alles. Ich sehe nichts.",
+        "Compreendo alguma coisa, mas não tudo. Não vejo nada.",
+        "Em Ich habe nichts gesehen, não se acrescenta nicht para traduzir a dupla negação do português. Nichts e niemand integram a negação e podem ser agrupados nos indefinidos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Etwas indica algo; nichts, nada; alles, tudo. Não são intercambiáveis.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich verstehe etwas, aber nicht alles. Ich sehe nichts."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Compreendo alguma coisa, mas não tudo. Não vejo nada."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em Ich habe nichts gesehen, não se acrescenta nicht para traduzir a dupla negação do português. Nichts e niemand integram a negação e podem ser agrupados nos indefinidos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-019",
+      "titulo": "Jeder e alle",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "indefinidos"
+      ],
+      "explicacao": [
+        "Jed- destaca cada membro no singular; alle apresenta o conjunto no plural.",
+        "Jeder liest einen Text. Alle lesen einen Text.",
+        "Cada um lê um texto. Todos leem um texto.",
+        "Jeder pode acompanhar um nome: jeder Tag. O verbo concorda com singular ou plural, conforme a construção."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Jed- destaca cada membro no singular; alle apresenta o conjunto no plural.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Jeder liest einen Text. Alle lesen einen Text."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Cada um lê um texto. Todos leem um texto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Jeder pode acompanhar um nome: jeder Tag. O verbo concorda com singular ou plural, conforme a construção.",
+          "citacoes_de": [
+            "der Tag"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-020",
+      "titulo": "Kein com nome e sem nome",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "negacao"
+      ],
+      "explicacao": [
+        "Kein pode acompanhar um substantivo ou substituí-lo quando o referente está claro.",
+        "Ich habe kein Auto. Hast du ein Auto? Nein, ich habe keins.",
+        "Não tenho carro. Você tem carro? Não, não tenho.",
+        "Keins retoma Auto, neutro em A. Kein não é sinônimo geral de nicht: aprenda a negação conforme aquilo que se nega."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Kein pode acompanhar um substantivo ou substituí-lo quando o referente está claro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe kein Auto. Hast du ein Auto? Nein, ich habe keins."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não tenho carro. Você tem carro? Não, não tenho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Keins retoma Auto, neutro em A. Kein não é sinônimo geral de nicht: aprenda a negação conforme aquilo que se nega.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "NEG-002",
+        "NT-01"
+      ]
+    },
+    {
+      "id": "PR-021",
+      "titulo": "Retomar e acrescentar informação",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "relativos"
+      ],
+      "explicacao": [
+        "A oração relativa acrescenta informação sobre um antecedente. O verbo conjugado fica no final nessa construção.",
+        "Das ist der Mann, der hier wohnt.",
+        "Este é o homem que mora aqui.",
+        "Der retoma Mann, masculino singular, e é sujeito de wohnt, por isso N. A oração relativa é separada por vírgula."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "A oração relativa acrescenta informação sobre um antecedente. O verbo conjugado fica no final nessa construção.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das ist der Mann, der hier wohnt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Este é o homem que mora aqui."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Der retoma Mann, masculino singular, e é sujeito de wohnt, por isso N. A oração relativa é separada por vírgula.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PT-08"
+      ]
+    },
+    {
+      "id": "PR-022",
+      "titulo": "O caso pertence à oração relativa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "relativos"
+      ],
+      "explicacao": [
+        "Gênero e número vêm do antecedente; o caso depende da função dentro da relativa.",
+        "Das ist der Mann, den ich sehe. Das ist der Mann, dem ich helfe.",
+        "Este é o homem que vejo. Este é o homem que ajudo.",
+        "Sehen pede A e helfen pede D. Com preposição: Das ist der Mann, mit dem ich spreche — Este é o homem com quem falo. O caso do antecedente na principal não determina o caso do relativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Gênero e número vêm do antecedente; o caso depende da função dentro da relativa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das ist der Mann, den ich sehe. Das ist der Mann, dem ich helfe."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Este é o homem que vejo. Este é o homem que ajudo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sehen pede A e helfen pede D. Com preposição: Das ist der Mann, mit dem ich spreche — Este é o homem com quem falo. O caso do antecedente na principal não determina o caso do relativo.",
+          "citacoes_de": [
+            "der Mann"
+          ]
+        }
+      ],
+      "relacionados": [
+        "PT-08"
+      ]
+    },
+    {
+      "id": "PR-023",
+      "titulo": "Dessen e deren para reconhecer",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "relativos"
+      ],
+      "explicacao": [
+        "Essas formas no genitivo podem indicar uma relação de posse na oração relativa.",
+        "Das ist die Frau, deren Sohn hier wohnt.",
+        "Esta é a mulher cujo filho mora aqui.",
+        "Deren remete a Frau, feminino singular. Dessen remete a antecedente masculino ou neutro singular; deren também a plural. Não se escolhe pelo gênero de Sohn."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Essas formas no genitivo podem indicar uma relação de posse na oração relativa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das ist die Frau, deren Sohn hier wohnt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Esta é a mulher cujo filho mora aqui."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Deren remete a Frau, feminino singular. Dessen remete a antecedente masculino ou neutro singular; deren também a plural. Não se escolhe pelo gênero de Sohn.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "PR-024",
+      "titulo": "Posição como consulta",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "pessoais"
+      ],
+      "explicacao": [
+        "Em uma oração principal neutra, dois objetos em forma de pronome normalmente aparecem com A antes de D.",
+        "Ich gebe es ihm.",
+        "Eu o dou a ele.",
+        "Com dois grupos nominais, a ordem neutra comum é D antes de A: Ich gebe dem Mann das Buch. São modelos de consulta sujeitos a destaque e contexto. A fórmula S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) não é uma ordem rígida."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Em uma oração principal neutra, dois objetos em forma de pronome normalmente aparecem com A antes de D.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gebe es ihm."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Eu o dou a ele."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com dois grupos nominais, a ordem neutra comum é D antes de A: Ich gebe dem Mann das Buch. São modelos de consulta sujeitos a destaque e contexto. A fórmula S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) não é uma ordem rígida.",
+          "citacoes_de": [
+            "Ich gebe dem Mann das Buch",
+            "das Buch"
+          ]
+        }
+      ],
+      "relacionados": [
+        "CO-03-02"
+      ]
+    },
+    {
+      "id": "PT-01",
+      "titulo": "Pronomes pessoais",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "N = nominativo; A = acusativo; D = dativo; G = genitivo. São referências de sentido, não traduções fixas em cada frase. O genitivo dos pessoais fica fora do núcleo desta edição."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "N = nominativo; A = acusativo; D = dativo; G = genitivo. São referências de sentido, não traduções fixas em cada frase. O genitivo dos pessoais fica fora do núcleo desta edição.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "PT-01",
+          "titulo": "Pronomes pessoais",
+          "colunas": [
+            "Referência",
+            "Nominativo",
+            "Acusativo",
+            "Dativo"
+          ],
+          "linhas": [
+            [
+              "eu",
+              "ich",
+              "mich",
+              "mir"
+            ],
+            [
+              "tu ou você informal",
+              "du",
+              "dich",
+              "dir"
+            ],
+            [
+              "ele ou masculino",
+              "er",
+              "ihn",
+              "ihm"
+            ],
+            [
+              "ela ou feminino",
+              "sie",
+              "sie",
+              "ihr"
+            ],
+            [
+              "neutro",
+              "es",
+              "es",
+              "ihm"
+            ],
+            [
+              "nós",
+              "wir",
+              "uns",
+              "uns"
+            ],
+            [
+              "vocês informal",
+              "ihr",
+              "euch",
+              "euch"
+            ],
+            [
+              "eles ou elas",
+              "sie",
+              "sie",
+              "ihnen"
+            ],
+            [
+              "tratamento formal singular ou plural",
+              "Sie",
+              "Sie",
+              "Ihnen"
+            ]
+          ],
+          "nota": "N = nominativo; A = acusativo; D = dativo; G = genitivo. São referências de sentido, não traduções fixas em cada frase. O genitivo dos pessoais fica fora do núcleo desta edição."
+        }
+      ]
+    },
+    {
+      "id": "PT-02",
+      "titulo": "Bases possessivas",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "A base não é uma forma completa para todos os contextos. Com terminação, euer costuma perder o e interno: eure Tasche, eurem Freund."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "A base não é uma forma completa para todos os contextos. Com terminação, euer costuma perder o e interno: eure Tasche, eurem Freund.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "PT-02",
+          "titulo": "Bases possessivas",
+          "colunas": [
+            "Possuidor",
+            "Base",
+            "Exemplo com Buch"
+          ],
+          "linhas": [
+            [
+              "ich",
+              "mein-",
+              "mein Buch"
+            ],
+            [
+              "du",
+              "dein-",
+              "dein Buch"
+            ],
+            [
+              "er ou es",
+              "sein-",
+              "sein Buch"
+            ],
+            [
+              "sie singular",
+              "ihr-",
+              "ihr Buch"
+            ],
+            [
+              "wir",
+              "unser-",
+              "unser Buch"
+            ],
+            [
+              "ihr",
+              "euer-",
+              "euer Buch"
+            ],
+            [
+              "sie plural",
+              "ihr-",
+              "ihr Buch"
+            ],
+            [
+              "Sie formal",
+              "Ihr-",
+              "Ihr Buch"
+            ]
+          ],
+          "nota": "A base não é uma forma completa para todos os contextos. Com terminação, euer costuma perder o e interno: eure Tasche, eurem Freund."
+        }
+      ]
+    },
+    {
+      "id": "PT-03",
+      "titulo": "Possessivo com substantivo usando mein",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "Padrão para o possessivo que acompanha um substantivo. O substantivo também pode variar: mit meinen Freunden; meines Vaters. G é aprofundamento. Não usar esta tabela como tabela completa do possessivo independente."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Padrão para o possessivo que acompanha um substantivo. O substantivo também pode variar: mit meinen Freunden; meines Vaters. G é aprofundamento. Não usar esta tabela como tabela completa do possessivo independente.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "PT-03",
+          "titulo": "Possessivo com substantivo usando mein",
+          "colunas": [
+            "Caso",
+            "Masculino",
+            "Feminino",
+            "Neutro",
+            "Plural"
+          ],
+          "linhas": [
+            [
+              "Nominativo",
+              "mein",
+              "meine",
+              "mein",
+              "meine"
+            ],
+            [
+              "Acusativo",
+              "meinen",
+              "meine",
+              "mein",
+              "meine"
+            ],
+            [
+              "Dativo",
+              "meinem",
+              "meiner",
+              "meinem",
+              "meinen"
+            ],
+            [
+              "Genitivo",
+              "meines",
+              "meiner",
+              "meines",
+              "meiner"
+            ]
+          ],
+          "nota": "Padrão para o possessivo que acompanha um substantivo. O substantivo também pode variar: mit meinen Freunden; meines Vaters. G é aprofundamento. Não usar esta tabela como tabela completa do possessivo independente."
+        }
+      ]
+    },
+    {
+      "id": "PT-04",
+      "titulo": "Possessivo independente usando mein",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "Meines é variante de meins. O referente precisa estar recuperável no contexto. Núcleo N/A/D; genitivo independente fica fora desta edição."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Meines é variante de meins. O referente precisa estar recuperável no contexto. Núcleo N/A/D; genitivo independente fica fora desta edição.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "PT-04",
+          "titulo": "Possessivo independente usando mein",
+          "colunas": [
+            "Caso",
+            "Masculino",
+            "Feminino",
+            "Neutro",
+            "Plural"
+          ],
+          "linhas": [
+            [
+              "Nominativo",
+              "meiner",
+              "meine",
+              "meins",
+              "meine"
+            ],
+            [
+              "Acusativo",
+              "meinen",
+              "meine",
+              "meins",
+              "meine"
+            ],
+            [
+              "Dativo",
+              "meinem",
+              "meiner",
+              "meinem",
+              "meinen"
+            ]
+          ],
+          "nota": "Meines é variante de meins. O referente precisa estar recuperável no contexto. Núcleo N/A/D; genitivo independente fica fora desta edição."
+        }
+      ]
+    },
+    {
+      "id": "PT-05",
+      "titulo": "Pronomes reflexivos",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "Nos pronomes reflexivos de terceira pessoa e no tratamento formal, sich não muda entre A e D. A construção decide o caso."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nos pronomes reflexivos de terceira pessoa e no tratamento formal, sich não muda entre A e D. A construção decide o caso.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "PT-05",
+          "titulo": "Pronomes reflexivos",
+          "colunas": [
+            "Sujeito",
+            "Acusativo",
+            "Dativo"
+          ],
+          "linhas": [
+            [
+              "ich",
+              "mich",
+              "mir"
+            ],
+            [
+              "du",
+              "dich",
+              "dir"
+            ],
+            [
+              "er sie es",
+              "sich",
+              "sich"
+            ],
+            [
+              "wir",
+              "uns",
+              "uns"
+            ],
+            [
+              "ihr",
+              "euch",
+              "euch"
+            ],
+            [
+              "sie ou Sie",
+              "sich",
+              "sich"
+            ]
+          ],
+          "nota": "Nos pronomes reflexivos de terceira pessoa e no tratamento formal, sich não muda entre A e D. A construção decide o caso."
+        }
+      ]
+    },
+    {
+      "id": "PT-06",
+      "titulo": "Demonstrativo dieser",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "As formas também se aplicam à substituição do substantivo conforme a função. Com nome no plural D: mit diesen Büchern. G é aprofundamento."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "As formas também se aplicam à substituição do substantivo conforme a função. Com nome no plural D: mit diesen Büchern. G é aprofundamento.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "PT-06",
+          "titulo": "Demonstrativo dieser",
+          "colunas": [
+            "Caso",
+            "Masculino",
+            "Feminino",
+            "Neutro",
+            "Plural"
+          ],
+          "linhas": [
+            [
+              "Nominativo",
+              "dieser",
+              "diese",
+              "dieses",
+              "diese"
+            ],
+            [
+              "Acusativo",
+              "diesen",
+              "diese",
+              "dieses",
+              "diese"
+            ],
+            [
+              "Dativo",
+              "diesem",
+              "dieser",
+              "diesem",
+              "diesen"
+            ],
+            [
+              "Genitivo",
+              "dieses",
+              "dieser",
+              "dieses",
+              "dieser"
+            ]
+          ],
+          "nota": "As formas também se aplicam à substituição do substantivo conforme a função. Com nome no plural D: mit diesen Büchern. G é aprofundamento."
+        }
+      ]
+    },
+    {
+      "id": "PT-07",
+      "titulo": "Demonstrativo jener",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "Quadro complementar para reconhecimento na leitura; não exige memorizar todas as formas antes de continuar os textos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Quadro complementar para reconhecimento na leitura; não exige memorizar todas as formas antes de continuar os textos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "PT-07",
+          "titulo": "Demonstrativo jener",
+          "colunas": [
+            "Caso",
+            "Masculino",
+            "Feminino",
+            "Neutro",
+            "Plural"
+          ],
+          "linhas": [
+            [
+              "Nominativo",
+              "jener",
+              "jene",
+              "jenes",
+              "jene"
+            ],
+            [
+              "Acusativo",
+              "jenen",
+              "jene",
+              "jenes",
+              "jene"
+            ],
+            [
+              "Dativo",
+              "jenem",
+              "jener",
+              "jenem",
+              "jenen"
+            ],
+            [
+              "Genitivo",
+              "jenes",
+              "jener",
+              "jenes",
+              "jener"
+            ]
+          ],
+          "nota": "Quadro complementar para reconhecimento na leitura; não exige memorizar todas as formas antes de continuar os textos."
+        }
+      ]
+    },
+    {
+      "id": "PT-08",
+      "titulo": "Pronomes relativos",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "Atenção ao D plural denen, diferente do artigo den, e às formas G dessen e deren. Welch- também pode formar relativos, mas fica fora do núcleo por economia didática."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Atenção ao D plural denen, diferente do artigo den, e às formas G dessen e deren. Welch- também pode formar relativos, mas fica fora do núcleo por economia didática.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "PT-08",
+          "titulo": "Pronomes relativos",
+          "colunas": [
+            "Caso",
+            "Masculino",
+            "Feminino",
+            "Neutro",
+            "Plural"
+          ],
+          "linhas": [
+            [
+              "Nominativo",
+              "der",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "Acusativo",
+              "den",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "Dativo",
+              "dem",
+              "der",
+              "dem",
+              "denen"
+            ],
+            [
+              "Genitivo",
+              "dessen",
+              "deren",
+              "dessen",
+              "deren"
+            ]
+          ],
+          "nota": "Atenção ao D plural denen, diferente do artigo den, e às formas G dessen e deren. Welch- também pode formar relativos, mas fica fora do núcleo por economia didática."
+        }
+      ]
+    }
+  ]
+}

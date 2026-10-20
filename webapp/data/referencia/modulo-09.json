@@ -1,0 +1,3393 @@
+{
+  "id": "palavras_compostas_na_leitura",
+  "numero": "09",
+  "titulo": "Palavras Compostas",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "KC-001",
+      "titulo": "Começar pelo núcleo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Em compostos nominais determinativos comuns, reconheça primeiro o último componente: das Badezimmerfenster é um Fenster, janela. Depois use Badezimmer para entender de qual ambiente é a janela. A palavra escrita e a frase continuam sendo lidas na ordem normal.",
+        "das Badezimmerfenster",
+        "janela do banheiro"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Em compostos nominais determinativos comuns, reconheça primeiro o último componente: das Badezimmerfenster é um Fenster, janela. Depois use Badezimmer para entender de qual ambiente é a janela. A palavra escrita e a frase continuam sendo lidas na ordem normal.",
+          "citacoes_de": [
+            "das Badezimmerfenster",
+            "das Badezimmer"
+          ]
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Badezimmerfenster"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "janela do banheiro"
+        }
+      ],
+      "relacionados": [
+        "SC-017",
+        "KO-008"
+      ]
+    },
+    {
+      "id": "KC-002",
+      "titulo": "Gênero pelo núcleo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Die Gartenbank é feminino porque o núcleo é die Bank. Das Kinderbuch é neutro porque o núcleo é das Buch. A orientação vale para o padrão nominal apresentado; não a estender a qualquer palavra alemã formada por partes.",
+        "die Gartenbank",
+        "banco de jardim"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Die Gartenbank é feminino porque o núcleo é die Bank. Das Kinderbuch é neutro porque o núcleo é das Buch. A orientação vale para o padrão nominal apresentado; não a estender a qualquer palavra alemã formada por partes.",
+          "citacoes_de": [
+            "die Bank",
+            "das Buch"
+          ]
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Gartenbank"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "banco de jardim"
+        }
+      ],
+      "relacionados": [
+        "KO-018"
+      ]
+    },
+    {
+      "id": "KC-003",
+      "titulo": "Plural da palavra inteira",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "O núcleo orienta a flexão: die Bank → die Bänke; die Gartenbank → die Gartenbänke. Das Buch → die Bücher; das Kinderbuch → die Kinderbücher. Não pluralize separadamente todos os componentes.",
+        "das Kinderbuch",
+        "livro infantil"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O núcleo orienta a flexão: die Bank → die Bänke; die Gartenbank → die Gartenbänke. Das Buch → die Bücher; das Kinderbuch → die Kinderbücher. Não pluralize separadamente todos os componentes.",
+          "citacoes_de": [
+            "das Kinderbuch",
+            "die Gartenbank",
+            "die Bank",
+            "das Kind"
+          ]
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Kinderbuch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "livro infantil"
+        }
+      ],
+      "relacionados": [
+        "KO-026"
+      ]
+    },
+    {
+      "id": "KC-004",
+      "titulo": "As partes especificam relações diferentes",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Lederjacke indica material; Fischsuppe, ingrediente; Kinderbuch, público ou relação com crianças; Gartenbank, local ou uso. Não traduzir sempre com a mesma preposição portuguesa.",
+        "die Lederjacke",
+        "jaqueta de couro"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Lederjacke indica material; Fischsuppe, ingrediente; Kinderbuch, público ou relação com crianças; Gartenbank, local ou uso. Não traduzir sempre com a mesma preposição portuguesa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Lederjacke"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "jaqueta de couro"
+        }
+      ],
+      "relacionados": [
+        "KO-030"
+      ]
+    },
+    {
+      "id": "KC-005",
+      "titulo": "Elementos de ligação",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Arbeit + s + Zeit; Tag + es + Zeitung; Sonnen + Brille. As formas s, es, en e outras podem integrar a composição. Nem toda ligação é genitivo, e uma forma parecida com plural não exige sentido plural no composto. A segmentação é ajuda de reconhecimento, não análise histórica completa.",
+        "die Tageszeitung",
+        "jornal diário"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Arbeit + s + Zeit; Tag + es + Zeitung; Sonnen + Brille. As formas s, es, en e outras podem integrar a composição. Nem toda ligação é genitivo, e uma forma parecida com plural não exige sentido plural no composto. A segmentação é ajuda de reconhecimento, não análise histórica completa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Tageszeitung"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "jornal diário"
+        }
+      ],
+      "relacionados": [
+        "KO-048"
+      ]
+    },
+    {
+      "id": "KC-006",
+      "titulo": "Mudanças nas formas",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Schule aparece como Schul- em Schultasche; Sonne como Sonnen- em Sonnenbrille. Não presumir que a composição seja sempre a simples colagem das formas de dicionário.",
+        "die Schultasche",
+        "bolsa ou mochila escolar"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Schule aparece como Schul- em Schultasche; Sonne como Sonnen- em Sonnenbrille. Não presumir que a composição seja sempre a simples colagem das formas de dicionário.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Schultasche"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "bolsa ou mochila escolar"
+        }
+      ],
+      "relacionados": [
+        "KO-039"
+      ]
+    },
+    {
+      "id": "KC-007",
+      "titulo": "Palavras maiores em etapas",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Das Badezimmerfenster → Badezimmer + Fenster; Badezimmer → Bade + Zimmer. A primeira pergunta é que tipo de coisa é esta. Só aprofunde a divisão se isso ajudar a compreender.",
+        "das Badezimmerfenster",
+        "janela do banheiro"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Das Badezimmerfenster → Badezimmer + Fenster; Badezimmer → Bade + Zimmer. A primeira pergunta é que tipo de coisa é esta. Só aprofunde a divisão se isso ajudar a compreender.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Badezimmerfenster"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "janela do banheiro"
+        }
+      ],
+      "relacionados": [
+        "KO-008"
+      ]
+    },
+    {
+      "id": "KC-008",
+      "titulo": "Sentido convencional e contexto",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Haustier é animal de estimação; Handschuh é luva; Wolkenkratzer é arranha-céu. Reconhecer componentes ajuda a formular uma hipótese, mas o significado pode ser convencional. Confirme no texto ou consulte quando necessário.",
+        "der Handschuh",
+        "luva"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Haustier é animal de estimação; Handschuh é luva; Wolkenkratzer é arranha-céu. Reconhecer componentes ajuda a formular uma hipótese, mas o significado pode ser convencional. Confirme no texto ou consulte quando necessário.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Handschuh"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "luva"
+        }
+      ],
+      "relacionados": [
+        "KO-020"
+      ]
+    },
+    {
+      "id": "KC-009",
+      "titulo": "Singular plural e incontáveis",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Die Sommerferien já está no plural. Gartenarbeit é frequente no singular como atividade, mas Gartenarbeiten pode indicar tarefas. Futebol como esporte e Fußbälle como bolas não são o mesmo uso. O número faz parte do sentido consultado.",
+        "die Sommerferien",
+        "férias de verão"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Die Sommerferien já está no plural. Gartenarbeit é frequente no singular como atividade, mas Gartenarbeiten pode indicar tarefas. Futebol como esporte e Fußbälle como bolas não são o mesmo uso. O número faz parte do sentido consultado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Sommerferien"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "férias de verão"
+        }
+      ],
+      "relacionados": [
+        "KO-040"
+      ]
+    },
+    {
+      "id": "KC-010",
+      "titulo": "Escrita como consulta",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Os exemplos deste módulo são escritos como uma palavra, com maiúscula inicial por serem substantivos. Hífens aparecem em outras condições, como certas combinações com siglas ou números; esses casos ficam fora do núcleo. Não inventar espaços para separar as partes na escrita final.",
+        "das Wörterbuch",
+        "dicionário"
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Os exemplos deste módulo são escritos como uma palavra, com maiúscula inicial por serem substantivos. Hífens aparecem em outras condições, como certas combinações com siglas ou números; esses casos ficam fora do núcleo. Não inventar espaços para separar as partes na escrita final.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Wörterbuch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "dicionário"
+        }
+      ],
+      "relacionados": [
+        "KO-056"
+      ]
+    },
+    {
+      "id": "KO-001",
+      "titulo": "der Apfelbaum — macieira",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Apfelbaum",
+        "Apfelbaum"
+      ],
+      "explicacao": [
+        "Macieira.",
+        "der Apfelbaum",
+        "macieira",
+        "Núcleo: der Baum.",
+        "Divisão para reconhecer: Apfel + Baum.",
+        "Plural: die Apfelbäume."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Macieira.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Apfelbaum"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "macieira"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Baum.",
+          "citacoes_de": [
+            "der Baum"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Apfel + Baum.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Apfelbäume.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "SV-035"
+      ]
+    },
+    {
+      "id": "KO-002",
+      "titulo": "die Arbeitszeit — tempo ou horário de trabalho",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Arbeitszeit",
+        "Arbeitszeit"
+      ],
+      "explicacao": [
+        "Tempo ou horário de trabalho.",
+        "die Arbeitszeit",
+        "tempo ou horário de trabalho",
+        "Núcleo: die Zeit.",
+        "Divisão para reconhecer: Arbeit + s + Zeit.",
+        "Plural: die Arbeitszeiten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Tempo ou horário de trabalho.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Arbeitszeit"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "tempo ou horário de trabalho"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Zeit.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Arbeit + s + Zeit.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Arbeitszeiten.",
+          "citacoes_de": [
+            "die Arbeitszeit"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-003",
+      "titulo": "die Armbanduhr — relógio de pulso",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Armbanduhr",
+        "Armbanduhr"
+      ],
+      "explicacao": [
+        "Relógio de pulso.",
+        "die Armbanduhr",
+        "relógio de pulso",
+        "Núcleo: die Uhr.",
+        "Divisão para reconhecer: Armband + Uhr.",
+        "Plural: die Armbanduhren.",
+        "Armband também pode ser reconhecido como Arm + Band. A primeira divisão útil é Armband + Uhr."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Relógio de pulso.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Armbanduhr"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "relógio de pulso"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Uhr.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Armband + Uhr.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Armbanduhren.",
+          "citacoes_de": [
+            "die Armbanduhr"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Armband também pode ser reconhecido como Arm + Band. A primeira divisão útil é Armband + Uhr.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-004",
+      "titulo": "die Autobahn — rodovia ou autoestrada",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Autobahn",
+        "Autobahn"
+      ],
+      "explicacao": [
+        "Rodovia ou autoestrada.",
+        "die Autobahn",
+        "rodovia ou autoestrada",
+        "Núcleo: die Bahn.",
+        "Divisão para reconhecer: Auto + Bahn.",
+        "Plural: die Autobahnen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Rodovia ou autoestrada.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Autobahn"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "rodovia ou autoestrada"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Bahn.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Auto + Bahn.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Autobahnen.",
+          "citacoes_de": [
+            "die Autobahn"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-005",
+      "titulo": "die Blumenwiese — prado florido",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Blumenwiese",
+        "Blumenwiese"
+      ],
+      "explicacao": [
+        "Prado florido.",
+        "die Blumenwiese",
+        "prado florido",
+        "Núcleo: die Wiese.",
+        "Divisão para reconhecer: Blumen + Wiese.",
+        "Plural: die Blumenwiesen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Prado florido.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Blumenwiese"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "prado florido"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Wiese.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Blumen + Wiese.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Blumenwiesen.",
+          "citacoes_de": [
+            "die Blumenwiese",
+            "die Blume"
+          ]
+        }
+      ],
+      "relacionados": [
+        "SV-036"
+      ]
+    },
+    {
+      "id": "KO-006",
+      "titulo": "die Blumenvase — vaso de flores",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Blumenvase",
+        "Blumenvase"
+      ],
+      "explicacao": [
+        "Vaso de flores.",
+        "die Blumenvase",
+        "vaso de flores",
+        "Núcleo: die Vase.",
+        "Divisão para reconhecer: Blumen + Vase.",
+        "Plural: die Blumenvasen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Vaso de flores.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Blumenvase"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "vaso de flores"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Vase.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Blumen + Vase.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Blumenvasen.",
+          "citacoes_de": [
+            "die Blumenvase",
+            "die Blume"
+          ]
+        }
+      ],
+      "relacionados": [
+        "SV-036"
+      ]
+    },
+    {
+      "id": "KO-007",
+      "titulo": "das Badezimmer — banheiro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Badezimmer",
+        "Badezimmer"
+      ],
+      "explicacao": [
+        "Banheiro.",
+        "das Badezimmer",
+        "banheiro",
+        "Núcleo: das Zimmer.",
+        "Divisão para reconhecer: Bade + Zimmer.",
+        "Plural: die Badezimmer.",
+        "Bade- é a forma de composição relacionada a baden, tomar banho; não segmentar mecanicamente como Bad + Zimmer sem observar o e."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Banheiro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Badezimmer"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "banheiro"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Zimmer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Bade + Zimmer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Badezimmer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Bade- é a forma de composição relacionada a baden, tomar banho; não segmentar mecanicamente como Bad + Zimmer sem observar o e.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-008",
+      "titulo": "das Badezimmerfenster — janela do banheiro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Badezimmerfenster",
+        "Badezimmerfenster"
+      ],
+      "explicacao": [
+        "Janela do banheiro.",
+        "das Badezimmerfenster",
+        "janela do banheiro",
+        "Núcleo: das Fenster.",
+        "Divisão para reconhecer: Badezimmer + Fenster.",
+        "Plural: die Badezimmerfenster."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Janela do banheiro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Badezimmerfenster"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "janela do banheiro"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Fenster.",
+          "citacoes_de": [
+            "das Fenster"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Badezimmer + Fenster.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Badezimmerfenster.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "SV-012"
+      ]
+    },
+    {
+      "id": "KO-009",
+      "titulo": "der Baumstamm — tronco de árvore",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Baumstamm",
+        "Baumstamm"
+      ],
+      "explicacao": [
+        "Tronco de árvore.",
+        "der Baumstamm",
+        "tronco de árvore",
+        "Núcleo: der Stamm.",
+        "Divisão para reconhecer: Baum + Stamm.",
+        "Plural: die Baumstämme."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Tronco de árvore.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Baumstamm"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "tronco de árvore"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Stamm.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Baum + Stamm.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Baumstämme.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-010",
+      "titulo": "das Buchregal — estante de livros",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Buchregal",
+        "Buchregal"
+      ],
+      "explicacao": [
+        "Estante de livros.",
+        "das Buchregal",
+        "estante de livros",
+        "Núcleo: das Regal.",
+        "Divisão para reconhecer: Buch + Regal.",
+        "Plural: die Buchregale."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Estante de livros.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Buchregal"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "estante de livros"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Regal.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Buch + Regal.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Buchregale.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-011",
+      "titulo": "die Familienfeier — festa ou celebração de família",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Familienfeier",
+        "Familienfeier"
+      ],
+      "explicacao": [
+        "Festa ou celebração de família.",
+        "die Familienfeier",
+        "festa ou celebração de família",
+        "Núcleo: die Feier.",
+        "Divisão para reconhecer: Familien + Feier.",
+        "Plural: die Familienfeiern."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Festa ou celebração de família.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Familienfeier"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "festa ou celebração de família"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Feier.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Familien + Feier.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Familienfeiern.",
+          "citacoes_de": [
+            "die Familienfeier"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-012",
+      "titulo": "das Ferienhaus — casa de férias",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Ferienhaus",
+        "Ferienhaus"
+      ],
+      "explicacao": [
+        "Casa de férias.",
+        "das Ferienhaus",
+        "casa de férias",
+        "Núcleo: das Haus.",
+        "Divisão para reconhecer: Ferien + Haus.",
+        "Plural: die Ferienhäuser."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Casa de férias.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Ferienhaus"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "casa de férias"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Haus.",
+          "citacoes_de": [
+            "das Haus"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Ferien + Haus.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Ferienhäuser.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-013",
+      "titulo": "die Fischsuppe — sopa de peixe",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Fischsuppe",
+        "Fischsuppe"
+      ],
+      "explicacao": [
+        "Sopa de peixe.",
+        "die Fischsuppe",
+        "sopa de peixe",
+        "Núcleo: die Suppe.",
+        "Divisão para reconhecer: Fisch + Suppe.",
+        "Plural: die Fischsuppen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sopa de peixe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Fischsuppe"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "sopa de peixe"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Suppe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Fisch + Suppe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Fischsuppen.",
+          "citacoes_de": [
+            "die Fischsuppe"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-014",
+      "titulo": "die Flaschenpost — mensagem em garrafa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Flaschenpost",
+        "Flaschenpost"
+      ],
+      "explicacao": [
+        "Mensagem em garrafa.",
+        "die Flaschenpost",
+        "mensagem em garrafa",
+        "Núcleo: die Post.",
+        "Divisão para reconhecer: Flaschen + Post."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Mensagem em garrafa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Flaschenpost"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "mensagem em garrafa"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Post.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Flaschen + Post.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-015",
+      "titulo": "der Fußball — bola de futebol",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Fußball",
+        "Fußball"
+      ],
+      "explicacao": [
+        "Bola de futebol.",
+        "der Fußball",
+        "bola de futebol",
+        "Núcleo: der Ball.",
+        "Divisão para reconhecer: Fuß + Ball.",
+        "Plural: die Fußbälle.",
+        "No sentido do esporte, Fußball costuma ser singular: Ich spiele Fußball. Fußbälle refere-se às bolas."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Bola de futebol.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Fußball"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "bola de futebol"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Ball.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Fuß + Ball.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Fußbälle.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No sentido do esporte, Fußball costuma ser singular: Ich spiele Fußball. Fußbälle refere-se às bolas.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-016",
+      "titulo": "die Geburtstagstorte — bolo de aniversário",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Geburtstagstorte",
+        "Geburtstagstorte"
+      ],
+      "explicacao": [
+        "Bolo de aniversário.",
+        "die Geburtstagstorte",
+        "bolo de aniversário",
+        "Núcleo: die Torte.",
+        "Divisão para reconhecer: Geburtstag + s + Torte.",
+        "Plural: die Geburtstagstorten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Bolo de aniversário.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Geburtstagstorte"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "bolo de aniversário"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Torte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Geburtstag + s + Torte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Geburtstagstorten.",
+          "citacoes_de": [
+            "die Geburtstagstorte"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-017",
+      "titulo": "der Geschirrspüler — máquina de lavar louça",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Geschirrspüler",
+        "Geschirrspüler"
+      ],
+      "explicacao": [
+        "Máquina de lavar louça.",
+        "der Geschirrspüler",
+        "máquina de lavar louça",
+        "Núcleo: der Spüler.",
+        "Divisão para reconhecer: Geschirr + Spüler.",
+        "Plural: die Geschirrspüler.",
+        "Spüler é formação nominal relacionada a spülen; não o apresentar apenas como infinitivo na segmentação."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Máquina de lavar louça.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Geschirrspüler"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "máquina de lavar louça"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Spüler.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Geschirr + Spüler.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Geschirrspüler.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Spüler é formação nominal relacionada a spülen; não o apresentar apenas como infinitivo na segmentação.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-018",
+      "titulo": "die Gartenbank — banco de jardim",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Gartenbank",
+        "Gartenbank"
+      ],
+      "explicacao": [
+        "Banco de jardim.",
+        "die Gartenbank",
+        "banco de jardim",
+        "Núcleo: die Bank.",
+        "Divisão para reconhecer: Garten + Bank.",
+        "Plural: die Gartenbänke."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Banco de jardim.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Gartenbank"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "banco de jardim"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Bank.",
+          "citacoes_de": [
+            "die Bank"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Garten + Bank.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Gartenbänke.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "SV-023"
+      ]
+    },
+    {
+      "id": "KO-019",
+      "titulo": "die Gartenarbeit — trabalho de jardinagem",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Gartenarbeit",
+        "Gartenarbeit"
+      ],
+      "explicacao": [
+        "Trabalho de jardinagem.",
+        "die Gartenarbeit",
+        "trabalho de jardinagem",
+        "Núcleo: die Arbeit.",
+        "Divisão para reconhecer: Garten + Arbeit.",
+        "Plural: die Gartenarbeiten.",
+        "Geralmente singular como atividade; o plural Gartenarbeiten pode indicar tarefas ou trabalhos no jardim."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Trabalho de jardinagem.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Gartenarbeit"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "trabalho de jardinagem"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Arbeit.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Garten + Arbeit.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Gartenarbeiten.",
+          "citacoes_de": [
+            "die Gartenarbeit"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Geralmente singular como atividade; o plural Gartenarbeiten pode indicar tarefas ou trabalhos no jardim.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-020",
+      "titulo": "der Handschuh — luva",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Handschuh",
+        "Handschuh"
+      ],
+      "explicacao": [
+        "Luva.",
+        "der Handschuh",
+        "luva",
+        "Núcleo: der Schuh.",
+        "Divisão para reconhecer: Hand + Schuh.",
+        "Plural: die Handschuhe.",
+        "O significado lexical é luva; mão + sapato ajuda a reconhecer as partes, mas não é a tradução final."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Luva.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Handschuh"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "luva"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Schuh.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Hand + Schuh.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Handschuhe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O significado lexical é luva; mão + sapato ajuda a reconhecer as partes, mas não é a tradução final.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-021",
+      "titulo": "das Haustier — animal de estimação",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Haustier",
+        "Haustier"
+      ],
+      "explicacao": [
+        "Animal de estimação.",
+        "das Haustier",
+        "animal de estimação",
+        "Núcleo: das Tier.",
+        "Divisão para reconhecer: Haus + Tier.",
+        "Plural: die Haustiere."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Animal de estimação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Haustier"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "animal de estimação"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Tier.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Haus + Tier.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Haustiere.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-022",
+      "titulo": "die Haustür — porta da casa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Haustür",
+        "Haustür"
+      ],
+      "explicacao": [
+        "Porta da casa.",
+        "die Haustür",
+        "porta da casa",
+        "Núcleo: die Tür.",
+        "Divisão para reconhecer: Haus + Tür.",
+        "Plural: die Haustüren."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Porta da casa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Haustür"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "porta da casa"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Tür.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Haus + Tür.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Haustüren.",
+          "citacoes_de": [
+            "die Haustür"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-023",
+      "titulo": "das Haustor — portão da casa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Haustor",
+        "Haustor"
+      ],
+      "explicacao": [
+        "Portão da casa.",
+        "das Haustor",
+        "portão da casa",
+        "Núcleo: das Tor.",
+        "Divisão para reconhecer: Haus + Tor.",
+        "Plural: die Haustore."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Portão da casa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Haustor"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "portão da casa"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Tor.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Haus + Tor.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Haustore.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-024",
+      "titulo": "der Hundekorb — cesta para cachorro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Hundekorb",
+        "Hundekorb"
+      ],
+      "explicacao": [
+        "Cesta para cachorro.",
+        "der Hundekorb",
+        "cesta para cachorro",
+        "Núcleo: der Korb.",
+        "Divisão para reconhecer: Hunde + Korb.",
+        "Plural: die Hundekörbe."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Cesta para cachorro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Hundekorb"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "cesta para cachorro"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Korb.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Hunde + Korb.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Hundekörbe.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-025",
+      "titulo": "die Kaffeetasse — xícara para café",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Kaffeetasse",
+        "Kaffeetasse"
+      ],
+      "explicacao": [
+        "Xícara para café.",
+        "die Kaffeetasse",
+        "xícara para café",
+        "Núcleo: die Tasse.",
+        "Divisão para reconhecer: Kaffee + Tasse.",
+        "Plural: die Kaffeetassen.",
+        "Designa o tipo de recipiente; não garante que esteja cheio. Eine Tasse Kaffee explicita uma xícara de café como quantidade."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Xícara para café.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Kaffeetasse"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "xícara para café"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Tasse.",
+          "citacoes_de": [
+            "die Tasse"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Kaffee + Tasse.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Kaffeetassen.",
+          "citacoes_de": [
+            "die Kaffeetasse"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Designa o tipo de recipiente; não garante que esteja cheio. Eine Tasse Kaffee explicita uma xícara de café como quantidade.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "SV-037"
+      ]
+    },
+    {
+      "id": "KO-026",
+      "titulo": "das Kinderbuch — livro infantil",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Kinderbuch",
+        "Kinderbuch"
+      ],
+      "explicacao": [
+        "Livro infantil.",
+        "das Kinderbuch",
+        "livro infantil",
+        "Núcleo: das Buch.",
+        "Divisão para reconhecer: Kinder + Buch.",
+        "Plural: die Kinderbücher."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Livro infantil.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Kinderbuch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "livro infantil"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Buch.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Kinder + Buch.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Kinderbücher.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "SV-017"
+      ]
+    },
+    {
+      "id": "KO-027",
+      "titulo": "das Kinderzimmer — quarto de criança",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Kinderzimmer",
+        "Kinderzimmer"
+      ],
+      "explicacao": [
+        "Quarto de criança.",
+        "das Kinderzimmer",
+        "quarto de criança",
+        "Núcleo: das Zimmer.",
+        "Divisão para reconhecer: Kinder + Zimmer.",
+        "Plural: die Kinderzimmer."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Quarto de criança.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Kinderzimmer"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "quarto de criança"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Zimmer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Kinder + Zimmer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Kinderzimmer.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-028",
+      "titulo": "die Küchenmaschine — máquina de cozinha",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Küchenmaschine",
+        "Küchenmaschine"
+      ],
+      "explicacao": [
+        "Máquina de cozinha.",
+        "die Küchenmaschine",
+        "máquina de cozinha",
+        "Núcleo: die Maschine.",
+        "Divisão para reconhecer: Küchen + Maschine.",
+        "Plural: die Küchenmaschinen.",
+        "O tipo de aparelho varia; nem toda Küchenmaschine é especificamente um processador de alimentos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Máquina de cozinha.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Küchenmaschine"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "máquina de cozinha"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Maschine.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Küchen + Maschine.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Küchenmaschinen.",
+          "citacoes_de": [
+            "die Küchenmaschine"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O tipo de aparelho varia; nem toda Küchenmaschine é especificamente um processador de alimentos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-029",
+      "titulo": "die Landkarte — mapa geográfico",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Landkarte",
+        "Landkarte"
+      ],
+      "explicacao": [
+        "Mapa geográfico.",
+        "die Landkarte",
+        "mapa geográfico",
+        "Núcleo: die Karte.",
+        "Divisão para reconhecer: Land + Karte.",
+        "Plural: die Landkarten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Mapa geográfico.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Landkarte"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "mapa geográfico"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Karte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Land + Karte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Landkarten.",
+          "citacoes_de": [
+            "die Landkarte"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-030",
+      "titulo": "die Lederjacke — jaqueta de couro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Lederjacke",
+        "Lederjacke"
+      ],
+      "explicacao": [
+        "Jaqueta de couro.",
+        "die Lederjacke",
+        "jaqueta de couro",
+        "Núcleo: die Jacke.",
+        "Divisão para reconhecer: Leder + Jacke.",
+        "Plural: die Lederjacken."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Jaqueta de couro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Lederjacke"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "jaqueta de couro"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Jacke.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Leder + Jacke.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Lederjacken.",
+          "citacoes_de": [
+            "die Lederjacke"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-031",
+      "titulo": "die Lieblingsfarbe — cor favorita",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Lieblingsfarbe",
+        "Lieblingsfarbe"
+      ],
+      "explicacao": [
+        "Cor favorita.",
+        "die Lieblingsfarbe",
+        "cor favorita",
+        "Núcleo: die Farbe.",
+        "Divisão para reconhecer: Lieblings + Farbe.",
+        "Plural: die Lieblingsfarben.",
+        "Lieblings- relaciona-se a der Liebling, não das Liebling. A palavra designa preferência; não é uma cor com características físicas especiais."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Cor favorita.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Lieblingsfarbe"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "cor favorita"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Farbe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Lieblings + Farbe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Lieblingsfarben.",
+          "citacoes_de": [
+            "die Lieblingsfarbe"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Lieblings- relaciona-se a der Liebling, não das Liebling. A palavra designa preferência; não é uma cor com características físicas especiais.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-032",
+      "titulo": "das Märchenbuch — livro de contos de fadas",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Märchenbuch",
+        "Märchenbuch"
+      ],
+      "explicacao": [
+        "Livro de contos de fadas.",
+        "das Märchenbuch",
+        "livro de contos de fadas",
+        "Núcleo: das Buch.",
+        "Divisão para reconhecer: Märchen + Buch.",
+        "Plural: die Märchenbücher."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Livro de contos de fadas.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Märchenbuch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "livro de contos de fadas"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Buch.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Märchen + Buch.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Märchenbücher.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "SV-017"
+      ]
+    },
+    {
+      "id": "KO-033",
+      "titulo": "die Milchflasche — garrafa de leite",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Milchflasche",
+        "Milchflasche"
+      ],
+      "explicacao": [
+        "Garrafa de leite.",
+        "die Milchflasche",
+        "garrafa de leite",
+        "Núcleo: die Flasche.",
+        "Divisão para reconhecer: Milch + Flasche.",
+        "Plural: die Milchflaschen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Garrafa de leite.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Milchflasche"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "garrafa de leite"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Flasche.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Milch + Flasche.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Milchflaschen.",
+          "citacoes_de": [
+            "die Milchflasche"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-034",
+      "titulo": "das Notizbuch — caderno de anotações",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Notizbuch",
+        "Notizbuch"
+      ],
+      "explicacao": [
+        "Caderno de anotações.",
+        "das Notizbuch",
+        "caderno de anotações",
+        "Núcleo: das Buch.",
+        "Divisão para reconhecer: Notiz + Buch.",
+        "Plural: die Notizbücher."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Caderno de anotações.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Notizbuch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "caderno de anotações"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Buch.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Notiz + Buch.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Notizbücher.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-035",
+      "titulo": "die Regenjacke — casaco para chuva",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Regenjacke",
+        "Regenjacke"
+      ],
+      "explicacao": [
+        "Casaco para chuva.",
+        "die Regenjacke",
+        "casaco para chuva",
+        "Núcleo: die Jacke.",
+        "Divisão para reconhecer: Regen + Jacke.",
+        "Plural: die Regenjacken."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Casaco para chuva.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Regenjacke"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "casaco para chuva"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Jacke.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Regen + Jacke.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Regenjacken.",
+          "citacoes_de": [
+            "die Regenjacke"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-036",
+      "titulo": "der Regenbogen — arco-íris",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Regenbogen",
+        "Regenbogen"
+      ],
+      "explicacao": [
+        "Arco-íris.",
+        "der Regenbogen",
+        "arco-íris",
+        "Núcleo: der Bogen.",
+        "Divisão para reconhecer: Regen + Bogen.",
+        "Plural: die Regenbögen.",
+        "Plural básico apresentado: Regenbögen; também existe a variante Regenbogen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Arco-íris.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Regenbogen"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "arco-íris"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Bogen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Regen + Bogen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Regenbögen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural básico apresentado: Regenbögen; também existe a variante Regenbogen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-037",
+      "titulo": "der Rasenmäher — cortador de grama",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Rasenmäher",
+        "Rasenmäher"
+      ],
+      "explicacao": [
+        "Cortador de grama.",
+        "der Rasenmäher",
+        "cortador de grama",
+        "Núcleo: der Mäher.",
+        "Divisão para reconhecer: Rasen + Mäher.",
+        "Plural: die Rasenmäher.",
+        "Mäher é formação nominal relacionada a mähen. O composto designa o aparelho no uso desta ficha."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Cortador de grama.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Rasenmäher"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "cortador de grama"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Mäher.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Rasen + Mäher.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Rasenmäher.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Mäher é formação nominal relacionada a mähen. O composto designa o aparelho no uso desta ficha.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-038",
+      "titulo": "das Schaufenster — vitrine",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Schaufenster",
+        "Schaufenster"
+      ],
+      "explicacao": [
+        "Vitrine.",
+        "das Schaufenster",
+        "vitrine",
+        "Núcleo: das Fenster.",
+        "Divisão para reconhecer: Schau + Fenster.",
+        "Plural: die Schaufenster.",
+        "Schau- relaciona-se a schauen, olhar. O significado convencional é vitrine."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Vitrine.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Schaufenster"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "vitrine"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Fenster.",
+          "citacoes_de": [
+            "das Fenster"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Schau + Fenster.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Schaufenster.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Schau- relaciona-se a schauen, olhar. O significado convencional é vitrine.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-039",
+      "titulo": "die Schultasche — bolsa ou mochila escolar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Schultasche",
+        "Schultasche"
+      ],
+      "explicacao": [
+        "Bolsa ou mochila escolar.",
+        "die Schultasche",
+        "bolsa ou mochila escolar",
+        "Núcleo: die Tasche.",
+        "Divisão para reconhecer: Schul + Tasche.",
+        "Plural: die Schultaschen.",
+        "Schul- é uma forma de composição de Schule com perda do e final. Não exige que a bolsa tenha formato de mochila."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Bolsa ou mochila escolar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Schultasche"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "bolsa ou mochila escolar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Tasche.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Schul + Tasche.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Schultaschen.",
+          "citacoes_de": [
+            "die Schultasche"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Schul- é uma forma de composição de Schule com perda do e final. Não exige que a bolsa tenha formato de mochila.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-040",
+      "titulo": "die Sommerferien — férias de verão",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Sommerferien",
+        "Sommerferien"
+      ],
+      "explicacao": [
+        "Férias de verão.",
+        "die Sommerferien",
+        "férias de verão",
+        "Núcleo: die Ferien.",
+        "Divisão para reconhecer: Sommer + Ferien.",
+        "Plural: die Sommerferien.",
+        "Forma plural; die não indica feminino singular. A referência a Ferien já está no plural."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Férias de verão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Sommerferien"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "férias de verão"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Ferien.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Sommer + Ferien.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Sommerferien.",
+          "citacoes_de": [
+            "die Sommerferien"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Forma plural; die não indica feminino singular. A referência a Ferien já está no plural.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-041",
+      "titulo": "der Sonnenaufgang — nascer do sol",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Sonnenaufgang",
+        "Sonnenaufgang"
+      ],
+      "explicacao": [
+        "Nascer do sol.",
+        "der Sonnenaufgang",
+        "nascer do sol",
+        "Núcleo: der Aufgang.",
+        "Divisão para reconhecer: Sonnen + Aufgang.",
+        "Plural: die Sonnenaufgänge."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nascer do sol.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Sonnenaufgang"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "nascer do sol"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Aufgang.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Sonnen + Aufgang.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Sonnenaufgänge.",
+          "citacoes_de": [
+            "die Sonne"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-042",
+      "titulo": "die Sonnenbrille — óculos de sol",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Sonnenbrille",
+        "Sonnenbrille"
+      ],
+      "explicacao": [
+        "Óculos de sol.",
+        "die Sonnenbrille",
+        "óculos de sol",
+        "Núcleo: die Brille.",
+        "Divisão para reconhecer: Sonnen + Brille.",
+        "Plural: die Sonnenbrillen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Óculos de sol.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Sonnenbrille"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "óculos de sol"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Brille.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Sonnen + Brille.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Sonnenbrillen.",
+          "citacoes_de": [
+            "die Sonnenbrille",
+            "die Sonne"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-043",
+      "titulo": "die Stadtmitte — centro da cidade",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Stadtmitte",
+        "Stadtmitte"
+      ],
+      "explicacao": [
+        "Centro da cidade.",
+        "die Stadtmitte",
+        "centro da cidade",
+        "Núcleo: die Mitte.",
+        "Divisão para reconhecer: Stadt + Mitte.",
+        "Plural: die Stadtmitten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Centro da cidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Stadtmitte"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "centro da cidade"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Mitte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Stadt + Mitte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Stadtmitten.",
+          "citacoes_de": [
+            "die Stadtmitte"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-044",
+      "titulo": "die Straßenbahn — bonde",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Straßenbahn",
+        "Straßenbahn"
+      ],
+      "explicacao": [
+        "Bonde.",
+        "die Straßenbahn",
+        "bonde",
+        "Núcleo: die Bahn.",
+        "Divisão para reconhecer: Straßen + Bahn.",
+        "Plural: die Straßenbahnen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Bonde.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Straßenbahn"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "bonde"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Bahn.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Straßen + Bahn.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Straßenbahnen.",
+          "citacoes_de": [
+            "die Straßenbahn"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-045",
+      "titulo": "die Taschenlampe — lanterna",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Taschenlampe",
+        "Taschenlampe"
+      ],
+      "explicacao": [
+        "Lanterna.",
+        "die Taschenlampe",
+        "lanterna",
+        "Núcleo: die Lampe.",
+        "Divisão para reconhecer: Taschen + Lampe.",
+        "Plural: die Taschenlampen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Lanterna.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Taschenlampe"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "lanterna"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Lampe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Taschen + Lampe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Taschenlampen.",
+          "citacoes_de": [
+            "die Taschenlampe"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-046",
+      "titulo": "das Taschenbuch — livro de bolso ou brochura",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Taschenbuch",
+        "Taschenbuch"
+      ],
+      "explicacao": [
+        "Livro de bolso ou brochura.",
+        "das Taschenbuch",
+        "livro de bolso ou brochura",
+        "Núcleo: das Buch.",
+        "Divisão para reconhecer: Taschen + Buch.",
+        "Plural: die Taschenbücher.",
+        "O uso editorial pode referir-se a edição em brochura, não necessariamente a livro que caiba literalmente no bolso."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Livro de bolso ou brochura.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Taschenbuch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "livro de bolso ou brochura"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Buch.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Taschen + Buch.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Taschenbücher.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O uso editorial pode referir-se a edição em brochura, não necessariamente a livro que caiba literalmente no bolso.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-047",
+      "titulo": "der Taschenrechner — calculadora portátil",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Taschenrechner",
+        "Taschenrechner"
+      ],
+      "explicacao": [
+        "Calculadora portátil.",
+        "der Taschenrechner",
+        "calculadora portátil",
+        "Núcleo: der Rechner.",
+        "Divisão para reconhecer: Taschen + Rechner.",
+        "Plural: die Taschenrechner."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Calculadora portátil.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Taschenrechner"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "calculadora portátil"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Rechner.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Taschen + Rechner.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Taschenrechner.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-048",
+      "titulo": "die Tageszeitung — jornal diário",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Tageszeitung",
+        "Tageszeitung"
+      ],
+      "explicacao": [
+        "Jornal diário.",
+        "die Tageszeitung",
+        "jornal diário",
+        "Núcleo: die Zeitung.",
+        "Divisão para reconhecer: Tag + es + Zeitung.",
+        "Plural: die Tageszeitungen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Jornal diário.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Tageszeitung"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "jornal diário"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Zeitung.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Tag + es + Zeitung.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Tageszeitungen.",
+          "citacoes_de": [
+            "die Tageszeitung"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-049",
+      "titulo": "die Tischdecke — toalha de mesa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Tischdecke",
+        "Tischdecke"
+      ],
+      "explicacao": [
+        "Toalha de mesa.",
+        "die Tischdecke",
+        "toalha de mesa",
+        "Núcleo: die Decke.",
+        "Divisão para reconhecer: Tisch + Decke.",
+        "Plural: die Tischdecken."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Toalha de mesa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Tischdecke"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "toalha de mesa"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Decke.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Tisch + Decke.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Tischdecken.",
+          "citacoes_de": [
+            "die Tischdecke"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-050",
+      "titulo": "die Tischlampe — luminária de mesa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Tischlampe",
+        "Tischlampe"
+      ],
+      "explicacao": [
+        "Luminária de mesa.",
+        "die Tischlampe",
+        "luminária de mesa",
+        "Núcleo: die Lampe.",
+        "Divisão para reconhecer: Tisch + Lampe.",
+        "Plural: die Tischlampen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Luminária de mesa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Tischlampe"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "luminária de mesa"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Lampe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Tisch + Lampe.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Tischlampen.",
+          "citacoes_de": [
+            "die Tischlampe"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-051",
+      "titulo": "die Tischplatte — tampo da mesa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Tischplatte",
+        "Tischplatte"
+      ],
+      "explicacao": [
+        "Tampo da mesa.",
+        "die Tischplatte",
+        "tampo da mesa",
+        "Núcleo: die Platte.",
+        "Divisão para reconhecer: Tisch + Platte.",
+        "Plural: die Tischplatten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Tampo da mesa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Tischplatte"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "tampo da mesa"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Platte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Tisch + Platte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Tischplatten.",
+          "citacoes_de": [
+            "die Tischplatte"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-052",
+      "titulo": "das Wohnzimmer — sala de estar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Wohnzimmer",
+        "Wohnzimmer"
+      ],
+      "explicacao": [
+        "Sala de estar.",
+        "das Wohnzimmer",
+        "sala de estar",
+        "Núcleo: das Zimmer.",
+        "Divisão para reconhecer: Wohn + Zimmer.",
+        "Plural: die Wohnzimmer.",
+        "Wohn- é base verbal relacionada a wohnen; nem todos os componentes são substantivos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sala de estar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Wohnzimmer"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "sala de estar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Zimmer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Wohn + Zimmer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Wohnzimmer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Wohn- é base verbal relacionada a wohnen; nem todos os componentes são substantivos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-053",
+      "titulo": "der Wetterbericht — boletim meteorológico",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Wetterbericht",
+        "Wetterbericht"
+      ],
+      "explicacao": [
+        "Boletim meteorológico.",
+        "der Wetterbericht",
+        "boletim meteorológico",
+        "Núcleo: der Bericht.",
+        "Divisão para reconhecer: Wetter + Bericht.",
+        "Plural: die Wetterberichte.",
+        "Pode incluir previsão; Wettervorhersage designa especificamente previsão do tempo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Boletim meteorológico.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Wetterbericht"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "boletim meteorológico"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Bericht.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Wetter + Bericht.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Wetterberichte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Pode incluir previsão; Wettervorhersage designa especificamente previsão do tempo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-054",
+      "titulo": "die Windmühle — moinho de vento",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Windmühle",
+        "Windmühle"
+      ],
+      "explicacao": [
+        "Moinho de vento.",
+        "die Windmühle",
+        "moinho de vento",
+        "Núcleo: die Mühle.",
+        "Divisão para reconhecer: Wind + Mühle.",
+        "Plural: die Windmühlen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Moinho de vento.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Windmühle"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "moinho de vento"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Mühle.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Wind + Mühle.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Windmühlen.",
+          "citacoes_de": [
+            "die Windmühle"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-055",
+      "titulo": "der Wolkenkratzer — arranha-céu",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Wolkenkratzer",
+        "Wolkenkratzer"
+      ],
+      "explicacao": [
+        "Arranha-céu.",
+        "der Wolkenkratzer",
+        "arranha-céu",
+        "Núcleo: der Kratzer.",
+        "Divisão para reconhecer: Wolken + Kratzer.",
+        "Plural: die Wolkenkratzer.",
+        "Kratzer relaciona-se a kratzen; a imagem literal não substitui arranha-céu."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Arranha-céu.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Wolkenkratzer"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "arranha-céu"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Kratzer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Wolken + Kratzer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Wolkenkratzer.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Kratzer relaciona-se a kratzen; a imagem literal não substitui arranha-céu.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-056",
+      "titulo": "das Wörterbuch — dicionário",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Wörterbuch",
+        "Wörterbuch"
+      ],
+      "explicacao": [
+        "Dicionário.",
+        "das Wörterbuch",
+        "dicionário",
+        "Núcleo: das Buch.",
+        "Divisão para reconhecer: Wörter + Buch.",
+        "Plural: die Wörterbücher."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Dicionário.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Wörterbuch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "dicionário"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Buch.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Wörter + Buch.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Wörterbücher.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "SV-017"
+      ]
+    },
+    {
+      "id": "KO-057",
+      "titulo": "das Zeitgefühl — percepção ou senso de tempo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Zeitgefühl",
+        "Zeitgefühl"
+      ],
+      "explicacao": [
+        "Percepção ou senso de tempo.",
+        "das Zeitgefühl",
+        "percepção ou senso de tempo",
+        "Núcleo: das Gefühl.",
+        "Divisão para reconhecer: Zeit + Gefühl."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Percepção ou senso de tempo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Zeitgefühl"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "percepção ou senso de tempo"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Gefühl.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Zeit + Gefühl.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-058",
+      "titulo": "der Zebrastreifen — faixa de pedestres",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Zebrastreifen",
+        "Zebrastreifen"
+      ],
+      "explicacao": [
+        "Faixa de pedestres.",
+        "der Zebrastreifen",
+        "faixa de pedestres",
+        "Núcleo: der Streifen.",
+        "Divisão para reconhecer: Zebra + Streifen.",
+        "Plural: die Zebrastreifen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Faixa de pedestres.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Zebrastreifen"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "faixa de pedestres"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: der Streifen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Zebra + Streifen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Zebrastreifen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-059",
+      "titulo": "die Zahnbürste — escova de dentes",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Zahnbürste",
+        "Zahnbürste"
+      ],
+      "explicacao": [
+        "Escova de dentes.",
+        "die Zahnbürste",
+        "escova de dentes",
+        "Núcleo: die Bürste.",
+        "Divisão para reconhecer: Zahn + Bürste.",
+        "Plural: die Zahnbürsten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Escova de dentes.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Zahnbürste"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "escova de dentes"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: die Bürste.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Zahn + Bürste.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Zahnbürsten.",
+          "citacoes_de": [
+            "die Zahnbürste"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "KO-060",
+      "titulo": "das Zimmerfenster — janela do quarto",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Zimmerfenster",
+        "Zimmerfenster"
+      ],
+      "explicacao": [
+        "Janela do quarto.",
+        "das Zimmerfenster",
+        "janela do quarto",
+        "Núcleo: das Fenster.",
+        "Divisão para reconhecer: Zimmer + Fenster.",
+        "Plural: die Zimmerfenster."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Janela do quarto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Zimmerfenster"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "janela do quarto"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Núcleo: das Fenster.",
+          "citacoes_de": [
+            "das Fenster"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Divisão para reconhecer: Zimmer + Fenster.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Zimmerfenster.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "SV-012"
+      ]
+    }
+  ]
+}

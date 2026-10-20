@@ -1,0 +1,58 @@
+/* Estilo restrito à referência; preserva Textos, Apostila e Cards. */
+#rg-overlay.rg-dialog { box-sizing:border-box; width:min(1050px, calc(100vw - 32px)); max-width:none; height:min(900px, calc(100dvh - 40px)); max-height:none; margin:auto; padding:24px; border:2px solid #c9b981; border-left:5px solid #b89a3f; border-radius:14px; background:#f5f2ea; color:#403c2d; font:22px/1.5 Arial,sans-serif; box-shadow:0 12px 34px #0005; overflow:hidden; }
+#rg-overlay.rg-dialog[open] { display:flex; flex-direction:column; gap:12px; }
+#rg-overlay.rg-dialog::backdrop { background:#302a186b; }
+#rg-overlay.rg-dialog .rg-linha-topo { display:flex; gap:12px; align-items:center; justify-content:space-between; }
+#rg-overlay.rg-dialog #rg-voltar { flex:0 0 auto; white-space:normal; overflow-wrap:normal; min-width:82px; max-width:150px; }
+#rg-overlay.rg-dialog #rg-anterior { margin:0 0 14px; background:#e8eee8; border-color:#93aa9a; }
+#rg-overlay.rg-dialog h2 { margin:0; color:#5a4f26; font-size:30px; line-height:1.2; }
+#rg-overlay.rg-dialog h3 { margin:0 0 8px; font-size:24px; line-height:1.35; }
+#rg-overlay.rg-dialog p { margin:8px 0; font-size:inherit; font-weight:400; line-height:1.5; }
+#rg-overlay.rg-dialog button, .rg-acesso { box-sizing:border-box; min-height:48px; padding:9px 14px; border:2px solid #c9b981; border-radius:10px; background:#f2ebd7; color:#4a4327; font:700 20px/1.35 Arial,sans-serif; cursor:pointer; white-space:normal; overflow-wrap:anywhere; }
+#rg-overlay.rg-dialog button:disabled { opacity:.65; cursor:wait; }
+#rg-overlay.rg-dialog button[aria-pressed=true] { background:#ded3ae; border-color:#76642d; }
+#rg-overlay.rg-dialog :focus-visible, .rg-acesso:focus-visible { outline:3px solid #246b67; outline-offset:3px; }
+#rg-overlay.rg-dialog nav { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 10px; }
+#rg-overlay.rg-dialog label { display:block; font-size:20px; }
+#rg-overlay.rg-dialog input { width:100%; box-sizing:border-box; min-height:48px; padding:10px 12px; border:2px solid #c9b981; border-radius:10px; color:#403c2d; background:#fffdf7; font:inherit; }
+#rg-overlay.rg-dialog #rg-contador { font-size:18px; margin:6px 0 0; }
+#rg-overlay.rg-dialog .rg-indicacoes { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; margin-top:6px; }
+#rg-overlay.rg-dialog #rg-abrir-ajuda { font-size:18px; padding:6px 10px; }
+#rg-overlay.rg-dialog #rg-corpo { min-height:0; flex:1; overflow-y:auto; overscroll-behavior:contain; padding:3px 6px 4px 3px; }
+#rg-overlay.rg-dialog .rg-consulta { padding:18px; margin-bottom:14px; background:#fdfbf5; border:1px solid #ded5b8; border-left:4px solid #c9b981; border-radius:10px; overflow-wrap:anywhere; }
+#rg-overlay.rg-dialog .rg-texto p { margin:8px 0; white-space:pre-line; }
+#rg-overlay.rg-dialog .rg-texto .rg-alemao { margin-top:14px; margin-bottom:4px; }
+#rg-overlay.rg-dialog .rg-texto .rg-traducao { margin-top:4px; }
+#rg-overlay.rg-dialog .rg-texto strong { font-weight:700; }
+#rg-overlay.rg-dialog details { margin-top:12px; }
+#rg-overlay.rg-dialog summary { cursor:pointer; padding:8px 4px; min-height:32px; font-weight:700; color:#5a4f26; }
+#rg-overlay.rg-dialog details[open] { padding-bottom:8px; }
+#rg-overlay.rg-dialog .rg-relacionadas { display:flex; gap:8px; flex-wrap:wrap; }
+#rg-overlay.rg-dialog .rg-relacionadas:not(:empty) { border-top:1px solid #ded5b8; margin-top:18px; padding-top:8px; }
+#rg-overlay.rg-dialog .rg-relacionadas p { flex-basis:100%; }
+#rg-overlay.rg-dialog .rg-tabela { overflow-x:auto; margin:12px 0; }
+#rg-overlay.rg-dialog table { border-collapse:collapse; width:100%; font:inherit; }
+#rg-overlay.rg-dialog caption { text-align:left; font-weight:700; }
+#rg-overlay.rg-dialog th, #rg-overlay.rg-dialog td { border:1px solid #c9b981; padding:8px; text-align:left; vertical-align:top; }
+#rg-overlay.rg-dialog th { background:#eee5cd; }
+#rg-overlay.rg-dialog #rg-contexto:not(:empty), #rg-overlay.rg-dialog .rg-candidatos { background:#e4eaf0; padding:12px 16px; border-radius:8px; margin-bottom:14px; overflow-wrap:anywhere; }
+#rg-overlay.rg-dialog #rg-sobre { border-top:1px solid #c9b981; padding-top:10px; }
+.rg-acesso { margin-top:10px; max-width:100%; }
+@media(max-width:600px) {
+  #rg-overlay.rg-dialog { width:calc(100vw - 16px); height:calc(100dvh - 16px); padding:14px 12px; gap:8px; }
+  #rg-overlay.rg-dialog h2 { font-size:28px; }
+  #rg-overlay.rg-dialog h3 { font-size:23px; }
+  #rg-overlay.rg-dialog .rg-linha-topo { align-items:flex-start; gap:8px; }
+  #rg-overlay.rg-dialog button { font-size:20px; padding:8px 10px; }
+  #rg-overlay.rg-dialog #rg-voltar { max-width:118px; font-size:18px; }
+  #rg-overlay.rg-dialog nav { gap:6px; margin:10px 0 8px; }
+  #rg-overlay.rg-dialog .rg-consulta { padding:14px 12px; }
+  #rg-overlay.rg-dialog input { font-size:20px; }
+}
+
+#rg-overlay.rg-dialog .rg-escolha { flex:1 1 320px; min-width:0; }
+#rg-overlay.rg-dialog select { display:block; box-sizing:border-box; width:100%; min-height:48px; padding:8px; border:2px solid #c9b981; border-radius:10px; background:#fffdf7; color:#403c2d; font:20px/1.35 Arial,sans-serif; }
+@media(max-width:600px) { #rg-overlay.rg-dialog .rg-escolha { flex-basis:100%; } #rg-overlay.rg-dialog nav { margin:6px 0; gap:6px; } }
+
+#rg-overlay.rg-dialog .rg-escolha { font-size:0; }
+@media(max-width:600px) { #rg-overlay.rg-dialog nav button { flex:1; font-size:18px; white-space:nowrap; } }

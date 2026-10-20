@@ -1,0 +1,2538 @@
+{
+  "id": "substantivos_artigos_e_casos",
+  "numero": "03",
+  "titulo": "Substantivos, artigos e casos",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "SC-001",
+      "titulo": "Aprender a palavra em conjunto",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Guarde artigo, substantivo, plural e sentido. O gênero alemão não se deduz pela tradução portuguesa.",
+        "das Buch — die Bücher; die Sonne — die Sonnen",
+        "o livro — os livros; o sol — os sóis",
+        "Sonne é feminino em alemão, embora sol seja masculino em português. Os substantivos alemães começam com maiúscula."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Guarde artigo, substantivo, plural e sentido. O gênero alemão não se deduz pela tradução portuguesa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Buch — die Bücher; die Sonne — die Sonnen"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "o livro — os livros; o sol — os sóis"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sonne é feminino em alemão, embora sol seja masculino em português. Os substantivos alemães começam com maiúscula.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-002",
+      "titulo": "Gênero e número",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Der, die e das indicam o gênero no nominativo singular. No plural, o artigo definido é die no nominativo e acusativo.",
+        "der See; die Seen; die Luft",
+        "o lago; os lagos; o ar",
+        "Die Seen é plural de der See e não transforma o substantivo em feminino. Die Luft é feminino singular. O contexto e as outras formas ajudam a reconhecer o número."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Der, die e das indicam o gênero no nominativo singular. No plural, o artigo definido é die no nominativo e acusativo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der See; die Seen; die Luft"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "o lago; os lagos; o ar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Die Seen é plural de der See e não transforma o substantivo em feminino. Die Luft é feminino singular. O contexto e as outras formas ajudam a reconhecer o número.",
+          "citacoes_de": [
+            "der See"
+          ]
+        }
+      ],
+      "relacionados": [
+        "ST-01"
+      ]
+    },
+    {
+      "id": "SC-003",
+      "titulo": "Definido e indefinido",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Ein pode apresentar um elemento; der, die ou das podem indicar algo identificável no contexto.",
+        "Am Ufer sehe ich einen Vogel. Der Vogel sitzt auf einem Ast.",
+        "Na margem, vejo um pássaro. O pássaro está num galho.",
+        "Einen Vogel introduz o pássaro; der Vogel o retoma. Não é uma regra absoluta de primeira e segunda menção: a referência pode estar identificável por outros meios."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ein pode apresentar um elemento; der, die ou das podem indicar algo identificável no contexto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Am Ufer sehe ich einen Vogel. Der Vogel sitzt auf einem Ast."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Na margem, vejo um pássaro. O pássaro está num galho."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Einen Vogel introduz o pássaro; der Vogel o retoma. Não é uma regra absoluta de primeira e segunda menção: a referência pode estar identificável por outros meios.",
+          "citacoes_de": [
+            "der Vogel"
+          ]
+        }
+      ],
+      "relacionados": [
+        "ST-01",
+        "ST-02"
+      ]
+    },
+    {
+      "id": "SC-004",
+      "titulo": "Singular indefinido e plural",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Ein não tem plural. Um plural indefinido pode aparecer sem artigo.",
+        "Ich lese ein Buch. Ich lese Bücher.",
+        "Leio um livro. Leio livros.",
+        "Para negar: Ich lese keine Bücher. Kein e os possessivos têm suas próprias formas; consulte módulos 05 e 06."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ein não tem plural. Um plural indefinido pode aparecer sem artigo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lese ein Buch. Ich lese Bücher."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Leio um livro. Leio livros."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Para negar: Ich lese keine Bücher. Kein e os possessivos têm suas próprias formas; consulte módulos 05 e 06.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-005",
+      "titulo": "Nominativo e sujeito",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "O sujeito aparece normalmente no nominativo e se liga à concordância do verbo.",
+        "Der Vogel singt. Die Vögel singen.",
+        "O pássaro canta. Os pássaros cantam.",
+        "O sujeito não precisa ser a primeira expressão: Am Morgen singt der Vogel. A fórmula S + V é um apoio, não uma imposição de posição inicial."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O sujeito aparece normalmente no nominativo e se liga à concordância do verbo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Vogel singt. Die Vögel singen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O pássaro canta. Os pássaros cantam."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O sujeito não precisa ser a primeira expressão: Am Morgen singt der Vogel. A fórmula S + V é um apoio, não uma imposição de posição inicial.",
+          "citacoes_de": [
+            "der Vogel"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-006",
+      "titulo": "Acusativo no objeto",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Sehen e lesen, nos usos apresentados, ligam-se a objeto direto em acusativo.",
+        "Ich sehe den Vogel. Ich lese das Buch.",
+        "Vejo o pássaro. Leio o livro.",
+        "No masculino singular, der muda para den. No neutro, das permanece das; a ausência de mudança visível não elimina o caso. O verbo e a construção orientam a leitura."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sehen e lesen, nos usos apresentados, ligam-se a objeto direto em acusativo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich sehe den Vogel. Ich lese das Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vejo o pássaro. Leio o livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No masculino singular, der muda para den. No neutro, das permanece das; a ausência de mudança visível não elimina o caso. O verbo e a construção orientam a leitura.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-007",
+      "titulo": "Dativo no objeto",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Helfen rege dativo; geben pode ligar um destinatário em dativo a algo dado em acusativo.",
+        "Ich helfe dem Mann. Ich gebe dem Mann das Buch.",
+        "Ajudo o homem. Dou o livro ao homem.",
+        "Na terminologia de apoio, dem Mann pode ser tratado como OI e das Buch como OD na segunda frase. Não escolher o caso apenas pela tradução portuguesa."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Helfen rege dativo; geben pode ligar um destinatário em dativo a algo dado em acusativo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich helfe dem Mann. Ich gebe dem Mann das Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ajudo o homem. Dou o livro ao homem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Na terminologia de apoio, dem Mann pode ser tratado como OI e das Buch como OD na segunda frase. Não escolher o caso apenas pela tradução portuguesa.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-008",
+      "titulo": "Caso após preposição",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Uma preposição pode exigir o caso do grupo nominal. Isso não transforma o grupo automaticamente em OI ou OD.",
+        "Ich gehe mit dem Mann zum See.",
+        "Vou com o homem ao lago.",
+        "Mit e zu regem D. Zum = zu dem. O deslocamento não exige acusativo com toda preposição; consultar módulo 04."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Uma preposição pode exigir o caso do grupo nominal. Isso não transforma o grupo automaticamente em OI ou OD.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe mit dem Mann zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou com o homem ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Mit e zu regem D. Zum = zu dem. O deslocamento não exige acusativo com toda preposição; consultar módulo 04.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PC-002"
+      ]
+    },
+    {
+      "id": "SC-009",
+      "titulo": "Uma forma pode indicar vários casos",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Die, der ou das isolados não identificam sempre uma única função. Observe nome, verbo, preposição e contexto.",
+        "Ich sehe die Frau. Ich helfe der Frau.",
+        "Vejo a mulher. Ajudo a mulher.",
+        "Die Frau é A na primeira frase; der Frau é D na segunda. Der também pode ser artigo masculino no N. Não criar correspondência única entre uma forma e um caso."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Die, der ou das isolados não identificam sempre uma única função. Observe nome, verbo, preposição e contexto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich sehe die Frau. Ich helfe der Frau."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vejo a mulher. Ajudo a mulher."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Die Frau é A na primeira frase; der Frau é D na segunda. Der também pode ser artigo masculino no N. Não criar correspondência única entre uma forma e um caso.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "ST-01"
+      ]
+    },
+    {
+      "id": "SC-010",
+      "titulo": "Dativo plural",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "O artigo definido passa a den. Muitos substantivos acrescentam n se o plural não terminar em n ou s.",
+        "Ich spreche mit den Kindern. Ich fahre mit den Autos.",
+        "Falo com as crianças. Vou de carro ou nos carros, conforme o contexto.",
+        "Kinder → Kindern; Freunde já termina em e e passa a Freunden; Frauen e Autos não recebem n adicional. Aprenda a forma do nome também, não apenas o artigo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O artigo definido passa a den. Muitos substantivos acrescentam n se o plural não terminar em n ou s.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich spreche mit den Kindern. Ich fahre mit den Autos."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Falo com as crianças. Vou de carro ou nos carros, conforme o contexto."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Kinder → Kindern; Freunde já termina em e e passa a Freunden; Frauen e Autos não recebem n adicional. Aprenda a forma do nome também, não apenas o artigo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-011",
+      "titulo": "Genitivo como consulta",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "O genitivo pode expressar uma relação entre nomes. Artigo e substantivo podem variar.",
+        "Das Dach des Hauses ist alt.",
+        "O telhado da casa é antigo.",
+        "No masculino e neutro, muitos nomes têm s ou es: des Gartens, des Hauses. Não é regra sem exceções: des Jungen; des Namens. No feminino: der Frau. Genitivo fica em aprofundamento."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O genitivo pode expressar uma relação entre nomes. Artigo e substantivo podem variar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Das Dach des Hauses ist alt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O telhado da casa é antigo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No masculino e neutro, muitos nomes têm s ou es: des Gartens, des Hauses. Não é regra sem exceções: des Jungen; des Namens. No feminino: der Frau. Genitivo fica em aprofundamento.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-012",
+      "titulo": "Nomes masculinos com n ou en",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Alguns masculinos acrescentam n ou en fora do nominativo singular.",
+        "Der Junge kommt. Ich sehe den Jungen. Ich helfe dem Jungen.",
+        "O menino vem. Vejo o menino. Ajudo o menino.",
+        "No G: des Jungen. Outros modelos: der Kunde — den Kunden; der Patient — dem Patienten. Não aplicar essa terminação a todos os masculinos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Alguns masculinos acrescentam n ou en fora do nominativo singular.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Junge kommt. Ich sehe den Jungen. Ich helfe dem Jungen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O menino vem. Vejo o menino. Ajudo o menino."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No G: des Jungen. Outros modelos: der Kunde — den Kunden; der Patient — dem Patienten. Não aplicar essa terminação a todos os masculinos.",
+          "citacoes_de": [
+            "der Patient",
+            "der Kunde"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-013",
+      "titulo": "Nome e nomes substantivados",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Name tem flexão própria. Palavras como Erwachsene também variam conforme o determinante.",
+        "Der Name ist kurz. Ich kenne den Namen. Ein Erwachsener kommt.",
+        "O nome é curto. Conheço o nome. Um adulto vem.",
+        "Der Name — den Namen — dem Namen — des Namens. Der Erwachsene e ein Erwachsener vêm da declinação de adjetivo substantivado; não é uma simples troca de artigo. Essa declinação exige consulta própria, fora do núcleo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Name tem flexão própria. Palavras como Erwachsene também variam conforme o determinante.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Name ist kurz. Ich kenne den Namen. Ein Erwachsener kommt."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O nome é curto. Conheço o nome. Um adulto vem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Der Name — den Namen — dem Namen — des Namens. Der Erwachsene e ein Erwachsener vêm da declinação de adjetivo substantivado; não é uma simples troca de artigo. Essa declinação exige consulta própria, fora do núcleo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-014",
+      "titulo": "Plural com mudança de sentido",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Aprenda o plural com o sentido, não apenas com a grafia do singular.",
+        "Die Bank im Garten ist alt. Die Banken sind geschlossen.",
+        "O banco do jardim é antigo. Os bancos, instituições financeiras, estão fechados.",
+        "Die Bank — die Bänke, assentos; die Bank — die Banken, instituições. Das Wort pode ter Wörter para palavras como unidades e Worte para palavras de uma fala ou expressão. O contexto decide."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Aprenda o plural com o sentido, não apenas com a grafia do singular.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Bank im Garten ist alt. Die Banken sind geschlossen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O banco do jardim é antigo. Os bancos, instituições financeiras, estão fechados."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Die Bank — die Bänke, assentos; die Bank — die Banken, instituições. Das Wort pode ter Wörter para palavras como unidades e Worte para palavras de uma fala ou expressão. O contexto decide.",
+          "citacoes_de": [
+            "die Bank"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-015",
+      "titulo": "Normalmente singular ou somente plural",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Alguns sentidos usam normalmente singular; outras palavras são plurais sem singular corrente equivalente.",
+        "Die Luft ist kühl. Meine Eltern sind hier.",
+        "O ar está fresco. Meus pais estão aqui.",
+        "Eltern e Leute são plurais, não femininos só porque têm die. Luft, no sentido de ar, é normalmente singular. Não tratar todo traço de uma lista como proibição absoluta de plural."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Alguns sentidos usam normalmente singular; outras palavras são plurais sem singular corrente equivalente.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Luft ist kühl. Meine Eltern sind hier."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O ar está fresco. Meus pais estão aqui."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Eltern e Leute são plurais, não femininos só porque têm die. Luft, no sentido de ar, é normalmente singular. Não tratar todo traço de uma lista como proibição absoluta de plural.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-016",
+      "titulo": "Porções variedades e usos especiais",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Uma palavra normalmente incontável pode ter plural em certos sentidos ou em referência a porções.",
+        "Wir bestellen zwei Kaffees.",
+        "Pedimos dois cafés.",
+        "Kaffees pode indicar duas porções ou variedades. Isso não exige plural no uso geral: Ich trinke Kaffee. Dinheiro em geral é Geld; Gelder pode indicar verbas ou recursos. Não transferir um plural especializado a todos os sentidos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Uma palavra normalmente incontável pode ter plural em certos sentidos ou em referência a porções.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir bestellen zwei Kaffees."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Pedimos dois cafés."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Kaffees pode indicar duas porções ou variedades. Isso não exige plural no uso geral: Ich trinke Kaffee. Dinheiro em geral é Geld; Gelder pode indicar verbas ou recursos. Não transferir um plural especializado a todos os sentidos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SC-017",
+      "titulo": "Compostos e pistas de gênero",
+      "tipo_consulta": "uso",
+      "palavras_chave": [],
+      "explicacao": [
+        "Em compostos nominais comuns, o último substantivo determina gênero e plural da palavra inteira.",
+        "der Garten + das Haus → das Gartenhaus; die Gartenhäuser",
+        "jardim + casa → casa de jardim; casas de jardim",
+        "Sufixos como -ung e -heit são pistas fortes de feminino; -chen forma neutros, como das Brötchen. Não tratar qualquer sequência final de letras como sufixo nem substituir a consulta por adivinhação."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Em compostos nominais comuns, o último substantivo determina gênero e plural da palavra inteira.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Garten + das Haus → das Gartenhaus; die Gartenhäuser"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "jardim + casa → casa de jardim; casas de jardim"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Sufixos como -ung e -heit são pistas fortes de feminino; -chen forma neutros, como das Brötchen. Não tratar qualquer sequência final de letras como sufixo nem substituir a consulta por adivinhação.",
+          "citacoes_de": [
+            "das Brötchen"
+          ]
+        }
+      ],
+      "relacionados": [
+        "KC-001"
+      ]
+    },
+    {
+      "id": "SV-001",
+      "titulo": "der See — lago",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der See",
+        "See"
+      ],
+      "explicacao": [
+        "Lago.",
+        "der See",
+        "lago",
+        "Plural: die Seen.",
+        "Compare die See, mar, outro uso com outro gênero."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Lago.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der See"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "lago"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Seen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Compare die See, mar, outro uso com outro gênero.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-002",
+      "titulo": "die Luft — ar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Luft",
+        "Luft"
+      ],
+      "explicacao": [
+        "Ar.",
+        "die Luft",
+        "ar",
+        "Normalmente singular neste sentido."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Luft"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "ar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Normalmente singular neste sentido.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-003",
+      "titulo": "das Wasser — água",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Wasser",
+        "Wasser"
+      ],
+      "explicacao": [
+        "das Wasser",
+        "a água",
+        "No uso cotidiano de água, Wasser geralmente fica no singular.",
+        "Em usos especiais, die Wasser pode indicar águas ou massas de água; die Wässer pode distinguir tipos de água."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "das Wasser"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "a água"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No uso cotidiano de água, Wasser geralmente fica no singular.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em usos especiais, die Wasser pode indicar águas ou massas de água; die Wässer pode distinguir tipos de água.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-004",
+      "titulo": "der Morgen — manhã",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Morgen",
+        "Morgen"
+      ],
+      "explicacao": [
+        "Manhã.",
+        "der Morgen",
+        "manhã",
+        "Plural: die Morgen.",
+        "Não confundir der Morgen, substantivo, com morgen, amanhã."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Manhã.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Morgen"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "manhã"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Morgen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não confundir der Morgen, substantivo, com morgen, amanhã.",
+          "citacoes_de": [
+            "der Morgen"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-005",
+      "titulo": "der Nebel — nevoeiro ou neblina",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Nebel",
+        "Nebel"
+      ],
+      "explicacao": [
+        "Nevoeiro ou neblina.",
+        "der Nebel",
+        "nevoeiro ou neblina",
+        "Plural: die Nebel.",
+        "Plural possível para ocorrências ou tipos; singular é frequente no uso meteorológico."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nevoeiro ou neblina.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Nebel"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "nevoeiro ou neblina"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Nebel.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural possível para ocorrências ou tipos; singular é frequente no uso meteorológico.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-006",
+      "titulo": "der Vogel — pássaro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Vogel",
+        "Vogel"
+      ],
+      "explicacao": [
+        "Pássaro.",
+        "der Vogel",
+        "pássaro",
+        "Plural: die Vögel."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Pássaro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Vogel"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "pássaro"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Vögel.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-007",
+      "titulo": "die Sonne — sol",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Sonne",
+        "Sonne"
+      ],
+      "explicacao": [
+        "Sol.",
+        "die Sonne",
+        "sol",
+        "Plural: die Sonnen.",
+        "Singular no uso cotidiano do nosso sol; plural em outros contextos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sol.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Sonne"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "sol"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Sonnen.",
+          "citacoes_de": [
+            "die Sonne"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Singular no uso cotidiano do nosso sol; plural em outros contextos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-008",
+      "titulo": "das Ufer — margem",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Ufer",
+        "Ufer"
+      ],
+      "explicacao": [
+        "Margem.",
+        "das Ufer",
+        "margem",
+        "Plural: die Ufer."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Margem.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Ufer"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "margem"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Ufer.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-009",
+      "titulo": "der Ast — galho",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Ast",
+        "Ast"
+      ],
+      "explicacao": [
+        "Galho.",
+        "der Ast",
+        "galho",
+        "Plural: die Äste."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Galho.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Ast"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "galho"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Äste.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-010",
+      "titulo": "das Haus — casa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Haus",
+        "Haus"
+      ],
+      "explicacao": [
+        "Casa.",
+        "das Haus",
+        "casa",
+        "Plural: die Häuser."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Casa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Haus"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "casa"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Häuser.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-011",
+      "titulo": "der Kaffee — café",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Kaffee",
+        "Kaffee"
+      ],
+      "explicacao": [
+        "der Kaffee",
+        "o café",
+        "Como bebida em geral, Kaffee normalmente fica no singular.",
+        "Wir bestellen zwei Kaffees.",
+        "Pedimos dois cafés.",
+        "Aqui, Kaffees indica porções. O plural também pode distinguir variedades de café."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "der Kaffee"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "o café"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Como bebida em geral, Kaffee normalmente fica no singular.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Wir bestellen zwei Kaffees."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Pedimos dois cafés."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui, Kaffees indica porções. O plural também pode distinguir variedades de café.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-012",
+      "titulo": "das Fenster — janela",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Fenster",
+        "Fenster"
+      ],
+      "explicacao": [
+        "Janela.",
+        "das Fenster",
+        "janela",
+        "Plural: die Fenster."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Janela.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Fenster"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "janela"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Fenster.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "KO-008",
+        "KO-060"
+      ]
+    },
+    {
+      "id": "SV-013",
+      "titulo": "der Tag — dia",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Tag",
+        "Tag"
+      ],
+      "explicacao": [
+        "Dia.",
+        "der Tag",
+        "dia",
+        "Plural: die Tage."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Dia.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Tag"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "dia"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Tage.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-014",
+      "titulo": "der Garten — jardim",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Garten",
+        "Garten"
+      ],
+      "explicacao": [
+        "Jardim.",
+        "der Garten",
+        "jardim",
+        "Plural: die Gärten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Jardim.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Garten"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "jardim"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Gärten.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-015",
+      "titulo": "die Weile — um tempo ou um intervalo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Weile",
+        "Weile"
+      ],
+      "explicacao": [
+        "Um tempo ou um intervalo.",
+        "die Weile",
+        "um tempo ou um intervalo",
+        "Modelo útil: nach einer Weile. Sem plural usual nesta ficha; não confundir com Luft, ar."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Um tempo ou um intervalo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Weile"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "um tempo ou um intervalo"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Modelo útil: nach einer Weile. Sem plural usual nesta ficha; não confundir com Luft, ar.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-016",
+      "titulo": "das Land — país",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Land",
+        "Land"
+      ],
+      "explicacao": [
+        "País.",
+        "das Land",
+        "país",
+        "Plural: die Länder.",
+        "Em auf dem Land, campo ou zona rural: esse sentido não se pluraliza automaticamente como países."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "País.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Land"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "país"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Länder.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Em auf dem Land, campo ou zona rural: esse sentido não se pluraliza automaticamente como países.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-017",
+      "titulo": "das Buch — livro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Buch",
+        "Buch"
+      ],
+      "explicacao": [
+        "Livro.",
+        "das Buch",
+        "livro",
+        "Plural: die Bücher."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Livro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Buch"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "livro"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Bücher.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "KO-026",
+        "KO-032",
+        "KO-056"
+      ]
+    },
+    {
+      "id": "SV-018",
+      "titulo": "der Mann — homem",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Mann",
+        "Mann"
+      ],
+      "explicacao": [
+        "Homem.",
+        "der Mann",
+        "homem",
+        "Plural: die Männer."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Homem.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Mann"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "homem"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Männer.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-019",
+      "titulo": "die Frau — mulher",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Frau",
+        "Frau"
+      ],
+      "explicacao": [
+        "Mulher.",
+        "die Frau",
+        "mulher",
+        "Plural: die Frauen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Mulher.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Frau"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "mulher"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Frauen.",
+          "citacoes_de": [
+            "die Frau"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-020",
+      "titulo": "das Kind — criança",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Kind",
+        "Kind"
+      ],
+      "explicacao": [
+        "Criança.",
+        "das Kind",
+        "criança",
+        "Plural: die Kinder."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Criança.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Kind"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "criança"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Kinder.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-021",
+      "titulo": "der Freund — amigo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Freund",
+        "Freund"
+      ],
+      "explicacao": [
+        "Amigo.",
+        "der Freund",
+        "amigo",
+        "Plural: die Freunde."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Amigo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Freund"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "amigo"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Freunde.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-022",
+      "titulo": "die Freundin — amiga",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Freundin",
+        "Freundin"
+      ],
+      "explicacao": [
+        "Amiga.",
+        "die Freundin",
+        "amiga",
+        "Plural: die Freundinnen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Amiga.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Freundin"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "amiga"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Freundinnen.",
+          "citacoes_de": [
+            "die Freundin"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-023",
+      "titulo": "die Bank — banco para sentar",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Bank",
+        "Bank"
+      ],
+      "explicacao": [
+        "Banco para sentar.",
+        "die Bank",
+        "banco para sentar",
+        "Plural: die Bänke."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Banco para sentar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Bank"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "banco para sentar"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Bänke.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "KO-018"
+      ]
+    },
+    {
+      "id": "SV-024",
+      "titulo": "die Bank — banco ou instituição financeira",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Bank",
+        "Bank"
+      ],
+      "explicacao": [
+        "Banco ou instituição financeira.",
+        "die Bank",
+        "banco ou instituição financeira",
+        "Plural: die Banken."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Banco ou instituição financeira.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Bank"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "banco ou instituição financeira"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Banken.",
+          "citacoes_de": [
+            "die Bank"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-025",
+      "titulo": "der Laut — som da fala ou som individual",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Laut",
+        "Laut"
+      ],
+      "explicacao": [
+        "Som da fala ou som individual.",
+        "der Laut",
+        "som da fala ou som individual",
+        "Plural: die Laute.",
+        "Die Laute, feminino, designa alaúde, instrumento musical."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Som da fala ou som individual.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Laut"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "som da fala ou som individual"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Laute.",
+          "citacoes_de": [
+            "die Laute"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Die Laute, feminino, designa alaúde, instrumento musical.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-026",
+      "titulo": "die Laute — alaúde",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Laute",
+        "Laute"
+      ],
+      "explicacao": [
+        "Alaúde.",
+        "die Laute",
+        "alaúde",
+        "Plural: die Lauten.",
+        "Para som, use der Laut."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Alaúde.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Laute"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "alaúde"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Lauten.",
+          "citacoes_de": [
+            "die Laute"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Para som, use der Laut.",
+          "citacoes_de": [
+            "der Laut"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-027",
+      "titulo": "die Nähe — proximidade",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Nähe",
+        "Nähe"
+      ],
+      "explicacao": [
+        "Proximidade.",
+        "die Nähe",
+        "proximidade",
+        "Normalmente singular."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Proximidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Nähe"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "proximidade"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Normalmente singular.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-028",
+      "titulo": "der Abschluss — conclusão ou encerramento",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Abschluss",
+        "Abschluss"
+      ],
+      "explicacao": [
+        "Conclusão ou encerramento.",
+        "der Abschluss",
+        "conclusão ou encerramento",
+        "Plural: die Abschlüsse.",
+        "Também diploma ou conclusão de curso, conforme o contexto."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Conclusão ou encerramento.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Abschluss"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "conclusão ou encerramento"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Abschlüsse.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Também diploma ou conclusão de curso, conforme o contexto.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-029",
+      "titulo": "der Lieblingsplatz — lugar favorito",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Lieblingsplatz",
+        "Lieblingsplatz"
+      ],
+      "explicacao": [
+        "Lugar favorito.",
+        "der Lieblingsplatz",
+        "lugar favorito",
+        "Plural: die Lieblingsplätze."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Lugar favorito.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Lieblingsplatz"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "lugar favorito"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Lieblingsplätze.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-030",
+      "titulo": "der Schlafanzug — pijama",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Schlafanzug",
+        "Schlafanzug"
+      ],
+      "explicacao": [
+        "Pijama.",
+        "der Schlafanzug",
+        "pijama",
+        "Plural: die Schlafanzüge."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Pijama.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Schlafanzug"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "pijama"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Schlafanzüge.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-031",
+      "titulo": "der Junge — menino",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Junge",
+        "Junge"
+      ],
+      "explicacao": [
+        "Menino.",
+        "der Junge",
+        "menino",
+        "Plural: die Jungen.",
+        "Singular: den Jungen, dem Jungen, des Jungen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Menino.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Junge"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "menino"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Jungen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Singular: den Jungen, dem Jungen, des Jungen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-032",
+      "titulo": "der Kunde — cliente",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Kunde",
+        "Kunde"
+      ],
+      "explicacao": [
+        "Cliente.",
+        "der Kunde",
+        "cliente",
+        "Plural: die Kunden.",
+        "Singular: den Kunden, dem Kunden, des Kunden."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Cliente.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Kunde"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "cliente"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Kunden.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Singular: den Kunden, dem Kunden, des Kunden.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-033",
+      "titulo": "der Patient — paciente",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Patient",
+        "Patient"
+      ],
+      "explicacao": [
+        "Paciente.",
+        "der Patient",
+        "paciente",
+        "Plural: die Patienten.",
+        "Singular: den Patienten, dem Patienten, des Patienten."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Paciente.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Patient"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "paciente"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Patienten.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Singular: den Patienten, dem Patienten, des Patienten.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-034",
+      "titulo": "der Name — nome",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Name",
+        "Name"
+      ],
+      "explicacao": [
+        "Nome.",
+        "der Name",
+        "nome",
+        "Plural: die Namen.",
+        "Singular: den Namen, dem Namen, des Namens."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nome.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Name"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "nome"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Namen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Singular: den Namen, dem Namen, des Namens.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-035",
+      "titulo": "der Baum — árvore",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Baum",
+        "Baum"
+      ],
+      "explicacao": [
+        "Árvore.",
+        "der Baum",
+        "árvore",
+        "Plural: die Bäume."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Árvore.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Baum"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "árvore"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Bäume.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "KO-001"
+      ]
+    },
+    {
+      "id": "SV-036",
+      "titulo": "die Blume — flor",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Blume",
+        "Blume"
+      ],
+      "explicacao": [
+        "Flor.",
+        "die Blume",
+        "flor",
+        "Plural: die Blumen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Flor.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Blume"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "flor"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Blumen.",
+          "citacoes_de": [
+            "die Blume"
+          ]
+        }
+      ],
+      "relacionados": [
+        "KO-005",
+        "KO-006"
+      ]
+    },
+    {
+      "id": "SV-037",
+      "titulo": "die Tasse — xícara",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Tasse",
+        "Tasse"
+      ],
+      "explicacao": [
+        "Xícara.",
+        "die Tasse",
+        "xícara",
+        "Plural: die Tassen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Xícara.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Tasse"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "xícara"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Tassen.",
+          "citacoes_de": [
+            "die Tasse"
+          ]
+        }
+      ],
+      "relacionados": [
+        "KO-025"
+      ]
+    },
+    {
+      "id": "SV-038",
+      "titulo": "das Auto — carro",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Auto",
+        "Auto"
+      ],
+      "explicacao": [
+        "Carro.",
+        "das Auto",
+        "carro",
+        "Plural: die Autos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Carro.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Auto"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "carro"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Autos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-039",
+      "titulo": "das Brot — pão",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Brot",
+        "Brot"
+      ],
+      "explicacao": [
+        "Pão.",
+        "das Brot",
+        "pão",
+        "Plural: die Brote.",
+        "Brote pode indicar pães inteiros ou tipos; o uso como alimento pode ser incontável."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Pão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Brot"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "pão"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Brote.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Brote pode indicar pães inteiros ou tipos; o uso como alimento pode ser incontável.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-040",
+      "titulo": "das Brötchen — pãozinho",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Brötchen",
+        "Brötchen"
+      ],
+      "explicacao": [
+        "Pãozinho.",
+        "das Brötchen",
+        "pãozinho",
+        "Plural: die Brötchen.",
+        "Não equivale obrigatoriamente ao pão francês brasileiro."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Pãozinho.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Brötchen"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "pãozinho"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Brötchen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não equivale obrigatoriamente ao pão francês brasileiro.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-041",
+      "titulo": "die Bäckerei — padaria",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Bäckerei",
+        "Bäckerei"
+      ],
+      "explicacao": [
+        "Padaria.",
+        "die Bäckerei",
+        "padaria",
+        "Plural: die Bäckereien."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Padaria.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Bäckerei"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "padaria"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Bäckereien.",
+          "citacoes_de": [
+            "die Bäckerei"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-042",
+      "titulo": "der Haushalt — unidade doméstica ou administração da casa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Haushalt",
+        "Haushalt"
+      ],
+      "explicacao": [
+        "Unidade doméstica ou administração da casa.",
+        "der Haushalt",
+        "unidade doméstica ou administração da casa",
+        "Plural: die Haushalte.",
+        "Pode designar orçamento conforme o contexto. Não limitar a afazeres domésticos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Unidade doméstica ou administração da casa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Haushalt"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "unidade doméstica ou administração da casa"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Haushalte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Pode designar orçamento conforme o contexto. Não limitar a afazeres domésticos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-043",
+      "titulo": "das Rezept — receita",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "das Rezept",
+        "Rezept"
+      ],
+      "explicacao": [
+        "Receita.",
+        "das Rezept",
+        "receita",
+        "Plural: die Rezepte.",
+        "Receita culinária ou médica, conforme o contexto."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Receita.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "das Rezept"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "receita"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Rezepte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Receita culinária ou médica, conforme o contexto.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-044",
+      "titulo": "der Lehrer — professor",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "der Lehrer",
+        "Lehrer"
+      ],
+      "explicacao": [
+        "Professor.",
+        "der Lehrer",
+        "professor",
+        "Plural: die Lehrer."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Professor.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "der Lehrer"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "professor"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Lehrer.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-045",
+      "titulo": "die Lehrerin — professora",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Lehrerin",
+        "Lehrerin"
+      ],
+      "explicacao": [
+        "Professora.",
+        "die Lehrerin",
+        "professora",
+        "Plural: die Lehrerinnen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Professora.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "die Lehrerin"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "professora"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Plural: die Lehrerinnen.",
+          "citacoes_de": [
+            "die Lehrerin"
+          ]
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-046",
+      "titulo": "die Eltern — pais",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Eltern",
+        "Eltern"
+      ],
+      "explicacao": [
+        "die Eltern",
+        "os pais",
+        "Eltern é usado no plural. Para um dos pais, use der Elternteil; é outra palavra, não uma forma singular de Eltern."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "die Eltern"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "os pais"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Eltern é usado no plural. Para um dos pais, use der Elternteil; é outra palavra, não uma forma singular de Eltern.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "SV-047",
+      "titulo": "die Leute — pessoas",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "die Leute",
+        "Leute"
+      ],
+      "explicacao": [
+        "die Leute",
+        "as pessoas",
+        "Leute é usado no plural, sem uma forma singular correspondente."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "alemao",
+          "texto": "die Leute"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "as pessoas"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Leute é usado no plural, sem uma forma singular correspondente.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "ST-01",
+      "titulo": "Artigos definidos",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "N = nominativo; A = acusativo; D = dativo; G = genitivo. A tabela mostra artigos; consultar também as mudanças do substantivo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "N = nominativo; A = acusativo; D = dativo; G = genitivo. A tabela mostra artigos; consultar também as mudanças do substantivo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "ST-01",
+          "titulo": "Artigos definidos",
+          "colunas": [
+            "Caso",
+            "Masculino",
+            "Feminino",
+            "Neutro",
+            "Plural"
+          ],
+          "linhas": [
+            [
+              "Nominativo",
+              "der",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "Acusativo",
+              "den",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "Dativo",
+              "dem",
+              "der",
+              "dem",
+              "den"
+            ],
+            [
+              "Genitivo",
+              "des",
+              "der",
+              "des",
+              "der"
+            ]
+          ],
+          "nota": "N = nominativo; A = acusativo; D = dativo; G = genitivo. A tabela mostra artigos; consultar também as mudanças do substantivo."
+        }
+      ]
+    },
+    {
+      "id": "ST-02",
+      "titulo": "Artigos indefinidos",
+      "tipo_consulta": "tabela",
+      "palavras_chave": [],
+      "explicacao": [
+        "Ein não tem plural. Plural indefinido pode aparecer sem artigo: Bücher. Negação: keine Bücher, com tabela no módulo 06. Possessivos: módulo 05."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ein não tem plural. Plural indefinido pode aparecer sem artigo: Bücher. Negação: keine Bücher, com tabela no módulo 06. Possessivos: módulo 05.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "tabelas": [
+        {
+          "id": "ST-02",
+          "titulo": "Artigos indefinidos",
+          "colunas": [
+            "Caso",
+            "Masculino",
+            "Feminino",
+            "Neutro"
+          ],
+          "linhas": [
+            [
+              "Nominativo",
+              "ein",
+              "eine",
+              "ein"
+            ],
+            [
+              "Acusativo",
+              "einen",
+              "eine",
+              "ein"
+            ],
+            [
+              "Dativo",
+              "einem",
+              "einer",
+              "einem"
+            ],
+            [
+              "Genitivo",
+              "eines",
+              "einer",
+              "eines"
+            ]
+          ],
+          "nota": "Ein não tem plural. Plural indefinido pode aparecer sem artigo: Bücher. Negação: keine Bücher, com tabela no módulo 06. Possessivos: módulo 05."
+        }
+      ]
+    }
+  ]
+}

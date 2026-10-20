@@ -1,0 +1,856 @@
+{
+  "id": "construcao_oracoes",
+  "numero": "01",
+  "titulo": "Construção de Orações",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "CO-01-01",
+      "titulo": "O verbo conjugado na segunda posição",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "posição 2",
+        "V2",
+        "inversão",
+        "tempo no início"
+      ],
+      "explicacao": [
+        "Na afirmação principal, o verbo conjugado ocupa a segunda posição. Conte blocos da frase, não palavras.",
+        "Am frühen Morgen gehe ich zum See.",
+        "Bem cedo, vou ao lago.",
+        "Am frühen Morgen ocupa a primeira posição como um único grupo; gehe está na segunda; ich vem depois. Compare: Ich gehe am frühen Morgen zum See. A informação inicial pode estabelecer o assunto ou o cenário; não significa sempre ênfase forte.",
+        "Ao iniciar com o tempo, não mantenha também o sujeito antes do verbo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Na afirmação principal, o verbo conjugado ocupa a segunda posição. Conte blocos da frase, não palavras.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Am frühen Morgen gehe ich zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Bem cedo, vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Am frühen Morgen ocupa a primeira posição como um único grupo; gehe está na segunda; ich vem depois. Compare: Ich gehe am frühen Morgen zum See. A informação inicial pode estabelecer o assunto ou o cenário; não significa sempre ênfase forte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ao iniciar com o tempo, não mantenha também o sujeito antes do verbo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "secao": "Frase principal"
+    },
+    {
+      "id": "CO-01-02",
+      "titulo": "A fórmula como mapa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "fórmula",
+        "S V OI OD",
+        "TeKaMoLo"
+      ],
+      "explicacao": [
+        "S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) ajuda a reconhecer funções; não impõe uma ordem única.",
+        "Ich gebe dem Kind ein Buch.",
+        "Dou um livro à criança.",
+        "S = sujeito; V = verbo; OI = complemento no dativo no nosso modelo básico; OD = complemento no acusativo. Te = tempo, Ka = causa, Mo = modo, Lo = lugar. Parênteses não significam que o complemento seja sempre dispensável: a construção verbal determina o que é necessário. A fórmula não mostra todos os tipos de complemento nem as duas partes de certos verbos.",
+        "Neg não é um lugar fixo no final. O tempo também pode anteceder objetos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "S + V + (OI) + (OD) + [Te → Ka → Mo → Lo] + (Neg) ajuda a reconhecer funções; não impõe uma ordem única.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gebe dem Kind ein Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Dou um livro à criança."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "S = sujeito; V = verbo; OI = complemento no dativo no nosso modelo básico; OD = complemento no acusativo. Te = tempo, Ka = causa, Mo = modo, Lo = lugar. Parênteses não significam que o complemento seja sempre dispensável: a construção verbal determina o que é necessário. A fórmula não mostra todos os tipos de complemento nem as duas partes de certos verbos.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Neg não é um lugar fixo no final. O tempo também pode anteceder objetos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "secao": "Frase principal"
+    },
+    {
+      "id": "CO-01-03",
+      "titulo": "Perguntar muda o início",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "perguntas",
+        "wann",
+        "wer",
+        "verbo primeiro"
+      ],
+      "explicacao": [
+        "Perguntas de sim ou não começam normalmente pelo verbo; perguntas com palavra interrogativa começam por ela.",
+        "Gehst du zum See? / Wann gehst du zum See?",
+        "Você vai ao lago? / Quando você vai ao lago?",
+        "No primeiro exemplo: verbo + sujeito. No segundo: Wann ocupa a primeira posição e gehst a segunda. Em Wer kommt?, wer é o próprio sujeito. São modelos básicos de perguntas diretas.",
+        "Não aplicar a ordem de uma afirmação a todas as perguntas."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Perguntas de sim ou não começam normalmente pelo verbo; perguntas com palavra interrogativa começam por ela.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Gehst du zum See? / Wann gehst du zum See?"
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Você vai ao lago? / Quando você vai ao lago?"
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "No primeiro exemplo: verbo + sujeito. No segundo: Wann ocupa a primeira posição e gehst a segunda. Em Wer kommt?, wer é o próprio sujeito. São modelos básicos de perguntas diretas.",
+          "citacoes_de": [
+            "Wer kommt"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não aplicar a ordem de uma afirmação a todas as perguntas.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "secao": "Frase principal"
+    },
+    {
+      "id": "CO-02-01",
+      "titulo": "Querer fazer algo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "modal",
+        "möchte",
+        "infinitivo sem zu"
+      ],
+      "explicacao": [
+        "Com verbos modais, o verbo conjugado fica na segunda posição da afirmação principal e o infinitivo normalmente encerra o campo central.",
+        "Heute möchte ich im Garten arbeiten.",
+        "Hoje gostaria de trabalhar no jardim.",
+        "Möchte exprime desejo atual; arbeiten é infinitivo sem zu. O mesmo modelo básico aparece com können, müssen, dürfen, sollen e wollen. O significado de cada modal é consultado à parte.",
+        "Möchte = gostaria de; mag = gosto; mochte, sem trema, é passado de mögen."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Com verbos modais, o verbo conjugado fica na segunda posição da afirmação principal e o infinitivo normalmente encerra o campo central.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Heute möchte ich im Garten arbeiten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje gostaria de trabalhar no jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Möchte exprime desejo atual; arbeiten é infinitivo sem zu. O mesmo modelo básico aparece com können, müssen, dürfen, sollen e wollen. O significado de cada modal é consultado à parte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Möchte = gostaria de; mag = gosto; mochte, sem trema, é passado de mögen.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "secao": "Duas partes da construção verbal"
+    },
+    {
+      "id": "CO-02-02",
+      "titulo": "O verbo se separa",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "separáveis",
+        "zurückgehen",
+        "partícula"
+      ],
+      "explicacao": [
+        "Alguns verbos têm uma partícula que aparece separada no fim do campo central da oração principal.",
+        "Nach einer Weile gehe ich langsam zum Haus zurück.",
+        "Depois de algum tempo, volto devagar para casa.",
+        "Aqui o verbo é zurückgehen: gehe é a parte conjugada; zurück é a partícula. Na subordinada simples: weil ich zum Haus zurückgehe. No infinitivo: zurückgehen.",
+        "Nem toda palavra no fim da oração é uma partícula verbal."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Alguns verbos têm uma partícula que aparece separada no fim do campo central da oração principal.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Nach einer Weile gehe ich langsam zum Haus zurück."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Depois de algum tempo, volto devagar para casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Aqui o verbo é zurückgehen: gehe é a parte conjugada; zurück é a partícula. Na subordinada simples: weil ich zum Haus zurückgehe. No infinitivo: zurückgehen.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nem toda palavra no fim da oração é uma partícula verbal.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "secao": "Duas partes da construção verbal"
+    },
+    {
+      "id": "CO-02-03",
+      "titulo": "Dois verbos podem formar uma expressão",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "bleiben",
+        "stehen bleiben",
+        "dois verbos"
+      ],
+      "explicacao": [
+        "Aprenda certas combinações como um bloco de sentido.",
+        "Ich bleibe einen Moment stehen.",
+        "Fico parado por um momento, em pé.",
+        "Bleiben combina-se aqui com stehen no infinitivo sem zu. Ao caminhar, stehen bleiben expressa parar e permanecer em pé. Compare sitzen bleiben: permanecer sentado. A classificação lexical e a grafia de certas combinações podem variar segundo o uso; aqui o objetivo é reconhecer o bloco.",
+        "Não decidir o uso de zu pela contagem de verbos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Aprenda certas combinações como um bloco de sentido.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe einen Moment stehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico parado por um momento, em pé."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Bleiben combina-se aqui com stehen no infinitivo sem zu. Ao caminhar, stehen bleiben expressa parar e permanecer em pé. Compare sitzen bleiben: permanecer sentado. A classificação lexical e a grafia de certas combinações podem variar segundo o uso; aqui o objetivo é reconhecer o bloco.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não decidir o uso de zu pela contagem de verbos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-008"
+      ],
+      "secao": "Duas partes da construção verbal"
+    },
+    {
+      "id": "CO-03-01",
+      "titulo": "Quem faz e quem recebe",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "sujeito",
+        "nominativo",
+        "dativo",
+        "acusativo",
+        "OI",
+        "OD"
+      ],
+      "explicacao": [
+        "Identifique o sujeito e os complementos exigidos pelo verbo.",
+        "Der Mann gibt dem Kind das Buch.",
+        "O homem dá o livro à criança.",
+        "Der Mann é sujeito no nominativo; dem Kind é OI no dativo; das Buch é OD no acusativo. No nosso modelo, OI e OD aproximam a explicação alemã da terminologia Ricardo/SDA; perguntas em português sozinhas não determinam o caso. Aprenda a regência do verbo.",
+        "Dativo não significa sempre destinatário: Ich helfe dem Kind = ajudo a criança."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Identifique o sujeito e os complementos exigidos pelo verbo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Der Mann gibt dem Kind das Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "O homem dá o livro à criança."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Der Mann é sujeito no nominativo; dem Kind é OI no dativo; das Buch é OD no acusativo. No nosso modelo, OI e OD aproximam a explicação alemã da terminologia Ricardo/SDA; perguntas em português sozinhas não determinam o caso. Aprenda a regência do verbo.",
+          "citacoes_de": [
+            "das Buch"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Dativo não significa sempre destinatário: Ich helfe dem Kind = ajudo a criança.",
+          "citacoes_de": [
+            "Ich helfe dem Kind"
+          ]
+        }
+      ],
+      "relacionados": [],
+      "secao": "Complementos do verbo"
+    },
+    {
+      "id": "CO-03-02",
+      "titulo": "A ordem muda com pronomes",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "ordem OI OD",
+        "es ihm",
+        "pronomes"
+      ],
+      "explicacao": [
+        "Com dois grupos nominais, dativo antes de acusativo é uma ordem básica frequente. Pronomes pessoais átonos costumam vir antes dos grupos nominais.",
+        "Ich gebe dem Kind das Buch. / Ich gebe es ihm.",
+        "Dou o livro à criança. / Dou-o a ela.",
+        "Com OD pronominal: Ich gebe es dem Kind. Com OI pronominal: Ich gebe ihm das Buch. Com os dois pronomes pessoais átonos, acusativo antes de dativo: es ihm. Informação conhecida, foco e extensão dos grupos também influenciam a ordem.",
+        "São modelos frequentes, não licença para mover qualquer elemento livremente."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Com dois grupos nominais, dativo antes de acusativo é uma ordem básica frequente. Pronomes pessoais átonos costumam vir antes dos grupos nominais.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gebe dem Kind das Buch. / Ich gebe es ihm."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Dou o livro à criança. / Dou-o a ela."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Com OD pronominal: Ich gebe es dem Kind. Com OI pronominal: Ich gebe ihm das Buch. Com os dois pronomes pessoais átonos, acusativo antes de dativo: es ihm. Informação conhecida, foco e extensão dos grupos também influenciam a ordem.",
+          "citacoes_de": [
+            "Ich gebe ihm das Buch",
+            "Ich gebe es dem Kind",
+            "das Buch"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "São modelos frequentes, não licença para mover qualquer elemento livremente.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PR-024"
+      ],
+      "secao": "Complementos do verbo"
+    },
+    {
+      "id": "CO-03-03",
+      "titulo": "Quando o verbo pede preposição",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "regência",
+        "denken an",
+        "warten auf",
+        "complemento preposicional"
+      ],
+      "explicacao": [
+        "Alguns verbos são aprendidos com uma preposição e seu caso.",
+        "Ich denke an den Tag. / Er wartet auf dich.",
+        "Penso no dia. / Ele espera por você.",
+        "Denken an + acusativo e warten auf + acusativo têm complementos preposicionais. Auf dich não é OD sem preposição e não expressa lugar. Em Er wartet vor dem Krankenhaus auf dich, vor dem Krankenhaus indica lugar.",
+        "As duas ordens com vor dem Krankenhaus e auf dich podem ser possíveis; a posição isolada não determina uma ênfase única."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Alguns verbos são aprendidos com uma preposição e seu caso.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich denke an den Tag. / Er wartet auf dich."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Penso no dia. / Ele espera por você."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Denken an + acusativo e warten auf + acusativo têm complementos preposicionais. Auf dich não é OD sem preposição e não expressa lugar. Em Er wartet vor dem Krankenhaus auf dich, vor dem Krankenhaus indica lugar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "As duas ordens com vor dem Krankenhaus e auf dich podem ser possíveis; a posição isolada não determina uma ênfase única.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PC-004"
+      ],
+      "secao": "Complementos do verbo"
+    },
+    {
+      "id": "CO-04-01",
+      "titulo": "Reconhecer Te Ka Mo Lo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "Te",
+        "Ka",
+        "Mo",
+        "Lo",
+        "TeKaMoLo"
+      ],
+      "explicacao": [
+        "Use as perguntas quando, por quê, como e onde ou para onde ou de onde para reconhecer essas informações.",
+        "Ich gehe morgen wegen der Hitze früh zum See.",
+        "Amanhã, por causa do calor, vou cedo ao lago.",
+        "Morgen indica tempo; wegen der Hitze, causa; früh também é temporal; zum See, destino. Não é necessário haver um elemento de cada categoria. Advérbios, grupos preposicionais e algumas orações podem expressar essas relações.",
+        "TeKaMoLo é uma orientação de organização, não uma sequência obrigatória para todas as frases."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Use as perguntas quando, por quê, como e onde ou para onde ou de onde para reconhecer essas informações.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe morgen wegen der Hitze früh zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Amanhã, por causa do calor, vou cedo ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Morgen indica tempo; wegen der Hitze, causa; früh também é temporal; zum See, destino. Não é necessário haver um elemento de cada categoria. Advérbios, grupos preposicionais e algumas orações podem expressar essas relações.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "TeKaMoLo é uma orientação de organização, não uma sequência obrigatória para todas as frases.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "secao": "Tempo causa modo e lugar"
+    },
+    {
+      "id": "CO-04-02",
+      "titulo": "O caso depende da construção",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "casos",
+        "causa",
+        "modo",
+        "preposições"
+      ],
+      "explicacao": [
+        "Tempo, causa, modo e lugar não têm caso gramatical fixo.",
+        "Ich arbeite heute mit großer Ruhe im Garten.",
+        "Hoje trabalho com muita tranquilidade no jardim.",
+        "Heute não tem declinação de caso. Mit exige dativo; im Garten é localização com in + dativo. Aus Angst exprime causa com dativo; durch den Regen pode exprimir causa com acusativo; wegen des Regens usa genitivo. São as construções que explicam o caso.",
+        "Causa, modo e lugar não têm caso fixo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Tempo, causa, modo e lugar não têm caso gramatical fixo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich arbeite heute mit großer Ruhe im Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje trabalho com muita tranquilidade no jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Heute não tem declinação de caso. Mit exige dativo; im Garten é localização com in + dativo. Aus Angst exprime causa com dativo; durch den Regen pode exprimir causa com acusativo; wegen des Regens usa genitivo. São as construções que explicam o caso.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Causa, modo e lugar não têm caso fixo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [],
+      "secao": "Tempo causa modo e lugar"
+    },
+    {
+      "id": "CO-04-03",
+      "titulo": "Lugar pode indicar posição ou destino",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "wo",
+        "wohin",
+        "lugar",
+        "movimento",
+        "destino"
+      ],
+      "explicacao": [
+        "Com preposições mistas em uso espacial, diferencie onde algo se situa e qual relação espacial se pretende atingir.",
+        "Ich gehe im Garten spazieren. / Ich gehe in den Garten.",
+        "Caminho no jardim. / Vou para o jardim.",
+        "A primeira frase tem movimento dentro do jardim e dativo; a segunda tem o jardim como destino e acusativo. Zu mantém dativo mesmo indicando destino: zum See. Genitivo também aparece em construções locais, como außerhalb der Stadt; não é simplesmente um sinal de estilo literário.",
+        "Movimento não equivale automaticamente a acusativo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Com preposições mistas em uso espacial, diferencie onde algo se situa e qual relação espacial se pretende atingir.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe im Garten spazieren. / Ich gehe in den Garten."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Caminho no jardim. / Vou para o jardim."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A primeira frase tem movimento dentro do jardim e dativo; a segunda tem o jardim como destino e acusativo. Zu mantém dativo mesmo indicando destino: zum See. Genitivo também aparece em construções locais, como außerhalb der Stadt; não é simplesmente um sinal de estilo literário.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Movimento não equivale automaticamente a acusativo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PC-003"
+      ],
+      "secao": "Tempo causa modo e lugar"
+    },
+    {
+      "id": "CO-05-01",
+      "titulo": "Kein nega um substantivo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "kein",
+        "keinen",
+        "negação substantivo"
+      ],
+      "explicacao": [
+        "Kein costuma negar grupos nominais que, na afirmação correspondente, têm ein ou nenhum artigo.",
+        "Ich habe kein Auto. / Ich trinke keinen Kaffee.",
+        "Não tenho carro. / Não tomo café.",
+        "Kein acompanha o substantivo e varia em gênero, número e caso. É um determinante negativo, não um advérbio. Compare: Ich habe ein Auto → Ich habe kein Auto.",
+        "Para negar uma qualidade ou uma ação, consulte nicht."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Kein costuma negar grupos nominais que, na afirmação correspondente, têm ein ou nenhum artigo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich habe kein Auto. / Ich trinke keinen Kaffee."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Não tenho carro. / Não tomo café."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Kein acompanha o substantivo e varia em gênero, número e caso. É um determinante negativo, não um advérbio. Compare: Ich habe ein Auto → Ich habe kein Auto.",
+          "citacoes_de": [
+            "Ich habe kein Auto",
+            "Ich habe ein Auto"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Para negar uma qualidade ou uma ação, consulte nicht.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "NEG-002"
+      ],
+      "secao": "Negação"
+    },
+    {
+      "id": "CO-05-02",
+      "titulo": "Nicht depende do que é negado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "nicht",
+        "alcance da negação",
+        "sondern"
+      ],
+      "explicacao": [
+        "Observe se a negação recai sobre a ação inteira ou sobre um elemento em contraste.",
+        "Ich gehe heute nicht zum See.",
+        "Hoje não vou ao lago.",
+        "Nicht aparece aqui antes do destino. Com modal, fica antes do infinitivo na negação usual da ação: Ich möchte heute nicht arbeiten. Para contraste: nicht heute, sondern morgen = não hoje, mas amanhã. O alcance exato também depende do contexto e da entonação.",
+        "Nicht não ocupa obrigatoriamente o final; na subordinada vem antes do verbo final: weil ich nicht komme."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Observe se a negação recai sobre a ação inteira ou sobre um elemento em contraste.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe heute nicht zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Hoje não vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht aparece aqui antes do destino. Com modal, fica antes do infinitivo na negação usual da ação: Ich möchte heute nicht arbeiten. Para contraste: nicht heute, sondern morgen = não hoje, mas amanhã. O alcance exato também depende do contexto e da entonação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht não ocupa obrigatoriamente o final; na subordinada vem antes do verbo final: weil ich nicht komme.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "NEG-001"
+      ],
+      "secao": "Negação"
+    },
+    {
+      "id": "CO-05-03",
+      "titulo": "Negar necessidade não é proibir",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "nicht müssen",
+        "nicht dürfen",
+        "nie",
+        "nirgendwo"
+      ],
+      "explicacao": [
+        "O sentido do modal permanece decisivo na frase negativa.",
+        "Du musst nicht kommen. / Du darfst nicht kommen.",
+        "Você não precisa vir. / Você não tem permissão para vir.",
+        "Nicht müssen retira a necessidade. Nicht dürfen retira a permissão. Compare ainda nie = nunca e nirgendwo = em nenhum lugar.",
+        "Não traduzir automaticamente nicht müssen como proibição."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "O sentido do modal permanece decisivo na frase negativa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Du musst nicht kommen. / Du darfst nicht kommen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Você não precisa vir. / Você não tem permissão para vir."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Nicht müssen retira a necessidade. Nicht dürfen retira a permissão. Compare ainda nie = nunca e nirgendwo = em nenhum lugar.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não traduzir automaticamente nicht müssen como proibição.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "NEG-010"
+      ],
+      "secao": "Negação"
+    },
+    {
+      "id": "CO-06-01",
+      "titulo": "Und e aber mantêm a oração principal",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "und",
+        "aber",
+        "oder",
+        "denn",
+        "sondern",
+        "coordenação"
+      ],
+      "explicacao": [
+        "Und, aber, oder, denn e sondern ligam elementos ou orações sem ocupar a primeira posição interna da oração seguinte.",
+        "Ich höre die Vögel und bleibe einen Moment stehen.",
+        "Ouço os pássaros e fico parado um momento, em pé.",
+        "O sujeito ich é compartilhado. Höre e bleibe estão conjugados; stehen integra a segunda construção verbal. Se o sujeito for repetido: und ich bleibe ... . Denn explica uma razão; sondern corrige algo negado. Doch também pode ligar orações nesse uso, mas exerce outras funções.",
+        "Conjunção não significa que as duas partes tenham sempre de repetir todos os elementos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Und, aber, oder, denn e sondern ligam elementos ou orações sem ocupar a primeira posição interna da oração seguinte.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich höre die Vögel und bleibe einen Moment stehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ouço os pássaros e fico parado um momento, em pé."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O sujeito ich é compartilhado. Höre e bleibe estão conjugados; stehen integra a segunda construção verbal. Se o sujeito for repetido: und ich bleibe ... . Denn explica uma razão; sondern corrige algo negado. Doch também pode ligar orações nesse uso, mas exerce outras funções.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Conjunção não significa que as duas partes tenham sempre de repetir todos os elementos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CQ-002"
+      ],
+      "secao": "Ligar ideias e orações"
+    },
+    {
+      "id": "CO-06-02",
+      "titulo": "Weil e dass levam o verbo ao final",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "weil",
+        "dass",
+        "wenn",
+        "obwohl",
+        "subordinada"
+      ],
+      "explicacao": [
+        "Nas subordinadas básicas introduzidas por weil, dass, wenn e obwohl, o verbo conjugado vem ao final.",
+        "Ich bleibe zu Hause, weil es regnet.",
+        "Fico em casa porque está chovendo.",
+        "Se a subordinada vem primeiro, ocupa a primeira posição da principal: Weil es regnet, bleibe ich zu Hause. Wenn pode significar se ou quando, conforme o contexto. Com modal: weil ich arbeiten muss. A pontuação separa as orações. Há estruturas verbais mais avançadas que exigem consulta própria.",
+        "A regra se refere a este tipo de subordinada; não a toda sequência que contenha dois verbos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Nas subordinadas básicas introduzidas por weil, dass, wenn e obwohl, o verbo conjugado vem ao final.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, weil es regnet."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa porque está chovendo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Se a subordinada vem primeiro, ocupa a primeira posição da principal: Weil es regnet, bleibe ich zu Hause. Wenn pode significar se ou quando, conforme o contexto. Com modal: weil ich arbeiten muss. A pontuação separa as orações. Há estruturas verbais mais avançadas que exigem consulta própria.",
+          "citacoes_de": [
+            "Weil es regnet, bleibe ich zu Hause"
+          ]
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A regra se refere a este tipo de subordinada; não a toda sequência que contenha dois verbos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CQ-004"
+      ],
+      "secao": "Ligar ideias e orações"
+    },
+    {
+      "id": "CO-06-03",
+      "titulo": "Infinitivo com ou sem zu",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "zu",
+        "infinitivo",
+        "versuchen",
+        "hoffen",
+        "um zu"
+      ],
+      "explicacao": [
+        "Guarde o verbo ou a expressão junto com seu modelo de infinitivo.",
+        "Ich versuche, Deutsch zu lernen. / Ich möchte Deutsch lernen.",
+        "Tento aprender alemão. / Gostaria de aprender alemão.",
+        "Versuchen pede aqui um grupo de infinitivo com zu; möchte acompanha infinitivo sem zu. Hoffen e planen também admitem infinitivo com zu. Um ... zu indica finalidade: Ich lese, um Deutsch zu lernen = leio para aprender alemão. Em separáveis: aufzustehen. O nome técnico é oração ou grupo de infinitivo; zu não é um conectivo universal equivalente a e.",
+        "Haver duas orações não basta para exigir zu. A quantidade de verbos, sozinha, não determina o número de orações."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Guarde o verbo ou a expressão junto com seu modelo de infinitivo.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich versuche, Deutsch zu lernen. / Ich möchte Deutsch lernen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Tento aprender alemão. / Gostaria de aprender alemão."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Versuchen pede aqui um grupo de infinitivo com zu; möchte acompanha infinitivo sem zu. Hoffen e planen também admitem infinitivo com zu. Um ... zu indica finalidade: Ich lese, um Deutsch zu lernen = leio para aprender alemão. Em separáveis: aufzustehen. O nome técnico é oração ou grupo de infinitivo; zu não é um conectivo universal equivalente a e.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Haver duas orações não basta para exigir zu. A quantidade de verbos, sozinha, não determina o número de orações.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-001",
+        "VB-031",
+        "CQ-009"
+      ],
+      "secao": "Ligar ideias e orações"
+    }
+  ]
+}

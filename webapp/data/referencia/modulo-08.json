@@ -1,0 +1,664 @@
+{
+  "id": "relacoes_entre_ideias_no_texto",
+  "numero": "08",
+  "titulo": "Relações entre ideias",
+  "versao": "1.0",
+  "consultas": [
+    {
+      "id": "RI-001",
+      "titulo": "Ler a relação entre os blocos",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "orientacao"
+      ],
+      "explicacao": [
+        "Leia cada bloco como uma ideia e observe como o conector liga as ideias. Ele também traz significado, não apenas organiza a frase.",
+        "Ich lerne Deutsch, um Bücher zu lesen.",
+        "Estudo alemão para ler livros.",
+        "O primeiro bloco apresenta a atividade; o segundo, sua finalidade. A leitura por blocos não impede traduzir quando isso ajuda. Evite atribuir uma tradução fixa a cada palavra separada."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Leia cada bloco como uma ideia e observe como o conector liga as ideias. Ele também traz significado, não apenas organiza a frase.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lerne Deutsch, um Bücher zu lesen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estudo alemão para ler livros."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O primeiro bloco apresenta a atividade; o segundo, sua finalidade. A leitura por blocos não impede traduzir quando isso ajuda. Evite atribuir uma tradução fixa a cada palavra separada.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "RI-002",
+      "titulo": "Para quê",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "finalidade"
+      ],
+      "explicacao": [
+        "Um ... zu apresenta o objetivo de uma ação. O objetivo não é uma garantia de resultado.",
+        "Ich lese den Text noch einmal, um ihn besser zu verstehen.",
+        "Leio o texto mais uma vez para compreendê-lo melhor.",
+        "Quem lê e quem pretende compreender é a mesma pessoa neste exemplo. A finalidade pode ainda não ter sido alcançada. O infinitivo verstehen integra o bloco um ... zu."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Um ... zu apresenta o objetivo de uma ação. O objetivo não é uma garantia de resultado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lese den Text noch einmal, um ihn besser zu verstehen."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Leio o texto mais uma vez para compreendê-lo melhor."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Quem lê e quem pretende compreender é a mesma pessoa neste exemplo. A finalidade pode ainda não ter sido alcançada. O infinitivo verstehen integra o bloco um ... zu.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-016"
+      ]
+    },
+    {
+      "id": "RI-003",
+      "titulo": "Para que outra pessoa faça algo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "finalidade"
+      ],
+      "explicacao": [
+        "Damit pode apresentar uma finalidade com sujeito explícito diferente do sujeito da principal.",
+        "Ich spreche langsam, damit du mich verstehst.",
+        "Falo devagar para que você me entenda.",
+        "Ich é quem fala; du é quem deve entender. Damit introduz oração com verbo conjugado no final neste modelo. Não usar um ... zu para simplesmente apagar esse segundo sujeito."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Damit pode apresentar uma finalidade com sujeito explícito diferente do sujeito da principal.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich spreche langsam, damit du mich verstehst."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Falo devagar para que você me entenda."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Ich é quem fala; du é quem deve entender. Damit introduz oração com verbo conjugado no final neste modelo. Não usar um ... zu para simplesmente apagar esse segundo sujeito.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-016"
+      ]
+    },
+    {
+      "id": "RI-004",
+      "titulo": "Damit também com o mesmo sujeito",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "finalidade"
+      ],
+      "explicacao": [
+        "A mudança de sujeito não é requisito para usar damit.",
+        "Ich lerne, damit ich die Prüfung bestehe.",
+        "Estudo para passar na prova.",
+        "O sujeito ich aparece nas duas orações. Também: Ich lerne, um die Prüfung zu bestehen. A escolha não se reduz a sujeitos iguais versus diferentes; esses modelos ajudam a construir frases sem eliminar alternativas corretas."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "A mudança de sujeito não é requisito para usar damit.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich lerne, damit ich die Prüfung bestehe."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Estudo para passar na prova."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O sujeito ich aparece nas duas orações. Também: Ich lerne, um die Prüfung zu bestehen. A escolha não se reduz a sujeitos iguais versus diferentes; esses modelos ajudam a construir frases sem eliminar alternativas corretas.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "RI-005",
+      "titulo": "Um objetivo ou um resultado",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "finalidade_e_consequencia"
+      ],
+      "explicacao": [
+        "Compare a intenção de produzir um efeito com a apresentação do efeito como resultado.",
+        "Er spricht laut, damit alle ihn hören. Er spricht laut, sodass alle ihn hören.",
+        "Ele fala alto para que todos o ouçam. Ele fala alto, de modo que todos o ouvem.",
+        "Damit apresenta a finalidade; sodass apresenta o resultado. Nesta leitura de sodass, o narrador afirma que todos o ouvem. Não classificar damit como conector de consequência nesses exemplos."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Compare a intenção de produzir um efeito com a apresentação do efeito como resultado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er spricht laut, damit alle ihn hören. Er spricht laut, sodass alle ihn hören."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele fala alto para que todos o ouçam. Ele fala alto, de modo que todos o ouvem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Damit apresenta a finalidade; sodass apresenta o resultado. Nesta leitura de sodass, o narrador afirma que todos o ouvem. Não classificar damit como conector de consequência nesses exemplos.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "RI-006",
+      "titulo": "De modo que",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "consequencia"
+      ],
+      "explicacao": [
+        "Sodass liga uma situação à consequência apresentada pelo texto.",
+        "Die Tür war offen, sodass jeder eintreten konnte.",
+        "A porta estava aberta, de modo que qualquer pessoa podia entrar.",
+        "O resultado é a possibilidade de entrada; a frase não afirma que todas as pessoas efetivamente entraram. So dass é uma grafia alternativa. O verbo conjugado fica no final da subordinada neste modelo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Sodass liga uma situação à consequência apresentada pelo texto.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Die Tür war offen, sodass jeder eintreten konnte."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "A porta estava aberta, de modo que qualquer pessoa podia entrar."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "O resultado é a possibilidade de entrada; a frase não afirma que todas as pessoas efetivamente entraram. So dass é uma grafia alternativa. O verbo conjugado fica no final da subordinada neste modelo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "RI-007",
+      "titulo": "Por isso",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "consequencia"
+      ],
+      "explicacao": [
+        "Deshalb retoma uma razão anterior e apresenta o que decorre dela.",
+        "Es regnet. Deshalb bleibe ich zu Hause.",
+        "Está chovendo. Por isso, fico em casa.",
+        "A chuva é apresentada como razão; ficar em casa, como consequência ou decisão decorrente. Deshalb ocupa a primeira posição e bleibe vem em seguida. Isso difere de ..., weil es regnet."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Deshalb retoma uma razão anterior e apresenta o que decorre dela.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet. Deshalb bleibe ich zu Hause."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Está chovendo. Por isso, fico em casa."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A chuva é apresentada como razão; ficar em casa, como consequência ou decisão decorrente. Deshalb ocupa a primeira posição e bleibe vem em seguida. Isso difere de ..., weil es regnet.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CON-014"
+      ]
+    },
+    {
+      "id": "RI-008",
+      "titulo": "Porque",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "causa"
+      ],
+      "explicacao": [
+        "Weil apresenta uma causa ou explicação para o fato da outra oração.",
+        "Er ist müde, weil er nicht gut geschlafen hat.",
+        "Ele está cansado porque não dormiu bem.",
+        "Estar cansado é o fato explicado; não ter dormido bem é a razão. O bloco com weil termina em hat, verbo conjugado do Perfekt. Não confundir causa com objetivo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Weil apresenta uma causa ou explicação para o fato da outra oração.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er ist müde, weil er nicht gut geschlafen hat."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele está cansado porque não dormiu bem."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Estar cansado é o fato explicado; não ter dormido bem é a razão. O bloco com weil termina em hat, verbo conjugado do Perfekt. Não confundir causa com objetivo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CON-007"
+      ]
+    },
+    {
+      "id": "RI-009",
+      "titulo": "Uma razão como ponto de partida",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "causa"
+      ],
+      "explicacao": [
+        "Da pode apresentar uma razão tratada como conhecida ou como base da explicação.",
+        "Da die Straße gesperrt ist, fahren wir einen Umweg.",
+        "Como a estrada está bloqueada, fazemos um desvio.",
+        "Não reduzir da a weil mais formal. A organização da informação também importa; há contextos em que ambos são possíveis. Da também pode significar aí ou ali como advérbio, outra função."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Da pode apresentar uma razão tratada como conhecida ou como base da explicação.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Da die Straße gesperrt ist, fahren wir einen Umweg."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Como a estrada está bloqueada, fazemos um desvio."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não reduzir da a weil mais formal. A organização da informação também importa; há contextos em que ambos são possíveis. Da também pode significar aí ou ali como advérbio, outra função.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "RI-010",
+      "titulo": "Pois",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "causa"
+      ],
+      "explicacao": [
+        "Denn pode acrescentar uma explicação mantendo a estrutura de uma oração principal declarativa.",
+        "Ich bleibe zu Hause, denn heute regnet es.",
+        "Fico em casa, pois hoje chove.",
+        "A explicação tem heute na primeira posição e regnet na segunda. Não trocar denn por weil sem ajustar a ordem: ..., weil es heute regnet."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Denn pode acrescentar uma explicação mantendo a estrutura de uma oração principal declarativa.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich bleibe zu Hause, denn heute regnet es."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Fico em casa, pois hoje chove."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A explicação tem heute na primeira posição e regnet na segunda. Não trocar denn por weil sem ajustar a ordem: ..., weil es heute regnet.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CON-004"
+      ]
+    },
+    {
+      "id": "RI-011",
+      "titulo": "Embora",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "concessao"
+      ],
+      "explicacao": [
+        "Obwohl apresenta uma circunstância que poderia levar a outro resultado, mas não impede o fato relatado.",
+        "Er geht spazieren, obwohl es regnet.",
+        "Ele sai para caminhar, embora esteja chovendo.",
+        "Não é contradição lógica: caminhar e chover podem ocorrer juntos. O contraste está na expectativa de que a chuva poderia impedir o passeio."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Obwohl apresenta uma circunstância que poderia levar a outro resultado, mas não impede o fato relatado.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er geht spazieren, obwohl es regnet."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele sai para caminhar, embora esteja chovendo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Não é contradição lógica: caminhar e chover podem ocorrer juntos. O contraste está na expectativa de que a chuva poderia impedir o passeio.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "CON-011"
+      ]
+    },
+    {
+      "id": "RI-012",
+      "titulo": "Mesmo assim",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "concessao"
+      ],
+      "explicacao": [
+        "Trotzdem retoma uma circunstância anterior e apresenta algo que acontece apesar dela.",
+        "Es regnet. Trotzdem gehe ich zum See.",
+        "Está chovendo. Mesmo assim, vou ao lago.",
+        "Compare Obwohl es regnet, gehe ich zum See. A relação entre ideias é próxima; o modo de ligar e a posição dos verbos mudam."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Trotzdem retoma uma circunstância anterior e apresenta algo que acontece apesar dela.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Es regnet. Trotzdem gehe ich zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Está chovendo. Mesmo assim, vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Compare Obwohl es regnet, gehe ich zum See. A relação entre ideias é próxima; o modo de ligar e a posição dos verbos mudam.",
+          "citacoes_de": [
+            "Obwohl es regnet, gehe ich zum See"
+          ]
+        }
+      ],
+      "relacionados": [
+        "CON-015"
+      ]
+    },
+    {
+      "id": "RI-013",
+      "titulo": "Apesar da chuva",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "concessao"
+      ],
+      "explicacao": [
+        "Trotz liga-se a um grupo nominal; embora e mesmo assim têm outras estruturas correspondentes em alemão.",
+        "Trotz des Regens gehe ich zum See.",
+        "Apesar da chuva, vou ao lago.",
+        "Trotz des Regens é um grupo preposicional, não uma oração com verbo. Des Regens é G no modelo básico. Não encaixar concessão à força em Modo da fórmula TeKaMoLo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Trotz liga-se a um grupo nominal; embora e mesmo assim têm outras estruturas correspondentes em alemão.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Trotz des Regens gehe ich zum See."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Apesar da chuva, vou ao lago."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Trotz des Regens é um grupo preposicional, não uma oração com verbo. Des Regens é G no modelo básico. Não encaixar concessão à força em Modo da fórmula TeKaMoLo.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "PREP-035"
+      ]
+    },
+    {
+      "id": "RI-014",
+      "titulo": "Sem fazer algo",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "ausencia_de_acao"
+      ],
+      "explicacao": [
+        "Ohne ... zu indica que uma ação não acompanha a outra.",
+        "Er ging, ohne sich zu verabschieden.",
+        "Ele foi embora sem se despedir.",
+        "A pessoa foi embora; a despedida não ocorreu. Não é finalidade negativa. Compare Er ging, um nicht zu stören — Ele foi embora para não incomodar, finalidade."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Ohne ... zu indica que uma ação não acompanha a outra.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er ging, ohne sich zu verabschieden."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele foi embora sem se despedir."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A pessoa foi embora; a despedida não ocorreu. Não é finalidade negativa. Compare Er ging, um nicht zu stören — Ele foi embora para não incomodar, finalidade.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-017"
+      ]
+    },
+    {
+      "id": "RI-015",
+      "titulo": "Em vez de",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "substituicao"
+      ],
+      "explicacao": [
+        "Anstatt ... zu apresenta uma alternativa que não é realizada no lugar da ação relatada.",
+        "Anstatt fernzusehen, liest er ein Buch.",
+        "Em vez de assistir à televisão, ele lê um livro.",
+        "A frase contrasta ver televisão com ler. Statt ... zu é alternativa possível. O contexto pode expressar escolha ou crítica; a construção sozinha não determina o tom."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Anstatt ... zu apresenta uma alternativa que não é realizada no lugar da ação relatada.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Anstatt fernzusehen, liest er ein Buch."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Em vez de assistir à televisão, ele lê um livro."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A frase contrasta ver televisão com ler. Statt ... zu é alternativa possível. O contexto pode expressar escolha ou crítica; a construção sozinha não determina o tom.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": [
+        "INF-017"
+      ]
+    },
+    {
+      "id": "RI-016",
+      "titulo": "Como se",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "comparacao_hipotetica"
+      ],
+      "explicacao": [
+        "Als ob apresenta uma comparação com uma situação imaginada ou não afirmada como fato.",
+        "Er spricht, als ob er alles wüsste.",
+        "Ele fala como se soubesse tudo.",
+        "A frase compara o modo de falar com saber tudo; não afirma esse conhecimento. Wüsste é Konjunktiv II de wissen. A comparação não prova, sozinha, que toda a situação seja falsa."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Als ob apresenta uma comparação com uma situação imaginada ou não afirmada como fato.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Er spricht, als ob er alles wüsste."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Ele fala como se soubesse tudo."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "A frase compara o modo de falar com saber tudo; não afirma esse conhecimento. Wüsste é Konjunktiv II de wissen. A comparação não prova, sozinha, que toda a situação seja falsa.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "RI-017",
+      "titulo": "Outras formas para reconhecer",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "variantes"
+      ],
+      "explicacao": [
+        "Obgleich pode expressar concessão; als wenn e wie wenn podem ocorrer na comparação hipotética.",
+        "Obgleich es regnet, geht er spazieren. Sie verhält sich, als wenn nichts passiert wäre.",
+        "Embora chova, ele sai para caminhar. Ela age como se nada tivesse acontecido.",
+        "Priorizar obwohl e als ob na produção básica. Obgleich tem caráter mais literário ou formal; wie wenn tem distribuição regional e de registro. Reconhecer na leitura sem tratar todas as variantes como igualmente usuais."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Obgleich pode expressar concessão; als wenn e wie wenn podem ocorrer na comparação hipotética.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Obgleich es regnet, geht er spazieren. Sie verhält sich, als wenn nichts passiert wäre."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Embora chova, ele sai para caminhar. Ela age como se nada tivesse acontecido."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Priorizar obwohl e als ob na produção básica. Obgleich tem caráter mais literário ou formal; wie wenn tem distribuição regional e de registro. Reconhecer na leitura sem tratar todas as variantes como igualmente usuais.",
+          "citacoes_de": []
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "RI-018",
+      "titulo": "Zu com um evento como destino",
+      "tipo_consulta": "uso",
+      "palavras_chave": [
+        "destino"
+      ],
+      "explicacao": [
+        "Zu com um grupo nominal pode indicar ida a um evento; não equivale automaticamente a uma oração de finalidade.",
+        "Ich gehe zu einer Besprechung.",
+        "Vou a uma reunião.",
+        "Zu rege dativo e einer Besprechung é grupo nominal. Compare Ich gehe ins Büro, um an einer Besprechung teilzunehmen — Vou ao escritório para participar de uma reunião. Consultar módulo 04 para zu preposição e módulo 10 para zu no infinitivo."
+      ],
+      "apresentacao": [
+        {
+          "tipo": "explicacao",
+          "texto": "Zu com um grupo nominal pode indicar ida a um evento; não equivale automaticamente a uma oração de finalidade.",
+          "citacoes_de": []
+        },
+        {
+          "tipo": "alemao",
+          "texto": "Ich gehe zu einer Besprechung."
+        },
+        {
+          "tipo": "traducao",
+          "texto": "Vou a uma reunião."
+        },
+        {
+          "tipo": "explicacao",
+          "texto": "Zu rege dativo e einer Besprechung é grupo nominal. Compare Ich gehe ins Büro, um an einer Besprechung teilzunehmen — Vou ao escritório para participar de uma reunião. Consultar módulo 04 para zu preposição e módulo 10 para zu no infinitivo.",
+          "citacoes_de": [
+            "Ich gehe ins Büro, um an einer Besprechung teilzunehmen"
+          ]
+        }
+      ],
+      "relacionados": [
+        "PREP-020"
+      ]
+    }
+  ]
+}
