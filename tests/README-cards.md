@@ -1,5 +1,116 @@
 # Cards v1
 
+## Prévia local de Memorizar — 26/10/2026
+
+Não publicada. Inicie `node local-preview\memorizar\servidor.cjs` e abra
+<http://127.0.0.1:8796/>. Em Textos, abra “Ein Morgen auf dem Land” e clique
+Memorizar. O recurso só aparece em localhost com o adaptador de demonstração;
+não é uma integração liberada para a conta de produção.
+
+O servidor substitui os adaptadores principal e dos Cards, bloqueia gravações,
+permite apenas o pacote público da demonstração e impõe CSP sem conexões externas.
+Não lê documentos de produção, não serve progresso pessoal e não modifica os
+acervos, banco SQLite ou regras. O texto demonstrativo é uma composição explícita
+de frases do modelo local, não uma cópia obtida da conta de Ricardo.
+Os dados e vínculos de demonstração estão em
+[demo.json](../local-preview/memorizar/demo.json).
+
+### Fontes e limites da identificação
+
+- [Modelo Card Texto 01](../webapp/cards/texto-01.json): vínculo pelo ID do
+  original no adaptador existente; frases `origem` são verificadas contra o
+  original. Número/título não substituem o ID. As seções trazem alemão e português;
+  substantivos antigos codificam artigo/plural em `de`, e verbos normalmente
+  declaram o infinitivo no segundo campo separado por ponto e vírgula.
+- [Acervo nominal](../webapp/data/substantivos.json): 473 registros, todos com
+  palavra, artigo, plural e significado preenchidos. Isso verifica disponibilidade
+  dos campos, não certifica uma nova revisão linguística integral. Notas de uso
+  existentes são preservadas. O sentido/plural contextual do Card tem prioridade.
+- [Acervo verbal](../webapp/data/verbos.json): 155 registros, 151 lemas distintos,
+  com infinitivo e significado. O banco lexical e o acervo de Präsens também não
+  oferecem classificação individual regular/irregular/misto. A fonte revisada do
+  módulo 02 e a consulta de conjugação têm formas revisadas e explicações gerais,
+  mas os registros reutilizados não trazem uma classificação individual conferida.
+  Todos os 14 verbos desta demonstração mostram “classificação não informada”.
+  Não se deduz classe a partir de particípio, sufixo ou conjugação.
+- [Acervo adjetivos/advérbios](../webapp/data/adjetivos_adverbios.json):
+  89 ADJ, 83 ADV e 2 ADJ+ADV. Esses significados gerais não comprovam a função e
+  o sentido de cada ocorrência. A prévia usa os sentidos contextuais do Card,
+  sem contrários.
+
+A identificação usa o Card associado ao ID e conteúdo exatos do texto, mais
+vínculos explicitamente conferidos da demonstração. Não é um analisador
+morfológico/sintático nem uma busca que identifica automaticamente tudo no texto.
+Cards pessoais/remotos e outros textos não foram auditados.
+
+Resultado do texto demonstrativo: **15 substantivos, 14 verbos e 4 advérbios**.
+Sonne, Haus, Kaffee e Tag são complementados pelo acervo com ocorrência conferida;
+`ist → sein` tem vínculo e sentido contextual explícitos. `Moment`, em
+“einen Moment”, é a ausência nominal reconhecida com segurança: não consta no
+Card nem no acervo reutilizado. Fica pendente, sem inventar plural/significado.
+As 14 classificações verbais também aparecem como pendências conhecidas.
+`zurück` fica fora dos advérbios porque o próprio Card o descreve como partícula
+de `zurückgehen`. O segundo texto demonstrativo não tem Card: não gera itens
+nem supostas palavras ausentes. Não se afirma que qualquer outro termo foi
+identificado só por não estar nestas listas.
+
+### Ciclo, dispositivos e offline
+
+Ricardo escolhe um inteiro positivo em dias ou semanas. O ciclo armazena texto,
+itens, sentidos, fontes, pendências e prazo como uma cópia fixa no IndexedDB
+`dl-memorizar-demo-v1`, separada dos bancos pessoais existentes. Não há sorteio
+ou corte de quantidade. Alterar a fonte ou abrir outro texto não altera o ciclo.
+Quando o texto ao lado é outro, há aviso e releitura do original do ciclo.
+
+O marcador usa a hora do aparelho, dias de 24 horas e semanas de 7 dias.
+No vencimento: “Prazo concluído. Quer continuar com estas palavras?”,
+“Continuar estudando” e “Iniciar novo conjunto”. Continuar permite outro prazo
+sem trocar itens. Um novo conjunto só substitui o anterior após confirmação e
+gravação bem-sucedida; cancelar ou falhar preserva o anterior. Não há exclusão
+automática. A gravação compara o estado anterior para detectar conflitos entre
+abas, sem sobrescrita silenciosa.
+
+O worker exclusivo servido pela prévia confirma a presença de todo o pacote
+público antes de indicar disponibilidade offline. Foi testado recarregar e
+reiniciar o processo do Chrome com servidor desligado/rede bloqueada, restaurando
+conjunto e prazo, e renovar offline. É preciso abrir/preparar a prévia primeiro.
+Limpar dados do navegador, modo privado, restrições/remoção de armazenamento,
+troca de porta, navegador ou aparelho podem remover ou tornar inacessível a cópia.
+Não há notificação de sistema nem relógio de servidor.
+
+**Não há sincronização entre dispositivos nesta entrega.** Auth, Firestore e
+cópias offline dos Cards já existem, mas as regras aceitam somente o formato
+atual dos Cards e negam coleções desconhecidas. IndexedDB, CacheStorage e
+BroadcastChannel não sincronizam aparelhos. Não se colocou o ciclo dentro do
+JSON do Card nem se alterou o registro original para contornar as regras.
+Uma integração futura precisaria de registro próprio por conta, regras e
+isolamento autenticado, confirmação do servidor, fila offline e resolução de
+conflitos/revisões; exigiria testes locais com emulador e depois homologação
+autorizada em dois dispositivos. Nada disso está anunciado como implementado.
+
+### Validação
+
+`node tests\memorizar.cjs`: **56 verificações** de vínculo, campos, sentido,
+classificação conferida/ausente, ausência segura, quantidade sem corte, cópia fixa,
+prazo e instante de vencimento, renovação, novo conjunto explícito/cancelado,
+conflito de abas, erro local, foco/retorno da Ajuda, offline inclusive reinício
+do Chrome e ausência de requisições externas. Capturas são salvas na pasta
+temporária informada pelo teste; o perfil isolado do navegador é removido.
+Usa somente Node 22 e Chrome Windows, sem Firebase ou emulador.
+
+Passaram também as três regressões existentes:
+`node --test tests\selecao-titulo.test.cjs tests\textos-humanizacao.test.cjs tests\limpar-compreensao.test.cjs`.
+Elas usam `jsdom`; se necessário, aponte `DL_TEST_DEPS` para o diretório de
+dependências de testes já usado no projeto. Nesta máquina a dependência ausente
+foi restaurada fora do repositório, sem mudar os manifests do DL.
+
+Layout conferido em 1440, 768 e 390 px, inclusive fonte de 22 px, sem overflow
+horizontal. Texto e Card ficam paralelos no computador; em telas estreitas o Card
+fica abaixo do texto. Celular/tablet foram simulados por viewport; aparelhos
+físicos, acesso pelo celular ao localhost do PC, Safari/iOS, Firefox e
+sincronização real não foram testados. O servidor só escuta `127.0.0.1`;
+o link é acessível neste computador, não diretamente em outro aparelho.
+
 ## Organização e fluxo — fluxo-4
 
 Entrada com lista de textos e Adicionar card; Atualizar lista fica em Mais
@@ -194,3 +305,17 @@ Safari/iOS, Firefox e Edge não foram testados. O manifesto oferece atalho em
 Publicação: workflow existente publica e compara as regras ativas antes de
 autorizar Hosting. `firebase.json`, tags e congelamentos permanecem preservados.
 O pacote Texto 01 não é importado na produção pelos testes nem pelo deploy.
+
+## Construções — prévia cards-construcoes-21
+
+`secoes.construcoes` é opcional no formato v1. Cada item reutiliza `de`,
+`pt` (sentido revisado no texto), `origem` (obrigatória e exata) e `essencial`.
+Pode incluir `nota` e `usoId` opcional: a referência explícita ao registro do
+acervo evita repeti-lo em “Comparar usos”; não confirma automaticamente sentidos.
+Cards antigos continuam válidos. No Texto 01, os itens revisados do pacote são
+projetados apenas quando título/número e frase de origem correspondem; nada é
+salvo automaticamente. Uma seção vazia explícita é respeitada.
+
+`node tests/cards-construcoes.cjs` verifica a integração em Chrome isolado,
+com adaptador fictício e IndexedDB/SW reais, sem Firebase ou dependências novas.
+Com `--manual`, mantém a prévia em http://localhost:8784/cards/.

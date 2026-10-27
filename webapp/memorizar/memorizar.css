@@ -1,0 +1,42 @@
+#memorizar[hidden] { display: none; }
+#memorizar { min-width: 0; align-self: start; border: 2px solid #5b7364; }
+.memorizando #estudo-texto > .grade > .ajuda { display: none; }
+.memorizando #estudo-texto > .grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+.mem-cabecalho { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+.mem-cabecalho h2 { margin: 0 0 12px; }
+#memorizar .mem-cabecalho button { flex: 0 0 auto; white-space: nowrap; }
+.mem-selo { font-size: .75em; letter-spacing: .06em; margin: 0 0 8px; color: #35523f; }
+#mem-status { overflow-wrap: anywhere; }
+#mem-tempo { font-weight: bold; color: #35523f; }
+.mem-contagem-linha { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.mem-contagem-linha #mem-tempo { margin: 0; }
+#memorizar .mem-contagem-linha #mem-alterar-prazo { flex: 0 0 auto; margin: 0; white-space: nowrap; }
+.mem-contagem-linha #mem-alterar-prazo[hidden] { display: none; }
+#mem-progresso { width: 100%; accent-color: #5b7364; }
+#mem-itens { max-height: 65vh; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.mem-grupos { position: sticky; top: 0; z-index: 1; display: flex; gap: 8px; margin: 0 0 12px; padding: 6px 0; background: #f3f0e9; }
+#memorizar .mem-grupo-botao.nav { flex: 1 1 0; min-width: 0; margin: 0; padding: 14px 8px; font-size: 19px; text-align: center; white-space: normal; overflow-wrap: anywhere; background: #efe9f4; border: 2px solid #b9a7cc; color: #46385a; }
+#memorizar .mem-grupo-botao.nav:hover { background: #e5d8f0; border-color: #a890c4; }
+#memorizar .mem-grupo-botao.nav.mem-grupo-ativo { background: #c3a4de; border-color: #7c56a4; color: #2c2045; box-shadow: inset 0 0 0 2px #7c56a4; }
+.mem-grupo-lista { border: 2px solid #b9a7cc; border-radius: 10px; padding: 0 10px; }
+.mem-grupo-lista[hidden] { display: none; }
+.mem-grupo-lista .mem-item:last-child { border-bottom: 0; }
+.mem-item { padding: 12px 8px; border-bottom: 1px solid #aaa99d; overflow-wrap: anywhere; }
+.mem-item h4 { margin: 0 0 8px; font-size: 1.12em; }
+.mem-item p { margin: 6px 0; line-height: 1.5; }
+.mem-classificacao { font-size: .82em; color: #5b6b5f; font-style: italic; opacity: .85; }
+#memorizar details { margin: 12px 0; }
+#memorizar summary { cursor: pointer; min-height: 36px; }
+#memorizar button { min-height: 44px; margin-bottom: 8px; white-space: normal; }
+.mem-campos { display: flex; flex-wrap: wrap; gap: 16px; }
+.mem-campos label { display: grid; gap: 6px; min-width: 0; flex: 1; }
+.mem-campos input, .mem-campos select { font: inherit; width: 100%; min-width: 0; padding: 8px; }
+#mem-prazo { padding: 12px; border: 1px solid #8a9c8e; border-radius: 10px; }
+#memorizar :focus-visible { outline: 3px solid #35523f; outline-offset: 3px; }
+@media (max-width: 800px) {
+  .memorizando #estudo-texto > .grade { grid-template-columns: minmax(0, 1fr); }
+  #mem-itens { max-height: none; overflow: visible; }
+  .mem-grupos { position: static; gap: 6px; }
+  #memorizar .mem-grupo-botao.nav { padding: 12px 6px; font-size: 17px; }
+  #memorizar { padding: 18px; }
+}

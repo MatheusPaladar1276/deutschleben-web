@@ -254,7 +254,9 @@
     }
     $("prog-busca").addEventListener("input", renderMemoria);
     $("memoria-repetir").addEventListener("click", carregarMemoria);
-    window.DL_TEXTOS = { carregarMemoria };
+    window.DL_TEXTOS = { carregarMemoria, obterAtivo() {
+        return ativo && usuario() === ativo.uid && !estudo.hidden ? {...ativo} : null;
+    }};
     function confirmarExclusao(texto, origem) {
         if (uid !== UID || usuario() !== uid || exclusao?.emCurso) return;
         exclusao = { id: texto.id, titulo: texto.titulo, uid, sessao, emCurso: false };
@@ -355,6 +357,7 @@
     function limparEstudo() {
         compreensaoAlvo = null; fecharDialogo(compreensaoDialogo, false);
         ativo = null;
+        window.dispatchEvent(new Event('dl-texto-alterado'));
         titulo.textContent = original.textContent = compreensao.value = pergunta.value = resumo.value = resumoStatus.textContent = "";
         resumoStatus.classList.remove("resumo-sucesso", "resumo-erro");
         estudo.hidden = true;
@@ -419,6 +422,7 @@
             limparSelecao();
             window.speechSynthesis?.cancel();
             inicio.hidden = true; estudo.hidden = false;
+            window.dispatchEvent(new Event('dl-texto-alterado'));
             $("resumo-secao").open = false;
             if (!Array.from(seletor.options).some(o => o.value === id)) seletor.add(new Option(ativo.titulo, id));
             seletor.value = id;

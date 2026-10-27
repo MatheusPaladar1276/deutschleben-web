@@ -88,6 +88,33 @@ service cloud.firestore {
         allow list: if false;
       }
     }
+    // Memorizar: um ciclo ativo por conta, guardado como texto JSON (como os Cards).
+    // Independente dos textos/Cards: os itens do ciclo ficam até uma escolha explícita.
+    match /memorizar/{uid} {
+      function autorizado() {
+        return request.auth != null
+          && request.auth.uid == "WuXcMYo6m3OuQttlk7z22gRjlvn1"
+          && uid == request.auth.uid;
+      }
+      function valido() {
+        return request.resource.data.keys().hasAll(['uid', 'versao', 'conteudo', 'criadoEm', 'atualizadoEm'])
+          && request.resource.data.keys().hasOnly(['uid', 'versao', 'conteudo', 'criadoEm', 'atualizadoEm'])
+          && request.resource.data.uid == uid
+          && request.resource.data.versao == 1
+          && request.resource.data.conteudo is string
+          && request.resource.data.conteudo.size() > 0
+          && request.resource.data.conteudo.size() <= 200000
+          && request.resource.data.criadoEm is timestamp
+          && request.resource.data.atualizadoEm == request.time;
+      }
+      allow get: if autorizado();
+      allow list: if false;
+      allow create: if autorizado() && valido()
+        && request.resource.data.criadoEm == request.time;
+      allow update: if autorizado() && valido()
+        && request.resource.data.criadoEm == resource.data.criadoEm;
+      allow delete: if autorizado();
+    }
     match /{document=**} {
       allow read, write: if false;
     }

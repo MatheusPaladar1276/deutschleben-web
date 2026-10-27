@@ -1,0 +1,68 @@
+{
+  "texto": {
+    "id": "demo-memorizar-01",
+    "titulo": "Ein Morgen auf dem Land",
+    "conteudo": "Am frühen Morgen gehe ich zum See.\nÜber dem Wasser liegt leichter Nebel.\nIch höre die Vögel und bleibe einen Moment stehen.\nDie Luft ist kühl, aber die Sonne scheint schon.\nAm Ufer sehe ich einen kleinen Vogel.\nEr sitzt auf einem Ast und schaut ins Wasser.\nNach einer Weile gehe ich langsam zum Haus zurück.\nDort mache ich einen Kaffee.\nIch sitze am Fenster und denke an den Tag.\nHeute möchte ich im Garten arbeiten."
+  },
+  "semCard": {
+    "id": "demo-sem-card",
+    "titulo": "Texto sem Card — demonstração dos limites",
+    "conteudo": "Morgen ist alles anders."
+  },
+  "revisao": [
+    {
+      "textoId": "demo-memorizar-01",
+      "grupo": "substantivos",
+      "lema": "Sonne",
+      "artigo": "die",
+      "forma": "Sonne",
+      "origem": "Die Luft ist kühl, aber die Sonne scheint schon.",
+      "conferido": true
+    },
+    {
+      "textoId": "demo-memorizar-01",
+      "grupo": "substantivos",
+      "lema": "Haus",
+      "artigo": "das",
+      "forma": "Haus",
+      "origem": "Nach einer Weile gehe ich langsam zum Haus zurück.",
+      "conferido": true
+    },
+    {
+      "textoId": "demo-memorizar-01",
+      "grupo": "substantivos",
+      "lema": "Kaffee",
+      "artigo": "der",
+      "forma": "Kaffee",
+      "origem": "Dort mache ich einen Kaffee.",
+      "conferido": true
+    },
+    {
+      "textoId": "demo-memorizar-01",
+      "grupo": "substantivos",
+      "lema": "Tag",
+      "artigo": "der",
+      "forma": "Tag",
+      "origem": "Ich sitze am Fenster und denke an den Tag.",
+      "conferido": true
+    },
+    {
+      "textoId": "demo-memorizar-01",
+      "grupo": "substantivos",
+      "lema": "Moment",
+      "artigo": "der",
+      "forma": "Moment",
+      "origem": "Ich höre die Vögel und bleibe einen Moment stehen.",
+      "conferido": true
+    },
+    {
+      "textoId": "demo-memorizar-01",
+      "grupo": "verbos",
+      "lema": "sein",
+      "forma": "ist",
+      "significado": "estar, em “Die Luft ist kühl”",
+      "origem": "Die Luft ist kühl, aber die Sonne scheint schon.",
+      "conferido": true
+    }
+  ]
+}
