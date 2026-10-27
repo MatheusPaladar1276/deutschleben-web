@@ -305,17 +305,3 @@ Safari/iOS, Firefox e Edge não foram testados. O manifesto oferece atalho em
 Publicação: workflow existente publica e compara as regras ativas antes de
 autorizar Hosting. `firebase.json`, tags e congelamentos permanecem preservados.
 O pacote Texto 01 não é importado na produção pelos testes nem pelo deploy.
-
-## Construções — prévia cards-construcoes-21
-
-`secoes.construcoes` é opcional no formato v1. Cada item reutiliza `de`,
-`pt` (sentido revisado no texto), `origem` (obrigatória e exata) e `essencial`.
-Pode incluir `nota` e `usoId` opcional: a referência explícita ao registro do
-acervo evita repeti-lo em “Comparar usos”; não confirma automaticamente sentidos.
-Cards antigos continuam válidos. No Texto 01, os itens revisados do pacote são
-projetados apenas quando título/número e frase de origem correspondem; nada é
-salvo automaticamente. Uma seção vazia explícita é respeitada.
-
-`node tests/cards-construcoes.cjs` verifica a integração em Chrome isolado,
-com adaptador fictício e IndexedDB/SW reais, sem Firebase ou dependências novas.
-Com `--manual`, mantém a prévia em http://localhost:8784/cards/.

@@ -2,7 +2,7 @@ importScripts('./referencia-sw.js');
 // Service worker do Deutschleben — instalação (PWA) e cache.
 // Estratégia: rede-primeiro para navegação/JSON (conteúdo sempre atual),
 // cache-primeiro para estáticos (ícones). Suba a versão ao publicar mudanças.
-const CACHE = "deutschleben-v35-memorizar-01";
+const CACHE = "deutschleben-v36-memorizar-02";
 const ACERVO_CONSTRUCOES = "/data/DL_Preposicoes_Base_Revisada.json";
 const ESTATICOS = [
   "./referencia.js?v=rg-01-10-v10", "./referencia-dados.js?v=rg-01-10-v10", "./referencia.css?v=rg-01-10-v10", "./referencia-sw.js",
@@ -22,6 +22,7 @@ const ESTATICOS = [
   "./memorizar/persistencia.js",
   "./memorizar/memorizar.css",
   "./cards/formato.js?v=cards-construcoes-21",
+  "./cards/formato.js",
   "./cards/offline.js?v=blocos-15",
   "./cards/texto-01.json",
   "./cards/vendor/firebase-app.js",

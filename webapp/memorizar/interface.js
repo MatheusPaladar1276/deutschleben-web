@@ -36,6 +36,7 @@ painel.innerHTML = `
     <button class="secundario" id="mem-cancelar" type="button" hidden>Cancelar</button>
   </form>
   <details id="mem-releitura" hidden><summary>Reler o texto deste ciclo</summary><p id="mem-original" lang="de"></p></details>
+  <p id="mem-cobertura"></p><div id="mem-pendencias"></div>
   <p id="mem-contagem"></p><div id="mem-itens" tabindex="0" role="region" aria-label="Todos os itens do conjunto"></div>
   <details><summary>Neste aparelho, offline e em outros dispositivos</summary>
     <p id="mem-offline">Preparando verificação do pacote offline…</p>
@@ -47,8 +48,27 @@ painel.innerHTML = `
       avançando a cada meia-noite mesmo com a prévia fechada.</p>`}</details>`;
 document.querySelector('#estudo-texto .grade').append(painel);
 
-let ciclo = null, candidato = null, modo = null, ocupado = false, pacote;
+let ciclo = null, candidato = null, modo = null, ocupado = false, pacote, estado = null, operacao = 0;
 const aviso = mensagem => { $('mem-status').textContent = mensagem; };
+function conferirSessao(sessao) {
+  if (ctx.sessao && ctx.sessao() !== sessao) throw Error('A conta mudou. Abra Memorizar novamente.');
+}
+function posicionar() {
+  if (!ctx.independente) return;
+  const destino = window.DL_TEXTOS?.obterAtivo()
+    ? document.querySelector('#estudo-texto .grade') : $('fase-textos');
+  destino.append(painel);
+}
+async function conferirPacote() {
+  if (!ctx.verificarOffline) return;
+  const sessao = ctx.sessao();
+  try {
+    const mensagem = await ctx.verificarOffline();
+    if (sessao === ctx.sessao()) $('mem-offline').textContent = mensagem;
+  } catch (e) {
+    if (sessao === ctx.sessao()) $('mem-offline').textContent = 'Offline não confirmado: ' + e.message;
+  }
+}
 async function dados() {
   if (!pacote) pacote = Promise.all(['substantivos', 'verbos', 'adjetivos_adverbios'].map(async nome => {
     const r = await fetch(new URL('../data/' + nome + '.json', import.meta.url));
@@ -62,6 +82,7 @@ async function dados() {
 const obterRegistro = ctx.carregarRegistro || (aberto => window.DL_MEMORIZAR_DEMO.registros.find(r => r.textoId === aberto.id) || null);
 const obterRevisao = ctx.revisao || (aberto => window.DL_MEMORIZAR_DEMO.revisao.filter(r => r.textoId === aberto.id));
 async function preparar() {
+  const sessao = ctx.sessao?.();
   const aberto = window.DL_TEXTOS.obterAtivo();
   if (!aberto) throw Error('Escolha um texto antes de iniciar um conjunto.');
   const registro = await obterRegistro(aberto);
@@ -70,6 +91,7 @@ async function preparar() {
     window.DL_CARD_FORMATO.vincular(registro.card, aberto.conteudo);
   }
   const acervos = await dados();
+  conferirSessao(sessao);
   if (window.DL_TEXTOS.obterAtivo()?.id !== aberto.id) throw Error('O texto mudou durante a identificação. Abra Memorizar novamente.');
   return {aberto, identificacao: identificar(aberto, registro, acervos, obterRevisao(aberto))};
 }
@@ -78,6 +100,15 @@ function linha(destino, rotulo, valor) {
   b.textContent = rotulo + ': '; p.append(b, document.createTextNode(valor)); destino.append(p);
 }
 function mostrarItens(identificacao) {
+  $('mem-cobertura').textContent = identificacao.cobertura;
+  $('mem-pendencias').replaceChildren();
+  if (identificacao.pendencias.length) {
+    const detalhes = document.createElement('details'), resumo = document.createElement('summary');
+    resumo.textContent = 'Informações não comprovadas (' + identificacao.pendencias.length + ')';
+    detalhes.append(resumo);
+    for (const p of identificacao.pendencias) linha(detalhes, p.palavra, p.motivo);
+    $('mem-pendencias').append(detalhes);
+  }
   $('mem-itens').replaceChildren();
   const nomes = {substantivos: 'Substantivos', verbos: 'Verbos', adverbios: 'Advérbios'};
   $('mem-contagem').textContent = Object.entries(nomes).map(([g, nome]) => identificacao.itens[g].length + ' ' + nome.toLowerCase()).join(' · ');
@@ -144,15 +175,17 @@ function render() {
   const identificacao = modo && candidato ? candidato.identificacao : ciclo?.identificacao;
   if (identificacao) mostrarItens(identificacao);
   else {
-    for (const id of ['mem-itens', 'mem-contagem']) $(id).replaceChildren();
+    for (const id of ['mem-itens', 'mem-contagem', 'mem-cobertura', 'mem-pendencias']) $(id).replaceChildren();
   }
   const titulo = modo && candidato ? candidato.aberto.titulo : ciclo?.titulo;
-  const ativo = window.DL_TEXTOS.obterAtivo();
+  const ativo = window.DL_TEXTOS?.obterAtivo();
   const mesmoTexto = ativo?.id === ciclo?.textoId && ativo?.conteudo === ciclo?.original;
   $('mem-releitura').hidden = !ciclo || !!modo || mesmoTexto;
   $('mem-original').textContent = ciclo?.original || '';
   $('mem-vinculo').textContent = titulo ? 'Conjunto de: ' + titulo +
-    (ciclo && !modo && !mesmoTexto ? ' · Atenção: o texto aberto ao lado é outro; este conjunto não foi substituído.' : '') : '';
+    (ciclo && !modo && !mesmoTexto ? (ativo
+      ? ' · Atenção: o texto aberto ao lado é outro; este conjunto não foi substituído.'
+      : ' · O texto original deste ciclo está disponível em Reler o texto deste ciclo.') : '') : '';
   $('mem-form-titulo').textContent = modo === 'continuar' ? 'Novo prazo para as mesmas palavras' : 'Escolher prazo para este conjunto';
   $('mem-iniciar').textContent = modo === 'continuar' ? 'Iniciar nova contagem' : ciclo ? 'Confirmar novo conjunto' : 'Iniciar ciclo';
   $('mem-tempo').textContent = modo ? (ciclo ? 'O ciclo anterior continua salvo até sua confirmação.' : 'Conjunto para conferência · ainda não salvo') : '';
@@ -160,26 +193,50 @@ function render() {
 }
 async function executar(fn) {
   if (ocupado) return;
+  const rodada = ++operacao, sessao = ctx.sessao?.();
   ocupado = true;
   for (const b of painel.querySelectorAll('button,input,select')) b.disabled = true;
-  try { await fn(); } catch (e) { aviso(e.message); }
+  try { await fn(); } catch (e) {
+    if (rodada === operacao && (!ctx.sessao || sessao === ctx.sessao())) aviso(e.message);
+  }
   finally {
-    ocupado = false;
-    for (const b of painel.querySelectorAll('button,input,select')) b.disabled = false;
+    if (rodada === operacao) {
+      ocupado = false;
+      for (const b of painel.querySelectorAll('button,input,select')) b.disabled = false;
+    }
   }
 }
 botao.onclick = () => executar(async () => {
   if (!painel.hidden) { fechar(); return; }
-  if (!window.DL_TEXTOS.obterAtivo()) {
+  if (!ctx.independente && !window.DL_TEXTOS.obterAtivo()) {
     $('textos-status').textContent = 'Escolha um texto para abrir Memorizar.'; return;
   }
+  posicionar();
   painel.hidden = false; document.body.classList.add('memorizando'); botao.setAttribute('aria-expanded', 'true');
+  ciclo = candidato = modo = estado = null;
   $('mem-prazo').hidden = true; $('mem-fim').hidden = true; $('mem-progresso').hidden = true;
-  for (const id of ['mem-itens', 'mem-contagem', 'mem-vinculo', 'mem-tempo']) $(id).replaceChildren();
+  $('mem-releitura').hidden = true; $('mem-alterar-prazo').hidden = true;
+  for (const id of ['mem-itens', 'mem-contagem', 'mem-vinculo', 'mem-tempo', 'mem-original', 'mem-cobertura', 'mem-pendencias']) $(id).replaceChildren();
+  if (ctx.independente) $('mem-offline').replaceChildren();
   $('memorizar-titulo').focus(); aviso(ctx.msgLendo || 'Lendo ciclo local…');
-  ciclo = await carregarCiclo();
-  modo = ciclo ? null : 'novo'; candidato = ciclo ? null : await preparar();
-  render(); aviso(ciclo ? (ctx.msgRestaurado || 'Ciclo restaurado neste navegador. Sem sincronização com outros aparelhos.') : 'Confira os itens e escolha seu prazo.');
+  const sessao = ctx.sessao?.(), lido = await carregarCiclo();
+  conferirSessao(sessao);
+  estado = ctx.independente ? lido : null;
+  ciclo = ctx.independente ? lido.ciclo : lido;
+  if (!ciclo && ctx.independente && !window.DL_TEXTOS?.obterAtivo()) {
+    render(); aviso('Nenhum ciclo na conta. Escolha um texto com Card para iniciar um conjunto. ' + estado.aviso);
+  } else {
+    const preparado = ciclo ? null : await preparar();
+    conferirSessao(sessao);
+    modo = ciclo ? null : 'novo'; candidato = preparado;
+    render();
+    aviso(ciclo ? (estado ? (estado.origem === 'local'
+      ? 'Ciclo recuperado da cópia local deste aparelho. Pode estar desatualizado; reabra com conexão para conferir a conta.'
+      : 'Ciclo carregado da sua conta.') + (estado.aviso ? ' ' + estado.aviso : '')
+      : 'Ciclo restaurado neste navegador. Sem sincronização com outros aparelhos.')
+      : 'Confira os itens e escolha seu prazo.' + (estado?.aviso ? ' ' + estado.aviso : ''));
+  }
+  conferirPacote();
 });
 function fechar() {
   painel.hidden = true; document.body.classList.remove('memorizando');
@@ -200,18 +257,40 @@ $('mem-prazo').onsubmit = e => {
     if (modo === 'novo' && window.DL_TEXTOS.obterAtivo()?.id !== candidato?.aberto.id) throw Error('O texto mudou. Feche e abra Memorizar antes de iniciar.');
     const novo = modo === 'continuar' ? continuarCiclo(ciclo, quantidade, unidade)
       : criarCiclo(candidato.aberto, candidato.identificacao, quantidade, unidade);
-    await salvarCiclo(novo, ciclo);
+    const sessao = ctx.sessao?.();
+    const salvo = await salvarCiclo(novo, ctx.independente ? estado : ciclo);
+    conferirSessao(sessao);
+    if (ctx.independente) estado = salvo;
     ciclo = novo; modo = null; candidato = null; render();
-    aviso(ctx.msgSalvo || 'Ciclo salvo neste navegador. Os itens ficam fixos; não há sincronização entre dispositivos.');
+    aviso((ctx.msgSalvo || 'Ciclo salvo neste navegador. Os itens ficam fixos; não há sincronização entre dispositivos.') +
+      (estado?.aviso ? ' ' + estado.aviso : ''));
+    conferirPacote();
     $('mem-status').focus();
   });
 };
 window.addEventListener('dl-texto-alterado', () => {
   if (!painel.hidden) {
-    if (!window.DL_TEXTOS.obterAtivo()) fechar();
+    if (ctx.independente && ciclo) { modo = null; candidato = null; posicionar(); render(); }
+    else if (!window.DL_TEXTOS.obterAtivo()) fechar();
     else { modo = null; candidato = null; render(); }
   }
 });
+if (ctx.independente) {
+  function limparConta() {
+    operacao++; ocupado = false; ciclo = candidato = modo = estado = null;
+    painel.hidden = true; document.body.classList.remove('memorizando');
+    botao.setAttribute('aria-expanded', 'false'); botao.disabled = !ctx.contaPronta();
+    for (const id of ['mem-status', 'mem-itens', 'mem-contagem', 'mem-vinculo', 'mem-tempo', 'mem-original', 'mem-offline', 'mem-cobertura', 'mem-pendencias']) $(id).replaceChildren();
+    for (const b of painel.querySelectorAll('button,input,select')) b.disabled = false;
+    $('mem-quantidade').value = '3';
+  }
+  window.addEventListener('dl-memorizar-conta', limparConta);
+  window.addEventListener('dl-memorizar-erro', e => { $('auth-erro').textContent = 'Memorizar: ' + e.detail; });
+  window.addEventListener('online', () => {
+    if (!painel.hidden && estado?.origem === 'local') aviso('Conexão restabelecida. Reabra Memorizar para conferir a conta. Nenhuma alteração foi enviada automaticamente.');
+  });
+  limparConta();
+}
 document.addEventListener('visibilitychange', tempo);
 setInterval(tempo, 30000);
 async function verificarOffline() {
@@ -230,5 +309,4 @@ async function verificarOffline() {
   $('mem-offline').textContent = pronto.ok ? 'Pacote de demonstração conferido para uso sem internet neste navegador. Nenhum dado pessoal foi incluído.'
     : 'Pacote offline incompleto. Abra novamente com conexão antes de depender do uso sem internet.';
 }
-const conferirOffline = ctx.verificarOffline || verificarOffline;
-conferirOffline().catch(e => { $('mem-offline').textContent = 'Offline não confirmado: ' + e.message; });
+if (!ctx.independente) verificarOffline().catch(e => { $('mem-offline').textContent = 'Offline não confirmado: ' + e.message; });

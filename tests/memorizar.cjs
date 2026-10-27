@@ -123,6 +123,7 @@ async function browser() {
   await iniciarChrome();
   await send('Emulation.setDeviceMetricsOverride', {width: 1440, height: 1000, deviceScaleFactor: 1, mobile: false});
   await navegar(); await escolher();
+  await until(`document.getElementById('mem-offline').textContent.startsWith('Pacote de demonstração conferido')`);
   await click('#nav-memorizar'); await until(`document.getElementById('mem-contagem').textContent.includes('16 substantivos')`);
   verificar(await ev(`document.getElementById('mem-contagem').textContent==='16 substantivos · 14 verbos · 4 advérbios'`), 'Contagem da prévia no navegador');
   verificar(await ev(`document.querySelectorAll('.mem-item').length===34`), 'Todos os itens disponíveis, sem sorteio');

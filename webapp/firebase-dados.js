@@ -160,6 +160,7 @@ window.DL_AUTH = {
   },
   async sair() {
     if (!auth || !authPronta) throw new Error("Autenticação indisponível.");
+    await window.DL_MEMORIZAR_CONTA?.prepararSaida();
     await limparLocal();
     if (typeof BroadcastChannel === 'function') {
       const canal = new BroadcastChannel('dl-cards-contas');

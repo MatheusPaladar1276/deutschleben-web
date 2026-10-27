@@ -83,7 +83,7 @@ export function identificar(aberto, registro, acervos, revisao = []) {
     }
   }
   return {itens, pendencias, excluidos, cobertura: card
-    ? 'Itens declarados no Card vinculado, mais vínculos explicitamente conferidos da demonstração. Não é uma análise completa do alemão.'
+    ? 'Itens declarados no Card vinculado' + (revisao.length ? ', mais vínculos explicitamente conferidos da demonstração' : '') + '. Não é uma análise completa do alemão.'
     : 'Sem Card vinculado: não é possível afirmar quais palavras foram identificadas. Nenhuma lista de ausências foi inferida.'};
 }
 

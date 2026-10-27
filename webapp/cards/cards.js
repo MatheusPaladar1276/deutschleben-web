@@ -6,7 +6,7 @@ import * as dados from './dados.js?v=blocos-15';
 import { listarLocal, guardarLocal, removerLocal } from './offline.js?v=blocos-15';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='rg-previa-01-10-v10';
+const VERSAO='rg-previa-01-10-v10-memorizar-02';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};

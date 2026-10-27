@@ -25,8 +25,10 @@ if (demoLocal) {
         locais, inclui o dia de início e avança a cada meia-noite.</p>`;
     window.DL_MEMORIZAR_CTX = {
       selo: 'na sua conta',
+      independente: true,
+      sessao: nuvem.sessao,
+      contaPronta: nuvem.contaPronta,
       msgLendo: 'Lendo o ciclo da sua conta…',
-      msgRestaurado: 'Ciclo em andamento carregado da sua conta. Disponível nos seus aparelhos com o mesmo login.',
       msgSalvo: 'Ciclo salvo na sua conta. Os itens ficam fixos e aparecem nos seus aparelhos com o mesmo login.',
       armazenamentoHtml,
       carregarCiclo: nuvem.carregarCiclo,

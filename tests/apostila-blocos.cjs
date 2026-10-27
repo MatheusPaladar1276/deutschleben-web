@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),http=require('node:http'),assert=require('node:assert/strict'),{spawn}=require('node:child_process');
 const root=path.resolve(__dirname,'..'),out=fs.mkdtempSync(path.join(os.tmpdir(),'dl-apostila-blocos-'));
 const UID='WuXcMYo6m3OuQttlk7z22gRjlvn1', PORT=8776, DEBUG=9356;
-const {createRequire}=require('node:module'), deps=createRequire(path.join(os.tmpdir(),'mapc-coleta-web-envio-tests/package.json'));
+const {createRequire}=require('node:module'), deps=createRequire(path.join(process.env.DL_TEST_DEPS || path.join(os.tmpdir(),'mapc-coleta-web-envio-tests'),'package.json'));
 const {initializeTestEnvironment}=deps('@firebase/rules-unit-testing'),sdk=deps('firebase/firestore');sdk.setLogLevel('silent');
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));let chrome,ws,env,n=0;const pending=new Map();
 function jwt(uid){const enc=x=>Buffer.from(JSON.stringify(x)).toString('base64url');const now=Math.floor(Date.now()/1000);return enc({alg:'none',typ:'JWT'})+'.'+enc({iss:'https://securetoken.google.com/demo-dl-textos',aud:'demo-dl-textos',auth_time:now,user_id:uid,sub:uid,iat:now,exp:now+3600,firebase:{sign_in_provider:'custom'}})+'.';}
@@ -59,7 +59,7 @@ async function main(){
  for(const value of [null,{de:'x'},{de:'x',pt:'y',extra:'z'},'x']){const bad=structuredClone(old);bad.secoes.blocos[0].outroExemplo=value;assert.throws(()=>F.validar(bad));}
  const other=structuredClone(old);other.numero=2;other.titulo='Outra origem';other.secoes.blocos=[{...old.secoes.blocos[0],de:' AM  FR\u00dcHEN MORGEN ',pt:'  BEM CEDO, PELA MANH\u00c3 ',origem:'Am fr\u00fchen Morgen lese ich.',outroExemplo:{de:'Am fr\u00fchen Morgen laufe ich.',pt:'Bem cedo, corro.'}},{...old.secoes.blocos[0],pt:'outro sentido',origem:'Am fr\u00fchen Morgen lese ich.'}];
  const original=c=>[...new Set(Object.values(c.secoes).flat().map(i=>i.origem).filter(Boolean))].join('\n');
- await env.withSecurityRulesDisabled(async ctx=>{for(const [id,c] of [['texto-01',old],['texto-02',other]]){const db=ctx.firestore();await sdk.setDoc(sdk.doc(db,'textos',id),{titulo:c.titulo,conteudo:original(c),estado:'recebido',criadoEm:sdk.Timestamp.now()});await sdk.setDoc(sdk.doc(db,'textos',id,'cards',UID),{uid:UID,textoId:id,versao:1,conteudo:JSON.stringify(c),criadoEm:sdk.Timestamp.now(),atualizadoEm:sdk.Timestamp.now()});}});
+ await env.withSecurityRulesDisabled(async ctx=>{const db=ctx.firestore();for(const [id,c] of [['texto-01',old],['texto-02',other]]){await sdk.setDoc(sdk.doc(db,'textos',id),{titulo:c.titulo,conteudo:original(c),estado:'recebido',criadoEm:sdk.Timestamp.now()});await sdk.setDoc(sdk.doc(db,'textos',id,'cards',UID),{uid:UID,textoId:id,versao:1,conteudo:JSON.stringify(c),criadoEm:sdk.Timestamp.now(),atualizadoEm:sdk.Timestamp.now()});}});
  try{
   await start();await send('Page.navigate',{url:`http://127.0.0.1:${PORT}/`});await until('!!window.DL_TEST && window.DL_AUTH?.pronta');await evaluate(`window.DL_TEST.signIn('${UID}')`);await until(`window.DL_AUTH?.usuario?.uid==='${UID}'`);
   // Teste de normalizacao e separacao de sentidos com o modulo real.
