@@ -5,7 +5,7 @@ import { initializeApp } from "./cards/vendor/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "./cards/vendor/firebase-auth.js";
 import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer, getDocsFromServer, runTransaction } from "./cards/vendor/firebase-firestore.js";
 import './cards/formato.js?v=cards-construcoes-21';
-import { listarLocal, limparLocal, removerLocal } from './cards/offline.js?v=blocos-15';
+import { listarLocal, limparLocal, removerLocal } from './cards/offline.js?v=memorizar-06';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDCueo_SJ8gAqU9VT6cMdyxyDhXGSP1ma4",

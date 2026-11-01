@@ -1,5 +1,46 @@
 # Memorizar — integração DL Web + Firebase (guia de publicação e validação)
 
+## Atualizacao de instalacao antiga - correcao local memorizar-06
+
+`d886d76` exporta `isolarMemorizar` e `operarMemorizar`, mas conserva a URL
+`cards/offline.js?v=blocos-15` precacheada pela versao oficial anterior.
+Na atualizacao, HTML novo mais SW antigo pode carregar o modulo antigo sem
+esses exports. Perfis novos nao reproduzem essa mistura.
+
+O grafo alterado recebe `?v=memorizar-06` desde os HTMLs ate bootstrap,
+entrada/nuvem e imports compartilhados dos Cards. Os dois SW precacheiam
+as URLs reais; o shell Cards preserva a query como identidade do recurso,
+sem devolver um modulo de outra versao. O cache raiz passa a
+`deutschleben-v37-memorizar-06`; shell Cards a
+`rg-previa-01-10-v10-memorizar-06`. IndexedDB e persistencia Auth nao mudam.
+
+Teste focado, sem emulador Firestore, login real ou contato com producao:
+
+```powershell
+node tests\atualizacao-memorizar.cjs
+node tests\atualizacao-memorizar.cjs --sw-publicado
+```
+
+O teste serve os blobs antigos e publicados por Git e a correcao atual em
+localhost, com SDK Auth real e REST sintetico. Mantem o mesmo perfil Chrome,
+dois SW reais, cache HTTP antigo, Card/ciclo de 7 dias, Auth e localStorage.
+Reproduz primeiro o erro em 2580f4f -> d886d76; verifica a correcao ainda sob
+o SW antigo, ativacao e reinicio completo do navegador ja sem rede, antes
+da primeira navegacao; nao aquece o perfil online antes da reabertura offline.
+`--reproduzir` termina apos comprovar a falha original.
+`--sw-publicado` instala tambem o SW real da offline-05 antes de aplicar a
+correcao, cobrindo tanto v34 antigo quanto v36 ja instalado. Confere acervo
+publico retido e recusa de uma query de modulo nao instalada, sem trocar
+a identidade da versao pelo arquivo canonico do shell Cards.
+Nenhuma publicacao ou alteracao do pacote offline-05 faz parte desta correcao.
+
+Resultado desta preparacao: 18 verificacoes com SW v34 e 20 com SW v36,
+total 38 PASS, mais sintaxe JS e `git diff --check`. Sessao sintetica,
+registros locais, ciclo de 7 dias e acervo preservados; reabertura a frio
+ja offline na principal e nos Cards. Sem repeticao das suites de regras,
+modelo ou transacoes, que nao mudaram. Teste fisico da correcao ainda nao
+realizado; a evidencia automatizada nao substitui a confirmacao no celular.
+
 ## Aprovacao fisica do conflito - offline-05
 
 Relato do usuario em 31/10/2026, 18h01 (Brasilia): depois de salvar 7 dias

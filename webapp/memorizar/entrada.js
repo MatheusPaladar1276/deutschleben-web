@@ -15,7 +15,7 @@ if (demoLocal) {
   import('./interface.js').catch(e => aviso(e.message));
 } else {
   (async () => {
-    const nuvem = await import('./nuvem.js');
+    const nuvem = await import('./nuvem.js?v=memorizar-06');
     const armazenamentoHtml = `
       <p>O ciclo fica guardado na sua conta do Deutschleben. Ao abrir o Memorizar em outro aparelho
         com o mesmo login, o ciclo em andamento é carregado da sua conta; os itens são os mesmos.</p>

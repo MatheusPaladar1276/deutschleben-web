@@ -2,7 +2,7 @@ import { prepararCard } from '../blocos.js';
 import { initializeApp } from './vendor/firebase-app.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from './vendor/firebase-auth.js';
 import { getFirestore, collection, doc, getDocsFromServer, getDocFromServer, runTransaction, serverTimestamp, deleteDoc } from './vendor/firebase-firestore.js';
-import { limparLocal, isolarLocal } from './offline.js';
+import { limparLocal, isolarLocal } from './offline.js?v=memorizar-06';
 const app=initializeApp({apiKey:'AIzaSyDCueo_SJ8gAqU9VT6cMdyxyDhXGSP1ma4',authDomain:'ricardo-d6119.firebaseapp.com',projectId:'ricardo-d6119',storageBucket:'ricardo-d6119.firebasestorage.app',messagingSenderId:'436880673471',appId:'1:436880673471:web:f4c3f6178fa8aefc75140a'});
 const auth=getAuth(app), db=getFirestore(app);
 export const uid=()=>auth.currentUser?.uid || null;
