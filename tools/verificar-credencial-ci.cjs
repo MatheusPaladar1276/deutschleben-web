@@ -46,6 +46,8 @@ async function verify({credential, transport = fetch, now = Date.now, emit = con
     throw new CheckError('autenticacao');
   }
   emit('PASS token novo emitido com a chave do segredo atual');
+  emit('Conta de servico usada: ' + account.client_email);
+  emit('ID da chave usada: ' + account.private_key_id);
   const accountPath = '/v1/projects/' + PROJECT + '/serviceAccounts/' + encodeURIComponent(account.client_email);
   const releasePath = '/v1/projects/' + PROJECT + '/releases/cloud.firestore';
   const hostingPath = '/v1beta1/projects/' + PROJECT + '/sites/' + PROJECT + '/channels/live';
