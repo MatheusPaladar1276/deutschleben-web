@@ -7,6 +7,7 @@ const {initializeTestEnvironment} = deps('@firebase/rules-unit-testing');
 const sdk = deps('firebase/firestore');
 sdk.setLogLevel('silent');
 const root = path.resolve(__dirname, '..'), PORT = 8806, EMULATOR = 8188;
+const webroot = path.resolve(root, process.env.DL_TEST_WEBAPP || 'webapp');
 const UID = 'WuXcMYo6m3OuQttlk7z22gRjlvn1', OTHER = 'memorizar-outra-conta-sintetica';
 const projectId = 'demo-dl-textos', base = `http://127.0.0.1:${PORT}`;
 const out = fs.mkdtempSync(path.join(os.tmpdir(), 'dl-memorizar-producao-'));
@@ -52,8 +53,8 @@ const server = http.createServer(async (req, res) => {
   }
   let relative = decodeURIComponent(new URL(req.url, base).pathname).replace(/^\//, '');
   if (!relative || relative.endsWith('/')) relative += 'index.html';
-  const file = path.resolve(root, 'webapp', relative);
-  if (!file.startsWith(path.resolve(root, 'webapp') + path.sep)) { res.writeHead(403); res.end(); return; }
+  const file = path.resolve(webroot, relative);
+  if (!file.startsWith(webroot + path.sep)) { res.writeHead(403); res.end(); return; }
   try {
     let b = fs.readFileSync(file);
     if (relative === 'firebase-dados.js') {
@@ -126,6 +127,10 @@ class Navegador {
       if (m.method === 'Fetch.requestPaused') this.pausados.push(m.params.requestId);
     });
     await this.send('Page.enable'); await this.send('Runtime.enable'); await this.send('Network.enable');
+    if (this.nome === 'celular') {
+      await this.send('Emulation.setDeviceMetricsOverride', {width: 375, height: 667, deviceScaleFactor: 1, mobile: true});
+      await this.send('Emulation.setTouchEmulationEnabled', {enabled: true});
+    }
     await this.send('Network.setBlockedURLs', {urls: ['https://*', 'http://firestore.googleapis.com/*']});
     await this.offline(offline);
     await this.send('Page.navigate', {url: base + '/'});
@@ -157,7 +162,7 @@ class Navegador {
   }
   async abrir() {
     await this.click('nav-memorizar');
-    await this.until(`!document.getElementById('memorizar').hidden && !document.getElementById('mem-iniciar').disabled && !document.getElementById('mem-status').textContent.startsWith('Lendo')`);
+    await this.until(`!document.getElementById('memorizar').hidden && (!document.getElementById('mem-iniciar').disabled || !navigator.onLine) && !document.getElementById('mem-status').textContent.startsWith('Lendo')`);
   }
   async reabrir() { await this.click('mem-fechar'); await this.abrir(); }
   async texto(id) {
@@ -166,12 +171,26 @@ class Navegador {
     await this.until(`window.DL_TEXTOS.obterAtivo()?.id === ${JSON.stringify(id)}`);
   }
   status() { return this.evaluate(`document.getElementById('mem-status').textContent`); }
+  avisoVisivel() {
+    return this.evaluate(`(()=>{
+      const aviso=document.getElementById('mem-aviso-prazo'),r=aviso.getBoundingClientRect(),s=getComputedStyle(aviso);
+      return !aviso.hidden && s.display!=='none' && s.visibility==='visible' && r.height>0 &&
+        r.top>=0 && r.bottom<=visualViewport.height && r.left>=0 && r.right<=document.documentElement.clientWidth &&
+        aviso.contains(document.elementFromPoint((r.left+r.right)/2,(r.top+r.bottom)/2));
+    })()`);
+  }
   async confirmar(dias) {
     await this.evaluate(`document.getElementById('mem-quantidade').value=${dias}`);
     await this.click('mem-iniciar');
     await this.until(`!document.getElementById('mem-iniciar').disabled`);
   }
-  async prazo(dias) { await this.click('mem-alterar-prazo'); await this.confirmar(dias); }
+  async prazo(dias) {
+    await this.click('mem-alterar-prazo');
+    if (await this.evaluate(`!document.getElementById('mem-prazo').hidden`)) await this.confirmar(dias);
+  }
+  espelho() {
+    return this.evaluate(`new Promise((resolve,reject)=>{const r=indexedDB.open('dl-memorizar-nuvem-v1',1);r.onsuccess=()=>{const d=r.result,t=d.transaction('ciclos'),q=t.objectStore('ciclos').get(${JSON.stringify(UID)});t.oncomplete=()=>{d.close();resolve(q.result)};t.onerror=()=>reject(t.error)};r.onerror=()=>reject(r.error)})`);
+  }
   keys() {
     return this.evaluate(`new Promise((resolve,reject)=>{const r=indexedDB.open('dl-memorizar-nuvem-v1',1);r.onsuccess=()=>{const d=r.result,t=d.transaction('ciclos'),q=t.objectStore('ciclos').getAllKeys();t.oncomplete=()=>{d.close();resolve(q.result)};t.onerror=()=>reject(t.error)};r.onerror=()=>reject(r.error)})`);
   }
@@ -234,9 +253,51 @@ async function main() {
   await b.start(); await b.login(); await b.abrir();
   check(tem(await b.status(), 'Ciclo carregado da sua conta'), 'Segundo perfil lê o servidor');
   equal(await b.evaluate(`document.getElementById('mem-original').textContent`), original);
+  await a.click('mem-alterar-prazo');
+  await b.prazo(4);
+  const salvoNoCelular = await remoto();
+  await a.confirmar(2);
+  equal(await remoto(), salvoNoCelular, 'Computador com formulario antigo nao sobrescreve os 4 dias do celular');
+  equal(await a.espelho(), await b.espelho(), 'Conflito carrega automaticamente a versao de 4 dias no computador');
+  const avisoAtualizacao = 'O ciclo mudou em outro aparelho. Sua alteração não foi salva. A versão mais recente foi carregada.';
+  equal(await a.status(), avisoAtualizacao, 'Conflito explica recusa e leitura da versao recente');
+  equal(await a.evaluate(`document.getElementById('mem-quantidade').value`), '4', 'Rascunho de 2 dias volta aos 4 dias carregados');
+  check(await a.evaluate(`document.getElementById('mem-prazo').hidden`), 'Conflito encerra o formulario antigo');
+  check(await a.avisoVisivel(), 'Aviso de conflito inteiro visivel junto ao prazo no computador');
+  await a.evaluate(`window.dispatchEvent(new Event('dl-texto-alterado'))`);
+  equal(await a.evaluate(`document.getElementById('mem-aviso-prazo').textContent`), avisoAtualizacao, 'Renderizacao posterior nao apaga explicacao do conflito');
+  check(await a.avisoVisivel(), 'Aviso continua visivel apos atualizacao dos controles');
+  await a.reabrir();
+  equal(await a.espelho(), await b.espelho(), 'Fechar e reabrir apos conflito mantem o ciclo recente');
+  check(await a.evaluate(`document.getElementById('mem-aviso-prazo').hidden && document.getElementById('mem-aviso-prazo').textContent===''`), 'Reabertura remove o aviso de conflito anterior');
+  await a.click('mem-alterar-prazo');
+  equal(await a.evaluate(`document.getElementById('mem-quantidade').value`), '4', 'Nova edicao usa a base recente, nao o rascunho recusado');
+  check(await a.evaluate(`document.getElementById('mem-aviso-prazo').hidden`), 'Nova acao explicita limpa aviso anterior');
+  await a.click('mem-cancelar');
+  const espelhoAntesDaFalha = await a.espelho();
+  const invalido = {...salvoNoCelular, versao: 2, conteudo: 'registro-sintetico-invalido'};
+  await env.withSecurityRulesDisabled(async ctx => { await sdk.setDoc(sdk.doc(ctx.firestore(), 'memorizar', UID), invalido); });
+  await a.prazo(2);
+  equal(await remoto(), invalido, 'Falha ao recarregar nao escreve sobre o registro remoto');
+  equal(await a.espelho(), espelhoAntesDaFalha, 'Leitura invalida apos conflito preserva espelho anterior');
+  check(await a.avisoVisivel() && tem(await a.status(), 'Não foi possível carregar a versão mais recente'), 'Erro de recarga fica visivel e explicito');
+  check(!tem(await a.status(), 'A versão mais recente foi carregada'), 'Falha de recarga nao afirma sucesso');
+  await env.withSecurityRulesDisabled(async ctx => { await sdk.setDoc(sdk.doc(ctx.firestore(), 'memorizar', UID), salvoNoCelular); });
+  await a.reabrir();
+  await env.withSecurityRulesDisabled(async ctx => { await sdk.deleteDoc(sdk.doc(ctx.firestore(), 'memorizar', UID)); });
+  await a.prazo(2);
+  equal(await remoto(), null, 'Conflito com remocao remota nao recria o ciclo');
+  equal(await a.espelho(), espelhoAntesDaFalha, 'Remocao remota nao apaga silenciosamente o espelho');
+  check(await a.avisoVisivel() && tem(await a.status(), 'foi removido em outro aparelho'), 'Remocao remota tem aviso proprio visivel');
+  check(!tem(await a.status(), 'A versão mais recente foi carregada'), 'Ausencia remota nao promete ciclo carregado');
+  await env.withSecurityRulesDisabled(async ctx => { await sdk.setDoc(sdk.doc(ctx.firestore(), 'memorizar', UID), salvoNoCelular); });
+  await a.reabrir();
+  await a.prazo(3); await b.reabrir();
   await a.prazo(7); await b.prazo(5);
   check(tem(await b.status(), 'mudou em outro aparelho'), 'Alteração obsoleta é recusada');
   equal((await cicloRemoto()).quantidade, 7, 'Conflito não substitui o servidor');
+  equal((await b.espelho()).ciclo.quantidade, 7, 'Conflito no celular tambem atualiza o espelho');
+  check(await b.avisoVisivel(), 'Aviso de conflito inteiro visivel em 375x667');
   await b.reabrir();
   await b.until(`navigator.serviceWorker.controller`);
   await b.stop();
@@ -244,6 +305,8 @@ async function main() {
   equal(await b.evaluate('window.DL_TEXTOS.obterAtivo()'), null, 'Reabertura completa sem texto ativo');
   await b.abrir();
   check(tem(await b.status(), 'recuperado da cópia local'), 'Origem offline explícita após reinício do Chrome');
+  equal(await b.evaluate('document.documentElement.clientWidth'), 375, 'Perfil celular usa largura real de 375 pixels CSS');
+  check(await b.evaluate(`!!document.getElementById('mem-aviso-prazo') && !document.getElementById('mem-aviso-prazo').hidden && document.getElementById('mem-aviso-prazo').textContent==='Para alterar o prazo, conecte-se à internet. Seu prazo foi mantido.'`), 'Aviso simples aparece offline mesmo quando confirmar esta desabilitado');
   check(await b.evaluate(`document.getElementById('memorizar').getBoundingClientRect().height>0 && !document.getElementById('fase-textos').hidden`), 'Painel visível fora do estudo');
   equal(await b.evaluate(`document.getElementById('mem-original').textContent`), original, 'Original recuperado sem buscar texto');
   equal(await b.evaluate(`document.getElementById('mem-itens').textContent`), itensVisiveis, 'Todos os itens restaurados offline');
@@ -252,14 +315,39 @@ async function main() {
     check(await b.evaluate(`!document.getElementById('mem-grupo-${grupo}').hidden`), 'Categoria funciona offline: ' + grupo);
   }
   await a.prazo(10);
+  const espelhoOffline = await b.espelho();
+  const toque = await b.evaluate(`(()=>{
+    const botao=document.getElementById('mem-alterar-prazo');
+    botao.scrollIntoView({block:'end'});
+    const r=botao.getBoundingClientRect();
+    return {x:(r.left+r.right)/2,y:(r.top+r.bottom)/2};
+  })()`);
+  await b.send('Input.dispatchTouchEvent', {type: 'touchStart', touchPoints: [toque]});
+  await b.send('Input.dispatchTouchEvent', {type: 'touchEnd', touchPoints: []});
+  await b.until(`document.activeElement.id==='mem-aviso-prazo'`);
+  check(await b.avisoVisivel(), 'Toque offline deixa aviso inteiro visivel na tela de 375x667, sem sobreposicao');
   await b.prazo(4);
-  check(tem(await b.status(), 'não foi salvo nem colocado em fila'), 'Edição offline recusada explicitamente');
+  equal(await b.status(), 'Para alterar o prazo, conecte-se à internet. Seu prazo foi mantido.', 'Edição offline apresenta aviso simples');
   equal((await cicloRemoto()).quantidade, 10);
+  equal(await b.espelho(), espelhoOffline, 'Tentativa offline nao muda o espelho persistido');
+  check(await b.evaluate(`document.getElementById('mem-prazo').hidden`), 'Offline nao deixa formulario parecer salvo');
+  for (const dias of [5, 6, 9]) await b.prazo(dias);
+  equal(await b.espelho(), espelhoOffline, 'Tentativas repetidas offline nao alteram dados locais');
+  equal(await b.evaluate(`document.getElementById('mem-quantidade').value`), String(espelhoOffline.ciclo.quantidade), 'Campo volta ao prazo persistido');
+  check(await b.evaluate(`document.getElementById('mem-iniciar').disabled && document.getElementById('mem-quantidade').disabled`), 'Controles de gravacao bloqueados offline');
+  const adapterOffline = await b.evaluate(`(async()=>{const n=await import('/memorizar/nuvem.js'),m=await import('/memorizar/modelo.js'),e=await n.carregarCiclo();try{await n.salvarCiclo(m.continuarCiclo(e.ciclo,4,'dias'),e);return {salvou:true}}catch(erro){return {salvou:false,mensagem:erro.message}}})()`);
+  check(!adapterOffline.salvou && tem(adapterOffline.mensagem, 'não foi salvo nem colocado em fila'), 'Adaptador recusa gravacao offline mesmo sem a interface');
+  await b.stop(); await b.start(true); await b.abrir();
+  check(await b.evaluate(`!document.getElementById('mem-aviso-prazo').hidden && document.getElementById('mem-aviso-prazo').textContent==='Para alterar o prazo, conecte-se à internet. Seu prazo foi mantido.'`), 'Reabertura offline conserva explicacao junto aos controles');
+  equal(await b.espelho(), espelhoOffline, 'Reinicio completo offline preserva o ciclo apos tentativas');
+  equal(await b.evaluate(`document.getElementById('mem-itens').textContent`), itensVisiveis, 'Itens preservados apos tentativas e reinicio offline');
+  check(await b.evaluate(`indexedDB.databases().then(d=>!d.some(i=>i.name==='dl-memorizar-demo-v1'))`), 'Nao usa armazenamento da previa como fallback');
   await b.offline(false);
   await b.until(`document.getElementById('mem-status').textContent.includes('Nenhuma alteração foi enviada automaticamente')`);
+  check(await b.evaluate(`document.getElementById('mem-aviso-prazo').hidden`), 'Reconexao remove aviso offline desatualizado');
   await sleep(1000);
   equal((await cicloRemoto()).quantidade, 10, 'Reconexão não envia fila silenciosa');
-  await b.confirmar(4);
+  await b.prazo(4);
   check(tem(await b.status(), 'mudou em outro aparelho'), 'Reconexão recusa base local obsoleta');
   await b.reabrir(); await b.prazo(8); await a.reabrir();
   equal((await cicloRemoto()).quantidade, 8, 'Sincronização de volta ao computador');
@@ -267,7 +355,7 @@ async function main() {
   await Promise.all([a.confirmar(6), b.confirmar(9)]);
   const estados = await Promise.all([a.status(), b.status()]);
   equal(estados.filter(s => tem(s, 'Ciclo salvo na sua conta')).length, 1, 'Apenas uma transação concorrente vence');
-  equal(estados.filter(s => tem(s, 'mudou em outro aparelho')).length, 1, 'Outra transação avisa conflito');
+  equal(estados.filter(s => tem(s, 'mudou em outro aparelho')).length, 1, 'Outra transação avisa conflito: ' + JSON.stringify(estados));
   equal((await cicloRemoto()).identificacao, itens, 'Concorrência preserva itens');
   await a.reabrir();
   await a.evaluate(`window.DL_TEST.put=IDBObjectStore.prototype.put;IDBObjectStore.prototype.put=function(...args){if(this.name==='ciclos')throw new DOMException('quota sintética','QuotaExceededError');return window.DL_TEST.put.apply(this,args)}`);
@@ -291,6 +379,49 @@ async function main() {
   await a.send('Network.setBlockedURLs', {urls: ['https://*']});
   await sleep(1000);
   equal((await cicloRemoto()).quantidade, 2, 'Retorno do transporte não reenvia a alteração');
+  await a.reabrir();
+  const falhasAntes = a.bloqueados.size;
+  await a.send('Network.setBlockedURLs', {urls: ['https://*', `http://127.0.0.1:${EMULATOR}/*`]});
+  const confirmacaoInterrompida = a.prazo(4);
+  for (let i = 0; i < 100 && a.bloqueados.size === falhasAntes; i++) await sleep(20);
+  check(a.bloqueados.size > falhasAntes, 'Transporte da tentativa falhou enquanto navigator ainda dizia online');
+  await a.send('Network.setBlockedURLs', {urls: ['https://*']});
+  await confirmacaoInterrompida;
+  await sleep(1500);
+  equal((await cicloRemoto()).quantidade, 2, 'Falha de transporte nao e repetida automaticamente na reconexao');
+  check(!tem(await a.status(), 'Ciclo salvo na sua conta'), 'Falha nao vira sucesso tardio sem nova confirmacao');
+  check(await a.evaluate(`document.getElementById('mem-prazo').hidden`), 'Falha de transporte restaura visual do ciclo anterior');
+  check(await a.evaluate(`(()=>{
+    const aviso=document.getElementById('mem-aviso-prazo'),r=aviso.getBoundingClientRect();
+    return navigator.onLine && !aviso.hidden && aviso.textContent===document.getElementById('mem-status').textContent &&
+      aviso.textContent.includes('Nenhuma alteração foi colocada em fila') && r.height>0 && r.top>=0 && r.bottom<=innerHeight;
+  })()`), 'Falha de transporte tambem deixa erro visivel junto ao prazo quando navegador diz online');
+  await a.reabrir();
+  const espelhoAntesDoRascunho = await a.espelho();
+  await a.click('mem-alterar-prazo');
+  await a.evaluate(`document.getElementById('mem-quantidade').value='9'`);
+  await a.offline(true);
+  await a.until(`document.getElementById('mem-prazo').hidden`);
+  equal(await a.espelho(), espelhoAntesDoRascunho, 'Queda de rede descarta rascunho aberto sem persistir');
+  equal(await a.evaluate(`document.getElementById('mem-quantidade').value`), '2', 'Queda de rede restaura prazo confirmado');
+  await a.offline(false); await sleep(1500);
+  equal((await cicloRemoto()).quantidade, 2, 'Reconexao apos rascunho descartado nao grava');
+  await a.reabrir();
+  const espelhoAntesDaQueda = await a.espelho();
+  await a.send('Fetch.enable', {patterns: [{urlPattern: `http://127.0.0.1:${EMULATOR}/*:batchGet*`, requestStage: 'Request'}]});
+  await a.click('mem-alterar-prazo');
+  const confirmacaoPausada = a.confirmar(6);
+  for (let i = 0; i < 100 && !a.pausados.length; i++) await sleep(20);
+  check(a.pausados.length === 1, 'Leitura da tentativa pausada para simular queda e retorno de rede');
+  await a.offline(true);
+  await a.until(`!document.getElementById('mem-fechar').disabled`);
+  await a.offline(false);
+  await a.send('Fetch.disable');
+  a.pausados.length = 0;
+  await confirmacaoPausada;
+  equal((await cicloRemoto()).quantidade, 2, 'Tentativa interrompida nao grava apos reconexao');
+  equal(await a.espelho(), espelhoAntesDaQueda, 'Tentativa invalidada pela queda nao altera o espelho');
+  check(tem(await a.status(), 'Conexão perdida') || tem(await a.status(), 'Nenhuma alteração foi enviada automaticamente'), 'Queda durante tentativa apresenta aviso explicito apos reconexao');
   await a.reabrir();
   const antesAusencia = await remoto();
   await env.withSecurityRulesDisabled(async ctx => { await sdk.deleteDoc(sdk.doc(ctx.firestore(), 'memorizar', UID)); });

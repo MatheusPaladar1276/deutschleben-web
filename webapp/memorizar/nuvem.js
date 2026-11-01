@@ -7,6 +7,8 @@ import { validarCiclo } from './modelo.js';
 
 const app = getApp(), auth = getAuth(app), db = getFirestore(app);
 let conta, epoca = 0, bloqueada = false, isolamento = Promise.resolve();
+let conexao = 0;
+window.addEventListener('offline', () => { conexao++; });
 const contaAtual = () => window.DL_AUTH?.usuario?.uid || null;
 export const sessao = () => epoca;
 export const contaPronta = () => window.DL_AUTH?.pronta && !!contaAtual() && !bloqueada;
@@ -109,26 +111,46 @@ export async function carregarCiclo() {
   const estado = interpretar(s, snap);
   return estado.ciclo ? espelhar(s, estado) : estado;
 }
+function erroDeConflito() {
+  const erro = Error('O ciclo mudou em outro aparelho. Nada foi substituído. Feche e abra Memorizar para conferir antes de confirmar.');
+  erro.code = 'memorizar/conflito';
+  return erro;
+}
 export async function salvarCiclo(ciclo, anterior) {
+  const conexaoInicial = conexao;
   const s = await acesso();
   if (!anterior || anterior.uid !== s.uid || anterior.sessao !== s.epoca) throw Error('Reabra Memorizar para conferir o ciclo desta conta.');
   if (!navigator.onLine) throw Error('Sem conexão: o ciclo não foi salvo nem colocado em fila. Os itens e o prazo anteriores foram mantidos.');
   const valido = validarCiclo(ciclo), conteudo = JSON.stringify(valido);
   if (new TextEncoder().encode(conteudo).length > 200000) throw Error('O ciclo excede o limite de 200.000 bytes. O conjunto anterior foi mantido.');
   const ref = doc(db, 'memorizar', s.uid);
+  const erroDeConexao = () => Error('Conexão perdida. O ciclo não foi colocado em fila; reabra para conferir o estado da conta.');
+  const conferirConexao = () => {
+    if (!navigator.onLine || conexao !== conexaoInicial) throw erroDeConexao();
+  };
+  // Uma retentativa do SDK poderia gravar ao reconectar sem nova confirmacao.
   try { await runTransaction(db, async tx => {
-    const atual = await tx.get(ref);
+    conferirConexao();
+    let cancelarLeitura;
+    const interrompida = new Promise((_, reject) => {
+      cancelarLeitura = () => reject(erroDeConexao());
+      window.addEventListener('offline', cancelarLeitura, {once: true});
+    });
+    let atual;
+    try { atual = await Promise.race([tx.get(ref), interrompida]); }
+    finally { window.removeEventListener('offline', cancelarLeitura); }
     conferir(s);
+    conferirConexao();
     const atualConteudo = atual.exists() ? atual.data().conteudo : null;
     if (atualConteudo !== anterior.conteudo) {
-      throw Error('O ciclo mudou em outro aparelho. Nada foi substituído. Feche e abra Memorizar para conferir antes de confirmar.');
+      throw erroDeConflito();
     }
-    if (!navigator.onLine) throw Error('Conexão perdida. O ciclo não foi colocado em fila; reabra para conferir o estado da conta.');
     tx.set(ref, {uid: s.uid, versao: 1, conteudo,
       criadoEm: atual.exists() ? atual.data().criadoEm : serverTimestamp(), atualizadoEm: serverTimestamp()});
-  }); } catch (e) {
+  }, {maxAttempts: 1}); } catch (e) {
     conferir(s);
-    if (!e.code) throw e;
+    if (!e.code || e.code === 'memorizar/conflito') throw e;
+    if (['aborted', 'failed-precondition'].includes(e.code)) throw erroDeConflito();
     throw Error('Não foi possível confirmar o salvamento na conta. Nenhuma alteração foi colocada em fila. Reabra Memorizar para conferir o estado antes de tentar novamente. ' + e.message);
   }
   conferir(s);

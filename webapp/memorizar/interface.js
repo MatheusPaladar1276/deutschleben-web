@@ -1,5 +1,5 @@
 import '../cards/formato.js';
-import {identificar, criarCiclo, continuarCiclo, marcador} from './modelo.js';
+import {identificar, criarCiclo, continuarCiclo, marcador, diasDoPrazo} from './modelo.js';
 import {carregarCiclo as carregarCicloLocal, salvarCiclo as salvarCicloLocal} from './persistencia.js';
 
 // Contexto opcional de produção (definido por entrada.js). Vazio na prévia local.
@@ -24,6 +24,7 @@ painel.innerHTML = `
   <p id="mem-vinculo"></p>
   <div class="mem-contagem-linha"><p id="mem-tempo" role="status"></p>
     <button type="button" class="secundario" id="mem-alterar-prazo" hidden>Alterar prazo</button></div>
+  <p id="mem-aviso-prazo" role="alert" tabindex="-1" hidden></p>
   <progress id="mem-progresso" max="1" value="0" aria-label="Tempo do ciclo" hidden></progress>
   <div id="mem-fim" hidden><button type="button" class="botao" id="mem-continuar">Continuar estudando</button>
     <button type="button" class="secundario" id="mem-novo">Iniciar novo conjunto</button></div>
@@ -49,6 +50,7 @@ painel.innerHTML = `
 document.querySelector('#estudo-texto .grade').append(painel);
 
 let ciclo = null, candidato = null, modo = null, ocupado = false, pacote, estado = null, operacao = 0;
+let mensagemPrazo = '';
 const aviso = mensagem => { $('mem-status').textContent = mensagem; };
 function conferirSessao(sessao) {
   if (ctx.sessao && ctx.sessao() !== sessao) throw Error('A conta mudou. Abra Memorizar novamente.');
@@ -190,19 +192,81 @@ function render() {
   $('mem-iniciar').textContent = modo === 'continuar' ? 'Iniciar nova contagem' : ciclo ? 'Confirmar novo conjunto' : 'Iniciar ciclo';
   $('mem-tempo').textContent = modo ? (ciclo ? 'O ciclo anterior continua salvo até sua confirmação.' : 'Conjunto para conferência · ainda não salvo') : '';
   tempo();
+  atualizarControles();
+}
+function atualizarControles() {
+  for (const b of painel.querySelectorAll('button,input,select')) b.disabled = ocupado;
+  const offline = ctx.independente && !navigator.onLine;
+  const mensagem = $('mem-aviso-prazo');
+  mensagem.textContent = offline ? (ciclo
+    ? 'Para alterar o prazo, conecte-se à internet. Seu prazo foi mantido.'
+    : 'Para iniciar um ciclo, conecte-se à internet.') : mensagemPrazo;
+  mensagem.hidden = !mensagem.textContent;
+  if (offline) {
+    $('mem-quantidade').disabled = true;
+    $('mem-iniciar').disabled = true;
+  }
+}
+function restaurarCiclo() {
+  modo = null; candidato = null;
+  $('mem-quantidade').value = String(ciclo ? Math.min(10, diasDoPrazo(ciclo.quantidade, ciclo.unidade)) : 3);
+  render();
+}
+function recusarOffline() {
+  if (!ctx.independente || navigator.onLine) return false;
+  mensagemPrazo = '';
+  restaurarCiclo();
+  const mensagem = $('mem-aviso-prazo');
+  aviso(mensagem.textContent);
+  destacarAvisoPrazo();
+  return true;
+}
+function destacarAvisoPrazo() {
+  const mensagem = $('mem-aviso-prazo');
+  mensagem.scrollIntoView({block: 'center'});
+  mensagem.focus({preventScroll: true});
 }
 async function executar(fn) {
   if (ocupado) return;
   const rodada = ++operacao, sessao = ctx.sessao?.();
+  const atual = () => rodada === operacao && (!ctx.sessao || sessao === ctx.sessao());
+  let destacarErro = false;
   ocupado = true;
   for (const b of painel.querySelectorAll('button,input,select')) b.disabled = true;
   try { await fn(); } catch (e) {
-    if (rodada === operacao && (!ctx.sessao || sessao === ctx.sessao())) aviso(e.message);
+    if (atual()) {
+      let mensagem = e.message;
+      const conflito = ctx.independente && e.code === 'memorizar/conflito';
+      if (conflito) {
+        try {
+          const recente = await carregarCiclo();
+          if (!atual()) return;
+          if (recente.origem !== 'servidor') {
+            throw Error('O servidor não confirmou a leitura. A cópia local pode estar desatualizada. ' + recente.aviso);
+          }
+          estado = recente; ciclo = recente.ciclo;
+          mensagem = (ciclo
+            ? 'O ciclo mudou em outro aparelho. Sua alteração não foi salva. A versão mais recente foi carregada.'
+            : 'O ciclo foi removido em outro aparelho. Sua alteração não foi salva. Reabra Memorizar para conferir a conta.') +
+            (estado.aviso ? ' ' + estado.aviso : '');
+        } catch (erroLeitura) {
+          if (!atual()) return;
+          mensagem = 'O ciclo mudou em outro aparelho. Sua alteração não foi salva. Não foi possível carregar a versão mais recente. Reabra Memorizar com internet. ' + erroLeitura.message;
+        }
+      }
+      if (ctx.independente && (modo || conflito)) {
+        mensagemPrazo = mensagem;
+        restaurarCiclo();
+        destacarErro = true;
+      }
+      aviso(mensagem);
+    }
   }
   finally {
     if (rodada === operacao) {
       ocupado = false;
-      for (const b of painel.querySelectorAll('button,input,select')) b.disabled = false;
+      atualizarControles();
+      if (destacarErro) destacarAvisoPrazo();
     }
   }
 }
@@ -214,9 +278,10 @@ botao.onclick = () => executar(async () => {
   posicionar();
   painel.hidden = false; document.body.classList.add('memorizando'); botao.setAttribute('aria-expanded', 'true');
   ciclo = candidato = modo = estado = null;
+  mensagemPrazo = '';
   $('mem-prazo').hidden = true; $('mem-fim').hidden = true; $('mem-progresso').hidden = true;
   $('mem-releitura').hidden = true; $('mem-alterar-prazo').hidden = true;
-  for (const id of ['mem-itens', 'mem-contagem', 'mem-vinculo', 'mem-tempo', 'mem-original', 'mem-cobertura', 'mem-pendencias']) $(id).replaceChildren();
+  for (const id of ['mem-itens', 'mem-contagem', 'mem-vinculo', 'mem-tempo', 'mem-original', 'mem-cobertura', 'mem-pendencias', 'mem-aviso-prazo']) $(id).replaceChildren();
   if (ctx.independente) $('mem-offline').replaceChildren();
   $('memorizar-titulo').focus(); aviso(ctx.msgLendo || 'Lendo ciclo local…');
   const sessao = ctx.sessao?.(), lido = await carregarCiclo();
@@ -243,15 +308,26 @@ function fechar() {
   botao.setAttribute('aria-expanded', 'false'); botao.focus();
 }
 $('mem-fechar').onclick = fechar;
-$('mem-continuar').onclick = () => { modo = 'continuar'; candidato = null; render(); $('mem-quantidade').focus(); };
-$('mem-alterar-prazo').onclick = () => { modo = 'continuar'; candidato = null; render(); aviso('Escolha de 1 a 10 dias e confirme. O ciclo atual e seus itens ficam salvos até você confirmar.'); $('mem-quantidade').focus(); };
+function escolherPrazo() {
+  if (recusarOffline()) return;
+  mensagemPrazo = '';
+  modo = 'continuar'; candidato = null;
+  $('mem-quantidade').value = String(Math.min(10, diasDoPrazo(ciclo.quantidade, ciclo.unidade)));
+  render(); aviso('Escolha de 1 a 10 dias e confirme. O ciclo atual e seus itens ficam salvos até você confirmar.');
+  $('mem-quantidade').focus();
+}
+$('mem-continuar').onclick = escolherPrazo;
+$('mem-alterar-prazo').onclick = escolherPrazo;
 $('mem-novo').onclick = () => executar(async () => {
+  if (recusarOffline()) return;
+  mensagemPrazo = '';
   candidato = await preparar(); modo = 'novo'; render(); aviso('Confira o texto e os itens. O conjunto anterior só será substituído ao confirmar.');
   $('mem-quantidade').focus();
 });
-$('mem-cancelar').onclick = () => { modo = null; candidato = null; render(); aviso('O ciclo anterior foi mantido.'); };
+$('mem-cancelar').onclick = () => { modo = null; candidato = null; mensagemPrazo = ''; render(); aviso('O ciclo anterior foi mantido.'); };
 $('mem-prazo').onsubmit = e => {
   e.preventDefault();
+  if (recusarOffline()) return;
   executar(async () => {
     const quantidade = Number($('mem-quantidade').value), unidade = 'dias';
     if (modo === 'novo' && window.DL_TEXTOS.obterAtivo()?.id !== candidato?.aberto.id) throw Error('O texto mudou. Feche e abra Memorizar antes de iniciar.');
@@ -261,7 +337,7 @@ $('mem-prazo').onsubmit = e => {
     const salvo = await salvarCiclo(novo, ctx.independente ? estado : ciclo);
     conferirSessao(sessao);
     if (ctx.independente) estado = salvo;
-    ciclo = novo; modo = null; candidato = null; render();
+    ciclo = novo; modo = null; candidato = null; mensagemPrazo = ''; render();
     aviso((ctx.msgSalvo || 'Ciclo salvo neste navegador. Os itens ficam fixos; não há sincronização entre dispositivos.') +
       (estado?.aviso ? ' ' + estado.aviso : ''));
     conferirPacote();
@@ -278,16 +354,22 @@ window.addEventListener('dl-texto-alterado', () => {
 if (ctx.independente) {
   function limparConta() {
     operacao++; ocupado = false; ciclo = candidato = modo = estado = null;
+    mensagemPrazo = '';
     painel.hidden = true; document.body.classList.remove('memorizando');
     botao.setAttribute('aria-expanded', 'false'); botao.disabled = !ctx.contaPronta();
-    for (const id of ['mem-status', 'mem-itens', 'mem-contagem', 'mem-vinculo', 'mem-tempo', 'mem-original', 'mem-offline', 'mem-cobertura', 'mem-pendencias']) $(id).replaceChildren();
-    for (const b of painel.querySelectorAll('button,input,select')) b.disabled = false;
+    for (const id of ['mem-status', 'mem-itens', 'mem-contagem', 'mem-vinculo', 'mem-tempo', 'mem-original', 'mem-offline', 'mem-cobertura', 'mem-pendencias', 'mem-aviso-prazo']) $(id).replaceChildren();
+    atualizarControles();
     $('mem-quantidade').value = '3';
   }
   window.addEventListener('dl-memorizar-conta', limparConta);
   window.addEventListener('dl-memorizar-erro', e => { $('auth-erro').textContent = 'Memorizar: ' + e.detail; });
+  window.addEventListener('offline', () => {
+    if (!painel.hidden) recusarOffline();
+    atualizarControles();
+  });
   window.addEventListener('online', () => {
-    if (!painel.hidden && estado?.origem === 'local') aviso('Conexão restabelecida. Reabra Memorizar para conferir a conta. Nenhuma alteração foi enviada automaticamente.');
+    atualizarControles();
+    if (!painel.hidden) aviso('Conexão restabelecida. Reabra Memorizar para conferir a conta. Nenhuma alteração foi enviada automaticamente.');
   });
   limparConta();
 }

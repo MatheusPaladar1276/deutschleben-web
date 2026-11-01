@@ -1,5 +1,160 @@
 # Memorizar — integração DL Web + Firebase (guia de publicação e validação)
 
+## Aprovacao fisica do conflito - offline-05
+
+Relato do usuario em 31/10/2026, 18h01 (Brasilia): depois de salvar 7 dias
+no celular, a tentativa de confirmar 2 no computador foi recusada, carregou
+7 dias e exibiu o aviso correto. Fechar e reabrir manteve 7 dias e removeu
+o aviso anterior. Evidencia fisica relatada, nao observada diretamente.
+Conflito e reabertura aprovados; isso nao aprova os demais testes pendentes.
+A regressao automatizada inclui agora conferencia explicita do espelho e
+da remocao do aviso apos fechar/reabrir. O ZIP antigo continua obsoleto.
+O pacote final corrigido combina a base `6c35f3a` com as quatro correcoes de
+runtime: interface, CSS do aviso, adaptador de nuvem e SW. Configuracoes,
+UID, regras e demais dados oficiais da base permanecem intactos; nada da
+configuracao ou dos dados sinteticos da homologacao entra no ZIP.
+O manifesto do pacote identifica a arvore Git dos arquivos, os hashes,
+a validacao do ZIP extraido e as pendencias fisicas/operacionais.
+Uma arvore Git nao e um novo commit nem autorizacao para push/publicacao.
+Nenhuma publicacao em producao faz parte desta consolidacao.
+
+## Conflito entre aparelhos - offline-05 publicada somente na homologacao
+
+Relato fisico de 31/10/2026, 16h48 (Brasilia), na `offline-04`: Alterar prazo
+ficou aberto no computador; o celular confirmou 4 dias; o computador tentou
+confirmar 2 sem recarregar. O usuario viu 4 dias mantidos, sem aviso.
+Nao consultamos o banco remoto nem observamos diretamente esse teste.
+
+No emulador, a transacao recusou a base antiga e preservou integralmente o
+documento de 4 dias, mas o computador continuou com espelho de 3 dias.
+Outra lacuna: atualizarControles/render apagava o aviso online. Nao afirmamos
+que essa renderizacao foi a causa exata do aviso ausente no aparelho real.
+
+O adaptador identifica a recusa com `code: memorizar/conflito`, inclusive
+`aborted`/`failed-precondition`. A interface faz somente uma nova leitura,
+sem repetir a gravacao. Quando a origem e servidor, atualiza ciclo/espelho,
+descarta o rascunho e mostra junto ao prazo, com foco e rolagem:
+“O ciclo mudou em outro aparelho. Sua alteração não foi salva. A versão mais recente foi carregada.”
+O aviso permanece apos renderizacao/atualizacao dos controles; uma nova
+edicao explicita usa a base recente e limpa a mensagem anterior.
+
+Falha de leitura, copia local de fallback e ausencia remota nao sao
+apresentadas como recarga bem-sucedida. A interface explica a falha ou a
+remocao e nao escreve sobre o servidor. Resultados atrasados de outra sessao
+continuam descartados. Comparacao exata do conteudo anterior e uma unica
+tentativa de transacao preservadas; nenhuma fila ou confirmacao automatica.
+
+129 verificacoes passaram em cada configuracao, com SDK/regras reais no
+emulador: fluxo 4x2 com formulario aberto, documento remoto completo intacto,
+espelho atualizado, aviso visivel no computador e em 375x667, persistencia
+apos render, nova base, leitura invalida, remocao, offline e isolamento.
+Previa local sem nuvem: 86 verificacoes passaram.
+Pacote isolado regenerado: 61 arquivos, selo `offline-05`,
+SW `deutschleben-v36-memorizar-05-hml-04`; fonte principal:
+`deutschleben-v36-memorizar-05`. Publicada somente no Hosting isolado com
+`--only hosting`, `--project dl-memorizar-homologacao` e
+`firebase.homologacao.json` explicitos. Os 61 arquivos HTTPS conferem por
+SHA-256. Interface e adaptador novos confirmados ativos no navegador.
+O selo novo apareceu enquanto os modulos antigos ainda estavam carregados;
+aguardar a ativacao do SW e recarregar novamente, sem limpar dados locais.
+
+Uma tentativa anterior falhou na checagem de texto acentuado passada pelo
+pipe PowerShell; o finally encerrou a CLI antes de publicar. A checagem foi
+corrigida e as fases separadas: testes/preflight completo antes do login,
+conferencia do pacote congelado antes de entrar na fase autenticada, e
+finally reservado a deploy/HTTPS/logout. Preflight e publicacao executados
+por arquivo Node, sem depender da codificacao do pipe.
+Testes reexecutados: 129 verificacoes em cada configuracao e 86 na previa.
+Logout final conferido em novo processo: zero contas. Nenhuma alteracao de
+banco remoto, regras, producao ou faturamento; sessoes de navegador preservadas.
+ZIP oficial antigo continua bloqueado; reteste fisico da correcao pendente.
+
+## Aviso no celular - offline-04 publicada somente na homologacao
+
+Reteste fisico relatado pelo usuario na `offline-03`: tentativa de mudar de
+6 para 1 dia offline, confirmacao, reabertura offline com 6 dias e reconexao
+com os mesmos 6 dias. Nenhum aviso foi visto. Preservacao aprovada nesse
+teste; visibilidade do aviso reprovada. Nao observamos o aparelho diretamente.
+
+A reproducao automatizada agora usa viewport de celular real (375x667), antes
+ausente do perfil chamado celular. Reabrir offline desabilitava a confirmacao
+sem explicar o bloqueio junto aos controles; botao desabilitado nao emite
+clique. Isso reproduz uma lacuna da interface, nao prova o caminho exato do
+aparelho do usuario.
+
+O aviso destacado fica fora do formulario que se oculta, junto ao prazo:
+“Para alterar o prazo, conecte-se à internet. Seu prazo foi mantido.”
+Ele aparece enquanto offline, inclusive ao reabrir; tocar em Alterar prazo
+leva o aviso ao centro da tela e lhe da foco. Ao reconectar, o aviso offline
+e removido, mantendo a orientacao de reabrir para conferir a conta. Falhas de
+salvamento com navegador ainda dizendo online tambem mostram seu erro junto
+ao prazo, sem transformar um resultado remoto incerto em promessa de reversao.
+
+109 verificacoes passaram em cada configuracao, incluindo toque emulado,
+texto exato, retangulo inteiro dentro de 375x667 e ausencia de sobreposicao,
+reabertura offline, espelho/servidor intactos e reconexao sem fila.
+Previa local sem nuvem: 86 verificacoes passaram. Somente emulador `demo-*`.
+SW preparado: `deutschleben-v36-memorizar-04`; pacote isolado:
+`deutschleben-v36-memorizar-04-hml-03`, selo `offline-04`, 61 arquivos.
+Apos login temporario autorizado pelo operador, publicado somente Hosting
+isolado com projeto/configuracao explicitos. Os 61 arquivos HTTPS conferem
+por SHA-256 com o pacote testado. Navegador confirmou cache ativo e aviso
+montado no DOM. Na transicao, o selo novo apareceu antes do JavaScript novo;
+aguardar a ativacao do SW e recarregar novamente, sem limpar dados locais.
+O selo sozinho nao garante que os modulos antigos ja foram substituidos.
+Logout executado em seguida e conferido em novo processo: zero contas.
+Nada de regras, dados, faturamento ou publicacao oficial.
+O ZIP antigo continua bloqueado; falta reteste fisico do aviso na nova versao.
+
+## Correcao offline - 31/10/2026 (somente homologacao publicada)
+
+A revisao `6c35f3a` e o ZIP final preparado anteriormente estao bloqueados para
+publicacao. O usuario relatou alteracoes de contagem offline na homologacao.
+A reproducao no emulador distinguiu dois problemas:
+
+- Com `navigator.onLine === false`, apenas o rascunho numerico permanecia no
+  formulario; o espelho IndexedDB e o servidor nao eram alterados.
+- Com uma falha de transporte enquanto `navigator.onLine` continuava verdadeiro,
+  as retentativas padrao de `runTransaction` podiam concluir depois do retorno da
+  conexao. Foi reproduzida uma gravacao tardia de 2 para 4 dias no servidor.
+  Nao se afirma que esse segundo caso ocorreu no celular do usuario.
+
+Correcao no codigo: offline recusa abertura/confirmacao de edicao e restaura
+o prazo do ciclo persistido; queda de rede descarta o rascunho, mostra aviso e
+cancela a espera de leitura da tentativa. Uma geracao de conexao invalida a
+tentativa mesmo apos reconectar. Transacoes usam uma unica tentativa do SDK;
+conflitos continuam recusados, sem repeticao automatica. Uma nova tentativa
+exige uma nova confirmacao do usuario.
+
+O SW raiz passa a `deutschleben-v36-memorizar-03` e recarrega os recursos durante
+a instalacao, evitando reaproveitar JavaScript antigo do cache HTTP.
+A previa local sem nuvem preserva seu comportamento de armazenamento local.
+
+Validacao: 103 verificacoes de SDK/interface aprovadas em cada configuracao
+(codigo principal e pacote isolado), incluindo espelho completo, tentativas
+repetidas, reinicio offline, reconexao com navegador dizendo online, queda
+durante leitura pausada, conflitos e logout. A previa passou em 86 verificacoes.
+Somente projetos `demo-*`; nenhum teste no banco oficial.
+
+Uma requisicao ja recebida pelo servidor antes de uma queda pode ter resultado
+incerto se a resposta se perder: reabrir para conferir o estado remoto. Nao
+afirmar que um erro de transporte desfaz uma gravacao ja aceita.
+
+Apos novo login do operador, foi publicado somente Hosting em
+`dl-memorizar-homologacao`, sem regras nem dados novos. Os 61 arquivos HTTPS
+foram comparados ao pacote corrigido. O navegador confirmou o cache
+`deutschleben-v36-memorizar-03-hml-02`, uma unica tentativa e cancelamento ativo,
+sem requisicoes observadas ao oficial. Logout executado novamente: zero contas.
+Console no Edge e sessoes do DL preservados.
+
+Para repetir no celular: com conexao, recarregar e aguardar a atualizacao do SW;
+recarregar novamente e conferir o selo `offline-03`. Nao limpar dados locais.
+Abrir o ciclo online, desligar Wi-Fi/dados, tentar alterar varias vezes, fechar
+e reabrir offline; devem permanecer o prazo e os itens anteriores, com aviso.
+Reconectar e conferir online sem confirmar uma nova alteracao: nada deve
+ser enviado automaticamente. Refazer esse teste fisico antes da liberacao.
+Nao publicar no oficial nem reutilizar o pacote antigo.
+
 Branch: `integrar-memorizar-firebase`. **Nada foi publicado.** Este guia descreve
 o que mudou, como publicar com segurança e o que ainda precisa ser homologado
 por Ricardo em dois aparelhos físicos.

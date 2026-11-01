@@ -7,6 +7,8 @@
 #memorizar .mem-cabecalho button { flex: 0 0 auto; white-space: nowrap; }
 .mem-selo { font-size: .75em; letter-spacing: .06em; margin: 0 0 8px; color: #35523f; }
 #mem-status { overflow-wrap: anywhere; }
+#mem-aviso-prazo { margin: 8px 0 12px; padding: 12px; border-left: 4px solid #8a6418; background: #fff3cd; color: #332701; font-weight: bold; overflow-wrap: anywhere; }
+#mem-aviso-prazo[hidden] { display: none; }
 #mem-tempo { font-weight: bold; color: #35523f; }
 .mem-contagem-linha { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .mem-contagem-linha #mem-tempo { margin: 0; }

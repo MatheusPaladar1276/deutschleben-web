@@ -2,7 +2,7 @@ importScripts('./referencia-sw.js');
 // Service worker do Deutschleben — instalação (PWA) e cache.
 // Estratégia: rede-primeiro para navegação/JSON (conteúdo sempre atual),
 // cache-primeiro para estáticos (ícones). Suba a versão ao publicar mudanças.
-const CACHE = "deutschleben-v36-memorizar-02";
+const CACHE = "deutschleben-v36-memorizar-05";
 const ACERVO_CONSTRUCOES = "/data/DL_Preposicoes_Base_Revisada.json";
 const ESTATICOS = [
   "./referencia.js?v=rg-01-10-v10", "./referencia-dados.js?v=rg-01-10-v10", "./referencia.css?v=rg-01-10-v10", "./referencia-sw.js",
@@ -41,7 +41,7 @@ const ESTATICOS = [
 self.addEventListener("install", (evento) => {
   evento.waitUntil(
     caches.open(CACHE).then(async (c) => {
-      await c.addAll(ESTATICOS);
+      await c.addAll(ESTATICOS.map(recurso => new Request(recurso, {cache: 'reload'})));
       // Preserva somente um acervo público já consultado; não o baixa na instalação.
       const anterior = await caches.match(ACERVO_CONSTRUCOES);
       if (anterior?.ok) await c.put(ACERVO_CONSTRUCOES, anterior);
