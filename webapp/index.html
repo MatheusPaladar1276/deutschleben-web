@@ -23,7 +23,7 @@
 <meta name="apple-mobile-web-app-title" content="Deutschleben">
 
 <link rel="stylesheet" href="caixas-leitura.css?v=blocos-controles-17">
-<script type="module" src="firebase-dados.js?v=memorizar-06"></script>
+<script type="module" src="firebase-dados.js?v=memorizar-07"></script>
 
 <style>
 
@@ -1881,8 +1881,8 @@ textarea {
         </div>
     </div>
 </dialog>
-<script src="textos.js?v=rg-01-10-v10" defer></script>
-<script type="module" src="memorizar/entrada.js?v=memorizar-06"></script>
+<script src="textos.js?v=memorizar-07" defer></script>
+<script type="module" src="memorizar/entrada.js?v=memorizar-07"></script>
 
 <div class="estrada-overlay" id="estrada-overlay" role="dialog" aria-modal="true" aria-label="Apostila">
     <div class="estrada-painel">
@@ -2227,9 +2227,10 @@ textarea {
     function atualizar() {
         const auth = window.DL_AUTH;
         const usuario = auth ? auth.usuario : null;
-        estado.textContent = usuario ? "Conectado" : "Não conectado";
+        const preparando = !auth?.pronta;
+        estado.textContent = auth?.erro ? "Autenticação indisponível" : preparando ? "Restaurando sessão…" : usuario ? "Conectado" : "Não conectado";
         estado.classList.toggle("conectado", !!usuario);
-        estado.title = usuario ? "Autenticado com Google" : "Sem autenticação";
+        estado.title = auth?.erro || (preparando ? "Aguardando a sessão salva neste navegador" : usuario ? "Autenticado com Google" : "Sem autenticação");
         acao.textContent = usuario ? "Sair" : "Entrar com Google";
         acao.disabled = ocupada || !auth || !auth.pronta;
     }

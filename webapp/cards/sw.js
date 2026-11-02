@@ -2,14 +2,14 @@ importScripts('../referencia-sw.js');
 // Escopo /cards/. O shell usa IndexedDB: o SW raiz pode limpar CacheStorage
 // sem remover os recursos desta página. Nenhum dado pessoal passa por este SW.
 const DB='dl-cards-shell-v1';
-const VERSAO='rg-previa-01-10-v10-memorizar-06';
+const VERSAO='rg-previa-01-10-v10-memorizar-07';
 const ARQUIVOS=[
   '../referencia.js','../referencia.js?v=rg-01-10-v10',
   '../referencia-dados.js','../referencia-dados.js?v=rg-01-10-v10',
   '../referencia.css','../referencia.css?v=rg-01-10-v10','../referencia-sw.js',
   './','index.html','cards.css','cards.css?v=cards-construcoes-21',
-  'cards.js','cards.js?v=memorizar-06','dados.js','dados.js?v=memorizar-06',
-  'offline.js','offline.js?v=memorizar-06','formato.js','formato.js?v=cards-construcoes-21',
+  'cards.js','cards.js?v=memorizar-07','dados.js','dados.js?v=memorizar-07',
+  'sessao.js?v=memorizar-07','offline.js','offline.js?v=memorizar-07','formato.js','formato.js?v=cards-construcoes-21',
   '../blocos.js','../destaques-blocos.js','../destaques-blocos.js?v=blocos-16',
   '../caixas-leitura.css','../caixas-leitura.css?v=blocos-controles-17',
   'texto-01.json','verbos-consulta.json','../data/DL_Preposicoes_Base_Revisada.json',

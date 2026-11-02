@@ -1,5 +1,98 @@
 # Memorizar — integração DL Web + Firebase (guia de publicação e validação)
 
+## Recuperacao de sessao offline - preparacao local memorizar-07
+
+Base: `c0f2e3d` (memorizar-06). Relato fisico: depois de salvar 3 dias e
+reabrir online sem login, a reabertura offline pelo mesmo icone deixou
+Memorizar inativo e Escolher texto pediu login. Isso nao comprova perda
+de sessao, ciclo ou dados locais.
+
+No SDK incluido, `getAuth()` configura o resolver de popup/redirect.
+Em UA mobile/Safari/iOS, `_initializeWithPersistence` aguarda a inicializacao
+desse resolver (GAPI/iframe externo) antes de restaurar o usuario persistido.
+Com esse transporte pendente, reproduzimos os dois sintomas na 06, com
+Auth/ciclo/Card intactos. Com falha de rede imediata a 06 recupera a sessao:
+o transporte pendente e uma condicao reproduzida, nao uma comprovacao do
+estado interno do celular. `connectAuthEmulator` dos testes antigos nao
+exercitava esse caminho externo; viewport pequeno tambem nao altera o UA.
+
+Principal e Cards agora compartilham `cards/sessao.js`, que usa
+`initializeAuth` com as mesmas persistencias e ordem do SDK: IndexedDB,
+localStorage, sessionStorage. O resolver e fornecido explicitamente somente
+em `signInWithPopup`, ao pedir login. Nenhum UID ou token e copiado pelo app,
+nenhum banco e renomeado, nenhum timeout inventa um usuario. O proprio SDK
+continua restaurando e validando a sessao; uma consulta REST pendente ainda
+significa restauracao pendente, nao conta desconectada.
+
+O cabecalho e Escolher texto distinguem restauracao de ausencia de sessao.
+No complemento da revisao, a escolha offline passa a listar e abrir os
+originais ja guardados nos Cards e no espelho do ciclo da conta restaurada.
+As leituras sao somente `readonly`, com UID conferido antes/depois dos
+acessos; a copia do ciclo passa pelo validador existente, sem substituicao.
+Textos conhecidos sem original local ficam marcados como indisponiveis;
+IDs ausentes geram aviso explicito, sem apagar o texto atualmente aberto.
+Nenhum catalogo remoto e inventado na reabertura offline. A versao interna
+dos Cards tambem passa a memorizar-07, alinhada ao shell dos dois SW.
+
+Grafo alterado e Textos recebem `?v=memorizar-07`; os dois SW incluem a nova
+dependencia. Cache raiz: `deutschleben-v38-memorizar-07`; shell Cards:
+`rg-previa-01-10-v10-memorizar-07`. A verificacao do pacote usa essas mesmas
+URLs. Regras, IAM, transacoes, validacao do ciclo e isolamento entre contas
+nao foram alterados.
+
+Teste focado, sem login real, Auth emulator ou backend de producao:
+
+```powershell
+node tests\sessao-offline-memorizar.cjs --publicado
+node tests\sessao-offline-memorizar.cjs --publicado --rede-pendente
+node tests\sessao-offline-memorizar.cjs --atualizar-06 --rede-pendente
+node tests\sessao-offline-memorizar.cjs --rede-pendente --expirado
+node tests\sessao-offline-memorizar.cjs --ios --local-storage --expirado --rede-pendente
+node tests\atualizacao-memorizar.cjs --sw-publicado
+```
+
+O novo teste usa SDK e persistencia reais com provider Google, REST
+interceptado por CDP e respostas sinteticas. Nao substitui `DL_AUTH` nem
+modifica o SDK, e nao faz login Google real. Fecha todo o processo Chrome
+e reabre o mesmo perfil com rede desligada antes de navegar. Confere a
+restauracao pendente, ausencia de GAPI no bootstrap corrigido, hash do
+usuario persistido, ciclo de 3 dias, itens, Card e sentinela local, inclusive
+na entrada Cards. `--expirado` envelhece somente o token da fixture.
+`--atualizar-06` parte dos blobs publicados e atualiza os dois SW sem
+limpar dados. Somente perfis temporarios sinteticos do teste sao removidos.
+`--ios` e UA iOS em Chromium, nao Safari/WebKit nem um aparelho fisico.
+
+Resultado final: cinco cenarios novos executados sequencialmente, 48
+verificacoes PASS (9 de controle/reproducao da 06 e 39 da correcao);
+20 PASS na regressao de atualizacao de SW e 86 PASS de modelo/interface.
+Sintaxe dos 11 arquivos JS e `git diff --check` aprovados. O harness
+precarrega blobs Git em lote para nao bloquear CDP e aguarda o DOM, nao
+o evento load que o proprio transporte GAPI pendente pode atrasar.
+Reabertura offline preservou os hashes da sessao e os registros locais.
+Uma rodada da regressao antiga excedeu a espera de ativacao do shell Cards;
+a repeticao final passou os 20 checks. Foi acrescentado diagnostico da
+ultima versao/aviso em caso de nova falha, sem aumentar o timeout. Essa
+intermitencia nao e evidencia de estabilidade no aparelho fisico.
+Nao foi testado popup Google real nem Safari/WebKit ou celular fisico.
+
+Validacao exclusiva do complemento (sem repetir as suites acima):
+
+```powershell
+node tests\sessao-offline-memorizar.cjs --textos-locais
+```
+
+11 PASS: verificador real dos Cards aceita shell 07, escolha e seletor
+offline, originais dos Cards e do ciclo, indicacao de ausencia, recusa de
+UID diferente e de ID de outro UID, abertura do ciclo existente de 3 dias
+e comparacao integral de Auth/ciclo/registros antes e depois. Usa somente
+perfil sintetico com registros preparados, sem iniciar/salvar outro ciclo
+pelo app e sem apagar registros. Nenhum armazenamento real e acessado.
+
+A revisao local nao autoriza push/deploy. A confirmacao fisica continua
+pendente: mesma conta, ciclo oficial de 3 dias, mesmo icone; fechar o app,
+desligar Wi-Fi e dados moveis antes de reabrir, conferir itens/prazo e
+reconectar sem novo login, sem limpar armazenamento.
+
 ## Atualizacao de instalacao antiga - correcao local memorizar-06
 
 `d886d76` exporta `isolarMemorizar` e `operarMemorizar`, mas conserva a URL

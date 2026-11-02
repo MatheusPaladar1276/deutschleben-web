@@ -147,14 +147,17 @@ async function snapshot() {
 }
 async function shell(versao) {
   const end = Date.now() + 45000;
+  let ultimo;
   while (Date.now() < end) {
     const result = await evaluate(`new Promise((resolve,reject)=>{const c=new MessageChannel(),timer=setTimeout(()=>reject(Error('Timeout shell')),15000);
       c.port1.onmessage=e=>{clearTimeout(timer);c.port1.close();resolve(e.data)};
       navigator.serviceWorker.controller.postMessage('verificar-shell',[c.port2])})`);
+    ultimo = result;
     if (!versao || result.versao === versao) return result;
     await sleep(150);
   }
-  throw Error('Shell nao ativou a versao esperada: ' + versao);
+  throw Error('Shell nao ativou a versao esperada: ' + versao + '; ultimo=' + JSON.stringify(ultimo) +
+    '; aviso=' + await evaluate(`document.getElementById('recursos-status')?.textContent`));
 }
 async function main() {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
@@ -212,14 +215,14 @@ async function main() {
   check(JSON.stringify(await snapshot()) === JSON.stringify(before), 'primeira abertura corrigida preserva sessao e dados exatos');
   holdWorkers = false;
   await evaluate(`navigator.serviceWorker.getRegistration('/').then(r=>r.update())`);
-  await until(`caches.keys().then(k=>k.includes('deutschleben-v37-memorizar-06')
+  await until(`caches.keys().then(k=>k.includes('deutschleben-v38-memorizar-07')
     &&!k.includes('deutschleben-v34-rg-01-10-v10')&&!k.includes('deutschleben-v36-memorizar-05'))`, 'SW raiz corrigido');
   check(JSON.stringify(await snapshot()) === JSON.stringify(before), 'ativacao do SW novo preserva IndexedDB e Auth');
   check((await snapshot()).publicDigest === before.publicDigest, 'acervo publico previamente armazenado preservado');
   await navigate(base + '/cards/');
   await until(`navigator.serviceWorker.controller?.scriptURL.endsWith('/cards/sw.js')`, 'Cards corrigido');
-  const status = await shell('rg-previa-01-10-v10-memorizar-06');
-  check(status.pronto && status.versao === 'rg-previa-01-10-v10-memorizar-06', 'shell Cards versionado completo');
+  const status = await shell('rg-previa-01-10-v10-memorizar-07');
+  check(status.pronto && status.versao === 'rg-previa-01-10-v10-memorizar-07', 'shell Cards versionado completo');
   await navigate(base + '/');
   await until(`window.DL_AUTH?.usuario?.uid==='${UID}' && document.getElementById('nav-memorizar')`, 'root antes de reiniciar');
   check(JSON.stringify(await snapshot()) === JSON.stringify(before), 'dois SW atualizados preservam dados e sessao');
@@ -235,7 +238,7 @@ async function main() {
   await until(`document.getElementById('auth')?.textContent==='Sair'`, 'Cards offline com sessao');
   check(await evaluate(`document.getElementById('area').hidden===false`), 'Cards offline abre com sessao preservada');
   check((await shell()).pronto, 'SW Cards encontra todos os recursos offline versionados');
-  check(await evaluate(`import('./offline.js?v=memorizar-06').then(m=>typeof m.isolarMemorizar==='function'&&typeof m.operarMemorizar==='function')`),
+  check(await evaluate(`import('./offline.js?v=memorizar-07').then(m=>typeof m.isolarMemorizar==='function'&&typeof m.operarMemorizar==='function')`),
     'exports novos corretos offline no escopo Cards');
   check(await evaluate(`fetch('./offline.js?v=versao-nao-instalada').then(()=>false,()=>true)`),
     'SW Cards nao devolve modulo de outra versao ao ignorar query');

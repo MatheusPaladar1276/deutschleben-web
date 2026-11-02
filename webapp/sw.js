@@ -2,11 +2,11 @@ importScripts('./referencia-sw.js');
 // Service worker do Deutschleben — instalação (PWA) e cache.
 // Estratégia: rede-primeiro para navegação/JSON (conteúdo sempre atual),
 // cache-primeiro para estáticos (ícones). Suba a versão ao publicar mudanças.
-const CACHE = "deutschleben-v37-memorizar-06";
+const CACHE = "deutschleben-v38-memorizar-07";
 const ACERVO_CONSTRUCOES = "/data/DL_Preposicoes_Base_Revisada.json";
 const ESTATICOS = [
   "./referencia.js?v=rg-01-10-v10", "./referencia-dados.js?v=rg-01-10-v10", "./referencia.css?v=rg-01-10-v10", "./referencia-sw.js",
-  "./textos.js?v=rg-01-10-v10",
+  "./textos.js?v=memorizar-07",
   "./index.html",
   "./acessibilidade.css?v=2",
   "./pacote-final.css?v=4",
@@ -14,16 +14,17 @@ const ESTATICOS = [
   "./blocos.js",
   "./destaques-blocos.js?v=blocos-16",
   "./caixas-leitura.css?v=blocos-controles-17",
-  "./firebase-dados.js?v=memorizar-06",
-  "./memorizar/entrada.js?v=memorizar-06",
+  "./firebase-dados.js?v=memorizar-07",
+  "./cards/sessao.js?v=memorizar-07",
+  "./memorizar/entrada.js?v=memorizar-07",
   "./memorizar/interface.js",
   "./memorizar/modelo.js",
-  "./memorizar/nuvem.js?v=memorizar-06",
+  "./memorizar/nuvem.js?v=memorizar-07",
   "./memorizar/persistencia.js",
   "./memorizar/memorizar.css",
   "./cards/formato.js?v=cards-construcoes-21",
   "./cards/formato.js",
-  "./cards/offline.js?v=memorizar-06",
+  "./cards/offline.js?v=memorizar-07",
   "./cards/texto-01.json",
   "./cards/vendor/firebase-app.js",
   "./cards/vendor/firebase-auth.js",

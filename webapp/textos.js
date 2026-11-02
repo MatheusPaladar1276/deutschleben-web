@@ -168,8 +168,9 @@
     });
     function renderEscolha() {
         const lista = $("escolha-lista"); lista.replaceChildren();
-        $("escolha-adicionar").disabled = uid !== UID || !!exclusao?.emCurso;
+        $("escolha-adicionar").disabled = uid !== UID || !navigator.onLine || !!exclusao?.emCurso;
         $("escolha-repetir").hidden = !listaErro;
+        if (!window.DL_AUTH?.pronta) { escolhaStatus.textContent = window.DL_AUTH?.erro || "Restaurando a sessão salva neste navegador…"; return; }
         if (uid !== UID) { escolhaStatus.textContent = "Entre com a conta Google autorizada para escolher textos."; return; }
         if (listaLendo) { escolhaStatus.textContent = "Carregando textos…"; return; }
         if (listaErro) { escolhaStatus.textContent = "Não foi possível atualizar a lista. Tente novamente."; }
@@ -178,9 +179,16 @@
             .filter(({ texto }) => (texto.titulo || "Sem título").toLocaleLowerCase("pt").includes(termo));
         if (!listaErro) escolhaStatus.textContent = textosListados.length
             ? (visiveis.length ? "" : "Nenhum texto corresponde à busca.") : "Nenhum texto salvo. Você pode adicionar o primeiro.";
+        if (!listaErro && !navigator.onLine) {
+            escolhaStatus.textContent = textosListados.some(t => t.disponivelOffline)
+                ? "Sem conexão: exibindo as cópias locais desta conta. Textos sem cópia precisam de internet."
+                : "Nenhum texto disponível offline nesta conta. Conecte-se para obter os originais.";
+            if (textosListados.length && !visiveis.length) escolhaStatus.textContent += " Nenhum texto corresponde à busca.";
+        }
         for (const { texto, numero } of visiveis) {
             const linha = document.createElement("div"); linha.className = "escolha-linha"; linha.dataset.textoId = texto.id;
             const nome = document.createElement("span"); nome.className = "escolha-nome"; nome.textContent = `${numero} - ${texto.titulo || "Sem título"}`;
+            if (!navigator.onLine && !texto.disponivelOffline) nome.textContent += " — indisponível offline";
             const acoes = document.createElement("div"); acoes.className = "escolha-acoes";
             for (const [rotulo, classe, acao] of [["Abrir", "escolha-abrir", async ev => {
                 const botao = ev.currentTarget, conta = uid, epoca = sessao, rodada = geracao + 1;
@@ -188,7 +196,7 @@
                 const aberto = await abrirTexto(texto.id);
                 if (epoca !== sessao || usuario() !== conta || rodada !== geracao) return;
                 if (!aberto && escolha.open) {
-                    escolhaStatus.textContent = "Não foi possível abrir o texto. Tente novamente.";
+                    escolhaStatus.textContent = status.textContent;
                     botao.disabled = false;
                 } else if (aberto) {
                     titulo.setAttribute("tabindex", "-1"); titulo.focus();
@@ -197,7 +205,8 @@
                 ["Excluir", "escolha-excluir", ev => confirmarExclusao(texto, ev.currentTarget)]]) {
                 const b = document.createElement("button"); b.type = "button"; b.className = classe; b.textContent = rotulo;
                 b.setAttribute("aria-label", rotulo + ": " + nome.textContent);
-                b.disabled = !!exclusao?.emCurso; b.addEventListener("click", acao); acoes.append(b);
+                b.disabled = !!exclusao?.emCurso || (!navigator.onLine && (classe === "escolha-excluir" || !texto.disponivelOffline));
+                b.addEventListener("click", acao); acoes.append(b);
             }
             linha.append(nome, acoes); lista.append(linha);
         }
@@ -309,8 +318,15 @@
     repetir.addEventListener("click", () => { if (tentar) tentar(); });
     function opcoes(textos = []) {
         textosListados = textos;
-        seletor.replaceChildren(new Option("Escolher texto", ""), new Option("Adicionar texto", "adicionar"));
-        for (const texto of textos) seletor.add(new Option(texto.titulo || "Sem título", texto.id));
+        const adicionar = new Option("Adicionar texto", "adicionar");
+        adicionar.disabled = !navigator.onLine;
+        seletor.replaceChildren(new Option("Escolher texto", ""), adicionar);
+        for (const texto of textos) {
+            const opcao = new Option(texto.titulo || "Sem título", texto.id);
+            opcao.disabled = !navigator.onLine && !texto.disponivelOffline;
+            if (opcao.disabled) opcao.text += " — indisponível offline";
+            seletor.add(opcao);
+        }
         if (ativo && !Array.from(seletor.options).some(o => o.value === ativo.id)) {
             seletor.add(new Option(ativo.titulo, ativo.id));
         }
@@ -324,14 +340,21 @@
         seletor.disabled = true;
         mensagem("Carregando textos…");
         try {
-            const textos = await window.DL_DADOS.listarTextos();
+            const textos = await window.DL_DADOS.listarTextos(conta);
             if (rodada !== listaGeracao || epoca !== sessao || usuario() !== conta) return;
+            if (!navigator.onLine) {
+                for (const conhecido of textosListados) {
+                    if (!textos.some(t => t.id === conhecido.id)) textos.push({...conhecido, disponivelOffline: false});
+                }
+            }
             opcoes(textos);
-            mensagem(textos.length ? "" : "Nenhum texto salvo. Você pode adicionar o primeiro.");
-        } catch (_) {
+            mensagem(!navigator.onLine ? "Exibindo somente textos disponíveis na cópia local desta conta." :
+                textos.length ? "" : "Nenhum texto salvo. Você pode adicionar o primeiro.");
+        } catch (e) {
             if (rodada !== listaGeracao || epoca !== sessao || usuario() !== conta) return;
             listaErro = true;
-            mensagem("Não foi possível carregar os textos. Confira a conexão e o acesso da conta.", listar);
+            mensagem(!navigator.onLine ? "Não foi possível ler os textos locais. " + e.message :
+                "Não foi possível carregar os textos. Confira a conexão e o acesso da conta.", listar);
         } finally {
             if (rodada === listaGeracao && epoca === sessao) {
                 seletor.disabled = false; listaLendo = false; renderEscolha();
@@ -411,7 +434,7 @@
         const conta = uid, rodada = ++geracao, epoca = sessao;
         mensagem("Abrindo texto…");
         try {
-            const texto = await window.DL_DADOS.carregarTexto(id);
+            const texto = await window.DL_DADOS.carregarTexto(id, conta);
             if (rodada !== geracao || epoca !== sessao || usuario() !== conta) return false;
             ativo = Object.freeze({ ...texto, uid: conta });
             compreensaoAlvo = null; fecharDialogo(compreensaoDialogo, false);
@@ -433,10 +456,11 @@
             mostrarResumo(ativo);
             carregarResumo(ativo);
             return true;
-        } catch (_) {
+        } catch (e) {
             if (rodada !== geracao || epoca !== sessao || usuario() !== conta) return false;
             seletor.value = ativo?.id || "";
-            mensagem("Não foi possível abrir o texto. Tente novamente.", () => abrirTexto(id));
+            mensagem(e.code === 'textos/indisponivel-offline' ? e.message :
+                "Não foi possível abrir o texto. Tente novamente.", () => abrirTexto(id));
             return false;
         }
     }
@@ -668,7 +692,12 @@
             seletor.disabled = true;
             mensagem(uid ? "Esta conta não tem acesso aos textos." : "Entre com Google para escolher ou adicionar textos.");
         }
+        renderEscolha();
     }
     window.addEventListener("dl-auth-alterado", autenticar);
+    for (const evento of ["offline", "online"]) window.addEventListener(evento, () => {
+        if (window.DL_AUTH?.pronta && uid === UID) listar();
+        else renderEscolha();
+    });
     autenticar();
 })();

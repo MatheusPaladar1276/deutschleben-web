@@ -2,11 +2,11 @@ import { criarAcesso as acessoGramatical } from '../referencia.js?v=rg-01-10-v10
 import { preencherFraseBloco } from '../destaques-blocos.js?v=blocos-16';
 import { prepararCard, carregarModelo } from '../blocos.js';
 import './formato.js?v=cards-construcoes-21';
-import * as dados from './dados.js?v=memorizar-06';
-import { listarLocal, guardarLocal, removerLocal } from './offline.js?v=memorizar-06';
+import * as dados from './dados.js?v=memorizar-07';
+import { listarLocal, guardarLocal, removerLocal } from './offline.js?v=memorizar-07';
 
 const $=id=>document.getElementById(id), F=window.DL_CARD_FORMATO;
-const VERSAO='rg-previa-01-10-v10-memorizar-06';
+const VERSAO='rg-previa-01-10-v10-memorizar-07';
 let conta=null, geracao=0, atual=null, candidato=null, pt=true, previaPt=true, ocupado=false;
 let edicao=0, origemEditor=null, revisaoId=null, inicialEditor='', copiaDisponivel=false;
 const visoes={card:{secao:null},preview:{secao:null}};

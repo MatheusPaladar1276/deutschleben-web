@@ -1,8 +1,9 @@
 import { prepararCard } from '../blocos.js';
 import { initializeApp } from './vendor/firebase-app.js';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from './vendor/firebase-auth.js';
+import { GoogleAuthProvider, browserPopupRedirectResolver, signInWithPopup, signOut, onAuthStateChanged } from './vendor/firebase-auth.js';
+import { getAuth } from './sessao.js?v=memorizar-07';
 import { getFirestore, collection, doc, getDocsFromServer, getDocFromServer, runTransaction, serverTimestamp, deleteDoc } from './vendor/firebase-firestore.js';
-import { limparLocal, isolarLocal } from './offline.js?v=memorizar-06';
+import { limparLocal, isolarLocal } from './offline.js?v=memorizar-07';
 const app=initializeApp({apiKey:'AIzaSyDCueo_SJ8gAqU9VT6cMdyxyDhXGSP1ma4',authDomain:'ricardo-d6119.firebaseapp.com',projectId:'ricardo-d6119',storageBucket:'ricardo-d6119.firebasestorage.app',messagingSenderId:'436880673471',appId:'1:436880673471:web:f4c3f6178fa8aefc75140a'});
 const auth=getAuth(app), db=getFirestore(app);
 export const uid=()=>auth.currentUser?.uid || null;
@@ -16,7 +17,7 @@ export function observar(fn) { let anterior; return onAuthStateChanged(auth,asyn
   anterior=atual; if(uid()===atual) fn(atual,true);
 }); }
 function avisarBlocos(){if(typeof BroadcastChannel==='function'){const c=new BroadcastChannel('dl-cards-contas');c.postMessage({tipo:'cards-alterados'});c.close();}}
-export const entrar=()=>signInWithPopup(auth,new GoogleAuthProvider());
+export const entrar=()=>signInWithPopup(auth,new GoogleAuthProvider(),browserPopupRedirectResolver);
 export async function sair(){await limparLocal(); await signOut(auth);}
 export async function textos(u){conferir(u); const s=await getDocsFromServer(collection(db,'textos')); conferir(u); return s.docs.map(d=>({id:d.id,titulo:d.data().titulo || 'Sem título'})).sort((a,b)=>a.titulo.localeCompare(b.titulo,'pt'));}
 export async function carregar(id,u){conferir(u); const [t,c]=await Promise.all([getDocFromServer(doc(db,'textos',id)),getDocFromServer(ref(id,u))]); conferir(u); if(!t.exists()) throw Error('Original não encontrado.'); return {uid:u,textoId:id,titulo:t.data().titulo || 'Sem título',original:t.data().conteudo,card:c.exists()?await prepararCard(window.DL_CARD_FORMATO.validar(c.data().conteudo)):null};}

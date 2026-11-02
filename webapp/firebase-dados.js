@@ -2,10 +2,12 @@
 // Se o Firestore não responder ou não houver permissão, retorna null e o
 // site usa o arquivo estático como reserva.
 import { initializeApp } from "./cards/vendor/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "./cards/vendor/firebase-auth.js";
+import { GoogleAuthProvider, browserPopupRedirectResolver, signInWithPopup, signOut, onAuthStateChanged } from "./cards/vendor/firebase-auth.js";
+import { getAuth } from "./cards/sessao.js?v=memorizar-07";
 import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp, doc, getDocFromServer, getDocsFromServer, runTransaction } from "./cards/vendor/firebase-firestore.js";
 import './cards/formato.js?v=cards-construcoes-21';
-import { listarLocal, limparLocal, removerLocal } from './cards/offline.js?v=memorizar-06';
+import { listarLocal, limparLocal, removerLocal, operarMemorizar } from './cards/offline.js?v=memorizar-07';
+import { validarCiclo } from './memorizar/modelo.js';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDCueo_SJ8gAqU9VT6cMdyxyDhXGSP1ma4",
@@ -25,6 +27,38 @@ try {
   db = null;
 }
 
+async function textosLocais(uid) {
+  const conferir = () => {
+    if (!authPronta || !uid || usuario?.uid !== uid || auth?.currentUser?.uid !== uid) {
+      throw new Error("Conta desconectada.");
+    }
+  };
+  conferir();
+  const [cards, espelho] = await Promise.all([
+    listarLocal(uid), operarMemorizar('readonly', store => store.get(uid)),
+  ]);
+  conferir();
+  const textos = new Map(cards.map(r => [r.textoId, {
+    id: r.textoId, titulo: r.titulo || "Sem título",
+    conteudo: typeof r.original === 'string' && r.original.trim() ? r.original : null,
+  }]));
+  if (espelho) {
+    if (espelho.uid !== uid || typeof espelho.conteudo !== 'string') {
+      throw new Error("Cópia local do ciclo incompatível. Nenhum dado foi alterado.");
+    }
+    let ciclo;
+    try { ciclo = validarCiclo(JSON.parse(espelho.conteudo)); }
+    catch (e) { throw new Error("Cópia local do ciclo inválida. Nenhum dado foi alterado. " + e.message); }
+    if (JSON.stringify(ciclo) !== JSON.stringify(espelho.ciclo)) {
+      throw new Error("Cópia local do ciclo inconsistente. Nenhum dado foi alterado.");
+    }
+    if (!textos.get(ciclo.textoId)?.conteudo) {
+      textos.set(ciclo.textoId, {id: ciclo.textoId, titulo: ciclo.titulo, conteudo: ciclo.original});
+    }
+  }
+  return [...textos.values()].sort((a, b) => a.titulo.localeCompare(b.titulo, "pt"));
+}
+
 window.DL_DADOS = {
   async salvarTexto(conteudo, titulo = "") {
     if (typeof conteudo !== "string" || !conteudo.trim()) {
@@ -37,17 +71,31 @@ window.DL_DADOS = {
     const salvo = await addDoc(collection(db, "textos"), dados);
     return salvo.id;
   },
-  async carregarTexto(textoId) {
-    if (!db) throw new Error("O serviço de leitura não está disponível.");
+  async carregarTexto(textoId, uid = usuario?.uid) {
     if (typeof textoId !== "string" || !textoId.trim() || textoId.includes("/")) {
       throw new Error("ID de texto inválido.");
     }
+    if (!navigator.onLine) {
+      const texto = (await textosLocais(uid)).find(t => t.id === textoId);
+      if (!texto?.conteudo) {
+        const erro = new Error("Este texto não está disponível na cópia local desta conta. Conecte-se para abrir o original.");
+        erro.code = 'textos/indisponivel-offline';
+        throw erro;
+      }
+      return texto;
+    }
+    if (!db) throw new Error("O serviço de leitura não está disponível.");
     const salvo = await getDocFromServer(doc(db, "textos", textoId));
     if (!salvo.exists()) throw new Error("Texto não encontrado.");
     const dados = salvo.data();
     return { id: salvo.id, titulo: dados.titulo || "Sem título", conteudo: dados.conteudo };
   },
-  async listarTextos() {
+  async listarTextos(uid = usuario?.uid) {
+    if (!navigator.onLine) {
+      return (await textosLocais(uid)).map(t => ({
+        id: t.id, titulo: t.titulo, disponivelOffline: !!t.conteudo,
+      }));
+    }
     if (!db) throw new Error("Serviço indisponível.");
     const snap = await getDocsFromServer(collection(db, "textos"));
     return snap.docs.map(d => ({ id: d.id, titulo: d.data().titulo || "Sem título" }))
@@ -143,20 +191,23 @@ window.DL_DADOS = {
 let auth = null;
 let usuario = null;
 let authPronta = false;
+let authErro = '';
 try {
   if (app) auth = getAuth(app);
 } catch (e) {
-  auth = null;
+  authErro = 'Não foi possível restaurar a sessão. Seus dados locais não foram apagados.';
+  console.error(authErro, e);
 }
 
 window.DL_AUTH = {
   get usuario() { return usuario; },
   get pronta() { return authPronta; },
+  get erro() { return authErro; },
   async entrar() {
     if (!auth || !authPronta) throw new Error("Autenticação indisponível.");
     const provedor = new GoogleAuthProvider();
     provedor.setCustomParameters({ prompt: "select_account" });
-    await signInWithPopup(auth, provedor);
+    await signInWithPopup(auth, provedor, browserPopupRedirectResolver);
   },
   async sair() {
     if (!auth || !authPronta) throw new Error("Autenticação indisponível.");
@@ -173,7 +224,12 @@ window.DL_AUTH = {
 if (auth) {
   onAuthStateChanged(auth, atual => {
     usuario = atual ? Object.freeze({ uid: atual.uid }) : null;
+    authErro = '';
     authPronta = true;
+    window.dispatchEvent(new Event("dl-auth-alterado"));
+  }, e => {
+    authErro = 'Não foi possível restaurar a sessão. Seus dados locais não foram apagados.';
+    console.error(authErro, e);
     window.dispatchEvent(new Event("dl-auth-alterado"));
   });
 }

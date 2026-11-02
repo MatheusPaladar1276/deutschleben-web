@@ -1,8 +1,8 @@
-import '../firebase-dados.js?v=memorizar-06';
+import '../firebase-dados.js?v=memorizar-07';
 import { getApp } from '../cards/vendor/firebase-app.js';
 import { getAuth } from '../cards/vendor/firebase-auth.js';
 import { getFirestore, doc, getDocFromServer, runTransaction, serverTimestamp } from '../cards/vendor/firebase-firestore.js';
-import { operarMemorizar as operarEspelho, isolarMemorizar as isolarEspelho } from '../cards/offline.js?v=memorizar-06';
+import { operarMemorizar as operarEspelho, isolarMemorizar as isolarEspelho } from '../cards/offline.js?v=memorizar-07';
 import { validarCiclo } from './modelo.js';
 
 const app = getApp(), auth = getAuth(app), db = getFirestore(app);
@@ -169,10 +169,10 @@ export async function verificarOffline() {
   if (!navigator.serviceWorker || !navigator.serviceWorker.controller || !window.caches) {
     return 'O ciclo tem cópia local, mas o pacote do app ainda não está controlado para reabertura offline.';
   }
-  const recursos = ['/index.html', '/memorizar/entrada.js?v=memorizar-06', '/memorizar/interface.js',
-    '/memorizar/modelo.js', '/memorizar/nuvem.js?v=memorizar-06', '/memorizar/persistencia.js', '/memorizar/memorizar.css',
-    '/firebase-dados.js?v=memorizar-06', '/cards/formato.js',
-    '/cards/formato.js?v=cards-construcoes-21', '/cards/offline.js?v=memorizar-06',
+  const recursos = ['/index.html', '/memorizar/entrada.js?v=memorizar-07', '/memorizar/interface.js',
+    '/memorizar/modelo.js', '/memorizar/nuvem.js?v=memorizar-07', '/memorizar/persistencia.js', '/memorizar/memorizar.css',
+    '/firebase-dados.js?v=memorizar-07', '/cards/sessao.js?v=memorizar-07', '/cards/formato.js',
+    '/cards/formato.js?v=cards-construcoes-21', '/cards/offline.js?v=memorizar-07',
     '/cards/vendor/firebase-app.js', '/cards/vendor/firebase-auth.js', '/cards/vendor/firebase-firestore.js'];
   const achados = await Promise.all(recursos.map(p => caches.match(p)));
   conferir(s);
