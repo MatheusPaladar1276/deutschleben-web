@@ -1,4 +1,4 @@
-import { criarAcesso as acessoGramatical } from '../referencia.js?v=rg-01-10-v10';
+import { criarAcesso as acessoGramatical } from '../referencia.js?v=rg-01-10-v11';
 import { preencherFraseBloco } from '../destaques-blocos.js?v=blocos-16';
 import { prepararCard, carregarModelo } from '../blocos.js';
 import './formato.js?v=cards-construcoes-21';

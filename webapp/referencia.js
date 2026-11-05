@@ -1,7 +1,7 @@
-import {VERSAO, carregarReferencia, buscarConsultas, candidatos, textoBusca, priorizarConsultas, pesquisarReferencia, prepararOffline, verificarOffline} from './referencia-dados.js?v=rg-01-10-v10';
+import {VERSAO, carregarReferencia, buscarConsultas, candidatos, textoBusca, priorizarConsultas, pesquisarReferencia, prepararOffline, verificarOffline} from './referencia-dados.js?v=rg-01-10-v11';
 
 const rootURL=new URL('./',import.meta.url);
-const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('referencia.css?v=rg-01-10-v10',rootURL).href;document.head.append(css);
+const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('referencia.css?v=rg-01-10-v11',rootURL).href;document.head.append(css);
 const dialog=document.createElement('dialog');dialog.id='rg-overlay';dialog.className='rg-dialog';dialog.setAttribute('aria-labelledby','rg-titulo');
 dialog.innerHTML=`<div class="rg-topo"><div class="rg-linha-topo"><h2 id="rg-titulo">Referência Gramatical</h2><button type="button" id="rg-voltar">Voltar ao texto</button></div>
   <nav id="rg-assuntos" aria-label="Assuntos da referência"><button type="button" data-assunto="inicio">Temas atuais</button><button type="button" data-assunto="todos">Todos os assuntos</button><label class="rg-escolha" for="rg-modulo">Assunto<select id="rg-modulo"><option value="">Escolha de 01 a 10</option></select></label></nav>
@@ -105,6 +105,37 @@ function cartaoTabela(c){
   const table=el('table');table.append(el('caption',t.titulo));const thead=el('thead'),cab=el('tr');for(const col of t.colunas){const th=el('th',col);th.scope='col';cab.append(th);}thead.append(cab);table.append(thead);
   const body=el('tbody');for(const row of t.linhas){const tr=el('tr');for(const [i,cell] of row.entries()){const td=el('td');if((t.colunas_alemao||[]).includes(i)){td.lang='de';td.append(el('strong',cell));}else td.textContent=cell;tr.append(td);}body.append(tr);}table.append(body);caixa.append(table);artigo.append(caixa);if(t.nota)par(artigo,t.nota);return artigo;
 }
+function cartaoQuadroPreposicoes(){
+  const bloco=el('details',undefined,'rg-consulta');bloco.id='rg-quadro-preposicoes';
+  const resumo=el('summary');resumo.append(el('h3','Quadro de preposições'));bloco.append(resumo);
+  const caixa=el('div',undefined,'rg-tabela');caixa.tabIndex=0;
+  caixa.setAttribute('role','region');caixa.setAttribute('aria-label','Quadro de preposições');
+  const tabela=el('table'),cabecalho=el('thead'),linha=el('tr');
+  for(const titulo of ['A — Acusativo','A/D — Mistas','D — Dativo']){
+    const th=el('th',titulo);th.scope='col';linha.append(th);
+  }
+  cabecalho.append(linha);tabela.append(cabecalho);
+  const colunas=[
+    [['durch','através de'],['für','para, em benefício de'],['gegen','contra'],['ohne','sem'],['um','ao redor de'],['bis','até¹']],
+    [['an','junto a, encostado em'],['auf','sobre uma superfície'],['hinter','atrás de'],['in','em, para dentro de'],['neben','ao lado de'],['über','acima de, por cima de'],['unter','embaixo de, sob'],['vor','diante de, à frente de'],['zwischen','entre']],
+    [['ab','a partir de'],['aus','de dentro de, originário de'],['außer','exceto, além de'],['bei','junto a, no local de alguém'],['gegenüber','em frente a'],['mit','com, por meio de'],['nach','para cidades e países sem artigo'],['seit','desde, para algo que continua'],['von','de, a partir de um ponto'],['zu','a, até, em direção a']]
+  ];
+  const corpo=el('tbody');
+  for(let i=0;i<10;i++){
+    const tr=el('tr');
+    for(const coluna of colunas){
+      const td=el('td'),entrada=coluna[i];
+      if(entrada){const prep=el('strong',entrada[0]);prep.lang='de';td.append(prep,' — '+entrada[1]);}
+      tr.append(td);
+    }
+    corpo.append(tr);
+  }
+  tabela.append(corpo);caixa.append(tabela);bloco.append(caixa);
+  const notas=el('ul');
+  notas.append(el('li','Mistas em uso espacial: Wo? (Onde?) → D, como em im Park. Wohin? (Para onde?) → A, como em in den Park.'),
+    el('li','¹ Bis aparece frequentemente sem artigo, como em bis Montag. Em bis zum See, zu rege o dativo.'));
+  bloco.append(notas);return bloco;
+}
 function render(){
   if(!dados)return;lista.replaceChildren();
   atualizarNavegacao();
@@ -135,6 +166,7 @@ function render(){
   const consultas=assunto==='inicio'&&!termo?[]:buscarConsultas(dados,termo,porModulo?assunto:'todos').filter(c=>!ids||ids.includes(c.id));
   if(assunto==='relacionadas')lista.append(el('p','Candidatos de consulta: compare com o contexto.','rg-candidatos'));
   const resultados=priorizarConsultas([...base,...consultas],termo||termoContextual);
+  if(assunto==='04'&&!ids)lista.append(cartaoQuadroPreposicoes());
   for(const c of resultados)lista.append(cartao(c));
   const total=resultados.length;
   $('rg-contador').textContent=total+(total===1?' consulta':' consultas')+(porModulo?' · módulo '+assunto:assunto==='relacionadas'?(total===1?' relacionada':' relacionadas'):'');
@@ -159,8 +191,8 @@ async function offlineStatus(){
 }
 async function abrir(opcoes={}){
   if(!dialog.open){retorno=opcoes.retorno||snapshot(opcoes.origem);dialog.showModal();document.body.style.overflow='hidden';}
-  const rodada=++abertura;historico.length=0;vista='lista';tabelaAtual=null;termoContextual=opcoes.trecho||'';assunto=opcoes.assunto||(opcoes.preservarBusca?ultimaBusca.assunto:'inicio');ids=opcoes.ids||null;busca.value=opcoes.buscaInicial??(opcoes.preservarBusca?ultimaBusca.termo:'');$('rg-contexto').replaceChildren();$('rg-sobre').open=false;$('rg-ajuda').open=false;corpo.scrollTop=0;atualizarNavegacao();
-  if(opcoes.trecho&&(!busca.value||busca.value.trim()===opcoes.trecho.trim())){par($('rg-contexto'),'Trecho: '+opcoes.trecho,'de');if(opcoes.contexto){const d=el('details');d.append(el('summary','Ver contexto'));par(d,opcoes.contexto,'de');$('rg-contexto').append(d);}}
+  const rodada=++abertura;historico.length=0;vista='lista';tabelaAtual=null;termoContextual=opcoes.trecho||'';assunto=opcoes.assunto||(opcoes.preservarBusca?ultimaBusca.assunto:'inicio');ids=opcoes.ids||null;busca.value=opcoes.trecho?'':(opcoes.buscaInicial??(opcoes.preservarBusca?ultimaBusca.termo:''));$('rg-contexto').replaceChildren();$('rg-sobre').open=false;$('rg-ajuda').open=false;corpo.scrollTop=0;atualizarNavegacao();
+  if(opcoes.trecho){par($('rg-contexto'),'Trecho: '+opcoes.trecho,'de');$('rg-contexto').firstChild.title=opcoes.trecho;}
   $('rg-contador').textContent='Carregando referência…';lista.replaceChildren();
   try{
     dados=await carregarReferencia();if(rodada!==abertura||!dialog.open)return;
@@ -206,10 +238,10 @@ dialog.addEventListener('keydown',e=>{
   else if(!e.shiftKey&&(document.activeElement===ultimo||!dialog.contains(document.activeElement))){e.preventDefault();primeiro.focus();}
 });
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)fechar();}});
-function selecionarAssunto(valor){assunto=valor;ids=null;vista='lista';termoContextual='';busca.value='';$('rg-contexto').replaceChildren();render();corpo.scrollTop=0;}
+function selecionarAssunto(valor){assunto=valor;ids=null;vista='lista';termoContextual='';busca.value='';render();corpo.scrollTop=0;}
 $('rg-assuntos').onclick=e=>{const b=e.target.closest('button[data-assunto]');if(b)selecionarAssunto(b.dataset.assunto);};
 $('rg-modulo').onchange=()=>{if($('rg-modulo').value)selecionarAssunto($('rg-modulo').value);};
-busca.oninput=()=>{vista='lista';tabelaAtual=null;ids=null;termoContextual='';$('rg-contexto').replaceChildren();if(assunto==='inicio'||assunto==='relacionadas')assunto='todos';render();corpo.scrollTop=0;};
+busca.oninput=()=>{vista='lista';tabelaAtual=null;ids=null;termoContextual='';if(assunto==='inicio'||assunto==='relacionadas')assunto='todos';render();corpo.scrollTop=0;};
 $('rg-offline').onclick=async()=>{
   if(ocupado)return;ocupado=true;offlineRodada++;$('rg-offline').disabled=true;$('rg-offline-status').textContent='Verificando e preparando os recursos desta versão…';
   try{const v=await prepararOffline((i,total)=>{$('rg-offline-status').textContent='Preparando recursos: '+i+' de '+total+'…';});$('rg-offline-status').textContent='✓ Referência disponível sem internet · '+v;}

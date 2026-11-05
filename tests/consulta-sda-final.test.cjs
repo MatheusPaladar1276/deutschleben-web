@@ -8,6 +8,7 @@ const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve
 (async()=>{
  const dom=new JSDOM(fs.readFileSync(path.join(root,'webapp/index.html'),'utf8'),{url:'https://example.test/',runScripts:'outside-only',pretendToBeVisual:true});
  const w=dom.window,$=id=>w.document.getElementById(id),uid='WuXcMYo6m3OuQttlk7z22gRjlvn1';
+ w.document.body.dataset.estudoSimplificado='false';
  const texto={id:'local',titulo:'Vorstellung',conteudo:'Mein Name ist Anna.\nIch lerne Deutsch.\nOriginal completo.'};
  let copied='',pendingCopy=null,save=null,opened='';
  w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};

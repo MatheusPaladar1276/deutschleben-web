@@ -60,6 +60,7 @@ async function ui(env) {
   const dom=new JSDOM(fs.readFileSync(path.join(ROOT,'webapp/index.html'),'utf8'),
     {url:'https://example.test/',runScripts:'outside-only',pretendToBeVisual:true});
   const w=dom.window,$=id=>w.document.getElementById(id);
+  w.document.body.dataset.estudoSimplificado='false';
   w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};
   w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};
   let db=env.authenticatedContext(UID).firestore(); const auth={currentUser:{uid:UID}}, callbacks=[];
@@ -69,7 +70,7 @@ async function ui(env) {
     GoogleAuthProvider:class{},signInWithPopup:async()=>{},signOut:async()=>switchAccount(null),
     onAuthStateChanged:(_a,f)=>{callbacks.push(f);f(auth.currentUser);}};
   const source=fs.readFileSync(path.join(ROOT,'webapp/firebase-dados.js'),'utf8').replace(/^import .*;\r?$/gm,'');
-  new Function('window','Event',...Object.keys(bindings),source)(w,w.Event,...Object.values(bindings));
+  new Function('window','Event','navigator',...Object.keys(bindings),source)(w,w.Event,w.navigator,...Object.values(bindings));
   w.fetch=async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(ROOT,'webapp',url),'utf8'))});
   for(const s of w.document.scripts)if(!s.src&&s.textContent.trim())w.eval(s.textContent);
   w.eval(fs.readFileSync(path.join(ROOT,'webapp/textos.js'),'utf8'));

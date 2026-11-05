@@ -1638,6 +1638,9 @@ textarea {
 #original-texto { white-space: pre-wrap; overflow-wrap: anywhere; }
 #texto-compreensao, #resumo-conteudo, #copia-conteudo { min-height: 240px; font-size: 24px; font-weight: 400; line-height: 1.6; }
 #selecao-texto { white-space: pre-wrap; overflow-wrap: anywhere; }
+#dl-app[data-estudo-simplificado="true"] .ajuda #selecao-texto { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#dl-app[data-estudo-simplificado="true"] .ajuda #selecao-aviso:empty { display:none; }
+#dl-app[data-estudo-simplificado="true"] .ajuda #consultar-leo { font-weight:700; }
 #fase-textos .acoes-apoio { flex-wrap: wrap; }
 #fase-textos .acoes-apoio button { max-width: 100%; }
 #resumo-secao { margin-top: 24px; }
@@ -1700,7 +1703,7 @@ textarea {
 </head>
 
 
-<body id="dl-app" class="modo-limpo">
+<body id="dl-app" class="modo-limpo" data-estudo-simplificado="true">
 
 
 <header class="topo">
@@ -1788,14 +1791,14 @@ textarea {
                 <h2 id="ajuda-textos-titulo">Ajuda rápida</h2>
                 <div class="selecao-caixa">
                     <p class="ajuda-vazia" id="selecao-aviso">Selecione uma palavra ou trecho do original.</p>
-                    <p id="selecao-texto" class="texto-reflexao"></p>
+                    <p id="selecao-texto" class="texto-reflexao" role="status" aria-live="polite"></p>
                 </div>
-                <label for="minha-pergunta">Minha pergunta</label>
-                <textarea id="minha-pergunta" aria-describedby="compreensao-temporaria"></textarea>
+                <label for="minha-pergunta" hidden>Minha pergunta</label>
+                <textarea id="minha-pergunta" aria-describedby="compreensao-temporaria" hidden disabled></textarea>
                 <div class="acoes-apoio">
                     <button type="button" class="secundario" id="consultar-leo" disabled>Consultar LEO</button>
-                    <button type="button" class="secundario" id="consultar-construcoes" disabled>Consultar construções</button>
-                    <button type="button" class="secundario" id="limpar-consulta">Limpar consulta</button>
+                    <button type="button" class="secundario" id="consultar-construcoes" hidden disabled>Consultar construções</button>
+                    <button type="button" class="secundario" id="limpar-consulta">Limpar seleção</button>
                 </div>
                 <section id="consulta-construcoes" class="consulta-construcoes" aria-labelledby="construcoes-titulo" tabindex="0" hidden>
                     <h3 id="construcoes-titulo">Usos possíveis</h3>
@@ -1808,15 +1811,15 @@ textarea {
                 </section>
             </aside>
         </div>
-        <section class="compreensao">
+        <section class="compreensao" hidden inert>
             <h2><label for="texto-compreensao">Minha compreensão</label></h2>
-            <textarea id="texto-compreensao" aria-describedby="compreensao-temporaria"></textarea>
-            <div class="acoes-apoio"><button type="button" class="secundario" id="limpar-compreensao">Limpar compreensão</button></div>
+            <textarea id="texto-compreensao" aria-describedby="compreensao-temporaria" disabled></textarea>
+            <div class="acoes-apoio"><button type="button" class="secundario" id="limpar-compreensao" disabled>Limpar compreensão</button></div>
             <p id="compreensao-temporaria" class="texto-reflexao">Rascunho temporário: dura enquanto esta página estiver aberta.</p>
         </section>
-        <div class="consulta-sda">
+        <div class="consulta-sda" hidden inert>
             <p id="consulta-sda-indicacao">Copiar pergunta e compreensão para conversar com o SDA.</p>
-            <button type="button" class="secundario" id="consultar-sda" aria-describedby="consulta-sda-indicacao">Consultar SDA</button>
+            <button type="button" class="secundario" id="consultar-sda" aria-describedby="consulta-sda-indicacao" disabled>Consultar SDA</button>
             <p id="copia-status" role="status" aria-live="polite"></p>
             <div id="copia-manual" hidden>
                 <label for="copia-conteudo">Selecione e copie o texto abaixo para colar no chat.</label>
@@ -1881,7 +1884,7 @@ textarea {
         </div>
     </div>
 </dialog>
-<script src="textos.js?v=memorizar-07" defer></script>
+<script src="textos.js?v=dl-web-11" defer></script>
 <script type="module" src="memorizar/entrada.js?v=memorizar-07"></script>
 
 <div class="estrada-overlay" id="estrada-overlay" role="dialog" aria-modal="true" aria-label="Apostila">
@@ -1907,7 +1910,7 @@ textarea {
 <script type="module" src="apostila.js?v=rg-01-10-v10"></script>
 
 <!-- Referência Gramatical: componente compartilhado; temas e IDs existentes preservados. -->
-<script type="module" src="referencia.js?v=rg-01-10-v10"></script>
+<script type="module" src="referencia.js?v=rg-01-10-v11"></script>
 
 <div class="prog-overlay" id="prog-overlay" role="dialog" aria-modal="true" aria-label="Memória de estudo">
     <div class="prog-painel">

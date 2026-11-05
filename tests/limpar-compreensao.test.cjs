@@ -6,6 +6,7 @@ const root=path.resolve(__dirname,'..'),tick=()=>new Promise(r=>setTimeout(r,10)
 (async()=>{
  const dom=new JSDOM(fs.readFileSync(path.join(root,'webapp/index.html'),'utf8'),{url:'https://example.test/',runScripts:'outside-only',pretendToBeVisual:true});
  const w=dom.window,$=id=>w.document.getElementById(id),uid='WuXcMYo6m3OuQttlk7z22gRjlvn1';
+ w.document.body.dataset.estudoSimplificado='false';
  const textos=[{id:'a',titulo:'Anna',conteudo:'Anna lernt Deutsch.'},{id:'b',titulo:'Outro',conteudo:'Anderer Text.'}];let copied='';
  w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
  w.DL_AUTH={pronta:true,usuario:{uid}};w.DL_DADOS={listarTextos:async()=>textos,carregarTexto:async id=>textos.find(t=>t.id===id),carregarResumo:async()=>''};

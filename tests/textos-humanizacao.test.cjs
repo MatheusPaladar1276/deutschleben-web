@@ -10,6 +10,7 @@ const textos = [ { id, titulo: 'Vorstellung', conteudo: 'Mein Name ist Anna. Ich
 const dom = new JSDOM(fs.readFileSync(path.join(root, 'webapp/index.html'), 'utf8'), {
   url: 'https://example.test/', runScripts: 'outside-only', pretendToBeVisual: true });
 const w = dom.window, $ = id => w.document.getElementById(id);
+w.document.body.dataset.estudoSimplificado = 'false';
 w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
 w.HTMLDialogElement.prototype.close = function () { this.open = false; };
 const tick = () => new Promise(resolve => setTimeout(resolve, 10));

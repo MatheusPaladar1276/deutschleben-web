@@ -1,5 +1,5 @@
 // Pacote exclusivamente público. Nenhum Card ou texto pessoal é armazenado aqui.
-export const VERSAO = 'rg-previa-01-10-v10';
+export const VERSAO = 'rg-web-01-10-v11';
 const raiz = new URL('./', import.meta.url);
 const manifestoURL = new URL('data/referencia/manifesto.json', raiz).href;
 const prefixo = 'dl-rg-publico-';

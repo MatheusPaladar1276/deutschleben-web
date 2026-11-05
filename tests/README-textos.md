@@ -1,5 +1,28 @@
 # Verificação da fase Textos
 
+## Interface simplificada — Web 11
+
+`node tests/estudo-simplificado.test.cjs` verifica a interface aprovada,
+LEO, trecho separado da busca, quadro exclusivo do módulo 04 e integração
+de resumo/Memória, inclusive falha e isolamento, sem backend de produção.
+`node tests/estudo-browser.cjs` confere a interface no Chrome a 1280, 390
+e 320 px, incluindo abertura/recolhimento e rolagem horizontal do quadro.
+Os testes anteriores de pergunta/compreensão/SDA ativam explicitamente a
+interface completa para garantir que o código preservado ainda funciona.
+
+A interface completa pode ser reativada alterando
+`data-estudo-simplificado="true"` para `"false"` no corpo da página.
+Os controles ocultos não participam da navegação por teclado. A autenticação
+e as transações Firebase de **Salvar resumo** permanecem inalteradas; nenhum
+adaptador local de demonstração integra a publicação.
+
+Após alterar recursos públicos, execute
+`node tools/atualizar-manifesto-referencia.cjs`. A versão Web 11 atualiza o
+shell raiz e as URLs de JS/CSS para evitar servir a interface antiga do cache,
+sem remover IndexedDB, localStorage, sessões ou resumos pessoais.
+Os recursos textuais de `webapp` usam LF por `.gitattributes`, para os hashes
+serem os mesmos no checkout Windows e na publicação pelo GitHub Actions.
+
 Os testes usam apenas `demo-dl-textos` em `127.0.0.1:8188`, nunca produção.
 
 Dependências isoladas: Node 22, Java 21, emulador oficial Firestore 1.22.0,

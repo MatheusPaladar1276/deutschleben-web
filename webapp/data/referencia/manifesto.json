@@ -1,5 +1,5 @@
 {
-  "versao": "rg-previa-01-10-v10",
+  "versao": "rg-web-01-10-v11",
   "schema_version": 1,
   "modulos": [
     "01",
@@ -16,31 +16,31 @@
   "recursos": [
     {
       "url": "index.html",
-      "sha256": "a4ea789a9305c0b6ec43a6cebf4b0c8800de8cb7521a8789ca569b6e0debe1d1"
+      "sha256": "c0caef3c86c787952dbca7daa8661305b4085a578766192bd3eaae2650d3f01d"
     },
     {
-      "url": "referencia.js?v=rg-01-10-v10",
-      "sha256": "8d09d2273ac5f1ec2c6a94f6515caf912ce46fc14fd35be69397ee5cec137a25"
+      "url": "referencia.js?v=rg-01-10-v11",
+      "sha256": "2c3c997c3f0bd2793fe93c918b4e2076496bd1b3dc7f67ff5722487e5d8b4063"
     },
     {
-      "url": "referencia-dados.js?v=rg-01-10-v10",
-      "sha256": "9bd4784865adb3bfcd3d914af3a6423a9136e8b99b426c2ac73b3399f8e427b3"
+      "url": "referencia-dados.js?v=rg-01-10-v11",
+      "sha256": "ac56bda1f15e012938bf74aa0c18a3262799906e3a58212975b646c4f9f28cf1"
     },
     {
-      "url": "referencia.css?v=rg-01-10-v10",
-      "sha256": "7105bc477d977fea0f98f8c956c342ba8821f764212a4fa31a39f0432f1530da"
+      "url": "referencia.css?v=rg-01-10-v11",
+      "sha256": "e7b163ccde2c3b240482661546a149a5ebc46147c63c9141f25fe0cd7996f6ef"
     },
     {
       "url": "referencia-sw.js",
-      "sha256": "61b4ac5de6e2bf6df85e3cab6a063a579425a69b0a182fab6361cfbfe077b027"
+      "sha256": "0f257f2b84ad99eaeec403373b3148200fee542c9fd56768ea01c8f873dfb52d"
     },
     {
-      "url": "textos.js?v=rg-01-10-v10",
-      "sha256": "ddfc64cae8cda1591a0844585948b3a120bf2c8f0f81d46f172d507fcc07406b"
+      "url": "textos.js?v=dl-web-11",
+      "sha256": "eccd7419d313335e85c196105545271e670000050c9e4c3ceffc120a59fc9654"
     },
     {
-      "url": "firebase-dados.js?v=cards-construcoes-21",
-      "sha256": "40d4a38bc22f82a719a58ccd9b084b5c3948d1b086063ec5d47010d8d84ecef1"
+      "url": "firebase-dados.js?v=memorizar-07",
+      "sha256": "dab977aca44dff552421afcc5ca5f1bfe1c0a47cae1020c133c3a1c4511bfe6c"
     },
     {
       "url": "apostila.js?v=rg-01-10-v10",
@@ -71,8 +71,8 @@
       "sha256": "4b9380d1ff4c20a4c63ace5cecf18b7d58f2de0007bbba47dc8ea3c3af9f7fdc"
     },
     {
-      "url": "cards/offline.js?v=blocos-15",
-      "sha256": "713cf67c3088292348be6f3a720f65062068aa10992489d9c5678b4b9320a37f"
+      "url": "cards/offline.js?v=memorizar-07",
+      "sha256": "f9830cf71ebc43d967c98d53ce35813c55521d237cefcdc482bb116930badee7"
     },
     {
       "url": "cards/texto-01.json",
@@ -92,7 +92,7 @@
     },
     {
       "url": "data/substantivos.json",
-      "sha256": "aeeca027636a005fbe72891842472a5bba86c8482983129065dc9eee07541b3e"
+      "sha256": "c97407240ecd47794a86510819c44b632e1292f29bf592c87b99c538aa1fc928"
     },
     {
       "url": "data/verbos.json",
@@ -112,11 +112,11 @@
     },
     {
       "url": "cards/index.html",
-      "sha256": "1f396acdde2f5e1ff9119fe49cb0c4c7b48d2ebf5bc9492ce08e57ed3cf5f2da"
+      "sha256": "3d9efbfe9a55a8b9a43e747574a0a1f878e19e79c4b0932c2db28d3ace4a4c5b"
     },
     {
       "url": "cards/cards.js?v=rg-01-10-v10",
-      "sha256": "579009253affd44e4325306f075c72d01b207217cdeb242d43250df6bdd50c13"
+      "sha256": "b6f28177b2a032372abae83befc6b25851dda33537e707b05d1930905859672a"
     },
     {
       "url": "cards/cards.css?v=cards-construcoes-21",
@@ -124,7 +124,7 @@
     },
     {
       "url": "cards/dados.js?v=blocos-15",
-      "sha256": "351f37b76e9ae46f0638317b465cf93201fde907d0fd54fb39ce6c1291175ff2"
+      "sha256": "564cfcc8ebc77f78d6d1e1be0c1d6a09091446eb11d528562f1790680a2d4e12"
     },
     {
       "url": "cards/verbos-consulta.json",

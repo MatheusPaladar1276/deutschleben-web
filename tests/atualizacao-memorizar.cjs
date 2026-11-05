@@ -215,7 +215,7 @@ async function main() {
   check(JSON.stringify(await snapshot()) === JSON.stringify(before), 'primeira abertura corrigida preserva sessao e dados exatos');
   holdWorkers = false;
   await evaluate(`navigator.serviceWorker.getRegistration('/').then(r=>r.update())`);
-  await until(`caches.keys().then(k=>k.includes('deutschleben-v38-memorizar-07')
+  await until(`caches.keys().then(k=>k.includes('deutschleben-v39-estudo-11')
     &&!k.includes('deutschleben-v34-rg-01-10-v10')&&!k.includes('deutschleben-v36-memorizar-05'))`, 'SW raiz corrigido');
   check(JSON.stringify(await snapshot()) === JSON.stringify(before), 'ativacao do SW novo preserva IndexedDB e Auth');
   check((await snapshot()).publicDigest === before.publicDigest, 'acervo publico previamente armazenado preservado');

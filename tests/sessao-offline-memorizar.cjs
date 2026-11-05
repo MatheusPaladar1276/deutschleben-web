@@ -261,7 +261,7 @@ async function main() {
     await until(`window.DL_AUTH?.usuario?.uid==='${UID}' && !document.getElementById('nav-memorizar')?.disabled`, 'novo grafo sob SW 06');
     check(JSON.stringify(await snapshot()) === JSON.stringify(saved), 'primeiro carregamento da correcao preserva Auth e ciclo da 06');
     await evaluate(`navigator.serviceWorker.getRegistration('/').then(r=>r.update())`);
-    await until(`caches.keys().then(k=>k.includes('deutschleben-v38-memorizar-07')&&!k.includes('deutschleben-v37-memorizar-06'))`, 'SW raiz novo', 30000);
+    await until(`caches.keys().then(k=>k.includes('deutschleben-v39-estudo-11')&&!k.includes('deutschleben-v37-memorizar-06'))`, 'SW raiz novo', 30000);
     await send('Page.navigate', {url: base + '/cards/'});
     await until(`document.getElementById('auth')?.textContent==='Sair'`, 'Cards atualizado');
     await evaluate(`navigator.serviceWorker.getRegistration('/cards/').then(r=>r.update())`);

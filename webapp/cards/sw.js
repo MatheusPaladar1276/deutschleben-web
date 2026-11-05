@@ -4,9 +4,9 @@ importScripts('../referencia-sw.js');
 const DB='dl-cards-shell-v1';
 const VERSAO='rg-previa-01-10-v10-memorizar-07';
 const ARQUIVOS=[
-  '../referencia.js','../referencia.js?v=rg-01-10-v10',
-  '../referencia-dados.js','../referencia-dados.js?v=rg-01-10-v10',
-  '../referencia.css','../referencia.css?v=rg-01-10-v10','../referencia-sw.js',
+  '../referencia.js','../referencia.js?v=rg-01-10-v11',
+  '../referencia-dados.js','../referencia-dados.js?v=rg-01-10-v11',
+  '../referencia.css','../referencia.css?v=rg-01-10-v11','../referencia-sw.js',
   './','index.html','cards.css','cards.css?v=cards-construcoes-21',
   'cards.js','cards.js?v=memorizar-07','dados.js','dados.js?v=memorizar-07',
   'sessao.js?v=memorizar-07','offline.js','offline.js?v=memorizar-07','formato.js','formato.js?v=cards-construcoes-21',

@@ -1,0 +1,6 @@
+# Os hashes do pacote publico devem ser identicos no Windows e no Hosting.
+webapp/**/*.js text eol=lf
+webapp/**/*.css text eol=lf
+webapp/**/*.html text eol=lf
+webapp/**/*.json text eol=lf
+webapp/**/*.webmanifest text eol=lf

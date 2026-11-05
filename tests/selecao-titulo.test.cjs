@@ -9,6 +9,7 @@ const dom = new JSDOM(fs.readFileSync(path.join(root, 'webapp/index.html'), 'utf
   url: 'https://example.test/', runScripts: 'outside-only', pretendToBeVisual: true
 });
 const w = dom.window, $ = id => w.document.getElementById(id);
+w.document.body.dataset.estudoSimplificado = 'false';
 const tick = () => new Promise(resolve => setTimeout(resolve, 10));
 w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
 w.HTMLDialogElement.prototype.close = function () { this.open = false; };

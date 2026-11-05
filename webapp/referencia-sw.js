@@ -1,5 +1,5 @@
 // Auxiliar compartilhado pelos workers DL e Cards. Só lê pacotes públicos completos.
-const RG_VERSAO='rg-previa-01-10-v10';
+const RG_VERSAO='rg-web-01-10-v11';
 self.addEventListener('message',e=>{
   if(e.data==='verificar-referencia')e.ports[0]?.postMessage({versao:RG_VERSAO});
 });

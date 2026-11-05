@@ -13,6 +13,14 @@
     const novoStatus = $("adicionar-status"), salvarNovo = $("adicionar-salvar");
     const voltarNovo = $("adicionar-voltar"), reabrirNovo = $("adicionar-reabrir");
     const pergunta = $("minha-pergunta");
+    const estudoSimplificado = document.body.dataset.estudoSimplificado === "true";
+    for (const bloco of [pergunta, document.querySelector('label[for="minha-pergunta"]'), $("consultar-construcoes"),
+        compreensao.closest(".compreensao"), $("consultar-sda").closest(".consulta-sda")]) {
+        bloco.hidden = estudoSimplificado;
+        bloco.inert = estudoSimplificado;
+    }
+    for (const campo of [pergunta, compreensao, $("limpar-compreensao"), $("consultar-sda")]) campo.disabled = estudoSimplificado;
+    $("limpar-consulta").textContent = estudoSimplificado ? "Limpar seleção" : "Limpar consulta";
     const memorias = new Map(), novos = new Map();
     const escolha = $("escolha-textos"), escolhaStatus = $("escolha-status");
     const confirmacao = $("consulta-confirmacao"), excluirDialogo = $("excluir-confirmacao");
@@ -366,6 +374,7 @@
         selecionado = null; intervaloSelecionado = null;
         limparConstrucoes(); $("consultar-construcoes").disabled = true;
         $("selecao-texto").textContent = "";
+        $("selecao-texto").title = "";
         $("selecao-aviso").textContent = "Selecione uma palavra ou trecho do original.";
         $("consultar-leo").disabled = true;
         window.getSelection()?.removeAllRanges();
@@ -375,7 +384,9 @@
     $("limpar-consulta").addEventListener("click", () => {
         if (!ativo || usuario() !== ativo.uid) return;
         pergunta.value = ""; memoria().pergunta = "";
-        fecharDialogo(confirmacao, false); pergunta.focus(); limparSelecao();
+        fecharDialogo(confirmacao, false);
+        (estudoSimplificado ? $("limpar-consulta") : pergunta).focus();
+        limparSelecao();
     });
     function limparEstudo() {
         compreensaoAlvo = null; fecharDialogo(compreensaoDialogo, false);
@@ -600,9 +611,10 @@
             contexto: area === titulo ? ativo.titulo : texto.slice(esquerda, direita).trim() };
         if (assinaturaSelecao(proxima) !== assinaturaSelecao(selecionado)) limparConstrucoes();
         selecionado = proxima; intervaloSelecionado = r.cloneRange();
-        $('consultar-construcoes').disabled = false;
-        $("selecao-texto").textContent = trecho;
-        $("selecao-aviso").textContent = "Trecho selecionado:";
+        $('consultar-construcoes').disabled = estudoSimplificado;
+        $("selecao-texto").textContent = estudoSimplificado ? "Selecionado: " + trecho : trecho;
+        $("selecao-texto").title = trecho;
+        $("selecao-aviso").textContent = estudoSimplificado ? "" : "Trecho selecionado:";
         $("consultar-leo").disabled = false;
         copiaStatus.textContent = ""; $("copia-manual").hidden = true;
     }

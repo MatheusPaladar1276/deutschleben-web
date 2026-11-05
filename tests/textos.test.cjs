@@ -74,6 +74,7 @@ async function uiTests(env) {
   const html = fs.readFileSync(path.join(ROOT, 'webapp/index.html'), 'utf8');
   const dom = new JSDOM(html, { url: 'https://ricardo-d6119.web.app/', runScripts: 'outside-only', pretendToBeVisual: true });
   const w = dom.window, $ = id => w.document.getElementById(id), authCallbacks = [];
+  w.document.body.dataset.estudoSimplificado = 'false';
   w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
   w.HTMLDialogElement.prototype.close = function () { this.open = false; };
   let db = env.authenticatedContext(UID).firestore();
@@ -94,7 +95,7 @@ async function uiTests(env) {
   // Run the adapter in the SDK realm; jsdom objects would otherwise fail SDK plain-object validation.
   const bindings = ['initializeApp', 'getFirestore', 'getAuth', 'GoogleAuthProvider', 'signInWithPopup', 'signOut', 'onAuthStateChanged',
     'collection', 'getDocs', 'query', 'orderBy', 'addDoc', 'serverTimestamp', 'doc', 'getDocFromServer', 'getDocsFromServer', 'runTransaction', 'limparLocal', 'removerLocal'];
-  new Function('window', 'Event', ...bindings, firebaseSource)(w, w.Event, ...bindings.map(name => w[name]));
+  new Function('window', 'Event', 'navigator', ...bindings, firebaseSource)(w, w.Event, w.navigator, ...bindings.map(name => w[name]));
   for (const script of [...w.document.scripts]) if (!script.src && script.textContent.trim()) w.eval(script.textContent);
   w.eval(fs.readFileSync(path.join(ROOT, 'webapp/textos.js'), 'utf8'));
   const input = (id, text) => { $(id).value = text; $(id).dispatchEvent(new w.Event('input', { bubbles: true })); };
@@ -199,6 +200,7 @@ async function uiTests(env) {
   assert($('adicionar-status').textContent.includes('foi salvo'));
   w.DL_DADOS.carregarTexto = realRead; $('adicionar-reabrir').click();
   await wait(() => $('titulo-texto').textContent === 'Emulator only', 'retry open'); assert.equal(creates, 1);
+  await wait(() => !$('salvar-resumo').disabled, 'retried text summary loaded');
   dom.window.close();
   console.log('PASS UI + real emulator SDK: listing, empty opening, original, drafts, UID switch, selection/context, clipboard fallback, explicit summary/revision/error, legacy consultation, duplicate guard and read retry.');
 }

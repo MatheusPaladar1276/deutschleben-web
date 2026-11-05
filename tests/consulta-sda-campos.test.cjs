@@ -17,6 +17,7 @@ const casos = [
 async function caso(campos, selecionar) {
   const dom = new JSDOM(html, { url: 'https://example.test/', runScripts: 'outside-only', pretendToBeVisual: true });
   const w = dom.window, $ = id => w.document.getElementById(id);
+  w.document.body.dataset.estudoSimplificado = 'false';
   w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
   w.HTMLDialogElement.prototype.close = function () { this.open = false; };
   w.DL_AUTH = { pronta: true, usuario: { uid } };
